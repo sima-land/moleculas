@@ -1,0 +1,20 @@
+{
+  "name": "@dev-dep/moleculas",
+  "publishConfig": {
+    "@dev-dep:registry": "https://gitlab.sima-land.ru/api/v4/projects/999/packages/npm/"
+  },
+  "version": "0.0.0",
+  "repository": "ssh://git@gitlab.sima-land.ru:7888/dev-dep/dev/simaland-pages/moleculas.git",
+  "author": "www.sima-land.ru team",
+  "license": "UNLICENSED",
+  "private": false,
+  "engines": {
+    "node": ">=10.15.3"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+  }
+}
