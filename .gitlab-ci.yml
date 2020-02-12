@@ -9,7 +9,7 @@ publish-package:
       - node_modules
   before_script:
     - echo //gitlab.sima-land.ru/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN} > .npmrc
-    - npm version $CI_COMMIT_REF_NAME
+    - npm version 1.0.0
   script:
     - cat .npmrc
     - yarn install
