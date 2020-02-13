@@ -1,6 +1,7 @@
 module.exports = {
     setupFiles: ['./jest.setup.js'],
     snapshotSerializers: ['enzyme-to-json/serializer'],
+    transformIgnorePatterns: ['/node_modules/(?!(@SL/|@dev-dep/|middleware-axios)).*/'],
     testPathIgnorePatterns: ['<rootDir>/.yarn-cache/', '<rootDir>/node_modules/'],
     modulePathIgnorePatterns: ['<rootDir>/.yarn-cache/', '<rootDir>/build/'],
     moduleNameMapper: {

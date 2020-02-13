@@ -1,4 +1,4 @@
-export const api = {
+export const apiMock = {
   simav3: {
     get: Array.of,
     delete: Array.of,
