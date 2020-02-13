@@ -1,5 +1,19 @@
 stages:
+  - test
   - publish
+
+test:
+  stage: test
+  image: node:10.15.3-alpine
+  cache:
+    paths:
+      - node_modules
+  before_script:
+    - yarn install
+  script:
+    - yarn test
+  tags:
+    - sl-frontend
 
 publish-package:
   stage: publish
