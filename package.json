@@ -11,10 +11,42 @@
   "engines": {
     "node": ">=10.15.3"
   },
-  "dependencies": {
-  },
   "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-plugin-inline-react-svg": "^1.1.1",
+    "@dev-dep/linters": "^1.0.1",
+    "babel-eslint": "^10.0.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.4.4",
+    "eslint": "6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "22.7.1",
+    "eslint-plugin-jsdoc": "^15.5.2",
+    "eslint-plugin-react": "7.17.0",
+    "husky": "^4.2.3",
+    "jest": "^24.8.0",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "stylelint": "^10.1.0",
+    "stylelint-config-sass-guidelines": "^6.0.0",
+    "stylelint-scss": "^3.8.0"
   },
   "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "lint": "yarn eslint",
+    "eslint": "eslint --cache src/ --ext .js,.jsx",
+    "stylelint": "stylelint 'src/**/*.scss'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint",
+      "pre-push": "yarn coverage"
+    }
   }
 }
