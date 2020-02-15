@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ItemQuickViewButton /> should render with props 1`] = `
+<ItemQuickViewButton
+  additionalClassName="test-class"
+  onClick={[MockFunction]}
+>
+  <button
+    className="quick-view-button test-class"
+    onClick={[MockFunction]}
+  >
+    Быстрый просмотр
+  </button>
+</ItemQuickViewButton>
+`;
+
+exports[`<ItemQuickViewButton /> should render without props 1`] = `
+<ItemQuickViewButton>
+  <button
+    className="quick-view-button"
+    onClick={null}
+  >
+    Быстрый просмотр
+  </button>
+</ItemQuickViewButton>
+`;
