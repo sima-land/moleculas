@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RecommendationCarousel /> should match a snapshot with items 1`] = `
+<section
+  className="wrapper"
+>
+  <h3
+    className="title"
+  >
+    Test title
+  </h3>
+  <withGlobalListeners(Carousel)
+    items={
+      Array [
+        Object {
+          "name": "first item",
+        },
+        Object {
+          "name": "second item",
+        },
+      ]
+    }
+    renderControl={[Function]}
+    renderItem={[Function]}
+  />
+</section>
+`;
+
+exports[`<RecommendationCarousel /> should match a snapshot without items 1`] = `<div />`;
