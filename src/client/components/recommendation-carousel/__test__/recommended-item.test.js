@@ -41,9 +41,9 @@ describe('<RecommendedItem />', () => {
     };
 
     beforeEach(() => {
-      onItemFn.mockClear()
-      onQuickViewFn.mockClear()
-      addGlobalListener.mockClear()
+      onItemFn.mockClear();
+      onQuickViewFn.mockClear();
+      addGlobalListener.mockClear();
     });
 
     it('onItemClick and onQuickViewClick calls correctly', () => {
@@ -54,7 +54,7 @@ describe('<RecommendedItem />', () => {
       expect(onItemFn).not.toHaveBeenCalled();
       expect(onQuickViewFn).not.toHaveBeenCalled();
 
-      component.find(Link).simulate('click'); // WTF?
+      component.find(Link).simulate('click');
       expect(onItemFn).toHaveBeenCalledTimes(1);
       expect(onQuickViewFn).not.toHaveBeenCalled();
 
@@ -63,8 +63,7 @@ describe('<RecommendedItem />', () => {
       expect(onQuickViewFn).toHaveBeenCalledTimes(1);
 
       cutTextContent.mockClear();
-
-      expect(custTextContent).toHaveBeenCalledTimes(0);
+      expect(cutTextContent).toHaveBeenCalledTimes(0);
 
       // dispatch window event resize
       const resizeEvent = document.createEvent('Event');
@@ -117,5 +116,4 @@ describe('<RecommendedItem />', () => {
       expect(component).toMatchSnapshot();
     });
   });
-
 });

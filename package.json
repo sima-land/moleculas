@@ -45,7 +45,7 @@
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage",
-    "lint": "yarn eslint",
+    "lint": "yarn eslint && yarn stylelint",
     "eslint": "eslint --cache src/ --ext .js,.jsx",
     "stylelint": "stylelint 'src/**/*.scss'"
   },
