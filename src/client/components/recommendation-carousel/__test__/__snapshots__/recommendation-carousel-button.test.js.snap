@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CarouselButton /> renders correct with backward type 1`] = `
+<button
+  aria-label="назад"
+  className="control backward"
+>
+  <Icon
+    icon={[Function]}
+    role="presentation"
+    size={24}
+  />
+</button>
+`;
+
+exports[`<CarouselButton /> renders correct without props 1`] = `
+<button
+  aria-label="вперед"
+  className="control"
+>
+  <Icon
+    icon={[Function]}
+    role="presentation"
+    size={24}
+  />
+</button>
+`;
