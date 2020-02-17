@@ -1,5 +1,6 @@
 stages:
   - test
+  - build
   - publish
 
 test:
@@ -8,10 +9,31 @@ test:
   cache:
     paths:
       - node_modules
+  artifacts:
+    paths:
+      - node_modules
+    expire_in: 1 hrs
   before_script:
     - yarn install
   script:
     - yarn test
+  tags:
+    - sl-frontend
+
+build:
+  stage: build
+  image: node:10.15.3-alpine
+  artifacts:
+    paths:
+      - build
+    expire_in: 1 hrs
+  before_script:
+    - npm version $CI_COMMIT_REF_NAME
+  script:
+    - yarn build
+  only:
+    refs:
+      - tags
   tags:
     - sl-frontend
 
@@ -20,10 +42,10 @@ publish-package:
   image: node:10.15.3-alpine
   before_script:
     - echo //gitlab.sima-land.ru/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN} > .npmrc
-    - npm version $CI_COMMIT_REF_NAME
-    - yarn build
   script:
     - npm publish build
+  dependencies:
+    - build
   only:
     refs:
       - tags
