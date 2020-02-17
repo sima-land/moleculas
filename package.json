@@ -25,6 +25,7 @@
     "@dev-dep/linters": "^1.0.1",
     "babel-eslint": "^10.0.1",
     "babel-plugin-inline-react-svg": "^1.1.1",
+    "del": "^5.1.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
@@ -33,6 +34,7 @@
     "eslint-plugin-jest": "22.7.1",
     "eslint-plugin-jsdoc": "^15.5.2",
     "eslint-plugin-react": "7.17.0",
+    "gulp": "^4.0.2",
     "husky": "^4.2.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
@@ -43,6 +45,7 @@
     "stylelint-scss": "^3.8.0"
   },
   "scripts": {
+    "build": "gulp build",
     "test": "jest",
     "coverage": "jest --coverage",
     "lint": "yarn eslint && yarn stylelint",
