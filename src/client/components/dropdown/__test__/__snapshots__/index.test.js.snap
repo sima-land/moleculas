@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dropdown /> renders correctly with items 1`] = `
+<div
+  className=""
+>
+  <div
+    className="dropdown"
+    onClick={[Function]}
+  >
+    <div
+      className="title"
+    >
+      test title
+    </div>
+    <Icon
+      className="icon"
+      icon={[Function]}
+      inline={true}
+      size={16}
+    />
+  </div>
+</div>
+`;
+
+exports[`<Dropdown /> renders correctly with items 2`] = `
+<div
+  className=""
+>
+  <div
+    className="dropdown"
+    onClick={[Function]}
+  >
+    <div
+      className="title"
+    >
+      test title
+    </div>
+    <Icon
+      className="icon"
+      icon={[Function]}
+      inline={true}
+      size={16}
+    />
+  </div>
+  <Popup
+    additionalClass="popup"
+  >
+    <ul
+      className="list"
+    >
+      <li
+        className="list-item"
+        key="0"
+        onClick={[Function]}
+      >
+        test-1
+      </li>
+      <li
+        className="list-item"
+        key="1"
+        onClick={[Function]}
+      >
+        test-2
+      </li>
+    </ul>
+  </Popup>
+</div>
+`;
+
+exports[`<Dropdown /> renders correctly with title 1`] = `
+<div
+  className=""
+>
+  <div
+    className="dropdown"
+    onClick={[Function]}
+  >
+    <div
+      className="title"
+    >
+      test title
+    </div>
+    <Icon
+      className="icon"
+      icon={[Function]}
+      inline={true}
+      size={16}
+    />
+  </div>
+</div>
+`;
+
+exports[`<Dropdown /> should render correctly with additional classes prop 1`] = `
+<div
+  className="wrapper-class"
+>
+  <div
+    className="dropdown"
+    onClick={[Function]}
+  >
+    <div
+      className="title"
+    />
+    <Icon
+      className="icon"
+      icon={[Function]}
+      inline={true}
+      size={16}
+    />
+  </div>
+</div>
+`;
+
+exports[`<Dropdown /> should render correctly with dropdownHead prop 1`] = `
+<div
+  className=""
+>
+  &lt;div&gt;Test dropdownHead&lt;/div&gt;
+</div>
+`;
+
+exports[`defaultRenderItem return list item correctly 1`] = `
+<li
+  className="list-item"
+  key="0"
+  onClick={[Function]}
+>
+  test-1
+</li>
+`;

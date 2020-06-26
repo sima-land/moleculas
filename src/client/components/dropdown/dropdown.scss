@@ -1,0 +1,45 @@
+@import '~@dev-dep/ui-nucleons/variables';
+
+.dropdown  .icon {
+  display: inline-block;
+  margin-left: -16px;
+  vertical-align: -2px;
+}
+
+.title {
+  display: inline;
+  margin-right: 4px;
+  padding-right: 20px;
+}
+
+.dropdown {
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 3px;
+  margin-left: -10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+}
+
+.popup {
+  width: 330px;
+  position: absolute;
+}
+
+.list {
+  margin: 0;
+  padding: 16px 20px 16px 24px;
+  font-size: 16px;
+  line-height: 40px;
+  list-style: none;
+}
+
+.list-item {
+  cursor: pointer;
+  &:hover {
+    color: $red;
+  }
+}
