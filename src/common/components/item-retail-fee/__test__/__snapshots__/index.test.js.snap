@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ItemRetailFee /> should render with props 1`] = `
+<ItemRetailFee
+  isFixed={true}
+  isSmaller={true}
+  minQty={20}
+  price={15}
+  unit="R"
+>
+  <div
+    className="wrapper fixed-width small"
+  >
+    <Box
+      marginTop={4}
+    >
+      <div
+        className="margin-top__4"
+      >
+        <Memo(Text)
+          color="gray38"
+          lineHeight={16}
+          size={12}
+        >
+          <span
+            className="size-12 line-height-16 color__gray38"
+          >
+            Наценка за сборку
+            <span
+              className="no-wrap"
+            >
+               + 
+              <Price
+                className="price"
+                value={15}
+              >
+                <span
+                  className="price price"
+                >
+                  15
+                </span>
+              </Price>
+            </span>
+            <span
+              className="no-wrap"
+            >
+              при покупке до 
+              20
+               
+              R
+            </span>
+          </span>
+        </Memo(Text)>
+      </div>
+    </Box>
+  </div>
+</ItemRetailFee>
+`;
+
+exports[`<ItemRetailFee /> should render without props 1`] = `
+<ItemRetailFee>
+  <div
+    className="wrapper"
+  >
+    <Box
+      marginTop={4}
+    >
+      <div
+        className="margin-top__4"
+      >
+        <Memo(Text)
+          color="gray38"
+          lineHeight={20}
+          size={14}
+        >
+          <span
+            className="size-14 line-height-20 color__gray38"
+          >
+            Наценка за сборку
+            <span
+              className="no-wrap"
+            >
+               + 
+              <Price
+                className="price"
+              >
+                <span
+                  className="price price"
+                />
+              </Price>
+            </span>
+          </span>
+        </Memo(Text)>
+      </div>
+    </Box>
+  </div>
+</ItemRetailFee>
+`;

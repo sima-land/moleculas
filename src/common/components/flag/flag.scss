@@ -1,0 +1,48 @@
+@import "../../variables";
+
+/* Цвета шильдиков по умолчанию */
+$flagDefaultColor: $white;
+$flagDefaultBackground: $black;
+$flagDefaultFill: $black;
+$flagDefaultTimeColor: #99a5b4;
+
+.wrap {
+  position: relative;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+  padding: 4px;
+  &:not(.wrap-icon) {
+    color: $flagDefaultColor;
+    fill: $flagDefaultFill;
+    background: $flagDefaultBackground;
+    border-radius: 2px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 10px;
+    line-height: 12px;
+    padding: 2px 4px;
+  }
+}
+
+.link {
+  display: block;
+  color: inherit;
+  border-bottom: none;
+  text-decoration: none;
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.content {
+  min-height: 19px;
+  img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  > * + * {
+    margin-left: 3px;
+  }
+}

@@ -1,0 +1,21 @@
+.wrapper {
+  display: block;
+  line-height: 1;
+  width: 100%;
+  &.small {
+    margin-bottom: 12px;
+  }
+}
+
+.fixed-width {
+  max-width: 200px;
+}
+
+.no-wrap {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.price {
+  margin-right: 3px;
+}

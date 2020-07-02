@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ModifierSelect /> should match a snapshot 1`] = `
+<div
+  className="wrap test-class"
+  onClick={[MockFunction]}
+  onKeyDown={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <div
+    className="adornment"
+  >
+    <div
+      className="color"
+      style={
+        Object {
+          "backgroundColor": "red",
+        }
+      }
+    />
+  </div>
+  <div
+    className="name"
+  >
+    Название модификатора
+  </div>
+  <div
+    className="arrow"
+  >
+    <Icon
+      className="arrow-icon"
+      icon={[Function]}
+      role="presentation"
+      size={16}
+    />
+  </div>
+</div>
+`;

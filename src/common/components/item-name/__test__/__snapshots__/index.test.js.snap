@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ItemName /> should render with props 1`] = `
+<ItemName
+  href="#"
+  name="Foo Bar"
+  shrinkable={true}
+>
+  <div
+    className="wrapper"
+  >
+    <Link
+      color="black"
+      href="#"
+    >
+      <a
+        className="link link-black link-can-be-hovered"
+        href="#"
+        target="_self"
+      >
+        <span
+          className="name"
+        >
+          Foo Bar
+        </span>
+      </a>
+    </Link>
+  </div>
+</ItemName>
+`;
+
+exports[`<ItemName /> should render without props 1`] = `
+<ItemName>
+  <div
+    className="wrapper"
+  >
+    <Link
+      color="black"
+    >
+      <span
+        className="link link-black link-can-be-hovered"
+      >
+        <span
+          className="name"
+        />
+      </span>
+    </Link>
+  </div>
+</ItemName>
+`;

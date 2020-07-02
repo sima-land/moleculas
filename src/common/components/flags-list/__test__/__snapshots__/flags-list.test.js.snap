@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FlagsList /> with props renders correctly 1`] = `
+<div
+  className="wrap test"
+>
+  <div
+    className="item"
+    key="0"
+  >
+    <Flag
+      label="Test"
+    />
+  </div>
+</div>
+`;
+
+exports[`<FlagsList /> without props renders correctly 1`] = `
+<div
+  className="wrap"
+/>
+`;

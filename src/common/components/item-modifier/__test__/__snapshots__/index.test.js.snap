@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ItemModifier /> should render with props 1`] = `
+<ItemModifier
+  count={32}
+  layout="block"
+  title="Foo"
+>
+  <Box
+    marginTop={4}
+  >
+    <div
+      className="margin-top__4"
+    >
+      <Box
+        alignItems="baseline"
+        display="flex"
+        justifyContent="between"
+        marginBottom={2}
+      >
+        <div
+          className="display-flex align-items-baseline justify-content-between margin-bottom__2"
+        >
+          <span
+            className="title"
+          >
+            Foo
+          </span>
+          <Memo(Text)
+            color="gray38"
+            lineHeight={16}
+            size={12}
+          >
+            <span
+              className="size-12 line-height-16 color__gray38"
+            >
+              Всего 
+              32
+            </span>
+          </Memo(Text)>
+        </div>
+      </Box>
+      <ModifierSelect
+        className="wide"
+      >
+        <div
+          className="wrap wide"
+          onKeyDown={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <div
+            className="name"
+          />
+          <div
+            className="arrow"
+          >
+            <Icon
+              className="arrow-icon"
+              icon={[Function]}
+              role="presentation"
+              size={16}
+            >
+              <arrowRight
+                className="icon icon-block arrow-icon"
+                height={16}
+                role="presentation"
+                viewBox="0 0 36 36"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <svg
+                  className="icon icon-block arrow-icon"
+                  height={16}
+                  role="presentation"
+                  viewBox="0 0 36 36"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clipRule="evenodd"
+                    d="M13.143 28.693a2.25 2.25 0 0 1-.211-3.175L19.51 18l-6.578-7.518a2.25 2.25 0 1 1 3.386-2.964l7.875 9a2.25 2.25 0 0 1 0 2.964l-7.875 9a2.25 2.25 0 0 1-3.175.211z"
+                    fillRule="evenodd"
+                  />
+                </svg>
+              </arrowRight>
+            </Icon>
+          </div>
+        </div>
+      </ModifierSelect>
+    </div>
+  </Box>
+</ItemModifier>
+`;
+
+exports[`<ItemModifier /> should render with props 2`] = `
+<ItemModifier
+  count={32}
+  layout="inline"
+  title="Foo"
+>
+  <Box
+    marginTop={4}
+  >
+    <div
+      className="margin-top__4"
+    >
+      <Box
+        alignItems="baseline"
+        display="flex"
+        justifyContent="start"
+        marginBottom={2}
+      >
+        <div
+          className="display-flex align-items-baseline justify-content-start margin-bottom__2"
+        >
+          <span
+            className="title"
+          >
+            Foo
+             (всего 
+            32
+            )
+          </span>
+        </div>
+      </Box>
+      <ModifierSelect
+        className=""
+      >
+        <div
+          className="wrap"
+          onKeyDown={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <div
+            className="name"
+          />
+          <div
+            className="arrow"
+          >
+            <Icon
+              className="arrow-icon"
+              icon={[Function]}
+              role="presentation"
+              size={16}
+            >
+              <arrowRight
+                className="icon icon-block arrow-icon"
+                height={16}
+                role="presentation"
+                viewBox="0 0 36 36"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <svg
+                  className="icon icon-block arrow-icon"
+                  height={16}
+                  role="presentation"
+                  viewBox="0 0 36 36"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clipRule="evenodd"
+                    d="M13.143 28.693a2.25 2.25 0 0 1-.211-3.175L19.51 18l-6.578-7.518a2.25 2.25 0 1 1 3.386-2.964l7.875 9a2.25 2.25 0 0 1 0 2.964l-7.875 9a2.25 2.25 0 0 1-3.175.211z"
+                    fillRule="evenodd"
+                  />
+                </svg>
+              </arrowRight>
+            </Icon>
+          </div>
+        </div>
+      </ModifierSelect>
+    </div>
+  </Box>
+</ItemModifier>
+`;
+
+exports[`<ItemModifier /> should render without props 1`] = `<ItemModifier />`;
