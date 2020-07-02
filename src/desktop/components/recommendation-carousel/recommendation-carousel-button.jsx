@@ -1,7 +1,7 @@
 import React from 'react';
 import Icon from '@dev-dep/ui-nucleons/icon';
-import leftArrowIcon from '../icons/full-left-arrow.svg';
-import rightArrowIcon from '../icons/full-right-arrow.svg';
+import leftArrowIcon from '../../../common/icons/full-left-arrow.svg';
+import rightArrowIcon from '../../../common/icons/full-right-arrow.svg';
 import classnames from 'classnames/bind';
 import classes from './recommendation-carousel-button.scss';
 

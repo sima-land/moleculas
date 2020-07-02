@@ -3,15 +3,15 @@ import { mount, shallow } from 'enzyme';
 import RecommendedItem from '../recommended-item';
 import Link from '@dev-dep/ui-nucleons/link';
 import Price from '@dev-dep/ui-nucleons/price';
-import { cutTextContent } from '../../helpers/dom';
-import { ItemQuickViewButton } from '../../item-quick-view-button';
+import { cutTextContent } from '../../../../common/helpers/dom';
+import { ItemQuickViewButton } from '../../../../common/components/item-quick-view-button';
 
 import debounce from 'lodash/debounce';
 
 jest.mock('lodash/debounce', () => jest.fn(fn => fn));
 
-jest.mock('../../helpers/dom', () => {
-  const original = jest.requireActual('../../helpers/dom');
+jest.mock('../../../../common/helpers/dom', () => {
+  const original = jest.requireActual('../../../../common/helpers/dom');
 
   return {
     ...original,

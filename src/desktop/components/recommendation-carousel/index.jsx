@@ -4,7 +4,7 @@ import RecommendedItem from './recommended-item';
 import CarouselButton from './recommendation-carousel-button';
 import withInViewportObserver from '@dev-dep/ui-nucleons/with-in-viewport-observer';
 import isFunction from 'lodash/isFunction';
-import { isNonEmptyArray } from '../helpers/is-non-empty';
+import { isNonEmptyArray } from '../../../common/helpers/is-non-empty';
 import classes from './recommendation-carousel.scss';
 import classnames from 'classnames/bind';
 

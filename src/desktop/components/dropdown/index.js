@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import Icon from '@dev-dep/ui-nucleons/icon';
 import Popup from '@dev-dep/ui-nucleons/popups/popup';
-import arrowUpIcon from '../icons/arrow-up.svg';
-import arrowDownIcon from '../icons/arrow-down.svg';
+import arrowUpIcon from '../../../common/icons/arrow-up.svg';
+import arrowDownIcon from '../../../common/icons/arrow-down.svg';
 import classnames from 'classnames/bind';
 import styles from './dropdown.scss';
 import isFunction from 'lodash/isFunction';
-import { useOutsideClick } from '../hooks/use-outside-click';
+import { useOutsideClick } from '../../../common/hooks/use-outside-click';
 
 const cx = classnames.bind(styles);
 
