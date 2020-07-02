@@ -4,7 +4,7 @@ import { act } from 'react-dom/test-utils';
 import { render, unmountComponentAtNode } from 'react-dom';
 import RecommendationCarousel, {
   RecommendationCarousel as PureRecommendationCarousel,
-} from '../';
+} from '../index';
 import RecommendedItem from '../recommended-item';
 import Carousel from '@dev-dep/ui-nucleons/carousel/carousel';
 import CarouselButton from '../recommendation-carousel-button';

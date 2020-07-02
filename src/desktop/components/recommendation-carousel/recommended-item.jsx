@@ -3,11 +3,11 @@ import Price from '@dev-dep/ui-nucleons/price';
 import React, { useRef, useEffect } from 'react';
 import classes from './recommended-item.scss';
 import classnames from 'classnames/bind';
-import { cutTextContent } from '../helpers/dom';
+import { cutTextContent } from '../../../common/helpers/dom';
 import isFunction from 'lodash/isFunction';
 import debounce from 'lodash/debounce';
 import withGlobalListeners from '@dev-dep/ui-nucleons/hoc/with-global-listeners';
-import ItemQuickViewButton from '../item-quick-view-button';
+import ItemQuickViewButton from '../../../common/components/item-quick-view-button';
 
 const cx = classnames.bind(classes);
 
