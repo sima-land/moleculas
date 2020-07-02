@@ -1,0 +1,34 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  .cell {
+    height: 40px;
+  }
+  .cart-button {
+    width: 122px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 0;
+  }
+  .min-quantity {
+    &::first-letter {
+      text-transform: uppercase;
+    }
+    color: #9e9e9e;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+  }
+  .button-spinner {
+    fill: none;
+    animation: rotate 3s linear infinite;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

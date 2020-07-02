@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Flag /> with bgColor renders correctly 1`] = `
+<span
+  className="wrap"
+  style={
+    Object {
+      "backgroundColor": "blue",
+      "fill": undefined,
+    }
+  }
+/>
+`;
+
+exports[`<Flag /> with fields and definitions renders correctly 1`] = `
+<span
+  className="wrap"
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "fill": undefined,
+    }
+  }
+>
+  <span
+    className="content"
+  >
+    <span
+      key="0"
+    >
+      -20%
+    </span>
+    <Timer
+      endTime="2019-08-25 23:59:59+05"
+      format="d:h:m:s"
+      key="1"
+    />
+    <span
+      key="2"
+    >
+      Специальные цены
+    </span>
+    <img
+      alt="test"
+      key="3"
+      src="https://test.test/icon.svg"
+    />
+  </span>
+</span>
+`;
+
+exports[`<Flag /> with link renders correctly 1`] = `
+<span
+  className="wrap"
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "fill": undefined,
+    }
+  }
+>
+  <a
+    className="link"
+    href="/test"
+  />
+</span>
+`;
+
+exports[`<Flag /> with shadowColor renders correctly 1`] = `
+<span
+  className="wrap"
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "fill": undefined,
+    }
+  }
+/>
+`;
+
+exports[`<Flag /> with strokeColor renders correctly 1`] = `
+<span
+  className="wrap"
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "fill": "green",
+    }
+  }
+/>
+`;
+
+exports[`<Flag /> with title renders correctly 1`] = `
+<span
+  className="wrap"
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "fill": undefined,
+    }
+  }
+  title="Test"
+/>
+`;
+
+exports[`<Flag /> without props renders correctly 1`] = `
+<span
+  className="wrap"
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "fill": undefined,
+    }
+  }
+/>
+`;

@@ -1,0 +1,32 @@
+@import "~@dev-dep/ui-nucleons/variables";
+@import "~@dev-dep/ui-nucleons/colors";
+
+.wish-button {
+  color: $red;
+  user-select: none;
+  &:not(.is-wished) {
+    color: $black;
+  }
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  top: 10px;
+  &.wish-left {
+    left: 10px;
+  }
+  &.wish-right {
+    right: 10px;
+  }
+  .stroke {
+    overflow: visible;
+    stroke-width: 2;
+    stroke: $gray4;
+  }
+  &.blocked {
+    cursor: auto;
+  }
+  &:hover,
+  &.active {
+    color: $red;
+  }
+}
