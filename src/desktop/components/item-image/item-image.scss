@@ -1,0 +1,90 @@
+@import '../../../common/variables';
+
+.wrapper {
+  min-width: 1px;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  &.small-image {
+    .image-wrapper {
+      min-height: 212px;
+      @media (max-width: $mediumDesktopBreakpoint) {
+        min-height: 191px;
+      }
+      @media (max-width: $extraSmallDesktopBreakpoint) {
+        min-height: 179px;
+      }
+      @media (max-width: 1024px) {
+        min-height: 168px;
+      }
+    }
+  }
+  &.big-image {
+    .image-wrapper {
+      min-height: 370px;
+      @media (max-width: $mediumDesktopBreakpoint) {
+        min-height: 350px;
+      }
+      @media (max-width: $extraSmallDesktopBreakpoint) {
+        min-height: 250px;
+      }
+      @media (max-width: 1024px) {
+        min-height: 168px;
+      }
+    }
+  }
+}
+
+.image-wrapper {
+  overflow: hidden;
+  position: relative;
+  .with-filter-blur {
+    filter: blur(24px);
+  }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    a {
+      display: block;
+      position: relative;
+    }
+    a::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, .04);
+    }
+  }
+}
+
+.badges {
+  margin-top: -16px;
+}
+
+.image {
+  display: block;
+  filter: brightness(96%);
+  width: 100%;
+  height: auto;
+  font-size: 14px;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+.with-blur {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  background: rgba(255, 255, 255, .5);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    background: rgba(255, 255, 255, .95);
+  }
+}
