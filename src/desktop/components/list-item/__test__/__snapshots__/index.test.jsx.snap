@@ -1,0 +1,953 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListItem /> should render with all props 1`] = `
+<div
+  className="wrapper-row test-wrapper-class"
+>
+  <Box
+    alignItems="stretch"
+    direction="row"
+    display="flex"
+    flex="grow"
+    paddingY={6}
+  >
+    <div
+      className="image-box-row"
+    >
+      <ItemImage
+        alt="Foo"
+        className="image"
+        itemUrl="#"
+        quickViewBtnProps={
+          Object {
+            "className": "quick-view-btn",
+            "onClick": undefined,
+          }
+        }
+        src="cdn-url"
+        wishProps={
+          Object {
+            "className": "wish is-wished",
+            "isWished": true,
+            "onClick": undefined,
+            "pos": "left",
+          }
+        }
+      />
+    </div>
+    <div
+      className="info-box"
+    >
+      <div
+        className="info-flex-wrapper row"
+      >
+        <div
+          className="info row"
+        >
+          <div
+            className="details row"
+          >
+            <ItemName
+              href="#"
+              name="Foo"
+            />
+            <Box
+              marginTop={2}
+            >
+              <ItemProperties
+                specClassName="detail"
+                values={
+                  Array [
+                    Object {
+                      "href": "#",
+                      "value": "China",
+                    },
+                  ]
+                }
+              />
+            </Box>
+            <Box
+              marginTop={2}
+            >
+              <Memo(Text)
+                color="gray38"
+                lineHeight={20}
+                size={14}
+              >
+                Доставим 11 августа
+              </Memo(Text)>
+            </Box>
+            <div
+              className="price-fixed row"
+            >
+              <Box
+                marginTop={2}
+              >
+                <Memo(Text)
+                  color="gray38"
+                  lineHeight={20}
+                  size={14}
+                >
+                  Без скидок
+                </Memo(Text)>
+              </Box>
+            </div>
+            <ItemRating
+              marginTop={4}
+              reviewsCount={55}
+              value={4.8}
+            />
+            <ItemModifier
+              count={55}
+              layout="inline"
+              name="baz"
+              title="foo"
+            />
+          </div>
+          <div
+            className="prices row"
+          >
+            <ItemPrice
+              currencyGrapheme="$"
+              price={4999}
+              priceLayout="column"
+              wholesaleProps={
+                Object {
+                  "description": "foo",
+                  "price": 1000,
+                }
+              }
+            />
+            <ItemRetailFee
+              currencyGrapheme="$"
+              isFixed={true}
+              marginTop={2}
+              minQty={10}
+              price={50}
+            />
+          </div>
+        </div>
+        <Box
+          alignItems="center"
+          dangerouslySetInlineStyle={
+            Object {
+              "__style": Object {
+                "alignSelf": "flex-start",
+                "maxWidth": "100%",
+              },
+            }
+          }
+          direction="column"
+          display="flex"
+          justifyContent="between"
+          marginBottom={0}
+          marginTop={0}
+        >
+          <AddToCartBlock
+            additionStepText="for 2 pcs"
+            className="add-to-cart row"
+            onAdd={[Function]}
+            onChange={[Function]}
+            onSubtract={[Function]}
+            qty={5}
+          />
+        </Box>
+      </div>
+      <Box
+        display="flex"
+        justifyContent="between"
+        marginBottom={0}
+        marginTop={6}
+      >
+        <FlagsList
+          flags={
+            Array [
+              Object {
+                "bgColor": "#66cb2f",
+                "definitions": Object {
+                  "label": Object {
+                    "type": "text",
+                    "value": "Новинка",
+                  },
+                },
+                "fields": Array [
+                  "label",
+                ],
+                "link": "/new/",
+                "strokeColor": null,
+                "textColor": "#f2f2f2",
+                "title": null,
+              },
+            ]
+          }
+        />
+        <div
+          className="sid"
+        >
+          <Memo(Text)
+            color="gray38"
+            lineHeight={20}
+            size={14}
+          >
+            Артикул: 
+            10000
+          </Memo(Text)>
+        </div>
+      </Box>
+    </div>
+  </Box>
+</div>
+`;
+
+exports[`<ListItem /> should render with all props 2`] = `
+<div
+  className="wrapper-column test-wrapper-class"
+>
+  <Box
+    alignItems="stretch"
+    direction="column"
+    display="flex"
+    flex="grow"
+    paddingY={0}
+  >
+    <div
+      className="image-box-column"
+    >
+      <ItemImage
+        alt="Foo"
+        className="big-image"
+        itemUrl="#"
+        quickViewBtnProps={
+          Object {
+            "className": "quick-view-btn",
+            "onClick": undefined,
+          }
+        }
+        wishProps={
+          Object {
+            "className": "wish is-wished",
+            "isWished": true,
+            "onClick": undefined,
+            "pos": "left",
+          }
+        }
+      />
+    </div>
+    <div
+      className="info-box"
+    >
+      <div
+        className="info-flex-wrapper column"
+      >
+        <div
+          className="info column"
+        >
+          <div
+            className="details column"
+          >
+            <ItemName
+              href="#"
+              name="Foo"
+            />
+            <div
+              className="price-fixed column"
+            >
+              <Box
+                marginTop={2}
+              >
+                <Memo(Text)
+                  color="gray38"
+                  lineHeight={20}
+                  size={14}
+                >
+                  Без скидок
+                </Memo(Text)>
+              </Box>
+            </div>
+            <ItemRating
+              marginTop={4}
+              reviewsCount={55}
+              value={4.8}
+            />
+            <ItemModifier
+              count={55}
+              layout="block"
+              name="baz"
+              title="foo"
+            />
+          </div>
+          <div
+            className="prices column"
+          >
+            <ItemPrice
+              currencyGrapheme="$"
+              price={4999}
+              priceLayout="row"
+              wholesaleProps={
+                Object {
+                  "description": "foo",
+                  "price": 1000,
+                }
+              }
+            />
+          </div>
+        </div>
+        <Box
+          alignItems="baseline"
+          dangerouslySetInlineStyle={
+            Object {
+              "__style": Object {
+                "alignSelf": "flex-start",
+                "maxWidth": "100%",
+              },
+            }
+          }
+          direction="column"
+          display="flex"
+          justifyContent="between"
+          marginBottom={1}
+          marginTop={3}
+        >
+          <ItemRetailFee
+            currencyGrapheme="$"
+            isSmaller={true}
+            marginTop={2}
+            minQty={10}
+            price={50}
+          />
+          <AddToCartBlock
+            additionStepText="for 2 pcs"
+            asTile={true}
+            className="add-to-cart column"
+            onAdd={[Function]}
+            onChange={[Function]}
+            onSubtract={[Function]}
+            qty={5}
+          />
+        </Box>
+      </div>
+      <Box
+        display="flex"
+        justifyContent="between"
+        marginBottom={2}
+        marginTop={-4}
+      >
+        <FlagsList
+          flags={
+            Array [
+              Object {
+                "bgColor": "#66cb2f",
+                "definitions": Object {
+                  "label": Object {
+                    "type": "text",
+                    "value": "Новинка",
+                  },
+                },
+                "fields": Array [
+                  "label",
+                ],
+                "link": "/new/",
+                "strokeColor": null,
+                "textColor": "#f2f2f2",
+                "title": null,
+              },
+            ]
+          }
+        />
+      </Box>
+    </div>
+  </Box>
+</div>
+`;
+
+exports[`<ListItem /> should render with all props 3`] = `
+<div
+  className="wrapper-row test-wrapper-class"
+>
+  <Box
+    alignItems="stretch"
+    direction="row"
+    display="flex"
+    flex="grow"
+    paddingY={6}
+  >
+    <div
+      className="image-box-row"
+    >
+      <ItemImage
+        alt="Foo"
+        className="image"
+        itemUrl="#"
+        quickViewBtnProps={
+          Object {
+            "className": "quick-view-btn",
+            "onClick": undefined,
+          }
+        }
+        src="cdn-url"
+        wishProps={
+          Object {
+            "className": "wish is-wished",
+            "isWished": true,
+            "onClick": undefined,
+            "pos": "left",
+          }
+        }
+      />
+    </div>
+    <div
+      className="info-box"
+    >
+      <div
+        className="info-flex-wrapper row"
+      >
+        <div
+          className="info row"
+        >
+          <div
+            className="details row"
+          >
+            <ItemName
+              href="#"
+              name="Foo"
+            />
+            <Box
+              marginTop={2}
+            >
+              <ItemProperties
+                specClassName="detail"
+                values={
+                  Array [
+                    Object {
+                      "href": "#",
+                      "value": "China",
+                    },
+                  ]
+                }
+              />
+            </Box>
+            <Box
+              marginTop={2}
+            >
+              <Memo(Text)
+                color="gray38"
+                lineHeight={20}
+                size={14}
+              >
+                Доставим 11 августа
+              </Memo(Text)>
+            </Box>
+            <div
+              className="price-fixed row"
+            >
+              <Box
+                marginTop={2}
+              >
+                <Memo(Text)
+                  color="gray38"
+                  lineHeight={20}
+                  size={14}
+                >
+                  Без скидок
+                </Memo(Text)>
+              </Box>
+            </div>
+            <ItemRating
+              marginTop={4}
+              reviewsCount={55}
+              value={4.8}
+            />
+            <ItemModifier
+              count={55}
+              layout="inline"
+              name="baz"
+              title="foo"
+            />
+          </div>
+          <div
+            className="prices row"
+          >
+            <ItemPrice
+              currencyGrapheme="$"
+              price={4999}
+              priceLayout="column"
+              wholesaleProps={
+                Object {
+                  "description": "foo",
+                  "price": 1000,
+                }
+              }
+            />
+            <ItemRetailFee
+              currencyGrapheme="$"
+              isFixed={true}
+              marginTop={2}
+              minQty={10}
+              price={50}
+            />
+          </div>
+        </div>
+        <Box
+          alignItems="center"
+          dangerouslySetInlineStyle={
+            Object {
+              "__style": Object {
+                "alignSelf": "flex-start",
+                "maxWidth": "100%",
+              },
+            }
+          }
+          direction="column"
+          display="flex"
+          justifyContent="between"
+          marginBottom={0}
+          marginTop={0}
+        >
+          <AddToCartBlock
+            additionStepText="for 2 pcs"
+            asTile={false}
+            className="add-to-cart row"
+            onAdd={[Function]}
+            onChange={[Function]}
+            onSubtract={[Function]}
+            qty={5}
+          />
+          <Memo(Text)
+            color="gray38"
+            lineHeight={20}
+            size={14}
+          >
+            Артикул: 
+            10000
+          </Memo(Text)>
+        </Box>
+      </div>
+    </div>
+  </Box>
+</div>
+`;
+
+exports[`<ListItem /> should render with all props 4`] = `
+<div
+  className="wrapper-column test-wrapper-class"
+>
+  <Box
+    alignItems="stretch"
+    direction="column"
+    display="flex"
+    flex="grow"
+    paddingY={0}
+  >
+    <div
+      className="image-box-column"
+    >
+      <ItemImage
+        alt="Foo"
+        className="big-image"
+        itemUrl="#"
+        quickViewBtnProps={
+          Object {
+            "className": "quick-view-btn",
+            "onClick": undefined,
+          }
+        }
+        wishProps={
+          Object {
+            "className": "wish is-wished",
+            "isWished": true,
+            "onClick": undefined,
+            "pos": "left",
+          }
+        }
+      />
+    </div>
+    <div
+      className="info-box"
+    >
+      <div
+        className="info-flex-wrapper column"
+      >
+        <div
+          className="info column"
+        >
+          <div
+            className="details column"
+          >
+            <ItemName
+              href="#"
+              name="Foo"
+            />
+            <div
+              className="price-fixed column"
+            >
+              <Box
+                marginTop={2}
+              >
+                <Memo(Text)
+                  color="gray38"
+                  lineHeight={20}
+                  size={14}
+                >
+                  Без скидок
+                </Memo(Text)>
+              </Box>
+            </div>
+            <ItemRating
+              marginTop={4}
+              reviewsCount={55}
+              value={4.8}
+            />
+            <ItemModifier
+              count={55}
+              layout="block"
+              name="baz"
+              title="foo"
+            />
+          </div>
+          <div
+            className="prices column"
+          >
+            <ItemPrice
+              currencyGrapheme="$"
+              price={4999}
+              priceLayout="row"
+              wholesaleProps={
+                Object {
+                  "description": "foo",
+                  "price": 1000,
+                }
+              }
+            />
+          </div>
+        </div>
+        <Box
+          alignItems="baseline"
+          dangerouslySetInlineStyle={
+            Object {
+              "__style": Object {
+                "alignSelf": "flex-start",
+                "maxWidth": "100%",
+              },
+            }
+          }
+          direction="column"
+          display="flex"
+          justifyContent="between"
+          marginBottom={1}
+          marginTop={3}
+        >
+          <ItemRetailFee
+            currencyGrapheme="$"
+            isSmaller={true}
+            marginTop={2}
+            minQty={10}
+            price={50}
+          />
+          <AddToCartBlock
+            additionStepText="for 2 pcs"
+            asTile={true}
+            className="add-to-cart column"
+            onAdd={[Function]}
+            onChange={[Function]}
+            onSubtract={[Function]}
+            qty={5}
+          />
+        </Box>
+      </div>
+    </div>
+  </Box>
+</div>
+`;
+
+exports[`<ListItem /> should render with all props 5`] = `
+<div
+  className="wrapper-column test-wrapper-class"
+>
+  <Box
+    alignItems="stretch"
+    direction="column"
+    display="flex"
+    flex="grow"
+    paddingY={0}
+  >
+    <div
+      className="image-box-column"
+    >
+      <ItemImage
+        alt="Foo"
+        className="small-image"
+        itemUrl="#"
+        quickViewBtnProps={
+          Object {
+            "className": "quick-view-btn",
+            "onClick": undefined,
+          }
+        }
+        src="cdn-url"
+        wishProps={
+          Object {
+            "className": "wish is-wished",
+            "isWished": true,
+            "onClick": undefined,
+            "pos": "left",
+          }
+        }
+      />
+    </div>
+    <div
+      className="info-box"
+    >
+      <div
+        className="info-flex-wrapper column"
+      >
+        <div
+          className="info column"
+        >
+          <div
+            className="details column"
+          >
+            <ItemName
+              href="#"
+              name="Foo"
+            />
+            <div
+              className="price-fixed column"
+            >
+              <Box
+                marginTop={2}
+              >
+                <Memo(Text)
+                  color="gray38"
+                  lineHeight={20}
+                  size={14}
+                >
+                  Без скидок
+                </Memo(Text)>
+              </Box>
+            </div>
+            <ItemRating
+              marginTop={4}
+              reviewsCount={55}
+              value={4.8}
+            />
+            <ItemModifier
+              count={55}
+              layout="block"
+              name="baz"
+              title="foo"
+            />
+          </div>
+          <div
+            className="prices column"
+          >
+            <ItemPrice
+              currencyGrapheme="$"
+              price={4999}
+              priceLayout="row"
+              wholesaleProps={
+                Object {
+                  "description": "foo",
+                  "price": 1000,
+                }
+              }
+            />
+          </div>
+        </div>
+        <Box
+          alignItems="baseline"
+          dangerouslySetInlineStyle={
+            Object {
+              "__style": Object {
+                "alignSelf": "flex-start",
+                "maxWidth": "100%",
+              },
+            }
+          }
+          direction="column"
+          display="flex"
+          justifyContent="between"
+          marginBottom={1}
+          marginTop={3}
+        >
+          <ItemRetailFee
+            currencyGrapheme="$"
+            isSmaller={true}
+            marginTop={2}
+            minQty={10}
+            price={50}
+          />
+          <AddToCartBlock
+            additionStepText="for 2 pcs"
+            asTile={true}
+            className="add-to-cart column small"
+            onAdd={[Function]}
+            onChange={[Function]}
+            onSubtract={[Function]}
+            qty={5}
+          />
+        </Box>
+      </div>
+    </div>
+  </Box>
+</div>
+`;
+
+exports[`<ListItem /> should render with shouldHideAdultContent prop 1`] = `
+<div
+  className="wrapper-row"
+>
+  <Box
+    alignItems="stretch"
+    direction="row"
+    display="flex"
+    flex="grow"
+    paddingY={6}
+  >
+    <div
+      className="image-box-row"
+    >
+      <ItemImage
+        alt=""
+        className="image"
+        quickViewBtnProps={
+          Object {
+            "className": "quick-view-btn",
+            "onClick": undefined,
+          }
+        }
+        wishProps={
+          Object {
+            "className": "wish",
+            "isWished": undefined,
+            "onClick": undefined,
+            "pos": "left",
+          }
+        }
+        withBlur={true}
+      />
+    </div>
+    <AdultBlock
+      marginTop={0}
+    />
+  </Box>
+</div>
+`;
+
+exports[`<ListItem /> should render with shouldHideAdultContent prop 2`] = `
+<div
+  className="wrapper-column"
+>
+  <Box
+    alignItems="stretch"
+    direction="column"
+    display="flex"
+    flex="grow"
+    paddingY={0}
+  >
+    <div
+      className="image-box-column"
+    >
+      <ItemImage
+        alt=""
+        className="big-image"
+        quickViewBtnProps={
+          Object {
+            "className": "quick-view-btn",
+            "onClick": undefined,
+          }
+        }
+        wishProps={
+          Object {
+            "className": "wish",
+            "isWished": undefined,
+            "onClick": undefined,
+            "pos": "left",
+          }
+        }
+        withBlur={true}
+      />
+    </div>
+    <AdultBlock
+      marginTop={5}
+    />
+  </Box>
+</div>
+`;
+
+exports[`<ListItem /> should render without props 1`] = `
+<div
+  className="wrapper-row"
+>
+  <Box
+    alignItems="stretch"
+    direction="row"
+    display="flex"
+    flex="grow"
+    paddingY={6}
+  >
+    <div
+      className="image-box-row"
+    >
+      <ItemImage
+        alt=""
+        className="image"
+        quickViewBtnProps={
+          Object {
+            "className": "quick-view-btn",
+            "onClick": undefined,
+          }
+        }
+        wishProps={
+          Object {
+            "className": "wish",
+            "isWished": undefined,
+            "onClick": undefined,
+            "pos": "left",
+          }
+        }
+      />
+    </div>
+    <div
+      className="info-box"
+    >
+      <div
+        className="info-flex-wrapper row"
+      >
+        <div
+          className="info row"
+        >
+          <div
+            className="details row"
+          />
+          <div
+            className="prices row"
+          />
+        </div>
+        <Box
+          alignItems="center"
+          dangerouslySetInlineStyle={
+            Object {
+              "__style": Object {
+                "alignSelf": "flex-start",
+                "maxWidth": "100%",
+              },
+            }
+          }
+          direction="column"
+          display="flex"
+          justifyContent="between"
+          marginBottom={0}
+          marginTop={0}
+        >
+          <AddToCartBlock
+            className="add-to-cart row"
+            onAdd={[Function]}
+            onChange={[Function]}
+            onSubtract={[Function]}
+          />
+        </Box>
+      </div>
+    </div>
+  </Box>
+</div>
+`;

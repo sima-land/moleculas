@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ItemPrice /> should render with props 1`] = `
+<ItemPrice
+  measure="Р / пог. м"
+  price={15}
+  priceLayout="column"
+  priceOld={20}
+  unitPrice={421}
+  wholesaleProps={
+    Object {
+      "price": 14,
+    }
+  }
+>
+  <div
+    className="wrapper wrapper-fixed"
+  >
+    <Box
+      alignItems="baseline"
+      dangerouslySetInlineStyle={Object {}}
+      direction="column"
+      display="flex"
+      justifyContent="between"
+      marginBottom={2}
+    >
+      <div
+        className="display-flex direction-column align-items-baseline justify-content-between margin-bottom__2"
+      >
+        <Box
+          alignItems="start"
+          direction="column"
+          display="flex"
+          marginRight={8}
+        >
+          <div
+            className="display-flex direction-column align-items-start margin-right__8"
+          >
+            <Box
+              marginRight={2}
+            >
+              <div
+                className="margin-right__2"
+              >
+                <Memo(Text)
+                  lineHeight={24}
+                  size={16}
+                  weight={600}
+                >
+                  <span
+                    className="size-16 line-height-24 weight-600"
+                  >
+                    <Price
+                      currencyGraphemeClass="currency-grapheme"
+                      value={15}
+                    >
+                      <span
+                        className="price"
+                      >
+                        15
+                      </span>
+                    </Price>
+                  </span>
+                </Memo(Text)>
+              </div>
+            </Box>
+            <span
+              className="price-old column"
+            >
+              <Memo(Text)
+                color="gray38"
+                size={12}
+              >
+                <span
+                  className="size-12 color__gray38"
+                >
+                  <Price
+                    currencyGraphemeClass="currency-grapheme"
+                    old={true}
+                    value={20}
+                  >
+                    <span
+                      className="price old-price"
+                    >
+                      20
+                    </span>
+                  </Price>
+                </span>
+              </Memo(Text)>
+            </span>
+          </div>
+        </Box>
+      </div>
+    </Box>
+    <span
+      className="price-unit"
+    >
+      <Memo(Text)
+        color="gray38"
+        lineHeight={24}
+        size={16}
+        weight={600}
+      >
+        <span
+          className="size-16 line-height-24 color__gray38 weight-600"
+        >
+          <Price
+            currencyGrapheme="Р / пог. м"
+            currencyGraphemeClass="currency-grapheme"
+            value={421}
+          >
+            <span
+              className="price"
+            >
+              421
+              <span
+                className="currency-grapheme"
+              >
+                 Р / пог. м
+              </span>
+            </span>
+          </Price>
+        </span>
+      </Memo(Text)>
+    </span>
+  </div>
+</ItemPrice>
+`;
+
+exports[`<ItemPrice /> should render without props 1`] = `
+<ItemPrice>
+  <div
+    className="wrapper"
+  >
+    <Box
+      alignItems="baseline"
+      dangerouslySetInlineStyle={
+        Object {
+          "__style": Object {
+            "maxWidth": "100%",
+            "width": "200px",
+          },
+        }
+      }
+      direction="row"
+      display="flex"
+      justifyContent="between"
+      marginBottom={0}
+    >
+      <div
+        className="display-flex direction-row align-items-baseline justify-content-between margin-bottom__0"
+        style={
+          Object {
+            "maxWidth": "100%",
+            "width": "200px",
+          }
+        }
+      >
+        <Box
+          alignItems="end"
+          direction="row"
+          display="flex"
+          marginRight={0}
+        >
+          <div
+            className="display-flex direction-row align-items-end margin-right__0"
+          />
+        </Box>
+      </div>
+    </Box>
+  </div>
+</ItemPrice>
+`;

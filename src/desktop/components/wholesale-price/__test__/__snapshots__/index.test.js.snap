@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WholesalePrice /> should render with props 1`] = `
+<WholesalePrice
+  description="<b>lorem</b>"
+  price={222222}
+>
+  <div
+    className="wrapper"
+  >
+    <Memo(Text)
+      color="gray38"
+      lineHeight={24}
+      size={16}
+      weight={600}
+    >
+      <span
+        className="size-16 line-height-24 color__gray38 weight-600"
+      >
+        <Price
+          currencyGraphemeClass="currency-grapheme"
+          value={222222}
+        >
+          <span
+            className="price"
+          >
+            222 222
+          </span>
+        </Price>
+         / опт
+      </span>
+    </Memo(Text)>
+    <div
+      className="icon-wrapper"
+    >
+      <span
+        aria-label="Подробнее"
+        className="icon"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon={[Function]}
+          inline={true}
+          role="presentation"
+          size={16}
+        >
+          <infoIcon
+            className="icon"
+            height={16}
+            role="presentation"
+            viewBox="0 0 36 36"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <svg
+              className="icon"
+              height={16}
+              role="presentation"
+              viewBox="0 0 36 36"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 15.75A2.25 2.25 0 0 1 20.25 18v6.75a2.25 2.25 0 0 1-4.5 0V18A2.25 2.25 0 0 1 18 15.75zm0 0M18 13.5a2.25 2.25 0 1 0-.001-4.501A2.25 2.25 0 0 0 18 13.5zm0 0"
+              />
+              <path
+                d="M0 18C0 8.059 8.059 0 18 0s18 8.059 18 18-8.059 18-18 18S0 27.941 0 18zM18 4.5C10.543 4.5 4.5 10.543 4.5 18S10.543 31.5 18 31.5 31.5 25.457 31.5 18 25.457 4.5 18 4.5zm0 0"
+              />
+            </svg>
+          </infoIcon>
+        </Icon>
+      </span>
+    </div>
+  </div>
+</WholesalePrice>
+`;
+
+exports[`<WholesalePrice /> should render without props 1`] = `
+<WholesalePrice>
+  <div
+    className="wrapper"
+  >
+    <Memo(Text)
+      color="gray38"
+      lineHeight={24}
+      size={16}
+      weight={600}
+    >
+      <span
+        className="size-16 line-height-24 color__gray38 weight-600"
+      >
+        <Price
+          currencyGraphemeClass="currency-grapheme"
+        >
+          <span
+            className="price"
+          />
+        </Price>
+         / опт
+      </span>
+    </Memo(Text)>
+  </div>
+</WholesalePrice>
+`;

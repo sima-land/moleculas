@@ -1,0 +1,36 @@
+@import "../../../common/variables";
+
+.wrapper {
+  display: flex;
+  flex-flow: row;
+  &:not(.wrapper-fixed) {
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+.wrapper-fixed {
+  align-items: flex-start;
+  flex-flow: row;
+  @media screen and (min-width: $extraSmallDesktopBreakpoint) and (max-width: $smallDesktopBreakpoint) {
+    flex-flow: column;
+    justify-content: flex-start;
+  }
+}
+
+.price-old {
+  padding-bottom: 2px;
+  &.column {
+    line-height: 1;
+  }
+}
+
+.currency-grapheme {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.wholesale {
+  flex-shrink: 0;
+}
