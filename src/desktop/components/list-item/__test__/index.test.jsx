@@ -65,7 +65,10 @@ describe('<ListItem />', () => {
         }}
         isWished
         wrapperClassName='test-wrapper-class'
+        inStockText='in stock 300'
         isPriceFixed
+        hasAddToCartBlock
+        hasAnaloguesButton
       />
     );
     expect(wrapper).toMatchSnapshot();
@@ -76,6 +79,10 @@ describe('<ListItem />', () => {
     wrapper.setProps({ asTile: true });
     expect(wrapper).toMatchSnapshot();
     wrapper.setProps({ size: 'small' });
+    expect(wrapper).toMatchSnapshot();
+    wrapper.setProps({ shouldHideAdultContent: true });
+    expect(wrapper).toMatchSnapshot();
+    wrapper.setProps({ hasQuickPreview: true, hasWishButton: true });
     expect(wrapper).toMatchSnapshot();
   });
   it('should render with shouldHideAdultContent prop', () => {
@@ -89,6 +96,7 @@ describe('<ListItem />', () => {
     const wrapper = mount(
       <ListItem
         addToCartHandler={spy}
+        hasAddToCartBlock
       />
     );
     wrapper.find(AddToCartBlock).instance().props.onAdd();

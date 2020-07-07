@@ -6,6 +6,7 @@ import classnames from 'classnames/bind';
 import FlagsList from '../../../common/components/flags-list';
 import ItemQuickViewButton from '../../../common/components/item-quick-view-button';
 import EighteenPlus from '../../../common/icons/eighteen-plus.svg';
+import SelectedIcon from '../../../common/icons/selected.svg';
 import WishButton from '../../../common/components/wish-button';
 
 const cx = classnames.bind(style);
@@ -51,6 +52,10 @@ export const ItemImage = ({
   withBlur,
   itemUrl,
   isFetchingWishItems,
+  selectionProps,
+  hasQuickPreview,
+  hasSelectionButton,
+  hasWishButton,
 }) => (
   <div className={cx('wrapper', className)}>
     {withBlur && (
@@ -65,7 +70,16 @@ export const ItemImage = ({
           : getImage({ src, alt }, onClick, onLoadImage)
         }
       </Link>
-      {!withBlur && (
+      {hasSelectionButton && Boolean(selectionProps) && (
+        <div onClick={selectionProps.onSelect} className={cx('selection-container')}>
+          <div className={cx('selection-circle')}>
+            {selectionProps.isSelected && (
+              <Icon icon={SelectedIcon} size={56} />
+            )}
+          </div>
+        </div>
+      )}
+      {hasQuickPreview && (
         <ItemQuickViewButton
           onClick={quickViewBtnProps.onClick}
           additionalClassName={quickViewBtnProps.className}
@@ -79,7 +93,7 @@ export const ItemImage = ({
         />
       </div>
     )}
-    {Boolean(wishProps) && !withBlur && (
+    {hasWishButton && Boolean(wishProps) && (
       <WishButton
         isWished={wishProps.isWished}
         className={wishProps.className}
