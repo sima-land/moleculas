@@ -152,6 +152,26 @@ exports[`<ListItem /> should render with all props 1`] = `
             qty={5}
           />
         </Box>
+        <div
+          className="in-stock-wrapper"
+        >
+          <Memo(Text)
+            weight={600}
+          >
+            in stock 300
+          </Memo(Text)>
+          <div
+            className="analogues"
+          >
+            <Link>
+              <Memo(Text)
+                weight={600}
+              >
+                Аналоги
+              </Memo(Text)>
+            </Link>
+          </div>
+        </div>
       </div>
       <Box
         display="flex"
@@ -325,6 +345,26 @@ exports[`<ListItem /> should render with all props 2`] = `
             qty={5}
           />
         </Box>
+        <div
+          className="in-stock-wrapper"
+        >
+          <Memo(Text)
+            weight={600}
+          >
+            in stock 300
+          </Memo(Text)>
+          <div
+            className="analogues"
+          >
+            <Link>
+              <Memo(Text)
+                weight={600}
+              >
+                Аналоги
+              </Memo(Text)>
+            </Link>
+          </div>
+        </div>
       </div>
       <Box
         display="flex"
@@ -521,6 +561,26 @@ exports[`<ListItem /> should render with all props 3`] = `
             10000
           </Memo(Text)>
         </Box>
+        <div
+          className="in-stock-wrapper"
+        >
+          <Memo(Text)
+            weight={600}
+          >
+            in stock 300
+          </Memo(Text)>
+          <div
+            className="analogues"
+          >
+            <Link>
+              <Memo(Text)
+                weight={600}
+              >
+                Аналоги
+              </Memo(Text)>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   </Box>
@@ -653,6 +713,26 @@ exports[`<ListItem /> should render with all props 4`] = `
             qty={5}
           />
         </Box>
+        <div
+          className="in-stock-wrapper"
+        >
+          <Memo(Text)
+            weight={600}
+          >
+            in stock 300
+          </Memo(Text)>
+          <div
+            className="analogues"
+          >
+            <Link>
+              <Memo(Text)
+                weight={600}
+              >
+                Аналоги
+              </Memo(Text)>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   </Box>
@@ -786,8 +866,116 @@ exports[`<ListItem /> should render with all props 5`] = `
             qty={5}
           />
         </Box>
+        <div
+          className="in-stock-wrapper"
+        >
+          <Memo(Text)
+            weight={600}
+          >
+            in stock 300
+          </Memo(Text)>
+          <div
+            className="analogues"
+          >
+            <Link>
+              <Memo(Text)
+                weight={600}
+              >
+                Аналоги
+              </Memo(Text)>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
+  </Box>
+</div>
+`;
+
+exports[`<ListItem /> should render with all props 6`] = `
+<div
+  className="wrapper-column test-wrapper-class"
+>
+  <Box
+    alignItems="stretch"
+    direction="column"
+    display="flex"
+    flex="grow"
+    paddingY={0}
+  >
+    <div
+      className="image-box-column"
+    >
+      <ItemImage
+        alt="Foo"
+        className="small-image"
+        itemUrl="#"
+        quickViewBtnProps={
+          Object {
+            "className": "quick-view-btn",
+            "onClick": undefined,
+          }
+        }
+        src="cdn-url"
+        wishProps={
+          Object {
+            "className": "wish is-wished",
+            "isWished": true,
+            "onClick": undefined,
+            "pos": "left",
+          }
+        }
+        withBlur={true}
+      />
+    </div>
+    <AdultBlock
+      marginTop={3}
+    />
+  </Box>
+</div>
+`;
+
+exports[`<ListItem /> should render with all props 7`] = `
+<div
+  className="wrapper-column test-wrapper-class"
+>
+  <Box
+    alignItems="stretch"
+    direction="column"
+    display="flex"
+    flex="grow"
+    paddingY={0}
+  >
+    <div
+      className="image-box-column"
+    >
+      <ItemImage
+        alt="Foo"
+        className="small-image"
+        hasQuickPreview={false}
+        hasWishButton={false}
+        itemUrl="#"
+        quickViewBtnProps={
+          Object {
+            "className": "quick-view-btn",
+            "onClick": undefined,
+          }
+        }
+        src="cdn-url"
+        wishProps={
+          Object {
+            "className": "wish is-wished",
+            "isWished": true,
+            "onClick": undefined,
+            "pos": "left",
+          }
+        }
+        withBlur={true}
+      />
+    </div>
+    <AdultBlock
+      marginTop={3}
+    />
   </Box>
 </div>
 `;
@@ -938,14 +1126,7 @@ exports[`<ListItem /> should render without props 1`] = `
           justifyContent="between"
           marginBottom={0}
           marginTop={0}
-        >
-          <AddToCartBlock
-            className="add-to-cart row"
-            onAdd={[Function]}
-            onChange={[Function]}
-            onSubtract={[Function]}
-          />
-        </Box>
+        />
       </div>
     </div>
   </Box>

@@ -18,6 +18,7 @@ import isFunction from 'lodash/isFunction';
 import AdultBlock from '../../../common/components/adult-block/adult-block';
 import withInViewportObserver from '@dev-dep/ui-nucleons/with-in-viewport-observer';
 import withGlobalListeners from '@dev-dep/ui-nucleons/hoc/with-global-listeners';
+import Link from '@dev-dep/ui-nucleons/link';
 
 const cx = classnames.bind(style);
 
@@ -47,7 +48,10 @@ const cx = classnames.bind(style);
  * @property {Function} [onQuickViewClick] Обработчик нажатия на кнопку быстрого просмотра.
  * @property {Function} [addToCartHandler] Обработчик действий с корзиной.
  * @property {string} [wrapperClassName] Класс для обертки.
- * @property {boolean} [asTile] Тип отображения компонента - tile (иначе list).
+ * @property {boolean} [hasQuickPreview] Признак наличия кнопки быстрого просмотра.
+ * @property {boolean} [hasSelectionButton] Признак наличия кнопки выделения товара.
+ * @property {boolean} [hasAddToCartBlock] Признак наличия блока добавления товара в корзину.
+ * @property {boolean} [hasWishButton] Признак наличия кнопки добавления в избранное.
  * @property {'xxl|small'} [size] Размер плитки.
  * @property {Function} addObserveWithMargin Функция подписки на Intersection Observer.
  * @property {Function} onAdultClick Обработчик нажатия на ссылку в блоке 18+.
@@ -66,10 +70,12 @@ export const ListItem = ({
   onWishClick,
   onQuickViewClick,
   onDetailsClick,
+  onAnaloguesClick,
 
   // Свойства дочерних компонентов
   wholesaleProps,
   modifierProps,
+  selectionProps,
 
   // Данные о товаре
   badges = [],
@@ -109,6 +115,14 @@ export const ListItem = ({
   qty,
   additionStepText,
   viewType,
+  inStockText,
+
+  // Пропы кастомизации
+  hasQuickPreview,
+  hasSelectionButton,
+  hasAddToCartBlock,
+  hasWishButton,
+  hasAnaloguesButton,
 }) => {
   const direction = asTile ? 'column' : 'row';
   let imageClassName = 'image';
@@ -163,11 +177,15 @@ export const ListItem = ({
               onClick: onQuickViewClick,
               className: cx('quick-view-btn'),
             }}
+            selectionProps={selectionProps}
             className={cx(imageClassName)}
             withBlur={shouldHideAdultContent}
             onLoadImage={onLoadImage}
             itemUrl={itemUrl}
             isFetchingWishItems={isFetchingWishItems}
+            hasQuickPreview={hasQuickPreview && !shouldHideAdultContent}
+            hasWishButton={hasWishButton && !shouldHideAdultContent}
+            hasSelectionButton={hasSelectionButton}
           />
         </div>
         {shouldHideAdultContent && (
@@ -266,31 +284,45 @@ export const ListItem = ({
                     isSmaller
                   />
                 )}
-                <AddToCartBlock
-                  onAdd={() => {
-                    isFunction(addToCartHandler) && addToCartHandler('add');
-                  }}
-                  onSubtract={() => {
-                    isFunction(addToCartHandler) && addToCartHandler('subtract');
-                  }}
-                  onChange={value => {
-                    isFunction(addToCartHandler) && addToCartHandler('change', value);
-                  }}
-                  additionStepText={additionStepText}
-                  className={cx('add-to-cart', direction, size)}
-                  quantity={displayedQuantity}
-                  qty={qty}
-                  isFetching={isCartFetching}
-                  hasPlusButton={canAddMoreToCart}
-                  asTile={asTile}
-                  isFloatQty={isFloatQty}
-                />
+                {hasAddToCartBlock && (
+                  <AddToCartBlock
+                    onAdd={() => {
+                      isFunction(addToCartHandler) && addToCartHandler('add');
+                    }}
+                    onSubtract={() => {
+                      isFunction(addToCartHandler) && addToCartHandler('subtract');
+                    }}
+                    onChange={value => {
+                      isFunction(addToCartHandler) && addToCartHandler('change', value);
+                    }}
+                    additionStepText={additionStepText}
+                    className={cx('add-to-cart', direction, size)}
+                    quantity={displayedQuantity}
+                    qty={qty}
+                    isFetching={isCartFetching}
+                    hasPlusButton={canAddMoreToCart}
+                    asTile={asTile}
+                    isFloatQty={isFloatQty}
+                  />
+                )}
                 {!badges.length && Boolean(sid) && !asTile && (
                   <Text color='gray38' size={14} lineHeight={20}>
                     Артикул: {sid}
                   </Text>
                 )}
               </Box>
+              {(inStockText || hasAnaloguesButton) && (
+                <div className={cx('in-stock-wrapper')}>
+                  {Boolean(inStockText) && <Text weight={600} children={inStockText} />}
+                  {hasAnaloguesButton && (
+                    <div className={cx('analogues')}>
+                      <Link onClick={onAnaloguesClick}>
+                        <Text weight={600}>Аналоги</Text>
+                      </Link>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
             {Boolean(badges.length) && (
               <Box display='flex'
