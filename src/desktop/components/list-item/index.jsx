@@ -71,6 +71,7 @@ export const ListItem = ({
   onQuickViewClick,
   onDetailsClick,
   onAnaloguesClick,
+  onTrashClick,
 
   // Свойства дочерних компонентов
   wholesaleProps,
@@ -116,6 +117,7 @@ export const ListItem = ({
   additionStepText,
   viewType,
   inStockText,
+  inStockTextStyleProps,
 
   // Пропы кастомизации
   hasQuickPreview,
@@ -123,6 +125,7 @@ export const ListItem = ({
   hasAddToCartBlock,
   hasWishButton,
   hasAnaloguesButton,
+  hasTrashButton,
 }) => {
   const direction = asTile ? 'column' : 'row';
   let imageClassName = 'image';
@@ -186,6 +189,11 @@ export const ListItem = ({
             hasQuickPreview={hasQuickPreview && !shouldHideAdultContent}
             hasWishButton={hasWishButton && !shouldHideAdultContent}
             hasSelectionButton={hasSelectionButton}
+            hasTrashButton={hasTrashButton}
+            trashButtonProps={{
+              onClick: onTrashClick,
+              className: cx('trash-cart-button', 'display-on-hover'),
+            }}
           />
         </div>
         {shouldHideAdultContent && (
@@ -313,9 +321,9 @@ export const ListItem = ({
               </Box>
               {(inStockText || hasAnaloguesButton) && (
                 <div className={cx('in-stock-wrapper')}>
-                  {Boolean(inStockText) && <Text weight={600} children={inStockText} />}
+                  {Boolean(inStockText) && <Text weight={600} children={inStockText} {...inStockTextStyleProps} />}
                   {hasAnaloguesButton && (
-                    <div className={cx('analogues')}>
+                    <div className={cx('analogues', 'display-on-hover')}>
                       <Link onClick={onAnaloguesClick}>
                         <Text weight={600}>Аналоги</Text>
                       </Link>

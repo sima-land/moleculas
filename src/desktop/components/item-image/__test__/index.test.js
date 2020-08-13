@@ -82,4 +82,21 @@ describe('<ItemImage />', () => {
     Simulate.load(image);
     expect(spy).toHaveBeenCalled();
   });
+  it('should render with trash cart button', () => {
+    const wrapper = shallow(
+      <ItemImage
+        trashButtonProps={{
+          className: 'test-trash-button',
+          onClick: jest.fn(),
+        }}
+        hasTrashButton
+      />
+    );
+    expect(wrapper.find(Icon)).toHaveLength(1);
+    expect(wrapper).toMatchSnapshot();
+
+    wrapper.setProps({ selectionProps: { isSelected: true } });
+    expect(wrapper.find(Icon)).toHaveLength(1);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

@@ -8,6 +8,7 @@ import ItemQuickViewButton from '../../../common/components/item-quick-view-butt
 import EighteenPlus from '../../../common/icons/eighteen-plus.svg';
 import SelectedIcon from '../../../common/icons/selected.svg';
 import WishButton from '../../../common/components/wish-button';
+import blackTrashCart from '../../../common/icons/trash-cart.svg';
 
 const cx = classnames.bind(style);
 
@@ -26,6 +27,12 @@ const cx = classnames.bind(style);
  */
 
 /**
+ * @typedef TrashButtonProps Свойства кнопки удаления товара.
+ * @property {string} className Класс для кнопки удаления товара.
+ * @property {Function} onClick Обработчик клика по кнопке удаления товара.
+ */
+
+/**
  * Компонент изображения товара с избранным.
  * @param {Object} props Свойства компонента.
  * @param {string} props.src Ссылка на изображение.
@@ -38,6 +45,8 @@ const cx = classnames.bind(style);
  * @param {Function} props.onLoadImage Колбэк на загрузку изображения.
  * @param {boolean} props.withBlur Добавление блюра.
  * @param {boolean} props.isFetchingWishItems Признак загрузки добавления товара в список избранного.
+ * @param {boolean} props.hasTrashButton Признак наличия кнопки удаления товара.
+ * @param {TrashButtonProps} [props.trashButtonProps] Свойства для кнопки удаления товара.
  * @return {ReactElement} Компонент изображения.
  */
 export const ItemImage = ({
@@ -56,6 +65,8 @@ export const ItemImage = ({
   hasQuickPreview,
   hasSelectionButton,
   hasWishButton,
+  hasTrashButton,
+  trashButtonProps,
 }) => (
   <div className={cx('wrapper', className)}>
     {withBlur && (
@@ -70,6 +81,15 @@ export const ItemImage = ({
           : getImage({ src, alt }, onClick, onLoadImage)
         }
       </Link>
+      {hasTrashButton && (
+        <Icon
+          icon={blackTrashCart}
+          size={20}
+          color='gray87'
+          className={trashButtonProps.className}
+          onClick={trashButtonProps.onClick}
+        />
+      )}
       {hasSelectionButton && Boolean(selectionProps) && (
         <div onClick={selectionProps.onSelect} className={cx('selection-container')}>
           <div className={cx('selection-circle')}>
