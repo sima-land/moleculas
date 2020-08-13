@@ -69,6 +69,11 @@ describe('<ListItem />', () => {
         isPriceFixed
         hasAddToCartBlock
         hasAnaloguesButton
+        hasTrashButton
+        trashButtonProps={{
+          onClick: jest.fn(),
+          className: 'trash-cart-button',
+        }}
       />
     );
     expect(wrapper).toMatchSnapshot();

@@ -267,6 +267,54 @@ exports[`<ItemImage /> should render wish 2`] = `
 </ItemImage>
 `;
 
+exports[`<ItemImage /> should render with trash cart button 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="image-wrapper"
+  >
+    <Link>
+      <img
+        className="image"
+        onLoad={[Function]}
+      />
+    </Link>
+    <Icon
+      className="test-trash-button"
+      color="gray87"
+      icon={[Function]}
+      onClick={[MockFunction]}
+      size={20}
+    />
+  </div>
+</div>
+`;
+
+exports[`<ItemImage /> should render with trash cart button 2`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="image-wrapper"
+  >
+    <Link>
+      <img
+        className="image"
+        onLoad={[Function]}
+      />
+    </Link>
+    <Icon
+      className="test-trash-button"
+      color="gray87"
+      icon={[Function]}
+      onClick={[MockFunction]}
+      size={20}
+    />
+  </div>
+</div>
+`;
+
 exports[`<ItemImage /> should render with withBlur prop 1`] = `
 <ItemImage
   withBlur={true}
