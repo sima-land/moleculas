@@ -5,7 +5,7 @@
   color: $red;
   user-select: none;
   &:not(.is-wished) {
-    color: $black;
+    color: $gray87;
   }
   position: absolute;
   cursor: pointer;
@@ -20,7 +20,7 @@
   .stroke {
     overflow: visible;
     stroke-width: 2;
-    stroke: $gray4;
+    stroke: #f5f5f5;
   }
   &.blocked {
     cursor: auto;

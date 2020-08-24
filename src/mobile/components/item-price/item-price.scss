@@ -1,0 +1,39 @@
+@import "~@dev-dep/ui-nucleons/variables";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+  &.row {
+    @media (min-width: $mediumMobileBreakpoint) {
+      margin-bottom: 16px;
+      .wholesale {
+        margin-top: 8px;
+      }
+    }
+  }
+  &.column {
+    margin-top: 8px;
+  }
+}
+
+.price-old {
+  padding-bottom: 2px;
+  &.column {
+    line-height: 1;
+  }
+}
+
+.currency-grapheme {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.wholesale {
+  flex-shrink: 0;
+  margin-top: 4px;
+  @media (max-width: $smallMobileBreakpoint) {
+    display: flex;
+    align-items: flex-end;
+  }
+}

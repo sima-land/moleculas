@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ItemRating /> should render with props 1`] = `
+<ItemRating
+  reviewsCount={3}
+  value={2}
+>
+  <Box
+    alignItems="center"
+    direction="row"
+    display="flex"
+    marginTop={0}
+  >
+    <div
+      className="display-flex direction-row align-items-center margin-top__0"
+    >
+      <Icon
+        color="additional-amber"
+        icon={[Function]}
+        size={11}
+        value={2}
+      >
+        <star
+          className="icon icon-block color__additional-amber"
+          height={11}
+          value={2}
+          viewBox="0 0 36 36"
+          width={11}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <svg
+            className="icon icon-block color__additional-amber"
+            height={11}
+            value={2}
+            viewBox="0 0 36 36"
+            width={11}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.77 32.446l9.228-5.793 9.224 5.793a.901.901 0 0 0 1.351-.983L25.915 20.9l8.36-6.984a.9.9 0 0 0-.516-1.59l-10.87-.735-4.058-10.11a.9.9 0 0 0-1.67 0l-4.06 10.11-10.868.735a.9.9 0 0 0-.516 1.59l8.36 6.984-2.658 10.564a.9.9 0 0 0 1.351.983z"
+            />
+            <path
+              d="M8.77 32.446l9.228-5.793L17.996.916a.9.9 0 0 0-.835.564l-4.06 10.11-10.868.735a.9.9 0 0 0-.516 1.59l8.36 6.984-2.658 10.564a.9.9 0 0 0 1.351.983z"
+            />
+          </svg>
+        </star>
+      </Icon>
+      <Box
+        dangerouslySetInlineStyle={
+          Object {
+            "__style": Object {
+              "marginLeft": "2px",
+              "paddingBottom": "2px",
+            },
+          }
+        }
+      >
+        <div
+          className=""
+          style={
+            Object {
+              "marginLeft": "2px",
+              "paddingBottom": "2px",
+            }
+          }
+        >
+          <Box
+            display="inline"
+            marginRight={2}
+          >
+            <div
+              className="display-inline margin-right__2"
+            >
+              <Memo(Text)
+                color="additional-amber"
+                size={12}
+                weight={800}
+              >
+                <span
+                  className="size-12 color__additional-amber weight-800"
+                >
+                  2.0
+                </span>
+              </Memo(Text)>
+            </div>
+          </Box>
+          <Memo(Text)
+            color="gray38"
+            size={12}
+          >
+            <span
+              className="size-12 color__gray38"
+            >
+              3 отзыва
+            </span>
+          </Memo(Text)>
+        </div>
+      </Box>
+    </div>
+  </Box>
+</ItemRating>
+`;
+
+exports[`<ItemRating /> should render without props 1`] = `
+<ItemRating>
+  <Box
+    alignItems="center"
+    direction="row"
+    display="flex"
+    marginTop={0}
+  >
+    <div
+      className="display-flex direction-row align-items-center margin-top__0"
+    >
+      <Icon
+        color="additional-amber"
+        icon={[Function]}
+        size={11}
+        value={0}
+      >
+        <star
+          className="icon icon-block color__additional-amber"
+          height={11}
+          value={0}
+          viewBox="0 0 36 36"
+          width={11}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <svg
+            className="icon icon-block color__additional-amber"
+            height={11}
+            value={0}
+            viewBox="0 0 36 36"
+            width={11}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.77 32.446l9.228-5.793 9.224 5.793a.901.901 0 0 0 1.351-.983L25.915 20.9l8.36-6.984a.9.9 0 0 0-.516-1.59l-10.87-.735-4.058-10.11a.9.9 0 0 0-1.67 0l-4.06 10.11-10.868.735a.9.9 0 0 0-.516 1.59l8.36 6.984-2.658 10.564a.9.9 0 0 0 1.351.983z"
+            />
+            <path
+              d="M8.77 32.446l9.228-5.793L17.996.916a.9.9 0 0 0-.835.564l-4.06 10.11-10.868.735a.9.9 0 0 0-.516 1.59l8.36 6.984-2.658 10.564a.9.9 0 0 0 1.351.983z"
+            />
+          </svg>
+        </star>
+      </Icon>
+    </div>
+  </Box>
+</ItemRating>
+`;

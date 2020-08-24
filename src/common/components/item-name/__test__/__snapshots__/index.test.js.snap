@@ -18,11 +18,17 @@ exports[`<ItemName /> should render with props 1`] = `
         href="#"
         target="_self"
       >
-        <span
-          className="name"
-        >
-          Foo Bar
-        </span>
+        <Memo(Text)>
+          <span
+            className=""
+          >
+            <span
+              className="name"
+            >
+              Foo Bar
+            </span>
+          </span>
+        </Memo(Text)>
       </a>
     </Link>
   </div>
@@ -40,9 +46,15 @@ exports[`<ItemName /> should render without props 1`] = `
       <span
         className="link link-black link-can-be-hovered"
       >
-        <span
-          className="name"
-        />
+        <Memo(Text)>
+          <span
+            className=""
+          >
+            <span
+              className="name"
+            />
+          </span>
+        </Memo(Text)>
       </span>
     </Link>
   </div>

@@ -9,9 +9,9 @@ describe('<WishButton />', () => {
   });
   it('should render with props', () => {
     const onClick = jest.fn();
-    const wrapper = mount(<WishButton />);
+    const wrapper = mount(<WishButton wishProps={{}} />);
     expect(wrapper).toMatchSnapshot();
-    wrapper.setProps({ isWished: true, onClick });
+    wrapper.setProps({ wishProps: { isWished: true, onClick } });
     expect(wrapper).toMatchSnapshot();
   });
   it('onClick not to have been called if isFetchingWishItems', () => {

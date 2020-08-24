@@ -2,6 +2,7 @@ import React from 'react';
 import classnames from 'classnames/bind';
 import styles from './item-name.scss';
 import Link from '@dev-dep/ui-nucleons/link';
+import Text from '@dev-dep/ui-nucleons/text';
 
 const cx = classnames.bind(styles);
 
@@ -17,10 +18,13 @@ export const ItemName = ({
   href,
   name,
   className,
+  nameTextProps,
 }) => (
   <div className={cx('wrapper', className)}>
     <Link href={href} color='black'>
-      <span className={cx('name')} children={name} />
+      <Text {...nameTextProps}>
+        <span className={cx('name')} children={name} />
+      </Text>
     </Link>
   </div>
 );
