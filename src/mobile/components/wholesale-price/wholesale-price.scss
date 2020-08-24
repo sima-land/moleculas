@@ -1,0 +1,68 @@
+@import "~@dev-dep/ui-nucleons/link/link";
+@import "~@dev-dep/ui-nucleons/variables";
+
+.wrapper {
+  display: inline;
+  @media (max-width: $smallMobileBreakpoint) {
+    color: #212121;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    max-height: 38px;
+    padding-right: 20px;
+  }
+}
+
+.currency-grapheme {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.popup {
+  margin-top: 14px;
+}
+
+.notice-popup {
+  width: 360px;
+  padding: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.popup-body {
+  p:first-child {
+    margin-top: 0;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+  a {
+    @extend .link;
+    @extend .link-blue;
+    @extend .link-can-be-hovered;
+  }
+}
+
+.wholesale-text {
+  padding-right: 24px;
+}
+
+.icon-wrapper {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+  margin-left: -16px;
+  padding-bottom: 1px;
+}
+
+.icon {
+  color: $gray24;
+  cursor: pointer;
+  position: relative;
+}
+

@@ -23,6 +23,7 @@ export const WishButton = ({
   onClick,
   pos,
   isFetchingWishItems,
+  size = 20,
 }) => (
   <div
     className={cx('wish-button', {
@@ -36,7 +37,7 @@ export const WishButton = ({
     <Icon
       className={cx(!isWished && 'stroke')}
       icon={isWished ? heartFilledIcon : heartIcon}
-      size={20}
+      size={size}
     />
   </div>
 );

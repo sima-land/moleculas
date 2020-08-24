@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<WishButton /> should render with props 1`] = `
-<WishButton>
+<WishButton
+  wishProps={Object {}}
+>
   <div
     className="wish-button wish-undefined undefined"
   >
@@ -36,37 +38,40 @@ exports[`<WishButton /> should render with props 1`] = `
 
 exports[`<WishButton /> should render with props 2`] = `
 <WishButton
-  isWished={true}
-  onClick={[MockFunction]}
+  wishProps={
+    Object {
+      "isWished": true,
+      "onClick": [MockFunction],
+    }
+  }
 >
   <div
-    className="wish-button wish-undefined undefined is-wished"
-    onClick={[MockFunction]}
+    className="wish-button wish-undefined undefined"
   >
     <Icon
-      className=""
+      className="stroke"
       icon={[Function]}
       size={20}
     >
-      <heartFilledIcon
-        className="icon icon-block"
+      <heartIcon
+        className="icon icon-block stroke"
         height={20}
         viewBox="0 0 36 36"
         width={20}
         xmlns="http://www.w3.org/2000/svg"
       >
         <svg
-          className="icon icon-block"
+          className="icon icon-block stroke"
           height={20}
           viewBox="0 0 36 36"
           width={20}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M2.25 14.371C2.25 8.832 4.5 4.5 10.125 4.5S18 7.75 18 7.75s2.25-3.25 7.875-3.25 7.875 4.332 7.875 9.871c0 10.57-12.648 17.758-15.277 19.137a.99.99 0 0 1-.946 0C14.898 32.128 2.25 24.94 2.25 14.37zm0 0"
+            d="M30.862 4.784l-.002-.001C26.487 1.74 21.18 2.897 18 6.067c-3.18-3.17-8.486-4.344-12.86-1.283-2.482 1.736-4.027 4.65-4.133 7.72-.123 3.473 1.336 6.544 3.822 9.689 2.446 3.096 5.965 6.358 10.135 10.224l.14.13.002.002.16.146v.001a3.993 3.993 0 0 0 5.455-.019l.003-.002.173-.161.044-.04c4.212-3.898 7.762-7.182 10.225-10.3 2.484-3.143 3.942-6.213 3.828-9.685v-.002c-.106-3.054-1.652-5.968-4.132-7.703zM18 28.54c-3.69-3.41-6.705-6.22-8.824-8.746-2.2-2.622-3.314-4.806-3.314-6.899 0-2.871 2.08-4.97 4.854-4.97 1.708 0 3.405.896 4.403 2.25.617.835 1.614 1.647 2.883 1.647 1.277 0 2.277-.82 2.894-1.66.99-1.345 2.682-2.237 4.386-2.237 2.775 0 4.855 2.099 4.855 4.97 0 2.093-1.115 4.277-3.314 6.9-2.12 2.526-5.134 5.335-8.824 8.744z"
           />
         </svg>
-      </heartFilledIcon>
+      </heartIcon>
     </Icon>
   </div>
 </WishButton>

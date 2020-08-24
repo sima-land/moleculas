@@ -1,0 +1,167 @@
+@import "~@dev-dep/ui-nucleons/variables";
+@import "~@dev-dep/ui-nucleons/colors";
+
+.wrapper-row {
+  font-size: 16px;
+  padding: 16px;
+  box-shadow: inset 0 -1px 0 #e0e0e0;
+  position: relative;
+  @media screen and (max-width: 1279px) {
+    font-size: 14px;
+  }
+}
+
+.wrapper-column {
+  min-width: 1px;
+  display: inline-flex;
+  flex-flow: column;
+  padding: 16px 8px;
+  box-sizing: border-box;
+  position: relative;
+  @media (min-width: $largeMobileBreakpoint) {
+    padding: 16px 12px 24px;
+  }
+}
+
+.lazy-wrapper {
+  width: 100%;
+  height: 176px;
+  @media screen and (max-width: 1279px) {
+    height: 140px;
+  }
+}
+
+.image-box-row {
+  flex-shrink: 0;
+  margin-right: 12px;
+  width: 108px;
+  @media (min-width: $smallMobileBreakpoint) {
+    width: 200px;
+  }
+  @media screen and (min-width: $mediumMobileBreakpoint) {
+    margin-right: 16px;
+  }
+  @media (min-width: $extraLargeMobileBreakpoint) {
+    width: 256px;
+  }
+}
+
+.image-box-column {
+  min-width: 1px;
+  min-height: 1px;
+}
+
+.info-box {
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  min-width: 1px; // IE fix
+  align-items: stretch;
+}
+
+.image {
+  width: 108px;
+  height: auto;
+  @media (min-width: $smallMobileBreakpoint) {
+    width: 200px;
+  }
+  @media (min-width: $extraLargeMobileBreakpoint) {
+    width: 256px;
+  }
+}
+
+.title-wrapper {
+  font-size: 12px;
+  &.row {
+    font-weight: 600;
+    margin-bottom: 4px;
+    @media (min-width: $mediumMobileBreakpoint) {
+      font-size: 16px;
+      font-weight: normal;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.add-to-cart {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  flex-direction: column;
+  max-width: 122px;
+  margin-top: 16px;
+  .cell {
+    height: 40px;
+  }
+  .cart-button {
+    width: 122px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 0;
+  }
+  .min-quantity {
+    &::first-letter {
+      text-transform: uppercase;
+    }
+    color: #9e9e9e;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+  }
+  .button-spinner {
+    fill: none;
+    animation: rotate 3s linear infinite;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.in-cart-input-wrapper {
+  padding: 10px 12px;
+  width: 122px;
+  height: 40px;
+  position: relative;
+  background-color: #ebebeb;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 16px;
+}
+
+.step-arrows {
+  position: absolute;
+  right: 10.5px;
+  top: 13px;
+}
+
+.in-cart-input {
+  padding-left: 12px;
+}
+
+.min-quantity {
+  color: $gray62;
+  font-size: 12px;
+  line-height: 1.2;
+  margin-top: 8px;
+  text-align: center;
+  width: 122px;
+}
+
+.in-stock {
+  font-size: 1em;
+  color: $gray87;
+  font-weight: 600;
+  &.gray {
+    color: $gray24;
+  }
+}
+
+.actions {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}

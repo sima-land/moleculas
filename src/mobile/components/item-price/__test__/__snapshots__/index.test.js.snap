@@ -1,0 +1,244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ItemPrice /> should render with props cards type 1`] = `
+<ItemPrice
+  measure="Р / пог. м"
+  price={15}
+  priceOld={20}
+  unitPrice={421}
+  viewType="column"
+  wholesaleProps={
+    Object {
+      "price": 14,
+    }
+  }
+>
+  <div
+    className="wrapper column"
+  >
+    <Box
+      alignItems="center"
+      display="flex"
+    >
+      <div
+        className="display-flex align-items-center"
+      >
+        <Box
+          marginRight={2}
+        >
+          <div
+            className="margin-right__2"
+          >
+            <Memo(Text)
+              color="gray87"
+              lineHeight={24}
+              size={14}
+              weight={600}
+            >
+              <span
+                className="size-14 line-height-24 color__gray87 weight-600"
+              >
+                <Price
+                  currencyGraphemeClass="currency-grapheme"
+                  value={15}
+                >
+                  <span
+                    className="price"
+                  >
+                    15
+                  </span>
+                </Price>
+              </span>
+            </Memo(Text)>
+          </div>
+        </Box>
+        <span
+          className="price-old column"
+        >
+          <Memo(Text)
+            color="gray38"
+            size={12}
+          >
+            <span
+              className="size-12 color__gray38"
+            >
+              <Price
+                currencyGraphemeClass="currency-grapheme"
+                old={true}
+                value={20}
+              >
+                <span
+                  className="price old-price"
+                >
+                  20
+                </span>
+              </Price>
+            </span>
+          </Memo(Text)>
+        </span>
+      </div>
+    </Box>
+    <span
+      className="price-unit"
+    >
+      <Memo(Text)
+        color="gray38"
+        lineHeight={24}
+        size={16}
+        weight={600}
+      >
+        <span
+          className="size-16 line-height-24 color__gray38 weight-600"
+        >
+          <Price
+            currencyGrapheme="Р / пог. м"
+            currencyGraphemeClass="currency-grapheme"
+            value={421}
+          >
+            <span
+              className="price"
+            >
+              421
+              <span
+                className="currency-grapheme"
+              >
+                 Р / пог. м
+              </span>
+            </span>
+          </Price>
+        </span>
+      </Memo(Text)>
+    </span>
+  </div>
+</ItemPrice>
+`;
+
+exports[`<ItemPrice /> should render with props list type 1`] = `
+<ItemPrice
+  measure="Р / пог. м"
+  price={15}
+  priceOld={20}
+  unitPrice={421}
+  viewType="row"
+  wholesaleProps={
+    Object {
+      "price": 14,
+    }
+  }
+>
+  <div
+    className="wrapper row"
+  >
+    <Box
+      alignItems="center"
+      display="flex"
+    >
+      <div
+        className="display-flex align-items-center"
+      >
+        <Box
+          marginRight={2}
+        >
+          <div
+            className="margin-right__2"
+          >
+            <Memo(Text)
+              color="gray87"
+              lineHeight={24}
+              size={16}
+              weight={600}
+            >
+              <span
+                className="size-16 line-height-24 color__gray87 weight-600"
+              >
+                <Price
+                  currencyGraphemeClass="currency-grapheme"
+                  value={15}
+                >
+                  <span
+                    className="price"
+                  >
+                    15
+                  </span>
+                </Price>
+              </span>
+            </Memo(Text)>
+          </div>
+        </Box>
+        <span
+          className="price-old row"
+        >
+          <Memo(Text)
+            color="gray38"
+            size={12}
+          >
+            <span
+              className="size-12 color__gray38"
+            >
+              <Price
+                currencyGraphemeClass="currency-grapheme"
+                old={true}
+                value={20}
+              >
+                <span
+                  className="price old-price"
+                >
+                  20
+                </span>
+              </Price>
+            </span>
+          </Memo(Text)>
+        </span>
+      </div>
+    </Box>
+    <span
+      className="price-unit"
+    >
+      <Memo(Text)
+        color="gray38"
+        lineHeight={24}
+        size={16}
+        weight={600}
+      >
+        <span
+          className="size-16 line-height-24 color__gray38 weight-600"
+        >
+          <Price
+            currencyGrapheme="Р / пог. м"
+            currencyGraphemeClass="currency-grapheme"
+            value={421}
+          >
+            <span
+              className="price"
+            >
+              421
+              <span
+                className="currency-grapheme"
+              >
+                 Р / пог. м
+              </span>
+            </span>
+          </Price>
+        </span>
+      </Memo(Text)>
+    </span>
+  </div>
+</ItemPrice>
+`;
+
+exports[`<ItemPrice /> should render without props 1`] = `
+<ItemPrice>
+  <div
+    className="wrapper"
+  >
+    <Box
+      alignItems="center"
+      display="flex"
+    >
+      <div
+        className="display-flex align-items-center"
+      />
+    </Box>
+  </div>
+</ItemPrice>
+`;
