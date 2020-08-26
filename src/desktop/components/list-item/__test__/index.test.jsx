@@ -74,12 +74,13 @@ describe('<ListItem />', () => {
           onClick: jest.fn(),
           className: 'trash-cart-button',
         }}
+        measure='₽ / м'
       />
     );
     expect(wrapper).toMatchSnapshot();
     wrapper.setProps({ asTile: true });
     expect(wrapper).toMatchSnapshot();
-    wrapper.setProps({ badges: [], asTile: false });
+    wrapper.setProps({ badges: [], asTile: false, unitPrice: 16 });
     expect(wrapper).toMatchSnapshot();
     wrapper.setProps({ asTile: true });
     expect(wrapper).toMatchSnapshot();
