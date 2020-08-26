@@ -69,6 +69,7 @@ export const RecommendationSlider = ({
           weight={600}
           element='h4'
           children={title}
+          lineHeight={28}
         />
       </MobileLayout>
       <TouchSlider
