@@ -19,6 +19,7 @@ import AdultBlock from '../../../common/components/adult-block/adult-block';
 import withInViewportObserver from '@dev-dep/ui-nucleons/with-in-viewport-observer';
 import withGlobalListeners from '@dev-dep/ui-nucleons/hoc/with-global-listeners';
 import Link from '@dev-dep/ui-nucleons/link';
+import WholesalePrice from '../wholesale-price';
 
 const cx = classnames.bind(style);
 
@@ -48,6 +49,7 @@ const cx = classnames.bind(style);
  * @property {Function} [onQuickViewClick] Обработчик нажатия на кнопку быстрого просмотра.
  * @property {Function} [addToCartHandler] Обработчик действий с корзиной.
  * @property {string} [wrapperClassName] Класс для обертки.
+ * @property {boolean} [asTile] Тип отображения компонента - tile (иначе list).
  * @property {boolean} [hasQuickPreview] Признак наличия кнопки быстрого просмотра.
  * @property {boolean} [hasSelectionButton] Признак наличия кнопки выделения товара.
  * @property {boolean} [hasAddToCartBlock] Признак наличия блока добавления товара в корзину.
@@ -55,6 +57,7 @@ const cx = classnames.bind(style);
  * @property {'xxl|small'} [size] Размер плитки.
  * @property {Function} addObserveWithMargin Функция подписки на Intersection Observer.
  * @property {Function} onAdultClick Обработчик нажатия на ссылку в блоке 18+.
+ * @property {string} dataKey Значение дата-атрибута key.
  */
 
 /**
@@ -118,6 +121,8 @@ export const ListItem = ({
   viewType,
   inStockText,
   inStockTextStyleProps,
+  filtersHidden,
+  dataKey,
 
   // Пропы кастомизации
   hasQuickPreview,
@@ -127,6 +132,7 @@ export const ListItem = ({
   hasAnaloguesButton,
   hasTrashButton,
 }) => {
+  const isUnitPrice = unitPrice && measure;
   const direction = asTile ? 'column' : 'row';
   let imageClassName = 'image';
   let imageSrc = image;
@@ -160,10 +166,10 @@ export const ListItem = ({
     isFunction(getItemWidth)
     && wrapRef.current
     && getItemWidth(wrapRef.current.offsetWidth);
-  }, [viewType]);
+  }, [viewType, filtersHidden]);
 
   return (
-    <div className={cx(`wrapper-${direction}`, wrapperClassName)} ref={wrapRef}>
+    <div className={cx(`wrapper-${direction}`, wrapperClassName)} ref={wrapRef} data-key={dataKey}>
       <Box paddingY={asTile ? 0 : 6} display='flex' direction={direction} alignItems='stretch' flex='grow'>
         <div className={cx(`image-box-${direction}`)}>
           <ItemImage
@@ -211,6 +217,16 @@ export const ListItem = ({
                   {Boolean(name) && (
                     <ItemName name={name} href={itemUrl} />
                   )}
+                  {!asTile && !isUnitPrice && Boolean(wholesaleProps) && Boolean(wholesaleProps.price) && (
+                    <Box marginTop={2}>
+                      <WholesalePrice
+                        currencyGrapheme={currencyGrapheme}
+                        className={cx('wholesale')}
+                        onDetailsClick={onDetailsClick}
+                        {...wholesaleProps}
+                      />
+                    </Box>
+                  )}
                   {!asTile && Boolean(properties) && (
                     <Box marginTop={2}>
                       <ItemProperties values={properties} specClassName={cx('detail')} />
@@ -239,7 +255,7 @@ export const ListItem = ({
                     </div>
                   )}
                   {Boolean(rating) && Boolean(reviewsCount) && (
-                    <ItemRating marginTop={4} value={rating} reviewsCount={reviewsCount} />
+                    <ItemRating marginTop={3} value={rating} reviewsCount={reviewsCount} />
                   )}
                   {Boolean(modifierProps) && (
                     <ItemModifier
@@ -260,6 +276,7 @@ export const ListItem = ({
                       unitPrice={unitPrice}
                       measure={measure}
                       onDetailsClick={onDetailsClick}
+                      showWholesalePrice={asTile}
                     />
                   )}
                   {!asTile && !isEmpty(markupData) && Boolean(qty) && qty < markupData.count && (
@@ -279,8 +296,7 @@ export const ListItem = ({
                 justifyContent='between'
                 alignItems={asTile ? 'baseline' : 'center'}
                 marginTop={asTile ? 3 : 0}
-                marginBottom={asTile ? 1 : 0}
-                dangerouslySetInlineStyle={{ __style: { alignSelf: 'flex-start', maxWidth: '100%' } }}
+                dangerouslySetInlineStyle={{ __style: { alignSelf: 'stretch', maxWidth: '100%' } }}
               >
                 {asTile && !isEmpty(markupData) && Boolean(qty) && qty < markupData.count && (
                   <ItemRetailFee

@@ -12,6 +12,9 @@
   :hover {
     .quick-view-btn {
       opacity: 1;
+      @media screen and (max-width: $extraSmallDesktopBreakpoint) {
+        padding: 12px;
+      }
     }
     .wish,
     .display-on-hover {
@@ -79,6 +82,9 @@
   &.column {
     flex-flow: column;
     order: 2;
+    &:only-child {
+      margin-top: 8px;
+    }
   }
   &.row {
     flex-flow: row;
@@ -89,7 +95,7 @@
   width: 176px;
   height: auto;
   @media screen and (max-width: 1279px) {
-    width: 140px;
+    width: 157px;
   }
   .wish:not(.is-wished) {
     display: none;

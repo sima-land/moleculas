@@ -61,6 +61,16 @@ exports[`<ListItem /> should render with all props 1`] = `
             <Box
               marginTop={2}
             >
+              <withGlobalListeners(WholesalePrice)
+                className="wholesale"
+                currencyGrapheme="$"
+                description="foo"
+                price={1000}
+              />
+            </Box>
+            <Box
+              marginTop={2}
+            >
               <ItemProperties
                 specClassName="detail"
                 values={
@@ -100,7 +110,7 @@ exports[`<ListItem /> should render with all props 1`] = `
               </Box>
             </div>
             <ItemRating
-              marginTop={4}
+              marginTop={3}
               reviewsCount={55}
               value={4.8}
             />
@@ -116,6 +126,7 @@ exports[`<ListItem /> should render with all props 1`] = `
           >
             <ItemPrice
               currencyGrapheme="$"
+              measure="₽ / м"
               price={4999}
               priceLayout="column"
               wholesaleProps={
@@ -139,7 +150,7 @@ exports[`<ListItem /> should render with all props 1`] = `
           dangerouslySetInlineStyle={
             Object {
               "__style": Object {
-                "alignSelf": "flex-start",
+                "alignSelf": "stretch",
                 "maxWidth": "100%",
               },
             }
@@ -147,7 +158,6 @@ exports[`<ListItem /> should render with all props 1`] = `
           direction="column"
           display="flex"
           justifyContent="between"
-          marginBottom={0}
           marginTop={0}
         >
           <AddToCartBlock
@@ -299,7 +309,7 @@ exports[`<ListItem /> should render with all props 2`] = `
               </Box>
             </div>
             <ItemRating
-              marginTop={4}
+              marginTop={3}
               reviewsCount={55}
               value={4.8}
             />
@@ -315,8 +325,10 @@ exports[`<ListItem /> should render with all props 2`] = `
           >
             <ItemPrice
               currencyGrapheme="$"
+              measure="₽ / м"
               price={4999}
               priceLayout="row"
+              showWholesalePrice={true}
               wholesaleProps={
                 Object {
                   "description": "foo",
@@ -331,7 +343,7 @@ exports[`<ListItem /> should render with all props 2`] = `
           dangerouslySetInlineStyle={
             Object {
               "__style": Object {
-                "alignSelf": "flex-start",
+                "alignSelf": "stretch",
                 "maxWidth": "100%",
               },
             }
@@ -339,7 +351,6 @@ exports[`<ListItem /> should render with all props 2`] = `
           direction="column"
           display="flex"
           justifyContent="between"
-          marginBottom={1}
           marginTop={3}
         >
           <ItemRetailFee
@@ -514,7 +525,7 @@ exports[`<ListItem /> should render with all props 3`] = `
               </Box>
             </div>
             <ItemRating
-              marginTop={4}
+              marginTop={3}
               reviewsCount={55}
               value={4.8}
             />
@@ -530,8 +541,11 @@ exports[`<ListItem /> should render with all props 3`] = `
           >
             <ItemPrice
               currencyGrapheme="$"
+              measure="₽ / м"
               price={4999}
               priceLayout="column"
+              showWholesalePrice={false}
+              unitPrice={16}
               wholesaleProps={
                 Object {
                   "description": "foo",
@@ -553,7 +567,7 @@ exports[`<ListItem /> should render with all props 3`] = `
           dangerouslySetInlineStyle={
             Object {
               "__style": Object {
-                "alignSelf": "flex-start",
+                "alignSelf": "stretch",
                 "maxWidth": "100%",
               },
             }
@@ -561,7 +575,6 @@ exports[`<ListItem /> should render with all props 3`] = `
           direction="column"
           display="flex"
           justifyContent="between"
-          marginBottom={0}
           marginTop={0}
         >
           <AddToCartBlock
@@ -681,7 +694,7 @@ exports[`<ListItem /> should render with all props 4`] = `
               </Box>
             </div>
             <ItemRating
-              marginTop={4}
+              marginTop={3}
               reviewsCount={55}
               value={4.8}
             />
@@ -697,8 +710,11 @@ exports[`<ListItem /> should render with all props 4`] = `
           >
             <ItemPrice
               currencyGrapheme="$"
+              measure="₽ / м"
               price={4999}
               priceLayout="row"
+              showWholesalePrice={true}
+              unitPrice={16}
               wholesaleProps={
                 Object {
                   "description": "foo",
@@ -713,7 +729,7 @@ exports[`<ListItem /> should render with all props 4`] = `
           dangerouslySetInlineStyle={
             Object {
               "__style": Object {
-                "alignSelf": "flex-start",
+                "alignSelf": "stretch",
                 "maxWidth": "100%",
               },
             }
@@ -721,7 +737,6 @@ exports[`<ListItem /> should render with all props 4`] = `
           direction="column"
           display="flex"
           justifyContent="between"
-          marginBottom={1}
           marginTop={3}
         >
           <ItemRetailFee
@@ -841,7 +856,7 @@ exports[`<ListItem /> should render with all props 5`] = `
               </Box>
             </div>
             <ItemRating
-              marginTop={4}
+              marginTop={3}
               reviewsCount={55}
               value={4.8}
             />
@@ -857,8 +872,11 @@ exports[`<ListItem /> should render with all props 5`] = `
           >
             <ItemPrice
               currencyGrapheme="$"
+              measure="₽ / м"
               price={4999}
               priceLayout="row"
+              showWholesalePrice={true}
+              unitPrice={16}
               wholesaleProps={
                 Object {
                   "description": "foo",
@@ -873,7 +891,7 @@ exports[`<ListItem /> should render with all props 5`] = `
           dangerouslySetInlineStyle={
             Object {
               "__style": Object {
-                "alignSelf": "flex-start",
+                "alignSelf": "stretch",
                 "maxWidth": "100%",
               },
             }
@@ -881,7 +899,6 @@ exports[`<ListItem /> should render with all props 5`] = `
           direction="column"
           display="flex"
           justifyContent="between"
-          marginBottom={1}
           marginTop={3}
         >
           <ItemRetailFee
@@ -1183,7 +1200,7 @@ exports[`<ListItem /> should render without props 1`] = `
           dangerouslySetInlineStyle={
             Object {
               "__style": Object {
-                "alignSelf": "flex-start",
+                "alignSelf": "stretch",
                 "maxWidth": "100%",
               },
             }
@@ -1191,7 +1208,6 @@ exports[`<ListItem /> should render without props 1`] = `
           direction="column"
           display="flex"
           justifyContent="between"
-          marginBottom={0}
           marginTop={0}
         />
       </div>
