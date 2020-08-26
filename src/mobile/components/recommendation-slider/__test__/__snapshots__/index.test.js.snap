@@ -35,11 +35,12 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
           >
             <Memo(Text)
               element="h4"
+              lineHeight={28}
               size={20}
               weight={600}
             >
               <h4
-                className="size-20 weight-600"
+                className="size-20 line-height-28 weight-600"
               >
                 Test title
               </h4>
