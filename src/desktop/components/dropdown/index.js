@@ -13,13 +13,11 @@ const cx = classnames.bind(styles);
 /**
  * Компонент выпадающего меню.
  * @param {Object} props Пропы компонента.
- * @param {string} props.wrapperClass Класс обертки.
  * @param {string} props.title Заголовок меню.
  * @param {Array} props.items Элементы списка меню.
  * @param {Function} props.renderItem Функция для отрисовки элемента списка. По умолчанию - defaultRenderItem.
  * @param {Function} props.onSelect Функция, вызыаемая при клике на элемент списка.
  * @param {Function} props.renderDropdownHead Функция для заголовка списка.
- * @param {Function} props.popupClasses Класс попапа.
  * @return {ReactElement} Компонент выпадающего списка.
  */
 const Dropdown = ({
@@ -42,11 +40,13 @@ const Dropdown = ({
     onSelect(item);
   };
   return (
-    <div className={cx(wrapperClass)} ref={ref}>
+    <div className={cx(wrapperClass || cx('wrapper'))} ref={ref}>
       {
         renderDropdownHead({
           title,
-          onTitleClick: () => setIsOpen(!isOpen),
+          onTitleClick: () => {
+            setIsOpen(!isOpen);
+          },
           isOpen,
           setIsOpen,
           ...restProps,
@@ -92,9 +92,14 @@ export const defaultRenderItem = (item, index, onSelect) => (
  * @return {ReactElement} Элемент списка.
  */
 export const renderDefaultHead = ({ title, onTitleClick, isOpen }) => (
-  <div className={cx('dropdown')} onClick={isFunction(onTitleClick) && onTitleClick}>
+  <div className={cx('trigger')} onClick={isFunction(onTitleClick) && onTitleClick}>
     <div className={cx('title')}>{title}</div>
-    <Icon inline icon={isOpen ? arrowUpIcon : arrowDownIcon} className={cx('icon')} size={16} />
+    <Icon
+      inline
+      icon={isOpen ? arrowUpIcon : arrowDownIcon}
+      className={cx('icon')}
+      size={16}
+    />
   </div>
 );
 
