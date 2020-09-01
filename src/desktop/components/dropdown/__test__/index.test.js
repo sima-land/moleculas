@@ -1,7 +1,7 @@
 import { render } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import React from 'react';
-import Dropdown, { defaultRenderItem } from '../index';
+import Dropdown, { defaultRenderItem } from '../';
 import { shallow } from 'enzyme';
 
 const testItems = [
@@ -33,7 +33,7 @@ describe('<Dropdown />', () => {
         />,
         container
       );
-      document.querySelector('.dropdown').dispatchEvent(click());
+      document.querySelector('.trigger').dispatchEvent(click());
     });
     expect(document.querySelector('.popup')).toBeInstanceOf(HTMLElement);
     act(() => {
@@ -54,7 +54,7 @@ describe('<Dropdown />', () => {
       />
     );
     expect(component).toMatchSnapshot();
-    component.find('.dropdown').simulate('click');
+    component.find('.trigger').simulate('click');
     expect(component).toMatchSnapshot();
     component.find('.list-item').at(0).simulate('click');
     expect(onSelect).toHaveBeenCalledWith(testItems[0]);
