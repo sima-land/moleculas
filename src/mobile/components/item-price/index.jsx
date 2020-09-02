@@ -30,54 +30,57 @@ export const ItemPrice = ({
   measure,
   onDetailsClick,
   itemId,
-}) => (
-  <div className={cx('wrapper', viewType)}>
-    <Box display='flex' alignItems='center'>
-      {Boolean(price) && (
-        <Box marginRight={2}>
-          <Text size={viewType === 'column' ? 14 : 16} lineHeight={24} weight={600} color='gray87'>
+}) => {
+  const isUnitPrice = unitPrice && measure;
+  return (
+    <div className={cx('wrapper', viewType)}>
+      <Box display='flex' alignItems='center'>
+        {Boolean(price) && (
+          <Box marginRight={2}>
+            <Text size={viewType === 'column' ? 14 : 16} lineHeight={24} weight={600} color='gray87'>
+              <Price
+                value={price}
+                currencyGrapheme={currencyGrapheme}
+                currencyGraphemeClass={cx('currency-grapheme')}
+              />
+            </Text>
+          </Box>
+        )}
+        {Boolean(priceOld) && (priceOld > price) && (
+          <span className={cx('price-old', viewType)}>
+            <Text size={12} color='gray38'>
+              <Price
+                old
+                value={priceOld}
+                currencyGrapheme={currencyGrapheme}
+                currencyGraphemeClass={cx('currency-grapheme')}
+              />
+            </Text>
+          </span>
+        )}
+      </Box>
+      {Boolean(unitPrice && measure) && (
+        <span className={cx('price-unit')}>
+          <Text size={16} color='gray38' lineHeight={24} weight={600}>
             <Price
-              value={price}
-              currencyGrapheme={currencyGrapheme}
-              currencyGraphemeClass={cx('currency-grapheme')}
-            />
-          </Text>
-        </Box>
-      )}
-      {Boolean(priceOld) && (priceOld > price) && (
-        <span className={cx('price-old', viewType)}>
-          <Text size={12} color='gray38'>
-            <Price
-              old
-              value={priceOld}
-              currencyGrapheme={currencyGrapheme}
+              value={unitPrice}
+              currencyGrapheme={measure}
               currencyGraphemeClass={cx('currency-grapheme')}
             />
           </Text>
         </span>
       )}
-    </Box>
-    {Boolean(unitPrice && measure) && (
-      <span className={cx('price-unit')}>
-        <Text size={16} color='gray38' lineHeight={24} weight={600}>
-          <Price
-            value={unitPrice}
-            currencyGrapheme={measure}
-            currencyGraphemeClass={cx('currency-grapheme')}
-          />
-        </Text>
-      </span>
-    )}
-    {!unitPrice && Boolean(wholesaleProps) && Boolean(wholesaleProps.price) && (
-      <WholesalePrice
-        currencyGrapheme={currencyGrapheme}
-        className={cx('wholesale')}
-        onDetailsClick={onDetailsClick}
-        itemId={itemId}
-        {...wholesaleProps}
-      />
-    )}
-  </div>
-);
+      {!isUnitPrice && Boolean(wholesaleProps) && Boolean(wholesaleProps.price) && (
+        <WholesalePrice
+          currencyGrapheme={currencyGrapheme}
+          className={cx('wholesale')}
+          onDetailsClick={onDetailsClick}
+          itemId={itemId}
+          {...wholesaleProps}
+        />
+      )}
+    </div>
+  );
+};
 
 export default ItemPrice;

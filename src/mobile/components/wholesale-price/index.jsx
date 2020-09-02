@@ -1,12 +1,12 @@
 import React from 'react';
 import infoIcon from '../../../common/icons/info.svg';
-import withGlobalListeners from '@dev-dep/ui-nucleons/hoc/with-global-listeners';
 import Icon from '@dev-dep/ui-nucleons/icon';
 import Price from '@dev-dep/ui-nucleons/price';
 import Text from '@dev-dep/ui-nucleons/text';
 import classnames from 'classnames/bind';
 import style from './wholesale-price.scss';
 import isFunction from 'lodash/isFunction';
+import WholesaleText from '../wholesale-text/wholesale-text';
 
 export const cx = classnames.bind(style);
 
@@ -36,7 +36,7 @@ export const WholesalePrice = ({
           currencyGrapheme={currencyGrapheme}
           currencyGraphemeClass={cx('currency-grapheme')}
         />
-      &nbsp;/ <span className={cx('wholesale-text')}>{text}</span>
+        &nbsp;/ <WholesaleText text={text} className={cx('wholesale-text')} />
       </Text>
     </div>
     {Boolean(description) && (
@@ -61,4 +61,4 @@ export const WholesalePrice = ({
   </div>
 );
 
-export default withGlobalListeners(WholesalePrice);
+export default WholesalePrice;

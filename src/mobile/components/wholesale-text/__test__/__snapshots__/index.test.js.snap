@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WholesaleText /> should render with props and cutTextContent calls correctly 1`] = `
+<WholesaleText
+  addGlobalListener={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "resize",
+          [Function],
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  text="Крупный опт «Галантерея и швейная галантерея»"
+>
+  <span>
+    Крупный опт «Галантерея и швейная галантерея»
+  </span>
+</WholesaleText>
+`;
+
+exports[`<WholesaleText /> should render without props 1`] = `
+<WholesaleText
+  addGlobalListener={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "resize",
+          [Function],
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+>
+  <span />
+</WholesaleText>
+`;

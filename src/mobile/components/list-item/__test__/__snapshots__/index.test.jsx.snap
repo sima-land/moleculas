@@ -84,12 +84,16 @@ exports[`<ListItem /> should render with all props 1`] = `
         }
         marginTop={2}
       >
-        <Memo(Text)
-          color="gray38"
-          lineHeight={12}
+        <Link
+          href="#"
         >
-          Еще 55 вариантов
-        </Memo(Text)>
+          <Memo(Text)
+            color="gray38"
+            lineHeight={12}
+          >
+            Еще 55 вариантов
+          </Memo(Text)>
+        </Link>
       </Box>
       <ItemRating
         marginTop={2}
@@ -235,6 +239,7 @@ exports[`<ListItem /> should render with all props 2`] = `
       <ItemRetailFee
         currencyGrapheme="$"
         isFixed={true}
+        isSmaller={true}
         marginTop={2}
         minQty={10}
         price={50}
@@ -396,6 +401,7 @@ exports[`<ListItem /> should render with all props 3`] = `
       <ItemRetailFee
         currencyGrapheme="$"
         isFixed={true}
+        isSmaller={true}
         marginTop={2}
         minQty={10}
         price={50}
@@ -562,6 +568,7 @@ exports[`<ListItem /> should render with all props 4`] = `
       <ItemRetailFee
         currencyGrapheme="$"
         isFixed={true}
+        isSmaller={true}
         marginTop={2}
         minQty={10}
         price={50}
@@ -738,6 +745,7 @@ exports[`<ListItem /> should render with all props 5`] = `
       <ItemRetailFee
         currencyGrapheme="$"
         isFixed={true}
+        isSmaller={true}
         marginTop={2}
         minQty={10}
         price={50}
@@ -914,6 +922,7 @@ exports[`<ListItem /> should render with all props 6`] = `
       <ItemRetailFee
         currencyGrapheme="$"
         isFixed={true}
+        isSmaller={true}
         marginTop={2}
         minQty={10}
         price={50}
