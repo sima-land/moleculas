@@ -10,11 +10,10 @@ exports[`<ItemName /> should render with props 1`] = `
     className="wrapper"
   >
     <Link
-      color="black"
       href="#"
     >
       <a
-        className="link link-black link-can-be-hovered"
+        className="link link-blue link-can-be-hovered"
         href="#"
         target="_self"
       >
@@ -40,11 +39,9 @@ exports[`<ItemName /> should render without props 1`] = `
   <div
     className="wrapper"
   >
-    <Link
-      color="black"
-    >
+    <Link>
       <span
-        className="link link-black link-can-be-hovered"
+        className="link link-blue link-can-be-hovered"
       >
         <Memo(Text)>
           <span

@@ -21,7 +21,7 @@ export const ItemName = ({
   nameTextProps,
 }) => (
   <div className={cx('wrapper', className)}>
-    <Link href={href} color='black'>
+    <Link href={href}>
       <Text {...nameTextProps}>
         <span className={cx('name')} children={name} />
       </Text>
