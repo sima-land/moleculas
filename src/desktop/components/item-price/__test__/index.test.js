@@ -33,6 +33,7 @@ describe('<ItemPrice />', () => {
           price: 14,
         }}
         measure='Р / пог. м'
+        showWholesalePrice
       />
     );
     expect(wrapper.find('.price-unit')).toHaveLength(0);

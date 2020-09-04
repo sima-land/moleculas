@@ -82,6 +82,14 @@ exports[`<ListItem /> should render with all props 1`] = `
                   ]
                 }
               />
+              <Memo(Text)
+                color="gray38"
+                lineHeight={20}
+                size={14}
+              >
+                Арт.: 
+                10000
+              </Memo(Text)>
             </Box>
             <Box
               marginTop={2}
@@ -119,6 +127,7 @@ exports[`<ListItem /> should render with all props 1`] = `
               layout="inline"
               name="baz"
               title="foo"
+              withTitle={true}
             />
           </div>
           <div
@@ -219,15 +228,17 @@ exports[`<ListItem /> should render with all props 1`] = `
           }
         />
         <div
-          className="sid"
+          className="balance"
         >
           <Memo(Text)
             color="gray38"
             lineHeight={20}
             size={14}
           >
-            Артикул: 
-            10000
+            На складе 
+            17
+             
+            .
           </Memo(Text)>
         </div>
       </Box>
@@ -318,6 +329,7 @@ exports[`<ListItem /> should render with all props 2`] = `
               layout="block"
               name="baz"
               title="foo"
+              withTitle={true}
             />
           </div>
           <div
@@ -497,6 +509,14 @@ exports[`<ListItem /> should render with all props 3`] = `
                   ]
                 }
               />
+              <Memo(Text)
+                color="gray38"
+                lineHeight={20}
+                size={14}
+              >
+                Арт.: 
+                10000
+              </Memo(Text)>
             </Box>
             <Box
               marginTop={2}
@@ -534,6 +554,7 @@ exports[`<ListItem /> should render with all props 3`] = `
               layout="inline"
               name="baz"
               title="foo"
+              withTitle={true}
             />
           </div>
           <div
@@ -591,8 +612,10 @@ exports[`<ListItem /> should render with all props 3`] = `
             lineHeight={20}
             size={14}
           >
-            Артикул: 
-            10000
+            На складе 
+            17
+             
+            .
           </Memo(Text)>
         </Box>
         <div
@@ -703,6 +726,7 @@ exports[`<ListItem /> should render with all props 4`] = `
               layout="block"
               name="baz"
               title="foo"
+              withTitle={true}
             />
           </div>
           <div
@@ -860,11 +884,24 @@ exports[`<ListItem /> should render with all props 5`] = `
               reviewsCount={55}
               value={4.8}
             />
+            <Box
+              marginTop={2}
+            >
+              <Memo(Text)
+                color="gray38"
+                lineHeight={20}
+                size={14}
+              >
+                Арт.: 
+                10000
+              </Memo(Text)>
+            </Box>
             <ItemModifier
               count={55}
               layout="block"
               name="baz"
               title="foo"
+              withTitle={true}
             />
           </div>
           <div

@@ -6,16 +6,15 @@ exports[`<WholesalePrice /> should render with props 1`] = `
   price={222222}
 >
   <div
-    className="wrapper"
+    className=""
   >
     <Memo(Text)
       color="gray38"
-      lineHeight={24}
-      size={16}
-      weight={600}
+      lineHeight={20}
+      size={14}
     >
       <span
-        className="size-16 line-height-24 color__gray38 weight-600"
+        className="size-14 line-height-20 color__gray38"
       >
         <Price
           currencyGraphemeClass="currency-grapheme"
@@ -27,7 +26,12 @@ exports[`<WholesalePrice /> should render with props 1`] = `
             222 222
           </span>
         </Price>
-         / опт
+         / 
+        <span
+          className="wholesale-text"
+        >
+          опт
+        </span>
       </span>
     </Memo(Text)>
     <div
@@ -79,16 +83,15 @@ exports[`<WholesalePrice /> should render with props 1`] = `
 exports[`<WholesalePrice /> should render without props 1`] = `
 <WholesalePrice>
   <div
-    className="wrapper"
+    className=""
   >
     <Memo(Text)
       color="gray38"
-      lineHeight={24}
-      size={16}
-      weight={600}
+      lineHeight={20}
+      size={14}
     >
       <span
-        className="size-16 line-height-24 color__gray38 weight-600"
+        className="size-14 line-height-20 color__gray38"
       >
         <Price
           currencyGraphemeClass="currency-grapheme"
@@ -97,7 +100,12 @@ exports[`<WholesalePrice /> should render without props 1`] = `
             className="price"
           />
         </Price>
-         / опт
+         / 
+        <span
+          className="wholesale-text"
+        >
+          опт
+        </span>
       </span>
     </Memo(Text)>
   </div>

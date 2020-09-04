@@ -18,6 +18,7 @@ export const cx = classnames.bind(style);
  * @param {string} props.currencyGrapheme Графема валюты.
  * @param {string} [props.description] Описание условий акции крупного опта.
  * @param {string} [props.className] Дополнительный класс компонента.
+ * @param {string} [props.text] Текст крупного опта.
  * @param {Function} [props.onDetailsClick] Дополнительные действия при клике открытия описания.
  */
 export class WholesalePrice extends Component {
@@ -76,16 +77,17 @@ export class WholesalePrice extends Component {
       description,
       onDetailsClick,
       className,
+      text = 'опт',
     } = this.props;
     return (
-      <div className={cx('wrapper', className)}>
-        <Text lineHeight={24} weight={600} size={16} color='gray38'>
+      <div className={cx(className)}>
+        <Text lineHeight={20} size={14} color='gray38'>
           <Price
             value={price}
             currencyGrapheme={currencyGrapheme}
             currencyGraphemeClass={cx('currency-grapheme')}
           />
-        &nbsp;/ опт
+          &nbsp;/ <span className={cx('wholesale-text')}>{text}</span>
         </Text>
         {Boolean(description) && (
           <div ref={this.iconWrapperRef} className={cx('icon-wrapper')}>

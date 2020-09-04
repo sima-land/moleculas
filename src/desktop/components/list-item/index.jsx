@@ -41,6 +41,8 @@ const cx = classnames.bind(style);
  * @property {number} [rating] Оценка.
  * @property {number} [reviewsCount] Количество отзывов.
  * @property {number} sid Артикул.
+ * @property {number} [balance] Остаток на складе.
+ * @property {string} [balancePluralNameFormat] Единицы измерения товара для остатка на складе.
  * @property {string} [unit='шт'] Единицы измерения товара.
  * @property {Object} [wholesaleProps] Свойства крупного опта.
  * @property {Function} [onWishClick] Обработчик нажатия на избранное.
@@ -83,6 +85,8 @@ export const ListItem = ({
 
   // Данные о товаре
   badges = [],
+  balance,
+  balancePluralNameFormat,
   isCartFetching,
   currencyGrapheme,
   deliveryInfo,
@@ -229,7 +233,15 @@ export const ListItem = ({
                   )}
                   {!asTile && Boolean(properties) && (
                     <Box marginTop={2}>
-                      <ItemProperties values={properties} specClassName={cx('detail')} />
+                      <ItemProperties
+                        values={properties}
+                        specClassName={cx('detail')}
+                      />
+                      {Boolean(sid) && (
+                        <Text color='gray38' lineHeight={20} size={14}>
+                         Арт.:&nbsp;{sid}
+                        </Text>
+                      )}
                     </Box>
                   )}
                   {!asTile && Boolean(deliveryInfo) && (
@@ -257,10 +269,18 @@ export const ListItem = ({
                   {Boolean(rating) && Boolean(reviewsCount) && (
                     <ItemRating marginTop={3} value={rating} reviewsCount={reviewsCount} />
                   )}
+                  {size === 'small' && Boolean(sid) && (
+                    <Box marginTop={2}>
+                      <Text color='gray38' lineHeight={20} size={14}>
+                        Арт.:&nbsp;{sid}
+                      </Text>
+                    </Box>
+                  )}
                   {Boolean(modifierProps) && (
                     <ItemModifier
                       layout={asTile ? 'block' : 'inline'}
                       onClick={onModifierClick}
+                      withTitle
                       {...modifierProps}
                     />
                   )}
@@ -329,9 +349,9 @@ export const ListItem = ({
                     isFloatQty={isFloatQty}
                   />
                 )}
-                {!badges.length && Boolean(sid) && !asTile && (
+                {!badges.length && Boolean(balance) && !asTile && (
                   <Text color='gray38' size={14} lineHeight={20}>
-                    Артикул: {sid}
+                    На складе {balance} {balancePluralNameFormat}.
                   </Text>
                 )}
               </Box>
@@ -357,10 +377,10 @@ export const ListItem = ({
                 <FlagsList
                   flags={badges}
                 />
-                {Boolean(sid) && !asTile && (
-                  <div className={cx('sid')}>
+                {Boolean(balance) && !asTile && (
+                  <div className={cx('balance')}>
                     <Text color='gray38' size={14} lineHeight={20}>
-                      Артикул: {sid}
+                      На складе {balance} {balancePluralNameFormat}.
                     </Text>
                   </div>
                 )}
