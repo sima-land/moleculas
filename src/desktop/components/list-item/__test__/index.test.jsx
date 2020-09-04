@@ -12,6 +12,8 @@ describe('<ListItem />', () => {
   it('should render with all props', () => {
     const wrapper = shallow(
       <ListItem
+        balance={17}
+        balancePluralNameForma='шт.'
         sid={10000}
         name='Foo'
         itemUrl='#'
