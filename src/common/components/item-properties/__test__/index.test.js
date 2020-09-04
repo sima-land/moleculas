@@ -25,6 +25,6 @@ describe('<ItemProperties />', () => {
       />
     );
     expect(wrapper.find(Text)).toHaveLength(2);
-    expect(wrapper.find(Text).at(1).text()).toEqual('Baz.');
+    expect(wrapper.find(Text).at(1).text()).toEqual('Baz;');
   });
 });

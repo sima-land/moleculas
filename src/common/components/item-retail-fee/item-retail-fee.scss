@@ -2,7 +2,7 @@
   display: block;
   line-height: 1;
   width: 100%;
-  &.small {
+  &.small:not(.fixed-width) {
     margin-bottom: 12px;
   }
 }

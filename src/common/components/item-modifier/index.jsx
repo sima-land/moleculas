@@ -14,6 +14,7 @@ const cx = classnames.bind(styles);
  * @param {string} props.name Название модификатора.
  * @param {number} props.count Количество значений модификатора.
  * @param {Function} props.onClick Обработчик клика.
+ * @param {boolean} props.withTitle Признак показа заголовка.
  * @param {import('../modifier-select').ModifierSelectProps} props.modifierProps Свойства выбора модификатора.
  * @return {ReactElement} Выбранный модификатор и их количество.
  */
@@ -23,26 +24,29 @@ export const ItemModifier = ({
   count,
   onClick,
   currentModifier,
+  withTitle,
 }) => count > 1 && (
   <Box marginTop={4}>
-    <Box
-      marginBottom={2}
-      display='flex'
-      alignItems='baseline'
-      justifyContent={layout === 'block' ? 'between' : 'start'}
-    >
-      <span
-        className={cx('title')}
+    {withTitle && (
+      <Box
+        marginBottom={2}
+        display='flex'
+        alignItems='baseline'
+        justifyContent={layout === 'block' ? 'between' : 'start'}
       >
-        {title}
-        {layout === 'inline' && Boolean(count) && (
-          <Fragment> (всего {count})</Fragment>
+        <span
+          className={cx('title')}
+        >
+          {title}
+          {layout === 'inline' && Boolean(count) && (
+            <Fragment> (всего {count})</Fragment>
+          )}
+        </span>
+        {layout === 'block' && Boolean(count) && (
+          <Text size={12} lineHeight={16} color='gray38'>Всего {count}</Text>
         )}
-      </span>
-      {layout === 'block' && Boolean(count) && (
-        <Text size={12} lineHeight={16} color='gray38'>Всего {count}</Text>
-      )}
-    </Box>
+      </Box>
+    )}
     <ModifierSelect
       className={cx(layout === 'block' && 'wide')}
       onClick={onClick}

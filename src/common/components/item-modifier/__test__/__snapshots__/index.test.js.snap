@@ -5,6 +5,7 @@ exports[`<ItemModifier /> should render with props 1`] = `
   count={32}
   layout="block"
   title="Foo"
+  withTitle={true}
 >
   <Box
     marginTop={4}
@@ -98,6 +99,7 @@ exports[`<ItemModifier /> should render with props 2`] = `
   count={32}
   layout="inline"
   title="Foo"
+  withTitle={true}
 >
   <Box
     marginTop={4}

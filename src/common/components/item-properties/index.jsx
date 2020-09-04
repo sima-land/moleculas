@@ -23,21 +23,14 @@ export const ItemProperties = ({
   color = 'gray38',
   lineHeight = 20,
   size = 14,
-}) => Array.isArray(values) && values.map((spec, index) => {
-  const isLast = index + 1 === Object.keys(values).length;
-  return Boolean(spec.text) && (
-    <Fragment key={index}>
-      <span className={specClassName}>
-        <Text color={color} lineHeight={lineHeight} size={size}>
-          {spec.text}
-          {isLast ? '.' : ';'}
-        </Text>
-      </span>
-      {!isLast && (
-        <Fragment>&nbsp;</Fragment>
-      )}
-    </Fragment>
-  );
-});
+}) => Array.isArray(values) && values.map((spec, index) => Boolean(spec.text) && (
+  <Fragment key={index}>
+    <span className={specClassName}>
+      <Text color={color} lineHeight={lineHeight} size={size}>
+        {spec.text};
+      </Text>
+    </span>
+  </Fragment>
+));
 
 export default ItemProperties;
