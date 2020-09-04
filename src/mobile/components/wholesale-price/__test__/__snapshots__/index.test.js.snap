@@ -4,6 +4,7 @@ exports[`<WholesalePrice /> should render with props 1`] = `
 <WholesalePrice
   description="<b>lorem</b>"
   price={222222}
+  text="Крупный опт «Галантерея и швейная галантерея»"
 >
   <div
     className=""
@@ -31,11 +32,22 @@ exports[`<WholesalePrice /> should render with props 1`] = `
             </span>
           </Price>
            / 
-          <span
+          <withGlobalListeners(WholesaleText)
             className="wholesale-text"
+            text="Крупный опт «Галантерея и швейная галантерея»"
           >
-            опт
-          </span>
+            <WholesaleText
+              addGlobalListener={[Function]}
+              className="wholesale-text"
+              text="Крупный опт «Галантерея и швейная галантерея»"
+            >
+              <span
+                className="wholesale-text"
+              >
+                Крупный опт «Галантерея и швейная галантерея»
+              </span>
+            </WholesaleText>
+          </withGlobalListeners(WholesaleText)>
         </span>
       </Memo(Text)>
     </div>
@@ -110,11 +122,22 @@ exports[`<WholesalePrice /> should render without props 1`] = `
             />
           </Price>
            / 
-          <span
+          <withGlobalListeners(WholesaleText)
             className="wholesale-text"
+            text="опт"
           >
-            опт
-          </span>
+            <WholesaleText
+              addGlobalListener={[Function]}
+              className="wholesale-text"
+              text="опт"
+            >
+              <span
+                className="wholesale-text"
+              >
+                опт
+              </span>
+            </WholesaleText>
+          </withGlobalListeners(WholesaleText)>
         </span>
       </Memo(Text)>
     </div>

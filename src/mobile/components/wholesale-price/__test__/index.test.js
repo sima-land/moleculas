@@ -13,6 +13,7 @@ describe('<WholesalePrice />', () => {
       <WholesalePrice
         price={222222}
         description='<b>lorem</b>'
+        text='Крупный опт «Галантерея и швейная галантерея»'
       />
     );
     expect(wrapper).toMatchSnapshot();

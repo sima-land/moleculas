@@ -6,6 +6,7 @@ import isUndefined from 'lodash/isUndefined';
 import getDeclination from '@dev-dep/ui-nucleons/helpers/get-declination';
 import Button from '@dev-dep/ui-nucleons/button';
 import Icon from '@dev-dep/ui-nucleons/icon';
+import Link from '@dev-dep/ui-nucleons/link';
 import Text from '@dev-dep/ui-nucleons/text';
 import Box from '@dev-dep/ui-nucleons/box';
 
@@ -170,12 +171,13 @@ export const ListItem = ({
             )}
             {Boolean(modifierProps) && asTile && (
               <Box marginTop={2} dangerouslySetInlineStyle={{ __style: { fontSize: '10px' } }}>
-                <Text
-                  color='gray38'
-                  lineHeight={12}
-                  children={`Еще ${modifierProps.count} ${getDeclination(modifierProps.count, optionsDeclinations)}`}
-                >
-                </Text>
+                <Link href={itemUrl}>
+                  <Text
+                    color='gray38'
+                    lineHeight={12}
+                    children={`Еще ${modifierProps.count} ${getDeclination(modifierProps.count, optionsDeclinations)}`}
+                  />
+                </Link>
               </Box>
             )}
             {Boolean(rating) && Boolean(reviewsCount) && (
@@ -232,6 +234,7 @@ export const ListItem = ({
                 minQty={markupData.count}
                 unit={markupData.unit}
                 currencyGrapheme={currencyGrapheme}
+                isSmaller
               />
             )}
             {hasAddToCartBlock && (
