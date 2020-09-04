@@ -1,0 +1,252 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RecommendationWrapper /> should match a snapshot with items 1`] = `
+<RecommendationWrapper
+  addObserve={[Function]}
+  items={
+    Array [
+      Object {
+        "name": "first item",
+      },
+      Object {
+        "name": "second item",
+      },
+    ]
+  }
+  onInViewport={[MockFunction]}
+  onItemClick={[MockFunction]}
+  title="Test title"
+>
+  <div
+    className="wrapper"
+  >
+    <MobileLayout>
+      <Layout
+        xsMaxWidth="xs"
+        xxlMaxWidth="sm"
+        xxsPadding="md"
+        xxxsPadding="sm"
+      >
+        <div
+          className="layout-wrapper layout-xxl-padding-sm layout-xl-padding-sm layout-lg-padding-sm layout-md-padding-sm layout-sm-padding-sm layout-xs-padding-sm layout-xxs-padding-md layout-xxxs-padding-sm"
+        >
+          <div
+            className="layout layout-xxl-width-sm layout-xl-width-sm layout-lg-width-sm layout-md-width-sm layout-sm-width-sm layout-xs-width-xs layout-xxs-width-xs layout-xxxs-width-xs"
+          >
+            <Memo(Text)
+              element="h4"
+              lineHeight={28}
+              size={20}
+              weight={600}
+            >
+              <h4
+                className="size-20 line-height-28 weight-600"
+              >
+                Test title
+              </h4>
+            </Memo(Text)>
+          </div>
+        </div>
+      </Layout>
+    </MobileLayout>
+    <TouchSlider
+      layoutProps={
+        Object {
+          "containerProps": Object {
+            "onTouchStart": [Function],
+          },
+        }
+      }
+    >
+      <MobileLayout
+        containerProps={
+          Object {
+            "onTouchStart": [Function],
+          }
+        }
+      >
+        <Layout
+          containerProps={
+            Object {
+              "onTouchStart": [Function],
+            }
+          }
+          xsMaxWidth="xs"
+          xxlMaxWidth="sm"
+          xxsPadding="md"
+          xxxsPadding="sm"
+        >
+          <div
+            className="layout-wrapper layout-xxl-padding-sm layout-xl-padding-sm layout-lg-padding-sm layout-md-padding-sm layout-sm-padding-sm layout-xs-padding-sm layout-xxs-padding-md layout-xxxs-padding-sm"
+          >
+            <div
+              className="layout layout-xxl-width-sm layout-xl-width-sm layout-lg-width-sm layout-md-width-sm layout-sm-width-sm layout-xs-width-xs layout-xxs-width-xs layout-xxxs-width-xs"
+              onTouchStart={[Function]}
+            >
+              <div
+                className="wrapper invisible-scroll"
+              >
+                <div
+                  className="inner"
+                >
+                  <withGlobalListeners(RecommendedItem)
+                    canLoadImage={false}
+                    key="0"
+                    name="first item"
+                    needLoadImage={false}
+                    onItemClick={[Function]}
+                  >
+                    <RecommendedItem
+                      addGlobalListener={[Function]}
+                      canLoadImage={false}
+                      name="first item"
+                      needLoadImage={false}
+                      onItemClick={[Function]}
+                    >
+                      <div
+                        className="item"
+                      >
+                        <Link
+                          className="link"
+                          color="black"
+                          disableHoverEffect={true}
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="link link link-black"
+                            onClick={[Function]}
+                          >
+                            first item
+                          </span>
+                        </Link>
+                      </div>
+                    </RecommendedItem>
+                  </withGlobalListeners(RecommendedItem)>
+                  <withGlobalListeners(RecommendedItem)
+                    canLoadImage={false}
+                    key="1"
+                    name="second item"
+                    needLoadImage={false}
+                    onItemClick={[Function]}
+                  >
+                    <RecommendedItem
+                      addGlobalListener={[Function]}
+                      canLoadImage={false}
+                      name="second item"
+                      needLoadImage={false}
+                      onItemClick={[Function]}
+                    >
+                      <div
+                        className="item"
+                      >
+                        <Link
+                          className="link"
+                          color="black"
+                          disableHoverEffect={true}
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="link link link-black"
+                            onClick={[Function]}
+                          >
+                            second item
+                          </span>
+                        </Link>
+                      </div>
+                    </RecommendedItem>
+                  </withGlobalListeners(RecommendedItem)>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Layout>
+      </MobileLayout>
+    </TouchSlider>
+  </div>
+</RecommendationWrapper>
+`;
+
+exports[`<RecommendationWrapper /> should match a snapshot without items 1`] = `
+<RecommendationWrapper
+  addObserveWithMargin={[Function]}
+  onRequest={[MockFunction]}
+>
+  <div
+    className="wrapper"
+  >
+    <MobileLayout>
+      <Layout
+        xsMaxWidth="xs"
+        xxlMaxWidth="sm"
+        xxsPadding="md"
+        xxxsPadding="sm"
+      >
+        <div
+          className="layout-wrapper layout-xxl-padding-sm layout-xl-padding-sm layout-lg-padding-sm layout-md-padding-sm layout-sm-padding-sm layout-xs-padding-sm layout-xxs-padding-md layout-xxxs-padding-sm"
+        >
+          <div
+            className="layout layout-xxl-width-sm layout-xl-width-sm layout-lg-width-sm layout-md-width-sm layout-sm-width-sm layout-xs-width-xs layout-xxs-width-xs layout-xxxs-width-xs"
+          >
+            <Memo(Text)
+              element="h4"
+              lineHeight={28}
+              size={20}
+              weight={600}
+            >
+              <h4
+                className="size-20 line-height-28 weight-600"
+              />
+            </Memo(Text)>
+          </div>
+        </div>
+      </Layout>
+    </MobileLayout>
+    <TouchSlider
+      layoutProps={
+        Object {
+          "containerProps": Object {
+            "onTouchStart": [Function],
+          },
+        }
+      }
+    >
+      <MobileLayout
+        containerProps={
+          Object {
+            "onTouchStart": [Function],
+          }
+        }
+      >
+        <Layout
+          containerProps={
+            Object {
+              "onTouchStart": [Function],
+            }
+          }
+          xsMaxWidth="xs"
+          xxlMaxWidth="sm"
+          xxsPadding="md"
+          xxxsPadding="sm"
+        >
+          <div
+            className="layout-wrapper layout-xxl-padding-sm layout-xl-padding-sm layout-lg-padding-sm layout-md-padding-sm layout-sm-padding-sm layout-xs-padding-sm layout-xxs-padding-md layout-xxxs-padding-sm"
+          >
+            <div
+              className="layout layout-xxl-width-sm layout-xl-width-sm layout-lg-width-sm layout-md-width-sm layout-sm-width-sm layout-xs-width-xs layout-xxs-width-xs layout-xxxs-width-xs"
+              onTouchStart={[Function]}
+            >
+              <div
+                className="wrapper invisible-scroll"
+              >
+                <div
+                  className="inner"
+                />
+              </div>
+            </div>
+          </div>
+        </Layout>
+      </MobileLayout>
+    </TouchSlider>
+  </div>
+</RecommendationWrapper>
+`;
