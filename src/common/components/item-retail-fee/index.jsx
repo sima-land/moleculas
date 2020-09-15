@@ -31,7 +31,7 @@ export const ItemRetailFee = ({
   <div className={cx('wrapper', isFixed && 'fixed-width', isSmaller && 'small')}>
     <Box marginTop={marginTop}>
       <Text color='gray38' size={isSmaller ? 12 : 14} lineHeight={isSmaller ? 16 : 20}>
-      Наценка за сборку
+        Комплектация
         <span className={cx('no-wrap')}>
           &nbsp;+&nbsp;
           <Price value={price} currencyGrapheme={currencyGrapheme} className={cx('price')} />
