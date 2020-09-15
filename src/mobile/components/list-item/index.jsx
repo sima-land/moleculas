@@ -36,7 +36,7 @@ const optionsDeclinations = Object.freeze([
  * @property {Array} [badges] Массив шильдиков.
  * @property {string} currencyGrapheme Графема валюты.
  * @property {string} [deliveryInfo] Информация о доставке.
- * @property {Object|null} [markupData] Данные наценки за сборку.
+ * @property {Object|null} [markupData] Данные наценки за комплектацию.
  * @property {string} [image] Ссылка на изображение товара.
  * @property {Object} [import('../modifier-select').ModifierSelectProps] Свойства модификатора.
  * @property {boolean} isWished Признак товара в избранном.

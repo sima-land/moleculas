@@ -25,7 +25,7 @@ exports[`<ItemRetailFee /> should render with props 1`] = `
           <span
             className="size-12 line-height-16 color__gray38"
           >
-            Наценка за сборку
+            Комплектация
             <span
               className="no-wrap"
             >
@@ -76,7 +76,7 @@ exports[`<ItemRetailFee /> should render without props 1`] = `
           <span
             className="size-14 line-height-20 color__gray38"
           >
-            Наценка за сборку
+            Комплектация
             <span
               className="no-wrap"
             >
