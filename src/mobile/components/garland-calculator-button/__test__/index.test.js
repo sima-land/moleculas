@@ -4,7 +4,7 @@ import { GarlandCalculatorButton } from '../index';
 
 describe('GarlandCalculatorButton', () => {
   it('should render component', () => {
-    const wrapper = shallow(<GarlandCalculatorButton />);
+    const wrapper = shallow(<GarlandCalculatorButton onClick={jest.fn()} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
