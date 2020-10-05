@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GarlandCalculatorButton should render component 1`] = `
+<div
+  className="wrapper"
+>
+  <Box
+    display="flex"
+    justifyContent="between"
+    marginTop={6}
+    padding={6}
+  >
+    <Box
+      paddingRight={5}
+    >
+      <Memo(Text)
+        lineHeight={20}
+        size={14}
+        weight={400}
+      >
+        Сколько метров гирлянды покупать? Поможем рассчитать оптимальную длину
+      </Memo(Text)>
+      <Box
+        marginTop={3}
+      >
+        <Link>
+          Рассчитать
+        </Link>
+      </Box>
+    </Box>
+    <Box
+      flex="none"
+    >
+      <Icon
+        icon={[Function]}
+        size={48}
+      />
+    </Box>
+  </Box>
+</div>
+`;
