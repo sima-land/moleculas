@@ -23,7 +23,9 @@ exports[`GarlandCalculatorButton should render component 1`] = `
       <Box
         marginTop={3}
       >
-        <Link>
+        <Link
+          onClick={[MockFunction]}
+        >
           Рассчитать
         </Link>
       </Box>

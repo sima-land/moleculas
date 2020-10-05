@@ -11,9 +11,11 @@ const cx = classnames.bind(styles);
 
 /**
  * Компонент плашки с кнопкой открытия гирлянды.
+ * @param {Object} props Свойства компонента.
+ * @param {Function} props.onClick Обработчик нажатия на кнопку рассчитать.
  * @return {ReactElement} Плашка с кнопкой открытия гирлянды.
  */
-export const GarlandCalculatorButton = () => (
+export const GarlandCalculatorButton = ({ onClick }) => (
   <div className={cx('wrapper')}>
     <Box padding={6} display='flex' justifyContent='between' marginTop={6}>
       <Box paddingRight={5}>
@@ -24,7 +26,7 @@ export const GarlandCalculatorButton = () => (
           оптимальную длину
         </Text>
         <Box marginTop={3}>
-          <Link>Рассчитать</Link>
+          <Link onClick={onClick}>Рассчитать</Link>
         </Box>
       </Box>
       <Box flex='none'>
