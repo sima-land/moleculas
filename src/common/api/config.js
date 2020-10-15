@@ -1,4 +1,4 @@
-import { isOkStatus, validateDeleteStatus } from '@dev-dep/isomorph/helpers/http';
+import { isOkStatus, validateDeleteStatus } from '@dev-dep/isomorph/helpers/http/statuses-validator';
 
 /**
  * Валидация http статуса ответа на POST запрос.
