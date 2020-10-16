@@ -16,7 +16,8 @@
     "@dev-dep/ui-nucleons": "^3.1.1",
     "classnames": "^2.2.6",
     "core-js": "3",
-    "moment-duration-format": "^2.3.2"
+    "moment-duration-format": "^2.3.2",
+    "prop-types": "^15.7.2"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
