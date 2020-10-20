@@ -1,0 +1,55 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+// Импортируем чистый компонент без HOC, чтобы корректно отображались PropTypes.
+import { RecommendationCarousel } from '../index';
+import { Primary } from './recommendation-carousel.stories.jsx'
+
+<Meta
+  title='desktop/Recommendation carousel'
+  component={RecommendationCarousel}
+  argTypes={{
+    items: {
+      control: {
+        type: null,
+      },
+    },
+    onItemClick: {
+      action: 'clicked',
+    },
+    onInViewport: {
+      action: 'inViewport',
+    },
+    onRequest: {
+      action: 'request',
+    },
+  }}
+/>
+
+# RecommendationCarousel
+### Компонент карусели рекомендованных товаров.
+Компонент десктопной версии. Имеет бесконечную прокрутку. Обернут в два HOC `withInViewportObserver`
+для загрузки элементов карусели и отправки статистики в ОКО.
+
+### Пример использования
+```jsx
+import RecommendationCarousel from '@dev-dep/moleculas/desktop/recommendation-carousel';
+
+<RecommendationCarousel
+    title='Рекомендованные товары'
+    items={items}
+    onItemClick={() => undefined}
+    onInViewport={() => undefined}
+    onRequest={() => undefined}
+/>
+```
+
+### Базовый вид
+export const Template = args => <RecommendationCarousel {...args} />;
+
+<Canvas>
+  <Story story={Primary}/>
+</Canvas>
+
+### Свойства компонента
+*Примечание: обработчик клика на кнопке быстрого просмотра передается как свойство элемента карусели.*
+<ArgsTable of={RecommendationCarousel} />
+
