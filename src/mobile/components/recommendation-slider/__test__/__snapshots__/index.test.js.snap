@@ -6,10 +6,94 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
   items={
     Array [
       Object {
-        "name": "first item",
+        "currencyGrapheme": "₽",
+        "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
+        "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
+        "name": "Ножницы портновские, 19 см, цвет чёрный",
+        "oldPrice": null,
+        "price": 261,
+        "url": "",
       },
       Object {
-        "name": "second item",
+        "currencyGrapheme": "₽",
+        "imageAlt": "Ножницы портновские, 31 см, цвет чёрный/голубой, Ножницы",
+        "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
+        "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
+        "oldPrice": null,
+        "price": 322,
+        "url": "",
+      },
+      Object {
+        "currencyGrapheme": "₽",
+        "imageAlt": "Ножницы портновские, 21,5 см, цвет чёрный/голубой, Ножницы",
+        "imageSrc": "https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773",
+        "name": "Ножницы портновские, 21,5 см, цвет чёрный/голубой",
+        "oldPrice": null,
+        "price": 238,
+        "url": "",
+      },
+      Object {
+        "currencyGrapheme": "₽",
+        "imageAlt": "Ножницы портновские, 23 см, цвет МИКС, Ножницы",
+        "imageSrc": "https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085",
+        "name": "Ножницы портновские, 23 см, цвет МИКС",
+        "oldPrice": null,
+        "price": 171,
+        "url": "",
+      },
+      Object {
+        "currencyGrapheme": "₽",
+        "imageAlt": "Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный, Ножницы",
+        "imageSrc": "https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894",
+        "name": "Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный",
+        "oldPrice": null,
+        "price": 483,
+        "url": "",
+      },
+      Object {
+        "currencyGrapheme": "₽",
+        "imageAlt": "Ножницы портновские, 22,5 см, цвет чёрный, Ножницы",
+        "imageSrc": "https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898",
+        "name": "Ножницы портновские, 22,5 см, цвет чёрный",
+        "oldPrice": null,
+        "price": 988,
+        "url": "",
+      },
+      Object {
+        "currencyGrapheme": "₽",
+        "imageAlt": "Ножницы портновские, 22 см, цвет серебряный, Ножницы",
+        "imageSrc": "https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830",
+        "name": "Ножницы портновские, 22 см, цвет серебряный",
+        "oldPrice": null,
+        "price": 619,
+        "url": "",
+      },
+      Object {
+        "currencyGrapheme": "₽",
+        "imageAlt": "Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный, Ножницы",
+        "imageSrc": "https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766",
+        "name": "Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный",
+        "oldPrice": 595,
+        "price": 539,
+        "url": "",
+      },
+      Object {
+        "currencyGrapheme": "₽",
+        "imageAlt": "Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый, Ножницы",
+        "imageSrc": "https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956",
+        "name": "Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый",
+        "oldPrice": 717,
+        "price": 599,
+        "url": "",
+      },
+      Object {
+        "currencyGrapheme": "₽",
+        "imageAlt": "Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный, Ножницы",
+        "imageSrc": "https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932",
+        "name": "Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный",
+        "oldPrice": null,
+        "price": 253,
+        "url": "",
       },
     ]
   }
@@ -21,10 +105,94 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
     items={
       Array [
         Object {
-          "name": "first item",
+          "currencyGrapheme": "₽",
+          "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
+          "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
+          "name": "Ножницы портновские, 19 см, цвет чёрный",
+          "oldPrice": null,
+          "price": 261,
+          "url": "",
         },
         Object {
-          "name": "second item",
+          "currencyGrapheme": "₽",
+          "imageAlt": "Ножницы портновские, 31 см, цвет чёрный/голубой, Ножницы",
+          "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
+          "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
+          "oldPrice": null,
+          "price": 322,
+          "url": "",
+        },
+        Object {
+          "currencyGrapheme": "₽",
+          "imageAlt": "Ножницы портновские, 21,5 см, цвет чёрный/голубой, Ножницы",
+          "imageSrc": "https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773",
+          "name": "Ножницы портновские, 21,5 см, цвет чёрный/голубой",
+          "oldPrice": null,
+          "price": 238,
+          "url": "",
+        },
+        Object {
+          "currencyGrapheme": "₽",
+          "imageAlt": "Ножницы портновские, 23 см, цвет МИКС, Ножницы",
+          "imageSrc": "https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085",
+          "name": "Ножницы портновские, 23 см, цвет МИКС",
+          "oldPrice": null,
+          "price": 171,
+          "url": "",
+        },
+        Object {
+          "currencyGrapheme": "₽",
+          "imageAlt": "Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный, Ножницы",
+          "imageSrc": "https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894",
+          "name": "Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный",
+          "oldPrice": null,
+          "price": 483,
+          "url": "",
+        },
+        Object {
+          "currencyGrapheme": "₽",
+          "imageAlt": "Ножницы портновские, 22,5 см, цвет чёрный, Ножницы",
+          "imageSrc": "https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898",
+          "name": "Ножницы портновские, 22,5 см, цвет чёрный",
+          "oldPrice": null,
+          "price": 988,
+          "url": "",
+        },
+        Object {
+          "currencyGrapheme": "₽",
+          "imageAlt": "Ножницы портновские, 22 см, цвет серебряный, Ножницы",
+          "imageSrc": "https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830",
+          "name": "Ножницы портновские, 22 см, цвет серебряный",
+          "oldPrice": null,
+          "price": 619,
+          "url": "",
+        },
+        Object {
+          "currencyGrapheme": "₽",
+          "imageAlt": "Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный, Ножницы",
+          "imageSrc": "https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766",
+          "name": "Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный",
+          "oldPrice": 595,
+          "price": 539,
+          "url": "",
+        },
+        Object {
+          "currencyGrapheme": "₽",
+          "imageAlt": "Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый, Ножницы",
+          "imageSrc": "https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956",
+          "name": "Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый",
+          "oldPrice": 717,
+          "price": 599,
+          "url": "",
+        },
+        Object {
+          "currencyGrapheme": "₽",
+          "imageAlt": "Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный, Ножницы",
+          "imageSrc": "https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932",
+          "name": "Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный",
+          "oldPrice": null,
+          "price": 253,
+          "url": "",
         },
       ]
     }
@@ -37,10 +205,94 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
       items={
         Array [
           Object {
-            "name": "first item",
+            "currencyGrapheme": "₽",
+            "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
+            "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
+            "name": "Ножницы портновские, 19 см, цвет чёрный",
+            "oldPrice": null,
+            "price": 261,
+            "url": "",
           },
           Object {
-            "name": "second item",
+            "currencyGrapheme": "₽",
+            "imageAlt": "Ножницы портновские, 31 см, цвет чёрный/голубой, Ножницы",
+            "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
+            "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
+            "oldPrice": null,
+            "price": 322,
+            "url": "",
+          },
+          Object {
+            "currencyGrapheme": "₽",
+            "imageAlt": "Ножницы портновские, 21,5 см, цвет чёрный/голубой, Ножницы",
+            "imageSrc": "https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773",
+            "name": "Ножницы портновские, 21,5 см, цвет чёрный/голубой",
+            "oldPrice": null,
+            "price": 238,
+            "url": "",
+          },
+          Object {
+            "currencyGrapheme": "₽",
+            "imageAlt": "Ножницы портновские, 23 см, цвет МИКС, Ножницы",
+            "imageSrc": "https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085",
+            "name": "Ножницы портновские, 23 см, цвет МИКС",
+            "oldPrice": null,
+            "price": 171,
+            "url": "",
+          },
+          Object {
+            "currencyGrapheme": "₽",
+            "imageAlt": "Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный, Ножницы",
+            "imageSrc": "https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894",
+            "name": "Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный",
+            "oldPrice": null,
+            "price": 483,
+            "url": "",
+          },
+          Object {
+            "currencyGrapheme": "₽",
+            "imageAlt": "Ножницы портновские, 22,5 см, цвет чёрный, Ножницы",
+            "imageSrc": "https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898",
+            "name": "Ножницы портновские, 22,5 см, цвет чёрный",
+            "oldPrice": null,
+            "price": 988,
+            "url": "",
+          },
+          Object {
+            "currencyGrapheme": "₽",
+            "imageAlt": "Ножницы портновские, 22 см, цвет серебряный, Ножницы",
+            "imageSrc": "https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830",
+            "name": "Ножницы портновские, 22 см, цвет серебряный",
+            "oldPrice": null,
+            "price": 619,
+            "url": "",
+          },
+          Object {
+            "currencyGrapheme": "₽",
+            "imageAlt": "Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный, Ножницы",
+            "imageSrc": "https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766",
+            "name": "Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный",
+            "oldPrice": 595,
+            "price": 539,
+            "url": "",
+          },
+          Object {
+            "currencyGrapheme": "₽",
+            "imageAlt": "Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый, Ножницы",
+            "imageSrc": "https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956",
+            "name": "Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый",
+            "oldPrice": 717,
+            "price": 599,
+            "url": "",
+          },
+          Object {
+            "currencyGrapheme": "₽",
+            "imageAlt": "Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный, Ножницы",
+            "imageSrc": "https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932",
+            "name": "Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный",
+            "oldPrice": null,
+            "price": 253,
+            "url": "",
           },
         ]
       }
@@ -54,10 +306,94 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
         items={
           Array [
             Object {
-              "name": "first item",
+              "currencyGrapheme": "₽",
+              "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
+              "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
+              "name": "Ножницы портновские, 19 см, цвет чёрный",
+              "oldPrice": null,
+              "price": 261,
+              "url": "",
             },
             Object {
-              "name": "second item",
+              "currencyGrapheme": "₽",
+              "imageAlt": "Ножницы портновские, 31 см, цвет чёрный/голубой, Ножницы",
+              "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
+              "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
+              "oldPrice": null,
+              "price": 322,
+              "url": "",
+            },
+            Object {
+              "currencyGrapheme": "₽",
+              "imageAlt": "Ножницы портновские, 21,5 см, цвет чёрный/голубой, Ножницы",
+              "imageSrc": "https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773",
+              "name": "Ножницы портновские, 21,5 см, цвет чёрный/голубой",
+              "oldPrice": null,
+              "price": 238,
+              "url": "",
+            },
+            Object {
+              "currencyGrapheme": "₽",
+              "imageAlt": "Ножницы портновские, 23 см, цвет МИКС, Ножницы",
+              "imageSrc": "https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085",
+              "name": "Ножницы портновские, 23 см, цвет МИКС",
+              "oldPrice": null,
+              "price": 171,
+              "url": "",
+            },
+            Object {
+              "currencyGrapheme": "₽",
+              "imageAlt": "Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный, Ножницы",
+              "imageSrc": "https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894",
+              "name": "Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный",
+              "oldPrice": null,
+              "price": 483,
+              "url": "",
+            },
+            Object {
+              "currencyGrapheme": "₽",
+              "imageAlt": "Ножницы портновские, 22,5 см, цвет чёрный, Ножницы",
+              "imageSrc": "https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898",
+              "name": "Ножницы портновские, 22,5 см, цвет чёрный",
+              "oldPrice": null,
+              "price": 988,
+              "url": "",
+            },
+            Object {
+              "currencyGrapheme": "₽",
+              "imageAlt": "Ножницы портновские, 22 см, цвет серебряный, Ножницы",
+              "imageSrc": "https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830",
+              "name": "Ножницы портновские, 22 см, цвет серебряный",
+              "oldPrice": null,
+              "price": 619,
+              "url": "",
+            },
+            Object {
+              "currencyGrapheme": "₽",
+              "imageAlt": "Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный, Ножницы",
+              "imageSrc": "https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766",
+              "name": "Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный",
+              "oldPrice": 595,
+              "price": 539,
+              "url": "",
+            },
+            Object {
+              "currencyGrapheme": "₽",
+              "imageAlt": "Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый, Ножницы",
+              "imageSrc": "https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956",
+              "name": "Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый",
+              "oldPrice": 717,
+              "price": 599,
+              "url": "",
+            },
+            Object {
+              "currencyGrapheme": "₽",
+              "imageAlt": "Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный, Ножницы",
+              "imageSrc": "https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932",
+              "name": "Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный",
+              "oldPrice": null,
+              "price": 253,
+              "url": "",
             },
           ]
         }
@@ -139,32 +475,68 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                       >
                         <withGlobalListeners(RecommendedItem)
                           canLoadImage={false}
+                          currencyGrapheme="₽"
+                          imageAlt="Ножницы портновские, 19 см, цвет чёрный, Ножницы"
+                          imageSrc="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                           key="0"
-                          name="first item"
+                          name="Ножницы портновские, 19 см, цвет чёрный"
                           needLoadImage={false}
+                          oldPrice={null}
                           onItemClick={[Function]}
+                          price={261}
+                          url=""
                         >
                           <RecommendedItem
                             addGlobalListener={[Function]}
                             canLoadImage={false}
-                            name="first item"
+                            currencyGrapheme="₽"
+                            imageAlt="Ножницы портновские, 19 см, цвет чёрный, Ножницы"
+                            imageSrc="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
+                            name="Ножницы портновские, 19 см, цвет чёрный"
                             needLoadImage={false}
+                            oldPrice={null}
                             onItemClick={[Function]}
+                            price={261}
+                            url=""
                           >
                             <div
                               className="item"
                             >
+                              <div
+                                className="image-wrapper"
+                              />
+                              <div
+                                className="price-wrapper"
+                              >
+                                <Price
+                                  className="price"
+                                  currencyGrapheme="₽"
+                                  fractionalInSuper={true}
+                                  value={261}
+                                >
+                                  <span
+                                    className="price price"
+                                  >
+                                    261
+                                    <span>
+                                       ₽
+                                    </span>
+                                  </span>
+                                </Price>
+                              </div>
                               <Link
                                 className="link"
                                 color="black"
                                 disableHoverEffect={true}
+                                href=""
                                 onClick={[Function]}
                               >
                                 <span
                                   className="link link link-black"
+                                  href=""
                                   onClick={[Function]}
                                 >
-                                  first item
+                                  Ножницы портновские, 19 см, цвет чёрный
                                 </span>
                               </Link>
                             </div>
@@ -172,32 +544,652 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         </withGlobalListeners(RecommendedItem)>
                         <withGlobalListeners(RecommendedItem)
                           canLoadImage={false}
+                          currencyGrapheme="₽"
+                          imageAlt="Ножницы портновские, 31 см, цвет чёрный/голубой, Ножницы"
+                          imageSrc="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
                           key="1"
-                          name="second item"
+                          name="Ножницы портновские, 31 см, цвет чёрный/голубой"
                           needLoadImage={false}
+                          oldPrice={null}
                           onItemClick={[Function]}
+                          price={322}
+                          url=""
                         >
                           <RecommendedItem
                             addGlobalListener={[Function]}
                             canLoadImage={false}
-                            name="second item"
+                            currencyGrapheme="₽"
+                            imageAlt="Ножницы портновские, 31 см, цвет чёрный/голубой, Ножницы"
+                            imageSrc="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                            name="Ножницы портновские, 31 см, цвет чёрный/голубой"
                             needLoadImage={false}
+                            oldPrice={null}
                             onItemClick={[Function]}
+                            price={322}
+                            url=""
                           >
                             <div
                               className="item"
                             >
+                              <div
+                                className="image-wrapper"
+                              />
+                              <div
+                                className="price-wrapper"
+                              >
+                                <Price
+                                  className="price"
+                                  currencyGrapheme="₽"
+                                  fractionalInSuper={true}
+                                  value={322}
+                                >
+                                  <span
+                                    className="price price"
+                                  >
+                                    322
+                                    <span>
+                                       ₽
+                                    </span>
+                                  </span>
+                                </Price>
+                              </div>
                               <Link
                                 className="link"
                                 color="black"
                                 disableHoverEffect={true}
+                                href=""
                                 onClick={[Function]}
                               >
                                 <span
                                   className="link link link-black"
+                                  href=""
                                   onClick={[Function]}
                                 >
-                                  second item
+                                  Ножницы портновские, 31 см, цвет чёрный/голубой
+                                </span>
+                              </Link>
+                            </div>
+                          </RecommendedItem>
+                        </withGlobalListeners(RecommendedItem)>
+                        <withGlobalListeners(RecommendedItem)
+                          canLoadImage={false}
+                          currencyGrapheme="₽"
+                          imageAlt="Ножницы портновские, 21,5 см, цвет чёрный/голубой, Ножницы"
+                          imageSrc="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
+                          key="2"
+                          name="Ножницы портновские, 21,5 см, цвет чёрный/голубой"
+                          needLoadImage={false}
+                          oldPrice={null}
+                          onItemClick={[Function]}
+                          price={238}
+                          url=""
+                        >
+                          <RecommendedItem
+                            addGlobalListener={[Function]}
+                            canLoadImage={false}
+                            currencyGrapheme="₽"
+                            imageAlt="Ножницы портновские, 21,5 см, цвет чёрный/голубой, Ножницы"
+                            imageSrc="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
+                            name="Ножницы портновские, 21,5 см, цвет чёрный/голубой"
+                            needLoadImage={false}
+                            oldPrice={null}
+                            onItemClick={[Function]}
+                            price={238}
+                            url=""
+                          >
+                            <div
+                              className="item"
+                            >
+                              <div
+                                className="image-wrapper"
+                              />
+                              <div
+                                className="price-wrapper"
+                              >
+                                <Price
+                                  className="price"
+                                  currencyGrapheme="₽"
+                                  fractionalInSuper={true}
+                                  value={238}
+                                >
+                                  <span
+                                    className="price price"
+                                  >
+                                    238
+                                    <span>
+                                       ₽
+                                    </span>
+                                  </span>
+                                </Price>
+                              </div>
+                              <Link
+                                className="link"
+                                color="black"
+                                disableHoverEffect={true}
+                                href=""
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="link link link-black"
+                                  href=""
+                                  onClick={[Function]}
+                                >
+                                  Ножницы портновские, 21,5 см, цвет чёрный/голубой
+                                </span>
+                              </Link>
+                            </div>
+                          </RecommendedItem>
+                        </withGlobalListeners(RecommendedItem)>
+                        <withGlobalListeners(RecommendedItem)
+                          canLoadImage={false}
+                          currencyGrapheme="₽"
+                          imageAlt="Ножницы портновские, 23 см, цвет МИКС, Ножницы"
+                          imageSrc="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+                          key="3"
+                          name="Ножницы портновские, 23 см, цвет МИКС"
+                          needLoadImage={false}
+                          oldPrice={null}
+                          onItemClick={[Function]}
+                          price={171}
+                          url=""
+                        >
+                          <RecommendedItem
+                            addGlobalListener={[Function]}
+                            canLoadImage={false}
+                            currencyGrapheme="₽"
+                            imageAlt="Ножницы портновские, 23 см, цвет МИКС, Ножницы"
+                            imageSrc="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+                            name="Ножницы портновские, 23 см, цвет МИКС"
+                            needLoadImage={false}
+                            oldPrice={null}
+                            onItemClick={[Function]}
+                            price={171}
+                            url=""
+                          >
+                            <div
+                              className="item"
+                            >
+                              <div
+                                className="image-wrapper"
+                              />
+                              <div
+                                className="price-wrapper"
+                              >
+                                <Price
+                                  className="price"
+                                  currencyGrapheme="₽"
+                                  fractionalInSuper={true}
+                                  value={171}
+                                >
+                                  <span
+                                    className="price price"
+                                  >
+                                    171
+                                    <span>
+                                       ₽
+                                    </span>
+                                  </span>
+                                </Price>
+                              </div>
+                              <Link
+                                className="link"
+                                color="black"
+                                disableHoverEffect={true}
+                                href=""
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="link link link-black"
+                                  href=""
+                                  onClick={[Function]}
+                                >
+                                  Ножницы портновские, 23 см, цвет МИКС
+                                </span>
+                              </Link>
+                            </div>
+                          </RecommendedItem>
+                        </withGlobalListeners(RecommendedItem)>
+                        <withGlobalListeners(RecommendedItem)
+                          canLoadImage={false}
+                          currencyGrapheme="₽"
+                          imageAlt="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный, Ножницы"
+                          imageSrc="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
+                          key="4"
+                          name="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный"
+                          needLoadImage={false}
+                          oldPrice={null}
+                          onItemClick={[Function]}
+                          price={483}
+                          url=""
+                        >
+                          <RecommendedItem
+                            addGlobalListener={[Function]}
+                            canLoadImage={false}
+                            currencyGrapheme="₽"
+                            imageAlt="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный, Ножницы"
+                            imageSrc="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
+                            name="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный"
+                            needLoadImage={false}
+                            oldPrice={null}
+                            onItemClick={[Function]}
+                            price={483}
+                            url=""
+                          >
+                            <div
+                              className="item"
+                            >
+                              <div
+                                className="image-wrapper"
+                              />
+                              <div
+                                className="price-wrapper"
+                              >
+                                <Price
+                                  className="price"
+                                  currencyGrapheme="₽"
+                                  fractionalInSuper={true}
+                                  value={483}
+                                >
+                                  <span
+                                    className="price price"
+                                  >
+                                    483
+                                    <span>
+                                       ₽
+                                    </span>
+                                  </span>
+                                </Price>
+                              </div>
+                              <Link
+                                className="link"
+                                color="black"
+                                disableHoverEffect={true}
+                                href=""
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="link link link-black"
+                                  href=""
+                                  onClick={[Function]}
+                                >
+                                  Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный
+                                </span>
+                              </Link>
+                            </div>
+                          </RecommendedItem>
+                        </withGlobalListeners(RecommendedItem)>
+                        <withGlobalListeners(RecommendedItem)
+                          canLoadImage={false}
+                          currencyGrapheme="₽"
+                          imageAlt="Ножницы портновские, 22,5 см, цвет чёрный, Ножницы"
+                          imageSrc="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
+                          key="5"
+                          name="Ножницы портновские, 22,5 см, цвет чёрный"
+                          needLoadImage={false}
+                          oldPrice={null}
+                          onItemClick={[Function]}
+                          price={988}
+                          url=""
+                        >
+                          <RecommendedItem
+                            addGlobalListener={[Function]}
+                            canLoadImage={false}
+                            currencyGrapheme="₽"
+                            imageAlt="Ножницы портновские, 22,5 см, цвет чёрный, Ножницы"
+                            imageSrc="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
+                            name="Ножницы портновские, 22,5 см, цвет чёрный"
+                            needLoadImage={false}
+                            oldPrice={null}
+                            onItemClick={[Function]}
+                            price={988}
+                            url=""
+                          >
+                            <div
+                              className="item"
+                            >
+                              <div
+                                className="image-wrapper"
+                              />
+                              <div
+                                className="price-wrapper"
+                              >
+                                <Price
+                                  className="price"
+                                  currencyGrapheme="₽"
+                                  fractionalInSuper={true}
+                                  value={988}
+                                >
+                                  <span
+                                    className="price price"
+                                  >
+                                    988
+                                    <span>
+                                       ₽
+                                    </span>
+                                  </span>
+                                </Price>
+                              </div>
+                              <Link
+                                className="link"
+                                color="black"
+                                disableHoverEffect={true}
+                                href=""
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="link link link-black"
+                                  href=""
+                                  onClick={[Function]}
+                                >
+                                  Ножницы портновские, 22,5 см, цвет чёрный
+                                </span>
+                              </Link>
+                            </div>
+                          </RecommendedItem>
+                        </withGlobalListeners(RecommendedItem)>
+                        <withGlobalListeners(RecommendedItem)
+                          canLoadImage={false}
+                          currencyGrapheme="₽"
+                          imageAlt="Ножницы портновские, 22 см, цвет серебряный, Ножницы"
+                          imageSrc="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
+                          key="6"
+                          name="Ножницы портновские, 22 см, цвет серебряный"
+                          needLoadImage={false}
+                          oldPrice={null}
+                          onItemClick={[Function]}
+                          price={619}
+                          url=""
+                        >
+                          <RecommendedItem
+                            addGlobalListener={[Function]}
+                            canLoadImage={false}
+                            currencyGrapheme="₽"
+                            imageAlt="Ножницы портновские, 22 см, цвет серебряный, Ножницы"
+                            imageSrc="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
+                            name="Ножницы портновские, 22 см, цвет серебряный"
+                            needLoadImage={false}
+                            oldPrice={null}
+                            onItemClick={[Function]}
+                            price={619}
+                            url=""
+                          >
+                            <div
+                              className="item"
+                            >
+                              <div
+                                className="image-wrapper"
+                              />
+                              <div
+                                className="price-wrapper"
+                              >
+                                <Price
+                                  className="price"
+                                  currencyGrapheme="₽"
+                                  fractionalInSuper={true}
+                                  value={619}
+                                >
+                                  <span
+                                    className="price price"
+                                  >
+                                    619
+                                    <span>
+                                       ₽
+                                    </span>
+                                  </span>
+                                </Price>
+                              </div>
+                              <Link
+                                className="link"
+                                color="black"
+                                disableHoverEffect={true}
+                                href=""
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="link link link-black"
+                                  href=""
+                                  onClick={[Function]}
+                                >
+                                  Ножницы портновские, 22 см, цвет серебряный
+                                </span>
+                              </Link>
+                            </div>
+                          </RecommendedItem>
+                        </withGlobalListeners(RecommendedItem)>
+                        <withGlobalListeners(RecommendedItem)
+                          canLoadImage={false}
+                          currencyGrapheme="₽"
+                          imageAlt="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный, Ножницы"
+                          imageSrc="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
+                          key="7"
+                          name="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный"
+                          needLoadImage={false}
+                          oldPrice={595}
+                          onItemClick={[Function]}
+                          price={539}
+                          url=""
+                        >
+                          <RecommendedItem
+                            addGlobalListener={[Function]}
+                            canLoadImage={false}
+                            currencyGrapheme="₽"
+                            imageAlt="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный, Ножницы"
+                            imageSrc="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
+                            name="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный"
+                            needLoadImage={false}
+                            oldPrice={595}
+                            onItemClick={[Function]}
+                            price={539}
+                            url=""
+                          >
+                            <div
+                              className="item"
+                            >
+                              <div
+                                className="image-wrapper"
+                              />
+                              <div
+                                className="price-wrapper"
+                              >
+                                <Price
+                                  className="price"
+                                  currencyGrapheme="₽"
+                                  fractionalInSuper={true}
+                                  value={539}
+                                >
+                                  <span
+                                    className="price price"
+                                  >
+                                    539
+                                    <span>
+                                       ₽
+                                    </span>
+                                  </span>
+                                </Price>
+                                <Price
+                                  className="old-price"
+                                  currencyGrapheme="₽"
+                                  fractionalInSuper={true}
+                                  old={true}
+                                  value={595}
+                                >
+                                  <span
+                                    className="price old-price old-price"
+                                  >
+                                    595
+                                    <span>
+                                       ₽
+                                    </span>
+                                  </span>
+                                </Price>
+                              </div>
+                              <Link
+                                className="link"
+                                color="black"
+                                disableHoverEffect={true}
+                                href=""
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="link link link-black"
+                                  href=""
+                                  onClick={[Function]}
+                                >
+                                  Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный
+                                </span>
+                              </Link>
+                            </div>
+                          </RecommendedItem>
+                        </withGlobalListeners(RecommendedItem)>
+                        <withGlobalListeners(RecommendedItem)
+                          canLoadImage={false}
+                          currencyGrapheme="₽"
+                          imageAlt="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый, Ножницы"
+                          imageSrc="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
+                          key="8"
+                          name="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый"
+                          needLoadImage={false}
+                          oldPrice={717}
+                          onItemClick={[Function]}
+                          price={599}
+                          url=""
+                        >
+                          <RecommendedItem
+                            addGlobalListener={[Function]}
+                            canLoadImage={false}
+                            currencyGrapheme="₽"
+                            imageAlt="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый, Ножницы"
+                            imageSrc="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
+                            name="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый"
+                            needLoadImage={false}
+                            oldPrice={717}
+                            onItemClick={[Function]}
+                            price={599}
+                            url=""
+                          >
+                            <div
+                              className="item"
+                            >
+                              <div
+                                className="image-wrapper"
+                              />
+                              <div
+                                className="price-wrapper"
+                              >
+                                <Price
+                                  className="price"
+                                  currencyGrapheme="₽"
+                                  fractionalInSuper={true}
+                                  value={599}
+                                >
+                                  <span
+                                    className="price price"
+                                  >
+                                    599
+                                    <span>
+                                       ₽
+                                    </span>
+                                  </span>
+                                </Price>
+                                <Price
+                                  className="old-price"
+                                  currencyGrapheme="₽"
+                                  fractionalInSuper={true}
+                                  old={true}
+                                  value={717}
+                                >
+                                  <span
+                                    className="price old-price old-price"
+                                  >
+                                    717
+                                    <span>
+                                       ₽
+                                    </span>
+                                  </span>
+                                </Price>
+                              </div>
+                              <Link
+                                className="link"
+                                color="black"
+                                disableHoverEffect={true}
+                                href=""
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="link link link-black"
+                                  href=""
+                                  onClick={[Function]}
+                                >
+                                  Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый
+                                </span>
+                              </Link>
+                            </div>
+                          </RecommendedItem>
+                        </withGlobalListeners(RecommendedItem)>
+                        <withGlobalListeners(RecommendedItem)
+                          canLoadImage={false}
+                          currencyGrapheme="₽"
+                          imageAlt="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный, Ножницы"
+                          imageSrc="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
+                          key="9"
+                          name="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный"
+                          needLoadImage={false}
+                          oldPrice={null}
+                          onItemClick={[Function]}
+                          price={253}
+                          url=""
+                        >
+                          <RecommendedItem
+                            addGlobalListener={[Function]}
+                            canLoadImage={false}
+                            currencyGrapheme="₽"
+                            imageAlt="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный, Ножницы"
+                            imageSrc="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
+                            name="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный"
+                            needLoadImage={false}
+                            oldPrice={null}
+                            onItemClick={[Function]}
+                            price={253}
+                            url=""
+                          >
+                            <div
+                              className="item"
+                            >
+                              <div
+                                className="image-wrapper"
+                              />
+                              <div
+                                className="price-wrapper"
+                              >
+                                <Price
+                                  className="price"
+                                  currencyGrapheme="₽"
+                                  fractionalInSuper={true}
+                                  value={253}
+                                >
+                                  <span
+                                    className="price price"
+                                  >
+                                    253
+                                    <span>
+                                       ₽
+                                    </span>
+                                  </span>
+                                </Price>
+                              </div>
+                              <Link
+                                className="link"
+                                color="black"
+                                disableHoverEffect={true}
+                                href=""
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="link link link-black"
+                                  href=""
+                                  onClick={[Function]}
+                                >
+                                  Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный
                                 </span>
                               </Link>
                             </div>

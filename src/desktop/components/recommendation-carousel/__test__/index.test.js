@@ -8,12 +8,9 @@ import RecommendationCarousel, {
 import RecommendedItem from '../recommended-item';
 import Carousel from '@dev-dep/ui-nucleons/carousel/carousel';
 import CarouselButton from '../recommendation-carousel-button';
+import { items } from '../../../../common/__fixtures__/recommendation-carousel';
 
 describe('<RecommendationCarousel />', () => {
-  const items = [
-    { name: 'first item' },
-    { name: 'second item' },
-  ];
   const title = 'Test title';
   const className = 'test-class';
   const containerProps = { className };
