@@ -7,17 +7,20 @@ import classnames from 'classnames/bind';
 import styles from './dropdown.scss';
 import isFunction from 'lodash/isFunction';
 import { useOutsideClick } from '../../../common/hooks/use-outside-click';
+import Types from 'prop-types';
 
 const cx = classnames.bind(styles);
 
 /**
  * Компонент выпадающего меню.
  * @param {Object} props Пропы компонента.
+ * @param {string} props.wrapperClass CSS класс для контейнера компонента.
  * @param {string} props.title Заголовок меню.
  * @param {Array} props.items Элементы списка меню.
  * @param {Function} props.renderItem Функция для отрисовки элемента списка. По умолчанию - defaultRenderItem.
  * @param {Function} props.onSelect Функция, вызыаемая при клике на элемент списка.
  * @param {Function} props.renderDropdownHead Функция для заголовка списка.
+ * @param {string} props.popupClasses СSS класс для всплывающего окна.
  * @return {ReactElement} Компонент выпадающего списка.
  */
 const Dropdown = ({
@@ -104,3 +107,43 @@ export const renderDefaultHead = ({ title, onTitleClick, isOpen }) => (
 );
 
 export default Dropdown;
+
+Dropdown.propTypes = {
+  /**
+   * CSS класс для контейнера компонента.
+   */
+  wrapperClass: Types.string,
+
+  /**
+   * Заголовок меню.
+   */
+  title: Types.string,
+
+  /**
+   * Массив элементов списка меню.
+   */
+  items: Types.arrayOf(Types.shape({
+    name: Types.string,
+  })),
+
+  /**
+   * Функция для отрисовки элемента списка.
+   */
+  renderItem: Types.func,
+
+  /**
+   * Функция, вызыаемая при клике на элемент списка.
+   */
+  onSelect: Types.func,
+
+  /**
+   * Функция для отрисовки заголовка списка.
+   */
+  renderDropdownHead: Types.func,
+
+  /**
+   * СSS класс для всплывающего окна.
+   */
+  popupClasses: Types.string,
+
+};
