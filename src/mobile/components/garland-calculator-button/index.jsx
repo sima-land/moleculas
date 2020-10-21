@@ -6,6 +6,7 @@ import Icon from '@dev-dep/ui-nucleons/icon';
 import TreeIcon from './tree-in-circle.svg';
 import classnames from 'classnames/bind';
 import styles from './garland-calculator-button.scss';
+import Types from 'prop-types';
 
 const cx = classnames.bind(styles);
 
@@ -37,3 +38,10 @@ export const GarlandCalculatorButton = ({ onClick }) => (
 );
 
 export default GarlandCalculatorButton;
+
+GarlandCalculatorButton.propTypes = {
+  /**
+   * Обработчик нажатия на кнопку рассчитать.
+   */
+  onClick: Types.func.isRequired,
+};
