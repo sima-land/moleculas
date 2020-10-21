@@ -7,6 +7,7 @@ import isFunction from 'lodash/isFunction';
 import { isNonEmptyArray } from '../../../common/helpers/is-non-empty';
 import classes from './recommendation-carousel.scss';
 import classnames from 'classnames/bind';
+import Types from 'prop-types';
 
 const cx = classnames.bind(classes);
 
@@ -20,8 +21,7 @@ const cx = classnames.bind(classes);
  * @param {Function} props.onRequest Функция, инициализирующая загрузку рекомендаций.
  * @param {Function} props.addObserve Функция подписки на Intersection Observer.
  * @param {Function} props.addObserveWithMargin
- * Функция подписки на Intersection Observer с увеличенным пределаом попадания в область видимости.
- * @param {Object} props.containerProps Свойства элемента-контейнера.
+ * Функция подписки на Intersection Observer с увеличенным пределом попадания в область видимости.
  * @return {ReactElement} Компонент карусели рекомендаций.
  */
 export const RecommendationCarousel = ({
@@ -73,6 +73,52 @@ export const RecommendationCarousel = ({
       </section>
     )
     : <div ref={emptyRef}></div>;
+};
+
+RecommendationCarousel.propTypes = {
+  /**
+   * Заголовок карусели.
+   */
+  title: Types.string,
+
+  /**
+   * Массив элементов карусели.
+   */
+  items: Types.arrayOf(Types.shape({
+    name: Types.string,
+    imageSrc: Types.string,
+    imageAlt: Types.string,
+    url: Types.string,
+    price: Types.number,
+    currencyGrapheme: Types.string,
+    onQuickViewClick: Types.func,
+    oldPrice: Types.oneOfType([Types.string, null]),
+  })),
+
+  /**
+   * Обработчик клика на элементе карусели.
+   */
+  onItemClick: Types.func,
+
+  /**
+   * Функция, будет вызвана при попадании карусели во вьюпорт.
+   */
+  onInViewport: Types.func,
+
+  /**
+   * Функция для получения элементов карусели, будет вызвана при приближении карусели к вьюпорту.
+   */
+  onRequest: Types.func,
+
+  /**
+   * Функция подписки на Intersection Observer, предоставляется HOC'ом.
+   */
+  addObserve: Types.func,
+
+  /**
+   * Функция подписки на Intersection Observer, предоставляется HOC'ом.
+   */
+  addObserveWithMargin: Types.func,
 };
 
 export default withInViewportObserver(
