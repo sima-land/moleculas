@@ -3,6 +3,7 @@ import { isNonEmptyArray } from '../../../common/helpers/is-non-empty';
 import withInViewportObserver from '@dev-dep/ui-nucleons/with-in-viewport-observer';
 import isFunction from 'lodash/isFunction';
 import RecommendationWrapper from './recommendation-wrapper';
+import Types from 'prop-types';
 
 /**
  * Компонент мобильного слайдера рекомендованных товаров.
@@ -49,3 +50,44 @@ export const RecommendationSlider = ({
 export default withInViewportObserver(RecommendationSlider, {
   rootMargin: '200px 0px 200px 0px',
 });
+
+RecommendationSlider.propTypes = {
+  /**
+   * Заголовок слайдера.
+   */
+  title: Types.string,
+
+  /**
+   * Массив элементов слайдера.
+   */
+  items: Types.arrayOf(Types.shape({
+    name: Types.string,
+    imageSrc: Types.string,
+    imageAlt: Types.string,
+    url: Types.string,
+    price: Types.number,
+    currencyGrapheme: Types.string,
+    onQuickViewClick: Types.func,
+    oldPrice: Types.oneOfType([Types.string, null]),
+  })),
+
+  /**
+   * Обработчик клика на элементе слайдера.
+   */
+  onItemClick: Types.func,
+
+  /**
+   * Функция, будет вызвана при попадании карусели во вьюпорт.
+   */
+  onInViewport: Types.func,
+
+  /**
+   * Функция для получения элементов слайдера, будет вызвана при приближении слайдера к вьюпорту.
+   */
+  onRequest: Types.func,
+
+  /**
+   * Функция подписки на Intersection Observer, предоставляется HOC'ом.
+   */
+  addObserve: Types.func,
+};

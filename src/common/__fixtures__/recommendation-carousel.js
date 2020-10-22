@@ -1,4 +1,4 @@
-export const carouselItems = [
+export const items = [
   {
     name: 'Ножницы портновские, 19 см, цвет чёрный',
     imageSrc: 'https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833',

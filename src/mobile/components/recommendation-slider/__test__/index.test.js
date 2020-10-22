@@ -5,12 +5,9 @@ import RecommendationSlider, {
   RecommendationSlider as PureRecommendationSlider,
 } from '../';
 import { act } from 'react-dom/test-utils';
+import { items } from '../../../../common/__fixtures__/recommendation-carousel';
 
 describe('<RecommendationSlider />', () => {
-  const items = [
-    { name: 'first item' },
-    { name: 'second item' },
-  ];
   const title = 'Test title';
   let onInViewport;
   let container;
