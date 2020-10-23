@@ -20,6 +20,7 @@ import withInViewportObserver from '@dev-dep/ui-nucleons/with-in-viewport-observ
 import withGlobalListeners from '@dev-dep/ui-nucleons/hoc/with-global-listeners';
 import Link from '@dev-dep/ui-nucleons/link';
 import WholesalePrice from '../wholesale-price';
+import Types from 'prop-types';
 
 const cx = classnames.bind(style);
 
@@ -400,3 +401,308 @@ export default withInViewportObserver(
   },
   'addObserveWithMargin'
 );
+
+ListItem.propTypes = {
+  /**
+   * Обработчик действий с корзиной.
+   */
+  addToCartHandler: Types.func,
+
+  /**
+   * Обработчик нажатия на картинку товара.
+   */
+  onImageClick: Types.func,
+
+  /**
+   * Обработчик нажатия селектора модификатора.
+   */
+  onModifierClick: Types.func,
+
+  /**
+   * Обработчик нажатия на избранное.
+   */
+  onWishClick: Types.func,
+
+  /**
+   * Обработчик нажатия на кнопку быстрого просмотра.
+   */
+  onQuickViewClick: Types.func,
+
+  /**
+   * Обработчик нажатия на кнопку деталей крупного опта.
+   */
+  onDetailsClick: Types.func,
+
+  /**
+   * Обработчик нажатия на кнопку аналогов.
+   */
+  onAnaloguesClick: Types.func,
+
+  /**
+   * Обработчик нажатия на кнопку корзины.
+   */
+  onTrashClick: Types.func,
+
+  /**
+   * Свойства крупного опта.
+   */
+  wholesaleProps: Types.object,
+
+  /**
+   * Свойства модификатора.
+   */
+  modifierProps: Types.object,
+
+  /**
+   * Свойства выделения товара.
+   */
+  selectionProps: Types.object,
+
+  /**
+   * Массив шильдиков.
+   */
+  badges: Types.array,
+
+  /**
+   * Остаток на складе.
+   */
+  balance: Types.number,
+
+  /**
+   * Единицы измерения товара для остатка на складе.
+   */
+  balancePluralNameFormat: Types.string,
+
+  /**
+   * Признак загрузки данных корзины.
+   */
+  isCartFetching: Types.bool,
+
+  /**
+   * Графема валюты.
+   */
+  currencyGrapheme: Types.string.isRequired,
+
+  /**
+   * Информация о доставке.
+   */
+  deliveryInfo: Types.string,
+
+  /**
+   * Данные наценки за комплектацию.
+   */
+  markupData: Types.oneOfType([Types.object, null]),
+
+  /**
+   * Ссылка на изображение товара.
+   */
+  image: Types.string,
+
+  /**
+   * Ссылка на изображение товара большого разрешения.
+   */
+  bigImg: Types.string,
+
+  /**
+   * Признак товара в избранном.
+   */
+  isWished: Types.bool.isRequired,
+
+  /**
+   * Ссылка на товар.
+   */
+  itemUrl: Types.string.isRequired,
+
+  /**
+   * Название товара.
+   */
+  name: Types.string.isRequired,
+
+  /**
+   * Текущая цена.
+   */
+  price: Types.number.isRequired,
+
+  /**
+   * Старая цена.
+   */
+  priceMax: Types.number,
+
+  /**
+   * Цена единицы товара.
+   */
+  unitPrice: Types.number,
+
+  /**
+   * Графема валюты единицы товара.
+   */
+  measure: Types.string,
+
+  /**
+   * Характеристики товара.
+   */
+  properties: Types.array,
+
+  /**
+   * Оценка.
+   */
+  rating: Types.number,
+
+  /**
+   * Количество отзывов.
+   */
+  reviewsCount: Types.number,
+
+  /**
+   * Артикул.
+   */
+  sid: Types.number.isRequired,
+
+  /**
+   * Отображаемое количество товара в корзине.
+   */
+  displayedQuantity: Types.number,
+
+  /**
+   * Нужно ли скрывать товар 18+.
+   */
+  shouldHideAdultContent: Types.bool,
+
+  /**
+   * Признак авторизованности пользователя.
+   */
+  isAuthUser: Types.bool,
+
+  /**
+   * Доступно ли увеличение товара в корзине.
+   */
+  canAddMoreToCart: Types.bool,
+
+  /**
+   * Признак фиксированной цены (без скидок).
+   */
+  isPriceFixed: Types.bool,
+
+  /**
+   * Класс для обертки.
+   */
+  wrapperClassName: Types.string,
+
+  /**
+   * Обработчик приближения элемента к зоне видимости.
+   */
+  updateItemViewed: Types.func,
+
+  /**
+   * Обработчик завершения загрузки изображения товара.
+   */
+  onLoadImage: Types.func,
+
+  /**
+   * Тип отображения компонента - tile (иначе list).
+   */
+  asTile: Types.bool,
+
+  /**
+   * Размер плитки.
+   */
+  size: Types.oneOf(['xxl', 'small']),
+
+  /**
+   * Функция подписки на Intersection Observer. Предоставляется HOC`ом.
+   */
+  addObserveWithMargin: Types.func,
+
+  /**
+   * Функция добавления глобального обработчика. Предоставляется HOC`ом.
+   */
+  addGlobalListener: Types.func,
+
+  /**
+   * Обработчик, получающий ширину элемента при ресайзе.
+   */
+  getItemWidth: Types.func,
+
+  /**
+   * Признак выполнения добавления товара в список избранного.
+   */
+  isFetchingWishItems: Types.bool,
+
+  /**
+   * Обработчик нажатия на ссылку в блоке 18+.
+   */
+  onAdultClick: Types.func,
+
+  /**
+   * Признак дробного количества товара в корзине.
+   */
+  isFloatQty: Types.bool,
+
+  /**
+   * Количество товара в корзине.
+   */
+  qty: Types.number,
+
+  /**
+   * Текст под полем ввода количества товара.
+   */
+  additionStepText: Types.string,
+
+  /**
+   * Тип отображения элемента в вышестоящем компоненте.
+   * На самом деле не влияет на тип отображения, а лишь вызывает `getItemWidth` при своем изменении.
+   * Для изменения вида следует использовать `asTile`.
+   */
+  viewType: Types.oneOf(['tile', 'list']),
+
+  /**
+   * Текст закончившегося товара.
+   */
+  inStockText: Types.string,
+
+  /**
+   * Свойства для компонента <Text /> текста закончившегося товара.
+   */
+  inStockTextStyleProps: Types.object,
+
+  /**
+   * Признак скрытия фильтров в вышестоящем компоненте.
+   * Не влияет на поведение компонента, а лишь вызывает `getItemWidth` при своем изменении.
+   */
+  filtersHidden: Types.bool,
+
+  /**
+   * Значение дата-атрибута key.
+   */
+  dataKey: Types.string,
+
+  /**
+   * Признак наличия кнопки быстрого просмотра.
+   */
+  hasQuickPreview: Types.bool,
+
+  /**
+   * Признак наличия кнопки выделения товара.
+   */
+  hasSelectionButton: Types.bool,
+
+  /**
+   * Признак наличия блока добавления товара в корзину.
+   */
+  hasAddToCartBlock: Types.bool,
+
+  /**
+   * Признак наличия кнопки добавления в избранное.
+   */
+  hasWishButton: Types.bool,
+
+  /**
+   * Признак наличия кнопки аналогов.
+   */
+  hasAnaloguesButton: Types.bool,
+
+  /**
+   * Признак наличия кнопки корзины.
+   */
+  hasTrashButton: Types.bool,
+};
