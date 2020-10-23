@@ -1,8 +1,7 @@
 export const data = {
   viewType: 'list',
   wrapperClassName: ' catalog__item',
-  dataKey: 3311827,
-  size: 'medium',
+  size: 'small',
   asTile: false,
   isWished: false,
   isAuthUser: true,

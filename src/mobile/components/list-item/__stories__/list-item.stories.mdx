@@ -6,31 +6,29 @@ import {
   AdultView,
   WithoutCartView,
   ModifierView,
-  SelectedView,
   AddedView,
 } from './list-item.stories.jsx';
+import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
 
 <Meta
-  title='desktop/ListItem'
+  title='mobile/ListItem'
   component={ListItem}
   parameters={{
-   controls: { expanded: true },
-  }}
-  argTypes={{
-    addToCartHandler: {
-      action: 'addToCartHandler',
+    controls: { expanded: true },
+    viewport: {
+      defaultViewport: 'iphonex',
     },
   }}
 />
 
 # ListItem
 ### Компонент карточки товара в списке товаров.
-Компонент десктопной версии. Может принимать различные варианты отображения (списком, плиткой).
+Компонент мобильной версии. Может принимать различные варианты отображения (списком, плиткой).
 Может использоваться без блока добавления в корзину. Различные варианты отображения представлены в конце документации.
 
 ### Пример использования
 ```jsx
-import ListItem from '@dev-dep/moleculas/desktop/components/list-item';
+import ListItem from '@dev-dep/moleculas/mobile/components/list-item';
 
 <ListItem {...listItemProps} />
 ```
@@ -62,11 +60,6 @@ import ListItem from '@dev-dep/moleculas/desktop/components/list-item';
 #### С модификаторами
 <Canvas>
   <Story story={ModifierView} />
-</Canvas>
-
-#### Выбранный товар
-<Canvas>
-  <Story story={SelectedView} />
 </Canvas>
 
 #### Добавленный в корзину
