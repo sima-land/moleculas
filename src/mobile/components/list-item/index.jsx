@@ -22,6 +22,7 @@ import style from './list-item.scss';
 import ItemImage from '../item-image';
 import ItemRating from '../item-rating';
 import ItemPrice from '../item-price';
+import Types from 'prop-types';
 
 const cx = classnames.bind(style);
 
@@ -57,7 +58,6 @@ const optionsDeclinations = Object.freeze([
  * @property {Function} [onCartClick] Обработчик нажатия на кнопку "В корзину".
  * @property {string} [wrapperClassName] Класс для обертки.
  * @property {boolean} [asTile] Тип отображения компонента - tile (иначе list).
- * @property {Function} addObserveWithMargin Функция подписки на Intersection Observer.
  * @property {Function} onAdultClick Обработчик нажатия на ссылку в блоке 18+.
  */
 
@@ -295,3 +295,215 @@ export const ListItem = ({
 };
 
 export default ListItem;
+
+ListItem.propTypes = {
+  /**
+   * Обработчик нажатия на поле ввода корзины.
+   */
+  onCartInputClick: Types.func,
+
+  /**
+   * Обработчик нажатия на кнопку добавления в корзину.
+   */
+  onCartButtonClick: Types.func,
+
+  /**
+   * Обработчик нажатия на кнопку дополнительных действий.
+   */
+  onActionsClick: Types.func,
+
+  /**
+   * Обработчик нажатия на картинку товара.
+   */
+  onImageClick: Types.func,
+
+  /**
+   * Обработчик нажатия селектора модификатора.
+   */
+  onModifierClick: Types.func,
+
+  /**
+   * Обработчик нажатия на избранное.
+   */
+  onWishClick: Types.func,
+
+  /**
+   * Обработчик нажатия на кнопку деталей крупного опта.
+   */
+  onDetailsClick: Types.func,
+
+  /**
+   * Свойства информации о закончившемся товаре.
+   */
+  inStockProps: Types.object,
+
+  /**
+   * Признак необходимости отображения артикула.
+   */
+  hasSid: Types.bool,
+
+  /**
+   * Признак отображения кнопки дополнительных действий.
+   */
+  hasActionsButton: Types.bool,
+
+  /**
+   * Свойства для компонента <Text /> содержащего наименование товара.
+   */
+  nameTextProps: Types.object,
+
+  /**
+   * Свойства крупного опта.
+   */
+  wholesaleProps: Types.object,
+
+  /**
+   * Свойства модификатора.
+   */
+  modifierProps: Types.object,
+
+  /**
+   * Массив шильдиков.
+   */
+  badges: Types.array,
+
+  /**
+   * Признак загрузки данных корзины.
+   */
+  isCartFetching: Types.bool,
+
+  /**
+   * Графема валюты.
+   */
+  currencyGrapheme: Types.string.isRequired,
+
+  /**
+   * Информация о доставке.
+   */
+  deliveryInfo: Types.string,
+
+  /**
+   * Данные наценки за комплектацию.
+   */
+  markupData: Types.object,
+
+  /**
+   * Ссылка на изображение товара.
+   */
+  image: Types.string,
+
+  /**
+   * Признак товара в избранном.
+   */
+  isWished: Types.bool.isRequired,
+
+  /**
+   * Ссылка на товар.
+   */
+  itemUrl: Types.string,
+
+  /**
+   * Название товара.
+   */
+  name: Types.string.isRequired,
+
+  /**
+   * Текущая цена.
+   */
+  price: Types.number.isRequired,
+
+  /**
+   * Старая цена.
+   */
+  priceMax: Types.number,
+
+  /**
+   * Цена единицы товара.
+   */
+  unitPrice: Types.number,
+
+  /**
+   * Графема валюты единицы товара.
+   */
+  measure: Types.string,
+
+  /**
+   * Характеристики товара.
+   */
+  properties: Types.array,
+
+  /**
+   * Оценка.
+   */
+  rating: Types.number,
+
+  /**
+   * Количество отзывов.
+   */
+  reviewsCount: Types.number,
+
+  /**
+   * Артикул.
+   */
+  sid: Types.number.isRequired,
+
+  /**
+   * Отображаемое количество товара в корзине.
+   */
+  displayedQuantity: Types.number,
+
+  /**
+   * Нужно ли скрывать товар 18+.
+   */
+  shouldHideAdultContent: Types.bool,
+
+  /**
+   * Признак авторизованности пользователя.
+   */
+  isAuthUser: Types.bool,
+
+  /**
+   * Класс для обертки.
+   */
+  wrapperClassName: Types.string,
+
+  /**
+   * Тип отображения компонента - tile (иначе list).
+   */
+  asTile: Types.bool,
+
+  /**
+   * Размер плитки.
+   */
+  size: Types.oneOf(['xxl', 'small']),
+
+  /**
+   * Признак выполнения добавления товара в список избранного.
+   */
+  isFetchingWishItems: Types.bool,
+
+  /**
+   * Обработчик нажатия на ссылку в блоке 18+.
+   */
+  onAdultClick: Types.func,
+
+  /**
+   * Количество товара в корзине.
+   */
+  qty: Types.number,
+
+  /**
+   * Текст под полем ввода количества товара.
+   */
+  additionStepText: Types.string,
+
+  /**
+   * Признак наличия блока добавления товара в корзину.
+   */
+  hasAddToCartBlock: Types.bool,
+
+  /**
+   * Признак наличия кнопки добавления в избранное.
+   */
+  hasWishButton: Types.bool,
+};

@@ -68,7 +68,7 @@ RecommendationSlider.propTypes = {
     price: Types.number,
     currencyGrapheme: Types.string,
     onQuickViewClick: Types.func,
-    oldPrice: Types.oneOfType([Types.string, null]),
+    oldPrice: Types.number,
   })),
 
   /**

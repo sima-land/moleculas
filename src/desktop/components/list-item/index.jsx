@@ -491,7 +491,7 @@ ListItem.propTypes = {
   /**
    * Данные наценки за комплектацию.
    */
-  markupData: Types.oneOfType([Types.object, null]),
+  markupData: Types.object,
 
   /**
    * Ссылка на изображение товара.
@@ -511,7 +511,7 @@ ListItem.propTypes = {
   /**
    * Ссылка на товар.
    */
-  itemUrl: Types.string.isRequired,
+  itemUrl: Types.string,
 
   /**
    * Название товара.
