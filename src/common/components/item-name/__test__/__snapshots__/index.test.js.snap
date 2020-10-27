@@ -9,13 +9,12 @@ exports[`<ItemName /> should render with props 1`] = `
   <div
     className="wrapper"
   >
-    <Link
+    <ForwardRef(Link)
       href="#"
     >
       <a
-        className="link link-blue link-can-be-hovered"
+        className="link color__brand-blue"
         href="#"
-        target="_self"
       >
         <Memo(Text)>
           <span
@@ -29,7 +28,7 @@ exports[`<ItemName /> should render with props 1`] = `
           </span>
         </Memo(Text)>
       </a>
-    </Link>
+    </ForwardRef(Link)>
   </div>
 </ItemName>
 `;
@@ -39,9 +38,9 @@ exports[`<ItemName /> should render without props 1`] = `
   <div
     className="wrapper"
   >
-    <Link>
-      <span
-        className="link link-blue link-can-be-hovered"
+    <ForwardRef(Link)>
+      <a
+        className="link color__brand-blue"
       >
         <Memo(Text)>
           <span
@@ -52,8 +51,8 @@ exports[`<ItemName /> should render without props 1`] = `
             />
           </span>
         </Memo(Text)>
-      </span>
-    </Link>
+      </a>
+    </ForwardRef(Link)>
   </div>
 </ItemName>
 `;

@@ -84,7 +84,7 @@ exports[`<ListItem /> should render with all props 1`] = `
         }
         marginTop={2}
       >
-        <Link
+        <ForwardRef(Link)
           href="#"
         >
           <Memo(Text)
@@ -93,7 +93,7 @@ exports[`<ListItem /> should render with all props 1`] = `
           >
             Еще 55 вариантов
           </Memo(Text)>
-        </Link>
+        </ForwardRef(Link)>
       </Box>
       <ItemRating
         marginTop={2}

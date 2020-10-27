@@ -1797,17 +1797,17 @@
     stylelint-config-sass-guidelines "^6.1.0"
     stylelint-scss "^3.12.1"
 
-"@dev-dep/ui-nucleons@^3.1.1":
-  version "3.1.1"
-  resolved "https://gitlab.sima-land.ru/api/v4/projects/625/packages/npm/@dev-dep/ui-nucleons/-/@dev-dep/ui-nucleons-3.1.1.tgz#126c5a867ad4f718d1915a0b9aaadcd0d67e082c"
-  integrity sha1-EmxahnrU9xjRkVoLmqrc0NZ+CCw=
+"@dev-dep/ui-nucleons@^5.1.0":
+  version "5.1.0"
+  resolved "https://gitlab.sima-land.ru/api/v4/projects/625/packages/npm/@dev-dep/ui-nucleons/-/@dev-dep/ui-nucleons-5.1.0.tgz#25ae82a0ccb76b2c1a9303436f2b36508f0e959d"
+  integrity sha1-Ja6CoMy3aywakwNDbys2UI8OlZ0=
   dependencies:
     "@storybook/addon-console" "^1.2.1"
     "@types/jest" "^24.0.19"
     body-scroll-lock "^3.0.2"
     date-fns "^2.14.0"
     intersection-observer "^0.7.0"
-    lodash "^4.17.15"
+    lodash "4.17.15"
     prop-types "^15.7.2"
     react-transition-group "^4.3.0"
 
@@ -9944,6 +9944,7 @@ lodash.uniq@4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
+lodash@4.17.15, lodash@^4.15.0, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15:
 lodash@4.17.15, lodash@^4.15.0, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"

@@ -106,19 +106,20 @@ exports[`<RecommendationWrapper /> should match a snapshot with items 1`] = `
                       <div
                         className="item"
                       >
-                        <Link
+                        <ForwardRef(Link)
                           className="link"
                           color="black"
                           disableHoverEffect={true}
                           onClick={[Function]}
                         >
-                          <span
-                            className="link link link-black"
+                          <a
+                            className="link link color__black"
+                            disableHoverEffect={true}
                             onClick={[Function]}
                           >
                             first item
-                          </span>
-                        </Link>
+                          </a>
+                        </ForwardRef(Link)>
                       </div>
                     </RecommendedItem>
                   </withGlobalListeners(RecommendedItem)>
@@ -139,19 +140,20 @@ exports[`<RecommendationWrapper /> should match a snapshot with items 1`] = `
                       <div
                         className="item"
                       >
-                        <Link
+                        <ForwardRef(Link)
                           className="link"
                           color="black"
                           disableHoverEffect={true}
                           onClick={[Function]}
                         >
-                          <span
-                            className="link link link-black"
+                          <a
+                            className="link link color__black"
+                            disableHoverEffect={true}
                             onClick={[Function]}
                           >
                             second item
-                          </span>
-                        </Link>
+                          </a>
+                        </ForwardRef(Link)>
                       </div>
                     </RecommendedItem>
                   </withGlobalListeners(RecommendedItem)>

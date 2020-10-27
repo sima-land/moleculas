@@ -189,13 +189,13 @@ exports[`<ListItem /> should render with all props 1`] = `
           <div
             className="analogues display-on-hover"
           >
-            <Link>
+            <ForwardRef(Link)>
               <Memo(Text)
                 weight={600}
               >
                 Аналоги
               </Memo(Text)>
-            </Link>
+            </ForwardRef(Link)>
           </div>
         </div>
       </div>
@@ -393,13 +393,13 @@ exports[`<ListItem /> should render with all props 2`] = `
           <div
             className="analogues display-on-hover"
           >
-            <Link>
+            <ForwardRef(Link)>
               <Memo(Text)
                 weight={600}
               >
                 Аналоги
               </Memo(Text)>
-            </Link>
+            </ForwardRef(Link)>
           </div>
         </div>
       </div>
@@ -629,13 +629,13 @@ exports[`<ListItem /> should render with all props 3`] = `
           <div
             className="analogues display-on-hover"
           >
-            <Link>
+            <ForwardRef(Link)>
               <Memo(Text)
                 weight={600}
               >
                 Аналоги
               </Memo(Text)>
-            </Link>
+            </ForwardRef(Link)>
           </div>
         </div>
       </div>
@@ -791,13 +791,13 @@ exports[`<ListItem /> should render with all props 4`] = `
           <div
             className="analogues display-on-hover"
           >
-            <Link>
+            <ForwardRef(Link)>
               <Memo(Text)
                 weight={600}
               >
                 Аналоги
               </Memo(Text)>
-            </Link>
+            </ForwardRef(Link)>
           </div>
         </div>
       </div>
@@ -966,13 +966,13 @@ exports[`<ListItem /> should render with all props 5`] = `
           <div
             className="analogues display-on-hover"
           >
-            <Link>
+            <ForwardRef(Link)>
               <Memo(Text)
                 weight={600}
               >
                 Аналоги
               </Memo(Text)>
-            </Link>
+            </ForwardRef(Link)>
           </div>
         </div>
       </div>

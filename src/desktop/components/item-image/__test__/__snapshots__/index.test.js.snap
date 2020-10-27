@@ -29,16 +29,16 @@ exports[`<ItemImage /> should render badges 1`] = `
     <div
       className="image-wrapper"
     >
-      <Link>
-        <span
-          className="link link-blue link-can-be-hovered"
+      <ForwardRef(Link)>
+        <a
+          className="link color__brand-blue"
         >
           <img
             className="image"
             onLoad={[Function]}
           />
-        </span>
-      </Link>
+        </a>
+      </ForwardRef(Link)>
     </div>
     <div
       className="badges"
@@ -133,12 +133,12 @@ exports[`<ItemImage /> should render selection button 1`] = `
   <div
     className="image-wrapper"
   >
-    <Link>
+    <ForwardRef(Link)>
       <img
         className="image"
         onLoad={[Function]}
       />
-    </Link>
+    </ForwardRef(Link)>
     <div
       className="selection-container"
     >
@@ -157,12 +157,12 @@ exports[`<ItemImage /> should render selection button 2`] = `
   <div
     className="image-wrapper"
   >
-    <Link>
+    <ForwardRef(Link)>
       <img
         className="image"
         onLoad={[Function]}
       />
-    </Link>
+    </ForwardRef(Link)>
     <div
       className="selection-container"
     >
@@ -189,16 +189,16 @@ exports[`<ItemImage /> should render wish 1`] = `
     <div
       className="image-wrapper"
     >
-      <Link>
-        <span
-          className="link link-blue link-can-be-hovered"
+      <ForwardRef(Link)>
+        <a
+          className="link color__brand-blue"
         >
           <img
             className="image"
             onLoad={[Function]}
           />
-        </span>
-      </Link>
+        </a>
+      </ForwardRef(Link)>
     </div>
   </div>
 </ItemImage>
@@ -219,16 +219,16 @@ exports[`<ItemImage /> should render wish 2`] = `
     <div
       className="image-wrapper"
     >
-      <Link>
-        <span
-          className="link link-blue link-can-be-hovered"
+      <ForwardRef(Link)>
+        <a
+          className="link color__brand-blue"
         >
           <img
             className="image"
             onLoad={[Function]}
           />
-        </span>
-      </Link>
+        </a>
+      </ForwardRef(Link)>
     </div>
     <WishButton
       isWished={true}
@@ -274,12 +274,12 @@ exports[`<ItemImage /> should render with trash cart button 1`] = `
   <div
     className="image-wrapper"
   >
-    <Link>
+    <ForwardRef(Link)>
       <img
         className="image"
         onLoad={[Function]}
       />
-    </Link>
+    </ForwardRef(Link)>
     <Icon
       className="test-trash-button"
       color="gray87"
@@ -298,12 +298,12 @@ exports[`<ItemImage /> should render with trash cart button 2`] = `
   <div
     className="image-wrapper"
   >
-    <Link>
+    <ForwardRef(Link)>
       <img
         className="image"
         onLoad={[Function]}
       />
-    </Link>
+    </ForwardRef(Link)>
     <Icon
       className="test-trash-button"
       color="gray87"
@@ -355,9 +355,9 @@ exports[`<ItemImage /> should render with withBlur prop 1`] = `
     <div
       className="image-wrapper"
     >
-      <Link>
-        <span
-          className="link link-blue link-can-be-hovered"
+      <ForwardRef(Link)>
+        <a
+          className="link color__brand-blue"
         >
           <div
             className="with-filter-blur"
@@ -367,8 +367,8 @@ exports[`<ItemImage /> should render with withBlur prop 1`] = `
               onLoad={[Function]}
             />
           </div>
-        </span>
-      </Link>
+        </a>
+      </ForwardRef(Link)>
     </div>
   </div>
 </ItemImage>
@@ -382,16 +382,16 @@ exports[`<ItemImage /> should render without props 1`] = `
     <div
       className="image-wrapper"
     >
-      <Link>
-        <span
-          className="link link-blue link-can-be-hovered"
+      <ForwardRef(Link)>
+        <a
+          className="link color__brand-blue"
         >
           <img
             className="image"
             onLoad={[Function]}
           />
-        </span>
-      </Link>
+        </a>
+      </ForwardRef(Link)>
     </div>
   </div>
 </ItemImage>

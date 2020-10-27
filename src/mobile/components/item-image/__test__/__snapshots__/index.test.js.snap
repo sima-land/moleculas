@@ -29,15 +29,15 @@ exports[`<ItemImage /> should render badges 1`] = `
     <div
       className="image-wrapper"
     >
-      <Link>
-        <span
-          className="link link-blue link-can-be-hovered"
+      <ForwardRef(Link)>
+        <a
+          className="link color__brand-blue"
         >
           <img
             className="image"
           />
-        </span>
-      </Link>
+        </a>
+      </ForwardRef(Link)>
     </div>
     <div
       className="badges"
@@ -135,15 +135,15 @@ exports[`<ItemImage /> should render wish 1`] = `
     <div
       className="image-wrapper"
     >
-      <Link>
-        <span
-          className="link link-blue link-can-be-hovered"
+      <ForwardRef(Link)>
+        <a
+          className="link color__brand-blue"
         >
           <img
             className="image"
           />
-        </span>
-      </Link>
+        </a>
+      </ForwardRef(Link)>
     </div>
     <WishButton
       size={24}
@@ -222,9 +222,9 @@ exports[`<ItemImage /> should render with withBlur prop 1`] = `
     <div
       className="image-wrapper"
     >
-      <Link>
-        <span
-          className="link link-blue link-can-be-hovered"
+      <ForwardRef(Link)>
+        <a
+          className="link color__brand-blue"
         >
           <div
             className="with-filter-blur"
@@ -233,8 +233,8 @@ exports[`<ItemImage /> should render with withBlur prop 1`] = `
               className="image"
             />
           </div>
-        </span>
-      </Link>
+        </a>
+      </ForwardRef(Link)>
     </div>
   </div>
 </ItemImage>
@@ -248,15 +248,15 @@ exports[`<ItemImage /> should render without props 1`] = `
     <div
       className="image-wrapper"
     >
-      <Link>
-        <span
-          className="link link-blue link-can-be-hovered"
+      <ForwardRef(Link)>
+        <a
+          className="link color__brand-blue"
         >
           <img
             className="image"
           />
-        </span>
-      </Link>
+        </a>
+      </ForwardRef(Link)>
     </div>
   </div>
 </ItemImage>

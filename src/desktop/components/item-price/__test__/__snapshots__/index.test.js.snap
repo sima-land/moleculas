@@ -25,7 +25,7 @@ exports[`<ItemPrice /> should render with props 1`] = `
       marginBottom={2}
     >
       <div
-        className="display-flex direction-column align-items-baseline justify-content-between margin-bottom__2"
+        className="display-flex direction-column align-items-baseline justify-content-between M-b__2"
       >
         <Box
           alignItems="start"
@@ -34,13 +34,13 @@ exports[`<ItemPrice /> should render with props 1`] = `
           marginRight={8}
         >
           <div
-            className="display-flex direction-column align-items-start margin-right__8"
+            className="display-flex direction-column align-items-start M-r__8"
           >
             <Box
               marginRight={2}
             >
               <div
-                className="margin-right__2"
+                className="M-r__2"
               >
                 <Memo(Text)
                   lineHeight={24}
@@ -72,7 +72,7 @@ exports[`<ItemPrice /> should render with props 1`] = `
                 size={12}
               >
                 <span
-                  className="size-12 color__gray38"
+                  className="size-12 line-height-16 color__gray38"
                 >
                   <Price
                     currencyGraphemeClass="currency-grapheme"
@@ -148,7 +148,7 @@ exports[`<ItemPrice /> should render without props 1`] = `
       marginBottom={0}
     >
       <div
-        className="display-flex direction-row align-items-baseline justify-content-between margin-bottom__0"
+        className="display-flex direction-row align-items-baseline justify-content-between M-b__0"
         style={
           Object {
             "maxWidth": "100%",
@@ -163,7 +163,7 @@ exports[`<ItemPrice /> should render without props 1`] = `
           marginRight={0}
         >
           <div
-            className="display-flex direction-row align-items-end margin-right__0"
+            className="display-flex direction-row align-items-end M-r__0"
           />
         </Box>
       </div>

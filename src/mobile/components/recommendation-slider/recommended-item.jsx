@@ -100,14 +100,13 @@ const RecommendedItem = ({
             value={price}
             currencyGrapheme={currencyGrapheme}
             className={cx('price')}
-            fractionalInSuper
+            fractionalSign=','
           />
           {Boolean(oldPrice) && (
             <Price
               value={oldPrice}
               currencyGrapheme={currencyGrapheme}
               className={cx('old-price')}
-              fractionalInSuper
               old
             />
           )}
