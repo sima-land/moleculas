@@ -12,7 +12,7 @@ exports[`<ItemRating /> should render with props 1`] = `
     marginTop={0}
   >
     <div
-      className="display-flex direction-row align-items-center margin-top__0"
+      className="display-flex direction-row align-items-center M-t__0"
     >
       <Rating
         value={2}
@@ -198,7 +198,7 @@ exports[`<ItemRating /> should render with props 1`] = `
         marginLeft={2}
       >
         <div
-          className="margin-left__2"
+          className="M-l__2"
           style={
             Object {
               "paddingBottom": "2px",
@@ -210,7 +210,7 @@ exports[`<ItemRating /> should render with props 1`] = `
             size={12}
           >
             <span
-              className="size-12 color__gray38"
+              className="size-12 line-height-16 color__gray38"
             >
               3
             </span>
@@ -231,7 +231,7 @@ exports[`<ItemRating /> should render without props 1`] = `
     marginTop={0}
   >
     <div
-      className="display-flex direction-row align-items-center margin-top__0"
+      className="display-flex direction-row align-items-center M-t__0"
     >
       <Rating
         value={0}

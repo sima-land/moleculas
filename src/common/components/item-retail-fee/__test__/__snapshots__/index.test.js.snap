@@ -15,7 +15,7 @@ exports[`<ItemRetailFee /> should render with props 1`] = `
       marginTop={4}
     >
       <div
-        className="margin-top__4"
+        className="M-t__4"
       >
         <Memo(Text)
           color="gray38"
@@ -66,7 +66,7 @@ exports[`<ItemRetailFee /> should render without props 1`] = `
       marginTop={4}
     >
       <div
-        className="margin-top__4"
+        className="M-t__4"
       >
         <Memo(Text)
           color="gray38"

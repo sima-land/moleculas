@@ -12,20 +12,20 @@ exports[`<AdultBlock /> should render with props 1`] = `
     marginTop={0}
   >
     <div
-      className="display-flex flex-grow direction-column margin-top__0"
+      className="display-flex flex-grow direction-column M-t__0"
     >
       <Box
         marginBottom={1}
       >
         <div
-          className="margin-bottom__1"
+          className="M-b__1"
         >
           <Memo(Text)
             size={16}
             weight={600}
           >
             <span
-              className="size-16 weight-600"
+              className="size-16 line-height-24 weight-600"
             >
               Товар для взрослых
             </span>
@@ -46,16 +46,19 @@ exports[`<AdultBlock /> should render with props 1`] = `
         marginTop={6}
       >
         <div
-          className="margin-top__6"
+          className="M-t__6"
         >
-          <Link
+          <ForwardRef(Link)
             onClick={[MockFunction]}
             pseudo={true}
             underlined={false}
           >
-            <span
-              className="link link-blue link-can-be-hovered"
+            <a
+              className="link color__brand-blue"
               onClick={[MockFunction]}
+              role="button"
+              tabIndex={0}
+              underlined={false}
             >
               <Memo(Text)
                 lineHeight={32}
@@ -68,8 +71,8 @@ exports[`<AdultBlock /> should render with props 1`] = `
                   Подтвердить
                 </span>
               </Memo(Text)>
-            </span>
-          </Link>
+            </a>
+          </ForwardRef(Link)>
         </div>
       </Box>
     </div>
@@ -86,20 +89,20 @@ exports[`<AdultBlock /> should render without props 1`] = `
     marginTop={0}
   >
     <div
-      className="display-flex flex-grow direction-column margin-top__0"
+      className="display-flex flex-grow direction-column M-t__0"
     >
       <Box
         marginBottom={1}
       >
         <div
-          className="margin-bottom__1"
+          className="M-b__1"
         >
           <Memo(Text)
             size={16}
             weight={600}
           >
             <span
-              className="size-16 weight-600"
+              className="size-16 line-height-24 weight-600"
             >
               Товар для взрослых
             </span>
@@ -120,14 +123,17 @@ exports[`<AdultBlock /> should render without props 1`] = `
         marginTop={6}
       >
         <div
-          className="margin-top__6"
+          className="M-t__6"
         >
-          <Link
+          <ForwardRef(Link)
             pseudo={true}
             underlined={false}
           >
-            <span
-              className="link link-blue link-can-be-hovered"
+            <a
+              className="link color__brand-blue"
+              role="button"
+              tabIndex={0}
+              underlined={false}
             >
               <Memo(Text)
                 lineHeight={32}
@@ -140,8 +146,8 @@ exports[`<AdultBlock /> should render without props 1`] = `
                   Авторизоваться
                 </span>
               </Memo(Text)>
-            </span>
-          </Link>
+            </a>
+          </ForwardRef(Link)>
         </div>
       </Box>
     </div>

@@ -27,7 +27,7 @@ exports[`<ItemPrice /> should render with props cards type 1`] = `
           marginRight={2}
         >
           <div
-            className="margin-right__2"
+            className="M-r__2"
           >
             <Memo(Text)
               color="gray87"
@@ -60,7 +60,7 @@ exports[`<ItemPrice /> should render with props cards type 1`] = `
             size={12}
           >
             <span
-              className="size-12 color__gray38"
+              className="size-12 line-height-16 color__gray38"
             >
               <Price
                 currencyGraphemeClass="currency-grapheme"
@@ -140,7 +140,7 @@ exports[`<ItemPrice /> should render with props list type 1`] = `
           marginRight={2}
         >
           <div
-            className="margin-right__2"
+            className="M-r__2"
           >
             <Memo(Text)
               color="gray87"
@@ -173,7 +173,7 @@ exports[`<ItemPrice /> should render with props list type 1`] = `
             size={12}
           >
             <span
-              className="size-12 color__gray38"
+              className="size-12 line-height-16 color__gray38"
             >
               <Price
                 currencyGraphemeClass="currency-grapheme"

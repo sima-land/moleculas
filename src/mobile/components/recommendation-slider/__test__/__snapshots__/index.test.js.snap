@@ -511,7 +511,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                 <Price
                                   className="price"
                                   currencyGrapheme="₽"
-                                  fractionalInSuper={true}
+                                  fractionalSign=","
                                   value={261}
                                 >
                                   <span
@@ -524,21 +524,22 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                   </span>
                                 </Price>
                               </div>
-                              <Link
+                              <ForwardRef(Link)
                                 className="link"
                                 color="black"
                                 disableHoverEffect={true}
                                 href=""
                                 onClick={[Function]}
                               >
-                                <span
-                                  className="link link link-black"
+                                <a
+                                  className="link link color__black"
+                                  disableHoverEffect={true}
                                   href=""
                                   onClick={[Function]}
                                 >
                                   Ножницы портновские, 19 см, цвет чёрный
-                                </span>
-                              </Link>
+                                </a>
+                              </ForwardRef(Link)>
                             </div>
                           </RecommendedItem>
                         </withGlobalListeners(RecommendedItem)>
@@ -580,7 +581,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                 <Price
                                   className="price"
                                   currencyGrapheme="₽"
-                                  fractionalInSuper={true}
+                                  fractionalSign=","
                                   value={322}
                                 >
                                   <span
@@ -593,21 +594,22 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                   </span>
                                 </Price>
                               </div>
-                              <Link
+                              <ForwardRef(Link)
                                 className="link"
                                 color="black"
                                 disableHoverEffect={true}
                                 href=""
                                 onClick={[Function]}
                               >
-                                <span
-                                  className="link link link-black"
+                                <a
+                                  className="link link color__black"
+                                  disableHoverEffect={true}
                                   href=""
                                   onClick={[Function]}
                                 >
                                   Ножницы портновские, 31 см, цвет чёрный/голубой
-                                </span>
-                              </Link>
+                                </a>
+                              </ForwardRef(Link)>
                             </div>
                           </RecommendedItem>
                         </withGlobalListeners(RecommendedItem)>
@@ -649,7 +651,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                 <Price
                                   className="price"
                                   currencyGrapheme="₽"
-                                  fractionalInSuper={true}
+                                  fractionalSign=","
                                   value={238}
                                 >
                                   <span
@@ -662,21 +664,22 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                   </span>
                                 </Price>
                               </div>
-                              <Link
+                              <ForwardRef(Link)
                                 className="link"
                                 color="black"
                                 disableHoverEffect={true}
                                 href=""
                                 onClick={[Function]}
                               >
-                                <span
-                                  className="link link link-black"
+                                <a
+                                  className="link link color__black"
+                                  disableHoverEffect={true}
                                   href=""
                                   onClick={[Function]}
                                 >
                                   Ножницы портновские, 21,5 см, цвет чёрный/голубой
-                                </span>
-                              </Link>
+                                </a>
+                              </ForwardRef(Link)>
                             </div>
                           </RecommendedItem>
                         </withGlobalListeners(RecommendedItem)>
@@ -718,7 +721,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                 <Price
                                   className="price"
                                   currencyGrapheme="₽"
-                                  fractionalInSuper={true}
+                                  fractionalSign=","
                                   value={171}
                                 >
                                   <span
@@ -731,21 +734,22 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                   </span>
                                 </Price>
                               </div>
-                              <Link
+                              <ForwardRef(Link)
                                 className="link"
                                 color="black"
                                 disableHoverEffect={true}
                                 href=""
                                 onClick={[Function]}
                               >
-                                <span
-                                  className="link link link-black"
+                                <a
+                                  className="link link color__black"
+                                  disableHoverEffect={true}
                                   href=""
                                   onClick={[Function]}
                                 >
                                   Ножницы портновские, 23 см, цвет МИКС
-                                </span>
-                              </Link>
+                                </a>
+                              </ForwardRef(Link)>
                             </div>
                           </RecommendedItem>
                         </withGlobalListeners(RecommendedItem)>
@@ -787,7 +791,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                 <Price
                                   className="price"
                                   currencyGrapheme="₽"
-                                  fractionalInSuper={true}
+                                  fractionalSign=","
                                   value={483}
                                 >
                                   <span
@@ -800,21 +804,22 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                   </span>
                                 </Price>
                               </div>
-                              <Link
+                              <ForwardRef(Link)
                                 className="link"
                                 color="black"
                                 disableHoverEffect={true}
                                 href=""
                                 onClick={[Function]}
                               >
-                                <span
-                                  className="link link link-black"
+                                <a
+                                  className="link link color__black"
+                                  disableHoverEffect={true}
                                   href=""
                                   onClick={[Function]}
                                 >
                                   Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный
-                                </span>
-                              </Link>
+                                </a>
+                              </ForwardRef(Link)>
                             </div>
                           </RecommendedItem>
                         </withGlobalListeners(RecommendedItem)>
@@ -856,7 +861,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                 <Price
                                   className="price"
                                   currencyGrapheme="₽"
-                                  fractionalInSuper={true}
+                                  fractionalSign=","
                                   value={988}
                                 >
                                   <span
@@ -869,21 +874,22 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                   </span>
                                 </Price>
                               </div>
-                              <Link
+                              <ForwardRef(Link)
                                 className="link"
                                 color="black"
                                 disableHoverEffect={true}
                                 href=""
                                 onClick={[Function]}
                               >
-                                <span
-                                  className="link link link-black"
+                                <a
+                                  className="link link color__black"
+                                  disableHoverEffect={true}
                                   href=""
                                   onClick={[Function]}
                                 >
                                   Ножницы портновские, 22,5 см, цвет чёрный
-                                </span>
-                              </Link>
+                                </a>
+                              </ForwardRef(Link)>
                             </div>
                           </RecommendedItem>
                         </withGlobalListeners(RecommendedItem)>
@@ -925,7 +931,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                 <Price
                                   className="price"
                                   currencyGrapheme="₽"
-                                  fractionalInSuper={true}
+                                  fractionalSign=","
                                   value={619}
                                 >
                                   <span
@@ -938,21 +944,22 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                   </span>
                                 </Price>
                               </div>
-                              <Link
+                              <ForwardRef(Link)
                                 className="link"
                                 color="black"
                                 disableHoverEffect={true}
                                 href=""
                                 onClick={[Function]}
                               >
-                                <span
-                                  className="link link link-black"
+                                <a
+                                  className="link link color__black"
+                                  disableHoverEffect={true}
                                   href=""
                                   onClick={[Function]}
                                 >
                                   Ножницы портновские, 22 см, цвет серебряный
-                                </span>
-                              </Link>
+                                </a>
+                              </ForwardRef(Link)>
                             </div>
                           </RecommendedItem>
                         </withGlobalListeners(RecommendedItem)>
@@ -994,7 +1001,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                 <Price
                                   className="price"
                                   currencyGrapheme="₽"
-                                  fractionalInSuper={true}
+                                  fractionalSign=","
                                   value={539}
                                 >
                                   <span
@@ -1009,7 +1016,6 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                 <Price
                                   className="old-price"
                                   currencyGrapheme="₽"
-                                  fractionalInSuper={true}
                                   old={true}
                                   value={595}
                                 >
@@ -1023,21 +1029,22 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                   </span>
                                 </Price>
                               </div>
-                              <Link
+                              <ForwardRef(Link)
                                 className="link"
                                 color="black"
                                 disableHoverEffect={true}
                                 href=""
                                 onClick={[Function]}
                               >
-                                <span
-                                  className="link link link-black"
+                                <a
+                                  className="link link color__black"
+                                  disableHoverEffect={true}
                                   href=""
                                   onClick={[Function]}
                                 >
                                   Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный
-                                </span>
-                              </Link>
+                                </a>
+                              </ForwardRef(Link)>
                             </div>
                           </RecommendedItem>
                         </withGlobalListeners(RecommendedItem)>
@@ -1079,7 +1086,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                 <Price
                                   className="price"
                                   currencyGrapheme="₽"
-                                  fractionalInSuper={true}
+                                  fractionalSign=","
                                   value={599}
                                 >
                                   <span
@@ -1094,7 +1101,6 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                 <Price
                                   className="old-price"
                                   currencyGrapheme="₽"
-                                  fractionalInSuper={true}
                                   old={true}
                                   value={717}
                                 >
@@ -1108,21 +1114,22 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                   </span>
                                 </Price>
                               </div>
-                              <Link
+                              <ForwardRef(Link)
                                 className="link"
                                 color="black"
                                 disableHoverEffect={true}
                                 href=""
                                 onClick={[Function]}
                               >
-                                <span
-                                  className="link link link-black"
+                                <a
+                                  className="link link color__black"
+                                  disableHoverEffect={true}
                                   href=""
                                   onClick={[Function]}
                                 >
                                   Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый
-                                </span>
-                              </Link>
+                                </a>
+                              </ForwardRef(Link)>
                             </div>
                           </RecommendedItem>
                         </withGlobalListeners(RecommendedItem)>
@@ -1164,7 +1171,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                 <Price
                                   className="price"
                                   currencyGrapheme="₽"
-                                  fractionalInSuper={true}
+                                  fractionalSign=","
                                   value={253}
                                 >
                                   <span
@@ -1177,21 +1184,22 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                                   </span>
                                 </Price>
                               </div>
-                              <Link
+                              <ForwardRef(Link)
                                 className="link"
                                 color="black"
                                 disableHoverEffect={true}
                                 href=""
                                 onClick={[Function]}
                               >
-                                <span
-                                  className="link link link-black"
+                                <a
+                                  className="link link color__black"
+                                  disableHoverEffect={true}
                                   href=""
                                   onClick={[Function]}
                                 >
                                   Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный
-                                </span>
-                              </Link>
+                                </a>
+                              </ForwardRef(Link)>
                             </div>
                           </RecommendedItem>
                         </withGlobalListeners(RecommendedItem)>
