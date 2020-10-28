@@ -8,7 +8,16 @@ describe('<ItemModifier />', () => {
     expect(wrapper).toMatchSnapshot();
   });
   it('should render with props', () => {
-    const wrapper = mount(<ItemModifier layout='block' title='Foo' count={32} withTitle />);
+    const wrapper = mount(
+      <ItemModifier
+        layout='block'
+        title='Foo'
+        count={32}
+        withTitle
+        id={1}
+        list={[...Array(7).keys()].map(index => ({ id: `${index}` }))}
+      />
+    );
     expect(wrapper).toMatchSnapshot();
     wrapper.setProps({ layout: 'inline' });
     expect(wrapper).toMatchSnapshot();

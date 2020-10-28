@@ -25,7 +25,7 @@ const ModifierSelect = ({
   name,
   className,
   color,
-  img,
+  image,
   onClick,
 }) => (
   <div
@@ -35,13 +35,13 @@ const ModifierSelect = ({
     onClick={onClick}
     onKeyDown={e => isFunction(onClick) && e.keyCode === 13 && onClick()}
   >
-    {(color || img) && (
+    {(color || image) && (
       <div className={cx('adornment')}>
         {color
           ? (
             <div className={cx('color')} style={{ backgroundColor: color }} />
           ) : (
-            <img src={img} width={32} height={32} alt='' />
+            <img src={image} width={32} height={32} alt='' />
           )
         }
       </div>

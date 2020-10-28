@@ -12,7 +12,7 @@ describe('<Flag />', () => {
   });
 
   describe('with bgColor', function () {
-    const flag = shallow(<Flag bgColor='blue' />);
+    const flag = shallow(<Flag textColor='blue' />);
 
     it('renders correctly', () => {
       expect(flag).toMatchSnapshot();

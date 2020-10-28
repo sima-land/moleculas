@@ -41,10 +41,8 @@ exports[`<ItemRetailFee /> should render with props 1`] = `
                 </span>
               </Price>
             </span>
-            <span
-              className="no-wrap"
-            >
-              при покупке до 
+            <span>
+              при покупке до 
               20
                
               R

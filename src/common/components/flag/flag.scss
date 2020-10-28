@@ -13,6 +13,9 @@ $flagDefaultTimeColor: #99a5b4;
   font-weight: 600;
   line-height: 15px;
   padding: 4px;
+  &.discount {
+    padding: 1px 4px;
+  }
   &:not(.wrap-icon) {
     color: $flagDefaultColor;
     fill: $flagDefaultFill;

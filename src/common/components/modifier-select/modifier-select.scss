@@ -26,6 +26,9 @@
   flex-grow: 1;
   text-overflow: ellipsis;
   margin-left: 8px;
+  &::first-letter {
+    text-transform: uppercase;
+  }
 }
 
 .adornment {
