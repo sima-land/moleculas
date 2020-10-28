@@ -101,11 +101,6 @@ exports[`<ListItem /> should render with all props 1`] = `
         value={4.8}
       />
     </div>
-    <Icon
-      className="actions"
-      icon={[Function]}
-      size={24}
-    />
   </Box>
 </div>
 `;
@@ -263,11 +258,6 @@ exports[`<ListItem /> should render with all props 2`] = `
         for 2 pcs
       </div>
     </div>
-    <Icon
-      className="actions"
-      icon={[Function]}
-      size={24}
-    />
   </Box>
 </div>
 `;
@@ -430,11 +420,6 @@ exports[`<ListItem /> should render with all props 3`] = `
         for 2 pcs
       </div>
     </div>
-    <Icon
-      className="actions"
-      icon={[Function]}
-      size={24}
-    />
   </Box>
 </div>
 `;
@@ -598,365 +583,6 @@ exports[`<ListItem /> should render with all props 4`] = `
         for 2 pcs
       </div>
     </div>
-    <Icon
-      className="actions"
-      icon={[Function]}
-      size={24}
-    />
-  </Box>
-</div>
-`;
-
-exports[`<ListItem /> should render with all props 5`] = `
-<div
-  className="wrapper-row test-wrapper-class"
->
-  <Box
-    alignItems="stretch"
-    direction="row"
-    display="flex"
-    flex="grow"
-  >
-    <div
-      className="image-box-row"
-    >
-      <ItemImage
-        alt="Foo"
-        badges={
-          Array [
-            Object {
-              "bgColor": "#66cb2f",
-              "definitions": Object {
-                "label": Object {
-                  "type": "text",
-                  "value": "Новинка",
-                },
-              },
-              "fields": Array [
-                "label",
-              ],
-              "link": "/new/",
-              "strokeColor": null,
-              "textColor": "#f2f2f2",
-              "title": null,
-            },
-          ]
-        }
-        className="row"
-        itemUrl="#"
-        src="cdn-url"
-        wishProps={
-          Object {
-            "className": "wish is-wished",
-            "isWished": true,
-            "onClick": undefined,
-            "pos": "left",
-          }
-        }
-      />
-    </div>
-    <div
-      className="info-box row"
-    >
-      <div
-        className="prices"
-      >
-        <ItemPrice
-          currencyGrapheme="$"
-          price={4999}
-          viewType="row"
-          wholesaleProps={
-            Object {
-              "description": "foo",
-              "price": 1000,
-            }
-          }
-        />
-      </div>
-      <div
-        className="title-wrapper row"
-      >
-        <ItemName
-          href="#"
-          name="Foo"
-        />
-      </div>
-      <ItemRating
-        marginTop={2}
-        reviewsCount={55}
-        value={4.8}
-      />
-      <Box
-        marginTop={2}
-      >
-        <ItemProperties
-          color="gray87"
-          lineHeight={16}
-          size={12}
-          specClassName="detail"
-          values={
-            Array [
-              Object {
-                "href": "#",
-                "value": "China",
-              },
-            ]
-          }
-        />
-      </Box>
-      <Box
-        marginTop={2}
-      >
-        <Memo(Text)
-          color="gray87"
-          lineHeight={16}
-          size={12}
-        >
-          Доставим 11 августа
-        </Memo(Text)>
-      </Box>
-      <Box
-        marginTop={2}
-      >
-        <Memo(Text)
-          color="gray87"
-          lineHeight={16}
-          size={12}
-        >
-          Артикул: 
-          10000
-        </Memo(Text)>
-      </Box>
-      <Box
-        marginTop={4}
-      >
-        <span
-          className="in-stock"
-        >
-          test
-        </span>
-      </Box>
-      <ItemModifier
-        count={55}
-        layout="inline"
-        name="baz"
-        title="foo"
-      />
-      <ItemRetailFee
-        currencyGrapheme="$"
-        isFixed={true}
-        isSmaller={true}
-        marginTop={2}
-        minQty={10}
-        price={50}
-      />
-      <div
-        className="in-cart-input-wrapper"
-      >
-        <span
-          className="in-cart-value"
-        >
-          2
-        </span>
-        <span
-          className="step-arrows"
-        >
-          <Icon
-            color="black"
-            icon={[Function]}
-            role="button"
-            size={14}
-          />
-        </span>
-      </div>
-      <div
-        className="min-quantity"
-      >
-        for 2 pcs
-      </div>
-    </div>
-    <Icon
-      className="actions"
-      icon={[Function]}
-      size={24}
-    />
-  </Box>
-</div>
-`;
-
-exports[`<ListItem /> should render with all props 6`] = `
-<div
-  className="wrapper-row test-wrapper-class"
->
-  <Box
-    alignItems="stretch"
-    direction="row"
-    display="flex"
-    flex="grow"
-  >
-    <div
-      className="image-box-row"
-    >
-      <ItemImage
-        alt="Foo"
-        badges={
-          Array [
-            Object {
-              "bgColor": "#66cb2f",
-              "definitions": Object {
-                "label": Object {
-                  "type": "text",
-                  "value": "Новинка",
-                },
-              },
-              "fields": Array [
-                "label",
-              ],
-              "link": "/new/",
-              "strokeColor": null,
-              "textColor": "#f2f2f2",
-              "title": null,
-            },
-          ]
-        }
-        className="row"
-        itemUrl="#"
-        src="cdn-url"
-        wishProps={
-          Object {
-            "className": "wish is-wished",
-            "isWished": true,
-            "onClick": undefined,
-            "pos": "left",
-          }
-        }
-      />
-    </div>
-    <div
-      className="info-box row"
-    >
-      <div
-        className="prices"
-      >
-        <ItemPrice
-          currencyGrapheme="$"
-          price={4999}
-          viewType="row"
-          wholesaleProps={
-            Object {
-              "description": "foo",
-              "price": 1000,
-            }
-          }
-        />
-      </div>
-      <div
-        className="title-wrapper row"
-      >
-        <ItemName
-          href="#"
-          name="Foo"
-        />
-      </div>
-      <ItemRating
-        marginTop={2}
-        reviewsCount={55}
-        value={4.8}
-      />
-      <Box
-        marginTop={2}
-      >
-        <ItemProperties
-          color="gray87"
-          lineHeight={16}
-          size={12}
-          specClassName="detail"
-          values={
-            Array [
-              Object {
-                "href": "#",
-                "value": "China",
-              },
-            ]
-          }
-        />
-      </Box>
-      <Box
-        marginTop={2}
-      >
-        <Memo(Text)
-          color="gray87"
-          lineHeight={16}
-          size={12}
-        >
-          Доставим 11 августа
-        </Memo(Text)>
-      </Box>
-      <Box
-        marginTop={2}
-      >
-        <Memo(Text)
-          color="gray87"
-          lineHeight={16}
-          size={12}
-        >
-          Артикул: 
-          10000
-        </Memo(Text)>
-      </Box>
-      <Box
-        marginTop={4}
-      >
-        <span
-          className="in-stock gray"
-        >
-          test
-        </span>
-      </Box>
-      <ItemModifier
-        count={55}
-        layout="inline"
-        name="baz"
-        title="foo"
-      />
-      <ItemRetailFee
-        currencyGrapheme="$"
-        isFixed={true}
-        isSmaller={true}
-        marginTop={2}
-        minQty={10}
-        price={50}
-      />
-      <div
-        className="in-cart-input-wrapper"
-      >
-        <span
-          className="in-cart-value"
-        >
-          2
-        </span>
-        <span
-          className="step-arrows"
-        >
-          <Icon
-            color="black"
-            icon={[Function]}
-            role="button"
-            size={14}
-          />
-        </span>
-      </div>
-      <div
-        className="min-quantity"
-      >
-        for 2 pcs
-      </div>
-    </div>
-    <Icon
-      className="actions"
-      icon={[Function]}
-      size={24}
-    />
   </Box>
 </div>
 `;
@@ -992,11 +618,6 @@ exports[`<ListItem /> should render with shouldHideAdultContent prop 1`] = `
     <AdultBlock
       marginTop={0}
     />
-    <Icon
-      className="actions"
-      icon={[Function]}
-      size={24}
-    />
   </Box>
 </div>
 `;
@@ -1031,11 +652,6 @@ exports[`<ListItem /> should render with shouldHideAdultContent prop 2`] = `
     </div>
     <AdultBlock
       marginTop={0}
-    />
-    <Icon
-      className="actions"
-      icon={[Function]}
-      size={24}
     />
   </Box>
 </div>
@@ -1088,11 +704,6 @@ exports[`<ListItem /> should render without props 1`] = `
         </div>
       </div>
     </div>
-    <Icon
-      className="actions"
-      icon={[Function]}
-      size={24}
-    />
   </Box>
 </div>
 `;

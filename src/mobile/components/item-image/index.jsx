@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component, createRef } from 'react';
 import Icon from '@dev-dep/ui-nucleons/icon';
 import Link from '@dev-dep/ui-nucleons/link';
+import isFunction from 'lodash/isFunction';
 import style from './item-image.scss';
 import classnames from 'classnames/bind';
 import FlagsList from '../../../common/components/flags-list';
@@ -30,69 +31,96 @@ const cx = classnames.bind(style);
  * @param {boolean} props.isFetchingWishItems Признак загрузки добавления товара в список избранного.
  * @return {ReactElement} Компонент изображения.
  */
-export const ItemImage = ({
-  src,
-  alt,
-  wishProps,
-  className,
-  onClick,
-  badges,
-  withBlur,
-  itemUrl,
-  isFetchingWishItems,
-}) => (
-  <div className={cx('wrapper', className)}>
-    {withBlur && (
-      <div className={cx('with-blur')}>
-        <Icon icon={EighteenPlus} size={124} />
-      </div>
-    )}
-    <div className={cx('image-wrapper')}>
-      <Link href={itemUrl}>
-        {withBlur
-          ? (<div className={cx('with-filter-blur')} children={getImage({ src, alt }, onClick)} />)
-          : getImage({ src, alt }, onClick)
-        }
-      </Link>
-    </div>
-    {Array.isArray(badges) && Boolean(badges.length) && !withBlur && (
-      <div className={cx('badges')}>
-        <FlagsList
-          flags={badges}
-        />
-      </div>
-    )}
-    {Boolean(wishProps) && !withBlur && (
-      <WishButton
-        isWished={wishProps.isWished}
-        className={wishProps.className}
-        onClick={wishProps.onClick}
-        pos={wishProps.pos}
-        isFetchingWishItems={isFetchingWishItems}
-        size={24}
-      />
-    )}
-  </div>
-);
+export default class ItemImage extends Component {
+  /**
+   * @inheritdoc
+   */
+  constructor (props) {
+    super(props);
+    this.image = createRef();
+    this.bootStartTime = Date.now();
+  }
 
-/**
- * Возвращает фото.
- * @param {Object} image Данные изображения.
- * @param {string} image.src Url изображения.
- * @param {string} image.alt Alt изображения.
- * @param {Function} onClick Колбэк на клик по изображению.
- * @return {Object} Свойства для компонента.
- */
-const getImage = ({
-  src,
-  alt,
-}, onClick) => (
-  <img
-    className={cx('image')}
-    src={src}
-    alt={alt}
-    onClick={onClick}
-  />
-);
+  /**
+   * @inheritdoc
+   */
+  componentDidMount () {
+    const img = this.image.current;
+    const { onLoadImage } = this.props;
+    if (img && img.complete && isFunction(onLoadImage)) {
+      onLoadImage(Date.now() - this.bootStartTime);
+    }
+  }
 
-export default ItemImage;
+  /**
+   * Возвращает фото.
+   * @param {Object} image Данные изображения.
+   * @param {string} image.src Url изображения.
+   * @param {string} image.alt Alt изображения.
+   * @param {Function} onClick Колбэк на клик по изображению.
+   * @return {Object} Свойства для компонента.
+   */
+  getImage = ({
+    src,
+    alt,
+  }, onClick) => (
+    <img
+      className={cx('image')}
+      src={src}
+      alt={alt}
+      ref={this.image}
+      onClick={onClick}
+    />
+  );
+
+  /**
+   * @inheritdoc
+   */
+  render () {
+    const {
+      src,
+      alt,
+      wishProps,
+      className,
+      onClick,
+      badges,
+      withBlur,
+      itemUrl,
+      isFetchingWishItems,
+    } = this.props;
+    return (
+      <div className={cx('wrapper', className)}>
+        {withBlur && (
+          <div className={cx('with-blur')}>
+            <Icon icon={EighteenPlus} size={124} />
+          </div>
+        )}
+        <div className={cx('image-wrapper')}>
+          <Link href={itemUrl}>
+            {withBlur
+              ? (<div className={cx('with-filter-blur')} children={this.getImage({ src, alt }, onClick)} />)
+              : this.getImage({ src, alt }, onClick)
+            }
+          </Link>
+        </div>
+        {Array.isArray(badges) && Boolean(badges.length) && !withBlur && (
+          <div className={cx('badges')}>
+            <FlagsList
+              flags={badges}
+            />
+          </div>
+        )}
+        {Boolean(wishProps) && !withBlur && (
+          <WishButton
+            isWished={wishProps.isWished}
+            className={wishProps.className}
+            onClick={wishProps.onClick}
+            pos={wishProps.pos}
+            isFetchingWishItems={isFetchingWishItems}
+            size={24}
+          />
+        )}
+      </div>
+    );
+  }
+}

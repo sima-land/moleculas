@@ -2,6 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { WholesaleText } from '../wholesale-text';
 import { cutTextContent } from '../../helpers/cut-text-content';
+import debounce from 'lodash/debounce';
 
 jest.mock('lodash/debounce', () => jest.fn(fn => fn));
 
@@ -40,6 +41,7 @@ describe('<WholesaleText />', () => {
     cutTextContent.mockClear();
     expect(cutTextContent).toHaveBeenCalledTimes(0);
 
+    expect(debounce).toHaveBeenCalled();
     expect(addGlobalListener).toHaveBeenCalledTimes(1);
     expect(addGlobalListener.mock.calls[0][0]).toEqual('resize');
     const callback = addGlobalListener.mock.calls[0][1];

@@ -1,27 +1,27 @@
-import React from 'react';
-import classnames from 'classnames/bind';
+import React, { useEffect, useRef } from 'react';
+import isFunction from 'lodash/isFunction';
 import isEmpty from 'lodash/isEmpty';
+import style from './list-item.scss';
+import classnames from 'classnames/bind';
+import Text from '@dev-dep/ui-nucleons/text';
+import Box from '@dev-dep/ui-nucleons/box';
+import ItemProperties from '../../../common/components/item-properties';
+import ItemImage from '../item-image';
+import ItemName from '../../../common/components/item-name';
+import ItemRating from '../item-rating';
+import ItemRetailFee from '../../../common/components/item-retail-fee';
+import ItemPrice from '../item-price';
+import ItemModifier from '../../../common/components/item-modifier';
 import isUndefined from 'lodash/isUndefined';
-
+import AdultBlock from '../../../common/components/adult-block/adult-block';
 import getDeclination from '@dev-dep/ui-nucleons/helpers/get-declination';
 import Button from '@dev-dep/ui-nucleons/button';
 import Icon from '@dev-dep/ui-nucleons/icon';
 import Link from '@dev-dep/ui-nucleons/link';
-import Text from '@dev-dep/ui-nucleons/text';
-import Box from '@dev-dep/ui-nucleons/box';
-
-import ItemProperties from '../../../common/components/item-properties';
-import ItemName from '../../../common/components/item-name';
-import ItemRetailFee from '../../../common/components/item-retail-fee';
-import ItemModifier from '../../../common/components/item-modifier';
-import AdultBlock from '../../../common/components/adult-block/adult-block';
 import spinnerIcon from '../../../common/icons/white-spinner.svg';
 import stepArrows from '../../../common/icons/step-arrows.svg';
-import tripleDots from '../../../common/icons/triple-dots.svg';
-import style from './list-item.scss';
-import ItemImage from '../item-image';
-import ItemRating from '../item-rating';
-import ItemPrice from '../item-price';
+import withInViewportObserver from '@dev-dep/ui-nucleons/with-in-viewport-observer';
+import withGlobalListeners from '@dev-dep/ui-nucleons/hoc/with-global-listeners';
 import Types from 'prop-types';
 
 const cx = classnames.bind(style);
@@ -45,7 +45,7 @@ const optionsDeclinations = Object.freeze([
  * @property {string} name Название товара.
  * @property {number} price Текущая цена.
  * @property {number} priceMax Старая цена.
- * @property {import('../../../common/components/item-properties').ItemProperty[]} [properties] Характеристики товара.
+ * @property {import('common/components/item-properties').ItemProperty[]} [properties] Характеристики товара.
  * @property {string} [qtyRule] Правило для добавления в корзину.
  * @property {number} [rating] Оценка.
  * @property {number} [reviewsCount] Количество отзывов.
@@ -55,9 +55,12 @@ const optionsDeclinations = Object.freeze([
  * @property {Function} [onWishClick] Обработчик нажатия на избранное.
  * @property {Function} [onImageClick] Обработчик нажатия на картинку товара.
  * @property {Function} [onModifierClick] Обработчик нажатия селектора модификатора.
+ * @property {Function} [onQuickViewClick] Обработчик нажатия на кнопку быстрого просмотра.
+ * @property {Function} [addToCartHandler] Обработчик действий с корзиной.
  * @property {Function} [onCartClick] Обработчик нажатия на кнопку "В корзину".
  * @property {string} [wrapperClassName] Класс для обертки.
  * @property {boolean} [asTile] Тип отображения компонента - tile (иначе list).
+ * @property {Function} addObserveWithMargin Функция подписки на Intersection Observer.
  * @property {Function} onAdultClick Обработчик нажатия на ссылку в блоке 18+.
  */
 
@@ -74,7 +77,6 @@ export const ListItem = ({
   onModifierClick,
   onWishClick,
   onDetailsClick,
-  onActionsClick,
 
   // Свойства дочерних компонентов
   wholesaleProps,
@@ -108,26 +110,31 @@ export const ListItem = ({
   qty,
   id,
   additionStepText,
-  inStockProps,
-
-  // Пропы кастомизации
-  hasAddToCartBlock = true,
-  hasWishButton = true,
-  hasSid = true,
-  hasActionsButton = true,
-  nameTextProps,
+  updateItemViewed,
+  addObserveWithMargin,
+  onLoadImage,
 }) => {
   const direction = asTile ? 'column' : 'row';
   const adultMarginTop = 0;
+  const wrapRef = useRef();
+
+  useEffect(() => {
+    isFunction(addObserveWithMargin)
+    && wrapRef.current
+    && addObserveWithMargin(wrapRef.current, () => {
+      updateItemViewed(sid);
+    });
+  }, [wrapRef.current]);
+
   return (
-    <div className={cx(`wrapper-${direction}`, wrapperClassName)}>
+    <div className={cx(`wrapper-${direction}`, wrapperClassName)} ref={wrapRef}>
       <Box display='flex' direction={direction} alignItems='stretch' flex='grow'>
         <div className={cx(`image-box-${direction}`)}>
           <ItemImage
             src={image}
             alt={name}
             onClick={onImageClick}
-            wishProps={hasWishButton && {
+            wishProps={{
               className: cx('wish', isWished && 'is-wished'),
               onClick: onWishClick,
               pos: 'left',
@@ -138,6 +145,7 @@ export const ListItem = ({
             itemUrl={itemUrl}
             isFetchingWishItems={isFetchingWishItems}
             badges={badges}
+            onLoadImage={onLoadImage}
           />
         </div>
         {shouldHideAdultContent && (
@@ -166,7 +174,7 @@ export const ListItem = ({
             </div>
             {Boolean(name) && (
               <div className={cx('title-wrapper', !asTile && 'row')}>
-                <ItemName name={name} href={itemUrl} nameTextProps={nameTextProps} />
+                <ItemName name={name} href={itemUrl} />
               </div>
             )}
             {Boolean(modifierProps) && asTile && (
@@ -204,19 +212,11 @@ export const ListItem = ({
                 />
               </Box>
             )}
-            {hasSid && Boolean(sid) && !asTile && (
+            {Boolean(sid) && !asTile && (
               <Box marginTop={2}>
                 <Text color='gray87' size={12} lineHeight={16}>
-                  Артикул: {sid}
+                     Артикул: {sid}
                 </Text>
-              </Box>
-            )}
-            {Boolean(inStockProps) && (
-              <Box marginTop={4}>
-                <span
-                  className={cx('in-stock', inStockProps.isGray && 'gray')}
-                  children={inStockProps.text}
-                />
               </Box>
             )}
             {Boolean(modifierProps) && !asTile && (
@@ -237,64 +237,63 @@ export const ListItem = ({
                 isSmaller
               />
             )}
-            {hasAddToCartBlock && (
-              <>
-                {!asTile && isUndefined(displayedQuantity) && (
-                  <div className={cx('add-to-cart')}>
-                    <div className={cx('cell')}>
-                      <Button
-                        className={cx('cart-button')}
-                        onClick={onCartButtonClick}
-                      >
-                        {isCartFetching
-                          ? (
-                            <Icon
-                              className={cx('button-spinner')}
-                              icon={spinnerIcon}
-                              size={24}
-                              viewBox='0 0 24 24'
-                            />
-                          )
-                          : <>В&nbsp;корзину</>
-                        }
-                      </Button>
-                    </div>
-                  </div>
-                )}
-                {!asTile && !isUndefined(displayedQuantity) && (
-                  <div
-                    onClick={onCartInputClick}
-                    className={cx('in-cart-input-wrapper')}
+            {!asTile && isUndefined(displayedQuantity) && (
+              <div className={cx('add-to-cart')}>
+                <div className={cx('cell')}>
+                  <Button
+                    className={cx('cart-button')}
+                    onClick={onCartButtonClick}
                   >
-                    <span className={cx('in-cart-value')}>{displayedQuantity}</span>
-                    <span className={cx('step-arrows')}>
-                      <Icon
-                        icon={stepArrows}
-                        size={14}
-                        color='black'
-                        role='button'
-                      />
-                    </span>
-                  </div>
-                )}
-                {!asTile && Boolean(additionStepText) && (
-                  <div className={cx('min-quantity')}>
-                    {additionStepText}
-                  </div>
-                )}
-              </>
+                    {isCartFetching
+                      ? (
+                        <Icon
+                          className={cx('button-spinner')}
+                          icon={spinnerIcon}
+                          size={24}
+                          viewBox='0 0 24 24'
+                        />
+                      )
+                      : <>В&nbsp;корзину</>
+                    }
+                  </Button>
+                </div>
+              </div>
+            )}
+            {!asTile && !isUndefined(displayedQuantity) && (
+              <div
+                onClick={onCartInputClick}
+                className={cx('in-cart-input-wrapper')}
+              >
+                <span className={cx('in-cart-value')}>{displayedQuantity}</span>
+                <span className={cx('step-arrows')}>
+                  <Icon
+                    icon={stepArrows}
+                    size={14}
+                    color='black'
+                    role='button'
+                  />
+                </span>
+              </div>
+            )}
+            {!asTile && Boolean(additionStepText) && (
+              <div className={cx('min-quantity')}>
+                {additionStepText}
+              </div>
             )}
           </div>
-        )}
-        {hasActionsButton && (
-          <Icon size={24} icon={tripleDots} onClick={onActionsClick} className={cx('actions')} />
         )}
       </Box>
     </div>
   );
 };
 
-export default ListItem;
+export default withInViewportObserver(
+  withGlobalListeners(ListItem),
+  {
+    rootMargin: '100px 0px 100px 0px',
+  },
+  'addObserveWithMargin'
+);
 
 ListItem.propTypes = {
   /**

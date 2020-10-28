@@ -76,10 +76,6 @@ describe('<ListItem />', () => {
     expect(wrapper).toMatchSnapshot();
     wrapper.setProps({ isCartFetching: false, displayedQuantity: 2 });
     expect(wrapper).toMatchSnapshot();
-    wrapper.setProps({ inStockProps: { text: 'test' } });
-    expect(wrapper).toMatchSnapshot();
-    wrapper.setProps({ inStockProps: { text: 'test', isGray: true } });
-    expect(wrapper).toMatchSnapshot();
   });
   it('should render with shouldHideAdultContent prop', () => {
     const wrapper = shallow(<ListItem shouldHideAdultContent />);
@@ -109,6 +105,42 @@ describe('<ListItem />', () => {
     );
     act(() => {
       wrapper.find('.in-cart-input-wrapper').prop('onClick')();
+    });
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('should call updateItemViewed whole component when intersectionObserver triggers event', () => {
+    const spy = jest.fn();
+    const intersectionObserverMock = {
+      /**
+       * Функция подписки на Intersection Observer.
+       * @param {Function} fn Функция, которая будет вызвана,
+       * когда элемент окажется в зоне видимости.
+       */
+      addObserve (fn) {
+        this.fn = fn;
+      },
+
+      /**
+       * Иммитирует появление элемента в зоне видимости.
+       */
+      trigger () {
+        this.fn();
+      },
+    };
+
+    mount(
+      <ListItem
+        shouldLoadLazy
+        addObserveWithMargin={(el, fn) => intersectionObserverMock.addObserve(fn)}
+        updateItemViewed={spy}
+        getItemWidth={() => {}}
+        addGlobalListener={() => {}}
+      />
+    );
+    expect(spy).not.toHaveBeenCalled();
+    act(() => {
+      intersectionObserverMock.trigger();
     });
     expect(spy).toHaveBeenCalled();
   });
