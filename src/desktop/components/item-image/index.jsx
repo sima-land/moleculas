@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { Component, createRef } from 'react';
 import Icon from '@dev-dep/ui-nucleons/icon';
 import Link from '@dev-dep/ui-nucleons/link';
-import style from './item-image.scss';
 import classnames from 'classnames/bind';
+import isFunction from 'lodash/isFunction';
+import style from './item-image.scss';
 import FlagsList from '../../../common/components/flags-list';
-import ItemQuickViewButton from '../../../common/components/item-quick-view-button';
 import EighteenPlus from '../../../common/icons/eighteen-plus.svg';
-import SelectedIcon from '../../../common/icons/selected.svg';
 import WishButton from '../../../common/components/wish-button';
+import QuickViewButton from '../../../common/components/quick-view-button';
 import blackTrashCart from '../../../common/icons/trash-cart.svg';
 
 const cx = classnames.bind(style);
@@ -49,105 +49,148 @@ const cx = classnames.bind(style);
  * @param {TrashButtonProps} [props.trashButtonProps] Свойства для кнопки удаления товара.
  * @return {ReactElement} Компонент изображения.
  */
-export const ItemImage = ({
-  src,
-  alt,
-  wishProps,
-  className,
-  onClick,
-  badges,
-  quickViewBtnProps = {},
-  onLoadImage,
-  withBlur,
-  itemUrl,
-  isFetchingWishItems,
-  selectionProps,
-  hasQuickPreview,
-  hasSelectionButton,
-  hasWishButton,
-  hasTrashButton,
-  trashButtonProps,
-}) => (
-  <div className={cx('wrapper', className)}>
-    {withBlur && (
-      <div className={cx('with-blur')}>
-        <Icon icon={EighteenPlus} size={124} />
-      </div>
-    )}
-    <div className={cx('image-wrapper')}>
-      <Link href={itemUrl}>
-        {withBlur
-          ? (<div className={cx('with-filter-blur')} children={getImage({ src, alt }, onClick, onLoadImage)} />)
-          : getImage({ src, alt }, onClick, onLoadImage)
-        }
-      </Link>
-      {hasTrashButton && (
-        <Icon
-          icon={blackTrashCart}
-          size={20}
-          color='gray87'
-          className={trashButtonProps.className}
-          onClick={trashButtonProps.onClick}
-        />
-      )}
-      {hasSelectionButton && Boolean(selectionProps) && (
-        <div onClick={selectionProps.onSelect} className={cx('selection-container')}>
-          <div className={cx('selection-circle')}>
-            {selectionProps.isSelected && (
-              <Icon icon={SelectedIcon} size={56} />
-            )}
-          </div>
-        </div>
-      )}
-      {hasQuickPreview && (
-        <ItemQuickViewButton
-          onClick={quickViewBtnProps.onClick}
-          additionalClassName={quickViewBtnProps.className}
-        />
-      )}
-    </div>
-    {Array.isArray(badges) && Boolean(badges.length) && (
-      <div className={cx('badges')}>
-        <FlagsList
-          flags={badges}
-        />
-      </div>
-    )}
-    {hasWishButton && Boolean(wishProps) && (
-      <WishButton
-        isWished={wishProps.isWished}
-        className={wishProps.className}
-        onClick={wishProps.onClick}
-        pos={wishProps.pos}
-        isFetchingWishItems={isFetchingWishItems}
-      />
-    )}
-  </div>
-);
+export default class ItemImage extends Component {
+  /**
+   * @inheritdoc
+   */
+  constructor (props) {
+    super(props);
+    this.state = {
+      currentPhotoIndex: null,
+    };
+    this.image = createRef();
+    this.imageWrapper = createRef();
+    this.bootStartTime = Date.now();
+  }
 
-/**
- * Возвращает фото с подсчетом времени загрузки.
- * @param {Object} image Данные изображения.
- * @param {string} image.src Url изображения.
- * @param {string} image.alt Alt изображения.
- * @param {Function} onClick Колбэк на клик по изображению.
- * @param {Function} onLoadImage Колбэк на загрузку изображения.
- * @return {Object} Свойства для компонента.
- */
-const getImage = ({
-  src,
-  alt,
-}, onClick, onLoadImage) => {
-  const bootStartTime = Date.now();
-  return (
+  /**
+   * @inheritdoc
+   */
+  componentDidMount () {
+    const img = this.image.current;
+    const { onLoadImage } = this.props;
+    if (img && img.complete && isFunction(onLoadImage)) {
+      onLoadImage(Date.now() - this.bootStartTime);
+    }
+  }
+
+  /**
+   * Возвращает фото.
+   * @param {Object} image Данные изображения.
+   * @param {string} image.src Url изображения.
+   * @param {string} image.alt Alt изображения.
+   * @param {Function} onClick Колбэк на клик по изображению.
+   * @return {Object} Свойства для компонента.
+   */
+  getImage = ({
+    src,
+    alt,
+  }, onClick) => (
     <img
       className={cx('image')}
       src={src}
       alt={alt}
+      ref={this.image}
       onClick={onClick}
-      onLoad={() => onLoadImage(Date.now() - bootStartTime)}
     />
   );
-};
 
-export default ItemImage;
+  /**
+   * @inheritdoc
+   */
+  render () {
+    const {
+      alt,
+      wishProps,
+      className,
+      onClick,
+      badges,
+      quickViewBtnProps = {},
+      withBlur,
+      itemUrl,
+      isFetchingWishItems,
+      photos = [],
+      fakeDivClassName,
+      buttonsPos,
+      src,
+      hasTrashButton,
+      trashButtonProps,
+    } = this.props;
+    const { currentPhotoIndex } = this.state;
+    const currentPhoto = currentPhotoIndex === null ? src : photos[currentPhotoIndex];
+    return (
+      <div
+        className={cx('wrapper', className)}
+        ref={this.imageWrapper}
+        onMouseLeave={() => this.setState({ currentPhotoIndex: null })}
+      >
+        {withBlur && (
+          <div className={cx('with-blur')}>
+            <Icon icon={EighteenPlus} size={124} />
+          </div>
+        )}
+        <div className={cx('image-wrapper')}>
+          <Link href={itemUrl}>
+            {Array.isArray(photos) && photos.length > 1 && !withBlur && this.imageWrapper.current && (
+              <div className={cx('fake-hover-wrapper', fakeDivClassName)}>
+                {photos.map((value, index) => (
+                  <div
+                    className={cx('fake-hover', { selected: index === currentPhotoIndex })}
+                    style={{
+                      width: this.imageWrapper.current.offsetWidth / photos.length,
+                      left: (this.imageWrapper.current.offsetWidth / photos.length) * index,
+                    }}
+                    key={index + 100}
+                    onMouseOver={() => this.setState({ currentPhotoIndex: index })}
+                  >
+                    <div className={cx('fake-hover-label')} />
+                  </div>
+                ))}
+              </div>
+            )}
+            {withBlur
+              ? (
+                <div
+                  className={cx('with-filter-blur')}
+                  children={this.getImage({ src: currentPhoto, alt }, onClick)}
+                />
+              ) : this.getImage({ src: currentPhoto, alt }, onClick)
+            }
+          </Link>
+          {hasTrashButton && (
+            <Icon
+              icon={blackTrashCart}
+              size={20}
+              color='gray87'
+              className={trashButtonProps.className}
+              onClick={trashButtonProps.onClick}
+            />
+          )}
+        </div>
+        {Array.isArray(badges) && Boolean(badges.length) && (
+          <div className={cx('badges')}>
+            <FlagsList
+              flags={badges}
+            />
+          </div>
+        )}
+        {Boolean(wishProps) && !withBlur && (
+          <WishButton
+            isWished={wishProps.isWished}
+            className={wishProps.className}
+            onClick={wishProps.onClick}
+            pos={buttonsPos}
+            isFetchingWishItems={isFetchingWishItems}
+          />
+        )}
+        {!withBlur && (
+          <QuickViewButton
+            pos={buttonsPos}
+            onClick={quickViewBtnProps.onClick}
+            className={quickViewBtnProps.className}
+          />
+        )}
+      </div>
+    );
+  }
+}

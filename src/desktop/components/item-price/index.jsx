@@ -5,6 +5,7 @@ import Price from '@dev-dep/ui-nucleons/price';
 import WholesalePrice from '../wholesale-price';
 import classnames from 'classnames/bind';
 import styles from './item-price.scss';
+import FlagsList from '../../../common/components/flags-list';
 
 const cx = classnames.bind(styles);
 
@@ -16,7 +17,7 @@ const cx = classnames.bind(styles);
  * @param {'row'|'column'} [props.priceLayout='row'] Вид отображения цен.
  * @param {number} [props.priceOld] Старая цена товара.
  * @param {Object} [props.wholesaleProps] Свойства крупного опта.
- * @param {boolean} [props.showWholesalePrice] Признак показа цены крупного опта.
+ * @param {Array} props.discountBadge Шильдик скидки.
  * @return {ReactElement} Цены товара.
  */
 export const ItemPrice = ({
@@ -29,6 +30,7 @@ export const ItemPrice = ({
   measure,
   onDetailsClick,
   showWholesalePrice,
+  discountBadge,
 }) => {
   const isUnitPrice = unitPrice && measure;
   return (
@@ -41,7 +43,7 @@ export const ItemPrice = ({
         {...{
           marginBottom: priceLayout === 'column' ? 2 : 0,
         }}
-        dangerouslySetInlineStyle={priceLayout === 'row' ? { __style: { width: '200px', maxWidth: '100%' } } : {}}
+        dangerouslySetInlineStyle={priceLayout === 'row' ? { __style: { width: '100%' } } : {}}
       >
         <Box
           display='flex'
@@ -70,28 +72,40 @@ export const ItemPrice = ({
                   currencyGraphemeClass={cx('currency-grapheme')}
                 />
               </Text>
+              {priceLayout === 'column' && Boolean(discountBadge) && (
+                <span className={cx('discount-badge')}>
+                  <FlagsList
+                    flags={discountBadge}
+                    className='discount'
+                  />
+                </span>
+              )}
             </span>
           )}
         </Box>
+        {isUnitPrice && (
+          <span className={cx('price-unit')}>
+            <Text size={12} color='gray38' lineHeight={16}>
+              <Price
+                value={unitPrice}
+                currencyGrapheme={measure}
+                currencyGraphemeClass={cx('currency-grapheme')}
+              />
+            </Text>
+          </span>
+        )}
       </Box>
-      {isUnitPrice && (
-        <span className={cx('price-unit')}>
-          <Text size={16} color='gray38' lineHeight={24} weight={600}>
-            <Price
-              value={unitPrice}
-              currencyGrapheme={measure}
-              currencyGraphemeClass={cx('currency-grapheme')}
-            />
-          </Text>
-        </span>
-      )}
-      {showWholesalePrice && !isUnitPrice && Boolean(wholesaleProps) && Boolean(wholesaleProps.price) && (
-        <WholesalePrice
-          currencyGrapheme={currencyGrapheme}
-          className={cx('wholesale')}
-          onDetailsClick={onDetailsClick}
-          {...wholesaleProps}
-        />
+      {showWholesalePrice && Boolean(wholesaleProps) && Boolean(wholesaleProps.price) && (
+        <div className={cx('wholesale-wrapper')}>
+          <WholesalePrice
+            currencyGrapheme={currencyGrapheme}
+            className={cx('wholesale')}
+            onDetailsClick={onDetailsClick}
+            direction={priceLayout}
+            measure={measure}
+            {...wholesaleProps}
+          />
+        </div>
       )}
     </div>
   );
