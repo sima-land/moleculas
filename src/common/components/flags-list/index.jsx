@@ -19,7 +19,10 @@ const FlagsList = ({
   <div className={cx('wrap', className)}>
     {isNonEmptyArray(flags) && flags.map((flagProps, index) => (
       <div key={index} className={cx('item')}>
-        <Flag {...flagProps} />
+        <Flag
+          className={className}
+          {...flagProps}
+        />
       </div>
     ))}
   </div>

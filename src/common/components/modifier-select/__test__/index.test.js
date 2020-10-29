@@ -6,7 +6,7 @@ describe('<ModifierSelect />', () => {
   const name = 'Название модификатора';
   const className = 'test-class';
   const color = 'red';
-  const img = 'https://sima-land.ru/test-img.png';
+  const image = 'https://sima-land.ru/test-img.png';
   let onShowModal;
 
   beforeEach(() => {
@@ -19,7 +19,7 @@ describe('<ModifierSelect />', () => {
         name={name}
         className={className}
         color={color}
-        img={img}
+        image={image}
         onClick={onShowModal}
       />
     );
@@ -84,11 +84,11 @@ describe('<ModifierSelect />', () => {
 
   it('should render an img', () => {
     const wrapper = shallow(
-      <ModifierSelect name={name} img={img} />
+      <ModifierSelect name={name} image={image} />
     );
 
     expect(wrapper.find(`.${cx('adornment')} img`).props()).toStrictEqual({
-      src: img,
+      src: image,
       width: 32,
       height: 32,
       alt: '',
@@ -97,7 +97,7 @@ describe('<ModifierSelect />', () => {
 
   it('should render only a color when a component contains a color and an img', () => {
     const wrapper = shallow(
-      <ModifierSelect name={name} color={color} img={img} />
+      <ModifierSelect name={name} color={color} image={image} />
     );
 
     expect(wrapper.find(`.${cx('color')}`)).toHaveLength(1);

@@ -95,7 +95,7 @@ exports[`<ItemImage /> should render badges 1`] = `
                 className="wrap"
                 style={
                   Object {
-                    "backgroundColor": "#b52ea8",
+                    "backgroundColor": "#f2f2f2",
                     "fill": null,
                   }
                 }
@@ -149,24 +149,26 @@ exports[`<ItemImage /> should render wish 1`] = `
       size={24}
     >
       <div
-        className="wish-button wish-undefined undefined"
+        className="wish-button"
+        title="Добавить в избранное"
       >
         <Icon
           className="stroke"
           icon={[Function]}
           size={24}
+          viewBox="0 0 24 24"
         >
           <heartIcon
             className="icon icon-block stroke"
             height={24}
-            viewBox="0 0 36 36"
+            viewBox="0 0 24 24"
             width={24}
             xmlns="http://www.w3.org/2000/svg"
           >
             <svg
               className="icon icon-block stroke"
               height={24}
-              viewBox="0 0 36 36"
+              viewBox="0 0 24 24"
               width={24}
               xmlns="http://www.w3.org/2000/svg"
             >

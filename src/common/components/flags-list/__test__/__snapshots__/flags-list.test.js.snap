@@ -9,6 +9,7 @@ exports[`<FlagsList /> with props renders correctly 1`] = `
     key="0"
   >
     <Flag
+      className="test"
       label="Test"
     />
   </div>

@@ -3,15 +3,42 @@
 exports[`<ItemModifier /> should render with props 1`] = `
 <ItemModifier
   count={32}
+  id={1}
   layout="block"
+  list={
+    Array [
+      Object {
+        "id": "0",
+      },
+      Object {
+        "id": "1",
+      },
+      Object {
+        "id": "2",
+      },
+      Object {
+        "id": "3",
+      },
+      Object {
+        "id": "4",
+      },
+      Object {
+        "id": "5",
+      },
+      Object {
+        "id": "6",
+      },
+    ]
+  }
   title="Foo"
   withTitle={true}
 >
   <Box
+    marginBottom={4}
     marginTop={4}
   >
     <div
-      className="M-t__4"
+      className="M-t__4 M-b__4"
     >
       <Box
         alignItems="baseline"
@@ -42,10 +69,10 @@ exports[`<ItemModifier /> should render with props 1`] = `
         </div>
       </Box>
       <ModifierSelect
-        className="wide"
+        className="block"
       >
         <div
-          className="wrap wide"
+          className="wrap block"
           onKeyDown={[Function]}
           role="button"
           tabIndex={0}
@@ -97,15 +124,42 @@ exports[`<ItemModifier /> should render with props 1`] = `
 exports[`<ItemModifier /> should render with props 2`] = `
 <ItemModifier
   count={32}
+  id={1}
   layout="inline"
+  list={
+    Array [
+      Object {
+        "id": "0",
+      },
+      Object {
+        "id": "1",
+      },
+      Object {
+        "id": "2",
+      },
+      Object {
+        "id": "3",
+      },
+      Object {
+        "id": "4",
+      },
+      Object {
+        "id": "5",
+      },
+      Object {
+        "id": "6",
+      },
+    ]
+  }
   title="Foo"
   withTitle={true}
 >
   <Box
+    marginBottom={4}
     marginTop={4}
   >
     <div
-      className="M-t__4"
+      className="M-t__4 M-b__4"
     >
       <Box
         alignItems="baseline"
@@ -127,10 +181,10 @@ exports[`<ItemModifier /> should render with props 2`] = `
         </div>
       </Box>
       <ModifierSelect
-        className=""
+        className="wide"
       >
         <div
-          className="wrap"
+          className="wrap wide"
           onKeyDown={[Function]}
           role="button"
           tabIndex={0}

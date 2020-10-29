@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import Link from '@dev-dep/ui-nucleons/link';
 import Text from '@dev-dep/ui-nucleons/text';
 
 /**
@@ -27,7 +28,10 @@ export const ItemProperties = ({
   <Fragment key={index}>
     <span className={specClassName}>
       <Text color={color} lineHeight={lineHeight} size={size}>
-        {spec.text};
+        {spec.href
+          ? <Link href={spec.href} children={spec.text} />
+          : spec.text
+        };
       </Text>
     </span>
   </Fragment>

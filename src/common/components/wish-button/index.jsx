@@ -23,19 +23,20 @@ export const WishButton = ({
   onClick,
   pos,
   isFetchingWishItems,
-  size = 20,
+  size = 24,
 }) => (
   <div
-    className={cx('wish-button', {
-      [`wish-${pos}`]: 'pos',
-      [className]: 'className',
+    title={isWished ? 'Убрать из избранного' : 'Добавить в избранное'}
+    className={cx('wish-button', pos, {
+      [className]: className,
       ['is-wished']: isWished,
       ['blocked']: isFetchingWishItems,
     })}
     onClick={isFetchingWishItems ? null : onClick}
   >
     <Icon
-      className={cx(!isWished && 'stroke')}
+      viewBox='0 0 24 24'
+      className={cx('stroke')}
       icon={isWished ? heartFilledIcon : heartIcon}
       size={size}
     />

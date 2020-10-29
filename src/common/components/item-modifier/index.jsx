@@ -11,22 +11,22 @@ const cx = classnames.bind(styles);
  * Выбранный модификатор и их количество.
  * @param {Object} props Свойства компонента.
  * @param {'block'|'inline'} props.layout Вид отображения.
- * @param {string} props.name Название модификатора.
+ * @param {string} props.title Название модификатора.
  * @param {number} props.count Количество значений модификатора.
  * @param {Function} props.onClick Обработчик клика.
  * @param {boolean} props.withTitle Признак показа заголовка.
- * @param {import('../modifier-select').ModifierSelectProps} props.modifierProps Свойства выбора модификатора.
  * @return {ReactElement} Выбранный модификатор и их количество.
  */
 export const ItemModifier = ({
   layout = 'block',
+  id: currentId,
+  list,
   title,
   count,
   onClick,
-  currentModifier,
   withTitle,
 }) => count > 1 && (
-  <Box marginTop={4}>
+  <Box marginTop={4} marginBottom={4}>
     {withTitle && (
       <Box
         marginBottom={2}
@@ -48,9 +48,9 @@ export const ItemModifier = ({
       </Box>
     )}
     <ModifierSelect
-      className={cx(layout === 'block' && 'wide')}
+      className={cx(layout === 'block' ? 'block' : 'wide')}
       onClick={onClick}
-      {...currentModifier}
+      {...Object.assign({}, list && list.find(({ id }) => id === currentId))}
     />
   </Box>
 );

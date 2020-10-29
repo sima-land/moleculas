@@ -1,14 +1,19 @@
+@import "~@dev-dep/ui-nucleons/variables";
+
 .wrapper {
   display: block;
   line-height: 1;
   width: 100%;
-  &.small:not(.fixed-width) {
+  &.small:not(.fixed-width):not(:last-child) {
     margin-bottom: 12px;
   }
 }
 
 .fixed-width {
   max-width: 200px;
+  @media screen and (max-width: $extraSmallDesktopBreakpoint) {
+    max-width: 100%;
+  }
 }
 
 .no-wrap {

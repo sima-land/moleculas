@@ -13,6 +13,7 @@ const cx = classnames.bind(styles);
  * @property {string} textColor Цвет текста.
  * @property {string} bgColor Цвет фона.
  * @property {string} strokeColor Цвет иконки.
+ * @property {string} className Дополнительный класс.
  * @property {Array} fields Массив полей шильдика.
  * @property {Object} definitions Определение полей шильдика.
  */
@@ -78,19 +79,20 @@ export default class Flag extends Component {
     const {
       title,
       link,
-      bgColor,
+      textColor,
       strokeColor,
       fields = [],
+      className,
     } = this.props;
     const wrapperStyles = {
-      backgroundColor: bgColor,
+      backgroundColor: textColor,
       fill: strokeColor,
     };
     const isIconOnly = fields.length === 1 && fields[0] === 'icon';
 
     return (
       <span
-        className={cx('wrap', isIconOnly && 'wrap-icon')}
+        className={cx('wrap', className, isIconOnly && 'wrap-icon')}
         style={isIconOnly ? {} : wrapperStyles}
         title={title}
       >

@@ -37,7 +37,7 @@ export const ItemRetailFee = ({
           <Price value={price} currencyGrapheme={currencyGrapheme} className={cx('price')} />
         </span>
         {Boolean(minQty) && (
-          <span className={cx('no-wrap')}>при&nbsp;покупке до {minQty}&nbsp;{unit}</span>
+          <span>при&nbsp;покупке до&nbsp;{minQty}&nbsp;{unit}</span>
         )}
       </Text>
     </Box>
