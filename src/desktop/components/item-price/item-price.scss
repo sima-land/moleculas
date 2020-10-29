@@ -3,34 +3,41 @@
 .wrapper {
   display: flex;
   flex-flow: row;
+  justify-content: space-between;
   &:not(.wrapper-fixed) {
     flex-wrap: wrap;
     align-items: baseline;
-    justify-content: space-between;
+    .wholesale-wrapper {
+      margin-top: 4px;
+      width: 100%;
+    }
+  }
+  &.wrapper-fixed {
+    .wholesale-wrapper {
+      margin-right: 16px;
+      width: 135px;
+    }
   }
 }
 
 .wrapper-fixed {
   align-items: flex-start;
   flex-flow: row;
-  @media screen and (min-width: $extraSmallDesktopBreakpoint) and (max-width: $smallDesktopBreakpoint) {
-    flex-flow: column;
-    justify-content: flex-start;
-  }
 }
 
 .price-old {
   padding-bottom: 2px;
   &.column {
+    align-items: baseline;
+    display: flex;
     line-height: 1;
+    .discount-badge {
+      margin-left: 10px;
+    }
   }
 }
 
 .currency-grapheme {
   font-size: inherit;
   font-weight: inherit;
-}
-
-.wholesale {
-  flex-shrink: 0;
 }

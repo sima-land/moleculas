@@ -3,79 +3,198 @@
 exports[`<WholesalePrice /> should render with props 1`] = `
 <WholesalePrice
   description="<b>lorem</b>"
+  measure="шт."
   price={222222}
+  text="Опт Детские товары"
+  unitWholesalePrice={520}
 >
   <div
     className=""
   >
-    <Memo(Text)
-      color="gray38"
-      lineHeight={20}
-      size={14}
+    <Box
+      display="flex"
+      justifyContent="between"
+      wrap={false}
     >
-      <span
-        className="size-14 line-height-20 color__gray38"
+      <div
+        className="display-flex justify-content-between"
       >
-        <Price
-          currencyGraphemeClass="currency-grapheme"
-          value={222222}
+        <Memo(Text)
+          color="gray87"
+          lineHeight={24}
+          size={16}
+          weight={600}
         >
           <span
-            className="price"
+            className="size-16 line-height-24 color__gray87 weight-600"
           >
-            222 222
-          </span>
-        </Price>
-         / 
-        <span
-          className="wholesale-text"
-        >
-          опт
-        </span>
-      </span>
-    </Memo(Text)>
-    <div
-      className="icon-wrapper"
-    >
-      <span
-        aria-label="Подробнее"
-        className="icon"
-        onClick={[Function]}
-        role="button"
-      >
-        <Icon
-          icon={[Function]}
-          inline={true}
-          role="presentation"
-          size={16}
-        >
-          <infoIcon
-            className="icon"
-            height={16}
-            role="presentation"
-            viewBox="0 0 36 36"
-            width={16}
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <svg
-              className="icon"
-              height={16}
-              role="presentation"
-              viewBox="0 0 36 36"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
+            <Price
+              currencyGraphemeClass="currency-grapheme"
+              value={222222}
             >
-              <path
-                d="M18 15.75A2.25 2.25 0 0 1 20.25 18v6.75a2.25 2.25 0 0 1-4.5 0V18A2.25 2.25 0 0 1 18 15.75zm0 0M18 13.5a2.25 2.25 0 1 0-.001-4.501A2.25 2.25 0 0 0 18 13.5zm0 0"
-              />
-              <path
-                d="M0 18C0 8.059 8.059 0 18 0s18 8.059 18 18-8.059 18-18 18S0 27.941 0 18zM18 4.5C10.543 4.5 4.5 10.543 4.5 18S10.543 31.5 18 31.5 31.5 25.457 31.5 18 25.457 4.5 18 4.5zm0 0"
-              />
-            </svg>
-          </infoIcon>
-        </Icon>
-      </span>
-    </div>
+              <span
+                className="price"
+              >
+                222 222
+              </span>
+            </Price>
+             / опт
+          </span>
+        </Memo(Text)>
+        <span
+          className="price-unit"
+        >
+          <Memo(Text)
+            color="gray38"
+            lineHeight={16}
+            size={12}
+          >
+            <span
+              className="size-12 line-height-16 color__gray38"
+            >
+              <Price
+                currencyGrapheme="шт."
+                currencyGraphemeClass="currency-grapheme"
+                value={520}
+              >
+                <span
+                  className="price"
+                >
+                  520
+                  <span
+                    className="currency-grapheme"
+                  >
+                     шт.
+                  </span>
+                </span>
+              </Price>
+            </span>
+          </Memo(Text)>
+        </span>
+      </div>
+    </Box>
+    <withGlobalListeners(WholesaleText)
+      description="<b>lorem</b>"
+      text="Опт Детские товары"
+    >
+      <WholesaleText
+        addGlobalListener={[Function]}
+        description="<b>lorem</b>"
+        text="Опт Детские товары"
+      >
+        <div
+          className="wholesale-text-wrapper"
+        >
+          <span
+            className="wholesale-text"
+            onClick={[Function]}
+            role="note"
+          >
+            Опт Детские товары
+          </span>
+        </div>
+      </WholesaleText>
+    </withGlobalListeners(WholesaleText)>
+  </div>
+</WholesalePrice>
+`;
+
+exports[`<WholesalePrice /> should render with props 2`] = `
+<WholesalePrice
+  description="<b>lorem</b>"
+  direction="column"
+  measure="шт."
+  price={222222}
+  text="Опт Детские товары"
+  unitWholesalePrice={520}
+>
+  <div
+    className=""
+  >
+    <Box
+      display="flex"
+      justifyContent="start"
+      wrap={true}
+    >
+      <div
+        className="display-flex justify-content-start flex-wrap"
+      >
+        <Memo(Text)
+          color="gray87"
+          lineHeight={24}
+          size={16}
+          weight={600}
+        >
+          <span
+            className="size-16 line-height-24 color__gray87 weight-600"
+          >
+            <Price
+              currencyGraphemeClass="currency-grapheme"
+              value={222222}
+            >
+              <span
+                className="price"
+              >
+                222 222
+              </span>
+            </Price>
+             / опт
+          </span>
+        </Memo(Text)>
+        <withGlobalListeners(WholesaleText)
+          description="<b>lorem</b>"
+          text="Опт Детские товары"
+        >
+          <WholesaleText
+            addGlobalListener={[Function]}
+            description="<b>lorem</b>"
+            text="Опт Детские товары"
+          >
+            <div
+              className="wholesale-text-wrapper"
+            >
+              <span
+                className="wholesale-text"
+                onClick={[Function]}
+                role="note"
+              >
+                Опт Детские товары
+              </span>
+            </div>
+          </WholesaleText>
+        </withGlobalListeners(WholesaleText)>
+        <span
+          className="price-unit"
+        >
+          <Memo(Text)
+            color="gray38"
+            lineHeight={16}
+            size={12}
+          >
+            <span
+              className="size-12 line-height-16 color__gray38"
+            >
+              <Price
+                currencyGrapheme="шт."
+                currencyGraphemeClass="currency-grapheme"
+                value={520}
+              >
+                <span
+                  className="price"
+                >
+                  520
+                  <span
+                    className="currency-grapheme"
+                  >
+                     шт.
+                  </span>
+                </span>
+              </Price>
+            </span>
+          </Memo(Text)>
+        </span>
+      </div>
+    </Box>
   </div>
 </WholesalePrice>
 `;
@@ -85,29 +204,35 @@ exports[`<WholesalePrice /> should render without props 1`] = `
   <div
     className=""
   >
-    <Memo(Text)
-      color="gray38"
-      lineHeight={20}
-      size={14}
+    <Box
+      display="flex"
+      justifyContent="between"
+      wrap={false}
     >
-      <span
-        className="size-14 line-height-20 color__gray38"
+      <div
+        className="display-flex justify-content-between"
       >
-        <Price
-          currencyGraphemeClass="currency-grapheme"
+        <Memo(Text)
+          color="gray87"
+          lineHeight={24}
+          size={16}
+          weight={600}
         >
           <span
-            className="price"
-          />
-        </Price>
-         / 
-        <span
-          className="wholesale-text"
-        >
-          опт
-        </span>
-      </span>
-    </Memo(Text)>
+            className="size-16 line-height-24 color__gray87 weight-600"
+          >
+            <Price
+              currencyGraphemeClass="currency-grapheme"
+            >
+              <span
+                className="price"
+              />
+            </Price>
+             / опт
+          </span>
+        </Memo(Text)>
+      </div>
+    </Box>
   </div>
 </WholesalePrice>
 `;

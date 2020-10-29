@@ -1,13 +1,10 @@
-import React, { Component, createRef } from 'react';
-import isFunction from 'lodash/isFunction';
-import infoIcon from '../../../common/icons/info.svg';
-import withGlobalListeners from '@dev-dep/ui-nucleons/hoc/with-global-listeners';
-import PositioningPopup from '@dev-dep/ui-nucleons/popups/positioning-popup';
-import Icon from '@dev-dep/ui-nucleons/icon';
+import React from 'react';
+import Box from '@dev-dep/ui-nucleons/box';
 import Price from '@dev-dep/ui-nucleons/price';
 import Text from '@dev-dep/ui-nucleons/text';
 import classnames from 'classnames/bind';
 import style from './wholesale-price.scss';
+import WholesaleText from './wholesale-text';
 
 export const cx = classnames.bind(style);
 
@@ -18,115 +15,68 @@ export const cx = classnames.bind(style);
  * @param {string} props.currencyGrapheme Графема валюты.
  * @param {string} [props.description] Описание условий акции крупного опта.
  * @param {string} [props.className] Дополнительный класс компонента.
- * @param {string} [props.text] Текст крупного опта.
+ * @param {number} [props.unitWholesalePrice] Оптовая цена за единицу.
+ * @param {string} [props.measure] Название величины измерения.
+ * @param {'row'|'column'} [props.direction='row'] Вид отображения цен.
  * @param {Function} [props.onDetailsClick] Дополнительные действия при клике открытия описания.
+ * @return {ReactElement} Компонент цены крупного опта с описанием.
  */
-export class WholesalePrice extends Component {
-  state = {
-    isPopupOpen: false,
-  };
-  openerRef = createRef();
-  iconWrapperRef = createRef();
-  removeGlobalListener;
+export const WholesalePrice = ({
+  price,
+  currencyGrapheme,
+  description,
+  onDetailsClick,
+  className,
+  text,
+  unitWholesalePrice,
+  measure,
+  direction = 'row',
+}) => {
+  const isRowGrid = direction === 'row';
 
-  /**
-   * @inheritdoc
-   */
-  constructor (props) {
-    super(props);
-    this.handleOutsideClick = this.handleOutsideClick.bind(this);
-  }
-
-  /**
-   * Обработчик клика вне компонента.
-   * @param {Event} event Событие клика.
-   */
-  handleOutsideClick (event) {
-    const ref = this.iconWrapperRef && this.iconWrapperRef.current;
-    if (event && event.target && ref && !ref.contains(event.target)) {
-      this.setState({ isPopupOpen: false });
-    }
-  }
-
-  /**
-   * @inheritdoc
-   */
-  componentDidMount () {
-    const { addGlobalListener, description } = this.props;
-    if (description && isFunction(addGlobalListener)) {
-      this.removeGlobalListener = addGlobalListener('click', this.handleOutsideClick);
-    }
-  }
-
-  /**
-   * @inheritdoc
-   */
-  componentWillUnmount () {
-    if (isFunction(this.removeGlobalListener)) {
-      this.removeGlobalListener();
-    }
-  }
-
-  /**
-   * @inheritdoc
-   */
-  render () {
-    const {
-      price,
-      currencyGrapheme,
-      description,
-      onDetailsClick,
-      className,
-      text = 'опт',
-    } = this.props;
-    return (
-      <div className={cx(className)}>
-        <Text lineHeight={20} size={14} color='gray38'>
+  return (
+    <div className={cx(className)}>
+      <Box
+        display='flex'
+        justifyContent={isRowGrid ? 'between' : 'start'}
+        wrap={!isRowGrid}
+      >
+        <Text lineHeight={24} size={16} weight={600} color='gray87'>
           <Price
             value={price}
             currencyGrapheme={currencyGrapheme}
             currencyGraphemeClass={cx('currency-grapheme')}
           />
-          &nbsp;/ <span className={cx('wholesale-text')}>{text}</span>
+            &nbsp;/ опт
         </Text>
-        {Boolean(description) && (
-          <div ref={this.iconWrapperRef} className={cx('icon-wrapper')}>
-            <span
-              onClick={() => {
-                if (!this.state.isPopupOpen) {
-                  isFunction(onDetailsClick) && onDetailsClick();
-                }
-                this.setState({ isPopupOpen: !this.state.isPopupOpen });
-              }}
-              ref={this.openerRef}
-              className={cx('icon')}
-              role='button'
-              aria-label='Подробнее'
-            >
-              <Icon
-                icon={infoIcon}
-                size={16}
-                inline
-                role='presentation'
-              />
-            </span>
-            {this.state.isPopupOpen && (
-              <PositioningPopup
-                withArrow
-                className={cx('popup')}
-                opener={this.openerRef}
-                parent={this.iconWrapperRef}
-                horizontalPosition='center'
-                basePopupClass={cx('notice-popup')}
-              >
-                <div className={cx('popup-body')} dangerouslySetInnerHTML={{ __html: description }} />
-              </PositioningPopup>
-            )}
-          </div>
+        {text && !isRowGrid && (
+          <WholesaleText
+            description={description}
+            onDetailsClick={onDetailsClick}
+            text={text}
+          />
         )}
-      </div>
-    );
-  }
-}
+        {Boolean(unitWholesalePrice) && measure && (
+          <span className={cx('price-unit')}>
+            <Text size={12} color='gray38' lineHeight={16}>
+              <Price
+                value={unitWholesalePrice}
+                currencyGrapheme={measure}
+                currencyGraphemeClass={cx('currency-grapheme')}
+              />
+            </Text>
+          </span>
+        )}
+      </Box>
+      {text && isRowGrid && (
+        <WholesaleText
+          description={description}
+          onDetailsClick={onDetailsClick}
+          text={text}
+        />
+      )}
+    </div>
+  );
+};
 
-export default withGlobalListeners(WholesalePrice);
+export default WholesalePrice;

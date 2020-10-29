@@ -61,7 +61,7 @@ exports[`<ListItem /> should render with all props 1`] = `
             <Box
               marginTop={2}
             >
-              <withGlobalListeners(WholesalePrice)
+              <WholesalePrice
                 className="wholesale"
                 currencyGrapheme="$"
                 description="foo"

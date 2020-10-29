@@ -1,0 +1,26 @@
+@import "~@dev-dep/ui-nucleons/variables";
+@import "~@dev-dep/ui-nucleons/colors";
+
+.button {
+  opacity: 0;
+  color: $gray87;
+  user-select: none;
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  top: 42px;
+  &.left {
+    left: 10px;
+  }
+  &.right {
+    right: 10px;
+  }
+  .stroke {
+    overflow: visible;
+    stroke-width: 1;
+    stroke: #f5f5f5;
+  }
+  &:hover {
+    color: $red;
+  }
+}

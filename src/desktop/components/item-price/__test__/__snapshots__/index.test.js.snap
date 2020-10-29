@@ -2,10 +2,25 @@
 
 exports[`<ItemPrice /> should render with props 1`] = `
 <ItemPrice
+  discountBadge={
+    Array [
+      Object {
+        "definitions": Object {
+          "discountPercent": Object {
+            "type": "text",
+            "value": "-50%",
+          },
+        },
+        "link": "/sale/?is_label=1",
+        "type": "b-discount",
+      },
+    ]
+  }
   measure="Р / пог. м"
   price={15}
   priceLayout="column"
   priceOld={20}
+  showWholesalePrice={true}
   unitPrice={421}
   wholesaleProps={
     Object {
@@ -87,42 +102,146 @@ exports[`<ItemPrice /> should render with props 1`] = `
                   </Price>
                 </span>
               </Memo(Text)>
+              <span
+                className="discount-badge"
+              >
+                <FlagsList
+                  className="discount"
+                  flags={
+                    Array [
+                      Object {
+                        "definitions": Object {
+                          "discountPercent": Object {
+                            "type": "text",
+                            "value": "-50%",
+                          },
+                        },
+                        "link": "/sale/?is_label=1",
+                        "type": "b-discount",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="wrap discount"
+                  >
+                    <div
+                      className="item"
+                      key="0"
+                    >
+                      <Flag
+                        definitions={
+                          Object {
+                            "discountPercent": Object {
+                              "type": "text",
+                              "value": "-50%",
+                            },
+                          }
+                        }
+                        link="/sale/?is_label=1"
+                        type="b-discount"
+                      >
+                        <span
+                          className="wrap"
+                          style={
+                            Object {
+                              "backgroundColor": undefined,
+                              "fill": undefined,
+                            }
+                          }
+                        >
+                          <a
+                            className="link"
+                            href="/sale/?is_label=1"
+                          />
+                        </span>
+                      </Flag>
+                    </div>
+                  </div>
+                </FlagsList>
+              </span>
             </span>
           </div>
         </Box>
-      </div>
-    </Box>
-    <span
-      className="price-unit"
-    >
-      <Memo(Text)
-        color="gray38"
-        lineHeight={24}
-        size={16}
-        weight={600}
-      >
         <span
-          className="size-16 line-height-24 color__gray38 weight-600"
+          className="price-unit"
         >
-          <Price
-            currencyGrapheme="Р / пог. м"
-            currencyGraphemeClass="currency-grapheme"
-            value={421}
+          <Memo(Text)
+            color="gray38"
+            lineHeight={16}
+            size={12}
           >
             <span
-              className="price"
+              className="size-12 line-height-16 color__gray38"
             >
-              421
-              <span
-                className="currency-grapheme"
+              <Price
+                currencyGrapheme="Р / пог. м"
+                currencyGraphemeClass="currency-grapheme"
+                value={421}
               >
-                 Р / пог. м
-              </span>
+                <span
+                  className="price"
+                >
+                  421
+                  <span
+                    className="currency-grapheme"
+                  >
+                     Р / пог. м
+                  </span>
+                </span>
+              </Price>
             </span>
-          </Price>
+          </Memo(Text)>
         </span>
-      </Memo(Text)>
-    </span>
+      </div>
+    </Box>
+    <div
+      className="wholesale-wrapper"
+    >
+      <WholesalePrice
+        className="wholesale"
+        direction="column"
+        measure="Р / пог. м"
+        price={14}
+      >
+        <div
+          className="wholesale"
+        >
+          <Box
+            display="flex"
+            justifyContent="start"
+            wrap={true}
+          >
+            <div
+              className="display-flex justify-content-start flex-wrap"
+            >
+              <Memo(Text)
+                color="gray87"
+                lineHeight={24}
+                size={16}
+                weight={600}
+              >
+                <span
+                  className="size-16 line-height-24 color__gray87 weight-600"
+                >
+                  <Price
+                    currencyGraphemeClass="currency-grapheme"
+                    value={14}
+                  >
+                    <span
+                      className="price"
+                    >
+                      14
+                    </span>
+                  </Price>
+                   / опт
+                </span>
+              </Memo(Text)>
+            </div>
+          </Box>
+        </div>
+      </WholesalePrice>
+    </div>
   </div>
 </ItemPrice>
 `;
@@ -137,8 +256,7 @@ exports[`<ItemPrice /> should render without props 1`] = `
       dangerouslySetInlineStyle={
         Object {
           "__style": Object {
-            "maxWidth": "100%",
-            "width": "200px",
+            "width": "100%",
           },
         }
       }
@@ -151,8 +269,7 @@ exports[`<ItemPrice /> should render without props 1`] = `
         className="display-flex direction-row align-items-baseline justify-content-between M-b__0"
         style={
           Object {
-            "maxWidth": "100%",
-            "width": "200px",
+            "width": "100%",
           }
         }
       >
