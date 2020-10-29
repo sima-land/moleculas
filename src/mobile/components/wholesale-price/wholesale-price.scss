@@ -3,17 +3,6 @@
 
 .wrapper {
   display: inline;
-  @media (max-width: $smallMobileBreakpoint) {
-    color: #212121;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    line-clamp: 2;
-    max-height: 38px;
-    padding-right: 20px;
-  }
 }
 
 .currency-grapheme {
@@ -43,13 +32,18 @@
   }
   a {
     @extend .link;
-    @extend .link-blue;
-    @extend .link-can-be-hovered;
   }
 }
 
 .wholesale-text {
   padding-right: 24px;
+}
+
+.wholesale-word {
+  padding-right: 2px;
+  &:last-child {
+    padding-right: 20px;
+  }
 }
 
 .icon-wrapper {

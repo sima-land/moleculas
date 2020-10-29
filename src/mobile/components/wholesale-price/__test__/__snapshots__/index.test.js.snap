@@ -31,7 +31,12 @@ exports[`<WholesalePrice /> should render with props 1`] = `
               222 222
             </span>
           </Price>
-           / 
+           / 
+          <span
+            className="wholesale-word"
+          >
+            Опт 
+          </span>
           <withGlobalListeners(WholesaleText)
             className="wholesale-text"
             text="Крупный опт «Галантерея и швейная галантерея»"
@@ -121,23 +126,12 @@ exports[`<WholesalePrice /> should render without props 1`] = `
               className="price"
             />
           </Price>
-           / 
-          <withGlobalListeners(WholesaleText)
-            className="wholesale-text"
-            text="опт"
+           / 
+          <span
+            className="wholesale-word"
           >
-            <WholesaleText
-              addGlobalListener={[Function]}
-              className="wholesale-text"
-              text="опт"
-            >
-              <span
-                className="wholesale-text"
-              >
-                опт
-              </span>
-            </WholesaleText>
-          </withGlobalListeners(WholesaleText)>
+            Опт 
+          </span>
         </span>
       </Memo(Text)>
     </div>

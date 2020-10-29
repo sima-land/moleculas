@@ -8,6 +8,7 @@ describe('<WholesalePrice />', () => {
     expect(wrapper).toMatchSnapshot();
     wrapper.unmount();
   });
+
   it('should render with props', () => {
     const wrapper = mount(
       <WholesalePrice
@@ -25,6 +26,7 @@ describe('<WholesalePrice />', () => {
         description='lorem'
         onDetailsClick={jest.fn()}
         itemId={123456}
+        text='Детские товары'
       />
     );
     wrapper.find('[role="button"]').simulate('click');

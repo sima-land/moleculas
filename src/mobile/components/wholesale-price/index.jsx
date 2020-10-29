@@ -24,7 +24,7 @@ export const WholesalePrice = ({
   currencyGrapheme,
   description,
   className,
-  text = 'опт',
+  text,
   onDetailsClick,
   itemId,
 }) => (
@@ -36,10 +36,11 @@ export const WholesalePrice = ({
           currencyGrapheme={currencyGrapheme}
           currencyGraphemeClass={cx('currency-grapheme')}
         />
-        &nbsp;/ <WholesaleText text={text} className={cx('wholesale-text')} />
+          &nbsp;/&nbsp;<span className={cx('wholesale-word')}>Опт </span>
+        {Boolean(text) && <WholesaleText text={text} className={cx('wholesale-text')} />}
       </Text>
     </div>
-    {Boolean(description) && (
+    {Boolean(text) && Boolean(description) && (
       <div className={cx('icon-wrapper')}>
         <span
           onClick={() => {

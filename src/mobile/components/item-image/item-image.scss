@@ -23,8 +23,12 @@
 }
 
 .image-wrapper {
+  background: #fafafa;
   overflow: hidden;
   position: relative;
+  box-sizing: border-box;
+  padding-bottom: 100%;
+  height: 0;
   .with-filter-blur {
     filter: blur(24px);
   }
