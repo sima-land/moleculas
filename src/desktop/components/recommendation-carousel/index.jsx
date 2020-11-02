@@ -8,6 +8,7 @@ import { isNonEmptyArray } from '../../../common/helpers/is-non-empty';
 import classes from './recommendation-carousel.scss';
 import classnames from 'classnames/bind';
 import Types from 'prop-types';
+import { useControlTooltip } from './helpers';
 
 const cx = classnames.bind(classes);
 
@@ -35,6 +36,8 @@ export const RecommendationCarousel = ({
 }) => {
   const sectionRef = useRef();
   const emptyRef = useRef();
+
+  const { tooltipRef, onHoverQuickViewButton, onLeaveQuickViewButton } = useControlTooltip();
 
   // Отправляем статистку в ОКО, когда компонент попадает в зону видимости
   useEffect(() => {
@@ -65,11 +68,16 @@ export const RecommendationCarousel = ({
             <RecommendedItem
               {...item}
               onItemClick={() => isFunction(onItemClick) && onItemClick(item)}
+              onHoverQuickViewButton={onHoverQuickViewButton}
+              onLeaveQuickViewButton={onLeaveQuickViewButton}
               key={key}
             />
           )}
           renderControl={CarouselButton}
         />
+        <div className={cx('tooltip')} ref={tooltipRef}>
+          Быстрый просмотр
+        </div>
       </section>
     )
     : <div ref={emptyRef}></div>;

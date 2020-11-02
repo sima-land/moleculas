@@ -107,6 +107,11 @@ exports[`<RecommendationCarousel /> should match a snapshot with items 1`] = `
     renderControl={[Function]}
     renderItem={[Function]}
   />
+  <div
+    className="tooltip"
+  >
+    Быстрый просмотр
+  </div>
 </section>
 `;
 

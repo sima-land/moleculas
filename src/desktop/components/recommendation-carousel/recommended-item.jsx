@@ -7,7 +7,8 @@ import { cutTextContent } from '../../../common/helpers/dom';
 import isFunction from 'lodash/isFunction';
 import debounce from 'lodash/debounce';
 import withGlobalListeners from '@dev-dep/ui-nucleons/hoc/with-global-listeners';
-import ItemQuickViewButton from '../../../common/components/item-quick-view-button';
+import Icon from '@dev-dep/ui-nucleons/icon';
+import quickView from '../../../common/icons/quick-view.svg';
 
 const cx = classnames.bind(classes);
 
@@ -48,6 +49,8 @@ const RecommendedItem = ({
   onItemClick,
   onQuickViewClick,
   addGlobalListener,
+  onHoverQuickViewButton,
+  onLeaveQuickViewButton,
 }) => {
   const linkRef = useRef(null);
 
@@ -72,10 +75,20 @@ const RecommendedItem = ({
             alt={name}
             src={imageSrc}
           />
-          <ItemQuickViewButton
+          <div
+            className={cx('quick-view-button')}
+            onMouseEnter={onHoverQuickViewButton}
+            onMouseLeave={onLeaveQuickViewButton}
             onClick={onQuickViewClick}
-            additionalClassName={cx('quick-view-button')}
-          />
+            role='button'
+          >
+            <Icon
+              viewBox='0 0 24 24'
+              className={cx('icon')}
+              icon={quickView}
+              size={24}
+            />
+          </div>
         </div>
       )}
       {Boolean(price) && (
@@ -99,7 +112,6 @@ const RecommendedItem = ({
       <Link
         onClick={isFunction(onItemClick) ? onItemClick : null}
         className={cx('link')}
-        disableHoverEffect
         ref={linkRef}
         href={url}
         children={name}

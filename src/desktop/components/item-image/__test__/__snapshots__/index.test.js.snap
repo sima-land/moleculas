@@ -282,25 +282,27 @@ exports[`<ItemImage /> should render wish 1`] = `
     </div>
     <WishButton>
       <div
-        className="wish-button wish-undefined undefined"
+        className="wish-button"
+        title="Добавить в избранное"
       >
         <Icon
           className="stroke"
           icon={[Function]}
-          size={20}
+          size={24}
+          viewBox="0 0 24 24"
         >
           <heartIcon
             className="icon icon-block stroke"
-            height={20}
-            viewBox="0 0 36 36"
-            width={20}
+            height={24}
+            viewBox="0 0 24 24"
+            width={24}
             xmlns="http://www.w3.org/2000/svg"
           >
             <svg
               className="icon icon-block stroke"
-              height={20}
-              viewBox="0 0 36 36"
-              width={20}
+              height={24}
+              viewBox="0 0 24 24"
+              width={24}
               xmlns="http://www.w3.org/2000/svg"
             >
               <path

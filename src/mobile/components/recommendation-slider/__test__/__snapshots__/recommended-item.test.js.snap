@@ -72,13 +72,11 @@ exports[`<RecommendedItem /> render with props should correct render with all pr
       <ForwardRef(Link)
         className="link"
         color="black"
-        disableHoverEffect={true}
         href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
         onClick={null}
       >
         <a
           className="link link color__black"
-          disableHoverEffect={true}
           href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
           onClick={null}
         >
@@ -144,13 +142,11 @@ exports[`<RecommendedItem /> render with props should correct render without old
       <ForwardRef(Link)
         className="link"
         color="black"
-        disableHoverEffect={true}
         href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
         onClick={null}
       >
         <a
           className="link link color__black"
-          disableHoverEffect={true}
           href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
           onClick={null}
         >

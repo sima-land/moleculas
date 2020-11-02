@@ -1,3 +1,5 @@
+@import "~@dev-dep/ui-nucleons/colors";
+
 .wrapper {
   width: 100%;
 }
@@ -6,4 +8,30 @@
   font-size: 24px;
   font-weight: 600;
   margin: 0 0 32px;
+}
+
+.tooltip {
+  opacity: 0;
+  background: $gray76;
+  color: $white;
+  position: absolute;
+  pointer-events: none;
+  z-index: 5;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+  border-radius: 4px;
+  &::after {
+    content: '';
+    position: fixed;
+    top: 50%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    left: 100%;
+    border-color: transparent transparent transparent $gray76;
+  }
 }
