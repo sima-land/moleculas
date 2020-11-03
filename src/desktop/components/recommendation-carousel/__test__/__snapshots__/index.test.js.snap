@@ -4,11 +4,11 @@ exports[`<RecommendationCarousel /> should match a snapshot with items 1`] = `
 <section
   className="wrapper"
 >
-  <h3
+  <h2
     className="title"
   >
     Test title
-  </h3>
+  </h2>
   <withGlobalListeners(Carousel)
     items={
       Array [

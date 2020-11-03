@@ -7,7 +7,6 @@ import RecommendationCarousel, {
 } from '../index';
 import RecommendedItem from '../recommended-item';
 import Carousel from '@dev-dep/ui-nucleons/carousel/carousel';
-import CarouselButton from '../recommendation-carousel-button';
 import { items } from '../../../../common/__fixtures__/recommendation-carousel';
 
 describe('<RecommendationCarousel />', () => {
@@ -19,6 +18,7 @@ describe('<RecommendationCarousel />', () => {
   let onRequest;
   let addObserve;
   let onItemClick;
+  let onQuickViewClick;
   let addObserveWithMargin;
   let intersectionObserverMock;
 
@@ -26,6 +26,7 @@ describe('<RecommendationCarousel />', () => {
     onInViewport = jest.fn();
     onRequest = jest.fn();
     onItemClick = jest.fn();
+    onQuickViewClick = jest.fn();
     addObserve = (el, fn) => intersectionObserverMock.addObserve(fn);
     addObserveWithMargin = (el, fn) => intersectionObserverMock.addObserve(fn);
 
@@ -75,6 +76,7 @@ describe('<RecommendationCarousel />', () => {
           onInViewport={onInViewport}
           addObserve={addObserve}
           onItemClick={onItemClick}
+          onQuickViewClick={onQuickViewClick}
         />
       );
       expect(carousel).toMatchSnapshot();
@@ -111,7 +113,6 @@ describe('<RecommendationCarousel />', () => {
 
     expect(carousel.find(Carousel).props()).toEqual(expect.objectContaining({
       items,
-      renderControl: CarouselButton,
     }));
   });
 
@@ -121,6 +122,7 @@ describe('<RecommendationCarousel />', () => {
         items={items}
         title={title}
         onItemClick={onItemClick}
+        onQuickViewClick={onQuickViewClick}
       />
     );
 
@@ -133,10 +135,15 @@ describe('<RecommendationCarousel />', () => {
         ...currentItem,
       }));
       expect(onItemClick).toBeCalledTimes(index);
+      expect(onQuickViewClick).toBeCalledTimes(index);
 
       currentSlide.prop('onItemClick')();
       expect(onItemClick).toBeCalledTimes(index + 1);
       expect(onItemClick).toHaveBeenLastCalledWith(currentItem);
+
+      currentSlide.prop('onQuickViewClick')();
+      expect(onQuickViewClick).toBeCalledTimes(index + 1);
+      expect(onQuickViewClick).toHaveBeenLastCalledWith(currentItem);
     });
   });
 

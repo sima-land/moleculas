@@ -37,6 +37,8 @@ export const cutItemLink = element => {
  * @param {Function} props.onItemClick Обработчик клика по товару.
  * @param {Function} props.onQuickViewClick Обработчик клика по кнопке быстрого просмотра.
  * @param {Function} props.addGlobalListener Функция подписки на глобальные события.
+ * @param {Function} props.onHoverQuickViewButton Функция, срабатываемая при наведении на кнопку быстрого просмотра.
+ * @param {Function} props.onLeaveQuickViewButton Функция, срабатываемая при покидании кнопки быстрого просмотра.
  * @return {ReactElement} Компонент элемента карусели рекомендаций.
  */
 const RecommendedItem = ({
