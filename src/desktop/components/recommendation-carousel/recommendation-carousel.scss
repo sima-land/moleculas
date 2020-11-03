@@ -6,8 +6,24 @@
 
 .title {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
   margin: 0 0 32px;
+}
+
+.control {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+  &.backward {
+    left: 0;
+  }
+  &:not(.backward) {
+    left: 100%;
+  }
 }
 
 .tooltip {
