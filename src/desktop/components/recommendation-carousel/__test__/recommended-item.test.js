@@ -4,7 +4,6 @@ import RecommendedItem from '../recommended-item';
 import Link from '@dev-dep/ui-nucleons/link';
 import Price from '@dev-dep/ui-nucleons/price';
 import { cutTextContent } from '../../../../common/helpers/dom';
-import { ItemQuickViewButton } from '../../../../common/components/item-quick-view-button';
 
 import debounce from 'lodash/debounce';
 
@@ -24,6 +23,8 @@ describe('<RecommendedItem />', () => {
   describe('render with props', () => {
     const onItemFn = jest.fn();
     const onQuickViewFn = jest.fn();
+    const onHoverQuickViewButtonFn = jest.fn();
+    const onLeaveQuickViewButtonFn = jest.fn();
     const addGlobalListener = jest.fn();
     const props = {
       name: 'Милая картина из шерсти Schrodinger cat, А5',
@@ -32,6 +33,8 @@ describe('<RecommendedItem />', () => {
       price: 135.4,
       currencyGrapheme: '$',
       onItemClick: onItemFn,
+      onHoverQuickViewButton: onHoverQuickViewButtonFn,
+      onLeaveQuickViewButton: onLeaveQuickViewButtonFn,
       addGlobalListener,
     };
     const allProps = {
@@ -58,7 +61,7 @@ describe('<RecommendedItem />', () => {
       expect(onItemFn).toHaveBeenCalledTimes(1);
       expect(onQuickViewFn).not.toHaveBeenCalled();
 
-      component.find('button').simulate('click');
+      component.find('.quick-view-button').simulate('click');
       expect(onItemFn).toHaveBeenCalledTimes(1);
       expect(onQuickViewFn).toHaveBeenCalledTimes(1);
 
@@ -78,8 +81,12 @@ describe('<RecommendedItem />', () => {
       expect(component.find(Link)).toHaveLength(1);
       expect(component.find(Price)).toHaveLength(2);
       expect(component.find('img')).toHaveLength(1);
-      expect(component.find(ItemQuickViewButton)).toHaveLength(1);
-      expect(component.find(ItemQuickViewButton).props().onClick).toEqual(onQuickViewFn);
+      expect(component.find('.quick-view-button')).toHaveLength(1);
+      expect(component.find('.quick-view-button').props().onClick).toEqual(onQuickViewFn);
+      expect(component.find('.quick-view-button').props().onMouseEnter)
+        .toEqual(onHoverQuickViewButtonFn);
+      expect(component.find('.quick-view-button').props().onMouseLeave)
+        .toEqual(onLeaveQuickViewButtonFn);
       expect(component).toMatchSnapshot();
     });
 
@@ -88,8 +95,8 @@ describe('<RecommendedItem />', () => {
       expect(component.find(Link)).toHaveLength(1);
       expect(component.find(Price)).toHaveLength(1);
       expect(component.find('img')).toHaveLength(1);
-      expect(component.find(ItemQuickViewButton)).toHaveLength(1);
-      expect(component.find(ItemQuickViewButton).props().onClick).toBe(undefined);
+      expect(component.find('.quick-view-button')).toHaveLength(1);
+      expect(component.find('.quick-view-button').props().onClick).toBe(undefined);
       expect(component).toMatchSnapshot();
     });
 
@@ -109,7 +116,7 @@ describe('<RecommendedItem />', () => {
       expect(component.find(Link)).toHaveLength(1);
       expect(component.find(Price)).toHaveLength(0);
       expect(component.find('img')).toHaveLength(0);
-      expect(component.find('button')).toHaveLength(0);
+      expect(component.find('.quick-view-button')).toHaveLength(0);
     });
     it('should match snapshot', () => {
       const component = shallow(<RecommendedItem />);

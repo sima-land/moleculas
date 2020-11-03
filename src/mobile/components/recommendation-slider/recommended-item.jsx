@@ -115,7 +115,6 @@ const RecommendedItem = ({
       <Link
         onClick={isFunction(onItemClick) ? onItemClick : null}
         className={cx('link')}
-        disableHoverEffect
         ref={linkRef}
         href={url}
         children={name}

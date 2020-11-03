@@ -67,6 +67,9 @@ $itemIncreaseRatio: ($largeSize - $smallSize) / ($mediumMobileBreakpoint - $extr
   max-width: 100%;
   font-size: 14px;
   line-height: 20px;
+  &:hover {
+    color: #000;
+  }
   &::before {
     content: '';
     position: absolute;
