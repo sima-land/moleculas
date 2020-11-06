@@ -16,6 +16,7 @@ exports[`<ListItem /> should render with all props 1`] = `
     >
       <ItemImage
         alt="Foo"
+        buttonsPos="left"
         className="image"
         hasTrashButton={true}
         itemUrl="#"
@@ -37,7 +38,6 @@ exports[`<ListItem /> should render with all props 1`] = `
             "className": "wish is-wished",
             "isWished": true,
             "onClick": undefined,
-            "pos": "left",
           }
         }
       />
@@ -263,6 +263,7 @@ exports[`<ListItem /> should render with all props 2`] = `
     >
       <ItemImage
         alt="Foo"
+        buttonsPos="right"
         className="big-image"
         hasTrashButton={true}
         itemUrl="#"
@@ -283,7 +284,6 @@ exports[`<ListItem /> should render with all props 2`] = `
             "className": "wish is-wished",
             "isWished": true,
             "onClick": undefined,
-            "pos": "left",
           }
         }
       />
@@ -453,6 +453,7 @@ exports[`<ListItem /> should render with all props 3`] = `
     >
       <ItemImage
         alt="Foo"
+        buttonsPos="left"
         className="image"
         hasTrashButton={true}
         itemUrl="#"
@@ -474,7 +475,6 @@ exports[`<ListItem /> should render with all props 3`] = `
             "className": "wish is-wished",
             "isWished": true,
             "onClick": undefined,
-            "pos": "left",
           }
         }
       />
@@ -660,6 +660,7 @@ exports[`<ListItem /> should render with all props 4`] = `
     >
       <ItemImage
         alt="Foo"
+        buttonsPos="right"
         className="big-image"
         hasTrashButton={true}
         itemUrl="#"
@@ -680,7 +681,6 @@ exports[`<ListItem /> should render with all props 4`] = `
             "className": "wish is-wished",
             "isWished": true,
             "onClick": undefined,
-            "pos": "left",
           }
         }
       />
@@ -822,6 +822,7 @@ exports[`<ListItem /> should render with all props 5`] = `
     >
       <ItemImage
         alt="Foo"
+        buttonsPos="right"
         className="small-image"
         hasTrashButton={true}
         itemUrl="#"
@@ -843,7 +844,6 @@ exports[`<ListItem /> should render with all props 5`] = `
             "className": "wish is-wished",
             "isWished": true,
             "onClick": undefined,
-            "pos": "left",
           }
         }
       />
@@ -997,6 +997,7 @@ exports[`<ListItem /> should render with all props 6`] = `
     >
       <ItemImage
         alt="Foo"
+        buttonsPos="right"
         className="small-image"
         hasTrashButton={true}
         itemUrl="#"
@@ -1018,7 +1019,6 @@ exports[`<ListItem /> should render with all props 6`] = `
             "className": "wish is-wished",
             "isWished": true,
             "onClick": undefined,
-            "pos": "left",
           }
         }
         withBlur={true}
@@ -1047,6 +1047,7 @@ exports[`<ListItem /> should render with all props 7`] = `
     >
       <ItemImage
         alt="Foo"
+        buttonsPos="right"
         className="small-image"
         hasQuickPreview={false}
         hasTrashButton={true}
@@ -1070,7 +1071,6 @@ exports[`<ListItem /> should render with all props 7`] = `
             "className": "wish is-wished",
             "isWished": true,
             "onClick": undefined,
-            "pos": "left",
           }
         }
         withBlur={true}
@@ -1099,6 +1099,7 @@ exports[`<ListItem /> should render with shouldHideAdultContent prop 1`] = `
     >
       <ItemImage
         alt=""
+        buttonsPos="left"
         className="image"
         quickViewBtnProps={
           Object {
@@ -1117,7 +1118,6 @@ exports[`<ListItem /> should render with shouldHideAdultContent prop 1`] = `
             "className": "wish",
             "isWished": undefined,
             "onClick": undefined,
-            "pos": "left",
           }
         }
         withBlur={true}
@@ -1146,6 +1146,7 @@ exports[`<ListItem /> should render with shouldHideAdultContent prop 2`] = `
     >
       <ItemImage
         alt=""
+        buttonsPos="right"
         className="big-image"
         quickViewBtnProps={
           Object {
@@ -1164,7 +1165,6 @@ exports[`<ListItem /> should render with shouldHideAdultContent prop 2`] = `
             "className": "wish",
             "isWished": undefined,
             "onClick": undefined,
-            "pos": "left",
           }
         }
         withBlur={true}
@@ -1193,6 +1193,7 @@ exports[`<ListItem /> should render without props 1`] = `
     >
       <ItemImage
         alt=""
+        buttonsPos="left"
         className="image"
         quickViewBtnProps={
           Object {
@@ -1211,7 +1212,6 @@ exports[`<ListItem /> should render without props 1`] = `
             "className": "wish",
             "isWished": undefined,
             "onClick": undefined,
-            "pos": "left",
           }
         }
       />

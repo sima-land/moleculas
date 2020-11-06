@@ -119,3 +119,23 @@
     background: rgba(255, 255, 255, .95);
   }
 }
+
+.icon {
+  position: absolute;
+  z-index: 2;
+  user-select: none;
+  cursor: pointer;
+  top: 8px;
+  &.right {
+    right: 8px;
+  }
+  &.left {
+    left: 8px;
+  }
+  &.as-second {
+    top: 40px; // 8px + 24px + 8px
+  }
+  &.as-third {
+    top: 72px; // 8px + 2 * (24px + 8px)
+  }
+}

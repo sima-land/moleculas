@@ -12,20 +12,16 @@ const cx = classnames.bind(styles);
  * @param {Function} props.onClick Обработчик нажатия на кнопку.
  * @param {number} props.size Размер иконки.
  * @param {string} [props.className] Класс кнопки.
- * @param {'left'|'right'} props.pos Позиция иконки.
  * @return {ReactElement} Компонент кнопки.
  */
 export const QuickViewButton = ({
   onClick,
   className,
   size = 24,
-  pos = 'left',
 }) => (
   <div
     title='Быстрый просмотр'
-    className={cx('button', pos, {
-      [className]: className,
-    })}
+    className={cx('button', className)}
     onClick={onClick}
   >
     <Icon

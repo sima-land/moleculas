@@ -101,7 +101,6 @@ export default class ItemImage extends Component {
   render () {
     const {
       alt,
-      wishProps,
       className,
       onClick,
       badges,
@@ -111,10 +110,13 @@ export default class ItemImage extends Component {
       isFetchingWishItems,
       photos = [],
       fakeDivClassName,
-      buttonsPos,
+      buttonsPos = 'left',
       src,
       hasTrashButton,
       trashButtonProps,
+      hasWishButton,
+      wishProps,
+      hasQuickPreview,
     } = this.props;
     const { currentPhotoIndex } = this.state;
     const currentPhoto = currentPhotoIndex === null ? src : photos[currentPhotoIndex];
@@ -160,9 +162,10 @@ export default class ItemImage extends Component {
           {hasTrashButton && (
             <Icon
               icon={blackTrashCart}
-              size={20}
+              size={24}
               color='gray87'
-              className={trashButtonProps.className}
+              viewBox='0 0 24 24'
+              className={cx('icon', buttonsPos, trashButtonProps.className)}
               onClick={trashButtonProps.onClick}
             />
           )}
@@ -174,20 +177,29 @@ export default class ItemImage extends Component {
             />
           </div>
         )}
-        {Boolean(wishProps) && !withBlur && (
+        {hasWishButton && (
           <WishButton
             isWished={wishProps.isWished}
-            className={wishProps.className}
+            className={cx(
+              'icon',
+              buttonsPos,
+              hasTrashButton && 'as-second',
+              wishProps.className
+            )}
             onClick={wishProps.onClick}
-            pos={buttonsPos}
             isFetchingWishItems={isFetchingWishItems}
           />
         )}
-        {!withBlur && (
+        {hasQuickPreview && (
           <QuickViewButton
-            pos={buttonsPos}
             onClick={quickViewBtnProps.onClick}
-            className={quickViewBtnProps.className}
+            className={cx(
+              'icon',
+              buttonsPos,
+              (hasTrashButton || hasWishButton) && 'as-second',
+              (hasTrashButton && hasWishButton) && 'as-third',
+              quickViewBtnProps.className
+            )}
           />
         )}
       </div>

@@ -19,7 +19,6 @@ ListView.args = {
   hasQuickPreview: true,
   hasAddToCartBlock: true,
   hasWishButton: true,
-  hasTrashButton: true,
 
   updateItemViewed: noop,
   onLoadImage: noop,
@@ -31,7 +30,6 @@ TileView.args = {
   hasQuickPreview: true,
   hasAddToCartBlock: true,
   hasSelectionButton: true,
-  hasWishButton: true,
   hasTrashButton: true,
   asTile: true,
 
