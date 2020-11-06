@@ -3,6 +3,8 @@ import { act } from 'react-dom/test-utils';
 import { mount, shallow } from 'enzyme';
 import Icon from '@dev-dep/ui-nucleons/icon';
 import ItemImage from '../index';
+import WishButton from '../../../../common/components/wish-button';
+import QuickViewButton from '../../../../common/components/quick-view-button';
 
 describe('<ItemImage />', () => {
   it('should render without props', () => {
@@ -90,9 +92,44 @@ describe('<ItemImage />', () => {
     );
     expect(wrapper.find(Icon)).toHaveLength(1);
     expect(wrapper).toMatchSnapshot();
-
-    wrapper.setProps({ selectionProps: { isSelected: true } });
-    expect(wrapper.find(Icon)).toHaveLength(1);
+  });
+  it('should render with wish button', () => {
+    const wrapper = shallow(
+      <ItemImage
+        wishProps={{
+          className: 'test-wish-button',
+          onClick: jest.fn(),
+        }}
+        hasWishButton
+      />
+    );
+    expect(wrapper.find(WishButton)).toHaveLength(1);
+    expect(wrapper.find(WishButton).prop('className')).toEqual('icon left test-wish-button');
     expect(wrapper).toMatchSnapshot();
+
+    wrapper.setProps({ hasTrashButton: true, trashButtonProps: {} });
+    expect(wrapper.find(WishButton).prop('className')).toEqual('icon left as-second test-wish-button');
+  });
+  it('should render with quick preview button', () => {
+    const wrapper = shallow(
+      <ItemImage
+        quickViewBtnProps={{
+          className: 'test-quick-view-button',
+          onClick: jest.fn(),
+        }}
+        hasQuickPreview
+      />
+    );
+    expect(wrapper.find(QuickViewButton)).toHaveLength(1);
+    expect(wrapper.find(QuickViewButton).prop('className')).toEqual('icon left test-quick-view-button');
+    expect(wrapper).toMatchSnapshot();
+
+    wrapper.setProps({ hasTrashButton: true, trashButtonProps: {} });
+    expect(wrapper.find(QuickViewButton).prop('className'))
+      .toEqual('icon left as-second test-quick-view-button');
+
+    wrapper.setProps({ hasWishButton: true, wishProps: {} });
+    expect(wrapper.find(QuickViewButton).prop('className'))
+      .toEqual('icon left as-second as-third test-quick-view-button');
   });
 });

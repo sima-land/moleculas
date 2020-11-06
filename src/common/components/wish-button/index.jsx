@@ -13,7 +13,6 @@ const cx = classnames.bind(style);
  * @param {boolean} props.isWished Признак товара в избранном.
  * @param {string} props.className Дополнительный класс для компонента.
  * @param {Function} props.onClick Обработчик клика по избранному.
- * @param {'left'|'right'} props.pos Позиция иконки.
  * @param {boolean} props.isFetchingWishItems Признак загрузки добавления товара в список избранного.
  * @return {ReactElement} Компонент добавления в избранное.
  */
@@ -21,17 +20,17 @@ export const WishButton = ({
   isWished,
   className,
   onClick,
-  pos,
   isFetchingWishItems,
   size = 24,
 }) => (
   <div
     title={isWished ? 'Убрать из избранного' : 'Добавить в избранное'}
-    className={cx('wish-button', pos, {
-      [className]: className,
-      ['is-wished']: isWished,
-      ['blocked']: isFetchingWishItems,
-    })}
+    className={cx(
+      'wish-button',
+      className,
+      isWished && 'is-wished',
+      isFetchingWishItems && 'blocked'
+    )}
     onClick={isFetchingWishItems ? null : onClick}
   >
     <Icon

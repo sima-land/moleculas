@@ -7,7 +7,7 @@ exports[`<QuickViewButton /> should works with default props 1`] = `
   size={15}
 >
   <div
-    className="button left btn"
+    className="button btn"
     onClick={[MockFunction]}
     title="Быстрый просмотр"
   >
@@ -44,7 +44,7 @@ exports[`<QuickViewButton /> should works with default props 1`] = `
 exports[`<QuickViewButton /> should works without props 1`] = `
 <QuickViewButton>
   <div
-    className="button left"
+    className="button"
     title="Быстрый просмотр"
   >
     <Icon

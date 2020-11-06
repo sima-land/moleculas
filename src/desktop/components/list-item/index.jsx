@@ -184,7 +184,6 @@ export const ListItem = ({
             wishProps={{
               className: cx('wish', isWished && 'is-wished'),
               onClick: onWishClick,
-              pos: 'left',
               isWished,
             }}
             quickViewBtnProps={{
@@ -205,6 +204,7 @@ export const ListItem = ({
               onClick: onTrashClick,
               className: cx('trash-cart-button', 'display-on-hover'),
             }}
+            buttonsPos={asTile ? 'right' : 'left'}
           />
         </div>
         {shouldHideAdultContent && (

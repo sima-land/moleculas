@@ -4,17 +4,6 @@
 .button {
   opacity: 0;
   color: $gray87;
-  user-select: none;
-  position: absolute;
-  cursor: pointer;
-  z-index: 2;
-  top: 42px;
-  &.left {
-    left: 10px;
-  }
-  &.right {
-    right: 10px;
-  }
   .stroke {
     overflow: visible;
     stroke-width: 1;
