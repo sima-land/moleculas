@@ -74,10 +74,10 @@ exports[`<ItemRating /> should render with props 1`] = `
               <Memo(Text)
                 color="additional-amber"
                 size={12}
-                weight={800}
+                weight={700}
               >
                 <span
-                  className="size-12 line-height-16 color__additional-amber"
+                  className="size-12 line-height-16 color__additional-amber weight-700"
                 >
                   2.0
                 </span>

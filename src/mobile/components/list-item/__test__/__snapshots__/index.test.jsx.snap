@@ -100,6 +100,15 @@ exports[`<ListItem /> should render with all props 1`] = `
         reviewsCount={55}
         value={4.8}
       />
+      <Box
+        marginTop={4}
+      >
+        <span
+          className="in-stock gray"
+        >
+          Нет в наличии
+        </span>
+      </Box>
     </div>
     <Icon
       className="actions"
@@ -229,6 +238,15 @@ exports[`<ListItem /> should render with all props 2`] = `
           Артикул: 
           10000
         </Memo(Text)>
+      </Box>
+      <Box
+        marginTop={4}
+      >
+        <span
+          className="in-stock gray"
+        >
+          Нет в наличии
+        </span>
       </Box>
       <ItemModifier
         count={55}
@@ -391,6 +409,15 @@ exports[`<ListItem /> should render with all props 3`] = `
           Артикул: 
           10000
         </Memo(Text)>
+      </Box>
+      <Box
+        marginTop={4}
+      >
+        <span
+          className="in-stock gray"
+        >
+          Нет в наличии
+        </span>
       </Box>
       <ItemModifier
         count={55}
@@ -559,6 +586,15 @@ exports[`<ListItem /> should render with all props 4`] = `
           10000
         </Memo(Text)>
       </Box>
+      <Box
+        marginTop={4}
+      >
+        <span
+          className="in-stock gray"
+        >
+          Нет в наличии
+        </span>
+      </Box>
       <ItemModifier
         count={55}
         layout="inline"
@@ -707,19 +743,6 @@ exports[`<ListItem /> should render without props 1`] = `
       <div
         className="prices"
       />
-      <div
-        className="add-to-cart"
-      >
-        <div
-          className="cell"
-        >
-          <ForwardRef(Button)
-            className="cart-button"
-          >
-            В корзину
-          </ForwardRef(Button)>
-        </div>
-      </div>
     </div>
   </Box>
 </div>

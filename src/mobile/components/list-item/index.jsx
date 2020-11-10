@@ -64,8 +64,11 @@ const optionsDeclinations = Object.freeze([
  * @property {boolean} [asTile] Тип отображения компонента - tile (иначе list).
  * @property {Function} addObserveWithMargin Функция подписки на Intersection Observer.
  * @property {Function} onAdultClick Обработчик нажатия на ссылку в блоке 18+.
+ * @property {Object} inStockProps Свойства информации о закончившемся товаре.
+ * @property {boolean} hasAddToCartBlock Признак наличия блока добавления товара в корзину.
  * @property {boolean} hasWishButton Признак наличия кнопки добавления в избранное.
  * @property {boolean} hasActionsButton Признак отображения кнопки дополнительных действий.
+ * @property {boolean} hasSid Признак необходимости отображения артикула.
  */
 
 /**
@@ -118,10 +121,13 @@ export const ListItem = ({
   updateItemViewed,
   addObserveWithMargin,
   onLoadImage,
+  inStockProps,
 
   // Пропы кастомизации
+  hasAddToCartBlock,
   hasWishButton,
   hasActionsButton,
+  hasSid,
 }) => {
   const direction = asTile ? 'column' : 'row';
   const adultMarginTop = 0;
@@ -131,7 +137,7 @@ export const ListItem = ({
     isFunction(addObserveWithMargin)
     && wrapRef.current
     && addObserveWithMargin(wrapRef.current, () => {
-      updateItemViewed(sid);
+      isFunction(updateItemViewed) && updateItemViewed(sid);
     });
   }, [wrapRef.current]);
 
@@ -221,11 +227,19 @@ export const ListItem = ({
                 />
               </Box>
             )}
-            {Boolean(sid) && !asTile && (
+            {hasSid && Boolean(sid) && !asTile && (
               <Box marginTop={2}>
                 <Text color='gray87' size={12} lineHeight={16}>
                      Артикул: {sid}
                 </Text>
+              </Box>
+            )}
+            {Boolean(inStockProps) && (
+              <Box marginTop={4}>
+                <span
+                  className={cx('in-stock', inStockProps.isGray && 'gray')}
+                  children={inStockProps.text}
+                />
               </Box>
             )}
             {Boolean(modifierProps) && !asTile && (
@@ -246,48 +260,52 @@ export const ListItem = ({
                 isSmaller
               />
             )}
-            {!asTile && isUndefined(displayedQuantity) && (
-              <div className={cx('add-to-cart')}>
-                <div className={cx('cell')}>
-                  <Button
-                    className={cx('cart-button')}
-                    onClick={onCartButtonClick}
+            {hasAddToCartBlock && (
+              <>
+                {!asTile && isUndefined(displayedQuantity) && (
+                  <div className={cx('add-to-cart')}>
+                    <div className={cx('cell')}>
+                      <Button
+                        className={cx('cart-button')}
+                        onClick={onCartButtonClick}
+                      >
+                        {isCartFetching
+                          ? (
+                            <Icon
+                              className={cx('button-spinner')}
+                              icon={spinnerIcon}
+                              size={24}
+                              viewBox='0 0 24 24'
+                            />
+                          )
+                          : <>В&nbsp;корзину</>
+                        }
+                      </Button>
+                    </div>
+                  </div>
+                )}
+                {!asTile && !isUndefined(displayedQuantity) && (
+                  <div
+                    onClick={onCartInputClick}
+                    className={cx('in-cart-input-wrapper')}
                   >
-                    {isCartFetching
-                      ? (
-                        <Icon
-                          className={cx('button-spinner')}
-                          icon={spinnerIcon}
-                          size={24}
-                          viewBox='0 0 24 24'
-                        />
-                      )
-                      : <>В&nbsp;корзину</>
-                    }
-                  </Button>
-                </div>
-              </div>
-            )}
-            {!asTile && !isUndefined(displayedQuantity) && (
-              <div
-                onClick={onCartInputClick}
-                className={cx('in-cart-input-wrapper')}
-              >
-                <span className={cx('in-cart-value')}>{displayedQuantity}</span>
-                <span className={cx('step-arrows')}>
-                  <Icon
-                    icon={stepArrows}
-                    size={14}
-                    color='black'
-                    role='button'
-                  />
-                </span>
-              </div>
-            )}
-            {!asTile && Boolean(additionStepText) && (
-              <div className={cx('min-quantity')}>
-                {additionStepText}
-              </div>
+                    <span className={cx('in-cart-value')}>{displayedQuantity}</span>
+                    <span className={cx('step-arrows')}>
+                      <Icon
+                        icon={stepArrows}
+                        size={14}
+                        color='black'
+                        role='button'
+                      />
+                    </span>
+                  </div>
+                )}
+                {!asTile && Boolean(additionStepText) && (
+                  <div className={cx('min-quantity')}>
+                    {additionStepText}
+                  </div>
+                )}
+              </>
             )}
           </div>
         )}

@@ -132,4 +132,16 @@ describe('<ItemImage />', () => {
     expect(wrapper.find(QuickViewButton).prop('className'))
       .toEqual('icon left as-second as-third test-quick-view-button');
   });
+  it('should render with selection button', () => {
+    const wrapper = shallow(
+      <ItemImage
+        selectionProps={{
+          isSelected: true,
+          onSelect: jest.fn(),
+        }}
+        hasSelectionButton
+      />
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 });

@@ -69,6 +69,12 @@ describe('<ListItem />', () => {
         isPriceFixed
         asTile
         hasActionsButton
+        hasAddToCartBlock
+        hasSid
+        inStockProps={{
+          text: 'Нет в наличии',
+          isGray: true,
+        }}
       />
     );
     expect(wrapper).toMatchSnapshot();
@@ -90,6 +96,7 @@ describe('<ListItem />', () => {
     const wrapper = mount(
       <ListItem
         onCartButtonClick={spy}
+        hasAddToCartBlock
       />
     );
     act(() => {
@@ -103,6 +110,7 @@ describe('<ListItem />', () => {
       <ListItem
         onCartInputClick={spy}
         displayedQuantity={22}
+        hasAddToCartBlock
       />
     );
     act(() => {
