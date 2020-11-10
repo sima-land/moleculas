@@ -125,39 +125,44 @@ exports[`<ItemPrice /> should render with props 1`] = `
                   <div
                     className="wrap discount"
                   >
-                    <div
-                      className="item"
+                    <Badge
+                      containerProps={
+                        Object {
+                          "className": "item",
+                        }
+                      }
+                      definitions={
+                        Object {
+                          "discountPercent": Object {
+                            "type": "text",
+                            "value": "-50%",
+                          },
+                        }
+                      }
                       key="0"
+                      link="/sale/?is_label=1"
+                      type="b-discount"
                     >
-                      <Flag
-                        className="discount"
-                        definitions={
+                      <span
+                        className="container item"
+                        style={
                           Object {
-                            "discountPercent": Object {
-                              "type": "text",
-                              "value": "-50%",
-                            },
+                            "backgroundColor": "#000",
+                            "color": "#fff",
+                            "fill": "#fff",
                           }
                         }
-                        link="/sale/?is_label=1"
-                        type="b-discount"
                       >
                         <span
-                          className="wrap discount"
-                          style={
-                            Object {
-                              "backgroundColor": undefined,
-                              "fill": undefined,
-                            }
-                          }
+                          className="content"
                         >
                           <a
                             className="link"
                             href="/sale/?is_label=1"
                           />
                         </span>
-                      </Flag>
-                    </div>
+                      </span>
+                    </Badge>
                   </div>
                 </FlagsList>
               </span>

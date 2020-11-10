@@ -80,6 +80,7 @@ export default class ItemImage extends Component {
     const {
       src,
       alt,
+      hasWishButton,
       wishProps,
       className,
       onClick,
@@ -110,14 +111,12 @@ export default class ItemImage extends Component {
             />
           </div>
         )}
-        {Boolean(wishProps) && !withBlur && (
+        {hasWishButton && (
           <WishButton
             isWished={wishProps.isWished}
             className={wishProps.className}
             onClick={wishProps.onClick}
-            pos={wishProps.pos}
             isFetchingWishItems={isFetchingWishItems}
-            size={24}
           />
         )}
       </div>

@@ -68,57 +68,57 @@ exports[`<ItemImage /> should render badges 1`] = `
         <div
           className="wrap"
         >
-          <div
-            className="item"
+          <Badge
+            bgColor="#b52ea8"
+            containerProps={
+              Object {
+                "className": "item",
+              }
+            }
+            definitions={
+              Object {
+                "label": Object {
+                  "type": "text",
+                  "value": "-36%",
+                },
+              }
+            }
+            fields={
+              Array [
+                "label",
+              ]
+            }
             key="0"
+            link="/percent/"
+            strokeColor={null}
+            textColor="#f2f2f2"
+            title={null}
           >
-            <Flag
-              bgColor="#b52ea8"
-              definitions={
+            <span
+              className="container item"
+              style={
                 Object {
-                  "label": Object {
-                    "type": "text",
-                    "value": "-36%",
-                  },
+                  "backgroundColor": "#b52ea8",
+                  "color": "#f2f2f2",
+                  "fill": null,
                 }
               }
-              fields={
-                Array [
-                  "label",
-                ]
-              }
-              link="/percent/"
-              strokeColor={null}
-              textColor="#f2f2f2"
               title={null}
             >
               <span
-                className="wrap"
-                style={
-                  Object {
-                    "backgroundColor": "#f2f2f2",
-                    "fill": null,
-                  }
-                }
-                title={null}
+                className="content"
               >
                 <a
                   className="link"
                   href="/percent/"
                 >
                   <span
-                    className="content"
-                  >
-                    <span
-                      key="0"
-                    >
-                      -36%
-                    </span>
-                  </span>
+                    key="0"
+                  />
                 </a>
               </span>
-            </Flag>
-          </div>
+            </span>
+          </Badge>
         </div>
       </FlagsList>
     </div>

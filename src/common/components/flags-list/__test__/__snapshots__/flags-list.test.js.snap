@@ -4,15 +4,25 @@ exports[`<FlagsList /> with props renders correctly 1`] = `
 <div
   className="wrap test"
 >
-  <div
-    className="item"
+  <Badge
+    bgColor="#64a0eb"
+    containerProps={
+      Object {
+        "className": "item",
+      }
+    }
+    fields={
+      Array [
+        Object {
+          "type": "text",
+          "value": "-10%",
+        },
+      ]
+    }
     key="0"
-  >
-    <Flag
-      className="test"
-      label="Test"
-    />
-  </div>
+    link="/sale/?is_label=1"
+    textColor="#FFFFFF"
+  />
 </div>
 `;
 

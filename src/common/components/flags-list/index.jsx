@@ -1,8 +1,8 @@
 import React from 'react';
-import Flag from '../flag';
 import { isNonEmptyArray } from '../../../common/helpers/is-non-empty';
 import classes from './flags-list.scss';
 import classnames from 'classnames/bind';
+import Badge from '@dev-dep/ui-nucleons/badge';
 
 const cx = classnames.bind(classes);
 
@@ -18,12 +18,13 @@ const FlagsList = ({
 }) => (
   <div className={cx('wrap', className)}>
     {isNonEmptyArray(flags) && flags.map((flagProps, index) => (
-      <div key={index} className={cx('item')}>
-        <Flag
-          className={className}
-          {...flagProps}
-        />
-      </div>
+      <Badge
+        key={index}
+        containerProps={{
+          className: cx('item'),
+        }}
+        {...flagProps}
+      />
     ))}
   </div>
 );

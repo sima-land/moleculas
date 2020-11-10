@@ -36,14 +36,14 @@ exports[`<ListItem /> should render with all props 1`] = `
           ]
         }
         className="column"
+        hasWishButton={true}
         itemUrl="#"
         src="cdn-url"
         wishProps={
           Object {
-            "className": "wish is-wished",
+            "className": "wish",
             "isWished": true,
             "onClick": undefined,
-            "pos": "left",
           }
         }
       />
@@ -101,6 +101,11 @@ exports[`<ListItem /> should render with all props 1`] = `
         value={4.8}
       />
     </div>
+    <Icon
+      className="actions"
+      icon={[Function]}
+      size={24}
+    />
   </Box>
 </div>
 `;
@@ -141,14 +146,14 @@ exports[`<ListItem /> should render with all props 2`] = `
           ]
         }
         className="row"
+        hasWishButton={true}
         itemUrl="#"
         src="cdn-url"
         wishProps={
           Object {
-            "className": "wish is-wished",
+            "className": "wish",
             "isWished": true,
             "onClick": undefined,
-            "pos": "left",
           }
         }
       />
@@ -258,6 +263,11 @@ exports[`<ListItem /> should render with all props 2`] = `
         for 2 pcs
       </div>
     </div>
+    <Icon
+      className="actions"
+      icon={[Function]}
+      size={24}
+    />
   </Box>
 </div>
 `;
@@ -298,14 +308,14 @@ exports[`<ListItem /> should render with all props 3`] = `
           ]
         }
         className="row"
+        hasWishButton={true}
         itemUrl="#"
         src="cdn-url"
         wishProps={
           Object {
-            "className": "wish is-wished",
+            "className": "wish",
             "isWished": true,
             "onClick": undefined,
-            "pos": "left",
           }
         }
       />
@@ -420,6 +430,11 @@ exports[`<ListItem /> should render with all props 3`] = `
         for 2 pcs
       </div>
     </div>
+    <Icon
+      className="actions"
+      icon={[Function]}
+      size={24}
+    />
   </Box>
 </div>
 `;
@@ -460,14 +475,14 @@ exports[`<ListItem /> should render with all props 4`] = `
           ]
         }
         className="row"
+        hasWishButton={true}
         itemUrl="#"
         src="cdn-url"
         wishProps={
           Object {
-            "className": "wish is-wished",
+            "className": "wish",
             "isWished": true,
             "onClick": undefined,
-            "pos": "left",
           }
         }
       />
@@ -583,6 +598,11 @@ exports[`<ListItem /> should render with all props 4`] = `
         for 2 pcs
       </div>
     </div>
+    <Icon
+      className="actions"
+      icon={[Function]}
+      size={24}
+    />
   </Box>
 </div>
 `;
@@ -609,7 +629,6 @@ exports[`<ListItem /> should render with shouldHideAdultContent prop 1`] = `
             "className": "wish",
             "isWished": undefined,
             "onClick": undefined,
-            "pos": "left",
           }
         }
         withBlur={true}
@@ -644,7 +663,6 @@ exports[`<ListItem /> should render with shouldHideAdultContent prop 2`] = `
             "className": "wish",
             "isWished": undefined,
             "onClick": undefined,
-            "pos": "left",
           }
         }
         withBlur={true}
@@ -679,7 +697,6 @@ exports[`<ListItem /> should render without props 1`] = `
             "className": "wish",
             "isWished": undefined,
             "onClick": undefined,
-            "pos": "left",
           }
         }
       />

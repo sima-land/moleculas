@@ -6,14 +6,11 @@ exports[`<ItemImage /> should render badges 1`] = `
     Array [
       Object {
         "bgColor": "#b52ea8",
-        "definitions": Object {
-          "label": Object {
+        "fields": Array [
+          Object {
             "type": "text",
             "value": "-36%",
           },
-        },
-        "fields": Array [
-          "label",
         ],
         "link": "/percent/",
         "strokeColor": null,
@@ -47,14 +44,11 @@ exports[`<ItemImage /> should render badges 1`] = `
           Array [
             Object {
               "bgColor": "#b52ea8",
-              "definitions": Object {
-                "label": Object {
+              "fields": Array [
+                Object {
                   "type": "text",
                   "value": "-36%",
                 },
-              },
-              "fields": Array [
-                "label",
               ],
               "link": "/percent/",
               "strokeColor": null,
@@ -67,57 +61,54 @@ exports[`<ItemImage /> should render badges 1`] = `
         <div
           className="wrap"
         >
-          <div
-            className="item"
-            key="0"
-          >
-            <Flag
-              bgColor="#b52ea8"
-              definitions={
+          <Badge
+            bgColor="#b52ea8"
+            containerProps={
+              Object {
+                "className": "item",
+              }
+            }
+            fields={
+              Array [
                 Object {
-                  "label": Object {
-                    "type": "text",
-                    "value": "-36%",
-                  },
+                  "type": "text",
+                  "value": "-36%",
+                },
+              ]
+            }
+            key="0"
+            link="/percent/"
+            strokeColor={null}
+            textColor="#f2f2f2"
+            title={null}
+          >
+            <span
+              className="container item"
+              style={
+                Object {
+                  "backgroundColor": "#b52ea8",
+                  "color": "#f2f2f2",
+                  "fill": null,
                 }
               }
-              fields={
-                Array [
-                  "label",
-                ]
-              }
-              link="/percent/"
-              strokeColor={null}
-              textColor="#f2f2f2"
               title={null}
             >
               <span
-                className="wrap"
-                style={
-                  Object {
-                    "backgroundColor": "#f2f2f2",
-                    "fill": null,
-                  }
-                }
-                title={null}
+                className="content"
               >
                 <a
                   className="link"
                   href="/percent/"
                 >
                   <span
-                    className="content"
+                    key="0"
                   >
-                    <span
-                      key="0"
-                    >
-                      -36%
-                    </span>
+                    -36%
                   </span>
                 </a>
               </span>
-            </Flag>
-          </div>
+            </span>
+          </Badge>
         </div>
       </FlagsList>
     </div>
@@ -127,6 +118,7 @@ exports[`<ItemImage /> should render badges 1`] = `
 
 exports[`<ItemImage /> should render wish 1`] = `
 <ItemImage
+  hasWishButton={true}
   wishProps={Object {}}
 >
   <div
@@ -145,9 +137,7 @@ exports[`<ItemImage /> should render wish 1`] = `
         </a>
       </ForwardRef(Link)>
     </div>
-    <WishButton
-      size={24}
-    >
+    <WishButton>
       <div
         className="wish-button"
         title="Добавить в избранное"

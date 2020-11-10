@@ -27,6 +27,8 @@ ListView.args = {
   ...data,
   hasAddToCartBlock: true,
   hasWishButton: true,
+  hasActionsButton: true,
+  isWished: true,
 };
 
 TileView.storyName = 'Плиткой';
