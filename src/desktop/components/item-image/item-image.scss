@@ -139,3 +139,22 @@
     top: 72px; // 8px + 2 * (24px + 8px)
   }
 }
+
+.selection-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .selection-circle {
+    background: $white;
+    width: 56px;
+    height: 56px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

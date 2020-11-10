@@ -25,6 +25,7 @@ export const AddedView = Template.bind({});
 ListView.storyName = 'Списком';
 ListView.args = {
   ...data,
+  hasSid: true,
   hasAddToCartBlock: true,
   hasWishButton: true,
   hasActionsButton: true,
@@ -34,6 +35,7 @@ ListView.args = {
 TileView.storyName = 'Плиткой';
 TileView.args = {
   ...data,
+  hasSid: true,
   hasAddToCartBlock: true,
   hasWishButton: true,
   asTile: true,

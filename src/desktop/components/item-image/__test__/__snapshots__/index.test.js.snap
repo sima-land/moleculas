@@ -268,6 +268,36 @@ exports[`<ItemImage /> should render with quick preview button 1`] = `
 </div>
 `;
 
+exports[`<ItemImage /> should render with selection button 1`] = `
+<div
+  className="wrapper"
+  onMouseLeave={[Function]}
+>
+  <div
+    className="image-wrapper"
+  >
+    <ForwardRef(Link)>
+      <img
+        className="image"
+      />
+    </ForwardRef(Link)>
+  </div>
+  <div
+    className="selection-container"
+    onClick={[MockFunction]}
+  >
+    <div
+      className="selection-circle"
+    >
+      <Icon
+        icon={[Function]}
+        size={56}
+      />
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<ItemImage /> should render with trash cart button 1`] = `
 <div
   className="wrapper"

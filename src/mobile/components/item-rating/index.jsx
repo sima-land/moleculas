@@ -43,7 +43,7 @@ export const ItemRating = ({
             color='additional-amber'
             size={12}
             children={value.toFixed(1)}
-            weight={800}
+            weight={700}
           />
         </Box>
         <Text

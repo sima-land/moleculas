@@ -6,6 +6,7 @@ import isFunction from 'lodash/isFunction';
 import style from './item-image.scss';
 import FlagsList from '../../../common/components/flags-list';
 import EighteenPlus from '../../../common/icons/eighteen-plus.svg';
+import SelectedIcon from '../../../common/icons/selected.svg';
 import WishButton from '../../../common/components/wish-button';
 import QuickViewButton from '../../../common/components/quick-view-button';
 import blackTrashCart from '../../../common/icons/trash-cart.svg';
@@ -47,6 +48,8 @@ const cx = classnames.bind(style);
  * @param {boolean} props.isFetchingWishItems Признак загрузки добавления товара в список избранного.
  * @param {boolean} props.hasTrashButton Признак наличия кнопки удаления товара.
  * @param {TrashButtonProps} [props.trashButtonProps] Свойства для кнопки удаления товара.
+ * @param {Object} props.selectionProps Свойства выделения товара.
+ * @param {boolean} props.hasSelectionButton Признак наличия кнопки выделения товара.
  * @return {ReactElement} Компонент изображения.
  */
 export default class ItemImage extends Component {
@@ -117,6 +120,8 @@ export default class ItemImage extends Component {
       hasWishButton,
       wishProps,
       hasQuickPreview,
+      hasSelectionButton,
+      selectionProps,
     } = this.props;
     const { currentPhotoIndex } = this.state;
     const currentPhoto = currentPhotoIndex === null ? src : photos[currentPhotoIndex];
@@ -201,6 +206,15 @@ export default class ItemImage extends Component {
               quickViewBtnProps.className
             )}
           />
+        )}
+        {hasSelectionButton && Boolean(selectionProps) && (
+          <div onClick={selectionProps.onSelect} className={cx('selection-container')}>
+            <div className={cx('selection-circle')}>
+              {selectionProps.isSelected && (
+                <Icon icon={SelectedIcon} size={56} />
+              )}
+            </div>
+          </div>
         )}
       </div>
     );
