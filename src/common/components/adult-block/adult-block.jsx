@@ -41,7 +41,7 @@ const AdultBlock = ({
       </Box>
       <Text size={12} lineHeight={20}>{actualTextBlocks.condition}</Text>
       <Box marginTop={6}>
-        <Link underlined={false} onClick={onClick} pseudo>
+        <Link onClick={onClick} pseudo>
           <Text size={16} weight={600} lineHeight={32}>{actualTextBlocks.action}</Text>
         </Link>
       </Box>

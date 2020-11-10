@@ -20,6 +20,7 @@ import Icon from '@dev-dep/ui-nucleons/icon';
 import Link from '@dev-dep/ui-nucleons/link';
 import spinnerIcon from '../../../common/icons/white-spinner.svg';
 import stepArrows from '../../../common/icons/step-arrows.svg';
+import tripleDots from '../../../common/icons/triple-dots.svg';
 import withInViewportObserver from '@dev-dep/ui-nucleons/with-in-viewport-observer';
 import withGlobalListeners from '@dev-dep/ui-nucleons/hoc/with-global-listeners';
 import Types from 'prop-types';
@@ -56,12 +57,15 @@ const optionsDeclinations = Object.freeze([
  * @property {Function} [onImageClick] Обработчик нажатия на картинку товара.
  * @property {Function} [onModifierClick] Обработчик нажатия селектора модификатора.
  * @property {Function} [onQuickViewClick] Обработчик нажатия на кнопку быстрого просмотра.
+ * @property {Function} [onActionsClick] Обработчик нажатия на кнопку дополнительных действий.
  * @property {Function} [addToCartHandler] Обработчик действий с корзиной.
  * @property {Function} [onCartClick] Обработчик нажатия на кнопку "В корзину".
  * @property {string} [wrapperClassName] Класс для обертки.
  * @property {boolean} [asTile] Тип отображения компонента - tile (иначе list).
  * @property {Function} addObserveWithMargin Функция подписки на Intersection Observer.
  * @property {Function} onAdultClick Обработчик нажатия на ссылку в блоке 18+.
+ * @property {boolean} hasWishButton Признак наличия кнопки добавления в избранное.
+ * @property {boolean} hasActionsButton Признак отображения кнопки дополнительных действий.
  */
 
 /**
@@ -77,6 +81,7 @@ export const ListItem = ({
   onModifierClick,
   onWishClick,
   onDetailsClick,
+  onActionsClick,
 
   // Свойства дочерних компонентов
   wholesaleProps,
@@ -113,6 +118,10 @@ export const ListItem = ({
   updateItemViewed,
   addObserveWithMargin,
   onLoadImage,
+
+  // Пропы кастомизации
+  hasWishButton,
+  hasActionsButton,
 }) => {
   const direction = asTile ? 'column' : 'row';
   const adultMarginTop = 0;
@@ -134,10 +143,10 @@ export const ListItem = ({
             src={image}
             alt={name}
             onClick={onImageClick}
+            hasWishButton={hasWishButton && !shouldHideAdultContent}
             wishProps={{
-              className: cx('wish', isWished && 'is-wished'),
+              className: cx('wish'),
               onClick: onWishClick,
-              pos: 'left',
               isWished,
             }}
             className={direction}
@@ -281,6 +290,9 @@ export const ListItem = ({
               </div>
             )}
           </div>
+        )}
+        {hasActionsButton && (
+          <Icon size={24} icon={tripleDots} onClick={onActionsClick} className={cx('actions')} />
         )}
       </Box>
     </div>

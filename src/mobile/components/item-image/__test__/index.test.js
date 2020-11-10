@@ -9,7 +9,7 @@ describe('<ItemImage />', () => {
     expect(wrapper).toMatchSnapshot();
   });
   it('should render wish', () => {
-    const wrapper = mount(<ItemImage wishProps={{}} />);
+    const wrapper = mount(<ItemImage wishProps={{}} hasWishButton />);
     expect(wrapper).toMatchSnapshot();
   });
   it('should render with withBlur prop', () => {
@@ -21,14 +21,11 @@ describe('<ItemImage />', () => {
       <ItemImage badges={[
         {
           bgColor: '#b52ea8',
-          definitions: {
-            label: {
+          fields: [
+            {
               type: 'text',
               value: '-36%',
             },
-          },
-          fields: [
-            'label',
           ],
           link: '/percent/',
           strokeColor: null,

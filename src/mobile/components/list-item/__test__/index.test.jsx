@@ -63,10 +63,12 @@ describe('<ListItem />', () => {
           price: 1000,
           description: 'foo',
         }}
+        hasWishButton
         isWished
         wrapperClassName='test-wrapper-class'
         isPriceFixed
         asTile
+        hasActionsButton
       />
     );
     expect(wrapper).toMatchSnapshot();

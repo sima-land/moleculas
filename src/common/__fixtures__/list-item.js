@@ -16,59 +16,60 @@ export const data = {
   additionStepText: 'по 1 набору',
   badges: [
     {
+      title: null,
+      link: '/sale/?is_label=1',
+      bgColor: '#64a0eb',
+      textColor: '#FFFFFF',
       strokeColor: null,
       shadowColor: null,
-      link: '/nashi-razrabotki/licenziya/?is_label=1',
-      title: null,
       fields: [
-        'label',
-      ],
-      definitions: {
-        label: {
+        {
           type: 'text',
-          value: 'Лицензия',
+          value: '-10%',
         },
-      },
-      textColor: '#FFFFFF',
-      bgColor: '#483d8b',
+      ],
     },
     {
+      title: null,
+      link: '/nasha-razrabotka/?is_label=1',
+      bgColor: '#000000',
+      textColor: '#FFFFFF',
       strokeColor: null,
       shadowColor: null,
-      link: '/nasha-razrabotka/?is_label=1',
-      title: null,
       fields: [
-        'label',
-      ],
-      definitions: {
-        label: {
+        {
           type: 'text',
           value: 'Наша разработка',
         },
-        icon: {
-          type: 'icon',
-          value: 'https://static2.static1-sima-land.com/img/badges/dolphin.svg',
-        },
-      },
+      ],
+    },
+    {
+      title: null,
+      link: '/markdown/?is_label=1',
+      bgColor: '#607d8b',
       textColor: '#FFFFFF',
-      bgColor: '#000000',
+      strokeColor: null,
+      shadowColor: null,
+      fields: [
+        {
+          type: 'text',
+          value: 'Уценённый товар',
+        },
+      ],
     },
     {
       strokeColor: null,
       shadowColor: null,
-      link: '/gift/900391/?is_label=1',
+      link: '/opt/?is_label=1#detskie-tovary',
       title: null,
       fields: [
-        'label',
-      ],
-      definitions: {
-        label: {
+        {
           type: 'text',
-          value: ' + Стойка в подарок',
+          value: 'Опт «Детские товары»',
         },
-      },
-      textColor: '#2962FF',
-      bgColor: '#ff0000',
+      ],
+      textColor: '#FFFFFF',
+      bgColor: '#ff4824',
     },
   ],
   bigImg: 'https://cdn2.static1-sima-land.com/items/3311827/6/400.jpg?v=1566383235',

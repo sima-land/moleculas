@@ -51,14 +51,12 @@ exports[`<AdultBlock /> should render with props 1`] = `
           <ForwardRef(Link)
             onClick={[MockFunction]}
             pseudo={true}
-            underlined={false}
           >
             <a
               className="link color__brand-blue"
               onClick={[MockFunction]}
               role="button"
               tabIndex={0}
-              underlined={false}
             >
               <Memo(Text)
                 lineHeight={32}
@@ -127,13 +125,11 @@ exports[`<AdultBlock /> should render without props 1`] = `
         >
           <ForwardRef(Link)
             pseudo={true}
-            underlined={false}
           >
             <a
               className="link color__brand-blue"
               role="button"
               tabIndex={0}
-              underlined={false}
             >
               <Memo(Text)
                 lineHeight={32}
