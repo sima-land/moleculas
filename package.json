@@ -65,7 +65,7 @@
     "eslint": "eslint --cache src/ --ext .js,.jsx",
     "stylelint": "stylelint 'src/**/*.scss'",
     "storybook": "start-storybook -p 6006 -s ./.storybook/public",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook --no-dll --quiet --loglevel error -s .storybook/public -o .build-storybook/storybook"
   },
   "husky": {
     "hooks": {
