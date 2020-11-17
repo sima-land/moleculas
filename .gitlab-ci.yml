@@ -1,6 +1,7 @@
 stages:
   - test
   - build
+  - dockerize
   - publish
 
 test:
@@ -31,6 +32,42 @@ build:
     - npm version $CI_COMMIT_REF_NAME
   script:
     - yarn build
+  only:
+    refs:
+      - tags
+  tags:
+    - sl-frontend
+
+build-storybook:
+  stage: build
+  image: node:10.15.3-alpine
+  cache:
+    paths:
+      - node_modules
+  before_script:
+    - yarn install
+  script:
+    - yarn build-storybook
+  artifacts:
+    paths:
+      - .build-storybook/storybook
+    expire_in: 1 hrs
+  only:
+    refs:
+      - tags
+  tags:
+    - sl-frontend
+
+dockerize-storybook:
+  stage: dockerize
+  image: docker:stable
+  before_script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+  script:
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME .
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
+  dependencies:
+    - build-storybook
   only:
     refs:
       - tags
