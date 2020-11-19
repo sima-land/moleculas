@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TrackNumber /> should match snapshot in desktop version 1`] = `
+<TrackingInfo
+  deliverySite="www.boxberry.ru"
+  isMobile={false}
+  onCopy={[MockFunction]}
+  trackNumber="62096122576448"
+>
+  <div
+    className="wrap"
+  >
+    <img
+      alt=""
+      src={
+        Object {
+          "process": [Function],
+        }
+      }
+      width={324}
+    />
+    <div
+      className="text"
+    >
+      Чтобы узнать, где находится ваша посылка, введите на сайте www.boxberry.ru 
+          в разделе отслеживания свой трек-номер:
+    </div>
+    <div
+      className="track-number"
+      onClick={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      62096122576448
+      <CopySVG
+        className="icon"
+      >
+        <svg
+          className="icon"
+          height={16}
+          viewBox="0 0 16 16"
+          width={16}
+        >
+          <path
+            clipRule="evenodd"
+            d="M6 2a1 1 0 011-1h7a1 1 0 011 1v7a1 1 0 11-2 0V3H7a1 1 0 01-1-1zM2 5a1 1 0 011-1h8a1 1 0 011 1v8.5a1 1 0 01-1 1H3a1 1 0 01-1-1V5zm2 1v6.5h6V6H4z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </CopySVG>
+    </div>
+  </div>
+</TrackingInfo>
+`;
+
+exports[`<TrackNumber /> should match snapshot in mobile version 1`] = `
+<TrackingInfo
+  deliverySite="www.boxberry.ru"
+  isMobile={true}
+  onCopy={[MockFunction]}
+  trackNumber="62096122576448"
+>
+  <div
+    className="wrap"
+  >
+    <img
+      alt=""
+      src={
+        Object {
+          "process": [Function],
+        }
+      }
+      width="100%"
+    />
+    <div
+      className="text"
+    >
+      Чтобы узнать, где находится ваша посылка, введите на сайте www.boxberry.ru 
+          в разделе отслеживания свой трек-номер:
+    </div>
+    <div
+      className="track-number"
+      onClick={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      62096122576448
+      <CopySVG
+        className="icon"
+      >
+        <svg
+          className="icon"
+          height={16}
+          viewBox="0 0 16 16"
+          width={16}
+        >
+          <path
+            clipRule="evenodd"
+            d="M6 2a1 1 0 011-1h7a1 1 0 011 1v7a1 1 0 11-2 0V3H7a1 1 0 01-1-1zM2 5a1 1 0 011-1h8a1 1 0 011 1v8.5a1 1 0 01-1 1H3a1 1 0 01-1-1V5zm2 1v6.5h6V6H4z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </CopySVG>
+    </div>
+  </div>
+</TrackingInfo>
+`;
+
+exports[`<TrackNumber /> should render and handle click correctly 1`] = `
+<TrackingInfo
+  deliverySite="www.boxberry.ru"
+  isMobile={false}
+  onCopy={[MockFunction]}
+  trackNumber="62096122576448"
+>
+  <div
+    className="wrap"
+  >
+    <img
+      alt=""
+      src={
+        Object {
+          "process": [Function],
+        }
+      }
+      width={324}
+    />
+    <div
+      className="text"
+    >
+      Чтобы узнать, где находится ваша посылка, введите на сайте www.boxberry.ru 
+          в разделе отслеживания свой трек-номер:
+    </div>
+    <div
+      className="track-number"
+      onClick={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      62096122576448
+      <CopySVG
+        className="icon"
+      >
+        <svg
+          className="icon"
+          height={16}
+          viewBox="0 0 16 16"
+          width={16}
+        >
+          <path
+            clipRule="evenodd"
+            d="M6 2a1 1 0 011-1h7a1 1 0 011 1v7a1 1 0 11-2 0V3H7a1 1 0 01-1-1zM2 5a1 1 0 011-1h8a1 1 0 011 1v8.5a1 1 0 01-1 1H3a1 1 0 01-1-1V5zm2 1v6.5h6V6H4z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </CopySVG>
+    </div>
+  </div>
+</TrackingInfo>
+`;

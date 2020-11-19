@@ -1811,6 +1811,11 @@
     prop-types "^15.7.2"
     react-transition-group "^4.3.0"
 
+"@dev-dep/ui-quarks@^0.0.6":
+  version "0.0.6"
+  resolved "https://gitlab.sima-land.ru/api/v4/projects/1151/packages/npm/@dev-dep/ui-quarks/-/@dev-dep/ui-quarks-0.0.6.tgz#c64a83a93bf7491cd0e1af6b7959ff7180b962e8"
+  integrity sha1-xkqDqTv3SRzQ4a9reVn/cYC5Yug=
+
 "@emotion/cache@^10.0.27":
   version "10.0.29"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-10.0.29.tgz#87e7e64f412c060102d589fe7c6dc042e6f9d1e0"
@@ -9944,7 +9949,6 @@ lodash.uniq@4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@4.17.15, lodash@^4.15.0, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15:
 lodash@4.17.15, lodash@^4.15.0, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
