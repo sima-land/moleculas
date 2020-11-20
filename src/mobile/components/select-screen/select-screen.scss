@@ -1,0 +1,31 @@
+@import 'node_modules/@dev-dep/ui-nucleons/colors';
+
+.container {
+  padding: 16px 0;
+  margin: 0 auto;
+  @media (min-width: 601px) {
+    max-width: calc((100% - #{7 * 16px}) / 8 * 6 + (#{5 * 16px}));
+  }
+  @media (min-width: 721px) {
+    max-width: 498px;
+  }
+  @media (min-width: 841px) {
+    max-width: 588px;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  background-color: transparent;
+  &:active {
+    background-color: $gray4;
+  }
+}
