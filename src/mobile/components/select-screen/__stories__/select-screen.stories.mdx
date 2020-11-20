@@ -1,0 +1,41 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+import { Primary } from './select-screen.stories.jsx'
+import SelectScreen from '../index';
+
+<Meta
+  title='mobile/Select Screen'
+  component={SelectScreen}
+  argTypes={{
+    items: {
+      control: {
+        type: 'array',
+      },
+    },
+  }}
+  parameters={{
+    viewport: {
+      defaultViewport: 'iphonex',
+    },
+  }}
+/>
+
+# SelectScreen
+### Компонент экрана для выбора опций.
+
+### Пример использования
+```jsx
+import SelectScreen from '@dev-dep/moleculas/mobile/components/select-screen';
+
+<SelectScreen />
+```
+
+### Базовый вид
+export const Template = args => <SelectScreen {...args} />;
+
+<Canvas>
+  <Story story={Primary}/>
+</Canvas>
+
+### Свойства компонента
+<ArgsTable of={SelectScreen} />
+

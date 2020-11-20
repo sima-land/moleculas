@@ -1,0 +1,1554 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
+<SelectScreen
+  displayItem={[Function]}
+  isItemSelected={[Function]}
+  items={
+    Array [
+      Object {
+        "name": "Российский рубль",
+        "shortName": "RUB",
+      },
+      Object {
+        "name": "Американский доллар",
+        "shortName": "USD",
+      },
+      Object {
+        "name": "Единая европейская валюта",
+        "shortName": "EUR",
+      },
+      Object {
+        "name": "Белорусский рубль",
+        "shortName": "BYN",
+      },
+      Object {
+        "name": "Украинская гривна",
+        "shortName": "UAH",
+      },
+      Object {
+        "name": "Казахстанский тенге",
+        "shortName": "KZT",
+      },
+    ]
+  }
+  title="Валюта"
+>
+  <Screen
+    title="Валюта"
+    withDivideHeader={false}
+  >
+    <Layer>
+      <Portal
+        containerInfo={
+          <div>
+            <div
+              class="screen full-width"
+            >
+              <div
+                class="nav-bar"
+              >
+                <div
+                  class="button-groups"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      aria-hidden="true"
+                      aria-label="Закрыть Валюта"
+                      class="button icon stub"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="main"
+                >
+                  <div
+                    class="title truncate"
+                  >
+                    Валюта
+                  </div>
+                </div>
+                <div
+                  class="button-groups end"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      aria-label="Закрыть Валюта"
+                      class="button icon"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="icon icon-block color__gray87"
+                        height="24"
+                        viewBox="0 0 36 36"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="content full-width"
+              >
+                <div
+                  class="layout-wrapper layout-xxl-padding-sm layout-xl-padding-sm layout-lg-padding-sm layout-md-padding-sm layout-sm-padding-sm layout-xs-padding-sm layout-xxs-padding-md layout-xxxs-padding-none"
+                >
+                  <div
+                    class="layout layout-xxl-width-sm layout-xl-width-sm layout-lg-width-sm layout-md-width-sm layout-sm-width-sm layout-xs-width-xs layout-xxs-width-xs layout-xxxs-width-xs"
+                  >
+                    <div
+                      class="container"
+                    >
+                      <button
+                        class="item"
+                      >
+                        <div
+                          class="item is-selected"
+                        >
+                          Российский рубль
+                           (
+                          RUB
+                          )
+                        </div>
+                        <svg
+                          fill="#212121"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M8.971 16.557L20.265 4.322a1 1 0 011.47 1.356l-12 13a1 1 0 01-1.442.03l-4-4a1 1 0 111.414-1.415l3.264 3.264z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        class="item"
+                      >
+                        <div
+                          class="item"
+                        >
+                          Американский доллар
+                           (
+                          USD
+                          )
+                        </div>
+                      </button>
+                      <button
+                        class="item"
+                      >
+                        <div
+                          class="item"
+                        >
+                          Единая европейская валюта
+                           (
+                          EUR
+                          )
+                        </div>
+                      </button>
+                      <button
+                        class="item"
+                      >
+                        <div
+                          class="item"
+                        >
+                          Белорусский рубль
+                           (
+                          BYN
+                          )
+                        </div>
+                      </button>
+                      <button
+                        class="item"
+                      >
+                        <div
+                          class="item"
+                        >
+                          Украинская гривна
+                           (
+                          UAH
+                          )
+                        </div>
+                      </button>
+                      <button
+                        class="item"
+                      >
+                        <div
+                          class="item"
+                        >
+                          Казахстанский тенге
+                           (
+                          KZT
+                          )
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      >
+        <div
+          className="screen full-width"
+        >
+          <ScreenLayout
+            childrenRef={[Function]}
+            fullScrollThreshold={320}
+            onBack={[Function]}
+            onClose={[Function]}
+            title="Валюта"
+            withBackButton={false}
+            withCloseButton={true}
+            withDivideHeader={false}
+            withHeader={true}
+          >
+            <NavBar
+              bottomBordered={false}
+              buttons={
+                Object {
+                  "end": Object {
+                    "aria-label": "Закрыть Валюта",
+                    "icon": [Function],
+                    "onClick": [Function],
+                  },
+                  "start": undefined,
+                }
+              }
+              title="Валюта"
+            >
+              <div
+                className="nav-bar"
+              >
+                <div
+                  className="button-groups"
+                >
+                  <div
+                    className="group"
+                  >
+                    <NavButton
+                      aria-label="Закрыть Валюта"
+                      icon={[Function]}
+                      onClick={[Function]}
+                      shift={false}
+                      stub={true}
+                    >
+                      <button
+                        aria-hidden="true"
+                        aria-label="Закрыть Валюта"
+                        className="button icon stub"
+                        onClick={[Function]}
+                      />
+                    </NavButton>
+                  </div>
+                </div>
+                <div
+                  className="main"
+                >
+                  <div
+                    className="title truncate"
+                  >
+                    Валюта
+                  </div>
+                </div>
+                <div
+                  className="button-groups end"
+                >
+                  <div
+                    className="group"
+                  >
+                    <NavButton
+                      aria-label="Закрыть Валюта"
+                      icon={[Function]}
+                      onClick={[Function]}
+                      shift={false}
+                    >
+                      <button
+                        aria-label="Закрыть Валюта"
+                        className="button icon"
+                        onClick={[Function]}
+                      >
+                        <Icon
+                          aria-hidden="true"
+                          color="gray87"
+                          icon={[Function]}
+                          size={24}
+                        >
+                          <crossIcon
+                            aria-hidden="true"
+                            className="icon icon-block color__gray87"
+                            height={24}
+                            viewBox="0 0 36 36"
+                            width={24}
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="icon icon-block color__gray87"
+                              height={24}
+                              viewBox="0 0 36 36"
+                              width={24}
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clipRule="evenodd"
+                                d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </crossIcon>
+                        </Icon>
+                      </button>
+                    </NavButton>
+                  </div>
+                </div>
+              </div>
+            </NavBar>
+            <div
+              className="content full-width"
+            >
+              <MobileLayout
+                xxsPadding="md"
+                xxxsPadding="none"
+              >
+                <Layout
+                  xsMaxWidth="xs"
+                  xxlMaxWidth="sm"
+                  xxsPadding="md"
+                  xxxsPadding="none"
+                >
+                  <div
+                    className="layout-wrapper layout-xxl-padding-sm layout-xl-padding-sm layout-lg-padding-sm layout-md-padding-sm layout-sm-padding-sm layout-xs-padding-sm layout-xxs-padding-md layout-xxxs-padding-none"
+                  >
+                    <div
+                      className="layout layout-xxl-width-sm layout-xl-width-sm layout-lg-width-sm layout-md-width-sm layout-sm-width-sm layout-xs-width-xs layout-xxs-width-xs layout-xxxs-width-xs"
+                    >
+                      <div
+                        className="container"
+                      >
+                        <button
+                          className="item"
+                          key="0"
+                          onClick={[Function]}
+                        >
+                          <div
+                            className="item is-selected"
+                          >
+                            Российский рубль
+                             (
+                            RUB
+                            )
+                          </div>
+                          <CheckSVG
+                            fill="#212121"
+                          >
+                            <svg
+                              fill="#212121"
+                              height={24}
+                              viewBox="0 0 24 24"
+                              width={24}
+                            >
+                              <path
+                                clipRule="evenodd"
+                                d="M8.971 16.557L20.265 4.322a1 1 0 011.47 1.356l-12 13a1 1 0 01-1.442.03l-4-4a1 1 0 111.414-1.415l3.264 3.264z"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </CheckSVG>
+                        </button>
+                        <button
+                          className="item"
+                          key="1"
+                          onClick={[Function]}
+                        >
+                          <div
+                            className="item"
+                          >
+                            Американский доллар
+                             (
+                            USD
+                            )
+                          </div>
+                        </button>
+                        <button
+                          className="item"
+                          key="2"
+                          onClick={[Function]}
+                        >
+                          <div
+                            className="item"
+                          >
+                            Единая европейская валюта
+                             (
+                            EUR
+                            )
+                          </div>
+                        </button>
+                        <button
+                          className="item"
+                          key="3"
+                          onClick={[Function]}
+                        >
+                          <div
+                            className="item"
+                          >
+                            Белорусский рубль
+                             (
+                            BYN
+                            )
+                          </div>
+                        </button>
+                        <button
+                          className="item"
+                          key="4"
+                          onClick={[Function]}
+                        >
+                          <div
+                            className="item"
+                          >
+                            Украинская гривна
+                             (
+                            UAH
+                            )
+                          </div>
+                        </button>
+                        <button
+                          className="item"
+                          key="5"
+                          onClick={[Function]}
+                        >
+                          <div
+                            className="item"
+                          >
+                            Казахстанский тенге
+                             (
+                            KZT
+                            )
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </Layout>
+              </MobileLayout>
+            </div>
+          </ScreenLayout>
+        </div>
+      </Portal>
+    </Layer>
+  </Screen>
+</SelectScreen>
+`;
+
+exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
+<SelectScreen
+  items={
+    Array [
+      Object {
+        "name": "Российский рубль",
+      },
+      Object {
+        "name": "Американский доллар",
+      },
+      Object {
+        "name": "Единая европейская валюта",
+      },
+      Object {
+        "name": "Белорусский рубль",
+      },
+      Object {
+        "name": "Украинская гривна",
+      },
+      Object {
+        "name": "Казахстанский тенге",
+      },
+    ]
+  }
+  title="Валюта"
+>
+  <Screen
+    title="Валюта"
+    withDivideHeader={false}
+  >
+    <Layer>
+      <Portal
+        containerInfo={
+          <div>
+            <div
+              class="screen full-width"
+            >
+              <div
+                class="nav-bar"
+              >
+                <div
+                  class="button-groups"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      aria-hidden="true"
+                      aria-label="Закрыть Валюта"
+                      class="button icon stub"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="main"
+                >
+                  <div
+                    class="title truncate"
+                  >
+                    Валюта
+                  </div>
+                </div>
+                <div
+                  class="button-groups end"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      aria-label="Закрыть Валюта"
+                      class="button icon"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="icon icon-block color__gray87"
+                        height="24"
+                        viewBox="0 0 36 36"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="content full-width"
+              >
+                <div
+                  class="layout-wrapper layout-xxl-padding-sm layout-xl-padding-sm layout-lg-padding-sm layout-md-padding-sm layout-sm-padding-sm layout-xs-padding-sm layout-xxs-padding-md layout-xxxs-padding-none"
+                >
+                  <div
+                    class="layout layout-xxl-width-sm layout-xl-width-sm layout-lg-width-sm layout-md-width-sm layout-sm-width-sm layout-xs-width-xs layout-xxs-width-xs layout-xxxs-width-xs"
+                  >
+                    <div
+                      class="container"
+                    >
+                      <button
+                        class="item"
+                      >
+                        <span
+                          class="size-16 line-height-24 color__gray87"
+                        >
+                          Российский рубль
+                        </span>
+                      </button>
+                      <button
+                        class="item"
+                      >
+                        <span
+                          class="size-16 line-height-24 color__gray87"
+                        >
+                          Американский доллар
+                        </span>
+                      </button>
+                      <button
+                        class="item"
+                      >
+                        <span
+                          class="size-16 line-height-24 color__gray87"
+                        >
+                          Единая европейская валюта
+                        </span>
+                      </button>
+                      <button
+                        class="item"
+                      >
+                        <span
+                          class="size-16 line-height-24 color__gray87"
+                        >
+                          Белорусский рубль
+                        </span>
+                      </button>
+                      <button
+                        class="item"
+                      >
+                        <span
+                          class="size-16 line-height-24 color__gray87"
+                        >
+                          Украинская гривна
+                        </span>
+                      </button>
+                      <button
+                        class="item"
+                      >
+                        <span
+                          class="size-16 line-height-24 color__gray87"
+                        >
+                          Казахстанский тенге
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      >
+        <div
+          className="screen full-width"
+        >
+          <ScreenLayout
+            childrenRef={[Function]}
+            fullScrollThreshold={320}
+            onBack={[Function]}
+            onClose={[Function]}
+            title="Валюта"
+            withBackButton={false}
+            withCloseButton={true}
+            withDivideHeader={false}
+            withHeader={true}
+          >
+            <NavBar
+              bottomBordered={false}
+              buttons={
+                Object {
+                  "end": Object {
+                    "aria-label": "Закрыть Валюта",
+                    "icon": [Function],
+                    "onClick": [Function],
+                  },
+                  "start": undefined,
+                }
+              }
+              title="Валюта"
+            >
+              <div
+                className="nav-bar"
+              >
+                <div
+                  className="button-groups"
+                >
+                  <div
+                    className="group"
+                  >
+                    <NavButton
+                      aria-label="Закрыть Валюта"
+                      icon={[Function]}
+                      onClick={[Function]}
+                      shift={false}
+                      stub={true}
+                    >
+                      <button
+                        aria-hidden="true"
+                        aria-label="Закрыть Валюта"
+                        className="button icon stub"
+                        onClick={[Function]}
+                      />
+                    </NavButton>
+                  </div>
+                </div>
+                <div
+                  className="main"
+                >
+                  <div
+                    className="title truncate"
+                  >
+                    Валюта
+                  </div>
+                </div>
+                <div
+                  className="button-groups end"
+                >
+                  <div
+                    className="group"
+                  >
+                    <NavButton
+                      aria-label="Закрыть Валюта"
+                      icon={[Function]}
+                      onClick={[Function]}
+                      shift={false}
+                    >
+                      <button
+                        aria-label="Закрыть Валюта"
+                        className="button icon"
+                        onClick={[Function]}
+                      >
+                        <Icon
+                          aria-hidden="true"
+                          color="gray87"
+                          icon={[Function]}
+                          size={24}
+                        >
+                          <crossIcon
+                            aria-hidden="true"
+                            className="icon icon-block color__gray87"
+                            height={24}
+                            viewBox="0 0 36 36"
+                            width={24}
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="icon icon-block color__gray87"
+                              height={24}
+                              viewBox="0 0 36 36"
+                              width={24}
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clipRule="evenodd"
+                                d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </crossIcon>
+                        </Icon>
+                      </button>
+                    </NavButton>
+                  </div>
+                </div>
+              </div>
+            </NavBar>
+            <div
+              className="content full-width"
+            >
+              <MobileLayout
+                xxsPadding="md"
+                xxxsPadding="none"
+              >
+                <Layout
+                  xsMaxWidth="xs"
+                  xxlMaxWidth="sm"
+                  xxsPadding="md"
+                  xxxsPadding="none"
+                >
+                  <div
+                    className="layout-wrapper layout-xxl-padding-sm layout-xl-padding-sm layout-lg-padding-sm layout-md-padding-sm layout-sm-padding-sm layout-xs-padding-sm layout-xxs-padding-md layout-xxxs-padding-none"
+                  >
+                    <div
+                      className="layout layout-xxl-width-sm layout-xl-width-sm layout-lg-width-sm layout-md-width-sm layout-sm-width-sm layout-xs-width-xs layout-xxs-width-xs layout-xxxs-width-xs"
+                    >
+                      <div
+                        className="container"
+                      >
+                        <button
+                          className="item"
+                          key="0"
+                          onClick={[Function]}
+                        >
+                          <Memo(Text)
+                            color="gray87"
+                            lineHeight={24}
+                            size={16}
+                          >
+                            <span
+                              className="size-16 line-height-24 color__gray87"
+                            >
+                              Российский рубль
+                            </span>
+                          </Memo(Text)>
+                        </button>
+                        <button
+                          className="item"
+                          key="1"
+                          onClick={[Function]}
+                        >
+                          <Memo(Text)
+                            color="gray87"
+                            lineHeight={24}
+                            size={16}
+                          >
+                            <span
+                              className="size-16 line-height-24 color__gray87"
+                            >
+                              Американский доллар
+                            </span>
+                          </Memo(Text)>
+                        </button>
+                        <button
+                          className="item"
+                          key="2"
+                          onClick={[Function]}
+                        >
+                          <Memo(Text)
+                            color="gray87"
+                            lineHeight={24}
+                            size={16}
+                          >
+                            <span
+                              className="size-16 line-height-24 color__gray87"
+                            >
+                              Единая европейская валюта
+                            </span>
+                          </Memo(Text)>
+                        </button>
+                        <button
+                          className="item"
+                          key="3"
+                          onClick={[Function]}
+                        >
+                          <Memo(Text)
+                            color="gray87"
+                            lineHeight={24}
+                            size={16}
+                          >
+                            <span
+                              className="size-16 line-height-24 color__gray87"
+                            >
+                              Белорусский рубль
+                            </span>
+                          </Memo(Text)>
+                        </button>
+                        <button
+                          className="item"
+                          key="4"
+                          onClick={[Function]}
+                        >
+                          <Memo(Text)
+                            color="gray87"
+                            lineHeight={24}
+                            size={16}
+                          >
+                            <span
+                              className="size-16 line-height-24 color__gray87"
+                            >
+                              Украинская гривна
+                            </span>
+                          </Memo(Text)>
+                        </button>
+                        <button
+                          className="item"
+                          key="5"
+                          onClick={[Function]}
+                        >
+                          <Memo(Text)
+                            color="gray87"
+                            lineHeight={24}
+                            size={16}
+                          >
+                            <span
+                              className="size-16 line-height-24 color__gray87"
+                            >
+                              Казахстанский тенге
+                            </span>
+                          </Memo(Text)>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </Layout>
+              </MobileLayout>
+            </div>
+          </ScreenLayout>
+        </div>
+      </Portal>
+    </Layer>
+  </Screen>
+</SelectScreen>
+`;
+
+exports[`<SelectScreen /> should handle props 1`] = `
+<SelectScreen
+  getItemName={[Function]}
+  isItemSelected={[Function]}
+  items={
+    Array [
+      "Верх-Исетский",
+      "Чкаловский",
+      "Железнодорожный",
+      "Кировский",
+      "Орджоникидзевский",
+      "Октябрьский",
+      "Ленинский",
+    ]
+  }
+  onItemClick={[MockFunction]}
+  title="Районы"
+>
+  <Screen
+    title="Районы"
+    withDivideHeader={false}
+  >
+    <Layer>
+      <Portal
+        containerInfo={
+          <div>
+            <div
+              class="screen full-width"
+            >
+              <div
+                class="nav-bar"
+              >
+                <div
+                  class="button-groups"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      aria-hidden="true"
+                      aria-label="Закрыть Районы"
+                      class="button icon stub"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="main"
+                >
+                  <div
+                    class="title truncate"
+                  >
+                    Районы
+                  </div>
+                </div>
+                <div
+                  class="button-groups end"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      aria-label="Закрыть Районы"
+                      class="button icon"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="icon icon-block color__gray87"
+                        height="24"
+                        viewBox="0 0 36 36"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="content full-width"
+              >
+                <div
+                  class="layout-wrapper layout-xxl-padding-sm layout-xl-padding-sm layout-lg-padding-sm layout-md-padding-sm layout-sm-padding-sm layout-xs-padding-sm layout-xxs-padding-md layout-xxxs-padding-none"
+                >
+                  <div
+                    class="layout layout-xxl-width-sm layout-xl-width-sm layout-lg-width-sm layout-md-width-sm layout-sm-width-sm layout-xs-width-xs layout-xxs-width-xs layout-xxxs-width-xs"
+                  >
+                    <div
+                      class="container"
+                    >
+                      <button
+                        class="item"
+                      >
+                        <span
+                          class="size-16 line-height-24 color__gray87"
+                        >
+                          Верх-Исетский
+                        </span>
+                      </button>
+                      <button
+                        class="item"
+                      >
+                        <span
+                          class="size-16 line-height-24 color__gray87"
+                        >
+                          Чкаловский
+                        </span>
+                      </button>
+                      <button
+                        class="item"
+                      >
+                        <span
+                          class="size-16 line-height-24 color__gray87"
+                        >
+                          Железнодорожный
+                        </span>
+                      </button>
+                      <button
+                        class="item"
+                      >
+                        <span
+                          class="size-16 line-height-24 color__gray87"
+                        >
+                          Кировский
+                        </span>
+                        <svg
+                          fill="#212121"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M8.971 16.557L20.265 4.322a1 1 0 011.47 1.356l-12 13a1 1 0 01-1.442.03l-4-4a1 1 0 111.414-1.415l3.264 3.264z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        class="item"
+                      >
+                        <span
+                          class="size-16 line-height-24 color__gray87"
+                        >
+                          Орджоникидзевский
+                        </span>
+                      </button>
+                      <button
+                        class="item"
+                      >
+                        <span
+                          class="size-16 line-height-24 color__gray87"
+                        >
+                          Октябрьский
+                        </span>
+                      </button>
+                      <button
+                        class="item"
+                      >
+                        <span
+                          class="size-16 line-height-24 color__gray87"
+                        >
+                          Ленинский
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      >
+        <div
+          className="screen full-width"
+        >
+          <ScreenLayout
+            childrenRef={[Function]}
+            fullScrollThreshold={320}
+            onBack={[Function]}
+            onClose={[Function]}
+            title="Районы"
+            withBackButton={false}
+            withCloseButton={true}
+            withDivideHeader={false}
+            withHeader={true}
+          >
+            <NavBar
+              bottomBordered={false}
+              buttons={
+                Object {
+                  "end": Object {
+                    "aria-label": "Закрыть Районы",
+                    "icon": [Function],
+                    "onClick": [Function],
+                  },
+                  "start": undefined,
+                }
+              }
+              title="Районы"
+            >
+              <div
+                className="nav-bar"
+              >
+                <div
+                  className="button-groups"
+                >
+                  <div
+                    className="group"
+                  >
+                    <NavButton
+                      aria-label="Закрыть Районы"
+                      icon={[Function]}
+                      onClick={[Function]}
+                      shift={false}
+                      stub={true}
+                    >
+                      <button
+                        aria-hidden="true"
+                        aria-label="Закрыть Районы"
+                        className="button icon stub"
+                        onClick={[Function]}
+                      />
+                    </NavButton>
+                  </div>
+                </div>
+                <div
+                  className="main"
+                >
+                  <div
+                    className="title truncate"
+                  >
+                    Районы
+                  </div>
+                </div>
+                <div
+                  className="button-groups end"
+                >
+                  <div
+                    className="group"
+                  >
+                    <NavButton
+                      aria-label="Закрыть Районы"
+                      icon={[Function]}
+                      onClick={[Function]}
+                      shift={false}
+                    >
+                      <button
+                        aria-label="Закрыть Районы"
+                        className="button icon"
+                        onClick={[Function]}
+                      >
+                        <Icon
+                          aria-hidden="true"
+                          color="gray87"
+                          icon={[Function]}
+                          size={24}
+                        >
+                          <crossIcon
+                            aria-hidden="true"
+                            className="icon icon-block color__gray87"
+                            height={24}
+                            viewBox="0 0 36 36"
+                            width={24}
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="icon icon-block color__gray87"
+                              height={24}
+                              viewBox="0 0 36 36"
+                              width={24}
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clipRule="evenodd"
+                                d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </crossIcon>
+                        </Icon>
+                      </button>
+                    </NavButton>
+                  </div>
+                </div>
+              </div>
+            </NavBar>
+            <div
+              className="content full-width"
+            >
+              <MobileLayout
+                xxsPadding="md"
+                xxxsPadding="none"
+              >
+                <Layout
+                  xsMaxWidth="xs"
+                  xxlMaxWidth="sm"
+                  xxsPadding="md"
+                  xxxsPadding="none"
+                >
+                  <div
+                    className="layout-wrapper layout-xxl-padding-sm layout-xl-padding-sm layout-lg-padding-sm layout-md-padding-sm layout-sm-padding-sm layout-xs-padding-sm layout-xxs-padding-md layout-xxxs-padding-none"
+                  >
+                    <div
+                      className="layout layout-xxl-width-sm layout-xl-width-sm layout-lg-width-sm layout-md-width-sm layout-sm-width-sm layout-xs-width-xs layout-xxs-width-xs layout-xxxs-width-xs"
+                    >
+                      <div
+                        className="container"
+                      >
+                        <button
+                          className="item"
+                          key="0"
+                          onClick={[Function]}
+                        >
+                          <Memo(Text)
+                            color="gray87"
+                            lineHeight={24}
+                            size={16}
+                          >
+                            <span
+                              className="size-16 line-height-24 color__gray87"
+                            >
+                              Верх-Исетский
+                            </span>
+                          </Memo(Text)>
+                        </button>
+                        <button
+                          className="item"
+                          key="1"
+                          onClick={[Function]}
+                        >
+                          <Memo(Text)
+                            color="gray87"
+                            lineHeight={24}
+                            size={16}
+                          >
+                            <span
+                              className="size-16 line-height-24 color__gray87"
+                            >
+                              Чкаловский
+                            </span>
+                          </Memo(Text)>
+                        </button>
+                        <button
+                          className="item"
+                          key="2"
+                          onClick={[Function]}
+                        >
+                          <Memo(Text)
+                            color="gray87"
+                            lineHeight={24}
+                            size={16}
+                          >
+                            <span
+                              className="size-16 line-height-24 color__gray87"
+                            >
+                              Железнодорожный
+                            </span>
+                          </Memo(Text)>
+                        </button>
+                        <button
+                          className="item"
+                          key="3"
+                          onClick={[Function]}
+                        >
+                          <Memo(Text)
+                            color="gray87"
+                            lineHeight={24}
+                            size={16}
+                          >
+                            <span
+                              className="size-16 line-height-24 color__gray87"
+                            >
+                              Кировский
+                            </span>
+                          </Memo(Text)>
+                          <CheckSVG
+                            fill="#212121"
+                          >
+                            <svg
+                              fill="#212121"
+                              height={24}
+                              viewBox="0 0 24 24"
+                              width={24}
+                            >
+                              <path
+                                clipRule="evenodd"
+                                d="M8.971 16.557L20.265 4.322a1 1 0 011.47 1.356l-12 13a1 1 0 01-1.442.03l-4-4a1 1 0 111.414-1.415l3.264 3.264z"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </CheckSVG>
+                        </button>
+                        <button
+                          className="item"
+                          key="4"
+                          onClick={[Function]}
+                        >
+                          <Memo(Text)
+                            color="gray87"
+                            lineHeight={24}
+                            size={16}
+                          >
+                            <span
+                              className="size-16 line-height-24 color__gray87"
+                            >
+                              Орджоникидзевский
+                            </span>
+                          </Memo(Text)>
+                        </button>
+                        <button
+                          className="item"
+                          key="5"
+                          onClick={[Function]}
+                        >
+                          <Memo(Text)
+                            color="gray87"
+                            lineHeight={24}
+                            size={16}
+                          >
+                            <span
+                              className="size-16 line-height-24 color__gray87"
+                            >
+                              Октябрьский
+                            </span>
+                          </Memo(Text)>
+                        </button>
+                        <button
+                          className="item"
+                          key="6"
+                          onClick={[Function]}
+                        >
+                          <Memo(Text)
+                            color="gray87"
+                            lineHeight={24}
+                            size={16}
+                          >
+                            <span
+                              className="size-16 line-height-24 color__gray87"
+                            >
+                              Ленинский
+                            </span>
+                          </Memo(Text)>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </Layout>
+              </MobileLayout>
+            </div>
+          </ScreenLayout>
+        </div>
+      </Portal>
+    </Layer>
+  </Screen>
+</SelectScreen>
+`;
+
+exports[`<SelectScreen /> should render without props 1`] = `
+<SelectScreen>
+  <Screen
+    withDivideHeader={false}
+  >
+    <Layer>
+      <Portal
+        containerInfo={
+          <div>
+            <div
+              class="screen full-width"
+            >
+              <div
+                class="nav-bar"
+              >
+                <div
+                  class="button-groups"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      aria-hidden="true"
+                      aria-label="Закрыть"
+                      class="button icon stub"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="main"
+                />
+                <div
+                  class="button-groups end"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      aria-label="Закрыть"
+                      class="button icon"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="icon icon-block color__gray87"
+                        height="24"
+                        viewBox="0 0 36 36"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="content full-width"
+              >
+                <div
+                  class="layout-wrapper layout-xxl-padding-sm layout-xl-padding-sm layout-lg-padding-sm layout-md-padding-sm layout-sm-padding-sm layout-xs-padding-sm layout-xxs-padding-md layout-xxxs-padding-none"
+                >
+                  <div
+                    class="layout layout-xxl-width-sm layout-xl-width-sm layout-lg-width-sm layout-md-width-sm layout-sm-width-sm layout-xs-width-xs layout-xxs-width-xs layout-xxxs-width-xs"
+                  >
+                    <div
+                      class="container"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      >
+        <div
+          className="screen full-width"
+        >
+          <ScreenLayout
+            childrenRef={[Function]}
+            fullScrollThreshold={320}
+            onBack={[Function]}
+            onClose={[Function]}
+            withBackButton={false}
+            withCloseButton={true}
+            withDivideHeader={false}
+            withHeader={true}
+          >
+            <NavBar
+              bottomBordered={false}
+              buttons={
+                Object {
+                  "end": Object {
+                    "aria-label": "Закрыть",
+                    "icon": [Function],
+                    "onClick": [Function],
+                  },
+                  "start": undefined,
+                }
+              }
+            >
+              <div
+                className="nav-bar"
+              >
+                <div
+                  className="button-groups"
+                >
+                  <div
+                    className="group"
+                  >
+                    <NavButton
+                      aria-label="Закрыть"
+                      icon={[Function]}
+                      onClick={[Function]}
+                      shift={false}
+                      stub={true}
+                    >
+                      <button
+                        aria-hidden="true"
+                        aria-label="Закрыть"
+                        className="button icon stub"
+                        onClick={[Function]}
+                      />
+                    </NavButton>
+                  </div>
+                </div>
+                <div
+                  className="main"
+                />
+                <div
+                  className="button-groups end"
+                >
+                  <div
+                    className="group"
+                  >
+                    <NavButton
+                      aria-label="Закрыть"
+                      icon={[Function]}
+                      onClick={[Function]}
+                      shift={false}
+                    >
+                      <button
+                        aria-label="Закрыть"
+                        className="button icon"
+                        onClick={[Function]}
+                      >
+                        <Icon
+                          aria-hidden="true"
+                          color="gray87"
+                          icon={[Function]}
+                          size={24}
+                        >
+                          <crossIcon
+                            aria-hidden="true"
+                            className="icon icon-block color__gray87"
+                            height={24}
+                            viewBox="0 0 36 36"
+                            width={24}
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="icon icon-block color__gray87"
+                              height={24}
+                              viewBox="0 0 36 36"
+                              width={24}
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clipRule="evenodd"
+                                d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </crossIcon>
+                        </Icon>
+                      </button>
+                    </NavButton>
+                  </div>
+                </div>
+              </div>
+            </NavBar>
+            <div
+              className="content full-width"
+            >
+              <MobileLayout
+                xxsPadding="md"
+                xxxsPadding="none"
+              >
+                <Layout
+                  xsMaxWidth="xs"
+                  xxlMaxWidth="sm"
+                  xxsPadding="md"
+                  xxxsPadding="none"
+                >
+                  <div
+                    className="layout-wrapper layout-xxl-padding-sm layout-xl-padding-sm layout-lg-padding-sm layout-md-padding-sm layout-sm-padding-sm layout-xs-padding-sm layout-xxs-padding-md layout-xxxs-padding-none"
+                  >
+                    <div
+                      className="layout layout-xxl-width-sm layout-xl-width-sm layout-lg-width-sm layout-md-width-sm layout-sm-width-sm layout-xs-width-xs layout-xxs-width-xs layout-xxxs-width-xs"
+                    >
+                      <div
+                        className="container"
+                      />
+                    </div>
+                  </div>
+                </Layout>
+              </MobileLayout>
+            </div>
+          </ScreenLayout>
+        </div>
+      </Portal>
+    </Layer>
+  </Screen>
+</SelectScreen>
+`;
