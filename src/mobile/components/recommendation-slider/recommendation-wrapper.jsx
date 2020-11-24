@@ -55,7 +55,7 @@ export const RecommendationWrapper = ({
       <MobileLayout>
         <Text
           size={20}
-          weight={600}
+          weight={500}
           element='h4'
           children={title}
           lineHeight={28}
