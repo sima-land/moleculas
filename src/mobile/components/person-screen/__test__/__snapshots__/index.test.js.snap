@@ -1,0 +1,1434 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PersonScreen /> should handle props 1`] = `
+<PersonScreen
+  appointment="Менеджер по игрушке"
+  arbitraryLinkProps={
+    Object {
+      "children": "test",
+      "href": "/test",
+    }
+  }
+  email="example@email.com"
+  name="Марина Михайловская"
+  phoneHref="tel:88000000000;postd=8823"
+  phoneText="88000000000 доб. 8823"
+  secondPhoneHref="tel:+7900000000"
+  secondPhoneText="+7 (900) 000 000"
+  skype="example@skype.com"
+  superEllipseStyle={
+    Object {
+      "WebkitClipPath": "url(#moleculas__super-ellipse)",
+      "clipPath": "url(#moleculas__super-ellipse)",
+    }
+  }
+>
+  <Screen
+    withDivideHeader={false}
+  >
+    <Layer>
+      <Portal
+        containerInfo={
+          <div>
+            <div
+              class="screen full-width"
+            >
+              <div
+                class="nav-bar"
+              >
+                <div
+                  class="button-groups"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      aria-hidden="true"
+                      aria-label="Закрыть"
+                      class="button icon stub"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="main"
+                />
+                <div
+                  class="button-groups end"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      aria-label="Закрыть"
+                      class="button icon"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="icon icon-block color__gray87"
+                        height="24"
+                        viewBox="0 0 36 36"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="content full-width"
+              >
+                <div
+                  class="avatar small"
+                >
+                  <span
+                    class="avatar"
+                    style="width: 64px; height: 64px;"
+                  >
+                    <svg
+                      class="super-ellipse"
+                    >
+                      <rect
+                        fill="#f5f5f5"
+                        height="64"
+                        style="clip-path: url(#moleculas__super-ellipse);"
+                        width="64"
+                        x="0"
+                        y="0"
+                      />
+                    </svg>
+                    <span
+                      class="content"
+                    >
+                      <span
+                        class="title truncate color__gray87"
+                        role="presentation"
+                      >
+                        ММ
+                      </span>
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="avatar big"
+                >
+                  <span
+                    class="avatar"
+                    style="width: 112px; height: 112px;"
+                  >
+                    <svg
+                      class="super-ellipse"
+                    >
+                      <rect
+                        fill="#f5f5f5"
+                        height="112"
+                        style="clip-path: url(#moleculas__super-ellipse);"
+                        width="112"
+                        x="0"
+                        y="0"
+                      />
+                    </svg>
+                    <span
+                      class="content"
+                    >
+                      <span
+                        class="title truncate color__gray87"
+                        role="presentation"
+                      >
+                        ММ
+                      </span>
+                    </span>
+                  </span>
+                </div>
+                <span
+                  class="name"
+                >
+                  Марина Михайловская
+                </span>
+                <span
+                  class="appointment"
+                >
+                  Менеджер по игрушке
+                </span>
+                <div
+                  class="profile-url"
+                >
+                  <a
+                    class="link"
+                    href="/test"
+                  >
+                    test
+                  </a>
+                </div>
+                <div
+                  class="items inner-border-bottom"
+                >
+                  <a
+                    class="item inner-border-top"
+                    href="mailto:example@email.com"
+                  >
+                    <div
+                      class="flex-grow"
+                    >
+                      <span
+                        class="size-16 line-height-24 color__gray87 weight-500"
+                      >
+                        example@email.com
+                      </span>
+                      <div
+                        class="M-t__1"
+                      >
+                        <span
+                          class="size-14 line-height-20 color__gray38"
+                        >
+                          Электронная почта
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="icon-circle"
+                    >
+                      <svg
+                        height="24"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M4.5 6.134A.995.995 0 015 6h14c.182 0 .353.049.5.134l-.03.018L12 10.821 4.53 6.152a1.03 1.03 0 00-.03-.018zM4 8.179V17a1 1 0 001 1h14a1 1 0 001-1V8.18l-7.47 4.668a1 1 0 01-1.06 0L4 8.179zM5 4a3 3 0 00-3 3v10a3 3 0 003 3h14a3 3 0 003-3V7a3 3 0 00-3-3H5z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </a>
+                  <a
+                    class="item inner-border-top"
+                    href="skype:example@skype.com?chat"
+                  >
+                    <div
+                      class="flex-grow"
+                    >
+                      <span
+                        class="size-16 line-height-24 color__gray87 weight-500"
+                      >
+                        example@skype.com
+                      </span>
+                      <div
+                        class="M-t__1"
+                      >
+                        <span
+                          class="size-14 line-height-20 color__gray38"
+                        >
+                          Skype
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="icon-circle"
+                    >
+                      <svg
+                        height="24"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <g
+                          clip-path="url(#prefix__clip0)"
+                        >
+                          <path
+                            d="M12.146 7c-1.42 0-2.388.455-2.953 1.216-.524.706-.547 1.482-.547 1.784 0 .546.195 1.294.756 1.919.591.656 1.502 1.08 2.744 1.08.758 0 1.097.243 1.256.42.189.209.244.46.244.58 0 .122-.055.373-.244.582-.159.177-.498.419-1.256.419s-1.098-.242-1.257-.42a.945.945 0 01-.243-.58 1 1 0 10-2 0c0 .546.195 1.294.756 1.919.591.656 1.502 1.08 2.744 1.08 1.242 0 2.152-.424 2.743-1.08a2.936 2.936 0 00.757-1.92c0-.545-.195-1.294-.757-1.918C14.3 11.425 13.388 11 12.146 11c-.758 0-1.098-.242-1.257-.42a.945.945 0 01-.243-.58c0-.198.027-.422.152-.591.085-.115.367-.41 1.348-.41.717 0 1.061.255 1.24.464.102.118.17.247.213.36.035.097.044.16.046.176 0 .004 0 .005 0 0a1 1 0 002 0c0-.488-.21-1.22-.74-1.837C14.335 7.495 13.43 7 12.145 7z"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M3.515 3.515C1.445 5.583 2.052 8.138 2.37 9.069c.028.08.024.142.014.175a9.998 9.998 0 002.544 9.827 9.998 9.998 0 009.826 2.543.301.301 0 01.175.014c.931.32 3.486.926 5.555-1.143 2.069-2.069 1.463-4.624 1.143-5.554a.301.301 0 01-.014-.176 9.998 9.998 0 00-2.543-9.826 9.998 9.998 0 00-9.827-2.544.302.302 0 01-.175-.014c-.93-.32-3.486-.925-5.554 1.144zm.748 4.904c-.254-.737-.556-2.268.666-3.49 1.222-1.222 2.753-.92 3.49-.666.42.144.901.18 1.375.045a7.998 7.998 0 017.863 2.035 7.998 7.998 0 012.034 7.863c-.135.474-.098.956.046 1.375.253.737.556 2.268-.666 3.49-1.222 1.222-2.753.92-3.49.666a2.296 2.296 0 00-1.375-.046 7.998 7.998 0 01-7.863-2.034 7.998 7.998 0 01-2.035-7.863 2.296 2.296 0 00-.045-1.375z"
+                            fill-rule="evenodd"
+                          />
+                        </g>
+                        <defs>
+                          <clippath
+                            id="prefix__clip0"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                            />
+                          </clippath>
+                        </defs>
+                      </svg>
+                    </div>
+                  </a>
+                  <a
+                    class="item inner-border-top"
+                    href="tel:88000000000;postd=8823"
+                  >
+                    <div
+                      class="flex-grow"
+                    >
+                      <span
+                        class="size-16 line-height-24 color__gray87 weight-500"
+                      >
+                        88000000000 доб. 8823
+                      </span>
+                      <div
+                        class="M-t__1"
+                      >
+                        <span
+                          class="size-14 line-height-20 color__gray38"
+                        >
+                          Рабочий
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="icon-circle"
+                    >
+                      <svg
+                        height="24"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M8.843 10.243c.093-.291.299-.683.63-1.213.077-.124.16-.254.264-.412l.406-.625c.156-.242.275-.435.379-.615C10.836 6.833 11 6.43 11 6c0-1.552-3.448-5-5-5-1.363 0-4.106 2.976-4.894 4.553-1.302 2.602 1.081 8.049 5.187 12.154 4.105 4.105 9.552 6.488 12.154 5.187C20.032 22.102 23 19.364 23 18c0-1.665-3.138-5-5-5-.655 0-.816.09-2.651 1.243l-.344.214c-.565.346-.97.559-1.276.664-.06.02-.11.034-.15.044L8.804 10.39c.007-.038.02-.087.039-.147zm4.662 4.935a.17.17 0 01-.021.001H13.505zm4.048 5.928c-1.598.798-6.285-1.252-9.846-4.813S2.095 8.045 2.894 6.447C3.362 5.512 5.677 3 6 3c.448 0 3 2.552 3 3 0 .036-.225.426-.94 1.528-.11.167-.199.307-.283.442-1.082 1.73-1.424 2.797-.484 3.737l5 5c.92.92 1.927.576 3.757-.545l.363-.226C17.533 15.232 17.951 15 18 15c.73 0 3 2.413 3 3 0 .325-2.504 2.634-3.447 3.106z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </a>
+                  <a
+                    class="item inner-border-top"
+                    href="tel:+7900000000"
+                  >
+                    <div
+                      class="flex-grow"
+                    >
+                      <span
+                        class="size-16 line-height-24 color__gray87 weight-500"
+                      >
+                        +7 (900) 000 000
+                      </span>
+                      <div
+                        class="M-t__1"
+                      >
+                        <span
+                          class="size-14 line-height-20 color__gray38"
+                        >
+                          Сотовый
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="icon-circle"
+                    >
+                      <svg
+                        height="24"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M6 1a2 2 0 00-2 2v17a2 2 0 002 2h12a2 2 0 002-2V3a2 2 0 00-2-2H6zm1 2a1 1 0 00-1 1v14h12V4a1 1 0 00-1-1H7zm5 18a1 1 0 100-2 1 1 0 000 2z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      >
+        <div
+          className="screen full-width"
+        >
+          <ScreenLayout
+            childrenRef={[Function]}
+            fullScrollThreshold={320}
+            onBack={[Function]}
+            onClose={[Function]}
+            withBackButton={false}
+            withCloseButton={true}
+            withDivideHeader={false}
+            withHeader={true}
+          >
+            <NavBar
+              bottomBordered={false}
+              buttons={
+                Object {
+                  "end": Object {
+                    "aria-label": "Закрыть",
+                    "icon": [Function],
+                    "onClick": [Function],
+                  },
+                  "start": undefined,
+                }
+              }
+            >
+              <div
+                className="nav-bar"
+              >
+                <div
+                  className="button-groups"
+                >
+                  <div
+                    className="group"
+                  >
+                    <NavButton
+                      aria-label="Закрыть"
+                      icon={[Function]}
+                      onClick={[Function]}
+                      shift={false}
+                      stub={true}
+                    >
+                      <button
+                        aria-hidden="true"
+                        aria-label="Закрыть"
+                        className="button icon stub"
+                        onClick={[Function]}
+                      />
+                    </NavButton>
+                  </div>
+                </div>
+                <div
+                  className="main"
+                />
+                <div
+                  className="button-groups end"
+                >
+                  <div
+                    className="group"
+                  >
+                    <NavButton
+                      aria-label="Закрыть"
+                      icon={[Function]}
+                      onClick={[Function]}
+                      shift={false}
+                    >
+                      <button
+                        aria-label="Закрыть"
+                        className="button icon"
+                        onClick={[Function]}
+                      >
+                        <Icon
+                          aria-hidden="true"
+                          color="gray87"
+                          icon={[Function]}
+                          size={24}
+                        >
+                          <crossIcon
+                            aria-hidden="true"
+                            className="icon icon-block color__gray87"
+                            height={24}
+                            viewBox="0 0 36 36"
+                            width={24}
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="icon icon-block color__gray87"
+                              height={24}
+                              viewBox="0 0 36 36"
+                              width={24}
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clipRule="evenodd"
+                                d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </crossIcon>
+                        </Icon>
+                      </button>
+                    </NavButton>
+                  </div>
+                </div>
+              </div>
+            </NavBar>
+            <div
+              className="content full-width"
+            >
+              <div
+                className="avatar small"
+              >
+                <Avatar
+                  clipStyle={
+                    Object {
+                      "WebkitClipPath": "url(#moleculas__super-ellipse)",
+                      "clipPath": "url(#moleculas__super-ellipse)",
+                    }
+                  }
+                  size={64}
+                  title="Марина Михайловская"
+                >
+                  <span
+                    className="avatar"
+                    style={
+                      Object {
+                        "height": 64,
+                        "width": 64,
+                      }
+                    }
+                  >
+                    <svg
+                      className="super-ellipse"
+                    >
+                      <rect
+                        fill="#f5f5f5"
+                        height={64}
+                        style={
+                          Object {
+                            "WebkitClipPath": "url(#moleculas__super-ellipse)",
+                            "clipPath": "url(#moleculas__super-ellipse)",
+                          }
+                        }
+                        width={64}
+                        x={0}
+                        y={0}
+                      />
+                    </svg>
+                    <span
+                      className="content"
+                    >
+                      <span
+                        className="title truncate color__gray87"
+                        role="presentation"
+                      >
+                        ММ
+                      </span>
+                    </span>
+                  </span>
+                </Avatar>
+              </div>
+              <div
+                className="avatar big"
+              >
+                <Avatar
+                  clipStyle={
+                    Object {
+                      "WebkitClipPath": "url(#moleculas__super-ellipse)",
+                      "clipPath": "url(#moleculas__super-ellipse)",
+                    }
+                  }
+                  size={112}
+                  title="Марина Михайловская"
+                >
+                  <span
+                    className="avatar"
+                    style={
+                      Object {
+                        "height": 112,
+                        "width": 112,
+                      }
+                    }
+                  >
+                    <svg
+                      className="super-ellipse"
+                    >
+                      <rect
+                        fill="#f5f5f5"
+                        height={112}
+                        style={
+                          Object {
+                            "WebkitClipPath": "url(#moleculas__super-ellipse)",
+                            "clipPath": "url(#moleculas__super-ellipse)",
+                          }
+                        }
+                        width={112}
+                        x={0}
+                        y={0}
+                      />
+                    </svg>
+                    <span
+                      className="content"
+                    >
+                      <span
+                        className="title truncate color__gray87"
+                        role="presentation"
+                      >
+                        ММ
+                      </span>
+                    </span>
+                  </span>
+                </Avatar>
+              </div>
+              <span
+                className="name"
+              >
+                Марина Михайловская
+              </span>
+              <span
+                className="appointment"
+              >
+                Менеджер по игрушке
+              </span>
+              <div
+                className="profile-url"
+              >
+                <a
+                  className="link"
+                  href="/test"
+                >
+                  test
+                </a>
+              </div>
+              <div
+                className="items inner-border-bottom"
+              >
+                <CommunicateLink
+                  href="mailto:example@email.com"
+                  icon={<MailSVG />}
+                  primaryText="example@email.com"
+                  secondaryText="Электронная почта"
+                >
+                  <a
+                    className="item inner-border-top"
+                    href="mailto:example@email.com"
+                  >
+                    <Box
+                      flex="grow"
+                    >
+                      <div
+                        className="flex-grow"
+                      >
+                        <Memo(Text)
+                          color="gray87"
+                          lineHeight={24}
+                          size={16}
+                          weight={500}
+                        >
+                          <span
+                            className="size-16 line-height-24 color__gray87 weight-500"
+                          >
+                            example@email.com
+                          </span>
+                        </Memo(Text)>
+                        <Box
+                          marginTop={1}
+                        >
+                          <div
+                            className="M-t__1"
+                          >
+                            <Memo(Text)
+                              color="gray38"
+                              lineHeight={20}
+                              size={14}
+                            >
+                              <span
+                                className="size-14 line-height-20 color__gray38"
+                              >
+                                Электронная почта
+                              </span>
+                            </Memo(Text)>
+                          </div>
+                        </Box>
+                      </div>
+                    </Box>
+                    <div
+                      className="icon-circle"
+                    >
+                      <MailSVG>
+                        <svg
+                          height={24}
+                          viewBox="0 0 24 24"
+                          width={24}
+                        >
+                          <path
+                            clipRule="evenodd"
+                            d="M4.5 6.134A.995.995 0 015 6h14c.182 0 .353.049.5.134l-.03.018L12 10.821 4.53 6.152a1.03 1.03 0 00-.03-.018zM4 8.179V17a1 1 0 001 1h14a1 1 0 001-1V8.18l-7.47 4.668a1 1 0 01-1.06 0L4 8.179zM5 4a3 3 0 00-3 3v10a3 3 0 003 3h14a3 3 0 003-3V7a3 3 0 00-3-3H5z"
+                            fillRule="evenodd"
+                          />
+                        </svg>
+                      </MailSVG>
+                    </div>
+                  </a>
+                </CommunicateLink>
+                <CommunicateLink
+                  href="skype:example@skype.com?chat"
+                  icon={<SkypeSVG />}
+                  primaryText="example@skype.com"
+                  secondaryText="Skype"
+                >
+                  <a
+                    className="item inner-border-top"
+                    href="skype:example@skype.com?chat"
+                  >
+                    <Box
+                      flex="grow"
+                    >
+                      <div
+                        className="flex-grow"
+                      >
+                        <Memo(Text)
+                          color="gray87"
+                          lineHeight={24}
+                          size={16}
+                          weight={500}
+                        >
+                          <span
+                            className="size-16 line-height-24 color__gray87 weight-500"
+                          >
+                            example@skype.com
+                          </span>
+                        </Memo(Text)>
+                        <Box
+                          marginTop={1}
+                        >
+                          <div
+                            className="M-t__1"
+                          >
+                            <Memo(Text)
+                              color="gray38"
+                              lineHeight={20}
+                              size={14}
+                            >
+                              <span
+                                className="size-14 line-height-20 color__gray38"
+                              >
+                                Skype
+                              </span>
+                            </Memo(Text)>
+                          </div>
+                        </Box>
+                      </div>
+                    </Box>
+                    <div
+                      className="icon-circle"
+                    >
+                      <SkypeSVG>
+                        <svg
+                          height={24}
+                          viewBox="0 0 24 24"
+                          width={24}
+                        >
+                          <g
+                            clipPath="url(#prefix__clip0)"
+                          >
+                            <path
+                              d="M12.146 7c-1.42 0-2.388.455-2.953 1.216-.524.706-.547 1.482-.547 1.784 0 .546.195 1.294.756 1.919.591.656 1.502 1.08 2.744 1.08.758 0 1.097.243 1.256.42.189.209.244.46.244.58 0 .122-.055.373-.244.582-.159.177-.498.419-1.256.419s-1.098-.242-1.257-.42a.945.945 0 01-.243-.58 1 1 0 10-2 0c0 .546.195 1.294.756 1.919.591.656 1.502 1.08 2.744 1.08 1.242 0 2.152-.424 2.743-1.08a2.936 2.936 0 00.757-1.92c0-.545-.195-1.294-.757-1.918C14.3 11.425 13.388 11 12.146 11c-.758 0-1.098-.242-1.257-.42a.945.945 0 01-.243-.58c0-.198.027-.422.152-.591.085-.115.367-.41 1.348-.41.717 0 1.061.255 1.24.464.102.118.17.247.213.36.035.097.044.16.046.176 0 .004 0 .005 0 0a1 1 0 002 0c0-.488-.21-1.22-.74-1.837C14.335 7.495 13.43 7 12.145 7z"
+                            />
+                            <path
+                              clipRule="evenodd"
+                              d="M3.515 3.515C1.445 5.583 2.052 8.138 2.37 9.069c.028.08.024.142.014.175a9.998 9.998 0 002.544 9.827 9.998 9.998 0 009.826 2.543.301.301 0 01.175.014c.931.32 3.486.926 5.555-1.143 2.069-2.069 1.463-4.624 1.143-5.554a.301.301 0 01-.014-.176 9.998 9.998 0 00-2.543-9.826 9.998 9.998 0 00-9.827-2.544.302.302 0 01-.175-.014c-.93-.32-3.486-.925-5.554 1.144zm.748 4.904c-.254-.737-.556-2.268.666-3.49 1.222-1.222 2.753-.92 3.49-.666.42.144.901.18 1.375.045a7.998 7.998 0 017.863 2.035 7.998 7.998 0 012.034 7.863c-.135.474-.098.956.046 1.375.253.737.556 2.268-.666 3.49-1.222 1.222-2.753.92-3.49.666a2.296 2.296 0 00-1.375-.046 7.998 7.998 0 01-7.863-2.034 7.998 7.998 0 01-2.035-7.863 2.296 2.296 0 00-.045-1.375z"
+                              fillRule="evenodd"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath
+                              id="prefix__clip0"
+                            >
+                              <path
+                                d="M0 0h24v24H0z"
+                              />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </SkypeSVG>
+                    </div>
+                  </a>
+                </CommunicateLink>
+                <CommunicateLink
+                  href="tel:88000000000;postd=8823"
+                  icon={<PhoneSVG />}
+                  primaryText="88000000000 доб. 8823"
+                  secondaryText="Рабочий"
+                >
+                  <a
+                    className="item inner-border-top"
+                    href="tel:88000000000;postd=8823"
+                  >
+                    <Box
+                      flex="grow"
+                    >
+                      <div
+                        className="flex-grow"
+                      >
+                        <Memo(Text)
+                          color="gray87"
+                          lineHeight={24}
+                          size={16}
+                          weight={500}
+                        >
+                          <span
+                            className="size-16 line-height-24 color__gray87 weight-500"
+                          >
+                            88000000000 доб. 8823
+                          </span>
+                        </Memo(Text)>
+                        <Box
+                          marginTop={1}
+                        >
+                          <div
+                            className="M-t__1"
+                          >
+                            <Memo(Text)
+                              color="gray38"
+                              lineHeight={20}
+                              size={14}
+                            >
+                              <span
+                                className="size-14 line-height-20 color__gray38"
+                              >
+                                Рабочий
+                              </span>
+                            </Memo(Text)>
+                          </div>
+                        </Box>
+                      </div>
+                    </Box>
+                    <div
+                      className="icon-circle"
+                    >
+                      <PhoneSVG>
+                        <svg
+                          height={24}
+                          viewBox="0 0 24 24"
+                          width={24}
+                        >
+                          <path
+                            clipRule="evenodd"
+                            d="M8.843 10.243c.093-.291.299-.683.63-1.213.077-.124.16-.254.264-.412l.406-.625c.156-.242.275-.435.379-.615C10.836 6.833 11 6.43 11 6c0-1.552-3.448-5-5-5-1.363 0-4.106 2.976-4.894 4.553-1.302 2.602 1.081 8.049 5.187 12.154 4.105 4.105 9.552 6.488 12.154 5.187C20.032 22.102 23 19.364 23 18c0-1.665-3.138-5-5-5-.655 0-.816.09-2.651 1.243l-.344.214c-.565.346-.97.559-1.276.664-.06.02-.11.034-.15.044L8.804 10.39c.007-.038.02-.087.039-.147zm4.662 4.935a.17.17 0 01-.021.001H13.505zm4.048 5.928c-1.598.798-6.285-1.252-9.846-4.813S2.095 8.045 2.894 6.447C3.362 5.512 5.677 3 6 3c.448 0 3 2.552 3 3 0 .036-.225.426-.94 1.528-.11.167-.199.307-.283.442-1.082 1.73-1.424 2.797-.484 3.737l5 5c.92.92 1.927.576 3.757-.545l.363-.226C17.533 15.232 17.951 15 18 15c.73 0 3 2.413 3 3 0 .325-2.504 2.634-3.447 3.106z"
+                            fillRule="evenodd"
+                          />
+                        </svg>
+                      </PhoneSVG>
+                    </div>
+                  </a>
+                </CommunicateLink>
+                <CommunicateLink
+                  href="tel:+7900000000"
+                  icon={<MobileSVG />}
+                  primaryText="+7 (900) 000 000"
+                  secondaryText="Сотовый"
+                >
+                  <a
+                    className="item inner-border-top"
+                    href="tel:+7900000000"
+                  >
+                    <Box
+                      flex="grow"
+                    >
+                      <div
+                        className="flex-grow"
+                      >
+                        <Memo(Text)
+                          color="gray87"
+                          lineHeight={24}
+                          size={16}
+                          weight={500}
+                        >
+                          <span
+                            className="size-16 line-height-24 color__gray87 weight-500"
+                          >
+                            +7 (900) 000 000
+                          </span>
+                        </Memo(Text)>
+                        <Box
+                          marginTop={1}
+                        >
+                          <div
+                            className="M-t__1"
+                          >
+                            <Memo(Text)
+                              color="gray38"
+                              lineHeight={20}
+                              size={14}
+                            >
+                              <span
+                                className="size-14 line-height-20 color__gray38"
+                              >
+                                Сотовый
+                              </span>
+                            </Memo(Text)>
+                          </div>
+                        </Box>
+                      </div>
+                    </Box>
+                    <div
+                      className="icon-circle"
+                    >
+                      <MobileSVG>
+                        <svg
+                          height={24}
+                          viewBox="0 0 24 24"
+                          width={24}
+                        >
+                          <path
+                            clipRule="evenodd"
+                            d="M6 1a2 2 0 00-2 2v17a2 2 0 002 2h12a2 2 0 002-2V3a2 2 0 00-2-2H6zm1 2a1 1 0 00-1 1v14h12V4a1 1 0 00-1-1H7zm5 18a1 1 0 100-2 1 1 0 000 2z"
+                            fillRule="evenodd"
+                          />
+                        </svg>
+                      </MobileSVG>
+                    </div>
+                  </a>
+                </CommunicateLink>
+              </div>
+            </div>
+          </ScreenLayout>
+        </div>
+      </Portal>
+    </Layer>
+  </Screen>
+</PersonScreen>
+`;
+
+exports[`<PersonScreen /> should render with name 1`] = `
+<PersonScreen
+  name="Марина Михайловская"
+  phoneText="88000000000 доб. 8823"
+  secondPhoneText="+7 (900) 000 000"
+>
+  <Screen
+    withDivideHeader={false}
+  >
+    <Layer>
+      <Portal
+        containerInfo={
+          <div>
+            <div
+              class="screen full-width"
+            >
+              <div
+                class="nav-bar"
+              >
+                <div
+                  class="button-groups"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      aria-hidden="true"
+                      aria-label="Закрыть"
+                      class="button icon stub"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="main"
+                />
+                <div
+                  class="button-groups end"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      aria-label="Закрыть"
+                      class="button icon"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="icon icon-block color__gray87"
+                        height="24"
+                        viewBox="0 0 36 36"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="content full-width"
+              >
+                <div
+                  class="avatar small"
+                >
+                  <span
+                    class="avatar"
+                    style="width: 64px; height: 64px;"
+                  >
+                    <svg
+                      class="super-ellipse"
+                    >
+                      <rect
+                        fill="#f5f5f5"
+                        height="64"
+                        width="64"
+                        x="0"
+                        y="0"
+                      />
+                    </svg>
+                    <span
+                      class="content"
+                    >
+                      <span
+                        class="title truncate color__gray87"
+                        role="presentation"
+                      >
+                        ММ
+                      </span>
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="avatar big"
+                >
+                  <span
+                    class="avatar"
+                    style="width: 112px; height: 112px;"
+                  >
+                    <svg
+                      class="super-ellipse"
+                    >
+                      <rect
+                        fill="#f5f5f5"
+                        height="112"
+                        width="112"
+                        x="0"
+                        y="0"
+                      />
+                    </svg>
+                    <span
+                      class="content"
+                    >
+                      <span
+                        class="title truncate color__gray87"
+                        role="presentation"
+                      >
+                        ММ
+                      </span>
+                    </span>
+                  </span>
+                </div>
+                <span
+                  class="name"
+                >
+                  Марина Михайловская
+                </span>
+                <div
+                  class="items inner-border-bottom"
+                >
+                  <a
+                    class="item inner-border-top"
+                  >
+                    <div
+                      class="flex-grow"
+                    >
+                      <span
+                        class="size-16 line-height-24 color__gray87 weight-500"
+                      >
+                        88000000000 доб. 8823
+                      </span>
+                      <div
+                        class="M-t__1"
+                      >
+                        <span
+                          class="size-14 line-height-20 color__gray38"
+                        >
+                          Рабочий
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="icon-circle"
+                    >
+                      <svg
+                        height="24"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M8.843 10.243c.093-.291.299-.683.63-1.213.077-.124.16-.254.264-.412l.406-.625c.156-.242.275-.435.379-.615C10.836 6.833 11 6.43 11 6c0-1.552-3.448-5-5-5-1.363 0-4.106 2.976-4.894 4.553-1.302 2.602 1.081 8.049 5.187 12.154 4.105 4.105 9.552 6.488 12.154 5.187C20.032 22.102 23 19.364 23 18c0-1.665-3.138-5-5-5-.655 0-.816.09-2.651 1.243l-.344.214c-.565.346-.97.559-1.276.664-.06.02-.11.034-.15.044L8.804 10.39c.007-.038.02-.087.039-.147zm4.662 4.935a.17.17 0 01-.021.001H13.505zm4.048 5.928c-1.598.798-6.285-1.252-9.846-4.813S2.095 8.045 2.894 6.447C3.362 5.512 5.677 3 6 3c.448 0 3 2.552 3 3 0 .036-.225.426-.94 1.528-.11.167-.199.307-.283.442-1.082 1.73-1.424 2.797-.484 3.737l5 5c.92.92 1.927.576 3.757-.545l.363-.226C17.533 15.232 17.951 15 18 15c.73 0 3 2.413 3 3 0 .325-2.504 2.634-3.447 3.106z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </a>
+                  <a
+                    class="item inner-border-top"
+                  >
+                    <div
+                      class="flex-grow"
+                    >
+                      <span
+                        class="size-16 line-height-24 color__gray87 weight-500"
+                      >
+                        +7 (900) 000 000
+                      </span>
+                      <div
+                        class="M-t__1"
+                      >
+                        <span
+                          class="size-14 line-height-20 color__gray38"
+                        >
+                          Сотовый
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="icon-circle"
+                    >
+                      <svg
+                        height="24"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M6 1a2 2 0 00-2 2v17a2 2 0 002 2h12a2 2 0 002-2V3a2 2 0 00-2-2H6zm1 2a1 1 0 00-1 1v14h12V4a1 1 0 00-1-1H7zm5 18a1 1 0 100-2 1 1 0 000 2z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      >
+        <div
+          className="screen full-width"
+        >
+          <ScreenLayout
+            childrenRef={[Function]}
+            fullScrollThreshold={320}
+            onBack={[Function]}
+            onClose={[Function]}
+            withBackButton={false}
+            withCloseButton={true}
+            withDivideHeader={false}
+            withHeader={true}
+          >
+            <NavBar
+              bottomBordered={false}
+              buttons={
+                Object {
+                  "end": Object {
+                    "aria-label": "Закрыть",
+                    "icon": [Function],
+                    "onClick": [Function],
+                  },
+                  "start": undefined,
+                }
+              }
+            >
+              <div
+                className="nav-bar"
+              >
+                <div
+                  className="button-groups"
+                >
+                  <div
+                    className="group"
+                  >
+                    <NavButton
+                      aria-label="Закрыть"
+                      icon={[Function]}
+                      onClick={[Function]}
+                      shift={false}
+                      stub={true}
+                    >
+                      <button
+                        aria-hidden="true"
+                        aria-label="Закрыть"
+                        className="button icon stub"
+                        onClick={[Function]}
+                      />
+                    </NavButton>
+                  </div>
+                </div>
+                <div
+                  className="main"
+                />
+                <div
+                  className="button-groups end"
+                >
+                  <div
+                    className="group"
+                  >
+                    <NavButton
+                      aria-label="Закрыть"
+                      icon={[Function]}
+                      onClick={[Function]}
+                      shift={false}
+                    >
+                      <button
+                        aria-label="Закрыть"
+                        className="button icon"
+                        onClick={[Function]}
+                      >
+                        <Icon
+                          aria-hidden="true"
+                          color="gray87"
+                          icon={[Function]}
+                          size={24}
+                        >
+                          <crossIcon
+                            aria-hidden="true"
+                            className="icon icon-block color__gray87"
+                            height={24}
+                            viewBox="0 0 36 36"
+                            width={24}
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="icon icon-block color__gray87"
+                              height={24}
+                              viewBox="0 0 36 36"
+                              width={24}
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clipRule="evenodd"
+                                d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </crossIcon>
+                        </Icon>
+                      </button>
+                    </NavButton>
+                  </div>
+                </div>
+              </div>
+            </NavBar>
+            <div
+              className="content full-width"
+            >
+              <div
+                className="avatar small"
+              >
+                <Avatar
+                  size={64}
+                  title="Марина Михайловская"
+                >
+                  <span
+                    className="avatar"
+                    style={
+                      Object {
+                        "height": 64,
+                        "width": 64,
+                      }
+                    }
+                  >
+                    <svg
+                      className="super-ellipse"
+                    >
+                      <rect
+                        fill="#f5f5f5"
+                        height={64}
+                        style={Object {}}
+                        width={64}
+                        x={0}
+                        y={0}
+                      />
+                    </svg>
+                    <span
+                      className="content"
+                    >
+                      <span
+                        className="title truncate color__gray87"
+                        role="presentation"
+                      >
+                        ММ
+                      </span>
+                    </span>
+                  </span>
+                </Avatar>
+              </div>
+              <div
+                className="avatar big"
+              >
+                <Avatar
+                  size={112}
+                  title="Марина Михайловская"
+                >
+                  <span
+                    className="avatar"
+                    style={
+                      Object {
+                        "height": 112,
+                        "width": 112,
+                      }
+                    }
+                  >
+                    <svg
+                      className="super-ellipse"
+                    >
+                      <rect
+                        fill="#f5f5f5"
+                        height={112}
+                        style={Object {}}
+                        width={112}
+                        x={0}
+                        y={0}
+                      />
+                    </svg>
+                    <span
+                      className="content"
+                    >
+                      <span
+                        className="title truncate color__gray87"
+                        role="presentation"
+                      >
+                        ММ
+                      </span>
+                    </span>
+                  </span>
+                </Avatar>
+              </div>
+              <span
+                className="name"
+              >
+                Марина Михайловская
+              </span>
+              <div
+                className="items inner-border-bottom"
+              >
+                <CommunicateLink
+                  icon={<PhoneSVG />}
+                  primaryText="88000000000 доб. 8823"
+                  secondaryText="Рабочий"
+                >
+                  <a
+                    className="item inner-border-top"
+                  >
+                    <Box
+                      flex="grow"
+                    >
+                      <div
+                        className="flex-grow"
+                      >
+                        <Memo(Text)
+                          color="gray87"
+                          lineHeight={24}
+                          size={16}
+                          weight={500}
+                        >
+                          <span
+                            className="size-16 line-height-24 color__gray87 weight-500"
+                          >
+                            88000000000 доб. 8823
+                          </span>
+                        </Memo(Text)>
+                        <Box
+                          marginTop={1}
+                        >
+                          <div
+                            className="M-t__1"
+                          >
+                            <Memo(Text)
+                              color="gray38"
+                              lineHeight={20}
+                              size={14}
+                            >
+                              <span
+                                className="size-14 line-height-20 color__gray38"
+                              >
+                                Рабочий
+                              </span>
+                            </Memo(Text)>
+                          </div>
+                        </Box>
+                      </div>
+                    </Box>
+                    <div
+                      className="icon-circle"
+                    >
+                      <PhoneSVG>
+                        <svg
+                          height={24}
+                          viewBox="0 0 24 24"
+                          width={24}
+                        >
+                          <path
+                            clipRule="evenodd"
+                            d="M8.843 10.243c.093-.291.299-.683.63-1.213.077-.124.16-.254.264-.412l.406-.625c.156-.242.275-.435.379-.615C10.836 6.833 11 6.43 11 6c0-1.552-3.448-5-5-5-1.363 0-4.106 2.976-4.894 4.553-1.302 2.602 1.081 8.049 5.187 12.154 4.105 4.105 9.552 6.488 12.154 5.187C20.032 22.102 23 19.364 23 18c0-1.665-3.138-5-5-5-.655 0-.816.09-2.651 1.243l-.344.214c-.565.346-.97.559-1.276.664-.06.02-.11.034-.15.044L8.804 10.39c.007-.038.02-.087.039-.147zm4.662 4.935a.17.17 0 01-.021.001H13.505zm4.048 5.928c-1.598.798-6.285-1.252-9.846-4.813S2.095 8.045 2.894 6.447C3.362 5.512 5.677 3 6 3c.448 0 3 2.552 3 3 0 .036-.225.426-.94 1.528-.11.167-.199.307-.283.442-1.082 1.73-1.424 2.797-.484 3.737l5 5c.92.92 1.927.576 3.757-.545l.363-.226C17.533 15.232 17.951 15 18 15c.73 0 3 2.413 3 3 0 .325-2.504 2.634-3.447 3.106z"
+                            fillRule="evenodd"
+                          />
+                        </svg>
+                      </PhoneSVG>
+                    </div>
+                  </a>
+                </CommunicateLink>
+                <CommunicateLink
+                  icon={<MobileSVG />}
+                  primaryText="+7 (900) 000 000"
+                  secondaryText="Сотовый"
+                >
+                  <a
+                    className="item inner-border-top"
+                  >
+                    <Box
+                      flex="grow"
+                    >
+                      <div
+                        className="flex-grow"
+                      >
+                        <Memo(Text)
+                          color="gray87"
+                          lineHeight={24}
+                          size={16}
+                          weight={500}
+                        >
+                          <span
+                            className="size-16 line-height-24 color__gray87 weight-500"
+                          >
+                            +7 (900) 000 000
+                          </span>
+                        </Memo(Text)>
+                        <Box
+                          marginTop={1}
+                        >
+                          <div
+                            className="M-t__1"
+                          >
+                            <Memo(Text)
+                              color="gray38"
+                              lineHeight={20}
+                              size={14}
+                            >
+                              <span
+                                className="size-14 line-height-20 color__gray38"
+                              >
+                                Сотовый
+                              </span>
+                            </Memo(Text)>
+                          </div>
+                        </Box>
+                      </div>
+                    </Box>
+                    <div
+                      className="icon-circle"
+                    >
+                      <MobileSVG>
+                        <svg
+                          height={24}
+                          viewBox="0 0 24 24"
+                          width={24}
+                        >
+                          <path
+                            clipRule="evenodd"
+                            d="M6 1a2 2 0 00-2 2v17a2 2 0 002 2h12a2 2 0 002-2V3a2 2 0 00-2-2H6zm1 2a1 1 0 00-1 1v14h12V4a1 1 0 00-1-1H7zm5 18a1 1 0 100-2 1 1 0 000 2z"
+                            fillRule="evenodd"
+                          />
+                        </svg>
+                      </MobileSVG>
+                    </div>
+                  </a>
+                </CommunicateLink>
+              </div>
+            </div>
+          </ScreenLayout>
+        </div>
+      </Portal>
+    </Layer>
+  </Screen>
+</PersonScreen>
+`;
