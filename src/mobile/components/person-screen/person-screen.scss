@@ -1,0 +1,107 @@
+@import 'node_modules/@dev-dep/ui-nucleons/colors';
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  &.big {
+    display: none;
+  }
+  @media (min-width: 721px) {
+    margin-top: 56px;
+    &.small {
+      display: none;
+    }
+    &.big {
+      display: flex;
+    }
+  }
+}
+
+.name {
+  display: -webkit-box;
+  margin: 12px auto 0;
+  text-align: center;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  color: $gray87;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  @media (min-width: 721px) {
+    margin: 32px auto 0;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.appointment {
+  display: block;
+  max-width: 260px;
+  margin: 2px auto 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  color: $gray38;
+  @media (min-width: 601px) {
+    max-width: none;
+    margin: 8px auto 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.profile-url {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  @media (max-width: 720px) {
+    margin-top: 16px;
+  }
+  .link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: $brand-blue;
+  }
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 32px auto 0;
+  @media (min-width: 601px) {
+    max-width: calc((100% - #{7 * 16px}) / 8 * 6 + (#{5 * 16px}));
+  }
+  @media (min-width: 721px) {
+    max-width: 498px;
+    margin: 56px auto 0;
+  }
+  @media (min-width: 841px) {
+    max-width: 588px;
+  }
+
+}
+
+.item {
+  display: flex;
+  width: 100%;
+  padding: 16px;
+  text-decoration: none;
+  @media (min-width: 721px) {
+    padding: 16px 0;
+  }
+}
+
+.icon-circle {
+  background: $gray4;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
