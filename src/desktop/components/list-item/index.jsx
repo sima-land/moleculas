@@ -220,7 +220,9 @@ export const ListItem = ({
               <div className={cx('info', direction)}>
                 <div className={cx('details', direction)}>
                   {Boolean(name) && (
-                    <ItemName name={name} href={itemUrl} />
+                    <ItemName href={itemUrl} textProps={{ size: 16 }}>
+                      {name}
+                    </ItemName>
                   )}
                   {!asTile && !isUnitPrice && Boolean(wholesaleProps) && Boolean(wholesaleProps.price) && (
                     <Box marginTop={2}>
@@ -240,7 +242,7 @@ export const ListItem = ({
                       />
                       {Boolean(sid) && (
                         <Text color='gray38' lineHeight={20} size={14}>
-                         Арт.:&nbsp;{sid}
+                          Арт.:&nbsp;{sid}
                         </Text>
                       )}
                     </Box>

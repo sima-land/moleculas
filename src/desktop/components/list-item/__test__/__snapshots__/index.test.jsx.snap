@@ -56,8 +56,14 @@ exports[`<ListItem /> should render with all props 1`] = `
           >
             <ItemName
               href="#"
-              name="Foo"
-            />
+              textProps={
+                Object {
+                  "size": 16,
+                }
+              }
+            >
+              Foo
+            </ItemName>
             <Box
               marginTop={2}
             >
@@ -302,8 +308,14 @@ exports[`<ListItem /> should render with all props 2`] = `
           >
             <ItemName
               href="#"
-              name="Foo"
-            />
+              textProps={
+                Object {
+                  "size": 16,
+                }
+              }
+            >
+              Foo
+            </ItemName>
             <div
               className="price-fixed column"
             >
@@ -493,8 +505,14 @@ exports[`<ListItem /> should render with all props 3`] = `
           >
             <ItemName
               href="#"
-              name="Foo"
-            />
+              textProps={
+                Object {
+                  "size": 16,
+                }
+              }
+            >
+              Foo
+            </ItemName>
             <Box
               marginTop={2}
             >
@@ -699,8 +717,14 @@ exports[`<ListItem /> should render with all props 4`] = `
           >
             <ItemName
               href="#"
-              name="Foo"
-            />
+              textProps={
+                Object {
+                  "size": 16,
+                }
+              }
+            >
+              Foo
+            </ItemName>
             <div
               className="price-fixed column"
             >
@@ -862,8 +886,14 @@ exports[`<ListItem /> should render with all props 5`] = `
           >
             <ItemName
               href="#"
-              name="Foo"
-            />
+              textProps={
+                Object {
+                  "size": 16,
+                }
+              }
+            >
+              Foo
+            </ItemName>
             <div
               className="price-fixed column"
             >

@@ -71,8 +71,9 @@ exports[`<ListItem /> should render with all props 1`] = `
       >
         <ItemName
           href="#"
-          name="Foo"
-        />
+        >
+          Foo
+        </ItemName>
       </div>
       <Box
         dangerouslySetInlineStyle={
@@ -190,8 +191,9 @@ exports[`<ListItem /> should render with all props 2`] = `
       >
         <ItemName
           href="#"
-          name="Foo"
-        />
+        >
+          Foo
+        </ItemName>
       </div>
       <ItemRating
         marginTop={2}
@@ -361,8 +363,9 @@ exports[`<ListItem /> should render with all props 3`] = `
       >
         <ItemName
           href="#"
-          name="Foo"
-        />
+        >
+          Foo
+        </ItemName>
       </div>
       <ItemRating
         marginTop={2}
@@ -537,8 +540,9 @@ exports[`<ListItem /> should render with all props 4`] = `
       >
         <ItemName
           href="#"
-          name="Foo"
-        />
+        >
+          Foo
+        </ItemName>
       </div>
       <ItemRating
         marginTop={2}

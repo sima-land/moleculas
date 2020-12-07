@@ -3,7 +3,6 @@
 exports[`<ItemName /> should render with props 1`] = `
 <ItemName
   href="#"
-  name="Foo Bar"
   shrinkable={true}
 >
   <div

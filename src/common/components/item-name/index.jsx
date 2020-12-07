@@ -10,20 +10,20 @@ const cx = classnames.bind(styles);
  * Компонент названия товара.
  * @param {Object} props Свойства компонента.
  * @param {string} props.href Ссылка на товар.
- * @param {string} props.name Название товара.
+ * @param {string} props.children Название товара.
  * @param {string} [props.className] Дополнительное название класса.
  * @return {ReactElement} Компонент названия товара.
  */
 export const ItemName = ({
   href,
-  name,
+  children,
   className,
-  nameTextProps,
+  textProps,
 }) => (
   <div className={cx('wrapper', className)}>
     <Link href={href}>
-      <Text {...nameTextProps}>
-        <span className={cx('name')} children={name} />
+      <Text {...textProps}>
+        <span className={cx('name')} children={children} />
       </Text>
     </Link>
   </div>
