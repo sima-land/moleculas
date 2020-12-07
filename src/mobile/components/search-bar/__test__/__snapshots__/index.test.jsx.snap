@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar should render correctly with hasFindButton 1`] = `
+<SearchBar
+  buttonText="Отмена"
+  hasFindButton={true}
+  onButtonClick={[MockFunction]}
+  onFocus={[MockFunction]}
+  placeholder="Найти"
+  searchQuery="Тестовый запрос"
+  withClearButton={true}
+>
+  <div
+    className="wrapper with-find-button"
+  >
+    <label
+      className="input-wrapper smaller"
+    >
+      <input
+        autoFocus={true}
+        className="search-field"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Найдите нужное"
+        value="Тестовый запрос"
+      />
+      <span
+        className="with-adornment end"
+      >
+        <Link
+          aria-label="Очистить"
+          role="button"
+        >
+          <span
+            aria-label="Очистить"
+            className="link link-blue link-can-be-hovered"
+            role="button"
+          >
+            <CrossSVG
+              aria-hidden={true}
+              fill="#9e9e9e"
+            >
+              <svg
+                aria-hidden={true}
+                fill="#9e9e9e"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+              >
+                <path
+                  clipRule="evenodd"
+                  d="M8 15A7 7 0 108 1a7 7 0 000 14zm2.828-9.828a1 1 0 010 1.414L9.414 8l1.414 1.414a1 1 0 01-1.414 1.414L8 9.414l-1.414 1.414a1 1 0 11-1.414-1.414L6.586 8 5.172 6.586a1 1 0 011.414-1.414L8 6.586l1.414-1.414a1 1 0 011.414 0z"
+                  fillRule="evenodd"
+                />
+              </svg>
+            </CrossSVG>
+          </span>
+        </Link>
+      </span>
+    </label>
+    <div
+      className="button"
+      onClick={[MockFunction]}
+      role="button"
+    >
+      Отмена
+    </div>
+  </div>
+</SearchBar>
+`;
+
+exports[`SearchBar should render correctly with props 1`] = `
+<SearchBar
+  placeholder="Найти"
+  searchQuery="Тестовый запрос"
+  withClearButton={true}
+>
+  <div
+    className="wrapper with-find-button"
+  >
+    <label
+      className="input-wrapper smaller"
+    >
+      <input
+        autoFocus={true}
+        className="search-field"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Найдите нужное"
+        value="Тестовый запрос"
+      />
+      <span
+        className="with-adornment end"
+      >
+        <Link
+          aria-label="Очистить"
+          role="button"
+        >
+          <span
+            aria-label="Очистить"
+            className="link link-blue link-can-be-hovered"
+            role="button"
+          >
+            <CrossSVG
+              aria-hidden={true}
+              fill="#9e9e9e"
+            >
+              <svg
+                aria-hidden={true}
+                fill="#9e9e9e"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+              >
+                <path
+                  clipRule="evenodd"
+                  d="M8 15A7 7 0 108 1a7 7 0 000 14zm2.828-9.828a1 1 0 010 1.414L9.414 8l1.414 1.414a1 1 0 01-1.414 1.414L8 9.414l-1.414 1.414a1 1 0 11-1.414-1.414L6.586 8 5.172 6.586a1 1 0 011.414-1.414L8 6.586l1.414-1.414a1 1 0 011.414 0z"
+                  fillRule="evenodd"
+                />
+              </svg>
+            </CrossSVG>
+          </span>
+        </Link>
+      </span>
+    </label>
+  </div>
+</SearchBar>
+`;
+
+exports[`SearchBar should render correctly without props 1`] = `
+<SearchBar>
+  <div
+    className="wrapper with-find-button"
+  >
+    <label
+      className="input-wrapper smaller"
+    >
+      <input
+        autoFocus={true}
+        className="search-field"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Найдите нужное"
+        value=""
+      />
+    </label>
+  </div>
+</SearchBar>
+`;
