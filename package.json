@@ -26,7 +26,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
-    "@dev-dep/linters": "1.0.3",
+    "@dev-dep/linters": "^1.0.8",
     "@storybook/addon-actions": "^6.0.26",
     "@storybook/addon-essentials": "^6.0.26",
     "@storybook/addon-links": "^6.0.26",
@@ -49,14 +49,11 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
     "lodash": "4.17.15",
-    "node-sass": "^4.14.1",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-is": "^16.13.1",
-    "sass-loader": "^10.0.3",
-    "stylelint": "^10.1.0",
-    "stylelint-config-sass-guidelines": "^6.0.0",
-    "stylelint-scss": "^3.8.0"
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0"
   },
   "scripts": {
     "build": "gulp build",

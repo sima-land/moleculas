@@ -189,7 +189,9 @@ export const ListItem = ({
             </div>
             {Boolean(name) && (
               <div className={cx('title-wrapper', !asTile && 'row')}>
-                <ItemName name={name} href={itemUrl} />
+                <ItemName href={itemUrl}>
+                  {name}
+                </ItemName>
               </div>
             )}
             {Boolean(modifierProps) && asTile && (

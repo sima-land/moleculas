@@ -1,5 +1,5 @@
-@import "node_modules/@dev-dep/ui-nucleons/variables";
-@import "node_modules/@dev-dep/ui-nucleons/colors";
+@import 'node_modules/@dev-dep/ui-nucleons/variables';
+@import 'node_modules/@dev-dep/ui-nucleons/colors';
 
 .wrapper-row {
   position: relative;
@@ -72,11 +72,13 @@
 
 .title-wrapper {
   font-size: 12px;
+  line-height: 20px;
   &.row {
     font-weight: 600;
     margin-bottom: 4px;
     @media (min-width: $mediumMobileBreakpoint) {
       font-size: 16px;
+      line-height: 24px;
       font-weight: normal;
       margin-bottom: 8px;
     }
