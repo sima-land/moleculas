@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import TouchSlider from '@dev-dep/ui-nucleons/touch-slider';
-import MobileLayout from '@dev-dep/ui-nucleons/layout/mobile-layout';
+import { MobileLayout } from '@dev-dep/ui-nucleons/layout';
 import RecommendedItem from './recommended-item';
 import withInViewportObserver from '@dev-dep/ui-nucleons/with-in-viewport-observer';
 import classes from './recommendation-slider.scss';
@@ -31,27 +31,32 @@ export const RecommendationWrapper = ({
   addObserve,
   addObserveWithMargin,
 }) => {
-  const sliderRef = useRef(null);
+  const rootRef = useRef(null);
   const [canLoadImages, setCanLoadImages] = useState(false);
   const [needLoadImages, setNeedLoadImages] = useState(false);
 
   // Устанавливаем возможность начала загрузки изображений, когда компонент почти попал в зону видимости
   useEffect(() => {
     isFunction(addObserveWithMargin)
-        && sliderRef.current
-        && addObserveWithMargin(sliderRef.current, () => setCanLoadImages(true));
-  }, [sliderRef.current]);
+      && rootRef.current
+      && addObserveWithMargin(rootRef.current, () => setCanLoadImages(true));
+  }, []);
 
   // Отправляем статистку в ОКО, когда компонент попадает в зону видимости
   useEffect(() => {
     isFunction(addObserve)
-        && isFunction(onInViewport)
-        && sliderRef.current
-        && addObserve(sliderRef.current, onInViewport);
-  }, [sliderRef.current]);
+      && isFunction(onInViewport)
+      && rootRef.current
+      && addObserve(rootRef.current, onInViewport);
+  }, []);
+
+  // разрешаем загружать картинки только после монтирования
+  useEffect(() => {
+    setNeedLoadImages(true);
+  }, []);
 
   return (
-    <div className={cx('wrapper')} ref={sliderRef}>
+    <div className={cx('wrapper')} ref={rootRef}>
       <MobileLayout>
         <Text
           size={20}
@@ -61,13 +66,7 @@ export const RecommendationWrapper = ({
           lineHeight={28}
         />
       </MobileLayout>
-      <TouchSlider
-        layoutProps={{
-          containerProps: {
-            onTouchStart: () => setNeedLoadImages(true),
-          },
-        }}
-      >
+      <TouchSlider>
         {isNonEmptyArray(items) && items.map((item, index) => (
           <RecommendedItem
             key={index}

@@ -4,7 +4,6 @@ import Price from '@dev-dep/ui-nucleons/price';
 import classes from './recommended-item.scss';
 import classnames from 'classnames/bind';
 import cutTextContent from '@dev-dep/ui-nucleons/helpers/cut-text-content';
-import isFunction from 'lodash/isFunction';
 import debounce from 'lodash/debounce';
 import withGlobalListeners from '@dev-dep/ui-nucleons/hoc/with-global-listeners';
 
@@ -69,8 +68,8 @@ const RecommendedItem = ({
   }, [name]);
 
   useEffect(() => {
-    itemRef.current instanceof HTMLElement && defineVisibility(itemRef.current);
-  }, [itemRef.current]);
+    itemRef.current && defineVisibility(itemRef.current);
+  }, []);
 
   /**
    * Определяет находиться ли элемент в зоне видимости по ширине экрана.
@@ -113,7 +112,7 @@ const RecommendedItem = ({
         </div>
       )}
       <Link
-        onClick={isFunction(onItemClick) ? onItemClick : null}
+        onClick={onItemClick}
         className={cx('link')}
         ref={linkRef}
         href={url}

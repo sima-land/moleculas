@@ -1921,10 +1921,10 @@
     stylelint-config-sass-guidelines "^7.1.0"
     stylelint-scss "^3.12.1"
 
-"@dev-dep/ui-nucleons@^5.1.0":
-  version "5.1.0"
-  resolved "https://gitlab.sima-land.ru/api/v4/projects/625/packages/npm/@dev-dep/ui-nucleons/-/@dev-dep/ui-nucleons-5.1.0.tgz#25ae82a0ccb76b2c1a9303436f2b36508f0e959d"
-  integrity sha1-Ja6CoMy3aywakwNDbys2UI8OlZ0=
+"@dev-dep/ui-nucleons@^7.0.0":
+  version "7.0.0"
+  resolved "https://gitlab.sima-land.ru/api/v4/projects/625/packages/npm/@dev-dep/ui-nucleons/-/@dev-dep/ui-nucleons-7.0.0.tgz#943b37199c332668d8961046e6c995e9035f0ed3"
+  integrity sha1-lDs3GZwzJmjYlhBG5smV6QNfDtM=
   dependencies:
     "@storybook/addon-console" "^1.2.1"
     "@types/jest" "^24.0.19"

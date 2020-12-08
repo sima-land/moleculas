@@ -182,12 +182,4 @@ describe('<RecommendationWrapper />', () => {
     slider.update();
     expect(slider.find(RecommendedItem).map(item => item.prop('canLoadImage'))).toEqual([true, true]);
   });
-
-  it('should set correct needLoadImage to RecommendedItem', () => {
-    const slider = mount(<PureRecommendationWrapper items={items} />);
-    expect(slider.find(RecommendedItem).map(item => item.prop('needLoadImage'))).toEqual([false, false]);
-
-    slider.find(TouchSlider).find('.layout').simulate('touchstart');
-    expect(slider.find(RecommendedItem).map(item => item.prop('needLoadImage'))).toEqual([true, true]);
-  });
 });
