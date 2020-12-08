@@ -102,99 +102,95 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                 class="content full-width"
               >
                 <div
-                  class="layout-wrapper layout-xxl-padding-sm layout-xl-padding-sm layout-lg-padding-sm layout-md-padding-sm layout-sm-padding-sm layout-xs-padding-sm layout-xxs-padding-md layout-xxxs-padding-none"
+                  class="layout mobile disabled-xxs"
                 >
                   <div
-                    class="layout layout-xxl-width-sm layout-xl-width-sm layout-lg-width-sm layout-md-width-sm layout-sm-width-sm layout-xs-width-xs layout-xxs-width-xs layout-xxxs-width-xs"
+                    class="container"
                   >
-                    <div
-                      class="container"
+                    <button
+                      class="item"
                     >
-                      <button
+                      <div
+                        class="item is-selected"
+                      >
+                        Российский рубль
+                         (
+                        RUB
+                        )
+                      </div>
+                      <svg
+                        fill="#212121"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M8.971 16.557L20.265 4.322a1 1 0 011.47 1.356l-12 13a1 1 0 01-1.442.03l-4-4a1 1 0 111.414-1.415l3.264 3.264z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      class="item"
+                    >
+                      <div
                         class="item"
                       >
-                        <div
-                          class="item is-selected"
-                        >
-                          Российский рубль
-                           (
-                          RUB
-                          )
-                        </div>
-                        <svg
-                          fill="#212121"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                        >
-                          <path
-                            clip-rule="evenodd"
-                            d="M8.971 16.557L20.265 4.322a1 1 0 011.47 1.356l-12 13a1 1 0 01-1.442.03l-4-4a1 1 0 111.414-1.415l3.264 3.264z"
-                            fill-rule="evenodd"
-                          />
-                        </svg>
-                      </button>
-                      <button
+                        Американский доллар
+                         (
+                        USD
+                        )
+                      </div>
+                    </button>
+                    <button
+                      class="item"
+                    >
+                      <div
                         class="item"
                       >
-                        <div
-                          class="item"
-                        >
-                          Американский доллар
-                           (
-                          USD
-                          )
-                        </div>
-                      </button>
-                      <button
+                        Единая европейская валюта
+                         (
+                        EUR
+                        )
+                      </div>
+                    </button>
+                    <button
+                      class="item"
+                    >
+                      <div
                         class="item"
                       >
-                        <div
-                          class="item"
-                        >
-                          Единая европейская валюта
-                           (
-                          EUR
-                          )
-                        </div>
-                      </button>
-                      <button
+                        Белорусский рубль
+                         (
+                        BYN
+                        )
+                      </div>
+                    </button>
+                    <button
+                      class="item"
+                    >
+                      <div
                         class="item"
                       >
-                        <div
-                          class="item"
-                        >
-                          Белорусский рубль
-                           (
-                          BYN
-                          )
-                        </div>
-                      </button>
-                      <button
+                        Украинская гривна
+                         (
+                        UAH
+                        )
+                      </div>
+                    </button>
+                    <button
+                      class="item"
+                    >
+                      <div
                         class="item"
                       >
-                        <div
-                          class="item"
-                        >
-                          Украинская гривна
-                           (
-                          UAH
-                          )
-                        </div>
-                      </button>
-                      <button
-                        class="item"
-                      >
-                        <div
-                          class="item"
-                        >
-                          Казахстанский тенге
-                           (
-                          KZT
-                          )
-                        </div>
-                      </button>
-                    </div>
+                        Казахстанский тенге
+                         (
+                        KZT
+                        )
+                      </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -321,128 +317,120 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
               className="content full-width"
             >
               <MobileLayout
-                xxsPadding="md"
-                xxxsPadding="none"
+                disabledOn={
+                  Array [
+                    "xxs",
+                  ]
+                }
               >
-                <Layout
-                  xsMaxWidth="xs"
-                  xxlMaxWidth="sm"
-                  xxsPadding="md"
-                  xxxsPadding="none"
+                <div
+                  className="layout mobile disabled-xxs"
                 >
                   <div
-                    className="layout-wrapper layout-xxl-padding-sm layout-xl-padding-sm layout-lg-padding-sm layout-md-padding-sm layout-sm-padding-sm layout-xs-padding-sm layout-xxs-padding-md layout-xxxs-padding-none"
+                    className="container"
                   >
-                    <div
-                      className="layout layout-xxl-width-sm layout-xl-width-sm layout-lg-width-sm layout-md-width-sm layout-sm-width-sm layout-xs-width-xs layout-xxs-width-xs layout-xxxs-width-xs"
+                    <button
+                      className="item"
+                      key="0"
+                      onClick={[Function]}
                     >
                       <div
-                        className="container"
+                        className="item is-selected"
                       >
-                        <button
-                          className="item"
-                          key="0"
-                          onClick={[Function]}
-                        >
-                          <div
-                            className="item is-selected"
-                          >
-                            Российский рубль
-                             (
-                            RUB
-                            )
-                          </div>
-                          <CheckSVG
-                            fill="#212121"
-                          >
-                            <svg
-                              fill="#212121"
-                              height={24}
-                              viewBox="0 0 24 24"
-                              width={24}
-                            >
-                              <path
-                                clipRule="evenodd"
-                                d="M8.971 16.557L20.265 4.322a1 1 0 011.47 1.356l-12 13a1 1 0 01-1.442.03l-4-4a1 1 0 111.414-1.415l3.264 3.264z"
-                                fillRule="evenodd"
-                              />
-                            </svg>
-                          </CheckSVG>
-                        </button>
-                        <button
-                          className="item"
-                          key="1"
-                          onClick={[Function]}
-                        >
-                          <div
-                            className="item"
-                          >
-                            Американский доллар
-                             (
-                            USD
-                            )
-                          </div>
-                        </button>
-                        <button
-                          className="item"
-                          key="2"
-                          onClick={[Function]}
-                        >
-                          <div
-                            className="item"
-                          >
-                            Единая европейская валюта
-                             (
-                            EUR
-                            )
-                          </div>
-                        </button>
-                        <button
-                          className="item"
-                          key="3"
-                          onClick={[Function]}
-                        >
-                          <div
-                            className="item"
-                          >
-                            Белорусский рубль
-                             (
-                            BYN
-                            )
-                          </div>
-                        </button>
-                        <button
-                          className="item"
-                          key="4"
-                          onClick={[Function]}
-                        >
-                          <div
-                            className="item"
-                          >
-                            Украинская гривна
-                             (
-                            UAH
-                            )
-                          </div>
-                        </button>
-                        <button
-                          className="item"
-                          key="5"
-                          onClick={[Function]}
-                        >
-                          <div
-                            className="item"
-                          >
-                            Казахстанский тенге
-                             (
-                            KZT
-                            )
-                          </div>
-                        </button>
+                        Российский рубль
+                         (
+                        RUB
+                        )
                       </div>
-                    </div>
+                      <CheckSVG
+                        fill="#212121"
+                      >
+                        <svg
+                          fill="#212121"
+                          height={24}
+                          viewBox="0 0 24 24"
+                          width={24}
+                        >
+                          <path
+                            clipRule="evenodd"
+                            d="M8.971 16.557L20.265 4.322a1 1 0 011.47 1.356l-12 13a1 1 0 01-1.442.03l-4-4a1 1 0 111.414-1.415l3.264 3.264z"
+                            fillRule="evenodd"
+                          />
+                        </svg>
+                      </CheckSVG>
+                    </button>
+                    <button
+                      className="item"
+                      key="1"
+                      onClick={[Function]}
+                    >
+                      <div
+                        className="item"
+                      >
+                        Американский доллар
+                         (
+                        USD
+                        )
+                      </div>
+                    </button>
+                    <button
+                      className="item"
+                      key="2"
+                      onClick={[Function]}
+                    >
+                      <div
+                        className="item"
+                      >
+                        Единая европейская валюта
+                         (
+                        EUR
+                        )
+                      </div>
+                    </button>
+                    <button
+                      className="item"
+                      key="3"
+                      onClick={[Function]}
+                    >
+                      <div
+                        className="item"
+                      >
+                        Белорусский рубль
+                         (
+                        BYN
+                        )
+                      </div>
+                    </button>
+                    <button
+                      className="item"
+                      key="4"
+                      onClick={[Function]}
+                    >
+                      <div
+                        className="item"
+                      >
+                        Украинская гривна
+                         (
+                        UAH
+                        )
+                      </div>
+                    </button>
+                    <button
+                      className="item"
+                      key="5"
+                      onClick={[Function]}
+                    >
+                      <div
+                        className="item"
+                      >
+                        Казахстанский тенге
+                         (
+                        KZT
+                        )
+                      </div>
+                    </button>
                   </div>
-                </Layout>
+                </div>
               </MobileLayout>
             </div>
           </ScreenLayout>
@@ -547,69 +535,65 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                 class="content full-width"
               >
                 <div
-                  class="layout-wrapper layout-xxl-padding-sm layout-xl-padding-sm layout-lg-padding-sm layout-md-padding-sm layout-sm-padding-sm layout-xs-padding-sm layout-xxs-padding-md layout-xxxs-padding-none"
+                  class="layout mobile disabled-xxs"
                 >
                   <div
-                    class="layout layout-xxl-width-sm layout-xl-width-sm layout-lg-width-sm layout-md-width-sm layout-sm-width-sm layout-xs-width-xs layout-xxs-width-xs layout-xxxs-width-xs"
+                    class="container"
                   >
-                    <div
-                      class="container"
+                    <button
+                      class="item"
                     >
-                      <button
-                        class="item"
+                      <span
+                        class="size-16 line-height-24 color__gray87"
                       >
-                        <span
-                          class="size-16 line-height-24 color__gray87"
-                        >
-                          Российский рубль
-                        </span>
-                      </button>
-                      <button
-                        class="item"
+                        Российский рубль
+                      </span>
+                    </button>
+                    <button
+                      class="item"
+                    >
+                      <span
+                        class="size-16 line-height-24 color__gray87"
                       >
-                        <span
-                          class="size-16 line-height-24 color__gray87"
-                        >
-                          Американский доллар
-                        </span>
-                      </button>
-                      <button
-                        class="item"
+                        Американский доллар
+                      </span>
+                    </button>
+                    <button
+                      class="item"
+                    >
+                      <span
+                        class="size-16 line-height-24 color__gray87"
                       >
-                        <span
-                          class="size-16 line-height-24 color__gray87"
-                        >
-                          Единая европейская валюта
-                        </span>
-                      </button>
-                      <button
-                        class="item"
+                        Единая европейская валюта
+                      </span>
+                    </button>
+                    <button
+                      class="item"
+                    >
+                      <span
+                        class="size-16 line-height-24 color__gray87"
                       >
-                        <span
-                          class="size-16 line-height-24 color__gray87"
-                        >
-                          Белорусский рубль
-                        </span>
-                      </button>
-                      <button
-                        class="item"
+                        Белорусский рубль
+                      </span>
+                    </button>
+                    <button
+                      class="item"
+                    >
+                      <span
+                        class="size-16 line-height-24 color__gray87"
                       >
-                        <span
-                          class="size-16 line-height-24 color__gray87"
-                        >
-                          Украинская гривна
-                        </span>
-                      </button>
-                      <button
-                        class="item"
+                        Украинская гривна
+                      </span>
+                    </button>
+                    <button
+                      class="item"
+                    >
+                      <span
+                        class="size-16 line-height-24 color__gray87"
                       >
-                        <span
-                          class="size-16 line-height-24 color__gray87"
-                        >
-                          Казахстанский тенге
-                        </span>
-                      </button>
-                    </div>
+                        Казахстанский тенге
+                      </span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -736,130 +720,122 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
               className="content full-width"
             >
               <MobileLayout
-                xxsPadding="md"
-                xxxsPadding="none"
+                disabledOn={
+                  Array [
+                    "xxs",
+                  ]
+                }
               >
-                <Layout
-                  xsMaxWidth="xs"
-                  xxlMaxWidth="sm"
-                  xxsPadding="md"
-                  xxxsPadding="none"
+                <div
+                  className="layout mobile disabled-xxs"
                 >
                   <div
-                    className="layout-wrapper layout-xxl-padding-sm layout-xl-padding-sm layout-lg-padding-sm layout-md-padding-sm layout-sm-padding-sm layout-xs-padding-sm layout-xxs-padding-md layout-xxxs-padding-none"
+                    className="container"
                   >
-                    <div
-                      className="layout layout-xxl-width-sm layout-xl-width-sm layout-lg-width-sm layout-md-width-sm layout-sm-width-sm layout-xs-width-xs layout-xxs-width-xs layout-xxxs-width-xs"
+                    <button
+                      className="item"
+                      key="0"
+                      onClick={[Function]}
                     >
-                      <div
-                        className="container"
+                      <Memo(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
                       >
-                        <button
-                          className="item"
-                          key="0"
-                          onClick={[Function]}
+                        <span
+                          className="size-16 line-height-24 color__gray87"
                         >
-                          <Memo(Text)
-                            color="gray87"
-                            lineHeight={24}
-                            size={16}
-                          >
-                            <span
-                              className="size-16 line-height-24 color__gray87"
-                            >
-                              Российский рубль
-                            </span>
-                          </Memo(Text)>
-                        </button>
-                        <button
-                          className="item"
-                          key="1"
-                          onClick={[Function]}
+                          Российский рубль
+                        </span>
+                      </Memo(Text)>
+                    </button>
+                    <button
+                      className="item"
+                      key="1"
+                      onClick={[Function]}
+                    >
+                      <Memo(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
                         >
-                          <Memo(Text)
-                            color="gray87"
-                            lineHeight={24}
-                            size={16}
-                          >
-                            <span
-                              className="size-16 line-height-24 color__gray87"
-                            >
-                              Американский доллар
-                            </span>
-                          </Memo(Text)>
-                        </button>
-                        <button
-                          className="item"
-                          key="2"
-                          onClick={[Function]}
+                          Американский доллар
+                        </span>
+                      </Memo(Text)>
+                    </button>
+                    <button
+                      className="item"
+                      key="2"
+                      onClick={[Function]}
+                    >
+                      <Memo(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
                         >
-                          <Memo(Text)
-                            color="gray87"
-                            lineHeight={24}
-                            size={16}
-                          >
-                            <span
-                              className="size-16 line-height-24 color__gray87"
-                            >
-                              Единая европейская валюта
-                            </span>
-                          </Memo(Text)>
-                        </button>
-                        <button
-                          className="item"
-                          key="3"
-                          onClick={[Function]}
+                          Единая европейская валюта
+                        </span>
+                      </Memo(Text)>
+                    </button>
+                    <button
+                      className="item"
+                      key="3"
+                      onClick={[Function]}
+                    >
+                      <Memo(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
                         >
-                          <Memo(Text)
-                            color="gray87"
-                            lineHeight={24}
-                            size={16}
-                          >
-                            <span
-                              className="size-16 line-height-24 color__gray87"
-                            >
-                              Белорусский рубль
-                            </span>
-                          </Memo(Text)>
-                        </button>
-                        <button
-                          className="item"
-                          key="4"
-                          onClick={[Function]}
+                          Белорусский рубль
+                        </span>
+                      </Memo(Text)>
+                    </button>
+                    <button
+                      className="item"
+                      key="4"
+                      onClick={[Function]}
+                    >
+                      <Memo(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
                         >
-                          <Memo(Text)
-                            color="gray87"
-                            lineHeight={24}
-                            size={16}
-                          >
-                            <span
-                              className="size-16 line-height-24 color__gray87"
-                            >
-                              Украинская гривна
-                            </span>
-                          </Memo(Text)>
-                        </button>
-                        <button
-                          className="item"
-                          key="5"
-                          onClick={[Function]}
+                          Украинская гривна
+                        </span>
+                      </Memo(Text)>
+                    </button>
+                    <button
+                      className="item"
+                      key="5"
+                      onClick={[Function]}
+                    >
+                      <Memo(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
                         >
-                          <Memo(Text)
-                            color="gray87"
-                            lineHeight={24}
-                            size={16}
-                          >
-                            <span
-                              className="size-16 line-height-24 color__gray87"
-                            >
-                              Казахстанский тенге
-                            </span>
-                          </Memo(Text)>
-                        </button>
-                      </div>
-                    </div>
+                          Казахстанский тенге
+                        </span>
+                      </Memo(Text)>
+                    </button>
                   </div>
-                </Layout>
+                </div>
               </MobileLayout>
             </div>
           </ScreenLayout>
@@ -956,90 +932,86 @@ exports[`<SelectScreen /> should handle props 1`] = `
                 class="content full-width"
               >
                 <div
-                  class="layout-wrapper layout-xxl-padding-sm layout-xl-padding-sm layout-lg-padding-sm layout-md-padding-sm layout-sm-padding-sm layout-xs-padding-sm layout-xxs-padding-md layout-xxxs-padding-none"
+                  class="layout mobile disabled-xxs"
                 >
                   <div
-                    class="layout layout-xxl-width-sm layout-xl-width-sm layout-lg-width-sm layout-md-width-sm layout-sm-width-sm layout-xs-width-xs layout-xxs-width-xs layout-xxxs-width-xs"
+                    class="container"
                   >
-                    <div
-                      class="container"
+                    <button
+                      class="item"
                     >
-                      <button
-                        class="item"
+                      <span
+                        class="size-16 line-height-24 color__gray87"
                       >
-                        <span
-                          class="size-16 line-height-24 color__gray87"
-                        >
-                          Верх-Исетский
-                        </span>
-                      </button>
-                      <button
-                        class="item"
+                        Верх-Исетский
+                      </span>
+                    </button>
+                    <button
+                      class="item"
+                    >
+                      <span
+                        class="size-16 line-height-24 color__gray87"
                       >
-                        <span
-                          class="size-16 line-height-24 color__gray87"
-                        >
-                          Чкаловский
-                        </span>
-                      </button>
-                      <button
-                        class="item"
+                        Чкаловский
+                      </span>
+                    </button>
+                    <button
+                      class="item"
+                    >
+                      <span
+                        class="size-16 line-height-24 color__gray87"
                       >
-                        <span
-                          class="size-16 line-height-24 color__gray87"
-                        >
-                          Железнодорожный
-                        </span>
-                      </button>
-                      <button
-                        class="item"
+                        Железнодорожный
+                      </span>
+                    </button>
+                    <button
+                      class="item"
+                    >
+                      <span
+                        class="size-16 line-height-24 color__gray87"
                       >
-                        <span
-                          class="size-16 line-height-24 color__gray87"
-                        >
-                          Кировский
-                        </span>
-                        <svg
-                          fill="#212121"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                        >
-                          <path
-                            clip-rule="evenodd"
-                            d="M8.971 16.557L20.265 4.322a1 1 0 011.47 1.356l-12 13a1 1 0 01-1.442.03l-4-4a1 1 0 111.414-1.415l3.264 3.264z"
-                            fill-rule="evenodd"
-                          />
-                        </svg>
-                      </button>
-                      <button
-                        class="item"
+                        Кировский
+                      </span>
+                      <svg
+                        fill="#212121"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        width="24"
                       >
-                        <span
-                          class="size-16 line-height-24 color__gray87"
-                        >
-                          Орджоникидзевский
-                        </span>
-                      </button>
-                      <button
-                        class="item"
+                        <path
+                          clip-rule="evenodd"
+                          d="M8.971 16.557L20.265 4.322a1 1 0 011.47 1.356l-12 13a1 1 0 01-1.442.03l-4-4a1 1 0 111.414-1.415l3.264 3.264z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      class="item"
+                    >
+                      <span
+                        class="size-16 line-height-24 color__gray87"
                       >
-                        <span
-                          class="size-16 line-height-24 color__gray87"
-                        >
-                          Октябрьский
-                        </span>
-                      </button>
-                      <button
-                        class="item"
+                        Орджоникидзевский
+                      </span>
+                    </button>
+                    <button
+                      class="item"
+                    >
+                      <span
+                        class="size-16 line-height-24 color__gray87"
                       >
-                        <span
-                          class="size-16 line-height-24 color__gray87"
-                        >
-                          Ленинский
-                        </span>
-                      </button>
-                    </div>
+                        Октябрьский
+                      </span>
+                    </button>
+                    <button
+                      class="item"
+                    >
+                      <span
+                        class="size-16 line-height-24 color__gray87"
+                      >
+                        Ленинский
+                      </span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -1166,163 +1138,155 @@ exports[`<SelectScreen /> should handle props 1`] = `
               className="content full-width"
             >
               <MobileLayout
-                xxsPadding="md"
-                xxxsPadding="none"
+                disabledOn={
+                  Array [
+                    "xxs",
+                  ]
+                }
               >
-                <Layout
-                  xsMaxWidth="xs"
-                  xxlMaxWidth="sm"
-                  xxsPadding="md"
-                  xxxsPadding="none"
+                <div
+                  className="layout mobile disabled-xxs"
                 >
                   <div
-                    className="layout-wrapper layout-xxl-padding-sm layout-xl-padding-sm layout-lg-padding-sm layout-md-padding-sm layout-sm-padding-sm layout-xs-padding-sm layout-xxs-padding-md layout-xxxs-padding-none"
+                    className="container"
                   >
-                    <div
-                      className="layout layout-xxl-width-sm layout-xl-width-sm layout-lg-width-sm layout-md-width-sm layout-sm-width-sm layout-xs-width-xs layout-xxs-width-xs layout-xxxs-width-xs"
+                    <button
+                      className="item"
+                      key="0"
+                      onClick={[Function]}
                     >
-                      <div
-                        className="container"
+                      <Memo(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
                       >
-                        <button
-                          className="item"
-                          key="0"
-                          onClick={[Function]}
+                        <span
+                          className="size-16 line-height-24 color__gray87"
                         >
-                          <Memo(Text)
-                            color="gray87"
-                            lineHeight={24}
-                            size={16}
-                          >
-                            <span
-                              className="size-16 line-height-24 color__gray87"
-                            >
-                              Верх-Исетский
-                            </span>
-                          </Memo(Text)>
-                        </button>
-                        <button
-                          className="item"
-                          key="1"
-                          onClick={[Function]}
+                          Верх-Исетский
+                        </span>
+                      </Memo(Text)>
+                    </button>
+                    <button
+                      className="item"
+                      key="1"
+                      onClick={[Function]}
+                    >
+                      <Memo(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
                         >
-                          <Memo(Text)
-                            color="gray87"
-                            lineHeight={24}
-                            size={16}
-                          >
-                            <span
-                              className="size-16 line-height-24 color__gray87"
-                            >
-                              Чкаловский
-                            </span>
-                          </Memo(Text)>
-                        </button>
-                        <button
-                          className="item"
-                          key="2"
-                          onClick={[Function]}
+                          Чкаловский
+                        </span>
+                      </Memo(Text)>
+                    </button>
+                    <button
+                      className="item"
+                      key="2"
+                      onClick={[Function]}
+                    >
+                      <Memo(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
                         >
-                          <Memo(Text)
-                            color="gray87"
-                            lineHeight={24}
-                            size={16}
-                          >
-                            <span
-                              className="size-16 line-height-24 color__gray87"
-                            >
-                              Железнодорожный
-                            </span>
-                          </Memo(Text)>
-                        </button>
-                        <button
-                          className="item"
-                          key="3"
-                          onClick={[Function]}
+                          Железнодорожный
+                        </span>
+                      </Memo(Text)>
+                    </button>
+                    <button
+                      className="item"
+                      key="3"
+                      onClick={[Function]}
+                    >
+                      <Memo(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
                         >
-                          <Memo(Text)
-                            color="gray87"
-                            lineHeight={24}
-                            size={16}
-                          >
-                            <span
-                              className="size-16 line-height-24 color__gray87"
-                            >
-                              Кировский
-                            </span>
-                          </Memo(Text)>
-                          <CheckSVG
-                            fill="#212121"
-                          >
-                            <svg
-                              fill="#212121"
-                              height={24}
-                              viewBox="0 0 24 24"
-                              width={24}
-                            >
-                              <path
-                                clipRule="evenodd"
-                                d="M8.971 16.557L20.265 4.322a1 1 0 011.47 1.356l-12 13a1 1 0 01-1.442.03l-4-4a1 1 0 111.414-1.415l3.264 3.264z"
-                                fillRule="evenodd"
-                              />
-                            </svg>
-                          </CheckSVG>
-                        </button>
-                        <button
-                          className="item"
-                          key="4"
-                          onClick={[Function]}
+                          Кировский
+                        </span>
+                      </Memo(Text)>
+                      <CheckSVG
+                        fill="#212121"
+                      >
+                        <svg
+                          fill="#212121"
+                          height={24}
+                          viewBox="0 0 24 24"
+                          width={24}
                         >
-                          <Memo(Text)
-                            color="gray87"
-                            lineHeight={24}
-                            size={16}
-                          >
-                            <span
-                              className="size-16 line-height-24 color__gray87"
-                            >
-                              Орджоникидзевский
-                            </span>
-                          </Memo(Text)>
-                        </button>
-                        <button
-                          className="item"
-                          key="5"
-                          onClick={[Function]}
+                          <path
+                            clipRule="evenodd"
+                            d="M8.971 16.557L20.265 4.322a1 1 0 011.47 1.356l-12 13a1 1 0 01-1.442.03l-4-4a1 1 0 111.414-1.415l3.264 3.264z"
+                            fillRule="evenodd"
+                          />
+                        </svg>
+                      </CheckSVG>
+                    </button>
+                    <button
+                      className="item"
+                      key="4"
+                      onClick={[Function]}
+                    >
+                      <Memo(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
                         >
-                          <Memo(Text)
-                            color="gray87"
-                            lineHeight={24}
-                            size={16}
-                          >
-                            <span
-                              className="size-16 line-height-24 color__gray87"
-                            >
-                              Октябрьский
-                            </span>
-                          </Memo(Text)>
-                        </button>
-                        <button
-                          className="item"
-                          key="6"
-                          onClick={[Function]}
+                          Орджоникидзевский
+                        </span>
+                      </Memo(Text)>
+                    </button>
+                    <button
+                      className="item"
+                      key="5"
+                      onClick={[Function]}
+                    >
+                      <Memo(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
                         >
-                          <Memo(Text)
-                            color="gray87"
-                            lineHeight={24}
-                            size={16}
-                          >
-                            <span
-                              className="size-16 line-height-24 color__gray87"
-                            >
-                              Ленинский
-                            </span>
-                          </Memo(Text)>
-                        </button>
-                      </div>
-                    </div>
+                          Октябрьский
+                        </span>
+                      </Memo(Text)>
+                    </button>
+                    <button
+                      className="item"
+                      key="6"
+                      onClick={[Function]}
+                    >
+                      <Memo(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
+                        >
+                          Ленинский
+                        </span>
+                      </Memo(Text)>
+                    </button>
                   </div>
-                </Layout>
+                </div>
               </MobileLayout>
             </div>
           </ScreenLayout>
@@ -1396,15 +1360,11 @@ exports[`<SelectScreen /> should render without props 1`] = `
                 class="content full-width"
               >
                 <div
-                  class="layout-wrapper layout-xxl-padding-sm layout-xl-padding-sm layout-lg-padding-sm layout-md-padding-sm layout-sm-padding-sm layout-xs-padding-sm layout-xxs-padding-md layout-xxxs-padding-none"
+                  class="layout mobile disabled-xxs"
                 >
                   <div
-                    class="layout layout-xxl-width-sm layout-xl-width-sm layout-lg-width-sm layout-md-width-sm layout-sm-width-sm layout-xs-width-xs layout-xxs-width-xs layout-xxxs-width-xs"
-                  >
-                    <div
-                      class="container"
-                    />
-                  </div>
+                    class="container"
+                  />
                 </div>
               </div>
             </div>
@@ -1522,27 +1482,19 @@ exports[`<SelectScreen /> should render without props 1`] = `
               className="content full-width"
             >
               <MobileLayout
-                xxsPadding="md"
-                xxxsPadding="none"
+                disabledOn={
+                  Array [
+                    "xxs",
+                  ]
+                }
               >
-                <Layout
-                  xsMaxWidth="xs"
-                  xxlMaxWidth="sm"
-                  xxsPadding="md"
-                  xxxsPadding="none"
+                <div
+                  className="layout mobile disabled-xxs"
                 >
                   <div
-                    className="layout-wrapper layout-xxl-padding-sm layout-xl-padding-sm layout-lg-padding-sm layout-md-padding-sm layout-sm-padding-sm layout-xs-padding-sm layout-xxs-padding-md layout-xxxs-padding-none"
-                  >
-                    <div
-                      className="layout layout-xxl-width-sm layout-xl-width-sm layout-lg-width-sm layout-md-width-sm layout-sm-width-sm layout-xs-width-xs layout-xxs-width-xs layout-xxxs-width-xs"
-                    >
-                      <div
-                        className="container"
-                      />
-                    </div>
-                  </div>
-                </Layout>
+                    className="container"
+                  />
+                </div>
               </MobileLayout>
             </div>
           </ScreenLayout>

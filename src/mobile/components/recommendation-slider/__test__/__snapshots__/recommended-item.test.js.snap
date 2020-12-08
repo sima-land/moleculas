@@ -73,12 +73,10 @@ exports[`<RecommendedItem /> render with props should correct render with all pr
         className="link"
         color="black"
         href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
-        onClick={null}
       >
         <a
           className="link link color__black"
           href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
-          onClick={null}
         >
           Милая картина из шерсти Schrodinger cat, А5
         </a>
@@ -143,12 +141,10 @@ exports[`<RecommendedItem /> render with props should correct render without old
         className="link"
         color="black"
         href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
-        onClick={null}
       >
         <a
           className="link link color__black"
           href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
-          onClick={null}
         >
           Милая картина из шерсти Schrodinger cat, А5
         </a>

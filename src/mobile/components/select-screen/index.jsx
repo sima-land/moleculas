@@ -7,7 +7,7 @@ import prop from 'lodash/fp/prop';
 import Screen from '@dev-dep/ui-nucleons/screen';
 import Text from '@dev-dep/ui-nucleons/text';
 import { COLORS } from '@dev-dep/ui-nucleons/constants';
-import MobileLayout from '@dev-dep/ui-nucleons/layout/mobile-layout';
+import { MobileLayout } from '@dev-dep/ui-nucleons/layout';
 import CheckSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/check';
 import styles from './select-screen.scss';
 
@@ -30,7 +30,7 @@ const SelectScreen = ({
   ...screenProps
 }) => (
   <Screen withDivideHeader={false} {...screenProps}>
-    <MobileLayout xxxsPadding='none' xxsPadding='md'>
+    <MobileLayout disabledOn={['xxs']}>
       <div className={styles.container}>
         {map(items, (item, index) => {
           const isSelected = Boolean(isItemSelected(item));
