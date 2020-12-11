@@ -1,0 +1,145 @@
+@import 'node_modules/@dev-dep/ui-nucleons/colors';
+@import 'node_modules/@dev-dep/ui-nucleons/variables';
+
+.wrap {
+  background-color: #e5e5e5;
+  border-radius: 8px;
+  height: 100%;
+  max-height: 800px;
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
+  @media (max-width: $extraSmallDesktopBreakpoint) {
+    max-width: 104px;
+  }
+}
+
+.avatar-wrap {
+  margin: 24px 0 0 24px;
+  max-width: 56px;
+  cursor: pointer;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  padding: 0 24px;
+  cursor: pointer;
+  .name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    align-items: center;
+    color: $gray87;
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .settings {
+    font-size: 14px;
+    line-height: 20px;
+    align-items: center;
+    color: $brand-blue;
+    margin-top: 4px;
+  }
+  @media (max-width: $extraSmallDesktopBreakpoint) {
+    display: none;
+  }
+}
+
+.items {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.item {
+  padding: 16px 24px;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  align-items: center;
+  color: $gray38;
+  &:hover {
+    &:not(.active) {
+      color: $gray54;
+      > .icon path {
+        fill: $gray54;
+      }
+    }
+    @media (max-width: $extraSmallDesktopBreakpoint) {
+      .text {
+        display: block;
+      }
+    }
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    path {
+      fill: $gray38;;
+    }
+  }
+  .text {
+    margin: 0 0 0 24px;
+    white-space: nowrap;
+    width: 100%;
+  }
+  &:last-child {
+    margin-top: auto;
+    margin-bottom: 24px;
+  }
+  @media (max-width: $extraSmallDesktopBreakpoint) {
+    justify-content: center;
+    .text {
+      display: none;
+      position: absolute;
+      left: calc(50% + 12px + 6px);
+      background-color: $gray76;
+      color: $white;
+      padding: 8px;
+      border-radius: 4px;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: right;
+      white-space: nowrap;
+      margin: 0;
+      width: auto;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background-color: $gray76;
+        left: -4px;
+        top: calc(50% - 4px);
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.active {
+  color: $gray87;
+  > .icon path {
+    fill: $gray87;
+  }
+}
+
+.dot::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: $brand-blue;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}

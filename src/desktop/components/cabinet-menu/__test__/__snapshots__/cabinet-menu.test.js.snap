@@ -1,0 +1,401 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CabinetMenu /> should renders properly 1`] = `
+<CabinetMenu
+  avatar="http://themoviescore.com/wp-content/uploads/2013/08/ff072a39a2709e4fec2cd05e3763d68d.jpg"
+  items={
+    Array [
+      Object {
+        "icon": "https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg",
+        "name": "Главная",
+        "url": "/",
+      },
+      Object {
+        "icon": "https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg",
+        "isCurrent": true,
+        "isMarked": false,
+        "name": "Заказы",
+        "url": "/",
+      },
+      Object {
+        "icon": "https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg",
+        "isMarked": true,
+        "name": "Уведомления",
+        "url": "/",
+      },
+      Object {
+        "icon": "https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg",
+        "isMarked": false,
+        "name": "Лист ожидания",
+        "url": "/",
+      },
+      Object {
+        "icon": "https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg",
+        "isMarked": false,
+        "name": "Отзывы и вопросы",
+        "url": "/",
+      },
+      Object {
+        "icon": "https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg",
+        "isMarked": false,
+        "name": "Претензии",
+        "url": "/",
+      },
+      Object {
+        "icon": "https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg",
+        "isMarked": false,
+        "name": "Профиль организатора",
+        "url": "/",
+      },
+      Object {
+        "icon": "https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg",
+        "isMarked": false,
+        "name": "Сообщить о проблеме",
+        "url": "/",
+      },
+    ]
+  }
+  name="test name"
+  onItemClick={[MockFunction]}
+  settingsLink="/"
+  superEllipseId="header-image-clip-path"
+>
+  <div
+    className="wrap"
+  >
+    <ForwardRef(Link)
+      aria-label="Настройки"
+      className="avatar-wrap"
+      href="/"
+    >
+      <a
+        aria-label="Настройки"
+        className="link avatar-wrap color__brand-blue"
+        href="/"
+      >
+        <Avatar
+          clipStyle={
+            Object {
+              "WebkitClipPath": "url(#header-image-clip-path)",
+              "clipPath": "url(#header-image-clip-path)",
+            }
+          }
+          imageUrl="http://themoviescore.com/wp-content/uploads/2013/08/ff072a39a2709e4fec2cd05e3763d68d.jpg"
+          size={56}
+        >
+          <span
+            className="avatar"
+            style={
+              Object {
+                "height": 56,
+                "width": 56,
+              }
+            }
+          >
+            <svg
+              className="super-ellipse"
+            >
+              <rect
+                fill="#f5f5f5"
+                height={56}
+                style={
+                  Object {
+                    "WebkitClipPath": "url(#header-image-clip-path)",
+                    "clipPath": "url(#header-image-clip-path)",
+                  }
+                }
+                width={56}
+                x={0}
+                y={0}
+              />
+            </svg>
+            <span
+              className="content"
+            >
+              <Icon
+                aria-hidden={true}
+                color="gray38"
+                icon={[Function]}
+                size={32}
+              >
+                <userPureSvg
+                  aria-hidden={true}
+                  className="icon icon-block color__gray38"
+                  height={32}
+                  viewBox="0 0 36 36"
+                  width={32}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="icon icon-block color__gray38"
+                    height={32}
+                    viewBox="0 0 36 36"
+                    width={32}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clipRule="evenodd"
+                      d="M11.479 10.268C10.619 6.132 13.776 2.25 18 2.25c4.224 0 7.382 3.882 6.521 8.018l-.607 2.921a6.04 6.04 0 0 1-11.829 0l-.607-2.921z"
+                      fillRule="evenodd"
+                    />
+                    <path
+                      d="M31.5 33.75h-27c-1.243 0-2.273-1.017-2.043-2.238C3.75 24.671 10.875 20.25 18 20.25s14.25 4.42 15.543 11.262c.23 1.221-.8 2.238-2.043 2.238z"
+                    />
+                  </svg>
+                </userPureSvg>
+              </Icon>
+            </span>
+          </span>
+        </Avatar>
+      </a>
+    </ForwardRef(Link)>
+    <ForwardRef(Link)
+      className="user-info"
+      href="/"
+    >
+      <a
+        className="link user-info color__brand-blue"
+        href="/"
+      >
+        <div
+          className="name"
+        />
+        <div
+          className="settings"
+        >
+          Настройки
+        </div>
+      </a>
+    </ForwardRef(Link)>
+    <div
+      className="items"
+    >
+      <div
+        className="item"
+        key="0"
+      >
+        <ReactSVG
+          afterInjection={[Function]}
+          aria-hidden="true"
+          beforeInjection={[Function]}
+          className="icon"
+          evalScripts="never"
+          fallback={null}
+          loading={null}
+          renumerateIRIElements={true}
+          src="https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg"
+          useRequestCache={true}
+          wrapper="div"
+        >
+          <div
+            aria-hidden="true"
+            className="icon"
+          />
+        </ReactSVG>
+        <div
+          className="text"
+        >
+          Главная
+        </div>
+      </div>
+      <div
+        className="item active"
+        key="1"
+      >
+        <ReactSVG
+          afterInjection={[Function]}
+          aria-hidden="true"
+          beforeInjection={[Function]}
+          className="icon"
+          evalScripts="never"
+          fallback={null}
+          loading={null}
+          renumerateIRIElements={true}
+          src="https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg"
+          useRequestCache={true}
+          wrapper="div"
+        >
+          <div
+            aria-hidden="true"
+            className="icon"
+          />
+        </ReactSVG>
+        <div
+          className="text"
+        >
+          Заказы
+        </div>
+      </div>
+      <div
+        className="item"
+        key="2"
+      >
+        <ReactSVG
+          afterInjection={[Function]}
+          aria-hidden="true"
+          beforeInjection={[Function]}
+          className="icon dot"
+          evalScripts="never"
+          fallback={null}
+          loading={null}
+          renumerateIRIElements={true}
+          src="https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg"
+          useRequestCache={true}
+          wrapper="div"
+        >
+          <div
+            aria-hidden="true"
+            className="icon dot"
+          />
+        </ReactSVG>
+        <div
+          className="text"
+        >
+          Уведомления
+        </div>
+      </div>
+      <div
+        className="item"
+        key="3"
+      >
+        <ReactSVG
+          afterInjection={[Function]}
+          aria-hidden="true"
+          beforeInjection={[Function]}
+          className="icon"
+          evalScripts="never"
+          fallback={null}
+          loading={null}
+          renumerateIRIElements={true}
+          src="https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg"
+          useRequestCache={true}
+          wrapper="div"
+        >
+          <div
+            aria-hidden="true"
+            className="icon"
+          />
+        </ReactSVG>
+        <div
+          className="text"
+        >
+          Лист ожидания
+        </div>
+      </div>
+      <div
+        className="item"
+        key="4"
+      >
+        <ReactSVG
+          afterInjection={[Function]}
+          aria-hidden="true"
+          beforeInjection={[Function]}
+          className="icon"
+          evalScripts="never"
+          fallback={null}
+          loading={null}
+          renumerateIRIElements={true}
+          src="https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg"
+          useRequestCache={true}
+          wrapper="div"
+        >
+          <div
+            aria-hidden="true"
+            className="icon"
+          />
+        </ReactSVG>
+        <div
+          className="text"
+        >
+          Отзывы и вопросы
+        </div>
+      </div>
+      <div
+        className="item"
+        key="5"
+      >
+        <ReactSVG
+          afterInjection={[Function]}
+          aria-hidden="true"
+          beforeInjection={[Function]}
+          className="icon"
+          evalScripts="never"
+          fallback={null}
+          loading={null}
+          renumerateIRIElements={true}
+          src="https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg"
+          useRequestCache={true}
+          wrapper="div"
+        >
+          <div
+            aria-hidden="true"
+            className="icon"
+          />
+        </ReactSVG>
+        <div
+          className="text"
+        >
+          Претензии
+        </div>
+      </div>
+      <div
+        className="item"
+        key="6"
+      >
+        <ReactSVG
+          afterInjection={[Function]}
+          aria-hidden="true"
+          beforeInjection={[Function]}
+          className="icon"
+          evalScripts="never"
+          fallback={null}
+          loading={null}
+          renumerateIRIElements={true}
+          src="https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg"
+          useRequestCache={true}
+          wrapper="div"
+        >
+          <div
+            aria-hidden="true"
+            className="icon"
+          />
+        </ReactSVG>
+        <div
+          className="text"
+        >
+          Профиль организатора
+        </div>
+      </div>
+      <div
+        className="item"
+        key="7"
+      >
+        <ReactSVG
+          afterInjection={[Function]}
+          aria-hidden="true"
+          beforeInjection={[Function]}
+          className="icon"
+          evalScripts="never"
+          fallback={null}
+          loading={null}
+          renumerateIRIElements={true}
+          src="https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg"
+          useRequestCache={true}
+          wrapper="div"
+        >
+          <div
+            aria-hidden="true"
+            className="icon"
+          />
+        </ReactSVG>
+        <div
+          className="text"
+        >
+          Сообщить о проблеме
+        </div>
+      </div>
+    </div>
+  </div>
+</CabinetMenu>
+`;
