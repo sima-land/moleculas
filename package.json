@@ -18,7 +18,8 @@
     "classnames": "^2.2.6",
     "core-js": "3",
     "moment-duration-format": "^2.3.2",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "react-svg": "^11.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
