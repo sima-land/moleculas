@@ -6,49 +6,49 @@ exports[`<CabinetMenu /> should renders properly 1`] = `
   items={
     Array [
       Object {
-        "icon": "https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg",
+        "icon": "https://assets.static1-sima-land.com/ui-icons/24x24/Stroked/main-page.svg",
         "name": "Главная",
         "url": "/",
       },
       Object {
-        "icon": "https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg",
+        "icon": "https://assets.static1-sima-land.com/ui-icons/24x24/Stroked/payment.svg",
         "isCurrent": true,
         "isMarked": false,
         "name": "Заказы",
         "url": "/",
       },
       Object {
-        "icon": "https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg",
+        "icon": "https://assets.static1-sima-land.com/ui-icons/24x24/Stroked/notification.svg",
         "isMarked": true,
         "name": "Уведомления",
         "url": "/",
       },
       Object {
-        "icon": "https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg",
+        "icon": "https://assets.static1-sima-land.com/ui-icons/24x24/Stroked/mark-heart.svg",
         "isMarked": false,
         "name": "Лист ожидания",
         "url": "/",
       },
       Object {
-        "icon": "https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg",
+        "icon": "https://assets.static1-sima-land.com/ui-icons/24x24/Stroked/feedback.svg",
         "isMarked": false,
         "name": "Отзывы и вопросы",
         "url": "/",
       },
       Object {
-        "icon": "https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg",
+        "icon": "https://assets.static1-sima-land.com/ui-icons/24x24/Stroked/statement.svg",
         "isMarked": false,
         "name": "Претензии",
         "url": "/",
       },
       Object {
-        "icon": "https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg",
+        "icon": "https://assets.static1-sima-land.com/ui-icons/24x24/Stroked/united-customers.svg",
         "isMarked": false,
         "name": "Профиль организатора",
         "url": "/",
       },
       Object {
-        "icon": "https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg",
+        "icon": "https://assets.static1-sima-land.com/ui-icons/24x24/Stroked/mail.svg",
         "isMarked": false,
         "name": "Сообщить о проблеме",
         "url": "/",
@@ -184,7 +184,7 @@ exports[`<CabinetMenu /> should renders properly 1`] = `
           fallback={null}
           loading={null}
           renumerateIRIElements={true}
-          src="https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg"
+          src="https://assets.static1-sima-land.com/ui-icons/24x24/Stroked/main-page.svg"
           useRequestCache={true}
           wrapper="div"
         >
@@ -212,7 +212,7 @@ exports[`<CabinetMenu /> should renders properly 1`] = `
           fallback={null}
           loading={null}
           renumerateIRIElements={true}
-          src="https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg"
+          src="https://assets.static1-sima-land.com/ui-icons/24x24/Stroked/payment.svg"
           useRequestCache={true}
           wrapper="div"
         >
@@ -240,7 +240,7 @@ exports[`<CabinetMenu /> should renders properly 1`] = `
           fallback={null}
           loading={null}
           renumerateIRIElements={true}
-          src="https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg"
+          src="https://assets.static1-sima-land.com/ui-icons/24x24/Stroked/notification.svg"
           useRequestCache={true}
           wrapper="div"
         >
@@ -268,7 +268,7 @@ exports[`<CabinetMenu /> should renders properly 1`] = `
           fallback={null}
           loading={null}
           renumerateIRIElements={true}
-          src="https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg"
+          src="https://assets.static1-sima-land.com/ui-icons/24x24/Stroked/mark-heart.svg"
           useRequestCache={true}
           wrapper="div"
         >
@@ -296,7 +296,7 @@ exports[`<CabinetMenu /> should renders properly 1`] = `
           fallback={null}
           loading={null}
           renumerateIRIElements={true}
-          src="https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg"
+          src="https://assets.static1-sima-land.com/ui-icons/24x24/Stroked/feedback.svg"
           useRequestCache={true}
           wrapper="div"
         >
@@ -324,7 +324,7 @@ exports[`<CabinetMenu /> should renders properly 1`] = `
           fallback={null}
           loading={null}
           renumerateIRIElements={true}
-          src="https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg"
+          src="https://assets.static1-sima-land.com/ui-icons/24x24/Stroked/statement.svg"
           useRequestCache={true}
           wrapper="div"
         >
@@ -352,7 +352,7 @@ exports[`<CabinetMenu /> should renders properly 1`] = `
           fallback={null}
           loading={null}
           renumerateIRIElements={true}
-          src="https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg"
+          src="https://assets.static1-sima-land.com/ui-icons/24x24/Stroked/united-customers.svg"
           useRequestCache={true}
           wrapper="div"
         >
@@ -380,7 +380,7 @@ exports[`<CabinetMenu /> should renders properly 1`] = `
           fallback={null}
           loading={null}
           renumerateIRIElements={true}
-          src="https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg"
+          src="https://assets.static1-sima-land.com/ui-icons/24x24/Stroked/mail.svg"
           useRequestCache={true}
           wrapper="div"
         >
