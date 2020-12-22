@@ -1,0 +1,47 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+import { Primary, Secondary } from './card.stories.jsx'
+import Card from '../index'
+
+<Meta
+  title='common/Card'
+  component={Card}
+/>
+
+# Card
+### Компонент карточки.
+
+### Примеры использования
+```jsx
+import Card from '@dev-dep/moleculas/common/components/card';
+
+// Простой вариант, с передачей только содержимого
+<Card>
+  <div>...</div>
+</Card>
+
+// Вариант с отображением шапки (заголовок + кнопка "Закрыть") и футера
+<Card
+  title='...'
+  footer={(
+    <div>...</div>
+  )}
+  onClose={() => { ... }}
+  withCloseButton
+>
+  <div>...</div>
+</Card>
+```
+
+### Базовый вид
+export const Template = args => <Card {...args} />;
+
+<Canvas>
+  <Story story={Primary} />
+</Canvas>
+
+<Canvas>
+  <Story story={Secondary} />
+</Canvas>
+
+### Свойства компонента
+<ArgsTable of={Card} />
