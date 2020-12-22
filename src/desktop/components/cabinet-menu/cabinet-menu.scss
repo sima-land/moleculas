@@ -4,8 +4,6 @@
 .wrap {
   background-color: #e5e5e5;
   border-radius: 8px;
-  height: 100%;
-  max-height: 800px;
   display: flex;
   flex-direction: column;
   max-width: 280px;
@@ -57,11 +55,10 @@
 }
 
 .item {
-  padding: 16px 24px;
+  padding: 0 24px;
+  margin-bottom: 32px;
   display: flex;
   position: relative;
-  cursor: pointer;
-  font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   align-items: center;
@@ -91,9 +88,10 @@
     margin: 0 0 0 24px;
     white-space: nowrap;
     width: 100%;
+    font-weight: 500;
   }
   &:last-child {
-    margin-top: auto;
+    margin-top: 152px;
     margin-bottom: 24px;
   }
   @media (max-width: $extraSmallDesktopBreakpoint) {
@@ -130,6 +128,9 @@
   color: $gray87;
   > .icon path {
     fill: $gray87;
+  }
+  :hover {
+    color: $gray87;
   }
 }
 

@@ -2,7 +2,6 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import CabinetMenu from '..';
 import { cabinetMenuItems } from '../../../../common/__fixtures__/cabinet-menu';
-import { map } from 'lodash';
 
 describe('<CabinetMenu />', () => {
   it('should renders properly', () => {
@@ -12,7 +11,7 @@ describe('<CabinetMenu />', () => {
         name='test name'
         items={cabinetMenuItems}
         settingsLink='/'
-        onItemClick={jest.fn()}
+        onReportClick={jest.fn()}
         superEllipseId='header-image-clip-path'
       />
     );
@@ -22,14 +21,13 @@ describe('<CabinetMenu />', () => {
   });
   it('should call actions corrrectly', () => {
     const fakeItemClick = jest.fn();
-    const actionableCabinetMenuItems = map(cabinetMenuItems, item => ({ ...item, onClick: fakeItemClick }));
     const wrapper = shallow(
       <CabinetMenu
         avatar='http://themoviescore.com/wp-content/uploads/2013/08/ff072a39a2709e4fec2cd05e3763d68d.jpg'
         name='test name'
-        items={actionableCabinetMenuItems}
+        items={cabinetMenuItems}
         settingsLink='/'
-        onItemClick={fakeItemClick}
+        onReportClick={fakeItemClick}
         superEllipseId='header-image-clip-path'
       />
     );
@@ -40,6 +38,6 @@ describe('<CabinetMenu />', () => {
     menuItems.forEach(i => i.simulate('click'));
 
     expect(fakeItemClick).toBeCalled();
-    expect(fakeItemClick).toBeCalledTimes(menuItems.length);
+    expect(fakeItemClick).toBeCalledTimes(1);
   });
 });

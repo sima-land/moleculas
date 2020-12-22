@@ -3,6 +3,8 @@ import { ReactSVG } from 'react-svg';
 import Avatar from '@dev-dep/ui-nucleons/avatar';
 import Link from '@dev-dep/ui-nucleons/link';
 
+import IconMail from '@dev-dep/ui-quarks/icons/24x24/Stroked/mail';
+
 import classes from './cabinet-menu.scss';
 import classnames from 'classnames/bind';
 
@@ -20,6 +22,7 @@ const cx = classnames.bind(classes);
  * @param {string} props.userName Имя юзера.
  * @param {Array} props.items Элементы меню.
  * @param {string} props.settingsLink Ссылка, сработает при клике на аватар и на информацию о пользователе.
+ * @param {string} props.onReportClick Обработчик нажатия на сообщение о проблеме.
  * @return {ReactElement} Компонент меню.
  */
 const CabinetMenu = ({
@@ -28,6 +31,7 @@ const CabinetMenu = ({
   userName,
   items,
   settingsLink,
+  onReportClick,
 }) => (
   <div className={cx('wrap')}>
     <Link className={cx('avatar-wrap')} href={settingsLink} aria-label='Настройки'>
@@ -48,11 +52,11 @@ const CabinetMenu = ({
     </Link>
     <div className={cx('items')}>
       {
-        map(items, ({ onClick, isCurrent, icon, isMarked, name }, key) => (
-          <div
+        map(items, ({ isCurrent, icon, isMarked, name, url }, key) => (
+          <Link
             className={cx('item', isCurrent && 'active')}
             key={key}
-            onClick={onClick}
+            href={isCurrent ? undefined : url}
           >
             <ReactSVG
               src={icon}
@@ -62,9 +66,19 @@ const CabinetMenu = ({
             <div className={cx('text')}>
               {name}
             </div>
-          </div>
+          </Link>
         ))
       }
+      <a
+        role='button'
+        className={cx('item')}
+        onClick={onReportClick}
+      >
+        <IconMail className={cx('icon')} />
+        <div className={cx('text')}>
+            Сообщить о проблеме
+        </div>
+      </a>
     </div>
   </div>
 );
@@ -88,7 +102,7 @@ CabinetMenu.propTypes = {
   /**
    * Элементы меню.
    */
-  items: Types.shape({
+  items: Types.arrayOf(Types.shape({
     /**
      * Текст элемента меню.
      */
@@ -117,8 +131,8 @@ CabinetMenu.propTypes = {
     /**
      * Функция-обработчик клика по элементу меню.
      */
-    onClick: Types.func,
-  }),
+    onReportClick: Types.func,
+  })),
 
   /**
    * Ссылка, сработает при клике на аватар и на информацию о пользователе.
