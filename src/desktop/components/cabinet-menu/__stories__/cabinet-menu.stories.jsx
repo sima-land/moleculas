@@ -19,7 +19,7 @@ Primary.args = {
   userName: 'Василий Пупкин',
   items: cabinetMenuItems,
   settingsLink: '/',
-  onItemClick: noop,
+  onReportClick: noop,
 };
 
 Secondary.args = {
@@ -28,7 +28,7 @@ Secondary.args = {
   userName: 'Василий Пупкин',
   items: cabinetMenuItems,
   settingsLink: '/',
-  onItemClick: noop,
+  onReportClick: noop,
 };
 
 Secondary.parameters = {
