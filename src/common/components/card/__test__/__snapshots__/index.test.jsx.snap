@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> should handle props 1`] = `
+<Card
+  childrenProps={
+    Object {
+      "className": "test-class",
+    }
+  }
+  footer="Foo Bar"
+  onClose={[MockFunction]}
+  title="Заголовок"
+  withCloseButton={true}
+>
+  <div
+    className="card"
+  >
+    <div
+      className="card-header"
+    >
+      <Memo(Text)
+        color="gray87"
+        lineHeight={24}
+        size={16}
+        truncate={true}
+        weight={500}
+      >
+        <span
+          className="size-16 line-height-24 color__gray87 weight-500 truncate"
+        >
+          Заголовок
+        </span>
+      </Memo(Text)>
+      <CrossSVG
+        aria-label="Закрыть Заголовок"
+        className="card-close"
+        onClick={[MockFunction]}
+        role="button"
+      >
+        <svg
+          aria-label="Закрыть Заголовок"
+          className="card-close"
+          height={24}
+          onClick={[MockFunction]}
+          role="button"
+          viewBox="0 0 24 24"
+          width={24}
+        >
+          <path
+            clipRule="evenodd"
+            d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </CrossSVG>
+    </div>
+    <div
+      className="card-content"
+    >
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+    </div>
+    <div
+      className="card-footer"
+    >
+      Foo Bar
+    </div>
+  </div>
+</Card>
+`;
+
+exports[`<Card /> should renders without props 1`] = `
+<Card>
+  <div
+    className="card"
+  >
+    <div
+      className="card-content"
+    />
+  </div>
+</Card>
+`;

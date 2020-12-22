@@ -1,0 +1,36 @@
+@import 'node_modules/@dev-dep/ui-nucleons/colors';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, .08), 0 0 4px rgba(0, 0, 0, .04);
+  overflow: hidden;
+}
+
+.card-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  padding: 0 48px;
+  box-shadow: inset 0 -1px 0 $gray12;
+  .card-close {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    right: 16px;
+  }
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.card-footer {
+  box-shadow: inset 0 1px 0 $gray12;
+}
