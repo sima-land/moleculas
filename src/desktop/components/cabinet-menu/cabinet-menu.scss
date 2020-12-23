@@ -8,12 +8,12 @@
   flex-direction: column;
   max-width: 280px;
   @media (max-width: $extraSmallDesktopBreakpoint) {
-    max-width: 104px;
+    width: 104px;
   }
 }
 
 .avatar-wrap {
-  margin: 24px 0 0 24px;
+  margin: 24px 24px 0;
   max-width: 56px;
   cursor: pointer;
 }
