@@ -15,6 +15,7 @@ const cx = classnames.bind(classes);
  * @param {import('react').ReactNode|null} props.footer Содержимое футера.
  * @param {boolean} props.withCloseButton Отображать ли кнопку закрытия.
  * @param {string} props.title Заголовок в хэдере.
+ * @param {Function} props.onClick Обработчик клика.
  * @param {Function} props.onClose Обработчик закрытия.
  * @return {ReactElement} Карточка.
  */
@@ -25,9 +26,11 @@ const Card = ({
   footer,
   withCloseButton,
   title,
+  'data-testid': testID,
+  onClick,
   onClose,
 }) => (
-  <div className={cx('card', className)}>
+  <div className={cx('card', className)} onClick={onClick} data-testid={testID}>
     {Boolean(title || withCloseButton) && (
       <div className={cx('card-header')}>
         {Boolean(title) && (
