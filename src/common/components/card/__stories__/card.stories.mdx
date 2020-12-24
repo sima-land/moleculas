@@ -1,5 +1,5 @@
 import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
-import { Primary, Secondary } from './card.stories.jsx'
+import { Primary, Secondary, Header } from './card.stories.jsx'
 import Card from '../index'
 
 <Meta
@@ -18,15 +18,15 @@ import Card from '@dev-dep/moleculas/common/components/card';
 <Card>
   <div>...</div>
 </Card>
+```
 
-// Вариант с отображением шапки (заголовок + кнопка "Закрыть") и футера
+// Вариант с шапкой
 <Card
-  title='...'
-  footer={(
-    <div>...</div>
+  header={(
+    <div>
+        <InformationSVG />
+    </div>
   )}
-  onClose={() => { ... }}
-  withCloseButton
 >
   <div>...</div>
 </Card>
@@ -41,6 +41,10 @@ export const Template = args => <Card {...args} />;
 
 <Canvas>
   <Story story={Secondary} />
+</Canvas>
+
+<Canvas>
+  <Story story={Header} />
 </Canvas>
 
 ### Свойства компонента

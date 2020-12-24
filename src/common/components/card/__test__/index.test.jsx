@@ -13,13 +13,11 @@ describe('<Card />', () => {
 
   it('should handle props', () => {
     const onClick = jest.fn();
-    const onClose = jest.fn();
     const wrapper = mount(
       <Card
-        title='Заголовок'
+        header={<h2>Заголовок</h2>}
         withCloseButton
         onClick={onClick}
-        onClose={onClose}
         footer='Foo Bar'
         contentProps={{ className: 'test-class' }}
         data-testid='component:card'
@@ -33,7 +31,5 @@ describe('<Card />', () => {
     expect(wrapper.find('.card-header')).toHaveLength(1);
     wrapper.find('.card').at(0).simulate('click');
     expect(onClick).toBeCalledTimes(1);
-    wrapper.find('.card-close').at(0).simulate('click');
-    expect(onClose).toBeCalledTimes(1);
   });
 });
