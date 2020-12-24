@@ -2,18 +2,22 @@
 
 exports[`<Card /> should handle props 1`] = `
 <Card
-  childrenProps={
+  contentProps={
     Object {
       "className": "test-class",
     }
   }
+  data-testid="component:card"
   footer="Foo Bar"
+  onClick={[MockFunction]}
   onClose={[MockFunction]}
   title="Заголовок"
   withCloseButton={true}
 >
   <div
     className="card"
+    data-testid="component:card"
+    onClick={[MockFunction]}
   >
     <div
       className="card-header"
@@ -55,7 +59,7 @@ exports[`<Card /> should handle props 1`] = `
       </CrossSVG>
     </div>
     <div
-      className="card-content"
+      className="card-content test-class"
     >
       Lorem, ipsum dolor sit amet consectetur adipisicing elit.
     </div>
