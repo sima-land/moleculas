@@ -4,22 +4,34 @@ stages:
   - dockerize
   - publish
 
-test:
+.test-default:
   stage: test
   image: node:10.15.3-alpine
   cache:
     paths:
       - node_modules
-  artifacts:
-    paths:
-      - node_modules
-    expire_in: 1 hrs
   before_script:
     - yarn install
   script:
     - yarn test
   tags:
     - sl-frontend
+
+test-mr:
+  extends: .test-default
+  except:
+    refs:
+      - tags
+
+test-tags:
+  extends: .test-default
+  artifacts:
+    paths:
+      - node_modules
+    expire_in: 1 hrs
+  only:
+    refs:
+      - tags
 
 build:
   stage: build
@@ -74,14 +86,14 @@ dockerize-storybook:
   tags:
     - sl-frontend
 
-publish-styleguide:
+publish-storybook:
   stage: publish
   image: registry.sima-land.ru:5043/k8s-deploy:latest
   before_script:
     - export DOMAIN_NAME=`echo $CI_ENVIRONMENT_URL | awk -F "[/:]" '{print $4}'`
     - export DEPLOY_DATE=`date +"%Y-%m-%d_%H-%M-%S"`
   script:
-    - envsubst < styleguide.k8s.yaml | kubectl apply -f -
+    - envsubst < storybook.k8s.yaml | kubectl apply -f -
   only:
     refs:
       - tags
