@@ -1,5 +1,5 @@
 import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
-import { Primary, Secondary } from './cabinet-menu.stories.jsx'
+import { FullWidthView, ShortView, WithoutAvatarImageView } from './cabinet-menu.stories.jsx'
 import CabinetMenu from '../index'
 
 <Meta
@@ -36,11 +36,15 @@ import CabinetMenu from '@dev-dep/moleculas/desktop/components/cabinet-menu';
 export const Template = args => <CabinetMenu {...args} />;
 
 <Canvas >
-  <Story story={Primary} />
+  <Story story={FullWidthView} />
 </Canvas>
 
 <Canvas >
-  <Story story={Secondary} />
+  <Story story={ShortView} />
+</Canvas>
+
+<Canvas >
+  <Story story={WithoutAvatarImageView} />
 </Canvas>
 
 ### Свойства компонента

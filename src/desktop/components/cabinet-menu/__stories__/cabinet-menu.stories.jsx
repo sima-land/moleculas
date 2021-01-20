@@ -10,10 +10,12 @@ const Template = args => (
     <SupperEllipseClipPath id='header-image-clip-path' />
   </div>
 );
-export const Primary = Template.bind({});
-export const Secondary = Template.bind({});
+export const FullWidthView = Template.bind({});
+export const ShortView = Template.bind({});
+export const WithoutAvatarImageView = Template.bind({});
 
-Primary.args = {
+FullWidthView.storyName = 'В широком вьюпорте';
+FullWidthView.args = {
   avatar: 'http://themoviescore.com/wp-content/uploads/2013/08/ff072a39a2709e4fec2cd05e3763d68d.jpg',
   superEllipseId: 'header-image-clip-path',
   userName: 'Василий Пупкин',
@@ -22,7 +24,8 @@ Primary.args = {
   onReportClick: noop,
 };
 
-Secondary.args = {
+ShortView.storyName = 'В узком вьюпорте';
+ShortView.args = {
   avatar: 'http://themoviescore.com/wp-content/uploads/2013/08/ff072a39a2709e4fec2cd05e3763d68d.jpg',
   superEllipseId: 'header-image-clip-path',
   userName: 'Василий Пупкин',
@@ -31,7 +34,16 @@ Secondary.args = {
   onReportClick: noop,
 };
 
-Secondary.parameters = {
+WithoutAvatarImageView.storyName = 'Без фото пользователя';
+WithoutAvatarImageView.args = {
+  superEllipseId: 'header-image-clip-path',
+  userName: 'Василий Пупкин',
+  items: cabinetMenuItems,
+  settingsLink: '/',
+  onReportClick: noop,
+};
+
+ShortView.parameters = {
   viewport: {
     defaultViewport: 'ipad',
   },
