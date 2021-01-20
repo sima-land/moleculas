@@ -39,7 +39,6 @@ const CabinetMenu = ({
         size={56}
         imageUrl={avatar}
         title={userName}
-        monogram={userName}
         clipStyle={{
           clipPath: `url(#${superEllipseId})`,
           WebkitClipPath: `url(#${superEllipseId})`,

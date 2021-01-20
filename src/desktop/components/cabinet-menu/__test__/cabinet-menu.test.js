@@ -8,7 +8,7 @@ describe('<CabinetMenu />', () => {
     const wrapper = mount(
       <CabinetMenu
         avatar='http://themoviescore.com/wp-content/uploads/2013/08/ff072a39a2709e4fec2cd05e3763d68d.jpg'
-        name='test name'
+        userName='test name'
         items={cabinetMenuItems}
         settingsLink='/'
         onReportClick={jest.fn()}
@@ -24,7 +24,7 @@ describe('<CabinetMenu />', () => {
     const wrapper = shallow(
       <CabinetMenu
         avatar='http://themoviescore.com/wp-content/uploads/2013/08/ff072a39a2709e4fec2cd05e3763d68d.jpg'
-        name='test name'
+        userName='test name'
         items={cabinetMenuItems}
         settingsLink='/'
         onReportClick={fakeItemClick}

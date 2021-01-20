@@ -49,10 +49,10 @@ exports[`<CabinetMenu /> should renders properly 1`] = `
       },
     ]
   }
-  name="test name"
   onReportClick={[MockFunction]}
   settingsLink="/"
   superEllipseId="header-image-clip-path"
+  userName="test name"
 >
   <div
     className="wrap"
@@ -76,6 +76,7 @@ exports[`<CabinetMenu /> should renders properly 1`] = `
           }
           imageUrl="http://themoviescore.com/wp-content/uploads/2013/08/ff072a39a2709e4fec2cd05e3763d68d.jpg"
           size={56}
+          title="test name"
         >
           <span
             className="avatar"
@@ -106,39 +107,12 @@ exports[`<CabinetMenu /> should renders properly 1`] = `
             <span
               className="content"
             >
-              <Icon
-                aria-hidden={true}
-                color="gray38"
-                icon={[Function]}
-                size={32}
+              <span
+                className="title truncate color__gray87"
+                role="presentation"
               >
-                <userPureSvg
-                  aria-hidden={true}
-                  className="icon icon-block color__gray38"
-                  height={32}
-                  viewBox="0 0 36 36"
-                  width={32}
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <svg
-                    aria-hidden={true}
-                    className="icon icon-block color__gray38"
-                    height={32}
-                    viewBox="0 0 36 36"
-                    width={32}
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      clipRule="evenodd"
-                      d="M11.479 10.268C10.619 6.132 13.776 2.25 18 2.25c4.224 0 7.382 3.882 6.521 8.018l-.607 2.921a6.04 6.04 0 0 1-11.829 0l-.607-2.921z"
-                      fillRule="evenodd"
-                    />
-                    <path
-                      d="M31.5 33.75h-27c-1.243 0-2.273-1.017-2.043-2.238C3.75 24.671 10.875 20.25 18 20.25s14.25 4.42 15.543 11.262c.23 1.221-.8 2.238-2.043 2.238z"
-                    />
-                  </svg>
-                </userPureSvg>
-              </Icon>
+                TN
+              </span>
             </span>
           </span>
         </Avatar>
@@ -154,7 +128,9 @@ exports[`<CabinetMenu /> should renders properly 1`] = `
       >
         <div
           className="name"
-        />
+        >
+          test name
+        </div>
         <div
           className="settings"
         >
