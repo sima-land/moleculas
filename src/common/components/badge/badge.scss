@@ -1,0 +1,48 @@
+$badge-size: 20px;
+$icon-size: 14px;
+
+.root {
+  --badge-color: #aaa;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: $badge-size;
+  color: var(--badge-color);
+  box-shadow: inset 0 0 0 1px var(--badge-color);
+  padding: 0 6px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  max-width: 100%;
+  min-width: $badge-size;
+  text-decoration: none;
+  &.interactive:hover {
+    cursor: pointer;
+    opacity: .72;
+  }
+  &.icon-only {
+    width: $badge-size;
+    padding: 0;
+  }
+  .content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .svg-wrapper {
+    width: $icon-size;
+    height: $icon-size;
+    svg {
+      fill: var(--badge-color);
+      display: inline-block;
+      width: $icon-size;
+      height: $icon-size;
+      line-height: $icon-size;
+
+      // чтобы перекрыть inline-свойство fill на path, circle и тд
+      * {
+        fill: inherit;
+      }
+    }
+  }
+}
