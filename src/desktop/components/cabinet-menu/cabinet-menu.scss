@@ -2,11 +2,12 @@
 @import 'node_modules/@dev-dep/ui-nucleons/variables';
 
 .wrap {
-  background-color: #e5e5e5;
+  background-color: $gray4;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   max-width: 280px;
+  min-height: 800px;
   @media (max-width: $extraSmallDesktopBreakpoint) {
     width: 104px;
   }
@@ -99,7 +100,7 @@
     .text {
       display: none;
       position: absolute;
-      left: calc(50% + 12px + 6px);
+      left: calc(50% + 18px);
       background-color: $gray76;
       color: $white;
       padding: 8px;
@@ -110,6 +111,7 @@
       white-space: nowrap;
       margin: 0;
       width: auto;
+      z-index: 9;
       &::before {
         content: '';
         position: absolute;
@@ -129,7 +131,7 @@
   > .icon path {
     fill: $gray87;
   }
-  :hover {
+  &:hover {
     color: $gray87;
   }
 }
