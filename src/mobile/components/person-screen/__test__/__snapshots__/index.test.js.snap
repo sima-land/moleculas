@@ -86,64 +86,38 @@ exports[`<PersonScreen /> should handle props 1`] = `
                 <div
                   class="avatar small"
                 >
-                  <span
-                    class="avatar"
-                    style="width: 64px; height: 64px;"
+                  <div
+                    class="root size-64 color__white"
+                    style="clip-path: url(#moleculas__super-ellipse);"
                   >
-                    <svg
-                      class="super-ellipse"
-                    >
-                      <rect
-                        fill="#f5f5f5"
-                        height="64"
-                        style="clip-path: url(#moleculas__super-ellipse);"
-                        width="64"
-                        x="0"
-                        y="0"
-                      />
-                    </svg>
-                    <span
+                    <div
+                      class="shape"
+                      style="opacity: 0.48; background: rgb(213, 0, 0);"
+                    />
+                    <div
                       class="content"
                     >
-                      <span
-                        class="title truncate color__gray87"
-                        role="presentation"
-                      >
-                        ММ
-                      </span>
-                    </span>
-                  </span>
+                      ММ
+                    </div>
+                  </div>
                 </div>
                 <div
                   class="avatar big"
                 >
-                  <span
-                    class="avatar"
-                    style="width: 112px; height: 112px;"
+                  <div
+                    class="root size-72 color__white"
+                    style="clip-path: url(#moleculas__super-ellipse);"
                   >
-                    <svg
-                      class="super-ellipse"
-                    >
-                      <rect
-                        fill="#f5f5f5"
-                        height="112"
-                        style="clip-path: url(#moleculas__super-ellipse);"
-                        width="112"
-                        x="0"
-                        y="0"
-                      />
-                    </svg>
-                    <span
+                    <div
+                      class="shape"
+                      style="opacity: 0.48; background: rgb(213, 0, 0);"
+                    />
+                    <div
                       class="content"
                     >
-                      <span
-                        class="title truncate color__gray87"
-                        role="presentation"
-                      >
-                        ММ
-                      </span>
-                    </span>
-                  </span>
+                      ММ
+                    </div>
+                  </div>
                 </div>
                 <span
                   class="name"
@@ -455,106 +429,108 @@ exports[`<PersonScreen /> should handle props 1`] = `
               <div
                 className="avatar small"
               >
-                <Avatar
-                  clipStyle={
+                <UserAvatar
+                  size={64}
+                  style={
                     Object {
                       "WebkitClipPath": "url(#moleculas__super-ellipse)",
                       "clipPath": "url(#moleculas__super-ellipse)",
                     }
                   }
-                  size={64}
                   title="Марина Михайловская"
                 >
-                  <span
-                    className="avatar"
+                  <Avatar
+                    bgColor="additional-deep-red"
+                    bgOpacity={0.48}
+                    size={64}
                     style={
                       Object {
-                        "height": 64,
-                        "width": 64,
+                        "WebkitClipPath": "url(#moleculas__super-ellipse)",
+                        "clipPath": "url(#moleculas__super-ellipse)",
                       }
                     }
+                    textColor="white"
+                    title="Марина Михайловская"
                   >
-                    <svg
-                      className="super-ellipse"
+                    <div
+                      className="root size-64 color__white"
+                      style={
+                        Object {
+                          "WebkitClipPath": "url(#moleculas__super-ellipse)",
+                          "clipPath": "url(#moleculas__super-ellipse)",
+                        }
+                      }
                     >
-                      <rect
-                        fill="#f5f5f5"
-                        height={64}
+                      <div
+                        className="shape"
                         style={
                           Object {
-                            "WebkitClipPath": "url(#moleculas__super-ellipse)",
-                            "clipPath": "url(#moleculas__super-ellipse)",
+                            "background": "#d50000",
+                            "opacity": 0.48,
                           }
                         }
-                        width={64}
-                        x={0}
-                        y={0}
                       />
-                    </svg>
-                    <span
-                      className="content"
-                    >
-                      <span
-                        className="title truncate color__gray87"
-                        role="presentation"
+                      <div
+                        className="content"
                       >
                         ММ
-                      </span>
-                    </span>
-                  </span>
-                </Avatar>
+                      </div>
+                    </div>
+                  </Avatar>
+                </UserAvatar>
               </div>
               <div
                 className="avatar big"
               >
-                <Avatar
-                  clipStyle={
+                <UserAvatar
+                  size={112}
+                  style={
                     Object {
                       "WebkitClipPath": "url(#moleculas__super-ellipse)",
                       "clipPath": "url(#moleculas__super-ellipse)",
                     }
                   }
-                  size={112}
                   title="Марина Михайловская"
                 >
-                  <span
-                    className="avatar"
+                  <Avatar
+                    bgColor="additional-deep-red"
+                    bgOpacity={0.48}
+                    size={112}
                     style={
                       Object {
-                        "height": 112,
-                        "width": 112,
+                        "WebkitClipPath": "url(#moleculas__super-ellipse)",
+                        "clipPath": "url(#moleculas__super-ellipse)",
                       }
                     }
+                    textColor="white"
+                    title="Марина Михайловская"
                   >
-                    <svg
-                      className="super-ellipse"
+                    <div
+                      className="root size-72 color__white"
+                      style={
+                        Object {
+                          "WebkitClipPath": "url(#moleculas__super-ellipse)",
+                          "clipPath": "url(#moleculas__super-ellipse)",
+                        }
+                      }
                     >
-                      <rect
-                        fill="#f5f5f5"
-                        height={112}
+                      <div
+                        className="shape"
                         style={
                           Object {
-                            "WebkitClipPath": "url(#moleculas__super-ellipse)",
-                            "clipPath": "url(#moleculas__super-ellipse)",
+                            "background": "#d50000",
+                            "opacity": 0.48,
                           }
                         }
-                        width={112}
-                        x={0}
-                        y={0}
                       />
-                    </svg>
-                    <span
-                      className="content"
-                    >
-                      <span
-                        className="title truncate color__gray87"
-                        role="presentation"
+                      <div
+                        className="content"
                       >
                         ММ
-                      </span>
-                    </span>
-                  </span>
-                </Avatar>
+                      </div>
+                    </div>
+                  </Avatar>
+                </UserAvatar>
               </div>
               <span
                 className="name"
@@ -946,62 +922,36 @@ exports[`<PersonScreen /> should render with name 1`] = `
                 <div
                   class="avatar small"
                 >
-                  <span
-                    class="avatar"
-                    style="width: 64px; height: 64px;"
+                  <div
+                    class="root size-64 color__white"
                   >
-                    <svg
-                      class="super-ellipse"
-                    >
-                      <rect
-                        fill="#f5f5f5"
-                        height="64"
-                        width="64"
-                        x="0"
-                        y="0"
-                      />
-                    </svg>
-                    <span
+                    <div
+                      class="shape"
+                      style="opacity: 0.48; background: rgb(213, 0, 0);"
+                    />
+                    <div
                       class="content"
                     >
-                      <span
-                        class="title truncate color__gray87"
-                        role="presentation"
-                      >
-                        ММ
-                      </span>
-                    </span>
-                  </span>
+                      ММ
+                    </div>
+                  </div>
                 </div>
                 <div
                   class="avatar big"
                 >
-                  <span
-                    class="avatar"
-                    style="width: 112px; height: 112px;"
+                  <div
+                    class="root size-72 color__white"
                   >
-                    <svg
-                      class="super-ellipse"
-                    >
-                      <rect
-                        fill="#f5f5f5"
-                        height="112"
-                        width="112"
-                        x="0"
-                        y="0"
-                      />
-                    </svg>
-                    <span
+                    <div
+                      class="shape"
+                      style="opacity: 0.48; background: rgb(213, 0, 0);"
+                    />
+                    <div
                       class="content"
                     >
-                      <span
-                        class="title truncate color__gray87"
-                        role="presentation"
-                      >
-                        ММ
-                      </span>
-                    </span>
-                  </span>
+                      ММ
+                    </div>
+                  </div>
                 </div>
                 <span
                   class="name"
@@ -1204,84 +1154,72 @@ exports[`<PersonScreen /> should render with name 1`] = `
               <div
                 className="avatar small"
               >
-                <Avatar
+                <UserAvatar
                   size={64}
                   title="Марина Михайловская"
                 >
-                  <span
-                    className="avatar"
-                    style={
-                      Object {
-                        "height": 64,
-                        "width": 64,
-                      }
-                    }
+                  <Avatar
+                    bgColor="additional-deep-red"
+                    bgOpacity={0.48}
+                    size={64}
+                    textColor="white"
+                    title="Марина Михайловская"
                   >
-                    <svg
-                      className="super-ellipse"
+                    <div
+                      className="root size-64 color__white"
                     >
-                      <rect
-                        fill="#f5f5f5"
-                        height={64}
-                        style={Object {}}
-                        width={64}
-                        x={0}
-                        y={0}
+                      <div
+                        className="shape"
+                        style={
+                          Object {
+                            "background": "#d50000",
+                            "opacity": 0.48,
+                          }
+                        }
                       />
-                    </svg>
-                    <span
-                      className="content"
-                    >
-                      <span
-                        className="title truncate color__gray87"
-                        role="presentation"
+                      <div
+                        className="content"
                       >
                         ММ
-                      </span>
-                    </span>
-                  </span>
-                </Avatar>
+                      </div>
+                    </div>
+                  </Avatar>
+                </UserAvatar>
               </div>
               <div
                 className="avatar big"
               >
-                <Avatar
+                <UserAvatar
                   size={112}
                   title="Марина Михайловская"
                 >
-                  <span
-                    className="avatar"
-                    style={
-                      Object {
-                        "height": 112,
-                        "width": 112,
-                      }
-                    }
+                  <Avatar
+                    bgColor="additional-deep-red"
+                    bgOpacity={0.48}
+                    size={112}
+                    textColor="white"
+                    title="Марина Михайловская"
                   >
-                    <svg
-                      className="super-ellipse"
+                    <div
+                      className="root size-72 color__white"
                     >
-                      <rect
-                        fill="#f5f5f5"
-                        height={112}
-                        style={Object {}}
-                        width={112}
-                        x={0}
-                        y={0}
+                      <div
+                        className="shape"
+                        style={
+                          Object {
+                            "background": "#d50000",
+                            "opacity": 0.48,
+                          }
+                        }
                       />
-                    </svg>
-                    <span
-                      className="content"
-                    >
-                      <span
-                        className="title truncate color__gray87"
-                        role="presentation"
+                      <div
+                        className="content"
                       >
                         ММ
-                      </span>
-                    </span>
-                  </span>
-                </Avatar>
+                      </div>
+                    </div>
+                  </Avatar>
+                </UserAvatar>
               </div>
               <span
                 className="name"
