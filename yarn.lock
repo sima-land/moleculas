@@ -1968,10 +1968,10 @@
     stylelint-config-sass-guidelines "^7.1.0"
     stylelint-scss "^3.12.1"
 
-"@dev-dep/ui-nucleons@^10.0.0":
-  version "10.0.0"
-  resolved "https://gitlab.sima-land.ru/api/v4/projects/625/packages/npm/@dev-dep/ui-nucleons/-/@dev-dep/ui-nucleons-10.0.0.tgz#77765eac26bb8dc14719b458bc0f9de52f616dc2"
-  integrity sha1-d3ZerCa7jcFHGbRYvA+d5S9hbcI=
+"@dev-dep/ui-nucleons@^10.0.1":
+  version "10.0.1"
+  resolved "https://gitlab.sima-land.ru/api/v4/projects/625/packages/npm/@dev-dep/ui-nucleons/-/@dev-dep/ui-nucleons-10.0.1.tgz#0444943709919c633dad4b2623a1d5ac19d4b1a8"
+  integrity sha1-BESUNwmRnGM9rUsmI6HVrBnUsag=
   dependencies:
     "@dev-dep/ui-quarks" "^1.0.1"
     "@krutoo/input-mask" "^0.0.7"
