@@ -2,8 +2,17 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { PersonScreen } from '..';
 import { SUPER_ELLIPSE_STYLE } from '../../../../common/constants';
+import { colorKey } from '@dev-dep/ui-nucleons/avatar/user';
 
 describe('<PersonScreen />', () => {
+  beforeEach(() => {
+    window[colorKey] = 'additional-deep-red';
+  });
+
+  afterEach(() => {
+    delete window[colorKey];
+  });
+
   it('should render with name', () => {
     const wrapper = mount(
       <PersonScreen

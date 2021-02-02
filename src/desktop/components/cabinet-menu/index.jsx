@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactSVG } from 'react-svg';
-import Avatar from '@dev-dep/ui-nucleons/avatar';
+import { UserAvatar } from '@dev-dep/ui-nucleons/avatar/user';
 import Link from '@dev-dep/ui-nucleons/link';
 
 import IconMail from '@dev-dep/ui-quarks/icons/24x24/Stroked/mail';
@@ -35,18 +35,18 @@ const CabinetMenu = ({
 }) => (
   <div className={cx('wrap')}>
     <Link className={cx('avatar-wrap')} href={settingsLink} aria-label='Настройки'>
-      <Avatar
+      <UserAvatar
         size={56}
         imageUrl={avatar}
         title={userName}
-        clipStyle={{
+        style={{
           clipPath: `url(#${superEllipseId})`,
           WebkitClipPath: `url(#${superEllipseId})`,
         }}
       />
     </Link>
     <Link className={cx('user-info')} href={settingsLink}>
-      <div className={cx('name')}>{userName}</div>
+      <div className={cx('name')}>{userName || 'Имя не указано'}</div>
       <div className={cx('settings')}>Настройки</div>
     </Link>
     <div className={cx('items')}>

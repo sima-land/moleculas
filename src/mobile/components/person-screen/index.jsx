@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-import Avatar from '@dev-dep/ui-nucleons/avatar';
+import { UserAvatar } from '@dev-dep/ui-nucleons/avatar/user';
 import Box from '@dev-dep/ui-nucleons/box';
 import Text from '@dev-dep/ui-nucleons/text';
 import Screen from '@dev-dep/ui-nucleons/screen';
@@ -78,19 +78,19 @@ export const PersonScreen = ({
 }) => (
   <Screen {...screenProps} withDivideHeader={false}>
     <div className={cx('avatar', 'small')}>
-      <Avatar
+      <UserAvatar
         size={64}
         title={name}
         imageUrl={photoUrl}
-        clipStyle={superEllipseStyle}
+        style={superEllipseStyle}
       />
     </div>
     <div className={cx('avatar', 'big')}>
-      <Avatar
+      <UserAvatar
         size={112}
         title={name}
         imageUrl={photoUrl}
-        clipStyle={superEllipseStyle}
+        style={superEllipseStyle}
       />
     </div>
     <span className={cx('name')}>
