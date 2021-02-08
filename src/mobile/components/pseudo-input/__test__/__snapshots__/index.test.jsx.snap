@@ -8,11 +8,9 @@ exports[`<PseudoInput /> should render without props 1`] = `
   <span
     className="icon"
   >
-    <Icon
+    <MagnifierSVG
       aria-hidden="true"
-      color="gray38"
-      icon={[Function]}
-      size={18}
+      fill="#9e9e9e"
     />
   </span>
   <span

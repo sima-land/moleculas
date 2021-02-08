@@ -1,9 +1,9 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-import Icon from '@dev-dep/ui-nucleons/icon';
-import { search } from '@dev-dep/ui-nucleons/icons';
+import Search from '@dev-dep/ui-quarks/icons/24x24/Stroked/magnifier';
 import styles from './pseudo-input.scss';
 import Types from 'prop-types';
+import { COLORS } from '@dev-dep/ui-nucleons/constants';
 
 const cx = classnames.bind(styles);
 
@@ -20,7 +20,7 @@ const PseudoInput = ({
 }) => (
   <div onClick={onClick} className={cx('input')} role='button'>
     <span className={cx('icon')}>
-      <Icon icon={search} size={18} color='gray38' aria-hidden='true' />
+      <Search fill={COLORS.get('gray38')} aria-hidden='true' />
     </span>
     <span className={cx('text')}>{text}</span>
   </div>
