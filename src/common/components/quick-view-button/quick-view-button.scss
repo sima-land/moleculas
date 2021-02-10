@@ -1,15 +1,14 @@
-@import 'node_modules/@dev-dep/ui-nucleons/variables';
-@import 'node_modules/@dev-dep/ui-nucleons/colors';
+@use '~@dev-dep/ui-nucleons/colors';
 
 .button {
   opacity: 0;
-  color: $gray87;
+  color: colors.$gray87;
   .stroke {
     overflow: visible;
     stroke-width: 1;
-    stroke: #f5f5f5;
+    stroke: colors.$gray4;
   }
   &:hover {
-    color: $red;
+    color: colors.$additional-red;
   }
 }

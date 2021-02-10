@@ -1,10 +1,10 @@
-@import '../../variables';
+@use '~@dev-dep/ui-nucleons/colors';
 
 .wrap {
-  border: 1px solid $lightGray;
+  border: 1px solid colors.$gray12;
   display: inline-flex;
   padding: 8px;
-  background: #fff;
+  background: colors.$white;
   border-radius: 4px;
   height: 48px;
   align-items: center;
@@ -15,7 +15,7 @@
   font-size: 14px;
   user-select: none;
   &:hover {
-    background: #f5f5f5;
+    background: colors.$gray4;
   }
 }
 
@@ -44,7 +44,7 @@
 }
 
 .arrow-icon {
-  fill: $lightGray;
+  fill: colors.$gray12;
 }
 
 .adornment,
@@ -59,5 +59,5 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border: 1px solid #e0e0e0;
+  border: 1px solid colors.$gray12;
 }
