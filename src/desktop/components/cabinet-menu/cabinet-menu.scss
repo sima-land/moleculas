@@ -1,8 +1,8 @@
-@import 'node_modules/@dev-dep/ui-nucleons/colors';
-@import 'node_modules/@dev-dep/ui-nucleons/variables';
+@use '~@dev-dep/ui-nucleons/colors';
+@import '~@dev-dep/ui-nucleons/variables';
 
 .wrap {
-  background-color: $gray4;
+  background-color: colors.$gray4;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@
     font-size: 20px;
     line-height: 28px;
     align-items: center;
-    color: $gray87;
+    color: colors.$gray87;
     text-overflow: ellipsis;
     width: 100%;
     overflow: hidden;
@@ -42,7 +42,7 @@
     font-size: 14px;
     line-height: 20px;
     align-items: center;
-    color: $brand-blue;
+    color: colors.$brand-blue;
     margin-top: 4px;
   }
   @media (max-width: $extraSmallDesktopBreakpoint) {
@@ -65,12 +65,12 @@
   font-size: 16px;
   line-height: 24px;
   align-items: center;
-  color: $gray38;
+  color: colors.$gray38;
   &:hover {
     &:not(.active) {
-      color: $gray54;
+      color: colors.$gray54;
       > .icon path {
-        fill: $gray54;
+        fill: colors.$gray54;
       }
     }
     @media (max-width: $extraSmallDesktopBreakpoint) {
@@ -84,7 +84,7 @@
     height: 24px;
     position: relative;
     path {
-      fill: $gray38;;
+      fill: colors.$gray38;
     }
   }
   .text {
@@ -102,8 +102,8 @@
       display: none;
       position: absolute;
       left: calc(50% + 18px);
-      background-color: $gray76;
-      color: $white;
+      background-color: colors.$gray76;
+      color: colors.$white;
       padding: 8px;
       border-radius: 4px;
       font-size: 14px;
@@ -117,7 +117,7 @@
         position: absolute;
         width: 8px;
         height: 8px;
-        background-color: $gray76;
+        background-color: colors.$gray76;
         left: -4px;
         top: calc(50% - 4px);
         transform: rotate(45deg);
@@ -127,12 +127,12 @@
 }
 
 .active {
-  color: $gray87;
+  color: colors.$gray87;
   > .icon path {
-    fill: $gray87;
+    fill: colors.$gray87;
   }
   &:hover {
-    color: $gray87;
+    color: colors.$gray87;
   }
 }
 
@@ -141,7 +141,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  background-color: $brand-blue;
+  background-color: colors.$brand-blue;
   width: 8px;
   height: 8px;
   border-radius: 50%;

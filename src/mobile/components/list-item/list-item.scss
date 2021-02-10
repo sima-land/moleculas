@@ -1,11 +1,11 @@
-@import 'node_modules/@dev-dep/ui-nucleons/variables';
-@import 'node_modules/@dev-dep/ui-nucleons/colors';
+@use '~@dev-dep/ui-nucleons/colors';
+@import '~@dev-dep/ui-nucleons/variables';
 
 .wrapper-row {
   position: relative;
   font-size: 16px;
   padding: 16px;
-  box-shadow: inset 0 -1px 0 #e0e0e0;
+  box-shadow: inset 0 -1px 0 colors.$gray12;
   @media screen and (max-width: 1279px) {
     font-size: 14px;
   }
@@ -147,7 +147,7 @@
 }
 
 .min-quantity {
-  color: $gray62;
+  color: colors.$gray38;
   font-size: 12px;
   line-height: 1.2;
   margin-top: 8px;
@@ -163,10 +163,10 @@
 .in-stock {
   font-size: 14px;
   line-height: 20px;
-  color: $gray87;
+  color: colors.$gray87;
   font-weight: 500;
   &.gray {
-    color: $gray24;
+    color: colors.$gray24;
   }
 }
 

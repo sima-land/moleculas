@@ -1,10 +1,9 @@
-@import 'node_modules/@dev-dep/ui-nucleons/variables';
-@import 'node_modules/@dev-dep/ui-nucleons/colors';
+@use '~@dev-dep/ui-nucleons/colors';
 
 .wish-button {
-  color: $red;
+  color: colors.$additional-red;
   &:not(.is-wished) {
-    color: $gray87;
+    color: colors.$gray87;
   }
   .stroke {
     overflow: visible;
@@ -16,6 +15,6 @@
   }
   &:hover,
   &.active {
-    color: $red;
+    color: colors.$additional-red;
   }
 }

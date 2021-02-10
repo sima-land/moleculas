@@ -40,7 +40,7 @@ const optionsDeclinations = Object.freeze([
  * @property {string} [deliveryInfo] Информация о доставке.
  * @property {Object|null} [markupData] Данные наценки за комплектацию.
  * @property {string} [image] Ссылка на изображение товара.
- * @property {Object} [import('../modifier-select').ModifierSelectProps] Свойства модификатора.
+ * @property {import('../modifier-select').ModifierSelectProps} [modifierProps] Свойства модификатора.
  * @property {boolean} isWished Признак товара в избранном.
  * @property {string} itemUrl Ссылка на товар.
  * @property {string} name Название товара.
