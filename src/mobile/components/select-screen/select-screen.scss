@@ -1,5 +1,5 @@
-@use '~@dev-dep/ui-nucleons/breakpoints';
-@import '~@dev-dep/ui-nucleons/colors';
+@use 'node_modules/@dev-dep/ui-nucleons/breakpoints';
+@import 'node_modules/@dev-dep/ui-nucleons/colors';
 
 .container {
   --gutter: 24px;

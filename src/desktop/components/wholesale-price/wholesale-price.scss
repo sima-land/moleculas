@@ -1,5 +1,5 @@
-@use '~@dev-dep/ui-nucleons/colors';
-@import '~@dev-dep/ui-nucleons/link/link'; // @todo решить: можно ли использовать стили компонентов таким образом
+@use 'node_modules/@dev-dep/ui-nucleons/colors';
+@import 'node_modules/@dev-dep/ui-nucleons/link/link'; // @todo решить: можно ли использовать стили компонентов таким образом
 
 .wrapper {
   align-items: center;
