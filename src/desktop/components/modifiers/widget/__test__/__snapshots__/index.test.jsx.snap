@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ModifiersWidget /> should renders correctly with prop 1`] = `
+<ModifiersWidget
+  items={
+    Array [
+      "test",
+    ]
+  }
+  onSelectItem={[MockFunction]}
+  sizesTableUrl="sima-land.ru"
+  title="test"
+>
+  <div>
+    <h3
+      className="modifiers-title"
+    >
+      test
+       (
+      1
+       
+      вариант
+      ):
+    </h3>
+    <ModifiersGroup
+      getItemContent={[Function]}
+      getItemCount={[Function]}
+      getSelectItem={[Function]}
+      items={
+        Array [
+          "test",
+        ]
+      }
+      onSelectItem={[MockFunction]}
+    >
+      <div
+        className="modifiers-group height-limited"
+      >
+        <ForwardRef(ModifierButton)
+          className="guttered"
+          key="0"
+          onClick={[Function]}
+        >
+          <div
+            className="modifier-button guttered"
+            onClick={[Function]}
+          >
+            <div
+              className="content"
+            >
+              <span
+                className="text guttered"
+              />
+            </div>
+          </div>
+        </ForwardRef(ModifierButton)>
+        <ForwardRef(ModifierButton)
+          className="show-all-button guttered invisible"
+          content="+1"
+          onClick={[Function]}
+          squared={true}
+        >
+          <div
+            className="modifier-button squared show-all-button guttered invisible"
+            onClick={[Function]}
+          >
+            <div
+              className="content"
+            >
+              <span
+                className="text"
+              >
+                +1
+              </span>
+            </div>
+          </div>
+        </ForwardRef(ModifierButton)>
+      </div>
+    </ModifiersGroup>
+    <ForwardRef(Link)
+      className="modifiers-link"
+      href="sima-land.ru"
+    >
+      <a
+        className="link modifiers-link color__brand-blue"
+        href="sima-land.ru"
+      >
+        Таблица размеров
+      </a>
+    </ForwardRef(Link)>
+  </div>
+</ModifiersWidget>
+`;
+
+exports[`<ModifiersWidget /> should renders correctly without props 1`] = `
+<div>
+  <ModifiersGroup
+    getItemContent={[Function]}
+    getItemCount={[Function]}
+    getSelectItem={[Function]}
+  />
+</div>
+`;
