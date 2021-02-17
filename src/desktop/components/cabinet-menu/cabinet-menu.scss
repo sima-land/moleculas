@@ -66,6 +66,7 @@
   line-height: 24px;
   align-items: center;
   color: colors.$gray38;
+  cursor: pointer;
   &:hover {
     &:not(.active) {
       color: colors.$gray54;
