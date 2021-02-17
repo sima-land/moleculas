@@ -19,7 +19,8 @@
     "core-js": "3",
     "moment-duration-format": "^2.3.2",
     "prop-types": "^15.7.2",
-    "react-svg": "^11.2.2"
+    "react-svg": "^11.2.2",
+    "react-transition-group": "^4.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
