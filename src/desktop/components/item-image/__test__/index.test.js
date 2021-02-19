@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { act } from 'react-dom/test-utils';
 import { mount, shallow } from 'enzyme';
-import Icon from '@dev-dep/ui-nucleons/icon';
 import ItemImage from '../index';
 import WishButton from '../../../../common/components/wish-button';
 import QuickViewButton from '../../../../common/components/quick-view-button';
@@ -90,7 +89,7 @@ describe('<ItemImage />', () => {
         hasTrashButton
       />
     );
-    expect(wrapper.find(Icon)).toHaveLength(1);
+    expect(wrapper.find('[data-testid="item-image:remove-button"]')).toHaveLength(1);
     expect(wrapper).toMatchSnapshot();
   });
   it('should render with wish button', () => {

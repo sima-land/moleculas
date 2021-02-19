@@ -1,15 +1,14 @@
 import React, { Component, createRef } from 'react';
-import Icon from '@dev-dep/ui-nucleons/icon';
 import Link from '@dev-dep/ui-nucleons/link';
 import classnames from 'classnames/bind';
 import isFunction from 'lodash/isFunction';
 import style from './item-image.scss';
 import FlagsList from '../../../common/components/flags-list';
-import EighteenPlus from '../../../common/icons/eighteen-plus.svg';
-import SelectedIcon from '../../../common/icons/selected.svg';
+import EighteenPlusSVG from '../../../common/icons/eighteen-plus.svg';
+import SelectedSVG from '../../../common/icons/selected.svg';
 import WishButton from '../../../common/components/wish-button';
 import QuickViewButton from '../../../common/components/quick-view-button';
-import blackTrashCart from '../../../common/icons/trash-cart.svg';
+import TrashCartSVG from '../../../common/icons/trash-cart.svg';
 
 const cx = classnames.bind(style);
 
@@ -133,7 +132,7 @@ export default class ItemImage extends Component {
       >
         {withBlur && (
           <div className={cx('with-blur')}>
-            <Icon icon={EighteenPlus} size={124} />
+            <EighteenPlusSVG width={124} height={124} />
           </div>
         )}
         <div className={cx('image-wrapper')}>
@@ -165,13 +164,13 @@ export default class ItemImage extends Component {
             }
           </Link>
           {hasTrashButton && (
-            <Icon
-              icon={blackTrashCart}
-              size={24}
+            <TrashCartSVG
+              width={24}
+              height={24}
               color='gray87'
-              viewBox='0 0 24 24'
               className={cx('icon', buttonsPos, trashButtonProps.className)}
               onClick={trashButtonProps.onClick}
+              data-testid='item-image:remove-button'
             />
           )}
         </div>
@@ -211,7 +210,7 @@ export default class ItemImage extends Component {
           <div onClick={selectionProps.onSelect} className={cx('selection-container')}>
             <div className={cx('selection-circle')}>
               {selectionProps.isSelected && (
-                <Icon icon={SelectedIcon} size={56} />
+                <SelectedSVG width={56} height={56} />
               )}
             </div>
           </div>
