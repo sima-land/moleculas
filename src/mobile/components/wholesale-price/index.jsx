@@ -1,6 +1,5 @@
 import React from 'react';
-import infoIcon from '../../../common/icons/info.svg';
-import Icon from '@dev-dep/ui-nucleons/icon';
+import InfoSVG from '@dev-dep/ui-quarks/icons/16x16/Stroked/information';
 import Price from '@dev-dep/ui-nucleons/price';
 import Text from '@dev-dep/ui-nucleons/text';
 import classnames from 'classnames/bind';
@@ -50,11 +49,9 @@ export const WholesalePrice = ({
           role='button'
           aria-label='Подробнее'
         >
-          <Icon
-            icon={infoIcon}
-            size={16}
-            inline
+          <InfoSVG
             role='presentation'
+            className={cx('svg')}
           />
         </span>
       </div>

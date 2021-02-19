@@ -9,93 +9,46 @@ exports[`<ItemRating /> should render with props 1`] = `
     alignItems="center"
     direction="row"
     display="flex"
-    marginTop={0}
   >
     <div
-      className="display-flex direction-row align-items-center M-t__0"
+      className="display-flex direction-row align-items-center"
     >
-      <Icon
-        color="additional-amber"
-        icon={[Function]}
-        size={11}
+      <StarSVG
+        fill="#ffab00"
+        height="16"
         value={2}
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <star
-          className="icon icon-block color__additional-amber"
-          height={11}
+        <svg
+          fill="#ffab00"
+          height="16"
           value={2}
-          viewBox="0 0 36 36"
-          width={11}
+          viewBox="0 0 16 16"
+          width="16"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <svg
-            className="icon icon-block color__additional-amber"
-            height={11}
-            value={2}
-            viewBox="0 0 36 36"
-            width={11}
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M8.77 32.446l9.228-5.793 9.224 5.793a.901.901 0 0 0 1.351-.983L25.915 20.9l8.36-6.984a.9.9 0 0 0-.516-1.59l-10.87-.735-4.058-10.11a.9.9 0 0 0-1.67 0l-4.06 10.11-10.868.735a.9.9 0 0 0-.516 1.59l8.36 6.984-2.658 10.564a.9.9 0 0 0 1.351.983z"
-            />
-            <path
-              d="M8.77 32.446l9.228-5.793L17.996.916a.9.9 0 0 0-.835.564l-4.06 10.11-10.868.735a.9.9 0 0 0-.516 1.59l8.36 6.984-2.658 10.564a.9.9 0 0 0 1.351.983z"
-            />
-          </svg>
-        </star>
-      </Icon>
-      <Box
-        dangerouslySetInlineStyle={
-          Object {
-            "__style": Object {
-              "marginLeft": "2px",
-              "paddingBottom": "2px",
-            },
-          }
-        }
+          <path
+            clipRule="evenodd"
+            d="M8.001 11.845L3.9 14.419a.4.4 0 0 1-.6-.436l1.18-4.696L.766 6.183a.4.4 0 0 1 .23-.706l4.83-.327L7.629.657a.4.4 0 0 1 .742 0l1.804 4.493 4.831.327a.4.4 0 0 1 .23.706L11.52 9.287l1.181 4.696a.4.4 0 0 1-.6.436L8 11.845z"
+            fill="#FFAB00"
+            fillRule="evenodd"
+          />
+        </svg>
+      </StarSVG>
+      <div
+        className="text value"
       >
-        <div
-          className=""
-          style={
-            Object {
-              "marginLeft": "2px",
-              "paddingBottom": "2px",
-            }
-          }
-        >
-          <Box
-            display="inline"
-            marginRight={2}
-          >
-            <div
-              className="display-inline M-r__2"
-            >
-              <Memo(Text)
-                color="additional-amber"
-                size={12}
-                weight={700}
-              >
-                <span
-                  className="size-12 line-height-16 color__additional-amber weight-700"
-                >
-                  2.0
-                </span>
-              </Memo(Text)>
-            </div>
-          </Box>
-          <Memo(Text)
-            color="gray38"
-            size={12}
-          >
-            <span
-              className="size-12 line-height-16 color__gray38"
-            >
-              3 отзыва
-            </span>
-          </Memo(Text)>
-        </div>
-      </Box>
+        2,0
+      </div>
+      <div
+        className="text count"
+      >
+        3
+         
+        отзыва
+      </div>
     </div>
   </Box>
 </ItemRating>
@@ -107,42 +60,34 @@ exports[`<ItemRating /> should render without props 1`] = `
     alignItems="center"
     direction="row"
     display="flex"
-    marginTop={0}
   >
     <div
-      className="display-flex direction-row align-items-center M-t__0"
+      className="display-flex direction-row align-items-center"
     >
-      <Icon
-        color="additional-amber"
-        icon={[Function]}
-        size={11}
+      <StarSVG
+        fill="#ffab00"
+        height="16"
         value={0}
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <star
-          className="icon icon-block color__additional-amber"
-          height={11}
+        <svg
+          fill="#ffab00"
+          height="16"
           value={0}
-          viewBox="0 0 36 36"
-          width={11}
+          viewBox="0 0 16 16"
+          width="16"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <svg
-            className="icon icon-block color__additional-amber"
-            height={11}
-            value={0}
-            viewBox="0 0 36 36"
-            width={11}
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M8.77 32.446l9.228-5.793 9.224 5.793a.901.901 0 0 0 1.351-.983L25.915 20.9l8.36-6.984a.9.9 0 0 0-.516-1.59l-10.87-.735-4.058-10.11a.9.9 0 0 0-1.67 0l-4.06 10.11-10.868.735a.9.9 0 0 0-.516 1.59l8.36 6.984-2.658 10.564a.9.9 0 0 0 1.351.983z"
-            />
-            <path
-              d="M8.77 32.446l9.228-5.793L17.996.916a.9.9 0 0 0-.835.564l-4.06 10.11-10.868.735a.9.9 0 0 0-.516 1.59l8.36 6.984-2.658 10.564a.9.9 0 0 0 1.351.983z"
-            />
-          </svg>
-        </star>
-      </Icon>
+          <path
+            clipRule="evenodd"
+            d="M8.001 11.845L3.9 14.419a.4.4 0 0 1-.6-.436l1.18-4.696L.766 6.183a.4.4 0 0 1 .23-.706l4.83-.327L7.629.657a.4.4 0 0 1 .742 0l1.804 4.493 4.831.327a.4.4 0 0 1 .23.706L11.52 9.287l1.181 4.696a.4.4 0 0 1-.6.436L8 11.845z"
+            fill="#FFAB00"
+            fillRule="evenodd"
+          />
+        </svg>
+      </StarSVG>
     </div>
   </Box>
 </ItemRating>

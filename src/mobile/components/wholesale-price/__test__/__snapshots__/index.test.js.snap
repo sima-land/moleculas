@@ -65,37 +65,27 @@ exports[`<WholesalePrice /> should render with props 1`] = `
         onClick={[Function]}
         role="button"
       >
-        <Icon
-          icon={[Function]}
-          inline={true}
+        <InformationSVG
+          className="svg"
           role="presentation"
-          size={16}
         >
-          <infoIcon
-            className="icon"
+          <svg
+            className="svg"
             height={16}
             role="presentation"
-            viewBox="0 0 36 36"
+            viewBox="0 0 16 16"
             width={16}
-            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              className="icon"
-              height={16}
-              role="presentation"
-              viewBox="0 0 36 36"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M18 15.75A2.25 2.25 0 0 1 20.25 18v6.75a2.25 2.25 0 0 1-4.5 0V18A2.25 2.25 0 0 1 18 15.75zm0 0M18 13.5a2.25 2.25 0 1 0-.001-4.501A2.25 2.25 0 0 0 18 13.5zm0 0"
-              />
-              <path
-                d="M0 18C0 8.059 8.059 0 18 0s18 8.059 18 18-8.059 18-18 18S0 27.941 0 18zM18 4.5C10.543 4.5 4.5 10.543 4.5 18S10.543 31.5 18 31.5 31.5 25.457 31.5 18 25.457 4.5 18 4.5zm0 0"
-              />
-            </svg>
-          </infoIcon>
-        </Icon>
+            <path
+              d="M8 7a1 1 0 011 1v3a1 1 0 11-2 0V8a1 1 0 011-1zM8 6a1 1 0 100-2 1 1 0 000 2z"
+            />
+            <path
+              clipRule="evenodd"
+              d="M0 8a8 8 0 1116 0A8 8 0 010 8zm8-6a6 6 0 100 12A6 6 0 008 2z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </InformationSVG>
       </span>
     </div>
   </div>

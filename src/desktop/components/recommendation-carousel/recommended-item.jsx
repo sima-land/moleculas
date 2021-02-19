@@ -7,8 +7,7 @@ import { cutTextContent } from '../../../common/helpers/dom';
 import isFunction from 'lodash/isFunction';
 import debounce from 'lodash/debounce';
 import withGlobalListeners from '@dev-dep/ui-nucleons/hoc/with-global-listeners';
-import Icon from '@dev-dep/ui-nucleons/icon';
-import quickView from '../../../common/icons/quick-view.svg';
+import QuickViewSVG from '../../../common/icons/quick-view.svg';
 
 const cx = classnames.bind(classes);
 
@@ -84,11 +83,10 @@ const RecommendedItem = ({
             onClick={onQuickViewClick}
             role='button'
           >
-            <Icon
-              viewBox='0 0 24 24'
+            <QuickViewSVG
               className={cx('icon')}
-              icon={quickView}
-              size={24}
+              width={24}
+              height={24}
             />
           </div>
         </div>

@@ -16,11 +16,10 @@ import isUndefined from 'lodash/isUndefined';
 import AdultBlock from '../../../common/components/adult-block/adult-block';
 import getDeclination from '@dev-dep/ui-nucleons/helpers/get-declination';
 import Button from '@dev-dep/ui-nucleons/button';
-import Icon from '@dev-dep/ui-nucleons/icon';
 import Link from '@dev-dep/ui-nucleons/link';
-import spinnerIcon from '../../../common/icons/white-spinner.svg';
-import stepArrows from '../../../common/icons/step-arrows.svg';
-import tripleDots from '../../../common/icons/triple-dots.svg';
+import SpinnerSVG from '../../../common/icons/white-spinner.svg';
+import UpAndDownSVG from '@dev-dep/ui-quarks/icons/16x16/Stroked/Arrows/up-and-down';
+import MoreSVG from '@dev-dep/ui-quarks/icons/24x24/Filled/more.js';
 import withInViewportObserver from '@dev-dep/ui-nucleons/with-in-viewport-observer';
 import withGlobalListeners from '@dev-dep/ui-nucleons/hoc/with-global-listeners';
 import Types from 'prop-types';
@@ -273,10 +272,10 @@ export const ListItem = ({
                       >
                         {isCartFetching
                           ? (
-                            <Icon
+                            <SpinnerSVG
                               className={cx('button-spinner')}
-                              icon={spinnerIcon}
-                              size={24}
+                              width={24}
+                              height={24}
                               viewBox='0 0 24 24'
                             />
                           )
@@ -293,10 +292,8 @@ export const ListItem = ({
                   >
                     <span className={cx('in-cart-value')}>{displayedQuantity}</span>
                     <span className={cx('step-arrows')}>
-                      <Icon
-                        icon={stepArrows}
-                        size={14}
-                        color='black'
+                      <UpAndDownSVG
+                        fill='#000'
                         role='button'
                       />
                     </span>
@@ -312,7 +309,7 @@ export const ListItem = ({
           </div>
         )}
         {hasActionsButton && (
-          <Icon size={24} icon={tripleDots} onClick={onActionsClick} className={cx('actions')} />
+          <MoreSVG onClick={onActionsClick} className={cx('actions')} />
         )}
       </Box>
     </div>

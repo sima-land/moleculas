@@ -1,9 +1,12 @@
 import React from 'react';
-import Text from '@dev-dep/ui-nucleons/text';
 import Box from '@dev-dep/ui-nucleons/box';
 import getDeclination from '@dev-dep/ui-nucleons/helpers/get-declination';
-import Icon from '@dev-dep/ui-nucleons/icon';
-import star from '@dev-dep/ui-nucleons/icons/star.svg';
+import { COLORS } from '@dev-dep/ui-nucleons/constants';
+import classnames from 'classnames/bind';
+import StarSVG from '../../../common/icons/filled-rate.svg';
+import styles from './item-rating.scss';
+
+const cx = classnames.bind(styles);
 
 const reviewsDeclinations = Object.freeze([
   'отзыв',
@@ -21,7 +24,7 @@ const reviewsDeclinations = Object.freeze([
  */
 export const ItemRating = ({
   value = 0,
-  marginTop = 0,
+  marginTop,
   reviewsCount,
 }) => (
   <Box
@@ -30,28 +33,21 @@ export const ItemRating = ({
     marginTop={marginTop}
     alignItems='center'
   >
-    <Icon
-      color='additional-amber'
-      icon={star}
+    <StarSVG
+      fill={COLORS.get('additional-amber')}
       value={value}
-      size={11}
     />
     {Boolean(reviewsCount) && (
-      <Box dangerouslySetInlineStyle={{ __style: { paddingBottom: '2px', marginLeft: '2px' } }}>
-        <Box display='inline' marginRight={2}>
-          <Text
-            color='additional-amber'
-            size={12}
-            children={value.toFixed(1)}
-            weight={700}
-          />
-        </Box>
-        <Text
-          color='gray38'
-          size={12}
-          children={`${reviewsCount} ${getDeclination(reviewsCount, reviewsDeclinations)}`}
-        />
-      </Box>
+      <>
+        <div className={cx('text', 'value')}>
+          {value.toFixed(1).replace('.', ',')}
+        </div>
+        <div className={cx('text', 'count')}>
+          {reviewsCount}
+          {' '}
+          {getDeclination(reviewsCount, reviewsDeclinations)}
+        </div>
+      </>
     )}
   </Box>
 );

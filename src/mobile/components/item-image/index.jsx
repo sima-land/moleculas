@@ -1,11 +1,10 @@
 import React, { Component, createRef } from 'react';
-import Icon from '@dev-dep/ui-nucleons/icon';
 import Link from '@dev-dep/ui-nucleons/link';
 import isFunction from 'lodash/isFunction';
 import style from './item-image.scss';
 import classnames from 'classnames/bind';
 import FlagsList from '../../../common/components/flags-list';
-import EighteenPlus from '../../../common/icons/eighteen-plus.svg';
+import EighteenPlusSVG from '../../../common/icons/eighteen-plus.svg';
 import WishButton from '../../../common/components/wish-button';
 
 const cx = classnames.bind(style);
@@ -93,7 +92,7 @@ export default class ItemImage extends Component {
       <div className={cx('wrapper', className)}>
         {withBlur && (
           <div className={cx('with-blur')}>
-            <Icon icon={EighteenPlus} size={124} />
+            <EighteenPlusSVG width={124} height={124} />
           </div>
         )}
         <div className={cx('image-wrapper')}>

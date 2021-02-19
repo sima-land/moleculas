@@ -2,8 +2,7 @@ import React from 'react';
 import Box from '@dev-dep/ui-nucleons/box';
 import Text from '@dev-dep/ui-nucleons/text';
 import Link from '@dev-dep/ui-nucleons/link';
-import Icon from '@dev-dep/ui-nucleons/icon';
-import TreeIcon from './tree-in-circle.svg';
+import TreeSVG from './tree-in-circle.svg';
 import classnames from 'classnames/bind';
 import styles from './garland-calculator-button.scss';
 import Types from 'prop-types';
@@ -31,13 +30,11 @@ export const GarlandCalculatorButton = ({ onClick }) => (
         </Box>
       </Box>
       <Box flex='none'>
-        <Icon icon={TreeIcon} size={48} />
+        <TreeSVG width={48} height={48} />
       </Box>
     </Box>
   </div>
 );
-
-export default GarlandCalculatorButton;
 
 GarlandCalculatorButton.propTypes = {
   /**
@@ -45,3 +42,5 @@ GarlandCalculatorButton.propTypes = {
    */
   onClick: Types.func.isRequired,
 };
+
+export default GarlandCalculatorButton;

@@ -111,10 +111,8 @@ exports[`<ListItem /> should render with all props 1`] = `
         </span>
       </Box>
     </div>
-    <Icon
+    <MoreSVG
       className="actions"
-      icon={[Function]}
-      size={24}
     />
   </Box>
 </div>
@@ -283,10 +281,8 @@ exports[`<ListItem /> should render with all props 2`] = `
         for 2 pcs
       </div>
     </div>
-    <Icon
+    <MoreSVG
       className="actions"
-      icon={[Function]}
-      size={24}
     />
   </Box>
 </div>
@@ -445,11 +441,13 @@ exports[`<ListItem /> should render with all props 3`] = `
           <ForwardRef(Button)
             className="cart-button"
           >
-            <Icon
+            <SpinnerSVG
               className="button-spinner"
-              icon={[Function]}
-              size={24}
+              fill="none"
+              height={24}
               viewBox="0 0 24 24"
+              width={24}
+              xmlns="http://www.w3.org/2000/svg"
             />
           </ForwardRef(Button)>
         </div>
@@ -460,10 +458,8 @@ exports[`<ListItem /> should render with all props 3`] = `
         for 2 pcs
       </div>
     </div>
-    <Icon
+    <MoreSVG
       className="actions"
-      icon={[Function]}
-      size={24}
     />
   </Box>
 </div>
@@ -624,11 +620,9 @@ exports[`<ListItem /> should render with all props 4`] = `
         <span
           className="step-arrows"
         >
-          <Icon
-            color="black"
-            icon={[Function]}
+          <UpAndDownSVG
+            fill="#000"
             role="button"
-            size={14}
           />
         </span>
       </div>
@@ -638,10 +632,8 @@ exports[`<ListItem /> should render with all props 4`] = `
         for 2 pcs
       </div>
     </div>
-    <Icon
+    <MoreSVG
       className="actions"
-      icon={[Function]}
-      size={24}
     />
   </Box>
 </div>
