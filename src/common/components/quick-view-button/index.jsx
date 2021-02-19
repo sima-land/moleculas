@@ -1,7 +1,6 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-import Icon from '@dev-dep/ui-nucleons/icon';
-import quickView from '../../icons/quick-view.svg';
+import QuickViewSVG from '../../icons/quick-view.svg';
 import styles from './quick-view-button.scss';
 
 const cx = classnames.bind(styles);
@@ -24,11 +23,10 @@ export const QuickViewButton = ({
     className={cx('button', className)}
     onClick={onClick}
   >
-    <Icon
-      viewBox='0 0 24 24'
+    <QuickViewSVG
       className={cx('stroke')}
-      icon={quickView}
-      size={size}
+      width={size}
+      height={size}
     />
   </div>
 );

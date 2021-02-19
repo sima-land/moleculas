@@ -1,7 +1,6 @@
 import React from 'react';
-import Icon from '@dev-dep/ui-nucleons/icon';
-import heartIcon from '../../icons/heart.svg';
-import heartFilledIcon from '../../icons/filled-heart.svg';
+import HeartSVG from '../../icons/heart.svg';
+import HeartFilledSVG from '../../icons/filled-heart.svg';
 import style from './wish-button.scss';
 import classnames from 'classnames/bind';
 
@@ -22,24 +21,28 @@ export const WishButton = ({
   onClick,
   isFetchingWishItems,
   size = 24,
-}) => (
-  <div
-    title={isWished ? 'Убрать из избранного' : 'Добавить в избранное'}
-    className={cx(
-      'wish-button',
-      className,
-      isWished && 'is-wished',
-      isFetchingWishItems && 'blocked'
-    )}
-    onClick={isFetchingWishItems ? null : onClick}
-  >
-    <Icon
-      viewBox='0 0 24 24'
-      className={cx('stroke')}
-      icon={isWished ? heartFilledIcon : heartIcon}
-      size={size}
-    />
-  </div>
-);
+}) => {
+  const Icon = isWished ? HeartFilledSVG : HeartSVG;
+
+  return (
+    <div
+      title={isWished ? 'Убрать из избранного' : 'Добавить в избранное'}
+      className={cx(
+        'wish-button',
+        className,
+        isWished && 'is-wished',
+        isFetchingWishItems && 'blocked'
+      )}
+      onClick={isFetchingWishItems ? null : onClick}
+    >
+      <Icon
+        viewBox='0 0 24 24'
+        className={cx('svg', 'stroke')}
+        width={size}
+        height={size}
+      />
+    </div>
+  );
+};
 
 export default WishButton;

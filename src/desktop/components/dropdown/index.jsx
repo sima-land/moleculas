@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import Icon from '@dev-dep/ui-nucleons/icon';
 import Popup from '@dev-dep/ui-nucleons/popups/popup';
-import arrowUpIcon from '../../../common/icons/arrow-up.svg';
-import arrowDownIcon from '../../../common/icons/arrow-down.svg';
+import UpSVG from '@dev-dep/ui-quarks/icons/16x16/Stroked/Arrows/up';
+import DownSVG from '@dev-dep/ui-quarks/icons/16x16/Stroked/Arrows/down';
 import classnames from 'classnames/bind';
 import styles from './dropdown.scss';
 import isFunction from 'lodash/isFunction';
@@ -94,17 +93,16 @@ export const defaultRenderItem = (item, index, onSelect) => (
  * @param {boolean} _.isOpen - Стрелка в положении вверх.
  * @return {ReactElement} Элемент списка.
  */
-export const renderDefaultHead = ({ title, onTitleClick, isOpen }) => (
-  <div className={cx('trigger')} onClick={isFunction(onTitleClick) && onTitleClick}>
-    <div className={cx('title')}>{title}</div>
-    <Icon
-      inline
-      icon={isOpen ? arrowUpIcon : arrowDownIcon}
-      className={cx('icon')}
-      size={16}
-    />
-  </div>
-);
+export const renderDefaultHead = ({ title, onTitleClick, isOpen }) => {
+  const Icon = isOpen ? UpSVG : DownSVG;
+
+  return (
+    <div className={cx('trigger')} onClick={isFunction(onTitleClick) && onTitleClick}>
+      <div className={cx('title')}>{title}</div>
+      <Icon className={cx('icon')} />
+    </div>
+  );
+};
 
 export default Dropdown;
 
