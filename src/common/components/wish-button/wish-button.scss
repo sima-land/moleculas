@@ -17,4 +17,7 @@
   &.active {
     color: colors.$additional-red;
   }
+  .svg {
+    fill: currentColor;
+  }
 }

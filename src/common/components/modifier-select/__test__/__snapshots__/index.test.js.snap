@@ -28,11 +28,9 @@ exports[`<ModifierSelect /> should match a snapshot 1`] = `
   <div
     className="arrow"
   >
-    <Icon
+    <RightSVG
       className="arrow-icon"
-      icon={[Function]}
       role="presentation"
-      size={16}
     />
   </div>
 </div>

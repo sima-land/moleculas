@@ -1,8 +1,7 @@
 import React from 'react';
 import classes from './modifier-select.scss';
 import classnames from 'classnames/bind';
-import arrowRight from '../../icons/arrow-right.svg';
-import Icon from '@dev-dep/ui-nucleons/icon';
+import RightSVG from '@dev-dep/ui-quarks/icons/16x16/Stroked/Arrows/right';
 import isFunction from 'lodash/isFunction';
 
 export const cx = classnames.bind(classes);
@@ -48,10 +47,8 @@ const ModifierSelect = ({
     )}
     <div className={cx('name')}>{name}</div>
     <div className={cx('arrow')}>
-      <Icon
-        icon={arrowRight}
+      <RightSVG
         role='presentation'
-        size={16}
         className={cx('arrow-icon')}
       />
     </div>

@@ -1,13 +1,12 @@
 import classnames from 'classnames/bind';
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import isInteger from 'lodash/isInteger';
 import isNumber from 'lodash/isNumber';
 import isFunction from 'lodash/isFunction';
 import Amount from '@dev-dep/ui-nucleons/amount/amount';
 import Button from '@dev-dep/ui-nucleons/button';
 import Box from '@dev-dep/ui-nucleons/box';
-import Icon from '@dev-dep/ui-nucleons/icon';
-import spinnerIcon from '../../icons/white-spinner.svg';
+import SpinnerSVG from '../../icons/white-spinner.svg';
 import { cleanQtyString } from '../../helpers/clean-qty-string';
 import styles from './add-to-cart-block.scss';
 
@@ -107,13 +106,13 @@ export default class AddToCartBlock extends Component {
             >
               {isFetching
                 ? (
-                  <Icon
+                  <SpinnerSVG
                     className={cx('button-spinner')}
-                    icon={spinnerIcon}
-                    size={24}
+                    width={24}
+                    height={24}
                     viewBox='0 0 24 24'
                   />
-                ) : <Fragment>В&nbsp;корзину</Fragment>
+                ) : <>В&nbsp;корзину</>
               }
             </Button>
           </div>

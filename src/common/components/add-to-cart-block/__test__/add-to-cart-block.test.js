@@ -74,7 +74,7 @@ describe('<AddToCartBlock />', () => {
       />
     );
     expect(wrap.find('button.cart-button')).toHaveLength(1);
-    expect(wrap.find('button.cart-button').find('Icon')).toHaveLength(1);
+    expect(wrap.find('button.cart-button').find('svg')).toHaveLength(1);
   });
 
   it('should render additionStepText', () => {
