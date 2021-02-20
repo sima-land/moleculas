@@ -16,12 +16,6 @@ exports[`<PersonScreen /> should handle props 1`] = `
   secondPhoneHref="tel:+7900000000"
   secondPhoneText="+7 (900) 000 000"
   skype="example@skype.com"
-  superEllipseStyle={
-    Object {
-      "WebkitClipPath": "url(#moleculas__super-ellipse)",
-      "clipPath": "url(#moleculas__super-ellipse)",
-    }
-  }
 >
   <Screen
     withDivideHeader={false}
@@ -64,15 +58,14 @@ exports[`<PersonScreen /> should handle props 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="icon icon-block color__gray87"
+                        fill="#212121"
                         height="24"
-                        viewBox="0 0 36 36"
+                        viewBox="0 0 24 24"
                         width="24"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
+                          d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -88,35 +81,27 @@ exports[`<PersonScreen /> should handle props 1`] = `
                 >
                   <div
                     class="root size-64 color__white"
-                    style="clip-path: url(#moleculas__super-ellipse);"
+                    style="--avatar-color: #d50000; --avatar-color-opacity: 0.48;"
                   >
-                    <div
-                      class="shape"
-                      style="opacity: 0.48; background: rgb(213, 0, 0);"
-                    />
-                    <div
-                      class="content"
+                    <span
+                      class="monogram"
                     >
                       ММ
-                    </div>
+                    </span>
                   </div>
                 </div>
                 <div
                   class="avatar big"
                 >
                   <div
-                    class="root size-72 color__white"
-                    style="clip-path: url(#moleculas__super-ellipse);"
+                    class="root size-104 color__white"
+                    style="--avatar-color: #d50000; --avatar-color-opacity: 0.48;"
                   >
-                    <div
-                      class="shape"
-                      style="opacity: 0.48; background: rgb(213, 0, 0);"
-                    />
-                    <div
-                      class="content"
+                    <span
+                      class="monogram"
                     >
                       ММ
-                    </div>
+                    </span>
                   </div>
                 </div>
                 <span
@@ -387,36 +372,24 @@ exports[`<PersonScreen /> should handle props 1`] = `
                         className="button icon"
                         onClick={[Function]}
                       >
-                        <Icon
+                        <CrossSVG
                           aria-hidden="true"
-                          color="gray87"
-                          icon={[Function]}
-                          size={24}
+                          fill="#212121"
                         >
-                          <crossIcon
+                          <svg
                             aria-hidden="true"
-                            className="icon icon-block color__gray87"
+                            fill="#212121"
                             height={24}
-                            viewBox="0 0 36 36"
+                            viewBox="0 0 24 24"
                             width={24}
-                            xmlns="http://www.w3.org/2000/svg"
                           >
-                            <svg
-                              aria-hidden="true"
-                              className="icon icon-block color__gray87"
-                              height={24}
-                              viewBox="0 0 36 36"
-                              width={24}
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                clipRule="evenodd"
-                                d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
-                                fillRule="evenodd"
-                              />
-                            </svg>
-                          </crossIcon>
-                        </Icon>
+                            <path
+                              clipRule="evenodd"
+                              d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
+                              fillRule="evenodd"
+                            />
+                          </svg>
+                        </CrossSVG>
                       </button>
                     </NavButton>
                   </div>
@@ -431,24 +404,12 @@ exports[`<PersonScreen /> should handle props 1`] = `
               >
                 <UserAvatar
                   size={64}
-                  style={
-                    Object {
-                      "WebkitClipPath": "url(#moleculas__super-ellipse)",
-                      "clipPath": "url(#moleculas__super-ellipse)",
-                    }
-                  }
                   title="Марина Михайловская"
                 >
                   <Avatar
                     bgColor="additional-deep-red"
                     bgOpacity={0.48}
                     size={64}
-                    style={
-                      Object {
-                        "WebkitClipPath": "url(#moleculas__super-ellipse)",
-                        "clipPath": "url(#moleculas__super-ellipse)",
-                      }
-                    }
                     textColor="white"
                     title="Марина Михайловская"
                   >
@@ -456,25 +417,16 @@ exports[`<PersonScreen /> should handle props 1`] = `
                       className="root size-64 color__white"
                       style={
                         Object {
-                          "WebkitClipPath": "url(#moleculas__super-ellipse)",
-                          "clipPath": "url(#moleculas__super-ellipse)",
+                          "--avatar-color": "#d50000",
+                          "--avatar-color-opacity": 0.48,
                         }
                       }
                     >
-                      <div
-                        className="shape"
-                        style={
-                          Object {
-                            "background": "#d50000",
-                            "opacity": 0.48,
-                          }
-                        }
-                      />
-                      <div
-                        className="content"
+                      <span
+                        className="monogram"
                       >
                         ММ
-                      </div>
+                      </span>
                     </div>
                   </Avatar>
                 </UserAvatar>
@@ -483,51 +435,30 @@ exports[`<PersonScreen /> should handle props 1`] = `
                 className="avatar big"
               >
                 <UserAvatar
-                  size={112}
-                  style={
-                    Object {
-                      "WebkitClipPath": "url(#moleculas__super-ellipse)",
-                      "clipPath": "url(#moleculas__super-ellipse)",
-                    }
-                  }
+                  size={104}
                   title="Марина Михайловская"
                 >
                   <Avatar
                     bgColor="additional-deep-red"
                     bgOpacity={0.48}
-                    size={112}
-                    style={
-                      Object {
-                        "WebkitClipPath": "url(#moleculas__super-ellipse)",
-                        "clipPath": "url(#moleculas__super-ellipse)",
-                      }
-                    }
+                    size={104}
                     textColor="white"
                     title="Марина Михайловская"
                   >
                     <div
-                      className="root size-72 color__white"
+                      className="root size-104 color__white"
                       style={
                         Object {
-                          "WebkitClipPath": "url(#moleculas__super-ellipse)",
-                          "clipPath": "url(#moleculas__super-ellipse)",
+                          "--avatar-color": "#d50000",
+                          "--avatar-color-opacity": 0.48,
                         }
                       }
                     >
-                      <div
-                        className="shape"
-                        style={
-                          Object {
-                            "background": "#d50000",
-                            "opacity": 0.48,
-                          }
-                        }
-                      />
-                      <div
-                        className="content"
+                      <span
+                        className="monogram"
                       >
                         ММ
-                      </div>
+                      </span>
                     </div>
                   </Avatar>
                 </UserAvatar>
@@ -900,15 +831,14 @@ exports[`<PersonScreen /> should render with name 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="icon icon-block color__gray87"
+                        fill="#212121"
                         height="24"
-                        viewBox="0 0 36 36"
+                        viewBox="0 0 24 24"
                         width="24"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
+                          d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -924,33 +854,27 @@ exports[`<PersonScreen /> should render with name 1`] = `
                 >
                   <div
                     class="root size-64 color__white"
+                    style="--avatar-color: #d50000; --avatar-color-opacity: 0.48;"
                   >
-                    <div
-                      class="shape"
-                      style="opacity: 0.48; background: rgb(213, 0, 0);"
-                    />
-                    <div
-                      class="content"
+                    <span
+                      class="monogram"
                     >
                       ММ
-                    </div>
+                    </span>
                   </div>
                 </div>
                 <div
                   class="avatar big"
                 >
                   <div
-                    class="root size-72 color__white"
+                    class="root size-104 color__white"
+                    style="--avatar-color: #d50000; --avatar-color-opacity: 0.48;"
                   >
-                    <div
-                      class="shape"
-                      style="opacity: 0.48; background: rgb(213, 0, 0);"
-                    />
-                    <div
-                      class="content"
+                    <span
+                      class="monogram"
                     >
                       ММ
-                    </div>
+                    </span>
                   </div>
                 </div>
                 <span
@@ -1112,36 +1036,24 @@ exports[`<PersonScreen /> should render with name 1`] = `
                         className="button icon"
                         onClick={[Function]}
                       >
-                        <Icon
+                        <CrossSVG
                           aria-hidden="true"
-                          color="gray87"
-                          icon={[Function]}
-                          size={24}
+                          fill="#212121"
                         >
-                          <crossIcon
+                          <svg
                             aria-hidden="true"
-                            className="icon icon-block color__gray87"
+                            fill="#212121"
                             height={24}
-                            viewBox="0 0 36 36"
+                            viewBox="0 0 24 24"
                             width={24}
-                            xmlns="http://www.w3.org/2000/svg"
                           >
-                            <svg
-                              aria-hidden="true"
-                              className="icon icon-block color__gray87"
-                              height={24}
-                              viewBox="0 0 36 36"
-                              width={24}
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                clipRule="evenodd"
-                                d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
-                                fillRule="evenodd"
-                              />
-                            </svg>
-                          </crossIcon>
-                        </Icon>
+                            <path
+                              clipRule="evenodd"
+                              d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
+                              fillRule="evenodd"
+                            />
+                          </svg>
+                        </CrossSVG>
                       </button>
                     </NavButton>
                   </div>
@@ -1167,21 +1079,18 @@ exports[`<PersonScreen /> should render with name 1`] = `
                   >
                     <div
                       className="root size-64 color__white"
-                    >
-                      <div
-                        className="shape"
-                        style={
-                          Object {
-                            "background": "#d50000",
-                            "opacity": 0.48,
-                          }
+                      style={
+                        Object {
+                          "--avatar-color": "#d50000",
+                          "--avatar-color-opacity": 0.48,
                         }
-                      />
-                      <div
-                        className="content"
+                      }
+                    >
+                      <span
+                        className="monogram"
                       >
                         ММ
-                      </div>
+                      </span>
                     </div>
                   </Avatar>
                 </UserAvatar>
@@ -1190,33 +1099,30 @@ exports[`<PersonScreen /> should render with name 1`] = `
                 className="avatar big"
               >
                 <UserAvatar
-                  size={112}
+                  size={104}
                   title="Марина Михайловская"
                 >
                   <Avatar
                     bgColor="additional-deep-red"
                     bgOpacity={0.48}
-                    size={112}
+                    size={104}
                     textColor="white"
                     title="Марина Михайловская"
                   >
                     <div
-                      className="root size-72 color__white"
-                    >
-                      <div
-                        className="shape"
-                        style={
-                          Object {
-                            "background": "#d50000",
-                            "opacity": 0.48,
-                          }
+                      className="root size-104 color__white"
+                      style={
+                        Object {
+                          "--avatar-color": "#d50000",
+                          "--avatar-color-opacity": 0.48,
                         }
-                      />
-                      <div
-                        className="content"
+                      }
+                    >
+                      <span
+                        className="monogram"
                       >
                         ММ
-                      </div>
+                      </span>
                     </div>
                   </Avatar>
                 </UserAvatar>

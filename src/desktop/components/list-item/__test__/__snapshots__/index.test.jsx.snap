@@ -419,7 +419,7 @@ exports[`<ListItem /> should render with all props 2`] = `
         display="flex"
         justifyContent="between"
         marginBottom={2}
-        marginTop={-4}
+        marginTop={2}
       >
         <FlagsList
           flags={

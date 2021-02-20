@@ -5,12 +5,8 @@ exports[`<FlagsList /> with props renders correctly 1`] = `
   className="wrap test"
 >
   <Badge
-    bgColor="#64a0eb"
-    containerProps={
-      Object {
-        "className": "item",
-      }
-    }
+    className="item"
+    color="#64a0eb"
     fields={
       Array [
         Object {
@@ -21,7 +17,6 @@ exports[`<FlagsList /> with props renders correctly 1`] = `
     }
     key="0"
     link="/sale/?is_label=1"
-    textColor="#FFFFFF"
   />
 </div>
 `;

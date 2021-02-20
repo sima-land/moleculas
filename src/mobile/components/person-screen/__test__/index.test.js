@@ -1,7 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { PersonScreen } from '..';
-import { SUPER_ELLIPSE_STYLE } from '../../../../common/constants';
 import { colorKey } from '@dev-dep/ui-nucleons/avatar/user';
 
 describe('<PersonScreen />', () => {
@@ -36,7 +35,6 @@ describe('<PersonScreen />', () => {
         phoneText='88000000000 доб. 8823'
         secondPhoneHref='tel:+7900000000'
         secondPhoneText='+7 (900) 000 000'
-        superEllipseStyle={SUPER_ELLIPSE_STYLE}
         arbitraryLinkProps={{
           href: '/test',
           children: 'test',

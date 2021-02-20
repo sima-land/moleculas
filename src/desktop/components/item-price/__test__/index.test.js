@@ -15,12 +15,10 @@ describe('<ItemPrice />', () => {
           {
             type: 'b-discount',
             link: '/sale/?is_label=1',
-            definitions: {
-              discountPercent: {
-                type: 'text',
-                value: '-50%',
-              },
-            },
+            fields: [{
+              type: 'text',
+              value: '-50%',
+            }],
           },
         ]}
         price={15}

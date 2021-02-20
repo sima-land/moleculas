@@ -18,10 +18,7 @@ export const data = {
     {
       title: null,
       link: '/sale/?is_label=1',
-      bgColor: '#64a0eb',
-      textColor: '#FFFFFF',
-      strokeColor: null,
-      shadowColor: null,
+      color: '#64a0eb',
       fields: [
         {
           type: 'text',
@@ -32,10 +29,7 @@ export const data = {
     {
       title: null,
       link: '/nasha-razrabotka/?is_label=1',
-      bgColor: '#000000',
-      textColor: '#FFFFFF',
-      strokeColor: null,
-      shadowColor: null,
+      color: '#000000',
       fields: [
         {
           type: 'text',
@@ -46,10 +40,7 @@ export const data = {
     {
       title: null,
       link: '/markdown/?is_label=1',
-      bgColor: '#607d8b',
-      textColor: '#FFFFFF',
-      strokeColor: null,
-      shadowColor: null,
+      color: '#607d8b',
       fields: [
         {
           type: 'text',
@@ -58,8 +49,6 @@ export const data = {
       ],
     },
     {
-      strokeColor: null,
-      shadowColor: null,
       link: '/opt/?is_label=1#detskie-tovary',
       title: null,
       fields: [
@@ -68,8 +57,7 @@ export const data = {
           value: 'Опт «Детские товары»',
         },
       ],
-      textColor: '#FFFFFF',
-      bgColor: '#ff4824',
+      color: '#ff4824',
     },
   ],
   bigImg: 'https://cdn2.static1-sima-land.com/items/3311827/6/400.jpg?v=1566383235',
