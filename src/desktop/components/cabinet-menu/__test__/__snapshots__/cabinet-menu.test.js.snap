@@ -51,7 +51,6 @@ exports[`<CabinetMenu /> should renders properly w/o user name 1`] = `
   }
   onReportClick={[MockFunction]}
   settingsLink="/"
-  superEllipseId="header-image-clip-path"
 >
   <div
     className="wrap"
@@ -69,44 +68,31 @@ exports[`<CabinetMenu /> should renders properly w/o user name 1`] = `
         <UserAvatar
           imageUrl="http://themoviescore.com/wp-content/uploads/2013/08/ff072a39a2709e4fec2cd05e3763d68d.jpg"
           size={56}
-          style={
-            Object {
-              "WebkitClipPath": "url(#header-image-clip-path)",
-              "clipPath": "url(#header-image-clip-path)",
-            }
-          }
         >
           <Avatar
             bgColor="additional-deep-red"
             bgOpacity={0.48}
             imageUrl="http://themoviescore.com/wp-content/uploads/2013/08/ff072a39a2709e4fec2cd05e3763d68d.jpg"
             size={56}
-            style={
-              Object {
-                "WebkitClipPath": "url(#header-image-clip-path)",
-                "clipPath": "url(#header-image-clip-path)",
-              }
-            }
             textColor="white"
           >
             <div
               className="root size-56 color__white"
               style={
                 Object {
-                  "WebkitClipPath": "url(#header-image-clip-path)",
-                  "clipPath": "url(#header-image-clip-path)",
+                  "--avatar-color": undefined,
+                  "--avatar-color-opacity": 0.48,
                 }
               }
             >
-              <div
-                className="shape"
-                style={Object {}}
-              />
               <img
                 alt=""
-                className="image"
+                className="layer image"
                 onError={[Function]}
                 src="http://themoviescore.com/wp-content/uploads/2013/08/ff072a39a2709e4fec2cd05e3763d68d.jpg"
+              />
+              <div
+                className="layer image-overlay"
               />
             </div>
           </Avatar>
@@ -455,7 +441,6 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
   }
   onReportClick={[MockFunction]}
   settingsLink="/"
-  superEllipseId="header-image-clip-path"
   userName="test name"
 >
   <div
@@ -474,12 +459,6 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
         <UserAvatar
           imageUrl="http://themoviescore.com/wp-content/uploads/2013/08/ff072a39a2709e4fec2cd05e3763d68d.jpg"
           size={56}
-          style={
-            Object {
-              "WebkitClipPath": "url(#header-image-clip-path)",
-              "clipPath": "url(#header-image-clip-path)",
-            }
-          }
           title="test name"
         >
           <Avatar
@@ -487,12 +466,6 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
             bgOpacity={0.48}
             imageUrl="http://themoviescore.com/wp-content/uploads/2013/08/ff072a39a2709e4fec2cd05e3763d68d.jpg"
             size={56}
-            style={
-              Object {
-                "WebkitClipPath": "url(#header-image-clip-path)",
-                "clipPath": "url(#header-image-clip-path)",
-              }
-            }
             textColor="white"
             title="test name"
           >
@@ -500,20 +473,19 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
               className="root size-56 color__white"
               style={
                 Object {
-                  "WebkitClipPath": "url(#header-image-clip-path)",
-                  "clipPath": "url(#header-image-clip-path)",
+                  "--avatar-color": undefined,
+                  "--avatar-color-opacity": 0.48,
                 }
               }
             >
-              <div
-                className="shape"
-                style={Object {}}
-              />
               <img
                 alt=""
-                className="image"
+                className="layer image"
                 onError={[Function]}
                 src="http://themoviescore.com/wp-content/uploads/2013/08/ff072a39a2709e4fec2cd05e3763d68d.jpg"
+              />
+              <div
+                className="layer image-overlay"
               />
             </div>
           </Avatar>

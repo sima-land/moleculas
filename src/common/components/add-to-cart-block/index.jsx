@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import isInteger from 'lodash/isInteger';
 import isNumber from 'lodash/isNumber';
 import isFunction from 'lodash/isFunction';
-import Amount from '@dev-dep/ui-nucleons/amount/amount';
+import { Stepper } from '@dev-dep/ui-nucleons/stepper';
 import Button from '@dev-dep/ui-nucleons/button';
 import Box from '@dev-dep/ui-nucleons/box';
 import SpinnerSVG from '../../icons/white-spinner.svg';
@@ -118,8 +118,8 @@ export default class AddToCartBlock extends Component {
           </div>
         )}
         {isNumber(qty) && (
-          <Amount
-            size='small'
+          <Stepper
+            size='s'
             value={currentQuantity}
             onAdd={onAdd}
             onSubtract={onSubtract}
@@ -127,8 +127,7 @@ export default class AddToCartBlock extends Component {
             onBlur={this.onChangeQty}
             onKeyDown={event => event.keyCode === 13 && this.onChangeQty(event)}
             aria-label='Количество товара'
-            canAdd={!isFetching}
-            renderPlus={hasPlusButton ? undefined : renderStub}
+            canAdd={hasPlusButton}
             canSubtract={!isFetching}
             disabled={isFetching}
           />
@@ -144,9 +143,3 @@ export default class AddToCartBlock extends Component {
     );
   }
 }
-
-/**
- * Рендер компонента заглушки.
- * @return {ReactElement} Заглушка вместо.
- */
-export const renderStub = () => <Box padding={4} />;

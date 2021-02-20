@@ -21,7 +21,6 @@ describe('<CabinetMenu />', () => {
         items={cabinetMenuItems}
         settingsLink='/'
         onReportClick={jest.fn()}
-        superEllipseId='header-image-clip-path'
       />
     );
 
@@ -35,7 +34,6 @@ describe('<CabinetMenu />', () => {
         items={cabinetMenuItems}
         settingsLink='/'
         onReportClick={jest.fn()}
-        superEllipseId='header-image-clip-path'
       />
     );
 
@@ -51,7 +49,6 @@ describe('<CabinetMenu />', () => {
         items={cabinetMenuItems}
         settingsLink='/'
         onReportClick={fakeItemClick}
-        superEllipseId='header-image-clip-path'
       />
     );
 

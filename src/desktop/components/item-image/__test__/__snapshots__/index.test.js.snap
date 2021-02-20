@@ -70,11 +70,7 @@ exports[`<ItemImage /> should render badges 1`] = `
         >
           <Badge
             bgColor="#b52ea8"
-            containerProps={
-              Object {
-                "className": "item",
-              }
-            }
+            className="item"
             definitions={
               Object {
                 "label": Object {
@@ -95,28 +91,29 @@ exports[`<ItemImage /> should render badges 1`] = `
             title={null}
           >
             <span
-              className="container item"
-              style={
+              bgColor="#b52ea8"
+              className="root item"
+              definitions={
                 Object {
-                  "backgroundColor": "#b52ea8",
-                  "color": "#f2f2f2",
-                  "fill": null,
+                  "label": Object {
+                    "type": "text",
+                    "value": "-36%",
+                  },
                 }
               }
+              link="/percent/"
+              strokeColor={null}
+              style={
+                Object {
+                  "--badge-color": undefined,
+                }
+              }
+              textColor="#f2f2f2"
               title={null}
             >
               <span
                 className="content"
-              >
-                <a
-                  className="link"
-                  href="/percent/"
-                >
-                  <span
-                    key="0"
-                  />
-                </a>
-              </span>
+              />
             </span>
           </Badge>
         </div>

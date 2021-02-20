@@ -82,15 +82,14 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="icon icon-block color__gray87"
+                        fill="#212121"
                         height="24"
-                        viewBox="0 0 36 36"
+                        viewBox="0 0 24 24"
                         width="24"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
+                          d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -277,36 +276,24 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                         className="button icon"
                         onClick={[Function]}
                       >
-                        <Icon
+                        <CrossSVG
                           aria-hidden="true"
-                          color="gray87"
-                          icon={[Function]}
-                          size={24}
+                          fill="#212121"
                         >
-                          <crossIcon
+                          <svg
                             aria-hidden="true"
-                            className="icon icon-block color__gray87"
+                            fill="#212121"
                             height={24}
-                            viewBox="0 0 36 36"
+                            viewBox="0 0 24 24"
                             width={24}
-                            xmlns="http://www.w3.org/2000/svg"
                           >
-                            <svg
-                              aria-hidden="true"
-                              className="icon icon-block color__gray87"
-                              height={24}
-                              viewBox="0 0 36 36"
-                              width={24}
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                clipRule="evenodd"
-                                d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
-                                fillRule="evenodd"
-                              />
-                            </svg>
-                          </crossIcon>
-                        </Icon>
+                            <path
+                              clipRule="evenodd"
+                              d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
+                              fillRule="evenodd"
+                            />
+                          </svg>
+                        </CrossSVG>
                       </button>
                     </NavButton>
                   </div>
@@ -515,15 +502,14 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="icon icon-block color__gray87"
+                        fill="#212121"
                         height="24"
-                        viewBox="0 0 36 36"
+                        viewBox="0 0 24 24"
                         width="24"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
+                          d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -680,36 +666,24 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                         className="button icon"
                         onClick={[Function]}
                       >
-                        <Icon
+                        <CrossSVG
                           aria-hidden="true"
-                          color="gray87"
-                          icon={[Function]}
-                          size={24}
+                          fill="#212121"
                         >
-                          <crossIcon
+                          <svg
                             aria-hidden="true"
-                            className="icon icon-block color__gray87"
+                            fill="#212121"
                             height={24}
-                            viewBox="0 0 36 36"
+                            viewBox="0 0 24 24"
                             width={24}
-                            xmlns="http://www.w3.org/2000/svg"
                           >
-                            <svg
-                              aria-hidden="true"
-                              className="icon icon-block color__gray87"
-                              height={24}
-                              viewBox="0 0 36 36"
-                              width={24}
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                clipRule="evenodd"
-                                d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
-                                fillRule="evenodd"
-                              />
-                            </svg>
-                          </crossIcon>
-                        </Icon>
+                            <path
+                              clipRule="evenodd"
+                              d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
+                              fillRule="evenodd"
+                            />
+                          </svg>
+                        </CrossSVG>
                       </button>
                     </NavButton>
                   </div>
@@ -912,15 +886,14 @@ exports[`<SelectScreen /> should handle props 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="icon icon-block color__gray87"
+                        fill="#212121"
                         height="24"
-                        viewBox="0 0 36 36"
+                        viewBox="0 0 24 24"
                         width="24"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
+                          d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -1098,36 +1071,24 @@ exports[`<SelectScreen /> should handle props 1`] = `
                         className="button icon"
                         onClick={[Function]}
                       >
-                        <Icon
+                        <CrossSVG
                           aria-hidden="true"
-                          color="gray87"
-                          icon={[Function]}
-                          size={24}
+                          fill="#212121"
                         >
-                          <crossIcon
+                          <svg
                             aria-hidden="true"
-                            className="icon icon-block color__gray87"
+                            fill="#212121"
                             height={24}
-                            viewBox="0 0 36 36"
+                            viewBox="0 0 24 24"
                             width={24}
-                            xmlns="http://www.w3.org/2000/svg"
                           >
-                            <svg
-                              aria-hidden="true"
-                              className="icon icon-block color__gray87"
-                              height={24}
-                              viewBox="0 0 36 36"
-                              width={24}
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                clipRule="evenodd"
-                                d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
-                                fillRule="evenodd"
-                              />
-                            </svg>
-                          </crossIcon>
-                        </Icon>
+                            <path
+                              clipRule="evenodd"
+                              d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
+                              fillRule="evenodd"
+                            />
+                          </svg>
+                        </CrossSVG>
                       </button>
                     </NavButton>
                   </div>
@@ -1340,15 +1301,14 @@ exports[`<SelectScreen /> should render without props 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="icon icon-block color__gray87"
+                        fill="#212121"
                         height="24"
-                        viewBox="0 0 36 36"
+                        viewBox="0 0 24 24"
                         width="24"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
+                          d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -1442,36 +1402,24 @@ exports[`<SelectScreen /> should render without props 1`] = `
                         className="button icon"
                         onClick={[Function]}
                       >
-                        <Icon
+                        <CrossSVG
                           aria-hidden="true"
-                          color="gray87"
-                          icon={[Function]}
-                          size={24}
+                          fill="#212121"
                         >
-                          <crossIcon
+                          <svg
                             aria-hidden="true"
-                            className="icon icon-block color__gray87"
+                            fill="#212121"
                             height={24}
-                            viewBox="0 0 36 36"
+                            viewBox="0 0 24 24"
                             width={24}
-                            xmlns="http://www.w3.org/2000/svg"
                           >
-                            <svg
-                              aria-hidden="true"
-                              className="icon icon-block color__gray87"
-                              height={24}
-                              viewBox="0 0 36 36"
-                              width={24}
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                clipRule="evenodd"
-                                d="M6.44 29.56a1.5 1.5 0 0 0 2.12 0L18 20.122l9.44 9.44a1.5 1.5 0 1 0 2.12-2.122L20.122 18l9.44-9.44a1.5 1.5 0 1 0-2.122-2.12L18 15.878l-9.44-9.44a1.5 1.5 0 0 0-2.12 2.122L15.878 18l-9.44 9.44a1.5 1.5 0 0 0 0 2.12z"
-                                fillRule="evenodd"
-                              />
-                            </svg>
-                          </crossIcon>
-                        </Icon>
+                            <path
+                              clipRule="evenodd"
+                              d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
+                              fillRule="evenodd"
+                            />
+                          </svg>
+                        </CrossSVG>
                       </button>
                     </NavButton>
                   </div>

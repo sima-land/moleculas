@@ -1,9 +1,8 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import AddToCartBlock, { renderStub } from '../index';
+import AddToCartBlock from '../index';
 import classes from '../add-to-cart-block.scss';
 import classnames from 'classnames/bind';
-import Amount from '@dev-dep/ui-nucleons/amount/amount';
 
 const cx = classnames.bind(classes);
 
@@ -86,20 +85,6 @@ describe('<AddToCartBlock />', () => {
     const minText = component.find(`.${cx('min-quantity')}`);
 
     expect(minText.text()).toEqual('от 1 шт');
-  });
-  it('Amount renderPlus prop should be undefined if hasPlusButton true, else func with stub', () => {
-    const wrap = shallow(
-      <AddToCartBlock
-        quantity={1}
-        qty={1}
-        hasPlusButton
-      />
-    );
-    expect(wrap.find(Amount)).toHaveLength(1);
-    expect(wrap.find(Amount).prop('renderPlus')).toBeUndefined();
-    wrap.setProps({ hasPlusButton: false });
-    expect(wrap.find(Amount)).toHaveLength(1);
-    expect(wrap.find(Amount).prop('renderPlus')).toEqual(renderStub);
   });
 });
 
@@ -255,12 +240,5 @@ describe('method "onChangeQty"', () => {
     expect(instance.setState).toHaveBeenCalledTimes(2);
     const secondCallArgs = instance.setState.mock.calls[1][0];
     expect(secondCallArgs).toEqual({ currentQuantity: 0 });
-  });
-});
-
-describe('renderStub', () => {
-  it('should works properly', () => {
-    const wrap = shallow(renderStub());
-    expect(wrap.find('div')).toHaveLength(1);
   });
 });

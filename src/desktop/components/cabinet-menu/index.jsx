@@ -18,7 +18,6 @@ const cx = classnames.bind(classes);
  * Компонент меню.
  * @param {Object} props Свойства компонента.
  * @param {string} props.avatar Фото юзера.
- * @param {string} props.superEllipseId Идентификатор маски для обрезки аватара.
  * @param {string} props.userName Имя юзера.
  * @param {Array} props.items Элементы меню.
  * @param {string} props.settingsLink Ссылка, сработает при клике на аватар и на информацию о пользователе.
@@ -27,7 +26,6 @@ const cx = classnames.bind(classes);
  */
 const CabinetMenu = ({
   avatar,
-  superEllipseId,
   userName,
   items,
   settingsLink,
@@ -39,10 +37,6 @@ const CabinetMenu = ({
         size={56}
         imageUrl={avatar}
         title={userName}
-        style={{
-          clipPath: `url(#${superEllipseId})`,
-          WebkitClipPath: `url(#${superEllipseId})`,
-        }}
       />
     </Link>
     <Link className={cx('user-info')} href={settingsLink}>
@@ -87,11 +81,6 @@ CabinetMenu.propTypes = {
    * Фото юзера.
    */
   avatar: Types.string,
-
-  /**
-   * Идентификатор маски для обрезки аватара.
-   */
-  superEllipseId: Types.string,
 
   /**
    * Имя юзера.

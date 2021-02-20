@@ -59,7 +59,6 @@ export const CommunicateLink = ({
  * @param {string} props.secondPhoneHref Ссылка на сотовый номер телефона.
  * @param {string} props.secondPhoneText Сотовый номер телефона.
  * @param {Object} props.arbitraryLinkProps Свойства произвольной ссылки.
- * @param {string} props.superEllipseStyle Стили superEllipse.
  * @return {ReactElement} Компонент экрана персональных данных.
  */
 export const PersonScreen = ({
@@ -73,7 +72,6 @@ export const PersonScreen = ({
   secondPhoneHref,
   secondPhoneText,
   arbitraryLinkProps,
-  superEllipseStyle,
   ...screenProps
 }) => (
   <Screen {...screenProps} withDivideHeader={false}>
@@ -82,15 +80,13 @@ export const PersonScreen = ({
         size={64}
         title={name}
         imageUrl={photoUrl}
-        style={superEllipseStyle}
       />
     </div>
     <div className={cx('avatar', 'big')}>
       <UserAvatar
-        size={112}
+        size={104}
         title={name}
         imageUrl={photoUrl}
-        style={superEllipseStyle}
       />
     </div>
     <span className={cx('name')}>
@@ -199,9 +195,4 @@ PersonScreen.propTypes = {
    * Свойства произвольной ссылки.
    */
   arbitraryLinkProps: Types.object,
-
-  /**
-   * Стили superEllipse.
-   */
-  superEllipseStyle: Types.object,
 };

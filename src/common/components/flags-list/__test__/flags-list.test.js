@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import FlagsList from '../index';
-import Badge from '@dev-dep/ui-nucleons/badge';
+import { Badge } from '../../badge';
 
 describe('<FlagsList />', () => {
   describe('without props', () => {
@@ -20,8 +20,7 @@ describe('<FlagsList />', () => {
   describe('with props', () => {
     const flags = [{
       link: '/sale/?is_label=1',
-      bgColor: '#64a0eb',
-      textColor: '#FFFFFF',
+      color: '#64a0eb',
       fields: [
         {
           type: 'text',

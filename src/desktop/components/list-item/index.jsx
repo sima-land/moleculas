@@ -373,7 +373,7 @@ export const ListItem = ({
             </div>
             {Boolean(badges.length) && (
               <Box display='flex'
-                marginTop={asTile ? -4 : 6}
+                marginTop={asTile ? 2 : 6}
                 marginBottom={asTile ? 2 : 0}
                 justifyContent='between'
               >
