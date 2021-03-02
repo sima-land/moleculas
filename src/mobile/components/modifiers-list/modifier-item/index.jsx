@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './modifier-item.scss';
 import classnames from 'classnames/bind';
-import { MODIFIERS_TYPES } from '@dev-dep/ui-nucleons/constants';
+import { MODIFIERS_TYPES } from '../../../../common/constants';
 import Price from '@dev-dep/ui-nucleons/price';
 import Text from '@dev-dep/ui-nucleons/text';
 import CheckSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/check';
