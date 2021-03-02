@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import isNumber from 'lodash/isNumber';
 import classes from './modifier-button.scss';
 import classnames from 'classnames/bind';
-import { MODIFIERS_TYPES as TYPES } from '@dev-dep/ui-nucleons/constants';
+import { MODIFIERS_TYPES as TYPES } from '../../../../common/constants';
 
 const cx = classnames.bind(classes);
 
