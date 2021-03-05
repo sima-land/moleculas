@@ -1,12 +1,7 @@
 @import 'node_modules/@dev-dep/ui-nucleons/colors';
 
-.wrapper {
+.wrapper {  
   display: flex;
-  align-items: center;
-  margin-top: 16px;
-  &.with-find-button {
-    margin-top: 4px;
-  }
 }
 
 .search-cancel {
@@ -16,53 +11,132 @@
 .input-wrapper {
   display: inline-flex;
   position: relative;
-  height: 48px;
+  flex-grow: 1;
+  margin: 8px 0;
   width: 100%;
   background-color: $gray4;
   border-radius: 8px;
-  padding: 0 12px;
-  &.smaller {
-    height: 40px;
+  padding: 0 0 0 12px;
+  &:focus-within {
+    .clear-icon {
+      display: flex;
+    }
+    .input-container {
+      padding-right: 0;
+    }
+    .description-container {
+      display: none;
+    }   
   }
-
 }
 
-.with-adornment {
+.search-icon {
   display: flex;
-  align-items: center;
   justify-content: center;
-  &.start {
-    margin-right: 12px;
-  }
-  &.end {
-    margin-left: 12px;
-  }
+  align-items: center;
+  margin-right: 12px;
 }
 
-input:not([type]).search-field,
-.search-field {
-  background-color: $gray4;
-  padding: 16px 0;
-  margin: 0;
+.input-container {
   flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-right: 12px;
+}
+
+.search-field {
+  background-color: transparent;
+  margin: 0;
   border: 0;
   outline: 0;
   line-height: 24px;
   font-size: 16px;
   box-sizing: border-box;
   width: 100%;
-  min-width: 0;
+  height: 40px;
   color: $black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
   &::-ms-clear {
     display: none;
   }
+  &::placeholder {
+    color: $gray38;
+  }
+}
+
+.description-container {
+  line-height: 24px;
+  font-size: 16px;
+  color: $gray38;
+  width: 100%;
+  max-width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.clear-icon {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  display: none;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.after-field,
+.before-field {
+  position: relative;
+  &.narrow-screen { display: none; }
+  @media (max-width: 360px) {
+    &.wide-screen { display: none; }
+    &.narrow-screen { display: block; }
+  }  
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  align-items: stretch;
 }
 
 .button {
-  padding: 0 16px;
+  padding: 0 12px;
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
   color: $brand-blue;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.before-field .button:first-child {
+  padding-left: 0;
+  padding-right: 16px;
+}
+
+.after-field .button:last-child {
+  padding-left: 16px;
+  padding-right: 0;
+}
+
+.dropdown-container {
+  position: absolute;
+  top: 100%;
+  right: 0;
 }

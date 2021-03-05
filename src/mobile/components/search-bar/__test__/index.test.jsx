@@ -1,121 +1,159 @@
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
-import { SearchBar, cx } from '../index';
-import Link from '@dev-dep/ui-nucleons/link/deprecated';
 import { act } from 'react-dom/test-utils';
+import { SearchBar } from '../index';
+import ArrowLeftSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/arrow-left';
+import { DropdownItem } from '@dev-dep/ui-nucleons/dropdown-item';
 
 describe('SearchBar', () => {
-  it('should render correctly without props', () => {
-    const component = mount(<SearchBar />);
-
-    expect(component.find('input').prop('placeholder')).toEqual('Найдите нужное');
-    expect(component.find('input').prop('value')).toEqual('');
-    expect(component.find(Link)).toHaveLength(0);
-    expect(component).toMatchSnapshot();
-  });
-
-  it('should render correctly with props', () => {
+  it('should renders properly with minimal props', () => {
+    const onChange = jest.fn();
     const component = mount(
       <SearchBar
-        searchQuery='Тестовый запрос'
-        placeholder='Найти'
-        withClearButton
-      />
-    );
-
-    expect(component.find('input').prop('placeholder')).toEqual('Найдите нужное');
-    expect(component.find('input').prop('value')).toEqual('Тестовый запрос');
-    expect(component.find(Link).first().prop('aria-label')).toEqual('Очистить');
-    expect(component).toMatchSnapshot();
-  });
-
-  it('should render correctly with hasFindButton', () => {
-    const onFocus = jest.fn();
-    const onButtonClick = jest.fn();
-    const component = mount(
-      <SearchBar
-        searchQuery='Тестовый запрос'
-        placeholder='Найти'
-        withClearButton
-        hasFindButton
-        onFocus={onFocus}
-        onButtonClick={onButtonClick}
-        buttonText='Отмена'
+        onChange={onChange}
       />
     );
     expect(component).toMatchSnapshot();
-    expect(onFocus).not.toHaveBeenCalled();
-
-    component.find('input').simulate('focus');
-    expect(onFocus).toHaveBeenCalledTimes(1);
-
-    expect(onButtonClick).not.toHaveBeenCalled();
-
-    component.find('.button').prop('onClick')();
-    expect(onButtonClick).toHaveBeenCalledTimes(1);
+    expect(component.find('.search-icon')).toHaveLength(1);
   });
 
-  it('should handle events correctly', () => {
-    const handlers = {
-      onFocus: jest.fn(),
-      onBlur: jest.fn(),
-      onClear: jest.fn(),
-      onSearchChange: jest.fn(),
-      onSearchClick: jest.fn(),
-      onSearchKeyDown: jest.fn(),
-      onButtonClick: jest.fn(),
-    };
+  it('should renders properly with all props', () => {
+    const onChange = jest.fn();
+    const onBackClick = jest.fn();
+    const onSearchClick = jest.fn();
+    const onClearClick = jest.fn();
+    const onCancelClick = jest.fn();
     const component = mount(
       <SearchBar
-        searchQuery='Тестовый запрос'
+        value='Очень длинный запрос в поисковой строке'
+        onChange={onChange}
+        startButtons={[{ text: 'Назад', icon: ArrowLeftSVG, onClick: onBackClick }]}
+        endButtons={[
+          { text: 'Поиск', onClick: onSearchClick },
+          { text: 'Отмена', onClick: onCancelClick },
+        ]}
+        withSearchIcon={false}
+        inputMode='tel'
+        onClear={onClearClick}
+        description='150 324 предложений'
         placeholder='Найти'
-        withClearButton
-        buttonText='Отмена'
-        {...handlers}
       />
     );
+    expect(component).toMatchSnapshot();
 
-    for (const handler of Object.values(handlers)) {
-      expect(handler).not.toBeCalled();
-    }
+    expect(component.find('.search-icon')).toHaveLength(0);
+    expect(component.find('.search-field').prop('inputMode')).toBe('tel');
+    expect(component.find('.search-field').prop('placeholder')).toBe('Найти');
 
-    const searchField = component.find('input');
-    searchField.simulate('click');
-    expect(handlers.onSearchClick).toBeCalledTimes(1);
-    searchField.simulate('change');
-    expect(handlers.onSearchChange).toBeCalledTimes(1);
-    searchField.simulate('focus');
-    expect(handlers.onFocus).toBeCalledTimes(1);
-    searchField.simulate('blur');
-    expect(handlers.onBlur).toBeCalledTimes(1);
-    searchField.simulate('keydown');
-    expect(handlers.onSearchKeyDown).toBeCalledTimes(1);
+    act(() => {
+      component.find('.search-field').prop('onChange')({ target: { value: '123' } });
+    });
+    expect(onChange).toHaveBeenCalledTimes(1);
 
-    component.find(Link).first().simulate('click');
-    expect(handlers.onClear).toBeCalledTimes(1);
+    act(() => {
+      component.find('a.clear-icon').prop('onClick')();
+      component.find('.before-field .button').prop('onClick')();
+      component.find('.after-field .button').at(0).prop('onClick')();
+      component.find('.after-field .button').at(1).prop('onClick')();
+    });
+    expect(onClearClick).toHaveBeenCalledTimes(1);
+    expect(onBackClick).toHaveBeenCalledTimes(1);
+    expect(onSearchClick).toHaveBeenCalledTimes(1);
+    expect(onCancelClick).toHaveBeenCalledTimes(1);
   });
 
-  it('should hide cancel button after outside click', () => {
+  it('should open and close dropdown on buttons handlers', () => {
+    const onChange = jest.fn();
+    const onCancelClick = jest.fn();
+    const onSearchClick = jest.fn();
+    const testEvent = jest.fn();
+    const component = mount(
+      <SearchBar
+        value='Очень длинный запрос в поисковой строке'
+        onChange={onChange}
+        endButtons={[
+          { text: 'Oтмена', onClick: onCancelClick },
+          { text: 'Поиск', onClick: onSearchClick },
+        ]}
+      />
+    );
+    expect(component.find('.dropdown-container')).toHaveLength(0);
+
+    act(() => {
+      component.find('.narrow-screen .button').prop('onClick')();
+    });
+    component.update();
+
+    expect(component.find('.dropdown-container')).toHaveLength(1);
+
+    act(() => {
+      component.find(DropdownItem).at(0).prop('onClick')(testEvent);
+    });
+    component.update();
+
+    expect(onCancelClick).toHaveBeenCalledWith(testEvent);
+    expect(component.find('.dropdown-container')).toHaveLength(0);
+  });
+
+  it('should close dropdown when resize window', () => {
+    const onChange = jest.fn();
+    const onCancelClick = jest.fn();
+    const onSearchClick = jest.fn();
+    const component = mount(
+      <SearchBar
+        value='Очень длинный запрос в поисковой строке'
+        onChange={onChange}
+        endButtons={[
+          { text: 'Oтмена', onClick: onCancelClick },
+          { text: 'Поиск', onClick: onSearchClick },
+        ]}
+      />
+    );
+    expect(component.find('.dropdown-container')).toHaveLength(0);
+
+    act(() => {
+      component.find('.narrow-screen .button').prop('onClick')();
+    });
+    component.update();
+    expect(component.find('.dropdown-container')).toHaveLength(1);
+
+    act(() => {
+      window.dispatchEvent(new Event('resize'));
+    });
+    component.update();
+    expect(component.find('.dropdown-container')).toHaveLength(0);
+  });
+
+  it('should close dropdown when outside click', () => {
+    const onChange = jest.fn();
+    const onCancelClick = jest.fn();
+    const onSearchClick = jest.fn();
+
     const container = document.createElement('div');
     document.body.appendChild(container);
 
-    const WrapperComponent = () => (
-      <div>
-        <div className='outside' />
-        <SearchBar onCancel={jest.fn()} />
-      </div>
-    );
     act(() => {
-      render(<WrapperComponent />, container);
+      ReactDOM.render(
+        <SearchBar
+          value='Очень длинный запрос в поисковой строке'
+          onChange={onChange}
+          endButtons={[
+            { text: 'Oтмена', onClick: onCancelClick },
+            { text: 'Поиск', onClick: onSearchClick },
+          ]}
+        />,
+        container
+      );
     });
-
-    expect(container.querySelector(`.${cx('search-cancel')}`)).toBeDefined();
+    expect(container.querySelectorAll('.dropdown-container')).toHaveLength(0);
     act(() => {
-      document.documentElement.dispatchEvent(new MouseEvent('click'));
+      container.querySelector('.narrow-screen .button').click();
     });
-    expect(container.querySelector(`.${cx('search-cancel')}`)).toBeNull();
-
-    document.body.removeChild(container);
+    expect(container.querySelectorAll('.dropdown-container')).toHaveLength(1);
+    act(() => {
+      container.querySelector('.search-field').click();
+    });
+    expect(container.querySelectorAll('.dropdown-container')).toHaveLength(0);
   });
 });

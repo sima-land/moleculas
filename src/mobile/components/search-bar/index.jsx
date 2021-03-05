@@ -1,140 +1,215 @@
-import React, { useRef } from 'react';
-import Types from 'prop-types';
+import React, { useState, useRef, useEffect, forwardRef } from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
 import classes from './search-bar.scss';
-import Link from '@dev-dep/ui-nucleons/link/deprecated';
-import safeCall from '../../../common/helpers/safe-call';
-import CrossSVG from '@dev-dep/ui-quarks/icons/16x16/Filled/cross';
+import { isFunction, throttle } from 'lodash';
+import Link from '@dev-dep/ui-nucleons/link';
 import { COLORS } from '@dev-dep/ui-nucleons/constants';
+import { Dropdown } from '@dev-dep/ui-nucleons/dropdown';
+import { DropdownItem } from '@dev-dep/ui-nucleons/dropdown-item';
+import { useOutsideClick } from '@dev-dep/ui-nucleons/hooks/';
+import on from '@dev-dep/ui-nucleons/helpers/on';
+import CrossSVG from '@dev-dep/ui-quarks/icons/24x24/Filled/cross';
+import SearchSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/magnifier';
+import MoreVertSVG from '@dev-dep/ui-quarks/icons/24x24/Filled/more-vert';
 
 export const cx = classnames.bind(classes);
 
 /**
  * Компонент поисковой строки.
  * @param {Object} props Свойства компонента.
- * @param {string} [props.searchQuery=''] Поисковый запрос.
- * @param {boolean} [props.withClearButton] Нужна ли кнопка очистки поисковой строки.
- * @param {Function} [props.onSearchChange] Вызовется при изменении поискового запроса.
- * @param {Function} [props.onSearchClick] Вызовется при клике на поле поиска.
- * @param {Function} [props.onSearchKeyDown] Вызовется при нажатии на кнопку.
- * @param {Function} [props.onFocus] Вызовется при фокусе на поле поиска.
- * @param {Function} [props.onBlur] Вызовется при потере фокуса полем поиска.
+ * @param {string} props.value Поисковый Запрос.
+ * @param {Function} props.onChange Вызовется при изменении поискового запроса.
+ * @param {'none'|'text'|'decimal'|'numeric'|'tel'|'search'|'email'|'url'} [props.inputMode] Тип клавиатуры.
+ * @param {string} [props.placeholder] Подсказка.
  * @param {Function} [props.onClear] Вызовется при нажатии на кнопку очистки.
- * @param {Function} props.buttonText Текст кнопки.
- * @param {Function} props.onButtonClick Обработчик нажатия на кнопку.
+ * @param {string} [props.buttonText] Текст кнопки.
+ * @param {Function} [props.onButtonClick] Обработчик нажатия на кнопку.
+ * @param {Array} [props.endButtons] Кнопки(а) после поля.
+ * @param {Array} [props.startButtons] Кнопки(а) до поля.
+ * @param {boolean} [props.withSearchIcon] Признак наличия иконки поиска слева.
+ * @param {boolean} [props.autoFocus] Признак автофокуса.
+ * @param {string} [props.description] Описание в поле ввода.
  * @return {ReactElement} Компонент.
  */
 export const SearchBar = ({
-  searchQuery = '',
-  withClearButton,
-  onSearchChange,
-  onSearchClick,
-  onSearchKeyDown,
-  onFocus,
-  onBlur,
+  inputMode,
+  value,
+  onChange,
+  placeholder = 'Поиск',
   onClear,
-  buttonText,
-  onButtonClick,
+  endButtons = [],
+  startButtons = [],
+  withSearchIcon = true,
+  autoFocus = true,
+  description,
 }) => {
-  const rootRef = useRef(null);
+  const [shownDropdown, toggleDropdown] = useState(false);
+  const inputRef = useRef();
+  const dropDownRef = useRef();
+  const dropDownButtonRef = useRef();
+
+  const needHideEndButtons = endButtons.length > 1;
+
+  useOutsideClick(dropDownRef, event => !dropDownButtonRef.current.contains(event.target) && toggleDropdown(false));
+  useEffect(
+    () => needHideEndButtons
+      ? on(window, 'resize', throttle(() => toggleDropdown(false), 500))
+      : undefined,
+    [needHideEndButtons]
+  );
+
   return (
-    <div
-      ref={rootRef}
-      className={cx('wrapper', 'with-find-button')}
-    >
-      <label className={cx('input-wrapper', 'smaller')}>
-        <input
-          value={searchQuery}
-          onKeyDown={safeCall(onSearchKeyDown)}
-          onChange={safeCall(onSearchChange)}
-          onClick={safeCall(onSearchClick)}
-          onFocus={safeCall(onFocus)}
-          onBlur={safeCall(onBlur)}
-          className={cx('search-field')}
-          placeholder='Найдите нужное'
-          autoFocus
-        />
-        {Boolean(withClearButton) && (
-          <span className={cx('with-adornment', 'end')}>
-            <Link
-              onClick={onClear}
-              role='button'
-              aria-label='Очистить'
-              children={(
-                <CrossSVG
-                  fill={COLORS.get('gray38')}
-                  aria-hidden
-                />
-              )}
+    <div className={cx('wrapper')}>
+      {Boolean(startButtons.length) && (
+        <div className={cx('before-field')}>
+          <div className={cx('buttons-container')}>
+            {startButtons.map((props, index) => <Button {...props} key={index} />)}
+          </div>
+        </div>
+      )}
+      <label className={cx('input-wrapper')}>
+        {withSearchIcon && (
+          <span className={cx('search-icon')}>
+            <SearchSVG
+              fill={COLORS.get('gray38')}
+              aria-hidden
             />
           </span>
         )}
-      </label>
-      {
-        buttonText && onButtonClick
-          && (
-            <div
-              onClick={onButtonClick}
-              className={cx('button')}
-              role='button'
-            >
-              {buttonText}
+        <div className={cx('input-container')}>
+          <input
+            ref={inputRef}
+            value={value}
+            onChange={onChange}
+            className={cx('search-field')}
+            placeholder={placeholder}
+            autoFocus={autoFocus}
+            data-testid='search-bar-input'
+            type='text'
+            inputMode={inputMode}
+            tabIndex={0}
+          />
+          {description && (
+            <div className={cx('description-container')}>
+              <span className={cx('description')}>{description}</span>
             </div>
-          )
-      }
+          )}
+        </div>
+        {isFunction(onClear) && value && (
+          <Link
+            onClick={event => {
+              onClear(event);
+              inputRef.current.focus();
+            }}
+            pseudo
+            aria-label='Очистить'
+            data-testid='search-bar:clear-icon'
+            className={cx('clear-icon')}
+            children={(
+              <CrossSVG
+                fill={COLORS.get('gray38')}
+                aria-hidden
+              />
+            )}
+          />
+        )}
+      </label>
+      {Boolean(endButtons.length) && (
+        <>
+          <div className={cx('after-field', needHideEndButtons && 'wide-screen')}>
+            <div className={cx('buttons-container')}>
+              {endButtons.map((props, index) => <Button {...props} key={index} />)}
+            </div>
+          </div>
+          {needHideEndButtons && (
+            <div className={cx('after-field', 'narrow-screen')}>
+              <div className={cx('buttons-container')}>
+                <Button
+                  text='Больше'
+                  ref={dropDownButtonRef}
+                  icon={MoreVertSVG}
+                  onClick={() => toggleDropdown(!shownDropdown)}
+                />
+              </div>
+              {shownDropdown && (
+                <div ref={dropDownRef} className={cx('dropdown-container')}>
+                  <Dropdown>
+                    {endButtons.map(({ text, onClick }, index) => (
+                      <DropdownItem
+                        size='s'
+                        key={index}
+                        onClick={event => {
+                          onClick(event);
+                          toggleDropdown(false);
+                        }}
+                        children={text}
+                      />
+                    ))}
+                  </Dropdown>
+                </div>
+              )}
+            </div>
+          )}
+        </>
+      )}
     </div>
   );
 };
 
+/**
+ * Компонент кнопки.
+ * @param {Object} props Свойства.
+ * @param {string} props.text Текст кнопки.
+ * @param {Function} props.onClick Обработчик клика.
+ * @param {ReactElement} [props.icon] Иконка.
+ * @param {string} [props.iconColor] Цвет иконки.
+ * @return {ReactElement} Компонент.
+ */
+const Button = forwardRef(function Button ({ text, icon: Icon, iconColor = 'gray87', onClick }, ref) {
+  return (
+    <div
+      ref={ref}
+      onClick={onClick}
+      className={cx('button')}
+      role='button'
+      data-testid='search-bar-button'
+      tabIndex={0}
+      aria-label={Icon && text}
+    >
+      {Icon
+        ? (
+          <Icon
+            fill={COLORS.get(iconColor)}
+            aria-hidden='true'
+          />
+        )
+        : text
+      }
+    </div>
+  );
+});
+
+const ButtonTypes = {
+  text: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  icon: PropTypes.elementType,
+  iconColor: PropTypes.string,
+};
+
+Button.propTypes = ButtonTypes;
+
 SearchBar.propTypes = {
-
-  /**
-   * Поисковый запрос.
-   */
-  searchQuery: Types.string,
-
-  /**
-   * Нужна ли кнопка очистки.
-   */
-  withClearButton: Types.bool,
-
-  /**
-   * Функция-обработчик изменения инпута.
-   */
-  onSearchChange: Types.func,
-
-  /**
-   * Функция-обработчик нажатия на инпут.
-   */
-  onSearchClick: Types.func,
-
-  /**
-   * Функция-обработчик нажатия клавиши на клавиатуре.
-   */
-  onSearchKeyDown: Types.func,
-
-  /**
-   * Функция-обработчик при получении инпутом фокуса.
-   */
-  onFocus: Types.func,
-
-  /**
-   * Функция-обработчик при потере инпутом фокуса.
-   */
-  onBlur: Types.func,
-
-  /**
-   * Функция-обработчик сброса запроса в инпуте.
-   */
-  onClear: Types.func,
-
-  /**
-   * Функция-обработчик нажатия на кнопку.
-   */
-  onButtonClick: Types.func,
-
-  /**
-   * Текст кнопки.
-   */
-  buttonText: Types.string,
+  inputMode: PropTypes.oneOf(['none', 'text', 'decimal', 'numeric', 'tel', 'search', 'email', 'url']),
+  value: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+  placeholder: PropTypes.string,
+  onClear: PropTypes.func,
+  buttonText: PropTypes.string,
+  onButtonClick: PropTypes.func,
+  endButtons: PropTypes.arrayOf(PropTypes.shape(ButtonTypes)),
+  startButtons: PropTypes.arrayOf(PropTypes.shape(ButtonTypes)),
+  withSearchIcon: PropTypes.bool,
+  autoFocus: PropTypes.bool,
+  description: PropTypes.string,
 };
