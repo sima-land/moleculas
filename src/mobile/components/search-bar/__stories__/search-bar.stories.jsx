@@ -1,28 +1,45 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { SearchBar } from '..';
-import noop from 'lodash/noop';
+import ArrowLeftSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/arrow-left';
+import { action } from '@storybook/addon-actions';
 
-const Template = args => {
-  const [val, setVal] = useState('Плюшевый миш');
-  return (
-    <SearchBar
-      {...args}
-      searchQuery={val}
-      onSearchChange={e => setVal(e.target.value)}
-      onClear={() => setVal('')}
-    />
-  );
+export default {
+  title: 'mobile/SearchBar',
+  component: SearchBar,
+  parameters: {
+    layout: 'padded',
+    docs: {
+      description: {
+        component: 'Компонент Поисковой строки',
+      },
+    },
+    viewport: {
+      defaultViewport: 'iphonex',
+    },
+  },
 };
 
-export const Primary = Template.bind({});
+const Template = args => <SearchBar {...args} />;
 
+export const Primary = Template.bind({});
 Primary.args = {
-  withClearButton: false,
-  onSearchClick: noop,
-  onSearchKeyDown: noop,
-  onFocus: noop,
-  onBlur: noop,
-  onClear: noop,
-  buttonText: 'Отмена',
-  onButtonClick: noop,
+  value: '',
+  onChange: action('change'),
+  onClear: action('clear'),
+  endButtons: [{ text: 'Поиск', onClick: action('search') }],
+};
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  value: '',
+  withSearchIcon: false,
+  onChange: action('change'),
+  onClear: action('clear'),
+  startButtons: [{ text: 'Назад', icon: ArrowLeftSVG, onClick: action('back') }],
+  endButtons: [
+    { text: 'Oтмена', onClick: action('cancel') },
+    { text: 'Поиск', onClick: action('start') },
+  ],
+  description: '150 324 предложений',
+  placeholder: 'Найти',
 };
