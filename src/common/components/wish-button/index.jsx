@@ -13,6 +13,7 @@ const cx = classnames.bind(style);
  * @param {string} props.className Дополнительный класс для компонента.
  * @param {Function} props.onClick Обработчик клика по избранному.
  * @param {boolean} props.isFetchingWishItems Признак загрузки добавления товара в список избранного.
+ * @param {number} props.size Размер иконки.
  * @return {ReactElement} Компонент добавления в избранное.
  */
 export const WishButton = ({

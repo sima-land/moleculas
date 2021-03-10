@@ -1,0 +1,64 @@
+@use 'node_modules/@dev-dep/ui-nucleons/colors';
+@import 'node_modules/@dev-dep/ui-nucleons/variables';
+
+.wrapper {
+  display: flex;
+  padding: 16px 0;
+  font-size: 14px;
+  &:hover {
+    .wish-button {
+      opacity: 1;
+    }
+  }
+  &:not(:last-of-type) {
+    border-bottom: 1px solid colors.$gray12;
+  }
+}
+
+.image-wrapper {
+  flex-shrink: 0;
+  margin-right: 12px;
+  margin-left: 16px;
+  position: relative;
+  width: 120px;
+
+  @media (min-width: $mediumMobileBreakpoint) {
+    margin-left: 0;
+  }
+  .image {
+    height: auto;
+    max-width: 100%;
+  }
+  .wish-button {
+    opacity: 0;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    &.is-wished {
+      opacity: 1;
+    }
+  }
+}
+
+.info-column {
+  flex-grow: 1;
+}
+
+.link {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+}
+
+.action-button {
+  padding: 20px;
+  margin: -28px -12px;
+  align-self: baseline;
+  @media (min-width: $mediumMobileBreakpoint) {
+    margin: -28px -20px;
+  }
+}
+
