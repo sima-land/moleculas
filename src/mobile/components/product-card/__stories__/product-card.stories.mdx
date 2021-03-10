@@ -1,0 +1,36 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+import { Primary, Secondary, Thirdy } from './product-card.stories'
+import ProductCard from '../'
+
+<Meta
+  title='mobile/ProductCard'
+  component={ProductCard}
+/>
+
+# Card
+### Компонент карточки.
+
+### Примеры использования
+```jsx
+import Card from '@dev-dep/moleculas/mobile/components/product-card';
+
+<ProductCard {...ProductCardProps} />
+```
+
+### Базовый вид
+export const Template = args => <ProductCard {...args} />;
+
+<Canvas>
+  <Story story={Primary} />
+</Canvas>
+
+<Canvas>
+  <Story story={Secondary} />
+</Canvas>
+
+<Canvas>
+  <Story story={Thirdy} />
+</Canvas>
+
+### Свойства компонента
+<ArgsTable of={ProductCard} />

@@ -1,0 +1,275 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductCard renders properly 1`] = `
+<ProductCard
+  commonPrice={50}
+  count={23}
+  currencyGrapheme="₽"
+  deliveryCost={10}
+  flags={Array []}
+  imageUrl="https://cdn3.static1-sima-land.com/items/29455/1/140.jpg?v=1598850721"
+  initialCount={42}
+  isFetchingWishItems={[Function]}
+  isWished={true}
+  itemPrice={5}
+  itemUrl="test"
+  movedOrderId={123456}
+  name="Зеленый слоник 25мм МИКС"
+  notInStock={true}
+  onActionsClick={[Function]}
+  onWishButtonClick={[Function]}
+  sid={123}
+>
+  <div
+    className="wrapper"
+  >
+    <div
+      className="image-wrapper"
+    >
+      <ForwardRef(Link)
+        href="test"
+      >
+        <a
+          className="link color__brand-blue"
+          href="test"
+        >
+          <img
+            className="image"
+            src="https://cdn3.static1-sima-land.com/items/29455/1/140.jpg?v=1598850721"
+          />
+        </a>
+      </ForwardRef(Link)>
+      <WishButton
+        className="wish-button is-wished"
+        isFetchingWishItems={[Function]}
+        isWished={true}
+        onClick={[Function]}
+        size={20}
+      >
+        <div
+          className="wish-button wish-button is-wished is-wished blocked"
+          onClick={null}
+          title="Убрать из избранного"
+        >
+          <HeartFilledSVG
+            className="svg stroke"
+            height={20}
+            viewBox="0 0 24 24"
+            width={20}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <svg
+              className="svg stroke"
+              height={20}
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366z"
+              />
+            </svg>
+          </HeartFilledSVG>
+        </div>
+      </WishButton>
+    </div>
+    <div
+      className="info-column"
+    >
+      <ForwardRef(Link)
+        className="link"
+        color="gray87"
+        href="test"
+      >
+        <a
+          className="link link color__gray87"
+          href="test"
+        >
+          <Memo(Text)
+            weight={500}
+          >
+            <span
+              className="weight-500"
+            >
+              Зеленый слоник 25мм МИКС
+            </span>
+          </Memo(Text)>
+        </a>
+      </ForwardRef(Link)>
+      <Box
+        marginTop={2}
+      >
+        <div
+          className="M-t__2"
+        >
+          <Memo(Text)
+            color="gray38"
+          >
+            <span
+              className="color__gray38"
+            >
+              Арт.: 
+              123
+            </span>
+          </Memo(Text)>
+        </div>
+      </Box>
+      <Box
+        marginTop={2}
+      >
+        <div
+          className="M-t__2"
+        >
+          <Memo(Text)
+            element="div"
+            size={12}
+          >
+            <div
+              className="size-12 line-height-16"
+            >
+              <div>
+                Было в заказе: 
+                42
+                 шт.
+              </div>
+              <div>
+                Вы получите: 
+                23
+                 шт.
+              </div>
+            </div>
+          </Memo(Text)>
+        </div>
+      </Box>
+      <Box
+        marginTop={2}
+      >
+        <div
+          className="M-t__2"
+        >
+          <Memo(Text)
+            element="div"
+            size={12}
+            weight={500}
+          >
+            <div
+              className="size-12 line-height-16 weight-500"
+            >
+              <Price
+                currencyGrapheme="₽"
+                value={5}
+              >
+                <span
+                  className="price"
+                >
+                  5
+                  <span>
+                     ₽
+                  </span>
+                </span>
+              </Price>
+               × 
+              23
+               шт.
+            </div>
+          </Memo(Text)>
+        </div>
+      </Box>
+      <Box
+        marginTop={4}
+      >
+        <div
+          className="M-t__4"
+        >
+          <Memo(Text)
+            element="div"
+            weight={500}
+          >
+            <div
+              className="weight-500"
+            >
+              <Price
+                currencyGrapheme="₽"
+                value={50}
+              >
+                <span
+                  className="price"
+                >
+                  50
+                  <span>
+                     ₽
+                  </span>
+                </span>
+              </Price>
+            </div>
+          </Memo(Text)>
+        </div>
+      </Box>
+      <Box
+        marginTop={2}
+      >
+        <div
+          className="M-t__2"
+        >
+          <Memo(Text)
+            color="gray38"
+            element="div"
+          >
+            <div
+              className="color__gray38"
+            >
+              Перемещен в заказ
+            </div>
+          </Memo(Text)>
+          <ForwardRef(Link)>
+            <a
+              className="link color__brand-blue"
+            >
+              №
+              123456
+            </a>
+          </ForwardRef(Link)>
+        </div>
+      </Box>
+      <Box
+        marginTop={2}
+      >
+        <div
+          className="M-t__2"
+        >
+          <Memo(Text)
+            color="gray38"
+            element="div"
+          >
+            <div
+              className="color__gray38"
+            >
+              Нет на складе
+            </div>
+          </Memo(Text)>
+        </div>
+      </Box>
+    </div>
+    <div
+      className="action-button"
+    >
+      <MoreSVG
+        onClick={[Function]}
+      >
+        <svg
+          height={24}
+          onClick={[Function]}
+          viewBox="0 0 24 24"
+          width={24}
+        >
+          <path
+            clipRule="evenodd"
+            d="M16 12c0 1.1.9 2 2 2s2-.9 2-2-.9-2-2-2-2 .9-2 2zM14 12c0-1.1-.9-2-2-2s-2 .9-2 2 .9 2 2 2 2-.9 2-2zM8 12c0-1.1-.9-2-2-2s-2 .9-2 2 .9 2 2 2 2-.9 2-2z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </MoreSVG>
+    </div>
+  </div>
+</ProductCard>
+`;
