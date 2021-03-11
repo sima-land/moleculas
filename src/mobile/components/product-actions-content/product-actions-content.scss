@@ -1,0 +1,35 @@
+@import 'node_modules/@dev-dep/ui-nucleons/colors';
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: $white;
+  border-radius: 8px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  padding: 48px 32px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  box-sizing: content-box;
+  margin: 0 12px;
+  cursor: pointer;
+  .icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $gray4;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+  }
+}
