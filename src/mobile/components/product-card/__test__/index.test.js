@@ -10,6 +10,7 @@ describe('ProductCard', () => {
     name: 'Зеленый слоник 25мм МИКС',
     sid: 123,
     count: 23,
+    unit: 'шт.',
     initialCount: 42,
     currencyGrapheme: '₽',
     commonPrice: 50,

@@ -19,6 +19,7 @@ exports[`ProductCard renders properly 1`] = `
   onActionsClick={[Function]}
   onWishButtonClick={[Function]}
   sid={123}
+  unit="шт."
 >
   <div
     className="wrapper"
@@ -128,14 +129,10 @@ exports[`ProductCard renders properly 1`] = `
               className="size-12 line-height-16"
             >
               <div>
-                Было в заказе: 
-                42
-                 шт.
+                Было в заказе: 42 шт.
               </div>
               <div>
-                Вы получите: 
-                23
-                 шт.
+                Вы получите: 23 шт.
               </div>
             </div>
           </Memo(Text)>
@@ -168,9 +165,7 @@ exports[`ProductCard renders properly 1`] = `
                   </span>
                 </span>
               </Price>
-               × 
-              23
-               шт.
+               × 23 шт.
             </div>
           </Memo(Text)>
         </div>
