@@ -19,6 +19,7 @@ const cx = classnames.bind(styles);
  * @param { number } props.sid Артикул товара.
  * @param { boolean } props.isWished Товар добавлен в избранное.
  * @param { number } props.count Количество товара, которое будет доставлено.
+ * @param { string } props.unit Единицы измерения.
  * @param { number } props.initialCount Изначально добавленное количество товара при заказе.
  * @param { number } props.movedOrderId Id заказа в который перемещен товар.
  * @param { boolean } props.notInStock Признак товара не в наличии.
@@ -38,6 +39,7 @@ const ProductCard = (
     sid,
     isWished,
     count,
+    unit,
     initialCount,
     movedOrderId,
     notInStock,
@@ -75,8 +77,8 @@ const ProductCard = (
       && (
         <Box marginTop={2}>
           <Text element='div' size={12}>
-            <div>Было в заказе: {initialCount} шт.</div>
-            <div>Вы получите: {count} шт.</div>
+            <div>{`Было в заказе: ${initialCount} ${unit}`}</div>
+            <div>{`Вы получите: ${count} ${unit}`}</div>
           </Text>
         </Box>
       )}
@@ -84,7 +86,7 @@ const ProductCard = (
         && (
           <Box marginTop={2}>
             <Text element='div' weight={500} size={12}>
-              <Price value={itemPrice} currencyGrapheme={currencyGrapheme} /> × {count} шт.
+              <Price value={itemPrice} currencyGrapheme={currencyGrapheme} />{` × ${count} ${unit}`}
             </Text>
           </Box>
         )

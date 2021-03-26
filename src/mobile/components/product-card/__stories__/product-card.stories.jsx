@@ -18,6 +18,7 @@ const baseArgs = {
   sid: 123456,
   isWished: false,
   count: 1,
+  unit: 'шт.',
   initialCount: 1,
   movedOrderId: 1,
   notInStock: false,
