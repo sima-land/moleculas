@@ -1,0 +1,378 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PersonModal /> should renders properly with all props 1`] = `
+<PersonModal
+  appointment="Менеджер по игрушке"
+  arbitraryLinkProps={
+    Object {
+      "children": "test",
+      "href": "/test",
+    }
+  }
+  email="example@email.com"
+  name="Марина Михайловская"
+  onClose={[MockFunction]}
+  phoneHref="tel:88000000000;postd=8823"
+  phoneText="88000000000 доб. 8823"
+  secondPhoneHref="tel:+7900000000"
+  secondPhoneText="+7 (900) 000 000"
+  skype="example@skype.com"
+  social="https://vk.com/oks2art https://vk.com/oks2art"
+>
+  <Modal
+    customClasses={
+      Object {
+        "modal": "modal",
+      }
+    }
+    extended={true}
+    footer={
+      <CleanGroup
+        size="m"
+      >
+        <CleanButton
+          onClick={[MockFunction]}
+        >
+          Закрыть
+        </CleanButton>
+      </CleanGroup>
+    }
+    onClose={[MockFunction]}
+    withScrollDisable={false}
+    withTopBar={false}
+  >
+    <div
+      className="overlay-extended"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <Popup
+        additionalClass="modal modal-extended"
+      >
+        <div
+          className="popup modal modal-extended"
+        >
+          <div
+            className="main"
+          >
+            <Box
+              marginBottom={6}
+            >
+              <div
+                className="M-b__6"
+              >
+                <UserAvatar
+                  size={104}
+                  title="Марина Михайловская"
+                >
+                  <Avatar
+                    bgColor="additional-deep-red"
+                    bgOpacity={0.48}
+                    size={104}
+                    textColor="white"
+                    title="Марина Михайловская"
+                  >
+                    <div
+                      className="root size-104 color__white"
+                      style={
+                        Object {
+                          "--avatar-color": "#d50000",
+                          "--avatar-color-opacity": 0.48,
+                        }
+                      }
+                    >
+                      <span
+                        className="monogram"
+                      >
+                        ММ
+                      </span>
+                    </div>
+                  </Avatar>
+                </UserAvatar>
+              </div>
+            </Box>
+            <Box
+              marginBottom={1}
+            >
+              <div
+                className="M-b__1"
+              >
+                <Memo(Text)
+                  color="gray38"
+                  size={14}
+                  weight={400}
+                >
+                  <span
+                    className="size-14 line-height-20 color__gray38 weight-400"
+                  >
+                    Менеджер по игрушке
+                  </span>
+                </Memo(Text)>
+              </div>
+            </Box>
+            <div
+              className="name"
+            >
+              Марина Михайловская
+            </div>
+            <Box
+              marginTop={2}
+            >
+              <div
+                className="M-t__2"
+              >
+                <Memo(Text)
+                  size={12}
+                  weight={500}
+                >
+                  <span
+                    className="size-12 line-height-16 weight-500"
+                  >
+                    <ForwardRef(Link)
+                      href="/test"
+                    >
+                      <a
+                        className="link color__brand-blue"
+                        href="/test"
+                      >
+                        test
+                      </a>
+                    </ForwardRef(Link)>
+                  </span>
+                </Memo(Text)>
+              </div>
+            </Box>
+            <div
+              className="contacts"
+            >
+              <span
+                className="contacts-item"
+              >
+                Email: 
+                <ForwardRef(Link)
+                  color="gray87"
+                  href="mailto:example@email.com"
+                >
+                  <a
+                    className="link color__gray87"
+                    href="mailto:example@email.com"
+                  >
+                    example@email.com
+                  </a>
+                </ForwardRef(Link)>
+              </span>
+              <span
+                className="contacts-item"
+              >
+                Соц. сети: 
+                https://vk.com/oks2art https://vk.com/oks2art
+              </span>
+              <span
+                className="contacts-item"
+              >
+                Skype: 
+                <ForwardRef(Link)
+                  color="gray87"
+                  href="skype:example@skype.com"
+                >
+                  <a
+                    className="link color__gray87"
+                    href="skype:example@skype.com"
+                  >
+                    example@skype.com
+                  </a>
+                </ForwardRef(Link)>
+              </span>
+              <span
+                className="contacts-item"
+              >
+                <ForwardRef(Link)
+                  color="gray87"
+                  href="tel:88000000000;postd=8823"
+                >
+                  <a
+                    className="link color__gray87"
+                    href="tel:88000000000;postd=8823"
+                  >
+                    88000000000 доб. 8823
+                  </a>
+                </ForwardRef(Link)>
+              </span>
+              <span
+                className="contacts-item"
+              >
+                <ForwardRef(Link)
+                  color="gray87"
+                  href="tel:+7900000000"
+                >
+                  <a
+                    className="link color__gray87"
+                    href="tel:+7900000000"
+                  >
+                    +7 (900) 000 000
+                  </a>
+                </ForwardRef(Link)>
+              </span>
+            </div>
+          </div>
+          <div
+            className="footer divided"
+          >
+            <CleanGroup
+              size="m"
+            >
+              <div
+                className="clean-group"
+              >
+                <CleanButton
+                  key=".0"
+                  onClick={[MockFunction]}
+                  size="m"
+                >
+                  <button
+                    className="clean-button size-m"
+                    onClick={[MockFunction]}
+                  >
+                    Закрыть
+                  </button>
+                </CleanButton>
+              </div>
+            </CleanGroup>
+          </div>
+        </div>
+      </Popup>
+    </div>
+  </Modal>
+</PersonModal>
+`;
+
+exports[`<PersonModal /> should renders properly with minimal props 1`] = `
+<PersonModal
+  appointment="Дворник"
+  name="Марина Михайловская"
+>
+  <Modal
+    customClasses={
+      Object {
+        "modal": "modal",
+      }
+    }
+    extended={true}
+    footer={
+      <CleanGroup
+        size="m"
+      >
+        <CleanButton>
+          Закрыть
+        </CleanButton>
+      </CleanGroup>
+    }
+    withScrollDisable={false}
+    withTopBar={false}
+  >
+    <div
+      className="overlay-extended"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+    >
+      <Popup
+        additionalClass="modal modal-extended"
+      >
+        <div
+          className="popup modal modal-extended"
+        >
+          <div
+            className="main"
+          >
+            <Box
+              marginBottom={6}
+            >
+              <div
+                className="M-b__6"
+              >
+                <UserAvatar
+                  size={104}
+                  title="Марина Михайловская"
+                >
+                  <Avatar
+                    bgColor="additional-deep-red"
+                    bgOpacity={0.48}
+                    size={104}
+                    textColor="white"
+                    title="Марина Михайловская"
+                  >
+                    <div
+                      className="root size-104 color__white"
+                      style={
+                        Object {
+                          "--avatar-color": "#d50000",
+                          "--avatar-color-opacity": 0.48,
+                        }
+                      }
+                    >
+                      <span
+                        className="monogram"
+                      >
+                        ММ
+                      </span>
+                    </div>
+                  </Avatar>
+                </UserAvatar>
+              </div>
+            </Box>
+            <Box
+              marginBottom={1}
+            >
+              <div
+                className="M-b__1"
+              >
+                <Memo(Text)
+                  color="gray38"
+                  size={14}
+                  weight={400}
+                >
+                  <span
+                    className="size-14 line-height-20 color__gray38 weight-400"
+                  >
+                    Дворник
+                  </span>
+                </Memo(Text)>
+              </div>
+            </Box>
+            <div
+              className="name"
+            >
+              Марина Михайловская
+            </div>
+            <div
+              className="contacts"
+            />
+          </div>
+          <div
+            className="footer divided"
+          >
+            <CleanGroup
+              size="m"
+            >
+              <div
+                className="clean-group"
+              >
+                <CleanButton
+                  key=".0"
+                  size="m"
+                >
+                  <button
+                    className="clean-button size-m"
+                  >
+                    Закрыть
+                  </button>
+                </CleanButton>
+              </div>
+            </CleanGroup>
+          </div>
+        </div>
+      </Popup>
+    </div>
+  </Modal>
+</PersonModal>
+`;

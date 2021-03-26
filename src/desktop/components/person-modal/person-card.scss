@@ -1,0 +1,40 @@
+@use 'node_modules/@dev-dep/ui-nucleons/colors';
+
+.modal {
+  width: 352px;
+}
+
+.main {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.contacts-item {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: colors.$gray87;
+  & + & {
+    margin-top: 8px;
+  }
+}
