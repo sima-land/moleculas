@@ -1,6 +1,5 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-import { ReactSVG } from 'react-svg';
 import Timer from '@dev-dep/ui-nucleons/timer';
 import styles from './badge.scss';
 
@@ -41,9 +40,8 @@ export const Badge = ({
       children={
         iconOnly
           ? (
-            <ReactSVG
-              wrapper='span'
-              className={cx('svg-wrapper')}
+            <img
+              className={cx('icon')}
               src={fields[0].value}
             />
           ) : (

@@ -31,20 +31,10 @@ $icon-size: 14px;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  .svg-wrapper {
+  .icon {
+    display: inline-block;
     width: $icon-size;
     height: $icon-size;
-    svg {
-      fill: var(--badge-color);
-      display: inline-block;
-      width: $icon-size;
-      height: $icon-size;
-      line-height: $icon-size;
-
-      // чтобы перекрыть inline-свойство fill на path, circle и тд
-      * {
-        fill: inherit;
-      }
-    }
+    line-height: $icon-size;
   }
 }

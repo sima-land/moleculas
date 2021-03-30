@@ -53,22 +53,10 @@ exports[`<Badge /> should renders correctly 2`] = `
       }
     }
   >
-    <ReactSVG
-      afterInjection={[Function]}
-      beforeInjection={[Function]}
-      className="svg-wrapper"
-      evalScripts="never"
-      fallback={null}
-      loading={null}
-      renumerateIRIElements={true}
+    <img
+      className="icon"
       src="https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg"
-      useRequestCache={true}
-      wrapper="span"
-    >
-      <span
-        className="svg-wrapper"
-      />
-    </ReactSVG>
+    />
   </a>
 </Badge>
 `;
