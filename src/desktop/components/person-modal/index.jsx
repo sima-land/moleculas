@@ -8,18 +8,20 @@ import classes from './person-card.scss';
 import classnames from 'classnames/bind';
 import Modal from '@dev-dep/ui-nucleons/modal';
 import Types from 'prop-types';
+import { useKeyDownHandler } from '../../../common/hooks/use-key-down-handler';
+import isNotEmptyArray from '@dev-dep/isomorph/helpers/utils/is-not-empty-array';
 
 const cx = classnames.bind(classes);
 
 /**
  * Компонент карточки персоны.
- * @param {Object} Props Свойства.
+ * @param {Object} props Свойства.
  * @param {string} props.name Имя.
  * @param {string} props.appointment Должность.
  * @param {string} [props.photoUrl]  Ссылка на фото.
  * @param {string} [props.email] Почта.
  * @param {string} [props.skype] Skype.
- * @param {string} [props.social] Социальные сети.
+ * @param {Object[]} [props.social] Социальные сети.
  * @param {string} [props.phoneHref] Ссылка на рабочий номер телефона.
  * @param {string} [props.phoneText] Рабочий номер телефона.
  * @param {string} [props.secondPhoneHref] Ссылка на сотовый номер телефона.
@@ -41,93 +43,105 @@ export const PersonModal = ({
   secondPhoneText,
   arbitraryLinkProps,
   onClose,
-}) => (
-  <Modal
-    extended
-    withTopBar={false}
-    customClasses={{ modal: cx('modal') }}
-    withScrollDisable={false}
-    children={(
-      <div className={cx('main')}>
-        <Box marginBottom={6}>
-          <UserAvatar
-            title={name}
-            imageUrl={photoUrl}
-            size={104}
-          />
-        </Box>
-
-        <Box marginBottom={1}>
-          <Text color='gray38' size={14} weight={400}>{appointment}</Text>
-        </Box>
-
-        <div className={cx('name')}>
-          {name}
-        </div>
-
-        {arbitraryLinkProps && (
-          <Box marginTop={2}>
-            <Text size={12} weight={500}>
-              <Link {...arbitraryLinkProps} />
-            </Text>
+}) => {
+  useKeyDownHandler('Escape', onClose);
+  return (
+    <Modal
+      extended
+      withTopBar={false}
+      customClasses={{ modal: cx('modal') }}
+      withScrollDisable={false}
+      children={(
+        <div className={cx('main')}>
+          <Box marginBottom={6}>
+            <UserAvatar
+              title={name}
+              imageUrl={photoUrl}
+              size={104}
+            />
           </Box>
-        )}
 
-        <div className={cx('contacts')}>
-          {email && (
-            <span className={cx('contacts-item')}>
-              {'Email: '}
-              <Link
-                color='gray87'
-                href={`mailto:${email}`}
-                children={email}
-              />
-            </span>
+          <Box marginBottom={1}>
+            <Text color='gray38' size={14} weight={400}>{appointment}</Text>
+          </Box>
+
+          <div className={cx('name')}>
+            {name}
+          </div>
+
+          {arbitraryLinkProps && (
+            <Box marginTop={2}>
+              <Text size={12} weight={500}>
+                <Link {...arbitraryLinkProps} />
+              </Text>
+            </Box>
           )}
-          {social && (
-            <span className={cx('contacts-item')}>
-              Соц. сети: {social}
-            </span>
-          )}
-          {skype && (
-            <span className={cx('contacts-item')}>
-              {'Skype: '}
-              <Link
-                color='gray87'
-                href={`skype:${skype}`}
-                children={skype}
-              />
-            </span>
-          )}
-          {phoneText && (
-            <span className={cx('contacts-item')}>
-              <Link
-                color='gray87'
-                href={phoneHref}
-                children={phoneText}
-              />
-            </span>
-          )}
-          {secondPhoneText && (
-            <span className={cx('contacts-item')}>
-              <Link
-                color='gray87'
-                href={secondPhoneHref}
-                children={secondPhoneText}
-              />
-            </span>
-          )}
+
+          <div className={cx('contacts')}>
+            {email && (
+              <span className={cx('contacts-item')}>
+                {'Email: '}
+                <Link
+                  color='gray87'
+                  href={`mailto:${email}`}
+                  children={email}
+                />
+              </span>
+            )}
+            {isNotEmptyArray(social) && (
+              <span className={cx('contacts-item')}>
+              Соц. сети: {social.map((props, key) => (
+                  <Link
+                    className={cx('inline')}
+                    key={key}
+                    color='gray87'
+                    target='_blank'
+                    rel='nofollow'
+                    {...props}
+                  />
+                ))}
+              </span>
+            )}
+            {skype && (
+              <span className={cx('contacts-item')}>
+                {'Skype: '}
+                <Link
+                  color='gray87'
+                  href={`skype:${skype}`}
+                  children={skype}
+                />
+              </span>
+            )}
+            {phoneText && (
+              <span className={cx('contacts-item')}>
+                <Link
+                  color='gray87'
+                  href={phoneHref}
+                  children={phoneText}
+                />
+              </span>
+            )}
+            {secondPhoneText && (
+              <span className={cx('contacts-item')}>
+                <Link
+                  color='gray87'
+                  href={secondPhoneHref}
+                  children={secondPhoneText}
+                />
+              </span>
+            )}
+          </div>
         </div>
-      </div>
-    )}
-    footer={(
-      <Clean.Group size='m'>
-        <Clean.Button onClick={onClose}>Закрыть</Clean.Button>
-      </Clean.Group>
-    )}
-    onClose={onClose}
-  />
-);
+      )}
+      footer={(
+        <Clean.Group size='m'>
+          <Clean.Button onClick={onClose}>Закрыть</Clean.Button>
+        </Clean.Group>
+      )}
+      onClose={onClose}
+    />
+  );
+};
 
 export default PersonModal;
 
@@ -160,7 +174,7 @@ PersonModal.propTypes = {
   /**
    * Социальные сети.
    */
-  social: Types.string,
+  social: Types.arrayOf(Types.object),
 
   /**
    * Ссылка на рабочий номер телефона.

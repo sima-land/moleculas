@@ -27,7 +27,20 @@ ArbitraryLinkView.args = {
   phoneText: '88000000000 доб. 8823',
   secondPhoneHref: 'tel:+7900000000',
   secondPhoneText: '+7 (900) 000 000',
-  social: 'https://vk.com/oks2art https://vk.com/oks2art',
+  social: [
+    {
+      children: 'vk.com/oks2art',
+      href: 'https://example.com',
+    },
+    {
+      children: 'twitter.com/oks2art',
+      href: 'https://example.com',
+    },
+    {
+      children: 'odnoklassniki.ru/oks2art',
+      href: 'https://example.com',
+    },
+  ],
   arbitraryLinkProps: {
     href: 'test',
     children: 'Профиль организатора',

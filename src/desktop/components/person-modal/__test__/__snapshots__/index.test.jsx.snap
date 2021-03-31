@@ -17,7 +17,22 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
   secondPhoneHref="tel:+7900000000"
   secondPhoneText="+7 (900) 000 000"
   skype="example@skype.com"
-  social="https://vk.com/oks2art https://vk.com/oks2art"
+  social={
+    Array [
+      Object {
+        "children": "vk.com/oks2art",
+        "href": "https://example.com",
+      },
+      Object {
+        "children": "twitter.com/oks2art",
+        "href": "https://example.com",
+      },
+      Object {
+        "children": "odnoklassniki.ru/oks2art",
+        "href": "https://example.com",
+      },
+    ]
+  }
 >
   <Modal
     customClasses={
@@ -165,7 +180,57 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
                 className="contacts-item"
               >
                 Соц. сети: 
-                https://vk.com/oks2art https://vk.com/oks2art
+                <ForwardRef(Link)
+                  className="inline"
+                  color="gray87"
+                  href="https://example.com"
+                  key="0"
+                  rel="nofollow"
+                  target="_blank"
+                >
+                  <a
+                    className="link inline color__gray87"
+                    href="https://example.com"
+                    rel="nofollow"
+                    target="_blank"
+                  >
+                    vk.com/oks2art
+                  </a>
+                </ForwardRef(Link)>
+                <ForwardRef(Link)
+                  className="inline"
+                  color="gray87"
+                  href="https://example.com"
+                  key="1"
+                  rel="nofollow"
+                  target="_blank"
+                >
+                  <a
+                    className="link inline color__gray87"
+                    href="https://example.com"
+                    rel="nofollow"
+                    target="_blank"
+                  >
+                    twitter.com/oks2art
+                  </a>
+                </ForwardRef(Link)>
+                <ForwardRef(Link)
+                  className="inline"
+                  color="gray87"
+                  href="https://example.com"
+                  key="2"
+                  rel="nofollow"
+                  target="_blank"
+                >
+                  <a
+                    className="link inline color__gray87"
+                    href="https://example.com"
+                    rel="nofollow"
+                    target="_blank"
+                  >
+                    odnoklassniki.ru/oks2art
+                  </a>
+                </ForwardRef(Link)>
               </span>
               <span
                 className="contacts-item"
@@ -250,6 +315,7 @@ exports[`<PersonModal /> should renders properly with minimal props 1`] = `
 <PersonModal
   appointment="Дворник"
   name="Марина Михайловская"
+  social="bad value"
 >
   <Modal
     customClasses={
