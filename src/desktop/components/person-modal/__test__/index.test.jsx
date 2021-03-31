@@ -17,6 +17,7 @@ describe('<PersonModal />', () => {
       <PersonModal
         name='Марина Михайловская'
         appointment='Дворник'
+        social='bad value'
       />
     );
     expect(wrapper).toMatchSnapshot();
@@ -30,7 +31,20 @@ describe('<PersonModal />', () => {
         appointment='Менеджер по игрушке'
         email='example@email.com'
         skype='example@skype.com'
-        social='https://vk.com/oks2art https://vk.com/oks2art'
+        social={[
+          {
+            children: 'vk.com/oks2art',
+            href: 'https://example.com',
+          },
+          {
+            children: 'twitter.com/oks2art',
+            href: 'https://example.com',
+          },
+          {
+            children: 'odnoklassniki.ru/oks2art',
+            href: 'https://example.com',
+          },
+        ]}
         phoneHref='tel:88000000000;postd=8823'
         phoneText='88000000000 доб. 8823'
         secondPhoneHref='tel:+7900000000'
