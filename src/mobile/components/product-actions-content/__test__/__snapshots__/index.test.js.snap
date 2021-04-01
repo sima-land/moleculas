@@ -1,0 +1,252 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductActionsContent renders properly 1`] = `
+<ProductActionsContent
+  alertProps={
+    Object {
+      "title": "title",
+    }
+  }
+  buttons={
+    Array [
+      Object {
+        "href": "href",
+        "icon": <StatementSVG />,
+        "onClick": [Function],
+        "text": "text",
+      },
+      Object {
+        "href": "href",
+        "text": "text",
+      },
+      Object {
+        "text": "text",
+      },
+    ]
+  }
+>
+  <Alert
+    footer={
+      <CleanGroup>
+        <CleanButton>
+          Закрыть
+        </CleanButton>
+      </CleanGroup>
+    }
+    title="title"
+  >
+    <Layer>
+      <Portal
+        containerInfo={
+          <div>
+            <div
+              class="overlay"
+            >
+              <div
+                class="alert"
+              >
+                <div
+                  class="nav-bar header"
+                >
+                  <div
+                    class="main"
+                  >
+                    <div
+                      class="title truncate"
+                    >
+                      title
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="main"
+                >
+                  <div
+                    class="buttons"
+                  >
+                    <a
+                      class="link button color__gray87"
+                      href="href"
+                    >
+                      <div
+                        class="icon-wrapper"
+                      >
+                        <svg
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                        >
+                          <path
+                            d="M8 16a1 1 0 001 1h4a1 1 0 100-2H9a1 1 0 00-1 1zM9 13a1 1 0 110-2h6a1 1 0 110 2H9zM8 8a1 1 0 001 1h6a1 1 0 100-2H9a1 1 0 00-1 1z"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M6 2h12a3 3 0 013 3v14a3 3 0 01-3 3H6a3 3 0 01-3-3V5a3 3 0 013-3zm0 2a1 1 0 00-1 1v14a1 1 0 001 1h12a1 1 0 001-1V5a1 1 0 00-1-1H6z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                      text
+                    </a>
+                    <a
+                      class="link button color__gray87"
+                      href="href"
+                    >
+                      <div
+                        class="icon-wrapper"
+                      />
+                      text
+                    </a>
+                    <a
+                      class="link button color__gray87"
+                    >
+                      <div
+                        class="icon-wrapper"
+                      />
+                      text
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="inner-border-top"
+                >
+                  <div
+                    class="clean-group"
+                  >
+                    <button
+                      class="clean-button size-m"
+                    >
+                      Закрыть
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      >
+        <div
+          className="overlay"
+        >
+          <div
+            className="alert"
+          >
+            <NavBar
+              bottomBordered={false}
+              className="header"
+              title="title"
+            >
+              <div
+                className="nav-bar header"
+              >
+                <div
+                  className="main"
+                >
+                  <div
+                    className="title truncate"
+                  >
+                    title
+                  </div>
+                </div>
+              </div>
+            </NavBar>
+            <div
+              className="main"
+            >
+              <div
+                className="buttons"
+              >
+                <ForwardRef(Link)
+                  className="button"
+                  color="gray87"
+                  href="href"
+                  key="0"
+                  onClick={[Function]}
+                >
+                  <a
+                    className="link button color__gray87"
+                    href="href"
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="icon-wrapper"
+                    >
+                      <StatementSVG>
+                        <svg
+                          height={24}
+                          viewBox="0 0 24 24"
+                          width={24}
+                        >
+                          <path
+                            d="M8 16a1 1 0 001 1h4a1 1 0 100-2H9a1 1 0 00-1 1zM9 13a1 1 0 110-2h6a1 1 0 110 2H9zM8 8a1 1 0 001 1h6a1 1 0 100-2H9a1 1 0 00-1 1z"
+                          />
+                          <path
+                            clipRule="evenodd"
+                            d="M6 2h12a3 3 0 013 3v14a3 3 0 01-3 3H6a3 3 0 01-3-3V5a3 3 0 013-3zm0 2a1 1 0 00-1 1v14a1 1 0 001 1h12a1 1 0 001-1V5a1 1 0 00-1-1H6z"
+                            fillRule="evenodd"
+                          />
+                        </svg>
+                      </StatementSVG>
+                    </div>
+                    text
+                  </a>
+                </ForwardRef(Link)>
+                <ForwardRef(Link)
+                  className="button"
+                  color="gray87"
+                  href="href"
+                  key="1"
+                >
+                  <a
+                    className="link button color__gray87"
+                    href="href"
+                  >
+                    <div
+                      className="icon-wrapper"
+                    />
+                    text
+                  </a>
+                </ForwardRef(Link)>
+                <ForwardRef(Link)
+                  className="button"
+                  color="gray87"
+                  key="2"
+                >
+                  <a
+                    className="link button color__gray87"
+                  >
+                    <div
+                      className="icon-wrapper"
+                    />
+                    text
+                  </a>
+                </ForwardRef(Link)>
+              </div>
+            </div>
+            <div
+              className="inner-border-top"
+            >
+              <CleanGroup>
+                <div
+                  className="clean-group"
+                >
+                  <CleanButton
+                    key=".0"
+                    size="m"
+                  >
+                    <button
+                      className="clean-button size-m"
+                    >
+                      Закрыть
+                    </button>
+                  </CleanButton>
+                </div>
+              </CleanGroup>
+            </div>
+          </div>
+        </div>
+      </Portal>
+    </Layer>
+  </Alert>
+</ProductActionsContent>
+`;

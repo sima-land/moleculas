@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductActionsContent from '../';
-
+import { action } from '@storybook/addon-actions';
 import StatementSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/statement';
 import ThumbsUpSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/thumbs-up';
 
@@ -22,8 +22,8 @@ Primary.args = {
     {
       text: 'Оставить отзыв',
       icon: <ThumbsUpSVG />,
-      onClick: () => alert('Нажато на \'Оставить отзыв\''),
+      onClick: action('Нажато на \'Оставить отзыв\''),
     },
   ],
-  onClose: () => alert('Нажато на \'Закрыть\''),
+  onClose: action('Нажато на \'Закрыть\''),
 };
