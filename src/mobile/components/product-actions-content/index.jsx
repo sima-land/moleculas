@@ -14,14 +14,17 @@ const cx = classnames.bind(styles);
  * Компонент действий.
  * @param { Object } props Свойства компонента.
  * @param { Array } props.buttons Конфигурация кнопок.
+ * @param { Object } props.alertProps Свойства компонента Alert.
  * @param { Function } props.onClose Обработчик закрытия.
  * @return { React.ReactElement } Компонент действий с заказом.
  */
 const ProductActionsContent = ({
   buttons,
+  alertProps,
   onClose,
 }) => (
   <Alert
+    {...alertProps}
     footer={(
       <Clean.Group>
         <Clean.Button onClick={onClose}>Закрыть</Clean.Button>
@@ -54,7 +57,12 @@ ProductActionsContent.propTypes = {
   /**
    * Конфигурация кнопок.
    */
-  buttons: Types.object,
+  buttons: Types.array,
+
+  /**
+   * Свойства компонента Alert.
+   */
+  alertProps: Types.object,
 
   /**
    * Обработчик закрытия.
