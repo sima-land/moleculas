@@ -124,11 +124,12 @@ exports[`<CabinetMenu /> should renders properly w/o user name 1`] = `
     >
       <ForwardRef(Link)
         className="item"
+        color="gray38"
         href="/0"
         key="0"
       >
         <a
-          className="link item color__brand-blue"
+          className="link item color__gray38"
           href="/0"
         >
           <ReactSVG
@@ -158,10 +159,11 @@ exports[`<CabinetMenu /> should renders properly w/o user name 1`] = `
       </ForwardRef(Link)>
       <ForwardRef(Link)
         className="item active"
+        color="gray38"
         key="1"
       >
         <a
-          className="link item active color__brand-blue"
+          className="link item active color__gray38"
         >
           <ReactSVG
             afterInjection={[Function]}
@@ -190,11 +192,12 @@ exports[`<CabinetMenu /> should renders properly w/o user name 1`] = `
       </ForwardRef(Link)>
       <ForwardRef(Link)
         className="item"
+        color="gray38"
         href="/2"
         key="2"
       >
         <a
-          className="link item color__brand-blue"
+          className="link item color__gray38"
           href="/2"
         >
           <ReactSVG
@@ -224,11 +227,12 @@ exports[`<CabinetMenu /> should renders properly w/o user name 1`] = `
       </ForwardRef(Link)>
       <ForwardRef(Link)
         className="item"
+        color="gray38"
         href="/3"
         key="3"
       >
         <a
-          className="link item color__brand-blue"
+          className="link item color__gray38"
           href="/3"
         >
           <ReactSVG
@@ -258,11 +262,12 @@ exports[`<CabinetMenu /> should renders properly w/o user name 1`] = `
       </ForwardRef(Link)>
       <ForwardRef(Link)
         className="item"
+        color="gray38"
         href="/4"
         key="4"
       >
         <a
-          className="link item color__brand-blue"
+          className="link item color__gray38"
           href="/4"
         >
           <ReactSVG
@@ -292,11 +297,12 @@ exports[`<CabinetMenu /> should renders properly w/o user name 1`] = `
       </ForwardRef(Link)>
       <ForwardRef(Link)
         className="item"
+        color="gray38"
         href="/5"
         key="5"
       >
         <a
-          className="link item color__brand-blue"
+          className="link item color__gray38"
           href="/5"
         >
           <ReactSVG
@@ -326,11 +332,12 @@ exports[`<CabinetMenu /> should renders properly w/o user name 1`] = `
       </ForwardRef(Link)>
       <ForwardRef(Link)
         className="item"
+        color="gray38"
         href="/6"
         key="6"
       >
         <a
-          className="link item color__brand-blue"
+          className="link item color__gray38"
           href="/6"
         >
           <ReactSVG
@@ -517,11 +524,12 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
     >
       <ForwardRef(Link)
         className="item"
+        color="gray38"
         href="/0"
         key="0"
       >
         <a
-          className="link item color__brand-blue"
+          className="link item color__gray38"
           href="/0"
         >
           <ReactSVG
@@ -551,10 +559,11 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
       </ForwardRef(Link)>
       <ForwardRef(Link)
         className="item active"
+        color="gray38"
         key="1"
       >
         <a
-          className="link item active color__brand-blue"
+          className="link item active color__gray38"
         >
           <ReactSVG
             afterInjection={[Function]}
@@ -583,11 +592,12 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
       </ForwardRef(Link)>
       <ForwardRef(Link)
         className="item"
+        color="gray38"
         href="/2"
         key="2"
       >
         <a
-          className="link item color__brand-blue"
+          className="link item color__gray38"
           href="/2"
         >
           <ReactSVG
@@ -617,11 +627,12 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
       </ForwardRef(Link)>
       <ForwardRef(Link)
         className="item"
+        color="gray38"
         href="/3"
         key="3"
       >
         <a
-          className="link item color__brand-blue"
+          className="link item color__gray38"
           href="/3"
         >
           <ReactSVG
@@ -651,11 +662,12 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
       </ForwardRef(Link)>
       <ForwardRef(Link)
         className="item"
+        color="gray38"
         href="/4"
         key="4"
       >
         <a
-          className="link item color__brand-blue"
+          className="link item color__gray38"
           href="/4"
         >
           <ReactSVG
@@ -685,11 +697,12 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
       </ForwardRef(Link)>
       <ForwardRef(Link)
         className="item"
+        color="gray38"
         href="/5"
         key="5"
       >
         <a
-          className="link item color__brand-blue"
+          className="link item color__gray38"
           href="/5"
         >
           <ReactSVG
@@ -719,11 +732,12 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
       </ForwardRef(Link)>
       <ForwardRef(Link)
         className="item"
+        color="gray38"
         href="/6"
         key="6"
       >
         <a
-          className="link item color__brand-blue"
+          className="link item color__gray38"
           href="/6"
         >
           <ReactSVG
