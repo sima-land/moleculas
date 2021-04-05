@@ -49,6 +49,7 @@ const CabinetMenu = ({
           <Link
             className={cx('item', isCurrent && 'active')}
             key={key}
+            color='gray38'
             href={isCurrent ? undefined : url}
           >
             <ReactSVG
