@@ -6,7 +6,7 @@ stages:
 
 .test-default:
   stage: test
-  image: node:10.15.3-alpine
+  image: node:14.16.0-alpine
   cache:
     paths:
       - node_modules
@@ -35,7 +35,7 @@ test-tags:
 
 build:
   stage: build
-  image: node:10.15.3-alpine
+  image: node:14.16.0-alpine
   artifacts:
     paths:
       - build
@@ -52,7 +52,7 @@ build:
 
 build-storybook:
   stage: build
-  image: node:10.15.3-alpine
+  image: node:14.16.0-alpine
   cache:
     paths:
       - node_modules
@@ -104,7 +104,7 @@ publish-storybook:
 
 publish-package:
   stage: publish
-  image: node:10.15.3-alpine
+  image: node:14.16.0-alpine
   before_script:
     - echo //gitlab.sima-land.ru/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN} > .npmrc
   script:

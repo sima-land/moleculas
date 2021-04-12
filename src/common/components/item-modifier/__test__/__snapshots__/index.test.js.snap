@@ -54,7 +54,7 @@ exports[`<ItemModifier /> should render with props 1`] = `
           >
             Foo
           </span>
-          <Memo(Text)
+          <ForwardRef(Text)
             color="gray38"
             lineHeight={16}
             size={12}
@@ -65,7 +65,7 @@ exports[`<ItemModifier /> should render with props 1`] = `
               Всего 
               32
             </span>
-          </Memo(Text)>
+          </ForwardRef(Text)>
         </div>
       </Box>
       <ModifierSelect

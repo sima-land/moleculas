@@ -57,7 +57,7 @@ exports[`<ItemPrice /> should render with props 1`] = `
               <div
                 className="M-r__2"
               >
-                <Memo(Text)
+                <ForwardRef(Text)
                   lineHeight={24}
                   size={16}
                   weight={600}
@@ -70,19 +70,19 @@ exports[`<ItemPrice /> should render with props 1`] = `
                       value={15}
                     >
                       <span
-                        className="price"
+                        className="root"
                       >
                         15
                       </span>
                     </Price>
                   </span>
-                </Memo(Text)>
+                </ForwardRef(Text)>
               </div>
             </Box>
             <span
               className="price-old column"
             >
-              <Memo(Text)
+              <ForwardRef(Text)
                 color="gray38"
                 size={12}
               >
@@ -95,13 +95,13 @@ exports[`<ItemPrice /> should render with props 1`] = `
                     value={20}
                   >
                     <span
-                      className="price old-price"
+                      className="root"
                     >
                       20
                     </span>
                   </Price>
                 </span>
-              </Memo(Text)>
+              </ForwardRef(Text)>
               <span
                 className="discount-badge"
               >
@@ -165,7 +165,7 @@ exports[`<ItemPrice /> should render with props 1`] = `
         <span
           className="price-unit"
         >
-          <Memo(Text)
+          <ForwardRef(Text)
             color="gray38"
             lineHeight={16}
             size={12}
@@ -179,18 +179,13 @@ exports[`<ItemPrice /> should render with props 1`] = `
                 value={421}
               >
                 <span
-                  className="price"
+                  className="root"
                 >
-                  421
-                  <span
-                    className="currency-grapheme"
-                  >
-                     Р / пог. м
-                  </span>
+                  421 Р / пог. м
                 </span>
               </Price>
             </span>
-          </Memo(Text)>
+          </ForwardRef(Text)>
         </span>
       </div>
     </Box>
@@ -214,7 +209,7 @@ exports[`<ItemPrice /> should render with props 1`] = `
             <div
               className="display-flex justify-content-start flex-wrap"
             >
-              <Memo(Text)
+              <ForwardRef(Text)
                 color="gray87"
                 lineHeight={24}
                 size={16}
@@ -228,14 +223,14 @@ exports[`<ItemPrice /> should render with props 1`] = `
                     value={14}
                   >
                     <span
-                      className="price"
+                      className="root"
                     >
                       14
                     </span>
                   </Price>
                    / опт
                 </span>
-              </Memo(Text)>
+              </ForwardRef(Text)>
             </div>
           </Box>
         </div>

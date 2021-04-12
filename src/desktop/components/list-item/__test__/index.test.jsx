@@ -146,7 +146,7 @@ describe('<ListItem />', () => {
       window.dispatchEvent(new Event('resize'));
     });
     jest.runAllTimers();
-    expect(getItemWidth).toHaveBeenCalledTimes(1);
+    expect(getItemWidth).toHaveBeenCalledTimes(2);
   });
   it('should call getItemWidth by global resize event', () => {
     jest.useFakeTimers();

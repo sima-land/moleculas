@@ -3,9 +3,10 @@ import isEmpty from 'lodash/isEmpty';
 import debounce from 'lodash/debounce';
 import style from './listing-product-card.scss';
 import classnames from 'classnames/bind';
-import Text from '@dev-dep/ui-nucleons/text';
+import { Text } from '@dev-dep/ui-nucleons/text';
 import FlagsList from '../../../common/components/flags-list';
-import Box from '@dev-dep/ui-nucleons/box';
+import on from '@dev-dep/ui-nucleons/helpers/on';
+import { Box } from '@dev-dep/ui-nucleons/box';
 import AddToCartBlock from '../../../common/components/add-to-cart-block';
 import ItemProperties from '../../../common/components/item-properties';
 import ItemImage from '../item-image';
@@ -17,8 +18,7 @@ import ItemModifier from '../../../common/components/item-modifier';
 import isFunction from 'lodash/isFunction';
 import AdultBlock from '../../../common/components/adult-block/adult-block';
 import withInViewportObserver from '@dev-dep/ui-nucleons/with-in-viewport-observer';
-import withGlobalListeners from '@dev-dep/ui-nucleons/hoc/with-global-listeners';
-import Link from '@dev-dep/ui-nucleons/link';
+import { Link } from '@dev-dep/ui-nucleons/link';
 import WholesalePrice from '../wholesale-price';
 import Types from 'prop-types';
 
@@ -116,7 +116,6 @@ export const ListItem = ({
   asTile,
   size,
   addObserveWithMargin,
-  addGlobalListener,
   getItemWidth,
   isFetchingWishItems,
   onAdultClick,
@@ -149,11 +148,12 @@ export const ListItem = ({
   }
 
   const wrapRef = useRef();
+
   const onResize = useCallback(debounce(() => {
     isFunction(getItemWidth)
     && wrapRef.current
     && getItemWidth(wrapRef.current.offsetWidth);
-  }, 1), []);
+  }, 1), [getItemWidth]);
 
   useEffect(() => {
     isFunction(addObserveWithMargin)
@@ -161,11 +161,9 @@ export const ListItem = ({
     && addObserveWithMargin(wrapRef.current, () => {
       updateItemViewed(sid);
     });
-  }, [wrapRef.current]);
+  }, []);
 
-  useEffect(() => {
-    isFunction(addGlobalListener) && addGlobalListener('resize', onResize);
-  }, [wrapRef.current]);
+  useEffect(() => on(window, 'resize', e => onResize && onResize(e)), [onResize]);
 
   useEffect(() => {
     isFunction(getItemWidth)
@@ -397,7 +395,7 @@ export const ListItem = ({
 };
 
 export default withInViewportObserver(
-  withGlobalListeners(ListItem),
+  ListItem,
   {
     rootMargin: '100px 0px 100px 0px',
   },

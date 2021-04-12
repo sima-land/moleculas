@@ -2,7 +2,7 @@ import React from 'react';
 import getDeclination from '@dev-dep/ui-nucleons/helpers/get-declination';
 import { ModifiersGroup } from '../group';
 import prop from 'lodash/fp/prop';
-import Link from '@dev-dep/ui-nucleons/link';
+import { Link } from '@dev-dep/ui-nucleons/link';
 import classNames from 'classnames/bind';
 import classes from './modifiers-widget.scss';
 import isFunction from 'lodash/isFunction';

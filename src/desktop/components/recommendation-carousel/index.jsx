@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
-import Carousel from '@dev-dep/ui-nucleons/carousel';
+import { Carousel } from '@dev-dep/ui-nucleons/carousel';
 import RecommendedItem from './recommended-item';
-import ArrowButton from '@dev-dep/ui-nucleons/arrow-button';
+import { ArrowButton } from '@dev-dep/ui-nucleons/arrow-button';
 import withInViewportObserver from '@dev-dep/ui-nucleons/with-in-viewport-observer';
 import isFunction from 'lodash/isFunction';
 import { isNonEmptyArray } from '../../../common/helpers/is-non-empty';

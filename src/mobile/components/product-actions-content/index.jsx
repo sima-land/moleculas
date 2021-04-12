@@ -1,10 +1,8 @@
 import React from 'react';
 import Types from 'prop-types';
-
-import Link from '@dev-dep/ui-nucleons/link';
-import Alert from '@dev-dep/ui-nucleons/alert';
-import Clean from '@dev-dep/ui-nucleons/clean-buttons';
-
+import { Link } from '@dev-dep/ui-nucleons/link';
+import { Alert } from '@dev-dep/ui-nucleons/alert';
+import { Clean } from '@dev-dep/ui-nucleons/clean-buttons';
 import styles from './product-actions-content.scss';
 import classnames from 'classnames/bind';
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import Box from '@dev-dep/ui-nucleons/box';
-import Price from '@dev-dep/ui-nucleons/price';
-import Text from '@dev-dep/ui-nucleons/text';
+import { Box } from '@dev-dep/ui-nucleons/box';
+import { Price } from '@dev-dep/ui-nucleons/price';
+import { Text } from '@dev-dep/ui-nucleons/text';
 import classnames from 'classnames/bind';
 import style from './wholesale-price.scss';
 import WholesaleText from './wholesale-text';

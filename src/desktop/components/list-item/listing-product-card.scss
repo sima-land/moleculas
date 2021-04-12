@@ -193,7 +193,7 @@
     flex-flow: row;
   }
   &.small {
-    @media (max-width: $mediumDesktopBreakpoint) {
+    @media (max-width: 1600px) {
       flex-flow: column;
       p {
         margin: 8px 0 0 -16px;

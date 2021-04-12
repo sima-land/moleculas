@@ -2,10 +2,10 @@ import React from 'react';
 import styles from './product-card.scss';
 import classnames from 'classnames/bind';
 import MoreSVG from '@dev-dep/ui-quarks/icons/24x24/Filled/more';
-import Link from '@dev-dep/ui-nucleons/link';
-import Price from '@dev-dep/ui-nucleons/price';
-import Box from '@dev-dep/ui-nucleons/box';
-import Text from '@dev-dep/ui-nucleons/text';
+import { Link } from '@dev-dep/ui-nucleons/link';
+import { Price } from '@dev-dep/ui-nucleons/price';
+import { Box } from '@dev-dep/ui-nucleons/box';
+import { Text } from '@dev-dep/ui-nucleons/text';
 import WishButton from '../../../common/components/wish-button';
 
 const cx = classnames.bind(styles);

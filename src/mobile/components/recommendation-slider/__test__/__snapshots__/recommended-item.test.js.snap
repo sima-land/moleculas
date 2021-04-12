@@ -43,13 +43,9 @@ exports[`<RecommendedItem /> render with props should correct render with all pr
           value={135.4}
         >
           <span
-            className="price price"
+            className="root price"
           >
-            135
-            ,40
-            <span>
-               $
-            </span>
+            135,40 $
           </span>
         </Price>
         <Price
@@ -59,13 +55,9 @@ exports[`<RecommendedItem /> render with props should correct render with all pr
           value={234.9}
         >
           <span
-            className="price old-price old-price"
+            className="root old-price"
           >
-            234
-            ,90
-            <span>
-               $
-            </span>
+            234,90 $
           </span>
         </Price>
       </div>
@@ -75,7 +67,7 @@ exports[`<RecommendedItem /> render with props should correct render with all pr
         href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
       >
         <a
-          className="link link color__black"
+          className="link link"
           href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
         >
           Милая картина из шерсти Schrodinger cat, А5
@@ -127,13 +119,9 @@ exports[`<RecommendedItem /> render with props should correct render without old
           value={135.4}
         >
           <span
-            className="price price"
+            className="root price"
           >
-            135
-            ,40
-            <span>
-               $
-            </span>
+            135,40 $
           </span>
         </Price>
       </div>
@@ -143,7 +131,7 @@ exports[`<RecommendedItem /> render with props should correct render without old
         href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
       >
         <a
-          className="link link color__black"
+          className="link link"
           href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
         >
           Милая картина из шерсти Schrodinger cat, А5

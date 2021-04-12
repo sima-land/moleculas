@@ -29,7 +29,7 @@ exports[`<ItemPrice /> should render with props cards type 1`] = `
           <div
             className="M-r__2"
           >
-            <Memo(Text)
+            <ForwardRef(Text)
               color="gray87"
               lineHeight={24}
               size={14}
@@ -43,19 +43,19 @@ exports[`<ItemPrice /> should render with props cards type 1`] = `
                   value={15}
                 >
                   <span
-                    className="price"
+                    className="root"
                   >
                     15
                   </span>
                 </Price>
               </span>
-            </Memo(Text)>
+            </ForwardRef(Text)>
           </div>
         </Box>
         <span
           className="price-old column"
         >
-          <Memo(Text)
+          <ForwardRef(Text)
             color="gray38"
             size={12}
           >
@@ -68,20 +68,20 @@ exports[`<ItemPrice /> should render with props cards type 1`] = `
                 value={20}
               >
                 <span
-                  className="price old-price"
+                  className="root"
                 >
                   20
                 </span>
               </Price>
             </span>
-          </Memo(Text)>
+          </ForwardRef(Text)>
         </span>
       </div>
     </Box>
     <span
       className="price-unit"
     >
-      <Memo(Text)
+      <ForwardRef(Text)
         color="gray38"
         lineHeight={24}
         size={16}
@@ -96,18 +96,13 @@ exports[`<ItemPrice /> should render with props cards type 1`] = `
             value={421}
           >
             <span
-              className="price"
+              className="root"
             >
-              421
-              <span
-                className="currency-grapheme"
-              >
-                 Р / пог. м
-              </span>
+              421 Р / пог. м
             </span>
           </Price>
         </span>
-      </Memo(Text)>
+      </ForwardRef(Text)>
     </span>
   </div>
 </ItemPrice>
@@ -142,7 +137,7 @@ exports[`<ItemPrice /> should render with props list type 1`] = `
           <div
             className="M-r__2"
           >
-            <Memo(Text)
+            <ForwardRef(Text)
               color="gray87"
               lineHeight={24}
               size={16}
@@ -156,19 +151,19 @@ exports[`<ItemPrice /> should render with props list type 1`] = `
                   value={15}
                 >
                   <span
-                    className="price"
+                    className="root"
                   >
                     15
                   </span>
                 </Price>
               </span>
-            </Memo(Text)>
+            </ForwardRef(Text)>
           </div>
         </Box>
         <span
           className="price-old row"
         >
-          <Memo(Text)
+          <ForwardRef(Text)
             color="gray38"
             size={12}
           >
@@ -181,20 +176,20 @@ exports[`<ItemPrice /> should render with props list type 1`] = `
                 value={20}
               >
                 <span
-                  className="price old-price"
+                  className="root"
                 >
                   20
                 </span>
               </Price>
             </span>
-          </Memo(Text)>
+          </ForwardRef(Text)>
         </span>
       </div>
     </Box>
     <span
       className="price-unit"
     >
-      <Memo(Text)
+      <ForwardRef(Text)
         color="gray38"
         lineHeight={24}
         size={16}
@@ -209,18 +204,13 @@ exports[`<ItemPrice /> should render with props list type 1`] = `
             value={421}
           >
             <span
-              className="price"
+              className="root"
             >
-              421
-              <span
-                className="currency-grapheme"
-              >
-                 Р / пог. м
-              </span>
+              421 Р / пог. м
             </span>
           </Price>
         </span>
-      </Memo(Text)>
+      </ForwardRef(Text)>
     </span>
   </div>
 </ItemPrice>

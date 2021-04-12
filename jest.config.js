@@ -1,17 +1,32 @@
 module.exports = {
-  globalSetup: './jest.global-setup.js',
-  setupFiles: ['./jest.setup.js'],
-  snapshotSerializers: ['enzyme-to-json/serializer'],
-  transformIgnorePatterns: ['/node_modules/(?!(@SL/|@dev-dep/|middleware-axios)).*/'],
-  testPathIgnorePatterns: ['<rootDir>/.yarn-cache/', '<rootDir>/node_modules/'],
-  modulePathIgnorePatterns: ['<rootDir>/.yarn-cache/', '<rootDir>/build/'],
+  globalSetup: './jest/global-setup.js',
+  setupFiles: [
+    './jest/setup.js',
+  ],
+  snapshotSerializers: [
+    'enzyme-to-json/serializer',
+  ],
+  transformIgnorePatterns: [
+    '/node_modules/(?!(@SL/|middleware-axios))/',
+    '/node_modules/@dev-dep/ui-nucleons/.+\\.(?!(svg))([^.]+$)/',
+  ],
+  testPathIgnorePatterns: [
+    '<rootDir>/.yarn-cache/', '<rootDir>/node_modules/',
+  ],
+  modulePathIgnorePatterns: [
+    '<rootDir>/.yarn-cache/', '<rootDir>/build/',
+  ],
+  transform: {
+    '\\.jsx?$': 'babel-jest',
+    '\\.svg$': '<rootDir>/jest/transforms/svg.js',
+    '\\.(jpg|jpeg|png|gif|eot|otf|ttf|woff|woff2)$': '<rootDir>/jest/transforms/media.js',
+  },
   moduleNameMapper: {
-    '\\.(pdf|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-    '<rootDir>/__mocks__/fileMock.js',
     '\\.(css|scss)$': 'identity-obj-proxy',
   },
   coveragePathIgnorePatterns: [
-    'jest.setup.js',
+    '\\.svg$',
+    'jest/',
   ],
   coverageThreshold: {
     global: {

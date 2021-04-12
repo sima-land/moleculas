@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
-import Link from '@dev-dep/ui-nucleons/link';
-import Price from '@dev-dep/ui-nucleons/price';
+import { Link } from '@dev-dep/ui-nucleons/link';
+import { Price } from '@dev-dep/ui-nucleons/price';
 import classes from './recommended-item.scss';
 import classnames from 'classnames/bind';
 import cutTextContent from '@dev-dep/ui-nucleons/helpers/cut-text-content';

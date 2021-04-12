@@ -2,8 +2,8 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import debounce from 'lodash/debounce';
 import RecommendedItem from '../recommended-item';
-import Link from '@dev-dep/ui-nucleons/link';
-import Price from '@dev-dep/ui-nucleons/price';
+import { Link } from '@dev-dep/ui-nucleons/link';
+import { Price } from '@dev-dep/ui-nucleons/price';
 import cutTextContent from '@dev-dep/ui-nucleons/helpers/cut-text-content';
 
 jest.mock('@dev-dep/ui-nucleons/helpers/cut-text-content', () => {

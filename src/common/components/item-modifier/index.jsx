@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import classnames from 'classnames/bind';
-import Box from '@dev-dep/ui-nucleons/box';
-import Text from '@dev-dep/ui-nucleons/text';
+import { Box } from '@dev-dep/ui-nucleons/box';
+import { Text } from '@dev-dep/ui-nucleons/text';
 import ModifierSelect from '../modifier-select';
 import styles from './item-modifier.scss';
 

@@ -8,10 +8,10 @@
   &.row {
     .image-wrapper {
       min-height: 108px;
-      @media (min-width: $smallMobileBreakpoint) {
+      @media (min-width: 600px) {
         min-height: 200px;
       }
-      @media (min-width: $extraLargeMobileBreakpoint) {
+      @media (min-width: 960px) {
         min-height: 256px;
       }
     }

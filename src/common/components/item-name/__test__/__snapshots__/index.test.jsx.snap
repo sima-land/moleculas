@@ -12,10 +12,10 @@ exports[`<ItemName /> should render with props 1`] = `
       href="#"
     >
       <a
-        className="link color__brand-blue"
+        className="link color__brand-blue hover-color__brand-deep-blue"
         href="#"
       >
-        <Memo(Text)>
+        <ForwardRef(Text)>
           <span
             className=""
           >
@@ -25,7 +25,7 @@ exports[`<ItemName /> should render with props 1`] = `
               Foo Bar
             </span>
           </span>
-        </Memo(Text)>
+        </ForwardRef(Text)>
       </a>
     </ForwardRef(Link)>
   </div>
@@ -39,9 +39,9 @@ exports[`<ItemName /> should render without props 1`] = `
   >
     <ForwardRef(Link)>
       <a
-        className="link color__brand-blue"
+        className="link color__brand-blue hover-color__brand-deep-blue"
       >
-        <Memo(Text)>
+        <ForwardRef(Text)>
           <span
             className=""
           >
@@ -49,7 +49,7 @@ exports[`<ItemName /> should render without props 1`] = `
               className="name"
             />
           </span>
-        </Memo(Text)>
+        </ForwardRef(Text)>
       </a>
     </ForwardRef(Link)>
   </div>

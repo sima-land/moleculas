@@ -1,7 +1,7 @@
 import React from 'react';
 import InfoSVG from '@dev-dep/ui-quarks/icons/16x16/Stroked/information';
-import Price from '@dev-dep/ui-nucleons/price';
-import Text from '@dev-dep/ui-nucleons/text';
+import { Price } from '@dev-dep/ui-nucleons/price';
+import { Text } from '@dev-dep/ui-nucleons/text';
 import classnames from 'classnames/bind';
 import style from './wholesale-price.scss';
 import isFunction from 'lodash/isFunction';

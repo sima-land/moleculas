@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import AdultBlock from '../adult-block';
-import Link from '@dev-dep/ui-nucleons/link';
+import { Link } from '@dev-dep/ui-nucleons/link';
 
 describe('<AdultBlock />', () => {
   it('should render without props', () => {

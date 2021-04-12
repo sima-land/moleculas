@@ -1,5 +1,4 @@
 @use 'node_modules/@dev-dep/ui-nucleons/colors';
-@import 'node_modules/@dev-dep/ui-nucleons/variables';
 
 .wrap {
   background-color: colors.$gray4;
@@ -8,7 +7,7 @@
   flex-direction: column;
   width: 280px;
   height: 800px;
-  @media (max-width: $extraSmallDesktopBreakpoint) {
+  @media (max-width: 1280px) {
     width: 104px;
     height: 734px;
   }
@@ -44,7 +43,7 @@
     color: colors.$brand-blue;
     margin-top: 4px;
   }
-  @media (max-width: $extraSmallDesktopBreakpoint) {
+  @media (max-width: 1280px) {
     display: none;
   }
 }
@@ -73,7 +72,7 @@
         fill: colors.$gray54;
       }
     }
-    @media (max-width: $extraSmallDesktopBreakpoint) {
+    @media (max-width: 1280px) {
       .text {
         display: block;
       }
@@ -96,7 +95,7 @@
     margin-top: auto;
     margin-bottom: 24px;
   }
-  @media (max-width: $extraSmallDesktopBreakpoint) {
+  @media (max-width: 1280px) {
     justify-content: center;
     .text {
       display: none;

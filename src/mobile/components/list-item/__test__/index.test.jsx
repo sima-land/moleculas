@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { ListItem } from '../index';
 import { act } from 'react-dom/test-utils';
-import Button from '@dev-dep/ui-nucleons/button';
+import { Button } from '@dev-dep/ui-nucleons/button';
 
 describe('<ListItem />', () => {
   it('should render without props', () => {

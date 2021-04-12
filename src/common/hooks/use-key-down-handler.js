@@ -1,19 +1,19 @@
 import { useRef, useEffect } from 'react';
-import isFunction from 'lodash/isFunction';
 import on from '@dev-dep/ui-nucleons/helpers/on';
 
 /**
  * Хук, добавляющий обработчик нажатия на клавишу.
- * @param {KeyboardEvent.key} key Клавиша, для которой отслеживается нажатие.
+ * @param {KeyboardEvent.key} targetKey Клавиша, для которой отслеживается нажатие.
  * @param {Function} callback Обработчик нажатия.
  */
-export const useKeyDownHandler = (key, callback) => {
-  const handlerRef = useRef(callback);
+export const useKeyDownHandler = (targetKey, callback) => {
+  const ref = useRef(callback);
 
-  useEffect(() => on(document, 'keydown', event => {
-    const handler = handlerRef.current;
-    event.key === key
-        && isFunction(handler)
-        && handler();
-  }), []);
+  ref.current = callback;
+
+  useEffect(() => on(document, 'keydown', ({ key }) => {
+    const fn = ref.current;
+
+    key === targetKey && fn && fn();
+  }), [targetKey]);
 };

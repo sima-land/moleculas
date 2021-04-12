@@ -58,6 +58,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                       aria-hidden="true"
                       aria-label="Закрыть Валюта"
                       class="button icon stub"
+                      type="button"
                     />
                   </div>
                 </div>
@@ -77,8 +78,10 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                     class="group"
                   >
                     <button
+                      aria-hidden="false"
                       aria-label="Закрыть Валюта"
                       class="button icon"
+                      type="button"
                     >
                       <svg
                         aria-hidden="true"
@@ -238,14 +241,14 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                       aria-label="Закрыть Валюта"
                       icon={[Function]}
                       onClick={[Function]}
-                      shift={false}
                       stub={true}
                     >
                       <button
-                        aria-hidden="true"
+                        aria-hidden={true}
                         aria-label="Закрыть Валюта"
                         className="button icon stub"
                         onClick={[Function]}
+                        type="button"
                       />
                     </NavButton>
                   </div>
@@ -269,12 +272,13 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                       aria-label="Закрыть Валюта"
                       icon={[Function]}
                       onClick={[Function]}
-                      shift={false}
                     >
                       <button
+                        aria-hidden={false}
                         aria-label="Закрыть Валюта"
                         className="button icon"
                         onClick={[Function]}
+                        type="button"
                       >
                         <CrossSVG
                           aria-hidden="true"
@@ -478,6 +482,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       aria-hidden="true"
                       aria-label="Закрыть Валюта"
                       class="button icon stub"
+                      type="button"
                     />
                   </div>
                 </div>
@@ -497,8 +502,10 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                     class="group"
                   >
                     <button
+                      aria-hidden="false"
                       aria-label="Закрыть Валюта"
                       class="button icon"
+                      type="button"
                     >
                       <svg
                         aria-hidden="true"
@@ -628,14 +635,14 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       aria-label="Закрыть Валюта"
                       icon={[Function]}
                       onClick={[Function]}
-                      shift={false}
                       stub={true}
                     >
                       <button
-                        aria-hidden="true"
+                        aria-hidden={true}
                         aria-label="Закрыть Валюта"
                         className="button icon stub"
                         onClick={[Function]}
+                        type="button"
                       />
                     </NavButton>
                   </div>
@@ -659,12 +666,13 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       aria-label="Закрыть Валюта"
                       icon={[Function]}
                       onClick={[Function]}
-                      shift={false}
                     >
                       <button
+                        aria-hidden={false}
                         aria-label="Закрыть Валюта"
                         className="button icon"
                         onClick={[Function]}
+                        type="button"
                       >
                         <CrossSVG
                           aria-hidden="true"
@@ -711,7 +719,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       key="0"
                       onClick={[Function]}
                     >
-                      <Memo(Text)
+                      <ForwardRef(Text)
                         color="gray87"
                         lineHeight={24}
                         size={16}
@@ -721,14 +729,14 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                         >
                           Российский рубль
                         </span>
-                      </Memo(Text)>
+                      </ForwardRef(Text)>
                     </button>
                     <button
                       className="item"
                       key="1"
                       onClick={[Function]}
                     >
-                      <Memo(Text)
+                      <ForwardRef(Text)
                         color="gray87"
                         lineHeight={24}
                         size={16}
@@ -738,14 +746,14 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                         >
                           Американский доллар
                         </span>
-                      </Memo(Text)>
+                      </ForwardRef(Text)>
                     </button>
                     <button
                       className="item"
                       key="2"
                       onClick={[Function]}
                     >
-                      <Memo(Text)
+                      <ForwardRef(Text)
                         color="gray87"
                         lineHeight={24}
                         size={16}
@@ -755,14 +763,14 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                         >
                           Единая европейская валюта
                         </span>
-                      </Memo(Text)>
+                      </ForwardRef(Text)>
                     </button>
                     <button
                       className="item"
                       key="3"
                       onClick={[Function]}
                     >
-                      <Memo(Text)
+                      <ForwardRef(Text)
                         color="gray87"
                         lineHeight={24}
                         size={16}
@@ -772,14 +780,14 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                         >
                           Белорусский рубль
                         </span>
-                      </Memo(Text)>
+                      </ForwardRef(Text)>
                     </button>
                     <button
                       className="item"
                       key="4"
                       onClick={[Function]}
                     >
-                      <Memo(Text)
+                      <ForwardRef(Text)
                         color="gray87"
                         lineHeight={24}
                         size={16}
@@ -789,14 +797,14 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                         >
                           Украинская гривна
                         </span>
-                      </Memo(Text)>
+                      </ForwardRef(Text)>
                     </button>
                     <button
                       className="item"
                       key="5"
                       onClick={[Function]}
                     >
-                      <Memo(Text)
+                      <ForwardRef(Text)
                         color="gray87"
                         lineHeight={24}
                         size={16}
@@ -806,7 +814,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                         >
                           Казахстанский тенге
                         </span>
-                      </Memo(Text)>
+                      </ForwardRef(Text)>
                     </button>
                   </div>
                 </div>
@@ -862,6 +870,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       aria-hidden="true"
                       aria-label="Закрыть Районы"
                       class="button icon stub"
+                      type="button"
                     />
                   </div>
                 </div>
@@ -881,8 +890,10 @@ exports[`<SelectScreen /> should handle props 1`] = `
                     class="group"
                   >
                     <button
+                      aria-hidden="false"
                       aria-label="Закрыть Районы"
                       class="button icon"
+                      type="button"
                     >
                       <svg
                         aria-hidden="true"
@@ -1033,14 +1044,14 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       aria-label="Закрыть Районы"
                       icon={[Function]}
                       onClick={[Function]}
-                      shift={false}
                       stub={true}
                     >
                       <button
-                        aria-hidden="true"
+                        aria-hidden={true}
                         aria-label="Закрыть Районы"
                         className="button icon stub"
                         onClick={[Function]}
+                        type="button"
                       />
                     </NavButton>
                   </div>
@@ -1064,12 +1075,13 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       aria-label="Закрыть Районы"
                       icon={[Function]}
                       onClick={[Function]}
-                      shift={false}
                     >
                       <button
+                        aria-hidden={false}
                         aria-label="Закрыть Районы"
                         className="button icon"
                         onClick={[Function]}
+                        type="button"
                       >
                         <CrossSVG
                           aria-hidden="true"
@@ -1116,7 +1128,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       key="0"
                       onClick={[Function]}
                     >
-                      <Memo(Text)
+                      <ForwardRef(Text)
                         color="gray87"
                         lineHeight={24}
                         size={16}
@@ -1126,14 +1138,14 @@ exports[`<SelectScreen /> should handle props 1`] = `
                         >
                           Верх-Исетский
                         </span>
-                      </Memo(Text)>
+                      </ForwardRef(Text)>
                     </button>
                     <button
                       className="item"
                       key="1"
                       onClick={[Function]}
                     >
-                      <Memo(Text)
+                      <ForwardRef(Text)
                         color="gray87"
                         lineHeight={24}
                         size={16}
@@ -1143,14 +1155,14 @@ exports[`<SelectScreen /> should handle props 1`] = `
                         >
                           Чкаловский
                         </span>
-                      </Memo(Text)>
+                      </ForwardRef(Text)>
                     </button>
                     <button
                       className="item"
                       key="2"
                       onClick={[Function]}
                     >
-                      <Memo(Text)
+                      <ForwardRef(Text)
                         color="gray87"
                         lineHeight={24}
                         size={16}
@@ -1160,14 +1172,14 @@ exports[`<SelectScreen /> should handle props 1`] = `
                         >
                           Железнодорожный
                         </span>
-                      </Memo(Text)>
+                      </ForwardRef(Text)>
                     </button>
                     <button
                       className="item"
                       key="3"
                       onClick={[Function]}
                     >
-                      <Memo(Text)
+                      <ForwardRef(Text)
                         color="gray87"
                         lineHeight={24}
                         size={16}
@@ -1177,7 +1189,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                         >
                           Кировский
                         </span>
-                      </Memo(Text)>
+                      </ForwardRef(Text)>
                       <CheckSVG
                         fill="#212121"
                       >
@@ -1200,7 +1212,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       key="4"
                       onClick={[Function]}
                     >
-                      <Memo(Text)
+                      <ForwardRef(Text)
                         color="gray87"
                         lineHeight={24}
                         size={16}
@@ -1210,14 +1222,14 @@ exports[`<SelectScreen /> should handle props 1`] = `
                         >
                           Орджоникидзевский
                         </span>
-                      </Memo(Text)>
+                      </ForwardRef(Text)>
                     </button>
                     <button
                       className="item"
                       key="5"
                       onClick={[Function]}
                     >
-                      <Memo(Text)
+                      <ForwardRef(Text)
                         color="gray87"
                         lineHeight={24}
                         size={16}
@@ -1227,14 +1239,14 @@ exports[`<SelectScreen /> should handle props 1`] = `
                         >
                           Октябрьский
                         </span>
-                      </Memo(Text)>
+                      </ForwardRef(Text)>
                     </button>
                     <button
                       className="item"
                       key="6"
                       onClick={[Function]}
                     >
-                      <Memo(Text)
+                      <ForwardRef(Text)
                         color="gray87"
                         lineHeight={24}
                         size={16}
@@ -1244,7 +1256,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                         >
                           Ленинский
                         </span>
-                      </Memo(Text)>
+                      </ForwardRef(Text)>
                     </button>
                   </div>
                 </div>
@@ -1283,6 +1295,7 @@ exports[`<SelectScreen /> should render without props 1`] = `
                       aria-hidden="true"
                       aria-label="Закрыть"
                       class="button icon stub"
+                      type="button"
                     />
                   </div>
                 </div>
@@ -1296,8 +1309,10 @@ exports[`<SelectScreen /> should render without props 1`] = `
                     class="group"
                   >
                     <button
+                      aria-hidden="false"
                       aria-label="Закрыть"
                       class="button icon"
+                      type="button"
                     >
                       <svg
                         aria-hidden="true"
@@ -1370,14 +1385,14 @@ exports[`<SelectScreen /> should render without props 1`] = `
                       aria-label="Закрыть"
                       icon={[Function]}
                       onClick={[Function]}
-                      shift={false}
                       stub={true}
                     >
                       <button
-                        aria-hidden="true"
+                        aria-hidden={true}
                         aria-label="Закрыть"
                         className="button icon stub"
                         onClick={[Function]}
+                        type="button"
                       />
                     </NavButton>
                   </div>
@@ -1395,12 +1410,13 @@ exports[`<SelectScreen /> should render without props 1`] = `
                       aria-label="Закрыть"
                       icon={[Function]}
                       onClick={[Function]}
-                      shift={false}
                     >
                       <button
+                        aria-hidden={false}
                         aria-label="Закрыть"
                         className="button icon"
                         onClick={[Function]}
+                        type="button"
                       >
                         <CrossSVG
                           aria-hidden="true"

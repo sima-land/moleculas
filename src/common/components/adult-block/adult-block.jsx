@@ -1,7 +1,7 @@
 import React from 'react';
-import Box from '@dev-dep/ui-nucleons/box';
-import Text from '@dev-dep/ui-nucleons/text';
-import Link from '@dev-dep/ui-nucleons/link';
+import { Box } from '@dev-dep/ui-nucleons/box';
+import { Text } from '@dev-dep/ui-nucleons/text';
+import { Link } from '@dev-dep/ui-nucleons/link';
 
 const textBlocks = {
   forGuest: {

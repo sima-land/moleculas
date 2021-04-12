@@ -106,13 +106,13 @@ exports[`<ModifierItem /> should render correctly with additionalText and select
       fractionalSign=","
       value={745}
     />
-    <Memo(Text)
+    <Memo([object Object])
       color="gray38"
       lineHeight={16}
       size={12}
     >
       В корзине 5 шт
-    </Memo(Text)>
+    </Memo([object Object])>
   </div>
   <div
     className="icon-wrapper"

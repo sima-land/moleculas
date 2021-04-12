@@ -1,7 +1,7 @@
 import React from 'react';
-import Rating from '@dev-dep/ui-nucleons/rating';
-import Text from '@dev-dep/ui-nucleons/text';
-import Box from '@dev-dep/ui-nucleons/box';
+import { Rating } from '@dev-dep/ui-nucleons/rating';
+import { Text } from '@dev-dep/ui-nucleons/text';
+import { Box } from '@dev-dep/ui-nucleons/box';
 
 /**
  * Компонент оценки товара.

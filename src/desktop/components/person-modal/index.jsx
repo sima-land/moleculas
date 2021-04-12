@@ -1,12 +1,12 @@
 import React from 'react';
 import { UserAvatar } from '@dev-dep/ui-nucleons/avatar/user';
-import Box from '@dev-dep/ui-nucleons/box';
-import Text from '@dev-dep/ui-nucleons/text';
-import Link from '@dev-dep/ui-nucleons/link';
-import Clean from '@dev-dep/ui-nucleons/clean-buttons';
+import { Box } from '@dev-dep/ui-nucleons/box';
+import { Text } from '@dev-dep/ui-nucleons/text';
+import { Link } from '@dev-dep/ui-nucleons/link';
+import { Clean } from '@dev-dep/ui-nucleons/clean-buttons';
 import classes from './person-card.scss';
 import classnames from 'classnames/bind';
-import Modal from '@dev-dep/ui-nucleons/modal';
+import { Modal } from '@dev-dep/ui-nucleons/modal';
 import Types from 'prop-types';
 import { useKeyDownHandler } from '../../../common/hooks/use-key-down-handler';
 import isNotEmptyArray from '@dev-dep/isomorph/helpers/utils/is-not-empty-array';
@@ -45,11 +45,11 @@ export const PersonModal = ({
   onClose,
 }) => {
   useKeyDownHandler('Escape', onClose);
+
   return (
     <Modal
-      extended
+      size='s'
       withTopBar={false}
-      customClasses={{ modal: cx('modal') }}
       withScrollDisable={false}
       children={(
         <div className={cx('main')}>

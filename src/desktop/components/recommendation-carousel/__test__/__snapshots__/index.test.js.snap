@@ -9,7 +9,7 @@ exports[`<RecommendationCarousel /> should match a snapshot with items 1`] = `
   >
     Test title
   </h2>
-  <withGlobalListeners(Carousel)
+  <Carousel
     items={
       Array [
         Object {

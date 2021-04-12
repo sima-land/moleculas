@@ -20,7 +20,7 @@ exports[`<AdultBlock /> should render with props 1`] = `
         <div
           className="M-b__1"
         >
-          <Memo(Text)
+          <ForwardRef(Text)
             size={16}
             weight={600}
           >
@@ -29,10 +29,10 @@ exports[`<AdultBlock /> should render with props 1`] = `
             >
               Товар для взрослых
             </span>
-          </Memo(Text)>
+          </ForwardRef(Text)>
         </div>
       </Box>
-      <Memo(Text)
+      <ForwardRef(Text)
         lineHeight={20}
         size={12}
       >
@@ -41,7 +41,7 @@ exports[`<AdultBlock /> should render with props 1`] = `
         >
           Подтвердите, что вы старше 18 лет, чтобы посмотреть товар.
         </span>
-      </Memo(Text)>
+      </ForwardRef(Text)>
       <Box
         marginTop={6}
       >
@@ -53,12 +53,13 @@ exports[`<AdultBlock /> should render with props 1`] = `
             pseudo={true}
           >
             <a
-              className="link color__brand-blue"
+              className="link color__brand-blue hover-color__brand-deep-blue"
+              href="javascript:;"
               onClick={[MockFunction]}
               role="button"
               tabIndex={0}
             >
-              <Memo(Text)
+              <ForwardRef(Text)
                 lineHeight={32}
                 size={16}
                 weight={600}
@@ -68,7 +69,7 @@ exports[`<AdultBlock /> should render with props 1`] = `
                 >
                   Подтвердить
                 </span>
-              </Memo(Text)>
+              </ForwardRef(Text)>
             </a>
           </ForwardRef(Link)>
         </div>
@@ -95,7 +96,7 @@ exports[`<AdultBlock /> should render without props 1`] = `
         <div
           className="M-b__1"
         >
-          <Memo(Text)
+          <ForwardRef(Text)
             size={16}
             weight={600}
           >
@@ -104,10 +105,10 @@ exports[`<AdultBlock /> should render without props 1`] = `
             >
               Товар для взрослых
             </span>
-          </Memo(Text)>
+          </ForwardRef(Text)>
         </div>
       </Box>
-      <Memo(Text)
+      <ForwardRef(Text)
         lineHeight={20}
         size={12}
       >
@@ -116,7 +117,7 @@ exports[`<AdultBlock /> should render without props 1`] = `
         >
           Если вам уже есть 18 лет, авторизуйтесь, чтобы перейти к товару.
         </span>
-      </Memo(Text)>
+      </ForwardRef(Text)>
       <Box
         marginTop={6}
       >
@@ -127,11 +128,12 @@ exports[`<AdultBlock /> should render without props 1`] = `
             pseudo={true}
           >
             <a
-              className="link color__brand-blue"
+              className="link color__brand-blue hover-color__brand-deep-blue"
+              href="javascript:;"
               role="button"
               tabIndex={0}
             >
-              <Memo(Text)
+              <ForwardRef(Text)
                 lineHeight={32}
                 size={16}
                 weight={600}
@@ -141,7 +143,7 @@ exports[`<AdultBlock /> should render without props 1`] = `
                 >
                   Авторизоваться
                 </span>
-              </Memo(Text)>
+              </ForwardRef(Text)>
             </a>
           </ForwardRef(Link)>
         </div>
