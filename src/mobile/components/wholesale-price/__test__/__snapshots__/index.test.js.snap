@@ -12,7 +12,7 @@ exports[`<WholesalePrice /> should render with props 1`] = `
     <div
       className="wrapper"
     >
-      <Memo(Text)
+      <ForwardRef(Text)
         color="gray38"
         lineHeight={16}
         size={12}
@@ -26,9 +26,9 @@ exports[`<WholesalePrice /> should render with props 1`] = `
             value={222222}
           >
             <span
-              className="price"
+              className="root"
             >
-              222 222
+              222 222
             </span>
           </Price>
            / 
@@ -54,7 +54,7 @@ exports[`<WholesalePrice /> should render with props 1`] = `
             </WholesaleText>
           </withGlobalListeners(WholesaleText)>
         </span>
-      </Memo(Text)>
+      </ForwardRef(Text)>
     </div>
     <div
       className="icon-wrapper"
@@ -100,7 +100,7 @@ exports[`<WholesalePrice /> should render without props 1`] = `
     <div
       className="wrapper"
     >
-      <Memo(Text)
+      <ForwardRef(Text)
         color="gray38"
         lineHeight={16}
         size={12}
@@ -113,7 +113,7 @@ exports[`<WholesalePrice /> should render without props 1`] = `
             currencyGraphemeClass="currency-grapheme"
           >
             <span
-              className="price"
+              className="root"
             />
           </Price>
            / 
@@ -123,7 +123,7 @@ exports[`<WholesalePrice /> should render without props 1`] = `
             Опт 
           </span>
         </span>
-      </Memo(Text)>
+      </ForwardRef(Text)>
     </div>
   </div>
 </WholesalePrice>

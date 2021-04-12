@@ -31,7 +31,7 @@ exports[`ProductCard renders properly 1`] = `
         href="test"
       >
         <a
-          className="link color__brand-blue"
+          className="link color__brand-blue hover-color__brand-deep-blue"
           href="test"
         >
           <img
@@ -83,10 +83,10 @@ exports[`ProductCard renders properly 1`] = `
         href="test"
       >
         <a
-          className="link link color__gray87"
+          className="link link color__gray87 hover-color__gray54"
           href="test"
         >
-          <Memo(Text)
+          <ForwardRef(Text)
             weight={500}
           >
             <span
@@ -94,7 +94,7 @@ exports[`ProductCard renders properly 1`] = `
             >
               Зеленый слоник 25мм МИКС
             </span>
-          </Memo(Text)>
+          </ForwardRef(Text)>
         </a>
       </ForwardRef(Link)>
       <Box
@@ -103,7 +103,7 @@ exports[`ProductCard renders properly 1`] = `
         <div
           className="M-t__2"
         >
-          <Memo(Text)
+          <ForwardRef(Text)
             color="gray38"
           >
             <span
@@ -112,7 +112,7 @@ exports[`ProductCard renders properly 1`] = `
               Арт.: 
               123
             </span>
-          </Memo(Text)>
+          </ForwardRef(Text)>
         </div>
       </Box>
       <Box
@@ -121,7 +121,7 @@ exports[`ProductCard renders properly 1`] = `
         <div
           className="M-t__2"
         >
-          <Memo(Text)
+          <ForwardRef(Text)
             element="div"
             size={12}
           >
@@ -135,7 +135,7 @@ exports[`ProductCard renders properly 1`] = `
                 Вы получите: 23 шт.
               </div>
             </div>
-          </Memo(Text)>
+          </ForwardRef(Text)>
         </div>
       </Box>
       <Box
@@ -144,7 +144,7 @@ exports[`ProductCard renders properly 1`] = `
         <div
           className="M-t__2"
         >
-          <Memo(Text)
+          <ForwardRef(Text)
             element="div"
             size={12}
             weight={500}
@@ -157,17 +157,14 @@ exports[`ProductCard renders properly 1`] = `
                 value={5}
               >
                 <span
-                  className="price"
+                  className="root"
                 >
-                  5
-                  <span>
-                     ₽
-                  </span>
+                  5 ₽
                 </span>
               </Price>
                × 23 шт.
             </div>
-          </Memo(Text)>
+          </ForwardRef(Text)>
         </div>
       </Box>
       <Box
@@ -176,7 +173,7 @@ exports[`ProductCard renders properly 1`] = `
         <div
           className="M-t__4"
         >
-          <Memo(Text)
+          <ForwardRef(Text)
             element="div"
             weight={500}
           >
@@ -188,16 +185,13 @@ exports[`ProductCard renders properly 1`] = `
                 value={50}
               >
                 <span
-                  className="price"
+                  className="root"
                 >
-                  50
-                  <span>
-                     ₽
-                  </span>
+                  50 ₽
                 </span>
               </Price>
             </div>
-          </Memo(Text)>
+          </ForwardRef(Text)>
         </div>
       </Box>
       <Box
@@ -206,7 +200,7 @@ exports[`ProductCard renders properly 1`] = `
         <div
           className="M-t__2"
         >
-          <Memo(Text)
+          <ForwardRef(Text)
             color="gray38"
             element="div"
           >
@@ -215,10 +209,10 @@ exports[`ProductCard renders properly 1`] = `
             >
               Перемещен в заказ
             </div>
-          </Memo(Text)>
+          </ForwardRef(Text)>
           <ForwardRef(Link)>
             <a
-              className="link color__brand-blue"
+              className="link color__brand-blue hover-color__brand-deep-blue"
             >
               №
               123456
@@ -232,7 +226,7 @@ exports[`ProductCard renders properly 1`] = `
         <div
           className="M-t__2"
         >
-          <Memo(Text)
+          <ForwardRef(Text)
             color="gray38"
             element="div"
           >
@@ -241,7 +235,7 @@ exports[`ProductCard renders properly 1`] = `
             >
               Нет на складе
             </div>
-          </Memo(Text)>
+          </ForwardRef(Text)>
         </div>
       </Box>
     </div>

@@ -7,11 +7,11 @@
   margin: 0 auto;
   max-width: calc((var(--gutter) * 5) + ((var(--layoutWidth) - (var(--gutter) * 7)) * 6 / 8));
 
-  @include breakpoints.on('xs') {
+  @include breakpoints.down('mm') {
     --gutter: 16px;
   }
 
-  @include breakpoints.on('xxs') {
+  @include breakpoints.down('ms') {
     max-width: none;
   }
 }

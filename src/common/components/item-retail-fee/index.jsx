@@ -1,9 +1,9 @@
 import React from 'react';
 import classnames from 'classnames/bind';
 import styles from './item-retail-fee.scss';
-import Text from '@dev-dep/ui-nucleons/text';
-import Price from '@dev-dep/ui-nucleons/price';
-import Box from '@dev-dep/ui-nucleons/box';
+import { Text } from '@dev-dep/ui-nucleons/text';
+import { Price } from '@dev-dep/ui-nucleons/price';
+import { Box } from '@dev-dep/ui-nucleons/box';
 
 const cx = classnames.bind(styles);
 

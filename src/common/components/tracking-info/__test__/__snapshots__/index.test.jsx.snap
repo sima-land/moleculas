@@ -12,11 +12,7 @@ exports[`<TrackNumber /> should match snapshot in desktop version 1`] = `
   >
     <img
       alt=""
-      src={
-        Object {
-          "process": [Function],
-        }
-      }
+      src="/src/common/images/tracking-info-delivery.png"
       width={324}
     />
     <div
@@ -65,11 +61,7 @@ exports[`<TrackNumber /> should match snapshot in mobile version 1`] = `
   >
     <img
       alt=""
-      src={
-        Object {
-          "process": [Function],
-        }
-      }
+      src="/src/common/images/tracking-info-delivery.png"
       width="100%"
     />
     <div
@@ -118,11 +110,7 @@ exports[`<TrackNumber /> should render and handle click correctly 1`] = `
   >
     <img
       alt=""
-      src={
-        Object {
-          "process": [Function],
-        }
-      }
+      src="/src/common/images/tracking-info-delivery.png"
       width={324}
     />
     <div

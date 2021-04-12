@@ -1,5 +1,5 @@
 import React, { Component, createRef } from 'react';
-import Link from '@dev-dep/ui-nucleons/link';
+import { Link } from '@dev-dep/ui-nucleons/link';
 import classnames from 'classnames/bind';
 import isFunction from 'lodash/isFunction';
 import style from './item-image.scss';

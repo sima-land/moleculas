@@ -6,7 +6,7 @@ import RecommendationCarousel, {
   RecommendationCarousel as PureRecommendationCarousel,
 } from '../index';
 import RecommendedItem from '../recommended-item';
-import Carousel from '@dev-dep/ui-nucleons/carousel/carousel';
+import { Carousel } from '@dev-dep/ui-nucleons/carousel';
 import { items } from '../../../../common/__fixtures__/recommendation-carousel';
 
 describe('<RecommendationCarousel />', () => {

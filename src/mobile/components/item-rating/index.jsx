@@ -1,7 +1,7 @@
 import React from 'react';
-import Box from '@dev-dep/ui-nucleons/box';
+import { Box } from '@dev-dep/ui-nucleons/box';
 import getDeclination from '@dev-dep/ui-nucleons/helpers/get-declination';
-import { COLORS } from '@dev-dep/ui-nucleons/constants';
+import { COLORS } from '@dev-dep/ui-nucleons/colors';
 import classnames from 'classnames/bind';
 import StarSVG from '../../../common/icons/filled-rate.svg';
 import styles from './item-rating.scss';

@@ -1,17 +1,15 @@
-@import 'node_modules/@dev-dep/ui-nucleons/variables';
-
 $smallSize: 160px;
 $largeSize: 194px;
-$itemIncreaseRatio: ($largeSize - $smallSize) / ($mediumMobileBreakpoint - $extraSmallMobileBreakpoint);
+$itemIncreaseRatio: ($largeSize - $smallSize) / (720px - 320px);
 
 .item {
   position: relative;
   flex-shrink: 0;
   width: $largeSize;
-  @media (max-width: $mediumMobileBreakpoint) {
-    width: calc(#{$smallSize} + (100vw - #{$extraSmallMobileBreakpoint}) * #{$itemIncreaseRatio});
+  @media (max-width: 720px) {
+    width: calc(#{$smallSize} + (100vw - #{320px}) * #{$itemIncreaseRatio});
   }
-  @media (max-width: $extraSmallMobileBreakpoint) {
+  @media (max-width: 320px) {
     width: $smallSize;
   }
   &:not(:last-child) {

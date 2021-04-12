@@ -2,7 +2,7 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import { ModifiersWidget, getSelectItem } from '..';
 import { ModifiersGroup } from '../../group';
-import Link from '@dev-dep/ui-nucleons/link';
+import { Link } from '@dev-dep/ui-nucleons/link';
 import isFunction from 'lodash/isFunction';
 
 describe('<ModifiersWidget />', () => {

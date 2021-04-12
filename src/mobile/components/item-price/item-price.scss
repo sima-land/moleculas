@@ -1,11 +1,9 @@
-@import 'node_modules/@dev-dep/ui-nucleons/variables';
-
 .wrapper {
   display: flex;
   flex-direction: column;
   margin-bottom: 8px;
   &.row {
-    @media (min-width: $mediumMobileBreakpoint) {
+    @media (min-width: 720px) {
       margin-bottom: 16px;
       .wholesale {
         margin-top: 8px;
@@ -32,7 +30,7 @@
 .wholesale {
   flex-shrink: 0;
   margin-top: 4px;
-  @media (max-width: $smallMobileBreakpoint) {
+  @media (max-width: 600px) {
     display: flex;
     align-items: flex-end;
   }

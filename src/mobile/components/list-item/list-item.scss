@@ -1,5 +1,4 @@
 @use 'node_modules/@dev-dep/ui-nucleons/colors';
-@import 'node_modules/@dev-dep/ui-nucleons/variables';
 
 .wrapper-row {
   position: relative;
@@ -18,7 +17,7 @@
   flex-flow: column;
   padding: 16px 8px;
   box-sizing: border-box;
-  @media (min-width: $largeMobileBreakpoint) {
+  @media (min-width: 840px) {
     padding: 16px 12px 24px;
   }
 }
@@ -35,13 +34,13 @@
   flex-shrink: 0;
   margin-right: 12px;
   width: 108px;
-  @media (min-width: $smallMobileBreakpoint) {
+  @media (min-width: 600px) {
     width: 200px;
   }
-  @media screen and (min-width: $mediumMobileBreakpoint) {
+  @media screen and (min-width: 720px) {
     margin-right: 16px;
   }
-  @media (min-width: $extraLargeMobileBreakpoint) {
+  @media (min-width: 960px) {
     width: 256px;
   }
 }
@@ -62,10 +61,10 @@
 .image {
   width: 108px;
   height: auto;
-  @media (min-width: $smallMobileBreakpoint) {
+  @media (min-width: 600px) {
     width: 200px;
   }
-  @media (min-width: $extraLargeMobileBreakpoint) {
+  @media (min-width: 960px) {
     width: 256px;
   }
 }
@@ -76,7 +75,7 @@
   &.row {
     font-weight: 600;
     margin-bottom: 4px;
-    @media (min-width: $mediumMobileBreakpoint) {
+    @media (min-width: 720px) {
       font-size: 16px;
       line-height: 24px;
       font-weight: normal;

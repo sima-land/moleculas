@@ -19,7 +19,7 @@ exports[`<WholesalePrice /> should render with props 1`] = `
       <div
         className="display-flex justify-content-between"
       >
-        <Memo(Text)
+        <ForwardRef(Text)
           color="gray87"
           lineHeight={24}
           size={16}
@@ -33,18 +33,18 @@ exports[`<WholesalePrice /> should render with props 1`] = `
               value={222222}
             >
               <span
-                className="price"
+                className="root"
               >
-                222 222
+                222 222
               </span>
             </Price>
              / опт
           </span>
-        </Memo(Text)>
+        </ForwardRef(Text)>
         <span
           className="price-unit"
         >
-          <Memo(Text)
+          <ForwardRef(Text)
             color="gray38"
             lineHeight={16}
             size={12}
@@ -58,18 +58,13 @@ exports[`<WholesalePrice /> should render with props 1`] = `
                 value={520}
               >
                 <span
-                  className="price"
+                  className="root"
                 >
-                  520
-                  <span
-                    className="currency-grapheme"
-                  >
-                     шт.
-                  </span>
+                  520 шт.
                 </span>
               </Price>
             </span>
-          </Memo(Text)>
+          </ForwardRef(Text)>
         </span>
       </div>
     </Box>
@@ -119,7 +114,7 @@ exports[`<WholesalePrice /> should render with props 2`] = `
       <div
         className="display-flex justify-content-start flex-wrap"
       >
-        <Memo(Text)
+        <ForwardRef(Text)
           color="gray87"
           lineHeight={24}
           size={16}
@@ -133,14 +128,14 @@ exports[`<WholesalePrice /> should render with props 2`] = `
               value={222222}
             >
               <span
-                className="price"
+                className="root"
               >
-                222 222
+                222 222
               </span>
             </Price>
              / опт
           </span>
-        </Memo(Text)>
+        </ForwardRef(Text)>
         <withGlobalListeners(WholesaleText)
           description="<b>lorem</b>"
           text="Опт Детские товары"
@@ -166,7 +161,7 @@ exports[`<WholesalePrice /> should render with props 2`] = `
         <span
           className="price-unit"
         >
-          <Memo(Text)
+          <ForwardRef(Text)
             color="gray38"
             lineHeight={16}
             size={12}
@@ -180,18 +175,13 @@ exports[`<WholesalePrice /> should render with props 2`] = `
                 value={520}
               >
                 <span
-                  className="price"
+                  className="root"
                 >
-                  520
-                  <span
-                    className="currency-grapheme"
-                  >
-                     шт.
-                  </span>
+                  520 шт.
                 </span>
               </Price>
             </span>
-          </Memo(Text)>
+          </ForwardRef(Text)>
         </span>
       </div>
     </Box>
@@ -212,7 +202,7 @@ exports[`<WholesalePrice /> should render without props 1`] = `
       <div
         className="display-flex justify-content-between"
       >
-        <Memo(Text)
+        <ForwardRef(Text)
           color="gray87"
           lineHeight={24}
           size={16}
@@ -225,12 +215,12 @@ exports[`<WholesalePrice /> should render without props 1`] = `
               currencyGraphemeClass="currency-grapheme"
             >
               <span
-                className="price"
+                className="root"
               />
             </Price>
              / опт
           </span>
-        </Memo(Text)>
+        </ForwardRef(Text)>
       </div>
     </Box>
   </div>

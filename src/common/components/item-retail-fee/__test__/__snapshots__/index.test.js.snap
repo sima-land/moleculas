@@ -17,7 +17,7 @@ exports[`<ItemRetailFee /> should render with props 1`] = `
       <div
         className="M-t__4"
       >
-        <Memo(Text)
+        <ForwardRef(Text)
           color="gray38"
           lineHeight={16}
           size={12}
@@ -35,7 +35,7 @@ exports[`<ItemRetailFee /> should render with props 1`] = `
                 value={15}
               >
                 <span
-                  className="price price"
+                  className="root price"
                 >
                   15
                 </span>
@@ -48,7 +48,7 @@ exports[`<ItemRetailFee /> should render with props 1`] = `
               R
             </span>
           </span>
-        </Memo(Text)>
+        </ForwardRef(Text)>
       </div>
     </Box>
   </div>
@@ -66,7 +66,7 @@ exports[`<ItemRetailFee /> should render without props 1`] = `
       <div
         className="M-t__4"
       >
-        <Memo(Text)
+        <ForwardRef(Text)
           color="gray38"
           lineHeight={20}
           size={14}
@@ -83,12 +83,12 @@ exports[`<ItemRetailFee /> should render without props 1`] = `
                 className="price"
               >
                 <span
-                  className="price price"
+                  className="root price"
                 />
               </Price>
             </span>
           </span>
-        </Memo(Text)>
+        </ForwardRef(Text)>
       </div>
     </Box>
   </div>

@@ -1,8 +1,10 @@
+import 'raf/polyfill';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-Error.stackTraceLimit = 1000;
 configure({ adapter: new Adapter() });
+
+Error.stackTraceLimit = 1000;
 
 if (typeof window !== 'undefined') {
   window.matchMedia = window.matchMedia || function () {
@@ -11,6 +13,7 @@ if (typeof window !== 'undefined') {
     };
   };
 
-  window.requestAnimationFrame = window.requestAnimationFrame
-    || (callback => void setTimeout(callback, 0));
+  window.requestAnimationFrame = window.requestAnimationFrame || function (callback) {
+    setTimeout(callback, 0);
+  };
 }

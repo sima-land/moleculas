@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReactSVG } from 'react-svg';
 import { UserAvatar } from '@dev-dep/ui-nucleons/avatar/user';
-import Link from '@dev-dep/ui-nucleons/link';
+import { Link } from '@dev-dep/ui-nucleons/link';
 
 import IconMail from '@dev-dep/ui-quarks/icons/24x24/Stroked/mail';
 

@@ -1,5 +1,4 @@
 @use 'node_modules/@dev-dep/ui-nucleons/colors';
-@import 'node_modules/@dev-dep/ui-nucleons/variables';
 
 .wrapper {
   display: flex;
@@ -22,7 +21,7 @@
   position: relative;
   width: 120px;
 
-  @media (min-width: $mediumMobileBreakpoint) {
+  @media (min-width: 720px) {
     margin-left: 0;
   }
   .image {
@@ -57,7 +56,7 @@
   padding: 20px;
   margin: -28px -12px;
   align-self: baseline;
-  @media (min-width: $mediumMobileBreakpoint) {
+  @media (min-width: 720px) {
     margin: -28px -20px;
   }
 }

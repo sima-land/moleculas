@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import Link from '@dev-dep/ui-nucleons/link';
-import Text from '@dev-dep/ui-nucleons/text';
+import { Link } from '@dev-dep/ui-nucleons/link';
+import { Text } from '@dev-dep/ui-nucleons/text';
 
 /**
  * @typedef {Object} ItemProperty Краткая характеристика товара.

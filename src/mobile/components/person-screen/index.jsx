@@ -1,9 +1,9 @@
 import React from 'react';
 import classnames from 'classnames/bind';
 import { UserAvatar } from '@dev-dep/ui-nucleons/avatar/user';
-import Box from '@dev-dep/ui-nucleons/box';
-import Text from '@dev-dep/ui-nucleons/text';
-import Screen from '@dev-dep/ui-nucleons/screen';
+import { Box } from '@dev-dep/ui-nucleons/box';
+import { Text } from '@dev-dep/ui-nucleons/text';
+import { Screen } from '@dev-dep/ui-nucleons/screen';
 import { InnerBorder } from '@dev-dep/ui-nucleons/styling/borders';
 import MailSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/mail';
 import SkypeSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/skype';

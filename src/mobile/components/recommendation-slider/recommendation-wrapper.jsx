@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
-import TouchSlider from '@dev-dep/ui-nucleons/touch-slider';
+import { TouchSlider } from '@dev-dep/ui-nucleons/touch-slider';
 import { MobileLayout } from '@dev-dep/ui-nucleons/layout';
 import RecommendedItem from './recommended-item';
 import withInViewportObserver from '@dev-dep/ui-nucleons/with-in-viewport-observer';
 import classes from './recommendation-slider.scss';
 import classnames from 'classnames/bind';
 import isFunction from 'lodash/isFunction';
-import Text from '@dev-dep/ui-nucleons/text';
+import { Text } from '@dev-dep/ui-nucleons/text';
 import { isNonEmptyArray } from '../../../common/helpers/is-non-empty';
 
 const cx = classnames.bind(classes);

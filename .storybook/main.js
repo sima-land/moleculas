@@ -1,4 +1,5 @@
 const path = require('path');
+const svgrOptions = require('../svgr.config');
 
 module.exports = {
   stories: [
@@ -20,22 +21,23 @@ module.exports = {
     '@storybook/addon-storysource',
   ],
   webpackFinal: async config => {
-    const { rules } = config.module;
-    const babelRuleIndex = rules.findIndex(rule => {
-      const loader = Array.isArray(rule.use) ? rule.use[0].loader : rule.use;
-      return loader === 'babel-loader';
-    });
+    const baseRules = config.module.rules.map(
+      rule => (Array.isArray(rule.test) ? rule.test.some(item => item.test('.svg')) : rule.test.test('.svg'))
+        ? {
+          ...rule,
+
+          // исключаем svg так как он будет обрабатываться другим загрузчиком (ниже)
+          exclude: /\.svg$/
+        }
+        : rule
+    );
+
     return {
       ...config,
       module: {
         ...config.module,
         rules: [
-          ...config.module.rules.slice(0, babelRuleIndex),
-          {
-            ...config.module.rules[babelRuleIndex],
-            exclude: /node_modules\/(?!(@dev-dep)).*/,
-          },
-          ...config.module.rules.slice(babelRuleIndex + 1),
+          ...baseRules,
           {
             test: /\.scss$/,
             use: [
@@ -63,6 +65,17 @@ module.exports = {
               }
             ],
             include: path.resolve(__dirname, '../'),
+          },
+          {
+            test: /\.svg$/,
+            use: [
+              {
+                loader: '@svgr/webpack',
+                options: svgrOptions,
+              },
+            ],
+            include: path.resolve(__dirname, '../'),
+            exclude: /node_modules\/(?!(@dev-dep)).*/,
           },
         ],
       },

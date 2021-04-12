@@ -1,5 +1,5 @@
-import Link from '@dev-dep/ui-nucleons/link';
-import Price from '@dev-dep/ui-nucleons/price';
+import { Link } from '@dev-dep/ui-nucleons/link';
+import { Price } from '@dev-dep/ui-nucleons/price';
 import React, { useRef, useEffect } from 'react';
 import classes from './recommended-item.scss';
 import classnames from 'classnames/bind';

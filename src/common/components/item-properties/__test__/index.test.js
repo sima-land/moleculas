@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import ItemProperties from '../index';
-import Text from '@dev-dep/ui-nucleons/text';
+import { Text } from '@dev-dep/ui-nucleons/text';
 
 describe('<ItemProperties />', () => {
   it('should render empty without props', () => {

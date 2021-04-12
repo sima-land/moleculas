@@ -65,7 +65,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                     class="buttons"
                   >
                     <a
-                      class="link button color__gray87"
+                      class="link button color__gray87 hover-color__gray54"
                       href="href"
                     >
                       <div
@@ -89,7 +89,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                       text
                     </a>
                     <a
-                      class="link button color__gray87"
+                      class="link button color__gray87 hover-color__gray54"
                       href="href"
                     >
                       <div
@@ -98,7 +98,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                       text
                     </a>
                     <a
-                      class="link button color__gray87"
+                      class="link button color__gray87 hover-color__gray54"
                     >
                       <div
                         class="icon-wrapper"
@@ -115,6 +115,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                   >
                     <button
                       class="clean-button size-m"
+                      type="button"
                     >
                       Закрыть
                     </button>
@@ -164,7 +165,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                   onClick={[Function]}
                 >
                   <a
-                    className="link button color__gray87"
+                    className="link button color__gray87 hover-color__gray54"
                     href="href"
                     onClick={[Function]}
                   >
@@ -198,7 +199,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                   key="1"
                 >
                   <a
-                    className="link button color__gray87"
+                    className="link button color__gray87 hover-color__gray54"
                     href="href"
                   >
                     <div
@@ -213,7 +214,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                   key="2"
                 >
                   <a
-                    className="link button color__gray87"
+                    className="link button color__gray87 hover-color__gray54"
                   >
                     <div
                       className="icon-wrapper"
@@ -236,6 +237,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                   >
                     <button
                       className="clean-button size-m"
+                      type="button"
                     >
                       Закрыть
                     </button>

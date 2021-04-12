@@ -1,8 +1,8 @@
 import React from 'react';
 import classnames from 'classnames/bind';
 import styles from './item-name.scss';
-import Link from '@dev-dep/ui-nucleons/link';
-import Text from '@dev-dep/ui-nucleons/text';
+import { Link } from '@dev-dep/ui-nucleons/link';
+import { Text } from '@dev-dep/ui-nucleons/text';
 
 const cx = classnames.bind(styles);
 

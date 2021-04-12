@@ -1,7 +1,7 @@
 import React from 'react';
 import isFunction from 'lodash/isFunction';
 import { ModifierItem } from './modifier-item';
-import Link from '@dev-dep/ui-nucleons/link';
+import { Link } from '@dev-dep/ui-nucleons/link';
 import StatementSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/statement';
 import classes from './modifiers-list.scss';
 import classnames from 'classnames/bind';

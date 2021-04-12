@@ -88,25 +88,25 @@ exports[`<ListItem /> should render with all props 1`] = `
                   ]
                 }
               />
-              <Memo(Text)
+              <Memo([object Object])
                 color="gray38"
                 lineHeight={20}
                 size={14}
               >
                 Арт.: 
                 10000
-              </Memo(Text)>
+              </Memo([object Object])>
             </Box>
             <Box
               marginTop={2}
             >
-              <Memo(Text)
+              <Memo([object Object])
                 color="gray38"
                 lineHeight={20}
                 size={14}
               >
                 Доставим 11 августа
-              </Memo(Text)>
+              </Memo([object Object])>
             </Box>
             <div
               className="price-fixed row"
@@ -114,13 +114,13 @@ exports[`<ListItem /> should render with all props 1`] = `
               <Box
                 marginTop={2}
               >
-                <Memo(Text)
+                <Memo([object Object])
                   color="gray38"
                   lineHeight={20}
                   size={14}
                 >
                   Без скидок
-                </Memo(Text)>
+                </Memo([object Object])>
               </Box>
             </div>
             <ItemRating
@@ -187,20 +187,20 @@ exports[`<ListItem /> should render with all props 1`] = `
         <div
           className="in-stock-wrapper"
         >
-          <Memo(Text)
+          <Memo([object Object])
             weight={600}
           >
             in stock 300
-          </Memo(Text)>
+          </Memo([object Object])>
           <div
             className="analogues display-on-hover"
           >
             <ForwardRef(Link)>
-              <Memo(Text)
+              <Memo([object Object])
                 weight={600}
               >
                 Аналоги
-              </Memo(Text)>
+              </Memo([object Object])>
             </ForwardRef(Link)>
           </div>
         </div>
@@ -236,7 +236,7 @@ exports[`<ListItem /> should render with all props 1`] = `
         <div
           className="balance"
         >
-          <Memo(Text)
+          <Memo([object Object])
             color="gray38"
             lineHeight={20}
             size={14}
@@ -245,7 +245,7 @@ exports[`<ListItem /> should render with all props 1`] = `
             17
              
             .
-          </Memo(Text)>
+          </Memo([object Object])>
         </div>
       </Box>
     </div>
@@ -322,13 +322,13 @@ exports[`<ListItem /> should render with all props 2`] = `
               <Box
                 marginTop={2}
               >
-                <Memo(Text)
+                <Memo([object Object])
                   color="gray38"
                   lineHeight={20}
                   size={14}
                 >
                   Без скидок
-                </Memo(Text)>
+                </Memo([object Object])>
               </Box>
             </div>
             <ItemRating
@@ -397,20 +397,20 @@ exports[`<ListItem /> should render with all props 2`] = `
         <div
           className="in-stock-wrapper"
         >
-          <Memo(Text)
+          <Memo([object Object])
             weight={600}
           >
             in stock 300
-          </Memo(Text)>
+          </Memo([object Object])>
           <div
             className="analogues display-on-hover"
           >
             <ForwardRef(Link)>
-              <Memo(Text)
+              <Memo([object Object])
                 weight={600}
               >
                 Аналоги
-              </Memo(Text)>
+              </Memo([object Object])>
             </ForwardRef(Link)>
           </div>
         </div>
@@ -527,25 +527,25 @@ exports[`<ListItem /> should render with all props 3`] = `
                   ]
                 }
               />
-              <Memo(Text)
+              <Memo([object Object])
                 color="gray38"
                 lineHeight={20}
                 size={14}
               >
                 Арт.: 
                 10000
-              </Memo(Text)>
+              </Memo([object Object])>
             </Box>
             <Box
               marginTop={2}
             >
-              <Memo(Text)
+              <Memo([object Object])
                 color="gray38"
                 lineHeight={20}
                 size={14}
               >
                 Доставим 11 августа
-              </Memo(Text)>
+              </Memo([object Object])>
             </Box>
             <div
               className="price-fixed row"
@@ -553,13 +553,13 @@ exports[`<ListItem /> should render with all props 3`] = `
               <Box
                 marginTop={2}
               >
-                <Memo(Text)
+                <Memo([object Object])
                   color="gray38"
                   lineHeight={20}
                   size={14}
                 >
                   Без скидок
-                </Memo(Text)>
+                </Memo([object Object])>
               </Box>
             </div>
             <ItemRating
@@ -625,7 +625,7 @@ exports[`<ListItem /> should render with all props 3`] = `
             onSubtract={[Function]}
             qty={5}
           />
-          <Memo(Text)
+          <Memo([object Object])
             color="gray38"
             lineHeight={20}
             size={14}
@@ -634,25 +634,25 @@ exports[`<ListItem /> should render with all props 3`] = `
             17
              
             .
-          </Memo(Text)>
+          </Memo([object Object])>
         </Box>
         <div
           className="in-stock-wrapper"
         >
-          <Memo(Text)
+          <Memo([object Object])
             weight={600}
           >
             in stock 300
-          </Memo(Text)>
+          </Memo([object Object])>
           <div
             className="analogues display-on-hover"
           >
             <ForwardRef(Link)>
-              <Memo(Text)
+              <Memo([object Object])
                 weight={600}
               >
                 Аналоги
-              </Memo(Text)>
+              </Memo([object Object])>
             </ForwardRef(Link)>
           </div>
         </div>
@@ -731,13 +731,13 @@ exports[`<ListItem /> should render with all props 4`] = `
               <Box
                 marginTop={2}
               >
-                <Memo(Text)
+                <Memo([object Object])
                   color="gray38"
                   lineHeight={20}
                   size={14}
                 >
                   Без скидок
-                </Memo(Text)>
+                </Memo([object Object])>
               </Box>
             </div>
             <ItemRating
@@ -807,20 +807,20 @@ exports[`<ListItem /> should render with all props 4`] = `
         <div
           className="in-stock-wrapper"
         >
-          <Memo(Text)
+          <Memo([object Object])
             weight={600}
           >
             in stock 300
-          </Memo(Text)>
+          </Memo([object Object])>
           <div
             className="analogues display-on-hover"
           >
             <ForwardRef(Link)>
-              <Memo(Text)
+              <Memo([object Object])
                 weight={600}
               >
                 Аналоги
-              </Memo(Text)>
+              </Memo([object Object])>
             </ForwardRef(Link)>
           </div>
         </div>
@@ -900,13 +900,13 @@ exports[`<ListItem /> should render with all props 5`] = `
               <Box
                 marginTop={2}
               >
-                <Memo(Text)
+                <Memo([object Object])
                   color="gray38"
                   lineHeight={20}
                   size={14}
                 >
                   Без скидок
-                </Memo(Text)>
+                </Memo([object Object])>
               </Box>
             </div>
             <ItemRating
@@ -917,14 +917,14 @@ exports[`<ListItem /> should render with all props 5`] = `
             <Box
               marginTop={2}
             >
-              <Memo(Text)
+              <Memo([object Object])
                 color="gray38"
                 lineHeight={20}
                 size={14}
               >
                 Арт.: 
                 10000
-              </Memo(Text)>
+              </Memo([object Object])>
             </Box>
             <ItemModifier
               count={55}
@@ -988,20 +988,20 @@ exports[`<ListItem /> should render with all props 5`] = `
         <div
           className="in-stock-wrapper"
         >
-          <Memo(Text)
+          <Memo([object Object])
             weight={600}
           >
             in stock 300
-          </Memo(Text)>
+          </Memo([object Object])>
           <div
             className="analogues display-on-hover"
           >
             <ForwardRef(Link)>
-              <Memo(Text)
+              <Memo([object Object])
                 weight={600}
               >
                 Аналоги
-              </Memo(Text)>
+              </Memo([object Object])>
             </ForwardRef(Link)>
           </div>
         </div>

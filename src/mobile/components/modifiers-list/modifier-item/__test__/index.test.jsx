@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { ModifierItem } from '..';
-import Text from '@dev-dep/ui-nucleons/text';
-import Price from '@dev-dep/ui-nucleons/price';
+import { Text } from '@dev-dep/ui-nucleons/text';
+import { Price } from '@dev-dep/ui-nucleons/price';
 import CheckSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/check';
 
 describe('<ModifierItem />', () => {

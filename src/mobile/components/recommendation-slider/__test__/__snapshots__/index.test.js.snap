@@ -408,7 +408,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
             <div
               className="layout mobile "
             >
-              <Memo(Text)
+              <ForwardRef(Text)
                 element="h4"
                 lineHeight={28}
                 size={20}
@@ -419,7 +419,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                 >
                   Test title
                 </h4>
-              </Memo(Text)>
+              </ForwardRef(Text)>
             </div>
           </MobileLayout>
           <TouchSlider>
@@ -481,12 +481,9 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                               value={261}
                             >
                               <span
-                                className="price price"
+                                className="root price"
                               >
-                                261
-                                <span>
-                                   ₽
-                                </span>
+                                261 ₽
                               </span>
                             </Price>
                           </div>
@@ -497,7 +494,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                             onClick={[Function]}
                           >
                             <a
-                              className="link link color__black"
+                              className="link link"
                               href=""
                               onClick={[Function]}
                             >
@@ -555,12 +552,9 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                               value={322}
                             >
                               <span
-                                className="price price"
+                                className="root price"
                               >
-                                322
-                                <span>
-                                   ₽
-                                </span>
+                                322 ₽
                               </span>
                             </Price>
                           </div>
@@ -571,7 +565,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                             onClick={[Function]}
                           >
                             <a
-                              className="link link color__black"
+                              className="link link"
                               href=""
                               onClick={[Function]}
                             >
@@ -629,12 +623,9 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                               value={238}
                             >
                               <span
-                                className="price price"
+                                className="root price"
                               >
-                                238
-                                <span>
-                                   ₽
-                                </span>
+                                238 ₽
                               </span>
                             </Price>
                           </div>
@@ -645,7 +636,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                             onClick={[Function]}
                           >
                             <a
-                              className="link link color__black"
+                              className="link link"
                               href=""
                               onClick={[Function]}
                             >
@@ -703,12 +694,9 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                               value={171}
                             >
                               <span
-                                className="price price"
+                                className="root price"
                               >
-                                171
-                                <span>
-                                   ₽
-                                </span>
+                                171 ₽
                               </span>
                             </Price>
                           </div>
@@ -719,7 +707,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                             onClick={[Function]}
                           >
                             <a
-                              className="link link color__black"
+                              className="link link"
                               href=""
                               onClick={[Function]}
                             >
@@ -777,12 +765,9 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                               value={483}
                             >
                               <span
-                                className="price price"
+                                className="root price"
                               >
-                                483
-                                <span>
-                                   ₽
-                                </span>
+                                483 ₽
                               </span>
                             </Price>
                           </div>
@@ -793,7 +778,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                             onClick={[Function]}
                           >
                             <a
-                              className="link link color__black"
+                              className="link link"
                               href=""
                               onClick={[Function]}
                             >
@@ -851,12 +836,9 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                               value={988}
                             >
                               <span
-                                className="price price"
+                                className="root price"
                               >
-                                988
-                                <span>
-                                   ₽
-                                </span>
+                                988 ₽
                               </span>
                             </Price>
                           </div>
@@ -867,7 +849,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                             onClick={[Function]}
                           >
                             <a
-                              className="link link color__black"
+                              className="link link"
                               href=""
                               onClick={[Function]}
                             >
@@ -925,12 +907,9 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                               value={619}
                             >
                               <span
-                                className="price price"
+                                className="root price"
                               >
-                                619
-                                <span>
-                                   ₽
-                                </span>
+                                619 ₽
                               </span>
                             </Price>
                           </div>
@@ -941,7 +920,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                             onClick={[Function]}
                           >
                             <a
-                              className="link link color__black"
+                              className="link link"
                               href=""
                               onClick={[Function]}
                             >
@@ -999,12 +978,9 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                               value={539}
                             >
                               <span
-                                className="price price"
+                                className="root price"
                               >
-                                539
-                                <span>
-                                   ₽
-                                </span>
+                                539 ₽
                               </span>
                             </Price>
                             <Price
@@ -1014,12 +990,9 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                               value={595}
                             >
                               <span
-                                className="price old-price old-price"
+                                className="root old-price"
                               >
-                                595
-                                <span>
-                                   ₽
-                                </span>
+                                595 ₽
                               </span>
                             </Price>
                           </div>
@@ -1030,7 +1003,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                             onClick={[Function]}
                           >
                             <a
-                              className="link link color__black"
+                              className="link link"
                               href=""
                               onClick={[Function]}
                             >
@@ -1088,12 +1061,9 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                               value={599}
                             >
                               <span
-                                className="price price"
+                                className="root price"
                               >
-                                599
-                                <span>
-                                   ₽
-                                </span>
+                                599 ₽
                               </span>
                             </Price>
                             <Price
@@ -1103,12 +1073,9 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                               value={717}
                             >
                               <span
-                                className="price old-price old-price"
+                                className="root old-price"
                               >
-                                717
-                                <span>
-                                   ₽
-                                </span>
+                                717 ₽
                               </span>
                             </Price>
                           </div>
@@ -1119,7 +1086,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                             onClick={[Function]}
                           >
                             <a
-                              className="link link color__black"
+                              className="link link"
                               href=""
                               onClick={[Function]}
                             >
@@ -1177,12 +1144,9 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                               value={253}
                             >
                               <span
-                                className="price price"
+                                className="root price"
                               >
-                                253
-                                <span>
-                                   ₽
-                                </span>
+                                253 ₽
                               </span>
                             </Price>
                           </div>
@@ -1193,7 +1157,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                             onClick={[Function]}
                           >
                             <a
-                              className="link link color__black"
+                              className="link link"
                               href=""
                               onClick={[Function]}
                             >

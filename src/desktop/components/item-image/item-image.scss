@@ -1,5 +1,3 @@
-@import 'node_modules/@dev-dep/ui-nucleons/variables';
-
 .wrapper {
   min-width: 1px;
   position: relative;
@@ -8,10 +6,10 @@
   &.small-image {
     .image-wrapper {
       min-height: 212px;
-      @media (max-width: $mediumDesktopBreakpoint) {
+      @media (max-width: 1600px) {
         min-height: 191px;
       }
-      @media (max-width: $extraSmallDesktopBreakpoint) {
+      @media (max-width: 1280px) {
         min-height: 179px;
       }
       @media (max-width: 1024px) {
@@ -22,10 +20,10 @@
   &.big-image {
     .image-wrapper {
       min-height: 345px;
-      @media (max-width: $mediumDesktopBreakpoint) {
+      @media (max-width: 1600px) {
         min-height: 350px;
       }
-      @media (max-width: $extraSmallDesktopBreakpoint) {
+      @media (max-width: 1280px) {
         min-height: 250px;
       }
       @media (max-width: 1024px) {
@@ -149,7 +147,7 @@
   justify-content: center;
   align-items: center;
   .selection-circle {
-    background: $white;
+    background: #fff;
     width: 56px;
     height: 56px;
     border-radius: 50px;

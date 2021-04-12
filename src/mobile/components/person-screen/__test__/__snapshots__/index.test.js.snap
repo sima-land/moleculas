@@ -40,6 +40,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                       aria-hidden="true"
                       aria-label="Закрыть"
                       class="button icon stub"
+                      type="button"
                     />
                   </div>
                 </div>
@@ -53,8 +54,10 @@ exports[`<PersonScreen /> should handle props 1`] = `
                     class="group"
                   >
                     <button
+                      aria-hidden="false"
                       aria-label="Закрыть"
                       class="button icon"
+                      type="button"
                     >
                       <svg
                         aria-hidden="true"
@@ -340,14 +343,14 @@ exports[`<PersonScreen /> should handle props 1`] = `
                       aria-label="Закрыть"
                       icon={[Function]}
                       onClick={[Function]}
-                      shift={false}
                       stub={true}
                     >
                       <button
-                        aria-hidden="true"
+                        aria-hidden={true}
                         aria-label="Закрыть"
                         className="button icon stub"
                         onClick={[Function]}
+                        type="button"
                       />
                     </NavButton>
                   </div>
@@ -365,12 +368,13 @@ exports[`<PersonScreen /> should handle props 1`] = `
                       aria-label="Закрыть"
                       icon={[Function]}
                       onClick={[Function]}
-                      shift={false}
                     >
                       <button
+                        aria-hidden={false}
                         aria-label="Закрыть"
                         className="button icon"
                         onClick={[Function]}
+                        type="button"
                       >
                         <CrossSVG
                           aria-hidden="true"
@@ -502,7 +506,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                       <div
                         className="flex-grow"
                       >
-                        <Memo(Text)
+                        <ForwardRef(Text)
                           color="gray87"
                           lineHeight={24}
                           size={16}
@@ -513,14 +517,14 @@ exports[`<PersonScreen /> should handle props 1`] = `
                           >
                             example@email.com
                           </span>
-                        </Memo(Text)>
+                        </ForwardRef(Text)>
                         <Box
                           marginTop={1}
                         >
                           <div
                             className="M-t__1"
                           >
-                            <Memo(Text)
+                            <ForwardRef(Text)
                               color="gray38"
                               lineHeight={20}
                               size={14}
@@ -530,7 +534,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                               >
                                 Электронная почта
                               </span>
-                            </Memo(Text)>
+                            </ForwardRef(Text)>
                           </div>
                         </Box>
                       </div>
@@ -570,7 +574,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                       <div
                         className="flex-grow"
                       >
-                        <Memo(Text)
+                        <ForwardRef(Text)
                           color="gray87"
                           lineHeight={24}
                           size={16}
@@ -581,14 +585,14 @@ exports[`<PersonScreen /> should handle props 1`] = `
                           >
                             example@skype.com
                           </span>
-                        </Memo(Text)>
+                        </ForwardRef(Text)>
                         <Box
                           marginTop={1}
                         >
                           <div
                             className="M-t__1"
                           >
-                            <Memo(Text)
+                            <ForwardRef(Text)
                               color="gray38"
                               lineHeight={20}
                               size={14}
@@ -598,7 +602,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                               >
                                 Skype
                               </span>
-                            </Memo(Text)>
+                            </ForwardRef(Text)>
                           </div>
                         </Box>
                       </div>
@@ -654,7 +658,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                       <div
                         className="flex-grow"
                       >
-                        <Memo(Text)
+                        <ForwardRef(Text)
                           color="gray87"
                           lineHeight={24}
                           size={16}
@@ -665,14 +669,14 @@ exports[`<PersonScreen /> should handle props 1`] = `
                           >
                             88000000000 доб. 8823
                           </span>
-                        </Memo(Text)>
+                        </ForwardRef(Text)>
                         <Box
                           marginTop={1}
                         >
                           <div
                             className="M-t__1"
                           >
-                            <Memo(Text)
+                            <ForwardRef(Text)
                               color="gray38"
                               lineHeight={20}
                               size={14}
@@ -682,7 +686,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                               >
                                 Рабочий
                               </span>
-                            </Memo(Text)>
+                            </ForwardRef(Text)>
                           </div>
                         </Box>
                       </div>
@@ -722,7 +726,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                       <div
                         className="flex-grow"
                       >
-                        <Memo(Text)
+                        <ForwardRef(Text)
                           color="gray87"
                           lineHeight={24}
                           size={16}
@@ -733,14 +737,14 @@ exports[`<PersonScreen /> should handle props 1`] = `
                           >
                             +7 (900) 000 000
                           </span>
-                        </Memo(Text)>
+                        </ForwardRef(Text)>
                         <Box
                           marginTop={1}
                         >
                           <div
                             className="M-t__1"
                           >
-                            <Memo(Text)
+                            <ForwardRef(Text)
                               color="gray38"
                               lineHeight={20}
                               size={14}
@@ -750,7 +754,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                               >
                                 Сотовый
                               </span>
-                            </Memo(Text)>
+                            </ForwardRef(Text)>
                           </div>
                         </Box>
                       </div>
@@ -813,6 +817,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                       aria-hidden="true"
                       aria-label="Закрыть"
                       class="button icon stub"
+                      type="button"
                     />
                   </div>
                 </div>
@@ -826,8 +831,10 @@ exports[`<PersonScreen /> should render with name 1`] = `
                     class="group"
                   >
                     <button
+                      aria-hidden="false"
                       aria-label="Закрыть"
                       class="button icon"
+                      type="button"
                     >
                       <svg
                         aria-hidden="true"
@@ -1004,14 +1011,14 @@ exports[`<PersonScreen /> should render with name 1`] = `
                       aria-label="Закрыть"
                       icon={[Function]}
                       onClick={[Function]}
-                      shift={false}
                       stub={true}
                     >
                       <button
-                        aria-hidden="true"
+                        aria-hidden={true}
                         aria-label="Закрыть"
                         className="button icon stub"
                         onClick={[Function]}
+                        type="button"
                       />
                     </NavButton>
                   </div>
@@ -1029,12 +1036,13 @@ exports[`<PersonScreen /> should render with name 1`] = `
                       aria-label="Закрыть"
                       icon={[Function]}
                       onClick={[Function]}
-                      shift={false}
                     >
                       <button
+                        aria-hidden={false}
                         aria-label="Закрыть"
                         className="button icon"
                         onClick={[Function]}
+                        type="button"
                       >
                         <CrossSVG
                           aria-hidden="true"
@@ -1149,7 +1157,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                       <div
                         className="flex-grow"
                       >
-                        <Memo(Text)
+                        <ForwardRef(Text)
                           color="gray87"
                           lineHeight={24}
                           size={16}
@@ -1160,14 +1168,14 @@ exports[`<PersonScreen /> should render with name 1`] = `
                           >
                             88000000000 доб. 8823
                           </span>
-                        </Memo(Text)>
+                        </ForwardRef(Text)>
                         <Box
                           marginTop={1}
                         >
                           <div
                             className="M-t__1"
                           >
-                            <Memo(Text)
+                            <ForwardRef(Text)
                               color="gray38"
                               lineHeight={20}
                               size={14}
@@ -1177,7 +1185,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                               >
                                 Рабочий
                               </span>
-                            </Memo(Text)>
+                            </ForwardRef(Text)>
                           </div>
                         </Box>
                       </div>
@@ -1215,7 +1223,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                       <div
                         className="flex-grow"
                       >
-                        <Memo(Text)
+                        <ForwardRef(Text)
                           color="gray87"
                           lineHeight={24}
                           size={16}
@@ -1226,14 +1234,14 @@ exports[`<PersonScreen /> should render with name 1`] = `
                           >
                             +7 (900) 000 000
                           </span>
-                        </Memo(Text)>
+                        </ForwardRef(Text)>
                         <Box
                           marginTop={1}
                         >
                           <div
                             className="M-t__1"
                           >
-                            <Memo(Text)
+                            <ForwardRef(Text)
                               color="gray38"
                               lineHeight={20}
                               size={14}
@@ -1243,7 +1251,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                               >
                                 Сотовый
                               </span>
-                            </Memo(Text)>
+                            </ForwardRef(Text)>
                           </div>
                         </Box>
                       </div>

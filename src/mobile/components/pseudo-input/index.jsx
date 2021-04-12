@@ -3,7 +3,7 @@ import classnames from 'classnames/bind';
 import Search from '@dev-dep/ui-quarks/icons/24x24/Stroked/magnifier';
 import styles from './pseudo-input.scss';
 import Types from 'prop-types';
-import { COLORS } from '@dev-dep/ui-nucleons/constants';
+import { COLORS } from '@dev-dep/ui-nucleons/colors';
 
 const cx = classnames.bind(styles);
 
