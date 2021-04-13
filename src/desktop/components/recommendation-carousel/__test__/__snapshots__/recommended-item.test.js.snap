@@ -83,12 +83,12 @@ exports[`<RecommendedItem /> render with props should correct render with all pr
         </Price>
         <Price
           className="old-price"
+          crossedOut={true}
           currencyGrapheme="$"
-          old={true}
           value={234.9}
         >
           <span
-            className="root old-price"
+            className="root old-price crossed-out"
           >
             234,90 $
           </span>

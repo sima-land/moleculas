@@ -104,7 +104,7 @@ const RecommendedItem = ({
               value={oldPrice}
               currencyGrapheme={currencyGrapheme}
               className={cx('old-price')}
-              old
+              crossedOut
             />
           )}
         </div>
