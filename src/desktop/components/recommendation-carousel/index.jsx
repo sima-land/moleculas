@@ -1,16 +1,13 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { Carousel } from '@dev-dep/ui-nucleons/carousel';
-import RecommendedItem from './recommended-item';
-import { ArrowButton } from '@dev-dep/ui-nucleons/arrow-button';
-import withInViewportObserver from '@dev-dep/ui-nucleons/with-in-viewport-observer';
-import isFunction from 'lodash/isFunction';
+import { RecommendedItem } from './item';
 import { isNonEmptyArray } from '../../../common/helpers/is-non-empty';
-import classes from './recommendation-carousel.scss';
+import PropTypes from 'prop-types';
+import { useTooltip, useMedia, useViewport } from './utils';
 import classnames from 'classnames/bind';
-import Types from 'prop-types';
-import { useControlTooltip } from './helpers';
+import styles from './recommendation-carousel.scss';
 
-const cx = classnames.bind(classes);
+const cx = classnames.bind(styles);
 
 /**
  * Компонент карусели рекомендованных товаров.
@@ -22,146 +19,111 @@ const cx = classnames.bind(classes);
  * @param {Function} props.onQuickViewClick Обработчик клика по кнопки быстрого просмотра.
  * @param {Function} props.onInViewport Функция, вызываемая при попадании компонента в поле видимости.
  * @param {Function} props.onRequest Функция, инициализирующая загрузку рекомендаций.
- * @param {Function} props.addObserve Функция подписки на Intersection Observer.
- * @param {Function} props.addObserveWithMargin
- * Функция подписки на Intersection Observer с увеличенным пределом попадания в область видимости.
- * @param {string} props.wrapperClass Дополнительные классы обертки.
+ * @param {string} props.className Дополнительные классы обертки.
  * @return {ReactElement} Компонент карусели рекомендаций.
  */
 export const RecommendationCarousel = ({
+  className,
+  items,
+  itemSize,
+  onInViewport,
+  onItemClick,
+  onNeedRequest,
+  onQuickViewClick,
   title,
   titleContainer: Header = 'h2',
-  items,
-  onItemClick,
-  onQuickViewClick,
-  onInViewport,
-  onRequest,
-  addObserve,
-  addObserveWithMargin,
-  wrapperClass,
 }) => {
+  const stubRef = useRef();
   const sectionRef = useRef();
-  const emptyRef = useRef();
+  const tooltipRef = useRef();
+  const tooltipControl = useTooltip(tooltipRef);
+  const needBigArrows = useMedia('(min-width: 1440px)');
 
-  const { tooltipRef, onHoverQuickViewButton, onLeaveQuickViewButton } = useControlTooltip();
+  // инициируем загрузку данных, когда компонент почти попал в зону видимости
+  useViewport(stubRef, onNeedRequest);
 
-  // Отправляем статистку в ОКО, когда компонент попадает в зону видимости
-  useEffect(() => {
-    isFunction(addObserve)
-    && isFunction(onInViewport)
-    && sectionRef.current
-    && addObserve(sectionRef.current, onInViewport);
-  }, [sectionRef.current]);
-
-  // Инициируем загрузку данных, когда компонент почти попал в зону видимости
-  useEffect(() => {
-    isFunction(addObserveWithMargin)
-    && isFunction(onRequest)
-    && emptyRef.current
-    && addObserveWithMargin(emptyRef.current, onRequest);
-  }, [emptyRef.current]);
+  // отправляем статистку в ОКО, когда компонент попадает в зону видимости
+  useViewport(sectionRef, onInViewport, {
+    rootMargin: '200px 0px 200px 0px',
+  });
 
   return isNonEmptyArray(items)
     ? (
       <section
-        className={cx('wrapper', wrapperClass)}
+        className={cx('wrapper', className)}
         ref={sectionRef}
       >
         <Header className={cx('title')}>{title}</Header>
         <Carousel
           items={items}
+          controlProps={{ size: needBigArrows ? 'l' : 's' }}
           renderItem={(item, key) => (
             <RecommendedItem
               {...item}
-              onItemClick={() => isFunction(onItemClick) && onItemClick(item)}
-              onQuickViewClick={() => isFunction(onQuickViewClick) && onQuickViewClick(item)}
-              onHoverQuickViewButton={onHoverQuickViewButton}
-              onLeaveQuickViewButton={onLeaveQuickViewButton}
               key={key}
-            />
-          )}
-          renderControl={({ type, onUse }) => (
-            <ArrowButton
-              direction={type === 'backward' ? 'left' : 'right'}
-              aria-label={type === 'backward' ? 'назад' : 'вперед'}
-              className={cx(
-                'control',
-                (type === 'backward') && 'backward'
-              )}
-              onClick={onUse}
+              size={itemSize}
+              onClick={() => onItemClick && onItemClick(item)}
+              quickViewButtonProps={{
+                ...tooltipControl,
+                onClick: () => onQuickViewClick && onQuickViewClick(item),
+              }}
             />
           )}
         />
-        <div className={cx('tooltip')} ref={tooltipRef}>
+        <div ref={tooltipRef} className={cx('tooltip')}>
           Быстрый просмотр
         </div>
       </section>
     )
-    : <div ref={emptyRef}></div>;
+    : <div ref={stubRef} />;
 };
 
 RecommendationCarousel.propTypes = {
   /**
    * Заголовок карусели.
    */
-  title: Types.string,
+  title: PropTypes.string,
 
   /**
    * Элемент заголовка.
    */
-  titleContainer: Types.string,
+  titleContainer: PropTypes.string,
 
   /**
    * Массив элементов карусели.
    */
-  items: Types.arrayOf(Types.shape({
-    name: Types.string,
-    imageSrc: Types.string,
-    imageAlt: Types.string,
-    url: Types.string,
-    price: Types.number,
-    currencyGrapheme: Types.string,
-    oldPrice: Types.number,
+  items: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string,
+    imageSrc: PropTypes.string,
+    imageAlt: PropTypes.string,
+    url: PropTypes.string,
+    price: PropTypes.number,
+    currencyGrapheme: PropTypes.string,
+    oldPrice: PropTypes.number,
   })),
 
   /**
    * Обработчик клика на элементе карусели.
    */
-  onItemClick: Types.func,
+  onItemClick: PropTypes.func,
 
   /**
    * Обработчик клика на кнопку быстрого просмотра.
    */
-  onQuickViewClick: Types.func,
+  onQuickViewClick: PropTypes.func,
 
   /**
    * Функция, будет вызвана при попадании карусели во вьюпорт.
    */
-  onInViewport: Types.func,
+  onInViewport: PropTypes.func,
 
   /**
    * Функция для получения элементов карусели, будет вызвана при приближении карусели к вьюпорту.
    */
-  onRequest: Types.func,
-
-  /**
-   * Функция подписки на Intersection Observer, предоставляется HOC'ом.
-   */
-  addObserve: Types.func,
-
-  /**
-   * Функция подписки на Intersection Observer, предоставляется HOC'ом.
-   */
-  addObserveWithMargin: Types.func,
+  onNeedRequest: PropTypes.func,
 
   /**
    * Дополнительные классы обертки.
    */
-  wrapperClass: Types.string,
+  className: PropTypes.string,
 };
-
-export default withInViewportObserver(
-  withInViewportObserver(RecommendationCarousel), {
-    rootMargin: '200px 0px 200px 0px',
-  }, 'addObserveWithMargin'
-);

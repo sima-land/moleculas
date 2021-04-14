@@ -7,7 +7,7 @@ module.exports = {
     'enzyme-to-json/serializer',
   ],
   transformIgnorePatterns: [
-    '/node_modules/(?!(@SL/|middleware-axios))/',
+    '/node_modules/(?!(middleware-axios))/',
     '/node_modules/@dev-dep/ui-nucleons/.+\\.(?!(svg))([^.]+$)/',
   ],
   testPathIgnorePatterns: [
