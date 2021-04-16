@@ -41,27 +41,27 @@ exports[`ProductCard renders properly 1`] = `
         </a>
       </ForwardRef(Link)>
       <WishButton
+        checked={true}
         className="wish-button is-wished"
         disabled={[Function]}
-        isWished={true}
         onClick={[Function]}
         size={20}
       >
         <div
-          className="wish-button wish-button is-wished is-wished blocked"
+          className="button wish-button is-wished checked disabled"
           data-testid="favorite-button"
           onClick={null}
           title="Убрать из избранного"
         >
           <HeartFilledSVG
-            className="svg stroke"
+            className="svg"
             height={20}
             viewBox="0 0 24 24"
             width={20}
             xmlns="http://www.w3.org/2000/svg"
           >
             <svg
-              className="svg stroke"
+              className="svg"
               height={20}
               viewBox="0 0 24 24"
               width={20}

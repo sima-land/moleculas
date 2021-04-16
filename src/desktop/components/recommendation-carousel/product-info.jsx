@@ -40,7 +40,7 @@ export const ProductInfo = ({
       {withImageButtons && (
         <>
           <WishButton
-            isWished={favorite}
+            checked={favorite}
             className={cx('on-image-btn', 'wish')}
             onClick={withPrevent(onFavoriteClick)}
           />

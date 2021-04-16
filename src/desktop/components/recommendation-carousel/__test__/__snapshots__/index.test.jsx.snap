@@ -12,6 +12,7 @@ exports[`<RecommendationCarousel /> should handle "titleContainer" prop 1`] = `
     Array [
       Object {
         "currencyGrapheme": "₽",
+        "favorite": true,
         "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
         "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
         "name": "Ножницы портновские, 19 см, цвет чёрный",
@@ -165,6 +166,7 @@ exports[`<RecommendationCarousel /> should handle "titleContainer" prop 1`] = `
         Array [
           Object {
             "currencyGrapheme": "₽",
+            "favorite": true,
             "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
             "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
             "name": "Ножницы портновские, 19 см, цвет чёрный",
@@ -741,6 +743,7 @@ exports[`<RecommendationCarousel /> should handle "titleContainer" prop 1`] = `
                 >
                   <ProductInfo
                     currencyGrapheme="₽"
+                    favorite={true}
                     imageAlt="Ножницы портновские, 19 см, цвет чёрный, Ножницы"
                     imageSrc="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                     name="Ножницы портновские, 19 см, цвет чёрный"
@@ -1597,20 +1600,20 @@ exports[`<RecommendationCarousel /> should handle "titleContainer" prop 1`] = `
                 onClick={[Function]}
               >
                 <div
-                  className="wish-button on-image-btn wish"
+                  className="button on-image-btn wish"
                   data-testid="favorite-button"
                   onClick={[Function]}
                   title="Добавить в избранное"
                 >
                   <HeartSVG
-                    className="svg stroke"
+                    className="svg"
                     height={24}
                     viewBox="0 0 24 24"
                     width={24}
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <svg
-                      className="svg stroke"
+                      className="svg"
                       height={24}
                       viewBox="0 0 24 24"
                       width={24}
@@ -1634,14 +1637,14 @@ exports[`<RecommendationCarousel /> should handle "titleContainer" prop 1`] = `
                   title="Быстрый просмотр"
                 >
                   <QuickViewSVG
-                    className="stroke"
+                    className="svg"
                     height={24}
                     viewBox="0 0 24 24"
                     width={24}
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <svg
-                      className="stroke"
+                      className="svg"
                       height={24}
                       viewBox="0 0 24 24"
                       width={24}
@@ -1712,6 +1715,7 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
     Array [
       Object {
         "currencyGrapheme": "₽",
+        "favorite": true,
         "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
         "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
         "name": "Ножницы портновские, 19 см, цвет чёрный",
@@ -1864,6 +1868,7 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
         Array [
           Object {
             "currencyGrapheme": "₽",
+            "favorite": true,
             "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
             "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
             "name": "Ножницы портновские, 19 см, цвет чёрный",
@@ -2440,6 +2445,7 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                 >
                   <ProductInfo
                     currencyGrapheme="₽"
+                    favorite={true}
                     imageAlt="Ножницы портновские, 19 см, цвет чёрный, Ножницы"
                     imageSrc="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                     name="Ножницы портновские, 19 см, цвет чёрный"
@@ -3296,20 +3302,20 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                 onClick={[Function]}
               >
                 <div
-                  className="wish-button on-image-btn wish"
+                  className="button on-image-btn wish"
                   data-testid="favorite-button"
                   onClick={[Function]}
                   title="Добавить в избранное"
                 >
                   <HeartSVG
-                    className="svg stroke"
+                    className="svg"
                     height={24}
                     viewBox="0 0 24 24"
                     width={24}
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <svg
-                      className="svg stroke"
+                      className="svg"
                       height={24}
                       viewBox="0 0 24 24"
                       width={24}
@@ -3333,14 +3339,14 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                   title="Быстрый просмотр"
                 >
                   <QuickViewSVG
-                    className="stroke"
+                    className="svg"
                     height={24}
                     viewBox="0 0 24 24"
                     width={24}
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <svg
-                      className="stroke"
+                      className="svg"
                       height={24}
                       viewBox="0 0 24 24"
                       width={24}
@@ -3399,6 +3405,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
     Array [
       Object {
         "currencyGrapheme": "₽",
+        "favorite": true,
         "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
         "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
         "name": "Ножницы портновские, 19 см, цвет чёрный",
@@ -3551,6 +3558,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
         Array [
           Object {
             "currencyGrapheme": "₽",
+            "favorite": true,
             "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
             "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
             "name": "Ножницы портновские, 19 см, цвет чёрный",
@@ -4127,6 +4135,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                 >
                   <ProductInfo
                     currencyGrapheme="₽"
+                    favorite={true}
                     imageAlt="Ножницы портновские, 19 см, цвет чёрный, Ножницы"
                     imageSrc="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                     name="Ножницы портновские, 19 см, цвет чёрный"
@@ -4983,20 +4992,20 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                 onClick={[Function]}
               >
                 <div
-                  className="wish-button on-image-btn wish"
+                  className="button on-image-btn wish"
                   data-testid="favorite-button"
                   onClick={[Function]}
                   title="Добавить в избранное"
                 >
                   <HeartSVG
-                    className="svg stroke"
+                    className="svg"
                     height={24}
                     viewBox="0 0 24 24"
                     width={24}
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <svg
-                      className="svg stroke"
+                      className="svg"
                       height={24}
                       viewBox="0 0 24 24"
                       width={24}
@@ -5020,14 +5029,14 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                   title="Быстрый просмотр"
                 >
                   <QuickViewSVG
-                    className="stroke"
+                    className="svg"
                     height={24}
                     viewBox="0 0 24 24"
                     width={24}
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <svg
-                      className="stroke"
+                      className="svg"
                       height={24}
                       viewBox="0 0 24 24"
                       width={24}
@@ -5086,6 +5095,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
     Array [
       Object {
         "currencyGrapheme": "₽",
+        "favorite": true,
         "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
         "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
         "name": "Ножницы портновские, 19 см, цвет чёрный",
@@ -5238,6 +5248,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
         Array [
           Object {
             "currencyGrapheme": "₽",
+            "favorite": true,
             "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
             "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
             "name": "Ножницы портновские, 19 см, цвет чёрный",
@@ -5814,6 +5825,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                 >
                   <ProductInfo
                     currencyGrapheme="₽"
+                    favorite={true}
                     imageAlt="Ножницы портновские, 19 см, цвет чёрный, Ножницы"
                     imageSrc="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                     name="Ножницы портновские, 19 см, цвет чёрный"
@@ -6670,20 +6682,20 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                 onClick={[Function]}
               >
                 <div
-                  className="wish-button on-image-btn wish"
+                  className="button on-image-btn wish"
                   data-testid="favorite-button"
                   onClick={[Function]}
                   title="Добавить в избранное"
                 >
                   <HeartSVG
-                    className="svg stroke"
+                    className="svg"
                     height={24}
                     viewBox="0 0 24 24"
                     width={24}
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <svg
-                      className="svg stroke"
+                      className="svg"
                       height={24}
                       viewBox="0 0 24 24"
                       width={24}
@@ -6707,14 +6719,14 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                   title="Быстрый просмотр"
                 >
                   <QuickViewSVG
-                    className="stroke"
+                    className="svg"
                     height={24}
                     viewBox="0 0 24 24"
                     width={24}
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <svg
-                      className="stroke"
+                      className="svg"
                       height={24}
                       viewBox="0 0 24 24"
                       width={24}

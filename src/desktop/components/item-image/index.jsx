@@ -183,7 +183,7 @@ export default class ItemImage extends Component {
         )}
         {hasWishButton && (
           <WishButton
-            isWished={wishProps.isWished}
+            checked={wishProps.isWished}
             className={cx(
               'icon',
               buttonsPos,

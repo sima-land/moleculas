@@ -7,6 +7,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
     Array [
       Object {
         "currencyGrapheme": "₽",
+        "favorite": true,
         "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
         "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
         "name": "Ножницы портновские, 19 см, цвет чёрный",
@@ -144,6 +145,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
       Array [
         Object {
           "currencyGrapheme": "₽",
+          "favorite": true,
           "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
           "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
           "name": "Ножницы портновские, 19 см, цвет чёрный",
@@ -282,6 +284,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
         Array [
           Object {
             "currencyGrapheme": "₽",
+            "favorite": true,
             "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
             "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
             "name": "Ножницы портновские, 19 см, цвет чёрный",
@@ -421,6 +424,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
           Array [
             Object {
               "currencyGrapheme": "₽",
+              "favorite": true,
               "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
               "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
               "name": "Ножницы портновские, 19 см, цвет чёрный",
@@ -588,6 +592,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                     <withGlobalListeners(RecommendedItem)
                       canLoadImage={false}
                       currencyGrapheme="₽"
+                      favorite={true}
                       imageAlt="Ножницы портновские, 19 см, цвет чёрный, Ножницы"
                       imageSrc="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                       key="0"
@@ -602,6 +607,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         addGlobalListener={[Function]}
                         canLoadImage={false}
                         currencyGrapheme="₽"
+                        favorite={true}
                         imageAlt="Ножницы портновские, 19 см, цвет чёрный, Ножницы"
                         imageSrc="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                         name="Ножницы портновские, 19 см, цвет чёрный"

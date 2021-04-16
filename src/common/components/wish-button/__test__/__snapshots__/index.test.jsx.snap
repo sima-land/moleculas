@@ -2,24 +2,24 @@
 
 exports[`<WishButton /> should render with props 1`] = `
 <WishButton
-  isWished={true}
+  checked={true}
   onClick={[MockFunction]}
 >
   <div
-    className="wish-button is-wished"
+    className="button checked"
     data-testid="favorite-button"
     onClick={[MockFunction]}
     title="Убрать из избранного"
   >
     <HeartFilledSVG
-      className="svg stroke"
+      className="svg"
       height={24}
       viewBox="0 0 24 24"
       width={24}
       xmlns="http://www.w3.org/2000/svg"
     >
       <svg
-        className="svg stroke"
+        className="svg"
         height={24}
         viewBox="0 0 24 24"
         width={24}
@@ -37,19 +37,19 @@ exports[`<WishButton /> should render with props 1`] = `
 exports[`<WishButton /> should render without props 1`] = `
 <WishButton>
   <div
-    className="wish-button"
+    className="button"
     data-testid="favorite-button"
     title="Добавить в избранное"
   >
     <HeartSVG
-      className="svg stroke"
+      className="svg"
       height={24}
       viewBox="0 0 24 24"
       width={24}
       xmlns="http://www.w3.org/2000/svg"
     >
       <svg
-        className="svg stroke"
+        className="svg"
         height={24}
         viewBox="0 0 24 24"
         width={24}

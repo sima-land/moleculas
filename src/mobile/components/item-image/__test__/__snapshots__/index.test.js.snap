@@ -128,19 +128,19 @@ exports[`<ItemImage /> should render wish 1`] = `
     </div>
     <WishButton>
       <div
-        className="wish-button"
+        className="button"
         data-testid="favorite-button"
         title="Добавить в избранное"
       >
         <HeartSVG
-          className="svg stroke"
+          className="svg"
           height={24}
           viewBox="0 0 24 24"
           width={24}
           xmlns="http://www.w3.org/2000/svg"
         >
           <svg
-            className="svg stroke"
+            className="svg"
             height={24}
             viewBox="0 0 24 24"
             width={24}

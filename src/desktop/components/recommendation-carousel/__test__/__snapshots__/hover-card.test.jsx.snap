@@ -49,20 +49,20 @@ exports[`<HoverCard /> should renders correctly 1`] = `
             onClick={[Function]}
           >
             <div
-              className="wish-button on-image-btn wish"
+              className="button on-image-btn wish"
               data-testid="favorite-button"
               onClick={[Function]}
               title="Добавить в избранное"
             >
               <HeartSVG
-                className="svg stroke"
+                className="svg"
                 height={24}
                 viewBox="0 0 24 24"
                 width={24}
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="svg stroke"
+                  className="svg"
                   height={24}
                   viewBox="0 0 24 24"
                   width={24}
@@ -86,14 +86,14 @@ exports[`<HoverCard /> should renders correctly 1`] = `
               title="Быстрый просмотр"
             >
               <QuickViewSVG
-                className="stroke"
+                className="svg"
                 height={24}
                 viewBox="0 0 24 24"
                 width={24}
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="stroke"
+                  className="svg"
                   height={24}
                   viewBox="0 0 24 24"
                   width={24}
@@ -191,20 +191,20 @@ exports[`<HoverCard /> should set control to ref 1`] = `
             onClick={[Function]}
           >
             <div
-              className="wish-button on-image-btn wish"
+              className="button on-image-btn wish"
               data-testid="favorite-button"
               onClick={[Function]}
               title="Добавить в избранное"
             >
               <HeartSVG
-                className="svg stroke"
+                className="svg"
                 height={24}
                 viewBox="0 0 24 24"
                 width={24}
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="svg stroke"
+                  className="svg"
                   height={24}
                   viewBox="0 0 24 24"
                   width={24}
@@ -228,14 +228,14 @@ exports[`<HoverCard /> should set control to ref 1`] = `
               title="Быстрый просмотр"
             >
               <QuickViewSVG
-                className="stroke"
+                className="svg"
                 height={24}
                 viewBox="0 0 24 24"
                 width={24}
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="stroke"
+                  className="svg"
                   height={24}
                   viewBox="0 0 24 24"
                   width={24}
@@ -352,25 +352,25 @@ exports[`<HoverCard /> should set control to ref 2`] = `
             </div>
           </Image>
           <WishButton
+            checked={false}
             className="on-image-btn wish"
-            isWished={false}
             onClick={[Function]}
           >
             <div
-              className="wish-button on-image-btn wish"
+              className="button on-image-btn wish"
               data-testid="favorite-button"
               onClick={[Function]}
               title="Добавить в избранное"
             >
               <HeartSVG
-                className="svg stroke"
+                className="svg"
                 height={24}
                 viewBox="0 0 24 24"
                 width={24}
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="svg stroke"
+                  className="svg"
                   height={24}
                   viewBox="0 0 24 24"
                   width={24}
@@ -394,14 +394,14 @@ exports[`<HoverCard /> should set control to ref 2`] = `
               title="Быстрый просмотр"
             >
               <QuickViewSVG
-                className="stroke"
+                className="svg"
                 height={24}
                 viewBox="0 0 24 24"
                 width={24}
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="stroke"
+                  className="svg"
                   height={24}
                   viewBox="0 0 24 24"
                   width={24}

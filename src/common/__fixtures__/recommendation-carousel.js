@@ -7,6 +7,7 @@ export const items = [
     price: 261,
     currencyGrapheme: '₽',
     oldPrice: null,
+    favorite: true,
   },
   {
     name: 'Ножницы портновские, 31 см, цвет чёрный/голубой',

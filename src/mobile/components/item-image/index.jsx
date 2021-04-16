@@ -112,7 +112,7 @@ export default class ItemImage extends Component {
         )}
         {hasWishButton && (
           <WishButton
-            isWished={wishProps.isWished}
+            checked={wishProps.isWished}
             className={wishProps.className}
             onClick={wishProps.onClick}
             disabled={isFetchingWishItems}

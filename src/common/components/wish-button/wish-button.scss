@@ -1,23 +1,20 @@
 @use 'node_modules/@dev-dep/ui-nucleons/colors';
 
-.wish-button {
-  color: colors.$additional-red;
-  &:not(.is-wished) {
-    color: colors.$gray87;
+.button {
+  color: colors.$gray87;
+  &:hover {
+    color: colors.$gray54;
   }
-  .stroke {
+  &.checked {
+    color: colors.$additional-red;
+  }
+  &.disabled {
+    cursor: auto;
+  }
+  .svg {
     overflow: visible;
     stroke-width: 1;
     stroke: #f5f5f5;
-  }
-  &.blocked {
-    cursor: auto;
-  }
-  &:hover,
-  &.active {
-    color: colors.$additional-red;
-  }
-  .svg {
     fill: currentColor;
   }
 }
