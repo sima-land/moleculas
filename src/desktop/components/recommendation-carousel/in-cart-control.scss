@@ -1,0 +1,19 @@
+@use 'node_modules/@dev-dep/ui-nucleons/colors';
+
+.root {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button {
+  flex-shrink: 0;
+  width: 122px;
+  margin-right: 16px;
+}
+
+.unit-text {
+  padding-top: 12px; // чтобы при переносе на следующую строку правильно отступил от кнопки
+  font-size: 12px;
+  line-height: 16px;
+  color: colors.$gray38;
+}

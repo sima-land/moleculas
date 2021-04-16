@@ -4,8 +4,11 @@ import { act } from 'react-dom/test-utils';
 import { RecommendationCarousel } from '..';
 import { items } from '../../../../common/__fixtures__/recommendation-carousel';
 import { useMedia } from '../utils';
-import { RecommendedItem } from '../item';
+import { HoverCard } from '../hover-card';
+import { ProductCard } from '../product-card';
+import { ProductInfo } from '../product-info';
 import { Link } from '@dev-dep/ui-nucleons/link';
+import { Carousel } from '@dev-dep/ui-nucleons/carousel';
 
 jest.mock('../utils', () => {
   const original = jest.requireActual('../utils');
@@ -20,6 +23,15 @@ jest.mock('../utils', () => {
 });
 
 describe('<RecommendationCarousel />', () => {
+  const Find = {
+    hoverCardItemName: wrapper => wrapper.find(HoverCard)
+      .find(ProductCard)
+      .find(ProductInfo)
+      .find(Link)
+      .text(),
+    item: wrapper => wrapper.find('[data-testid="reco-item"]'),
+  };
+
   it('should renders correctly', () => {
     const wrapper = mount(
       <RecommendationCarousel
@@ -73,45 +85,58 @@ describe('<RecommendationCarousel />', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should handle "onItemClick" prop', () => {
-    const spy = jest.fn();
-
+  it('should handle item mouseenter event', () => {
     const wrapper = mount(
       <RecommendationCarousel
         title='Hello, world!'
+        titleContainer='h1'
         items={items}
-        onItemClick={spy}
+        itemSize={{ xs: 3 }}
+        className='additional-class'
       />
     );
 
-    expect(spy).toBeCalledTimes(0);
-
     act(() => {
-      wrapper.find(RecommendedItem).at(0).find(Link).simulate('click');
+      Find.item(wrapper).at(0).simulate('mouseenter');
     });
     wrapper.update();
 
-    expect(spy).toBeCalledTimes(1);
+    expect(Find.hoverCardItemName(wrapper)).toBe(items[0].name);
   });
 
-  it('should handle "onQuickViewClick" prop', () => {
-    const spy = jest.fn();
+  it('should handle carousel slide', () => {
+    jest.useFakeTimers();
 
     const wrapper = mount(
       <RecommendationCarousel
         title='Hello, world!'
+        titleContainer='h1'
         items={items}
-        onQuickViewClick={spy}
+        itemSize={{ xs: 3 }}
       />
     );
 
-    expect(spy).toBeCalledTimes(0);
-
     act(() => {
-      wrapper.find(RecommendedItem).at(0).find('[data-testid="reco-item:quick-view"]').simulate('click');
+      wrapper.find(Carousel).prop('onChangeTargetIndex')();
     });
     wrapper.update();
 
-    expect(spy).toBeCalledTimes(1);
+    expect(Find.hoverCardItemName(wrapper)).toBe('');
+
+    act(() => {
+      Find.item(wrapper).at(0).simulate('mouseenter');
+    });
+    wrapper.update();
+
+    expect(Find.hoverCardItemName(wrapper)).toBe('');
+
+    jest.advanceTimersByTime(400);
+
+    act(() => {
+      Find.item(wrapper).at(0).simulate('mouseenter');
+    });
+    wrapper.update();
+
+    expect(Find.hoverCardItemName(wrapper)).toBe(items[0].name);
   });
 });

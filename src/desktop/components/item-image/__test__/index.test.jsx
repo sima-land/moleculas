@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { act } from 'react-dom/test-utils';
 import { mount, shallow } from 'enzyme';
-import ItemImage from '../index';
-import WishButton from '../../../../common/components/wish-button';
-import QuickViewButton from '../../../../common/components/quick-view-button';
+import ItemImage from '..';
+import { WishButton } from '../../../../common/components/wish-button';
+import { QuickViewButton } from '../../../../common/components/quick-view-button';
 
 describe('<ItemImage />', () => {
   it('should render without props', () => {

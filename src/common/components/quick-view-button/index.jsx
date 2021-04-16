@@ -22,6 +22,7 @@ export const QuickViewButton = ({
     title='Быстрый просмотр'
     className={cx('button', className)}
     onClick={onClick}
+    data-testid='quick-view-button'
   >
     <QuickViewSVG
       className={cx('stroke')}
@@ -30,5 +31,3 @@ export const QuickViewButton = ({
     />
   </div>
 );
-
-export default QuickViewButton;

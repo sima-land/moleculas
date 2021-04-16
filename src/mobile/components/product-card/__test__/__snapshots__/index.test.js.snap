@@ -42,13 +42,14 @@ exports[`ProductCard renders properly 1`] = `
       </ForwardRef(Link)>
       <WishButton
         className="wish-button is-wished"
-        isFetchingWishItems={[Function]}
+        disabled={[Function]}
         isWished={true}
         onClick={[Function]}
         size={20}
       >
         <div
           className="wish-button wish-button is-wished is-wished blocked"
+          data-testid="favorite-button"
           onClick={null}
           title="Убрать из избранного"
         >

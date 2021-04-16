@@ -12,7 +12,7 @@ const cx = classnames.bind(style);
  * @param {boolean} props.isWished Признак товара в избранном.
  * @param {string} props.className Дополнительный класс для компонента.
  * @param {Function} props.onClick Обработчик клика по избранному.
- * @param {boolean} props.isFetchingWishItems Признак загрузки добавления товара в список избранного.
+ * @param {boolean} props.disabled Признак загрузки добавления товара в список избранного.
  * @param {number} props.size Размер иконки.
  * @return {ReactElement} Компонент добавления в избранное.
  */
@@ -20,7 +20,7 @@ export const WishButton = ({
   isWished,
   className,
   onClick,
-  isFetchingWishItems,
+  disabled,
   size = 24,
 }) => {
   const Icon = isWished ? HeartFilledSVG : HeartSVG;
@@ -32,9 +32,10 @@ export const WishButton = ({
         'wish-button',
         className,
         isWished && 'is-wished',
-        isFetchingWishItems && 'blocked'
+        disabled && 'blocked'
       )}
-      onClick={isFetchingWishItems ? null : onClick}
+      onClick={disabled ? null : onClick}
+      data-testid='favorite-button'
     >
       <Icon
         viewBox='0 0 24 24'
@@ -45,5 +46,3 @@ export const WishButton = ({
     </div>
   );
 };
-
-export default WishButton;

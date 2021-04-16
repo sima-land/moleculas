@@ -6,8 +6,8 @@ import style from './item-image.scss';
 import FlagsList from '../../../common/components/flags-list';
 import EighteenPlusSVG from '../../../common/icons/eighteen-plus.svg';
 import SelectedSVG from '../../../common/icons/selected.svg';
-import WishButton from '../../../common/components/wish-button';
-import QuickViewButton from '../../../common/components/quick-view-button';
+import { WishButton } from '../../../common/components/wish-button';
+import { QuickViewButton } from '../../../common/components/quick-view-button';
 import TrashCartSVG from '../../../common/icons/trash-cart.svg';
 
 const cx = classnames.bind(style);
@@ -191,7 +191,7 @@ export default class ItemImage extends Component {
               wishProps.className
             )}
             onClick={wishProps.onClick}
-            isFetchingWishItems={isFetchingWishItems}
+            disabled={isFetchingWishItems}
           />
         )}
         {hasQuickPreview && (

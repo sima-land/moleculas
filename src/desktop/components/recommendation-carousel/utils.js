@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import on from '@dev-dep/ui-nucleons/helpers/on';
 
 /**
@@ -83,4 +83,23 @@ export const useViewport = (ref, callback, options = {}) => {
       return () => observer.disconnect();
     }
   }, []);
+};
+
+/**
+ * Возвращает объект работы с флагом, который автоматически вовзращается в true через заданный промежуток времени.
+ * @return {{ allowed, disallowFor }} Объект работы с флагом.
+ */
+export const useAllowFlag = () => {
+  const ref = useRef(true);
+  const timeoutIdRef = useRef();
+
+  return {
+    allowed: () => ref.current,
+
+    disallowFor: timeout => {
+      clearTimeout(timeoutIdRef.current);
+      ref.current = false;
+      timeoutIdRef.current = setTimeout(() => ref.current = true, timeout);
+    },
+  };
 };

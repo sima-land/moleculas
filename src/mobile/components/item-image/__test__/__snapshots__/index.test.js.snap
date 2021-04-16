@@ -129,6 +129,7 @@ exports[`<ItemImage /> should render wish 1`] = `
     <WishButton>
       <div
         className="wish-button"
+        data-testid="favorite-button"
         title="Добавить в избранное"
       >
         <HeartSVG

@@ -1,7 +1,6 @@
 @use 'node_modules/@dev-dep/ui-nucleons/colors';
 
 .button {
-  opacity: 0;
   color: colors.$gray87;
   .stroke {
     overflow: visible;
