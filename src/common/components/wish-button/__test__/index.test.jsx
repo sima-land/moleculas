@@ -1,31 +1,31 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import WishButton from '../index';
+import { mount } from 'enzyme';
+import { WishButton } from '..';
 
 describe('<WishButton />', () => {
   it('should render without props', () => {
     const wrapper = mount(<WishButton />);
     expect(wrapper).toMatchSnapshot();
   });
+
   it('should render with props', () => {
     const onClick = jest.fn();
     const wrapper = mount(<WishButton isWished onClick={onClick} />);
     expect(wrapper).toMatchSnapshot();
   });
-  it('onClick not to have been called if isFetchingWishItems', () => {
+
+  it('onClick not to have been called if disabled', () => {
     const spy = jest.fn();
-    const wrapper = shallow(
-      <WishButton
-        onClick={spy}
-        isFetchingWishItems
-      />
+
+    const wrapper = mount(
+      <WishButton onClick={spy} disabled />
     );
     expect(spy).toHaveBeenCalledTimes(0);
 
     wrapper.simulate('click');
     expect(spy).toHaveBeenCalledTimes(0);
 
-    wrapper.setProps({ isFetchingWishItems: false });
+    wrapper.setProps({ disabled: false });
     wrapper.simulate('click');
     expect(spy).toHaveBeenCalledTimes(1);
   });

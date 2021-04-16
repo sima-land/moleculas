@@ -24,6 +24,44 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
         "url": "",
       },
       Object {
+        "badges": Array [
+          Object {
+            "color": "#b52ea8",
+            "fields": Array [
+              Object {
+                "type": "text",
+                "value": "-56%",
+              },
+            ],
+          },
+          Object {
+            "color": "#ff7200",
+            "fields": Array [
+              Object {
+                "type": "text",
+                "value": "3 по цене 2",
+              },
+            ],
+          },
+          Object {
+            "color": "#2962ff",
+            "fields": Array [
+              Object {
+                "type": "text",
+                "value": "Товар месяца",
+              },
+            ],
+          },
+          Object {
+            "color": "#00b8d4",
+            "fields": Array [
+              Object {
+                "type": "text",
+                "value": "Акция",
+              },
+            ],
+          },
+        ],
         "currencyGrapheme": "₽",
         "imageAlt": "Ножницы портновские, 21,5 см, цвет чёрный/голубой, Ножницы",
         "imageSrc": "https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773",
@@ -123,6 +161,44 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
           "url": "",
         },
         Object {
+          "badges": Array [
+            Object {
+              "color": "#b52ea8",
+              "fields": Array [
+                Object {
+                  "type": "text",
+                  "value": "-56%",
+                },
+              ],
+            },
+            Object {
+              "color": "#ff7200",
+              "fields": Array [
+                Object {
+                  "type": "text",
+                  "value": "3 по цене 2",
+                },
+              ],
+            },
+            Object {
+              "color": "#2962ff",
+              "fields": Array [
+                Object {
+                  "type": "text",
+                  "value": "Товар месяца",
+                },
+              ],
+            },
+            Object {
+              "color": "#00b8d4",
+              "fields": Array [
+                Object {
+                  "type": "text",
+                  "value": "Акция",
+                },
+              ],
+            },
+          ],
           "currencyGrapheme": "₽",
           "imageAlt": "Ножницы портновские, 21,5 см, цвет чёрный/голубой, Ножницы",
           "imageSrc": "https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773",
@@ -223,6 +299,44 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
             "url": "",
           },
           Object {
+            "badges": Array [
+              Object {
+                "color": "#b52ea8",
+                "fields": Array [
+                  Object {
+                    "type": "text",
+                    "value": "-56%",
+                  },
+                ],
+              },
+              Object {
+                "color": "#ff7200",
+                "fields": Array [
+                  Object {
+                    "type": "text",
+                    "value": "3 по цене 2",
+                  },
+                ],
+              },
+              Object {
+                "color": "#2962ff",
+                "fields": Array [
+                  Object {
+                    "type": "text",
+                    "value": "Товар месяца",
+                  },
+                ],
+              },
+              Object {
+                "color": "#00b8d4",
+                "fields": Array [
+                  Object {
+                    "type": "text",
+                    "value": "Акция",
+                  },
+                ],
+              },
+            ],
             "currencyGrapheme": "₽",
             "imageAlt": "Ножницы портновские, 21,5 см, цвет чёрный/голубой, Ножницы",
             "imageSrc": "https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773",
@@ -324,6 +438,44 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
               "url": "",
             },
             Object {
+              "badges": Array [
+                Object {
+                  "color": "#b52ea8",
+                  "fields": Array [
+                    Object {
+                      "type": "text",
+                      "value": "-56%",
+                    },
+                  ],
+                },
+                Object {
+                  "color": "#ff7200",
+                  "fields": Array [
+                    Object {
+                      "type": "text",
+                      "value": "3 по цене 2",
+                    },
+                  ],
+                },
+                Object {
+                  "color": "#2962ff",
+                  "fields": Array [
+                    Object {
+                      "type": "text",
+                      "value": "Товар месяца",
+                    },
+                  ],
+                },
+                Object {
+                  "color": "#00b8d4",
+                  "fields": Array [
+                    Object {
+                      "type": "text",
+                      "value": "Акция",
+                    },
+                  ],
+                },
+              ],
               "currencyGrapheme": "₽",
               "imageAlt": "Ножницы портновские, 21,5 см, цвет чёрный/голубой, Ножницы",
               "imageSrc": "https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773",
@@ -576,6 +728,46 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                       </RecommendedItem>
                     </withGlobalListeners(RecommendedItem)>
                     <withGlobalListeners(RecommendedItem)
+                      badges={
+                        Array [
+                          Object {
+                            "color": "#b52ea8",
+                            "fields": Array [
+                              Object {
+                                "type": "text",
+                                "value": "-56%",
+                              },
+                            ],
+                          },
+                          Object {
+                            "color": "#ff7200",
+                            "fields": Array [
+                              Object {
+                                "type": "text",
+                                "value": "3 по цене 2",
+                              },
+                            ],
+                          },
+                          Object {
+                            "color": "#2962ff",
+                            "fields": Array [
+                              Object {
+                                "type": "text",
+                                "value": "Товар месяца",
+                              },
+                            ],
+                          },
+                          Object {
+                            "color": "#00b8d4",
+                            "fields": Array [
+                              Object {
+                                "type": "text",
+                                "value": "Акция",
+                              },
+                            ],
+                          },
+                        ]
+                      }
                       canLoadImage={false}
                       currencyGrapheme="₽"
                       imageAlt="Ножницы портновские, 21,5 см, цвет чёрный/голубой, Ножницы"
@@ -590,6 +782,46 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                     >
                       <RecommendedItem
                         addGlobalListener={[Function]}
+                        badges={
+                          Array [
+                            Object {
+                              "color": "#b52ea8",
+                              "fields": Array [
+                                Object {
+                                  "type": "text",
+                                  "value": "-56%",
+                                },
+                              ],
+                            },
+                            Object {
+                              "color": "#ff7200",
+                              "fields": Array [
+                                Object {
+                                  "type": "text",
+                                  "value": "3 по цене 2",
+                                },
+                              ],
+                            },
+                            Object {
+                              "color": "#2962ff",
+                              "fields": Array [
+                                Object {
+                                  "type": "text",
+                                  "value": "Товар месяца",
+                                },
+                              ],
+                            },
+                            Object {
+                              "color": "#00b8d4",
+                              "fields": Array [
+                                Object {
+                                  "type": "text",
+                                  "value": "Акция",
+                                },
+                              ],
+                            },
+                          ]
+                        }
                         canLoadImage={false}
                         currencyGrapheme="₽"
                         imageAlt="Ножницы портновские, 21,5 см, цвет чёрный/голубой, Ножницы"

@@ -8,6 +8,7 @@ exports[`<QuickViewButton /> should works with default props 1`] = `
 >
   <div
     className="button btn"
+    data-testid="quick-view-button"
     onClick={[MockFunction]}
     title="Быстрый просмотр"
   >
@@ -38,6 +39,7 @@ exports[`<QuickViewButton /> should works without props 1`] = `
 <QuickViewButton>
   <div
     className="button"
+    data-testid="quick-view-button"
     title="Быстрый просмотр"
   >
     <QuickViewSVG

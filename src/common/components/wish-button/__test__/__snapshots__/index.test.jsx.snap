@@ -7,6 +7,7 @@ exports[`<WishButton /> should render with props 1`] = `
 >
   <div
     className="wish-button is-wished"
+    data-testid="favorite-button"
     onClick={[MockFunction]}
     title="Убрать из избранного"
   >
@@ -37,6 +38,7 @@ exports[`<WishButton /> should render without props 1`] = `
 <WishButton>
   <div
     className="wish-button"
+    data-testid="favorite-button"
     title="Добавить в избранное"
   >
     <HeartSVG

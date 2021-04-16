@@ -5,7 +5,7 @@ import style from './item-image.scss';
 import classnames from 'classnames/bind';
 import FlagsList from '../../../common/components/flags-list';
 import EighteenPlusSVG from '../../../common/icons/eighteen-plus.svg';
-import WishButton from '../../../common/components/wish-button';
+import { WishButton } from '../../../common/components/wish-button';
 
 const cx = classnames.bind(style);
 
@@ -115,7 +115,7 @@ export default class ItemImage extends Component {
             isWished={wishProps.isWished}
             className={wishProps.className}
             onClick={wishProps.onClick}
-            isFetchingWishItems={isFetchingWishItems}
+            disabled={isFetchingWishItems}
           />
         )}
       </div>

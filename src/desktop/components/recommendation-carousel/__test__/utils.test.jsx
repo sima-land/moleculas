@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { useTooltip, useMedia, useViewport } from '../utils';
+import { useTooltip, useMedia, useViewport, useAllowFlag } from '../utils';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act, Simulate } from 'react-dom/test-utils';
 
@@ -237,5 +237,80 @@ describe('useViewport', () => {
     });
 
     expect(FakeIntersectionObserver.instances[0].disconnect).toBeCalledTimes(1);
+  });
+});
+
+describe('useAllowFlag', () => {
+  const TestComponent = ({ callback }) => {
+    const flag = useAllowFlag();
+
+    return (
+      <>
+        <div
+          className='test-one'
+          onClick={() => flag.allowed() && callback()}
+        />
+        <div
+          className='test-two'
+          onClick={() => flag.disallowFor(500)}
+        />
+      </>
+    );
+  };
+
+  let container;
+
+  beforeEach(() => {
+    container = document.createElement('div');
+    document.body.append(container);
+  });
+
+  afterEach(() => {
+    container.remove();
+  });
+
+  it('should works', () => {
+    jest.useFakeTimers();
+
+    const spy = jest.fn();
+
+    act(() => {
+      render(<TestComponent callback={spy} />, container);
+    });
+
+    expect(spy).toBeCalledTimes(0);
+
+    act(() => {
+      Simulate.click(container.querySelector('.test-one'));
+    });
+
+    expect(spy).toBeCalledTimes(1);
+
+    act(() => {
+      Simulate.click(container.querySelector('.test-two'));
+      Simulate.click(container.querySelector('.test-one'));
+    });
+
+    expect(spy).toBeCalledTimes(1);
+
+    act(() => {
+      jest.advanceTimersByTime(200);
+    });
+
+    act(() => {
+      Simulate.click(container.querySelector('.test-one'));
+    });
+
+    expect(spy).toBeCalledTimes(1);
+
+    act(() => {
+      jest.advanceTimersByTime(400);
+    });
+
+    act(() => {
+      Simulate.click(container.querySelector('.test-one'));
+    });
+
+    expect(spy).toBeCalledTimes(2);
   });
 });

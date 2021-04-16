@@ -1,0 +1,17 @@
+@use 'node_modules/@dev-dep/ui-nucleons/colors';
+
+.root {
+  padding: 16px 16px 24px;
+  background: #fff;
+}
+
+.stepper {
+  margin-top: 16px;
+}
+
+.bottom-text {
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 16px;
+  color: colors.$gray38;
+}

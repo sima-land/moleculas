@@ -1,6 +1,20 @@
+@use 'node_modules/@dev-dep/ui-nucleons/breakpoints';
 @use 'node_modules/@dev-dep/ui-nucleons/colors';
 
-.wrapper {
+$breakpoints: 'xs', 's', 'm', 'l', 'xl';
+$gutter: 32px;
+
+@mixin sizes ($key) {
+  // в соответствии с гайдами ширина может быть 2/3/4
+  @for $i from 2 through 4 {
+    .size-#{$key}-#{$i} {
+      width: calc((100% - (((12 / #{$i}) - 1) * #{$gutter})) * (#{$i} / 12));
+    }
+  }
+}
+
+.root {
+  position: relative;
   width: 100%;
 }
 
@@ -10,28 +24,20 @@
   margin: 0 0 32px;
 }
 
-.tooltip {
-  opacity: 0;
-  background: colors.$gray76;
-  color: colors.$white;
-  position: absolute;
-  pointer-events: none;
-  z-index: 5;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 8px;
-  font-size: 14px;
-  line-height: 20px;
-  white-space: nowrap;
-  border-radius: 4px;
-  &::after {
-    content: '';
-    position: fixed;
-    top: 50%;
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    left: 100%;
-    border-color: transparent transparent transparent colors.$gray76;
+.item {
+  flex-shrink: 0;
+  &:not(:last-child) {
+    margin-right: $gutter;
+  }
+}
+
+@each $key in $breakpoints {
+  @include breakpoints.up($key) {
+    @include sizes($key);
+  }
+  @if $key == 'xs' {
+    @include breakpoints.down($key) {
+      @include sizes($key);
+    }
   }
 }

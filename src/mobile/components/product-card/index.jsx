@@ -6,7 +6,7 @@ import { Link } from '@dev-dep/ui-nucleons/link';
 import { Price } from '@dev-dep/ui-nucleons/price';
 import { Box } from '@dev-dep/ui-nucleons/box';
 import { Text } from '@dev-dep/ui-nucleons/text';
-import WishButton from '../../../common/components/wish-button';
+import { WishButton } from '../../../common/components/wish-button';
 
 const cx = classnames.bind(styles);
 
@@ -28,7 +28,7 @@ const cx = classnames.bind(styles);
  * @param { number } props.itemPrice Цена товара за единицу.
  * @param { Function } props.onWishButtonClick Обработчик добавления/удаления в избранное.
  * @param { Function } props.onActionsClick Обработчик нажатия на кнопку действий над товаром.
- * @param { Function } props.isFetchingWishItems Признак загрузки добавления товара в список избранного.
+ * @param { Function } props.disabled Признак загрузки добавления товара в список избранного.
  * @return { ReactElement } Компонент карточки товара.
  */
 const ProductCard = (
@@ -61,7 +61,7 @@ const ProductCard = (
         className={cx('wish-button', { 'is-wished': isWished })}
         size={20}
         isWished={isWished}
-        isFetchingWishItems={isFetchingWishItems}
+        disabled={isFetchingWishItems}
       />
     </div>
     <div className={cx('info-column')}>

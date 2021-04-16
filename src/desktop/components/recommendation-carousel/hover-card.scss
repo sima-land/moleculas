@@ -1,0 +1,11 @@
+.card {
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}

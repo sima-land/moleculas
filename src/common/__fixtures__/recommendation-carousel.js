@@ -25,6 +25,12 @@ export const items = [
     price: 238,
     currencyGrapheme: '₽',
     oldPrice: null,
+    badges: [
+      { color: '#b52ea8', fields: [{ type: 'text', value: '-56%' }] },
+      { color: '#ff7200', fields: [{ type: 'text', value: '3 по цене 2' }] },
+      { color: '#2962ff', fields: [{ type: 'text', value: 'Товар месяца' }] },
+      { color: '#00b8d4', fields: [{ type: 'text', value: 'Акция' }] },
+    ],
   },
   {
     name: 'Ножницы портновские, 23 см, цвет МИКС',
