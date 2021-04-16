@@ -25,7 +25,7 @@ export const QuickViewButton = ({
     data-testid='quick-view-button'
   >
     <QuickViewSVG
-      className={cx('stroke')}
+      className={cx('svg')}
       width={size}
       height={size}
     />

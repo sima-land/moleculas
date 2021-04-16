@@ -10,7 +10,7 @@ describe('<WishButton />', () => {
 
   it('should render with props', () => {
     const onClick = jest.fn();
-    const wrapper = mount(<WishButton isWished onClick={onClick} />);
+    const wrapper = mount(<WishButton checked onClick={onClick} />);
     expect(wrapper).toMatchSnapshot();
   });
 

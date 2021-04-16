@@ -2,12 +2,13 @@
 
 .button {
   color: colors.$gray87;
-  .stroke {
+  &:hover {
+    color: colors.$gray54;
+  }
+  .svg {
     overflow: visible;
     stroke-width: 1;
     stroke: colors.$gray4;
-  }
-  &:hover {
-    color: colors.$additional-red;
+    fill: currentColor;
   }
 }

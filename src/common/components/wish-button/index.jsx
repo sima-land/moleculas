@@ -1,10 +1,10 @@
 import React from 'react';
 import HeartSVG from '../../icons/heart.svg';
 import HeartFilledSVG from '../../icons/filled-heart.svg';
-import style from './wish-button.scss';
 import classnames from 'classnames/bind';
+import styles from './wish-button.scss';
 
-const cx = classnames.bind(style);
+const cx = classnames.bind(styles);
 
 /**
  * Компонент добавления в избранное.
@@ -17,29 +17,24 @@ const cx = classnames.bind(style);
  * @return {ReactElement} Компонент добавления в избранное.
  */
 export const WishButton = ({
-  isWished,
+  checked,
   className,
   onClick,
   disabled,
   size = 24,
 }) => {
-  const Icon = isWished ? HeartFilledSVG : HeartSVG;
+  const Icon = checked ? HeartFilledSVG : HeartSVG;
 
   return (
     <div
-      title={isWished ? 'Убрать из избранного' : 'Добавить в избранное'}
-      className={cx(
-        'wish-button',
-        className,
-        isWished && 'is-wished',
-        disabled && 'blocked'
-      )}
+      title={checked ? 'Убрать из избранного' : 'Добавить в избранное'}
+      className={cx('button', className, { checked, disabled })}
       onClick={disabled ? null : onClick}
       data-testid='favorite-button'
     >
       <Icon
         viewBox='0 0 24 24'
-        className={cx('svg', 'stroke')}
+        className={cx('svg')}
         width={size}
         height={size}
       />

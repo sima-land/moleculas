@@ -60,7 +60,7 @@ const ProductCard = (
         onClick={onWishButtonClick}
         className={cx('wish-button', { 'is-wished': isWished })}
         size={20}
-        isWished={isWished}
+        checked={isWished}
         disabled={isFetchingWishItems}
       />
     </div>

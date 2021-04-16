@@ -13,14 +13,14 @@ exports[`<QuickViewButton /> should works with default props 1`] = `
     title="Быстрый просмотр"
   >
     <QuickViewSVG
-      className="stroke"
+      className="svg"
       height={15}
       viewBox="0 0 24 24"
       width={15}
       xmlns="http://www.w3.org/2000/svg"
     >
       <svg
-        className="stroke"
+        className="svg"
         height={15}
         viewBox="0 0 24 24"
         width={15}
@@ -43,14 +43,14 @@ exports[`<QuickViewButton /> should works without props 1`] = `
     title="Быстрый просмотр"
   >
     <QuickViewSVG
-      className="stroke"
+      className="svg"
       height={24}
       viewBox="0 0 24 24"
       width={24}
       xmlns="http://www.w3.org/2000/svg"
     >
       <svg
-        className="stroke"
+        className="svg"
         height={24}
         viewBox="0 0 24 24"
         width={24}

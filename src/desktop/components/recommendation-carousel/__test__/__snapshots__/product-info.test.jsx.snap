@@ -32,25 +32,25 @@ exports[`<ProductInfo /> should renders correctly 1`] = `
       </div>
     </Image>
     <WishButton
+      checked={true}
       className="on-image-btn wish"
-      isWished={true}
       onClick={[Function]}
     >
       <div
-        className="wish-button on-image-btn wish is-wished"
+        className="button on-image-btn wish checked"
         data-testid="favorite-button"
         onClick={[Function]}
         title="Убрать из избранного"
       >
         <HeartFilledSVG
-          className="svg stroke"
+          className="svg"
           height={24}
           viewBox="0 0 24 24"
           width={24}
           xmlns="http://www.w3.org/2000/svg"
         >
           <svg
-            className="svg stroke"
+            className="svg"
             height={24}
             viewBox="0 0 24 24"
             width={24}
@@ -74,14 +74,14 @@ exports[`<ProductInfo /> should renders correctly 1`] = `
         title="Быстрый просмотр"
       >
         <QuickViewSVG
-          className="stroke"
+          className="svg"
           height={24}
           viewBox="0 0 24 24"
           width={24}
           xmlns="http://www.w3.org/2000/svg"
         >
           <svg
-            className="stroke"
+            className="svg"
             height={24}
             viewBox="0 0 24 24"
             width={24}
