@@ -5,6 +5,7 @@ import { HoverCard } from '../hover-card';
 import { ProductInfo } from '../product-info';
 import { Link } from '@dev-dep/ui-nucleons/link';
 import { ProductCard } from '../product-card';
+import { Stepper } from '@dev-dep/ui-nucleons/stepper';
 
 describe('<HoverCard />', () => {
   it('should renders correctly', () => {
@@ -74,10 +75,8 @@ describe('<HoverCard />', () => {
     expect(wrapper.find(ProductCard).getDOMNode().classList.contains('hidden')).toBe(true);
 
     act(() => {
-      const fakeEvent = {
-        currentTarget: document.createElement('div'),
-      };
-      controlRef.current.show(itemInfo, fakeEvent);
+      const fakeTarget = document.createElement('div');
+      controlRef.current.show(itemInfo, fakeTarget);
     });
     wrapper.update();
 
@@ -91,5 +90,77 @@ describe('<HoverCard />', () => {
     wrapper.update();
 
     expect(wrapper.find(ProductCard).getDOMNode().classList.contains('hidden')).toBe(true);
+  });
+
+  it('should handle cart data/control props', () => {
+    const controlRef = createRef();
+
+    const Spy = {
+      onAdd: jest.fn(),
+      onChange: jest.fn(),
+      onSubtract: jest.fn(),
+    };
+
+    const productInfo = {
+      name: 'Test Product',
+      imageSrc: 'http://image.com/test',
+      imageAlt: 'Alternative text for test image',
+      url: 'https://www.sima-land.ru/123',
+      price: 100,
+      currencyGrapheme: '$',
+      oldPrice: 200,
+      stepText: 'по 1 шт',
+      markupText: 'Комплектация + 50$ при покупке до 20 шт',
+      qty: 5,
+    };
+
+    const wrapper = mount(
+      <HoverCard
+        controlRef={controlRef}
+        onAdd={Spy.onAdd}
+        onChange={Spy.onChange}
+        onSubtract={Spy.onSubtract}
+      />
+    );
+
+    act(() => {
+      const fakeTarget = document.createElement('div');
+      controlRef.current.show(productInfo, fakeTarget);
+    });
+    wrapper.update();
+
+    expect(wrapper.find(HoverCard).find(Stepper).find('[data-testid="stepper:input"]').prop('value')).toBe(5);
+
+    Object.values(Spy).forEach(fn => {
+      expect(fn).toBeCalledTimes(0);
+    });
+
+    // add
+    act(() => {
+      wrapper.find(HoverCard).find(Stepper).find('svg[data-testid="stepper:plus"]').simulate('click');
+    });
+    wrapper.update();
+
+    expect(Spy.onAdd).toBeCalledTimes(1);
+
+    // subtract
+    act(() => {
+      wrapper.find(HoverCard).find(Stepper).find('svg[data-testid="stepper:minus"]').simulate('click');
+    });
+    wrapper.update();
+
+    expect(Spy.onSubtract).toBeCalledTimes(1);
+
+    // subtract
+    act(() => {
+      wrapper.find(HoverCard).find(Stepper).find('[data-testid="stepper:input"]').simulate('blur', {
+        target: {
+          value: 15,
+        },
+      });
+    });
+    wrapper.update();
+
+    expect(Spy.onChange).toBeCalledTimes(1);
   });
 });

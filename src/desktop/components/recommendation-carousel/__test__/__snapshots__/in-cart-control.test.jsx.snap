@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InCartControl /> should renders correctly 1`] = `
+<InCartControl
+  canAdd={true}
+  canSubtract={true}
+  markupText="foo"
+  onAdd={[MockFunction]}
+  onChange={[MockFunction]}
+  onSubtract={[MockFunction]}
+  qty={12}
+  stepText="bar"
+>
+  <Stepper
+    canAdd={true}
+    canSubtract={true}
+    className="control"
+    onAdd={[MockFunction]}
+    onBlur={[MockFunction]}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    onSubtract={[MockFunction]}
+    size="s"
+    value={12}
+  >
+    <div
+      className="root size-s control"
+    >
+      <MinusSVG
+        className="button"
+        data-testid="stepper:minus"
+        onClick={[MockFunction]}
+      >
+        <svg
+          className="button"
+          data-testid="stepper:minus"
+          height={16}
+          onClick={[MockFunction]}
+          viewBox="0 0 16 16"
+          width={16}
+        >
+          <path
+            clipRule="evenodd"
+            d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </MinusSVG>
+      <input
+        className="input"
+        data-testid="stepper:input"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        value={12}
+      />
+      <PlusSVG
+        className="button"
+        data-testid="stepper:plus"
+        onClick={[MockFunction]}
+      >
+        <svg
+          className="button"
+          data-testid="stepper:plus"
+          height={16}
+          onClick={[MockFunction]}
+          viewBox="0 0 16 16"
+          width={16}
+        >
+          <path
+            d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+          />
+        </svg>
+      </PlusSVG>
+    </div>
+  </Stepper>
+</InCartControl>
+`;
