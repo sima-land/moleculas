@@ -10,18 +10,22 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
         "favorite": true,
         "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
         "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
+        "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
         "name": "Ножницы портновские, 19 см, цвет чёрный",
         "oldPrice": null,
         "price": 261,
+        "stepText": "по 20 шт",
         "url": "",
       },
       Object {
         "currencyGrapheme": "₽",
         "imageAlt": "Ножницы портновские, 31 см, цвет чёрный/голубой, Ножницы",
         "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
+        "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
         "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
         "oldPrice": null,
         "price": 322,
+        "stepText": "по 20 шт",
         "url": "",
       },
       Object {
@@ -75,9 +79,11 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
         "currencyGrapheme": "₽",
         "imageAlt": "Ножницы портновские, 23 см, цвет МИКС, Ножницы",
         "imageSrc": "https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085",
+        "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
         "name": "Ножницы портновские, 23 см, цвет МИКС",
         "oldPrice": null,
         "price": 171,
+        "stepText": "по 5 шт",
         "url": "",
       },
       Object {
@@ -93,9 +99,11 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
         "currencyGrapheme": "₽",
         "imageAlt": "Ножницы портновские, 22,5 см, цвет чёрный, Ножницы",
         "imageSrc": "https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898",
+        "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
         "name": "Ножницы портновские, 22,5 см, цвет чёрный",
         "oldPrice": null,
         "price": 988,
+        "stepText": "по 10 шт",
         "url": "",
       },
       Object {
@@ -105,6 +113,8 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
         "name": "Ножницы портновские, 22 см, цвет серебряный",
         "oldPrice": null,
         "price": 619,
+        "qty": 23,
+        "stepText": "по 1 шт",
         "url": "",
       },
       Object {
@@ -148,18 +158,22 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
           "favorite": true,
           "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
           "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
+          "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
           "name": "Ножницы портновские, 19 см, цвет чёрный",
           "oldPrice": null,
           "price": 261,
+          "stepText": "по 20 шт",
           "url": "",
         },
         Object {
           "currencyGrapheme": "₽",
           "imageAlt": "Ножницы портновские, 31 см, цвет чёрный/голубой, Ножницы",
           "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
+          "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
           "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
           "oldPrice": null,
           "price": 322,
+          "stepText": "по 20 шт",
           "url": "",
         },
         Object {
@@ -213,9 +227,11 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
           "currencyGrapheme": "₽",
           "imageAlt": "Ножницы портновские, 23 см, цвет МИКС, Ножницы",
           "imageSrc": "https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085",
+          "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
           "name": "Ножницы портновские, 23 см, цвет МИКС",
           "oldPrice": null,
           "price": 171,
+          "stepText": "по 5 шт",
           "url": "",
         },
         Object {
@@ -231,9 +247,11 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
           "currencyGrapheme": "₽",
           "imageAlt": "Ножницы портновские, 22,5 см, цвет чёрный, Ножницы",
           "imageSrc": "https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898",
+          "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
           "name": "Ножницы портновские, 22,5 см, цвет чёрный",
           "oldPrice": null,
           "price": 988,
+          "stepText": "по 10 шт",
           "url": "",
         },
         Object {
@@ -243,6 +261,8 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
           "name": "Ножницы портновские, 22 см, цвет серебряный",
           "oldPrice": null,
           "price": 619,
+          "qty": 23,
+          "stepText": "по 1 шт",
           "url": "",
         },
         Object {
@@ -287,18 +307,22 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
             "favorite": true,
             "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
             "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
+            "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
             "name": "Ножницы портновские, 19 см, цвет чёрный",
             "oldPrice": null,
             "price": 261,
+            "stepText": "по 20 шт",
             "url": "",
           },
           Object {
             "currencyGrapheme": "₽",
             "imageAlt": "Ножницы портновские, 31 см, цвет чёрный/голубой, Ножницы",
             "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
+            "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
             "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
             "oldPrice": null,
             "price": 322,
+            "stepText": "по 20 шт",
             "url": "",
           },
           Object {
@@ -352,9 +376,11 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
             "currencyGrapheme": "₽",
             "imageAlt": "Ножницы портновские, 23 см, цвет МИКС, Ножницы",
             "imageSrc": "https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085",
+            "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
             "name": "Ножницы портновские, 23 см, цвет МИКС",
             "oldPrice": null,
             "price": 171,
+            "stepText": "по 5 шт",
             "url": "",
           },
           Object {
@@ -370,9 +396,11 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
             "currencyGrapheme": "₽",
             "imageAlt": "Ножницы портновские, 22,5 см, цвет чёрный, Ножницы",
             "imageSrc": "https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898",
+            "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
             "name": "Ножницы портновские, 22,5 см, цвет чёрный",
             "oldPrice": null,
             "price": 988,
+            "stepText": "по 10 шт",
             "url": "",
           },
           Object {
@@ -382,6 +410,8 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
             "name": "Ножницы портновские, 22 см, цвет серебряный",
             "oldPrice": null,
             "price": 619,
+            "qty": 23,
+            "stepText": "по 1 шт",
             "url": "",
           },
           Object {
@@ -427,18 +457,22 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
               "favorite": true,
               "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
               "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
+              "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
               "name": "Ножницы портновские, 19 см, цвет чёрный",
               "oldPrice": null,
               "price": 261,
+              "stepText": "по 20 шт",
               "url": "",
             },
             Object {
               "currencyGrapheme": "₽",
               "imageAlt": "Ножницы портновские, 31 см, цвет чёрный/голубой, Ножницы",
               "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
+              "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
               "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
               "oldPrice": null,
               "price": 322,
+              "stepText": "по 20 шт",
               "url": "",
             },
             Object {
@@ -492,9 +526,11 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
               "currencyGrapheme": "₽",
               "imageAlt": "Ножницы портновские, 23 см, цвет МИКС, Ножницы",
               "imageSrc": "https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085",
+              "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
               "name": "Ножницы портновские, 23 см, цвет МИКС",
               "oldPrice": null,
               "price": 171,
+              "stepText": "по 5 шт",
               "url": "",
             },
             Object {
@@ -510,9 +546,11 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
               "currencyGrapheme": "₽",
               "imageAlt": "Ножницы портновские, 22,5 см, цвет чёрный, Ножницы",
               "imageSrc": "https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898",
+              "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
               "name": "Ножницы портновские, 22,5 см, цвет чёрный",
               "oldPrice": null,
               "price": 988,
+              "stepText": "по 10 шт",
               "url": "",
             },
             Object {
@@ -522,6 +560,8 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
               "name": "Ножницы портновские, 22 см, цвет серебряный",
               "oldPrice": null,
               "price": 619,
+              "qty": 23,
+              "stepText": "по 1 шт",
               "url": "",
             },
             Object {
@@ -596,11 +636,13 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                       imageAlt="Ножницы портновские, 19 см, цвет чёрный, Ножницы"
                       imageSrc="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                       key="0"
+                      markupText="Комплектация + 50 ₽ при покупке до 20 шт"
                       name="Ножницы портновские, 19 см, цвет чёрный"
                       needLoadImage={true}
                       oldPrice={null}
                       onItemClick={[Function]}
                       price={261}
+                      stepText="по 20 шт"
                       url=""
                     >
                       <RecommendedItem
@@ -610,11 +652,13 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         favorite={true}
                         imageAlt="Ножницы портновские, 19 см, цвет чёрный, Ножницы"
                         imageSrc="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
+                        markupText="Комплектация + 50 ₽ при покупке до 20 шт"
                         name="Ножницы портновские, 19 см, цвет чёрный"
                         needLoadImage={true}
                         oldPrice={null}
                         onItemClick={[Function]}
                         price={261}
+                        stepText="по 20 шт"
                         url=""
                       >
                         <div
@@ -668,11 +712,13 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                       imageAlt="Ножницы портновские, 31 см, цвет чёрный/голубой, Ножницы"
                       imageSrc="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
                       key="1"
+                      markupText="Комплектация + 50 ₽ при покупке до 20 шт"
                       name="Ножницы портновские, 31 см, цвет чёрный/голубой"
                       needLoadImage={true}
                       oldPrice={null}
                       onItemClick={[Function]}
                       price={322}
+                      stepText="по 20 шт"
                       url=""
                     >
                       <RecommendedItem
@@ -681,11 +727,13 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         currencyGrapheme="₽"
                         imageAlt="Ножницы портновские, 31 см, цвет чёрный/голубой, Ножницы"
                         imageSrc="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                        markupText="Комплектация + 50 ₽ при покупке до 20 шт"
                         name="Ножницы портновские, 31 см, цвет чёрный/голубой"
                         needLoadImage={true}
                         oldPrice={null}
                         onItemClick={[Function]}
                         price={322}
+                        stepText="по 20 шт"
                         url=""
                       >
                         <div
@@ -890,11 +938,13 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                       imageAlt="Ножницы портновские, 23 см, цвет МИКС, Ножницы"
                       imageSrc="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
                       key="3"
+                      markupText="Комплектация + 50 ₽ при покупке до 20 шт"
                       name="Ножницы портновские, 23 см, цвет МИКС"
                       needLoadImage={true}
                       oldPrice={null}
                       onItemClick={[Function]}
                       price={171}
+                      stepText="по 5 шт"
                       url=""
                     >
                       <RecommendedItem
@@ -903,11 +953,13 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         currencyGrapheme="₽"
                         imageAlt="Ножницы портновские, 23 см, цвет МИКС, Ножницы"
                         imageSrc="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+                        markupText="Комплектация + 50 ₽ при покупке до 20 шт"
                         name="Ножницы портновские, 23 см, цвет МИКС"
                         needLoadImage={true}
                         oldPrice={null}
                         onItemClick={[Function]}
                         price={171}
+                        stepText="по 5 шт"
                         url=""
                       >
                         <div
@@ -1032,11 +1084,13 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                       imageAlt="Ножницы портновские, 22,5 см, цвет чёрный, Ножницы"
                       imageSrc="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
                       key="5"
+                      markupText="Комплектация + 50 ₽ при покупке до 20 шт"
                       name="Ножницы портновские, 22,5 см, цвет чёрный"
                       needLoadImage={true}
                       oldPrice={null}
                       onItemClick={[Function]}
                       price={988}
+                      stepText="по 10 шт"
                       url=""
                     >
                       <RecommendedItem
@@ -1045,11 +1099,13 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         currencyGrapheme="₽"
                         imageAlt="Ножницы портновские, 22,5 см, цвет чёрный, Ножницы"
                         imageSrc="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
+                        markupText="Комплектация + 50 ₽ при покупке до 20 шт"
                         name="Ножницы портновские, 22,5 см, цвет чёрный"
                         needLoadImage={true}
                         oldPrice={null}
                         onItemClick={[Function]}
                         price={988}
+                        stepText="по 10 шт"
                         url=""
                       >
                         <div
@@ -1108,6 +1164,8 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                       oldPrice={null}
                       onItemClick={[Function]}
                       price={619}
+                      qty={23}
+                      stepText="по 1 шт"
                       url=""
                     >
                       <RecommendedItem
@@ -1121,6 +1179,8 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         oldPrice={null}
                         onItemClick={[Function]}
                         price={619}
+                        qty={23}
+                        stepText="по 1 шт"
                         url=""
                       >
                         <div

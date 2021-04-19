@@ -10,10 +10,12 @@ const cx = classnames.bind(styles);
 
 /**
  * Карточка рекомендованного товара.
+ * @param {Object} props Свойства.
+ * @param {import('./types').ProductData} props.productInfo Данные товара.
  */
 export const ProductCard = forwardRef(({
   className,
-  inCartControlProps,
+  inCartControl,
   productInfo,
   ...divProps
 }, ref) => (
@@ -27,15 +29,20 @@ export const ProductCard = forwardRef(({
       withImageButtons
     />
 
-    <InCartControl
-      {...inCartControlProps}
-      className={cx('stepper')}
-    />
+    <div className={cx('control-wrapper')}>
+      <InCartControl {...inCartControl} />
 
-    {productInfo && productInfo.markupText && (
-      <div className={cx('bottom-text')}>
-        {productInfo.markupText}
-      </div>
-    )}
+      {inCartControl && inCartControl.stepText && (
+        <div className={cx('unit-text')}>
+          {inCartControl.stepText}
+        </div>
+      )}
+
+      {inCartControl && inCartControl.markupText && (
+        <div className={cx('bottom-text')}>
+          {inCartControl.markupText}
+        </div>
+      )}
+    </div>
   </div>
 ));

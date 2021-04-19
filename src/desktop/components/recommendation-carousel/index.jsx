@@ -28,9 +28,12 @@ export const RecommendationCarousel = ({
   items,
   itemSize,
   onInViewport,
-  onNeedRequest,
-  onItemQuickViewClick,
+  onItemAdd,
+  onItemChange,
   onItemFavoriteClick,
+  onItemQuickViewClick,
+  onItemSubtract,
+  onNeedRequest,
   title,
   titleTag: Header = 'h2',
 }) => {
@@ -70,25 +73,29 @@ export const RecommendationCarousel = ({
               data-testid='reco-item'
               className={cx('item', getSizeClasses(itemSize))}
               onMouseEnter={e => {
-                cardShow.allowed() && cardControlRef.current.show(item, e);
+                cardShow.allowed()
+                  && cardControlRef.current
+                  && cardControlRef.current.show(item, e.currentTarget);
               }}
             >
               <ProductInfo {...item} />
             </div>
           )}
 
-          // 320 - длительность прокрутки в Carousel
-          // @todo после восстановления проверить позицию курсора чтобы показать карточку
-          onChangeTargetIndex={() => cardShow.disallowFor(320)}
+          // длительность прокрутки в Carousel - 320, делаем слегка с запасом
+          // @todo после восстановления проверить позицию курсора чтобы показать карточку (если будет критично)
+          onChangeTargetIndex={() => {
+            cardShow.disallowFor(360);
+          }}
         />
 
         <HoverCard
           controlRef={cardControlRef}
           onQuickViewClick={onItemQuickViewClick}
           onFavoriteClick={onItemFavoriteClick}
-          inCartControlProps={{
-            // @todo доделать
-          }}
+          onAdd={onItemAdd}
+          onSubtract={onItemSubtract}
+          onChange={onItemChange}
         />
       </section>
     )

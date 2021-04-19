@@ -8,6 +8,8 @@ export const items = [
     currencyGrapheme: '₽',
     oldPrice: null,
     favorite: true,
+    stepText: 'по 20 шт',
+    markupText: 'Комплектация + 50 ₽ при покупке до 20 шт',
   },
   {
     name: 'Ножницы портновские, 31 см, цвет чёрный/голубой',
@@ -17,6 +19,8 @@ export const items = [
     price: 322,
     currencyGrapheme: '₽',
     oldPrice: null,
+    stepText: 'по 20 шт',
+    markupText: 'Комплектация + 50 ₽ при покупке до 20 шт',
   },
   {
     name: 'Ножницы портновские, 21,5 см, цвет чёрный/голубой',
@@ -41,6 +45,8 @@ export const items = [
     price: 171,
     currencyGrapheme: '₽',
     oldPrice: null,
+    stepText: 'по 5 шт',
+    markupText: 'Комплектация + 50 ₽ при покупке до 20 шт',
   },
   {
     name: 'Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный',
@@ -59,6 +65,8 @@ export const items = [
     price: 988,
     currencyGrapheme: '₽',
     oldPrice: null,
+    stepText: 'по 10 шт',
+    markupText: 'Комплектация + 50 ₽ при покупке до 20 шт',
   },
   {
     name: 'Ножницы портновские, 22 см, цвет серебряный',
@@ -68,6 +76,8 @@ export const items = [
     price: 619,
     currencyGrapheme: '₽',
     oldPrice: null,
+    stepText: 'по 1 шт',
+    qty: 23,
   },
   {
     name: 'Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный',

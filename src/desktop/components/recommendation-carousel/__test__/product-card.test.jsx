@@ -6,6 +6,16 @@ describe('<ProductCard />', () => {
   it('should renders correctly', () => {
     const wrapper = mount(
       <ProductCard
+        inCartControl={{
+          qty: 11,
+          canAdd: true,
+          canSubtract: true,
+          markupText: 'markup-text',
+          stepText: 'step-text',
+          onAdd: jest.fn(),
+          onChange: jest.fn(),
+          onSubtract: jest.fn(),
+        }}
         productInfo={{
           url: 'https://www.sima-land.ru/123456',
           name: 'Ножницы портновские, 10, 26 см, цвет чёрный',

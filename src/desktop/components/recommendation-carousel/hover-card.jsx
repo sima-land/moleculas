@@ -13,34 +13,40 @@ const cx = classnames.bind(styles);
  */
 export const HoverCard = ({
   controlRef,
-  inCartControlProps,
-  onQuickViewClick,
+  onAdd,
+  onChange,
   onFavoriteClick,
+  onQuickViewClick,
+  onSubtract,
   ...restProps
 }) => {
   const ref = useRef();
   const [itemInfo, setItemInfo] = useState();
 
   // eslint-disable-next-line require-jsdoc
-  const show = (info, event) => {
+  const show = (info, target) => {
+    setItemInfo(info);
+
     const element = ref.current;
-    const rect = event.currentTarget.getBoundingClientRect();
+    const rect = target.getBoundingClientRect();
     const correction = getOriginCorrection(ref.current);
 
-    ref.current.classList.remove(cx('hidden'));
+    element.classList.remove(cx('hidden'));
     element.style.left = `${correction.x + rect.left - 16}px`;
     element.style.top = `${correction.y + rect.top - 16}px`;
     element.style.width = `${rect.width + 32}px`;
-
-    setItemInfo(info);
   };
 
   // eslint-disable-next-line require-jsdoc
   const hide = () => {
     ref.current && ref.current.classList.add(cx('hidden'));
+    setItemInfo(null);
   };
 
-  // прокидываем управление чтобы не поднимать состояние выше
+  // eslint-disable-next-line require-jsdoc
+  const bindInfo = fn => () => fn && fn(itemInfo);
+
+  // отдаем управление чтобы не поднимать состояние выше
   controlRef.current = controlRef.current || {};
   Object.assign(controlRef.current, { show, hide });
 
@@ -50,11 +56,20 @@ export const HoverCard = ({
       ref={ref}
       className={cx('card', 'hidden')}
       onMouseLeave={hide}
-      inCartControlProps={inCartControlProps}
+      inCartControl={{
+        qty: itemInfo && itemInfo.qty,
+        canAdd: itemInfo && itemInfo.canAdd,
+        canSubtract: itemInfo && itemInfo.canSubtract,
+        markupText: itemInfo && itemInfo.markupText,
+        stepText: itemInfo && itemInfo.stepText,
+        onAdd: bindInfo(onAdd),
+        onChange: bindInfo(onChange),
+        onSubtract: bindInfo(onSubtract),
+      }}
       productInfo={{
         ...itemInfo,
-        onQuickViewClick: () => onQuickViewClick && onQuickViewClick(itemInfo),
-        onFavoriteClick: () => onFavoriteClick && onFavoriteClick(itemInfo),
+        onFavoriteClick: bindInfo(onFavoriteClick),
+        onQuickViewClick: bindInfo(onQuickViewClick),
       }}
     />
   );

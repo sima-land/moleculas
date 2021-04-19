@@ -15,6 +15,18 @@ exports[`<HoverCard /> should renders correctly 1`] = `
 >
   <ForwardRef
     className="card hidden"
+    inCartControl={
+      Object {
+        "canAdd": undefined,
+        "canSubtract": undefined,
+        "markupText": undefined,
+        "onAdd": [Function],
+        "onChange": [Function],
+        "onSubtract": [Function],
+        "qty": undefined,
+        "stepText": undefined,
+      }
+    }
     onMouseLeave={[Function]}
     productInfo={
       Object {
@@ -116,29 +128,28 @@ exports[`<HoverCard /> should renders correctly 1`] = `
           />
         </ForwardRef(Link)>
       </ProductInfo>
-      <InCartControl
-        className="stepper"
+      <div
+        className="control-wrapper"
       >
-        <div
-          className="root stepper"
+        <InCartControl
+          onAdd={[Function]}
+          onChange={[Function]}
+          onSubtract={[Function]}
         >
           <ForwardRef(Button)
-            className="button"
+            className="control"
+            onClick={[Function]}
             size="small"
           >
             <button
-              className="button button-base button-primary button-small text-button-small"
+              className="control button-base button-primary button-small text-button-small"
+              onClick={[Function]}
             >
               В корзину
             </button>
           </ForwardRef(Button)>
-          <div
-            className="unit-text"
-          >
-            По 1 шт
-          </div>
-        </div>
-      </InCartControl>
+        </InCartControl>
+      </div>
     </div>
   </ForwardRef>
 </HoverCard>
@@ -157,6 +168,18 @@ exports[`<HoverCard /> should set control to ref 1`] = `
 >
   <ForwardRef
     className="card hidden"
+    inCartControl={
+      Object {
+        "canAdd": undefined,
+        "canSubtract": undefined,
+        "markupText": undefined,
+        "onAdd": [Function],
+        "onChange": [Function],
+        "onSubtract": [Function],
+        "qty": undefined,
+        "stepText": undefined,
+      }
+    }
     onMouseLeave={[Function]}
     productInfo={
       Object {
@@ -258,29 +281,28 @@ exports[`<HoverCard /> should set control to ref 1`] = `
           />
         </ForwardRef(Link)>
       </ProductInfo>
-      <InCartControl
-        className="stepper"
+      <div
+        className="control-wrapper"
       >
-        <div
-          className="root stepper"
+        <InCartControl
+          onAdd={[Function]}
+          onChange={[Function]}
+          onSubtract={[Function]}
         >
           <ForwardRef(Button)
-            className="button"
+            className="control"
+            onClick={[Function]}
             size="small"
           >
             <button
-              className="button button-base button-primary button-small text-button-small"
+              className="control button-base button-primary button-small text-button-small"
+              onClick={[Function]}
             >
               В корзину
             </button>
           </ForwardRef(Button)>
-          <div
-            className="unit-text"
-          >
-            По 1 шт
-          </div>
-        </div>
-      </InCartControl>
+        </InCartControl>
+      </div>
     </div>
   </ForwardRef>
 </HoverCard>
@@ -299,6 +321,18 @@ exports[`<HoverCard /> should set control to ref 2`] = `
 >
   <ForwardRef
     className="card hidden"
+    inCartControl={
+      Object {
+        "canAdd": undefined,
+        "canSubtract": undefined,
+        "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
+        "onAdd": [Function],
+        "onChange": [Function],
+        "onSubtract": [Function],
+        "qty": undefined,
+        "stepText": undefined,
+      }
+    }
     onMouseLeave={[Function]}
     productInfo={
       Object {
@@ -455,33 +489,33 @@ exports[`<HoverCard /> should set control to ref 2`] = `
           </a>
         </ForwardRef(Link)>
       </ProductInfo>
-      <InCartControl
-        className="stepper"
+      <div
+        className="control-wrapper"
       >
-        <div
-          className="root stepper"
+        <InCartControl
+          markupText="Комплектация + 50 ₽ при покупке до 20 шт"
+          onAdd={[Function]}
+          onChange={[Function]}
+          onSubtract={[Function]}
         >
           <ForwardRef(Button)
-            className="button"
+            className="control"
+            onClick={[Function]}
             size="small"
           >
             <button
-              className="button button-base button-primary button-small text-button-small"
+              className="control button-base button-primary button-small text-button-small"
+              onClick={[Function]}
             >
               В корзину
             </button>
           </ForwardRef(Button)>
-          <div
-            className="unit-text"
-          >
-            По 1 шт
-          </div>
+        </InCartControl>
+        <div
+          className="bottom-text"
+        >
+          Комплектация + 50 ₽ при покупке до 20 шт
         </div>
-      </InCartControl>
-      <div
-        className="bottom-text"
-      >
-        Комплектация + 50 ₽ при покупке до 20 шт
       </div>
     </div>
   </ForwardRef>

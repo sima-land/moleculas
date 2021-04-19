@@ -9,6 +9,7 @@ import { ProductCard } from '../product-card';
 import { ProductInfo } from '../product-info';
 import { Link } from '@dev-dep/ui-nucleons/link';
 import { Carousel } from '@dev-dep/ui-nucleons/carousel';
+import { Stepper } from '@dev-dep/ui-nucleons/stepper';
 
 jest.mock('../utils', () => {
   const original = jest.requireActual('../utils');
@@ -138,5 +139,74 @@ describe('<RecommendationCarousel />', () => {
     wrapper.update();
 
     expect(Find.hoverCardItemName(wrapper)).toBe(items[0].name);
+  });
+
+  it('should handle cart data/control props', () => {
+    const Spy = {
+      onItemAdd: jest.fn(),
+      onItemChange: jest.fn(),
+      onItemSubtract: jest.fn(),
+    };
+
+    const wrapper = mount(
+      <RecommendationCarousel
+        items={[
+          {
+            name: 'Test Product',
+            imageSrc: 'http://image.com/test',
+            imageAlt: 'Alternative text for test image',
+            url: 'https://www.sima-land.ru/123',
+            price: 100,
+            currencyGrapheme: '$',
+            oldPrice: 200,
+            stepText: 'по 1 шт',
+            markupText: 'Комплектация + 50$ при покупке до 20 шт',
+            qty: 12,
+          },
+        ]}
+        onItemAdd={Spy.onItemAdd}
+        onItemChange={Spy.onItemChange}
+        onItemSubtract={Spy.onItemSubtract}
+      />
+    );
+
+    act(() => {
+      Find.item(wrapper).at(0).simulate('mouseenter');
+    });
+    wrapper.update();
+
+    expect(wrapper.find(HoverCard).find(Stepper).find('[data-testid="stepper:input"]').prop('value')).toBe(12);
+
+    Object.values(Spy).forEach(fn => {
+      expect(fn).toBeCalledTimes(0);
+    });
+
+    // add
+    act(() => {
+      wrapper.find(HoverCard).find(Stepper).find('svg[data-testid="stepper:plus"]').simulate('click');
+    });
+    wrapper.update();
+
+    expect(Spy.onItemAdd).toBeCalledTimes(1);
+
+    // subtract
+    act(() => {
+      wrapper.find(HoverCard).find(Stepper).find('svg[data-testid="stepper:minus"]').simulate('click');
+    });
+    wrapper.update();
+
+    expect(Spy.onItemSubtract).toBeCalledTimes(1);
+
+    // subtract
+    act(() => {
+      wrapper.find(HoverCard).find(Stepper).find('[data-testid="stepper:input"]').simulate('blur', {
+        target: {
+          value: 15,
+        },
+      });
+    });
+    wrapper.update();
+
+    expect(Spy.onItemChange).toBeCalledTimes(1);
   });
 });

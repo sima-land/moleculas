@@ -24,6 +24,9 @@ export const Primary = () => (
       items={items}
       onItemFavoriteClick={action('click:favorite')}
       onItemQuickViewClick={action('click:quick-view')}
+      onItemAdd={action('item-add')}
+      onItemChange={action('item-change')}
+      onItemSubtract={action('item-subtract')}
     />
   </Box>
 );
