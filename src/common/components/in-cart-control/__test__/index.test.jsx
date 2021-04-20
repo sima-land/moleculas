@@ -1,10 +1,37 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
-import { InCartControl } from '../in-cart-control';
+import { InCartControl } from '..';
 import { Stepper } from '@dev-dep/ui-nucleons/stepper';
+import Button from '@dev-dep/ui-nucleons/button';
 
 describe('<InCartControl />', () => {
+  it('should render button', () => {
+    const spy = jest.fn();
+
+    const wrapper = mount(
+      <InCartControl
+        inCart={false}
+        qty={12}
+        onAdd={spy}
+      />
+    );
+
+    expect(wrapper).toMatchSnapshot();
+
+    expect(spy).toBeCalledTimes(0);
+
+    act(() => {
+      wrapper.find(Button).simulate('click');
+    });
+
+    expect(spy).toBeCalledTimes(1);
+
+    wrapper.setProps({ isFetching: true });
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should renders correctly', () => {
     const Spy = {
       onAdd: jest.fn(),
@@ -14,11 +41,10 @@ describe('<InCartControl />', () => {
 
     const wrapper = mount(
       <InCartControl
+        inCart
         qty={12}
         canAdd
         canSubtract
-        markupText='foo'
-        stepText='bar'
         onAdd={Spy.onAdd}
         onChange={Spy.onChange}
         onSubtract={Spy.onSubtract}
@@ -47,17 +73,27 @@ describe('<InCartControl />', () => {
 
     expect(Spy.onSubtract).toBeCalledTimes(1);
 
-    // subtract
+    // change + blur
     act(() => {
-      wrapper.find(Stepper).find('[data-testid="stepper:input"]').simulate('blur', {
-        target: {
-          value: 15,
-        },
+      wrapper.find(Stepper).find('[data-testid="stepper:input"]').simulate('change', {
+        target: { value: '15' },
       });
     });
     wrapper.update();
+    act(() => {
+      wrapper.find(Stepper).find('[data-testid="stepper:input"]').simulate('blur');
+    });
+    wrapper.update();
 
-    // enter keydown
+    expect(Spy.onChange).toBeCalledTimes(1);
+
+    // change + enter keydown
+    act(() => {
+      wrapper.find(Stepper).find('[data-testid="stepper:input"]').simulate('change', {
+        target: { value: '15' },
+      });
+    });
+    wrapper.update();
     act(() => {
       wrapper.find(Stepper).find('[data-testid="stepper:input"]').simulate('keydown', {
         key: 'Enter',

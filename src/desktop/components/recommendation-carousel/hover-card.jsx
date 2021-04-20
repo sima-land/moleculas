@@ -3,6 +3,7 @@ import React, { useRef, useState } from 'react';
 import { ProductCard } from './product-card';
 import classnames from 'classnames/bind';
 import styles from './hover-card.scss';
+import { omit, pick } from 'lodash';
 
 const cx = classnames.bind(styles);
 
@@ -39,8 +40,8 @@ export const HoverCard = ({
 
   // eslint-disable-next-line require-jsdoc
   const hide = () => {
+    // не нужно сбрасывать данные тут (например setInfo(null)) так как blur не будет работать из-за размонтирования
     ref.current && ref.current.classList.add(cx('hidden'));
-    setItemInfo(null);
   };
 
   // eslint-disable-next-line require-jsdoc
@@ -50,6 +51,17 @@ export const HoverCard = ({
   controlRef.current = controlRef.current || {};
   Object.assign(controlRef.current, { show, hide });
 
+  const [cartData, productData] = [pick, omit].map(fn => fn(itemInfo, [
+    'allowFloat',
+    'canAdd',
+    'canSubtract',
+    'inCart',
+    'isFetching',
+    'markupText',
+    'qty',
+    'stepText',
+  ]));
+
   return (
     <ProductCard
       {...restProps}
@@ -57,17 +69,13 @@ export const HoverCard = ({
       className={cx('card', 'hidden')}
       onMouseLeave={hide}
       inCartControl={{
-        qty: itemInfo && itemInfo.qty,
-        canAdd: itemInfo && itemInfo.canAdd,
-        canSubtract: itemInfo && itemInfo.canSubtract,
-        markupText: itemInfo && itemInfo.markupText,
-        stepText: itemInfo && itemInfo.stepText,
+        ...cartData,
         onAdd: bindInfo(onAdd),
-        onChange: bindInfo(onChange),
+        onChange: newQty => onChange && onChange(itemInfo, newQty),
         onSubtract: bindInfo(onSubtract),
       }}
       productInfo={{
-        ...itemInfo,
+        ...productData,
         onFavoriteClick: bindInfo(onFavoriteClick),
         onQuickViewClick: bindInfo(onQuickViewClick),
       }}

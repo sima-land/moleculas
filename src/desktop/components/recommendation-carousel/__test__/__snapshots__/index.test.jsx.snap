@@ -84,6 +84,7 @@ exports[`<RecommendationCarousel /> should handle "titleContainer" prop 1`] = `
         "currencyGrapheme": "₽",
         "imageAlt": "Ножницы портновские, 23 см, цвет МИКС, Ножницы",
         "imageSrc": "https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085",
+        "isFetching": true,
         "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
         "name": "Ножницы портновские, 23 см, цвет МИКС",
         "oldPrice": null,
@@ -115,6 +116,7 @@ exports[`<RecommendationCarousel /> should handle "titleContainer" prop 1`] = `
         "currencyGrapheme": "₽",
         "imageAlt": "Ножницы портновские, 22 см, цвет серебряный, Ножницы",
         "imageSrc": "https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830",
+        "inCart": true,
         "name": "Ножницы портновские, 22 см, цвет серебряный",
         "oldPrice": null,
         "price": 619,
@@ -248,6 +250,7 @@ exports[`<RecommendationCarousel /> should handle "titleContainer" prop 1`] = `
             "currencyGrapheme": "₽",
             "imageAlt": "Ножницы портновские, 23 см, цвет МИКС, Ножницы",
             "imageSrc": "https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085",
+            "isFetching": true,
             "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
             "name": "Ножницы портновские, 23 см, цвет МИКС",
             "oldPrice": null,
@@ -279,6 +282,7 @@ exports[`<RecommendationCarousel /> should handle "titleContainer" prop 1`] = `
             "currencyGrapheme": "₽",
             "imageAlt": "Ножницы портновские, 22 см, цвет серебряный, Ножницы",
             "imageSrc": "https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830",
+            "inCart": true,
             "name": "Ножницы портновские, 22 см, цвет серебряный",
             "oldPrice": null,
             "price": 619,
@@ -1115,6 +1119,7 @@ exports[`<RecommendationCarousel /> should handle "titleContainer" prop 1`] = `
                     currencyGrapheme="₽"
                     imageAlt="Ножницы портновские, 23 см, цвет МИКС, Ножницы"
                     imageSrc="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+                    isFetching={true}
                     markupText="Комплектация + 50 ₽ при покупке до 20 шт"
                     name="Ножницы портновские, 23 см, цвет МИКС"
                     oldPrice={null}
@@ -1308,6 +1313,7 @@ exports[`<RecommendationCarousel /> should handle "titleContainer" prop 1`] = `
                     currencyGrapheme="₽"
                     imageAlt="Ножницы портновские, 22 см, цвет серебряный, Ножницы"
                     imageSrc="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
+                    inCart={true}
                     name="Ножницы портновские, 22 см, цвет серебряный"
                     oldPrice={null}
                     price={619}
@@ -1596,14 +1602,9 @@ exports[`<RecommendationCarousel /> should handle "titleContainer" prop 1`] = `
         className="card hidden"
         inCartControl={
           Object {
-            "canAdd": undefined,
-            "canSubtract": undefined,
-            "markupText": undefined,
             "onAdd": [Function],
             "onChange": [Function],
             "onSubtract": [Function],
-            "qty": undefined,
-            "stepText": undefined,
           }
         }
         onMouseLeave={[Function]}
@@ -1711,17 +1712,18 @@ exports[`<RecommendationCarousel /> should handle "titleContainer" prop 1`] = `
             className="control-wrapper"
           >
             <InCartControl
+              className="control"
               onAdd={[Function]}
               onChange={[Function]}
               onSubtract={[Function]}
             >
               <ForwardRef(Button)
-                className="control"
+                className="control control"
                 onClick={[Function]}
                 size="small"
               >
                 <button
-                  className="control button-base button-primary button-small text-button-small"
+                  className="control control button-base button-primary button-small text-button-small"
                   onClick={[Function]}
                 >
                   В корзину
@@ -1826,6 +1828,7 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
         "currencyGrapheme": "₽",
         "imageAlt": "Ножницы портновские, 23 см, цвет МИКС, Ножницы",
         "imageSrc": "https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085",
+        "isFetching": true,
         "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
         "name": "Ножницы портновские, 23 см, цвет МИКС",
         "oldPrice": null,
@@ -1857,6 +1860,7 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
         "currencyGrapheme": "₽",
         "imageAlt": "Ножницы портновские, 22 см, цвет серебряный, Ножницы",
         "imageSrc": "https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830",
+        "inCart": true,
         "name": "Ножницы портновские, 22 см, цвет серебряный",
         "oldPrice": null,
         "price": 619,
@@ -1989,6 +1993,7 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
             "currencyGrapheme": "₽",
             "imageAlt": "Ножницы портновские, 23 см, цвет МИКС, Ножницы",
             "imageSrc": "https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085",
+            "isFetching": true,
             "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
             "name": "Ножницы портновские, 23 см, цвет МИКС",
             "oldPrice": null,
@@ -2020,6 +2025,7 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
             "currencyGrapheme": "₽",
             "imageAlt": "Ножницы портновские, 22 см, цвет серебряный, Ножницы",
             "imageSrc": "https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830",
+            "inCart": true,
             "name": "Ножницы портновские, 22 см, цвет серебряный",
             "oldPrice": null,
             "price": 619,
@@ -2856,6 +2862,7 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                     currencyGrapheme="₽"
                     imageAlt="Ножницы портновские, 23 см, цвет МИКС, Ножницы"
                     imageSrc="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+                    isFetching={true}
                     markupText="Комплектация + 50 ₽ при покупке до 20 шт"
                     name="Ножницы портновские, 23 см, цвет МИКС"
                     oldPrice={null}
@@ -3049,6 +3056,7 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                     currencyGrapheme="₽"
                     imageAlt="Ножницы портновские, 22 см, цвет серебряный, Ножницы"
                     imageSrc="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
+                    inCart={true}
                     name="Ножницы портновские, 22 см, цвет серебряный"
                     oldPrice={null}
                     price={619}
@@ -3337,14 +3345,9 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
         className="card hidden"
         inCartControl={
           Object {
-            "canAdd": undefined,
-            "canSubtract": undefined,
-            "markupText": undefined,
             "onAdd": [Function],
             "onChange": [Function],
             "onSubtract": [Function],
-            "qty": undefined,
-            "stepText": undefined,
           }
         }
         onMouseLeave={[Function]}
@@ -3452,17 +3455,18 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
             className="control-wrapper"
           >
             <InCartControl
+              className="control"
               onAdd={[Function]}
               onChange={[Function]}
               onSubtract={[Function]}
             >
               <ForwardRef(Button)
-                className="control"
+                className="control control"
                 onClick={[Function]}
                 size="small"
               >
                 <button
-                  className="control button-base button-primary button-small text-button-small"
+                  className="control control button-base button-primary button-small text-button-small"
                   onClick={[Function]}
                 >
                   В корзину
@@ -3555,6 +3559,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
         "currencyGrapheme": "₽",
         "imageAlt": "Ножницы портновские, 23 см, цвет МИКС, Ножницы",
         "imageSrc": "https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085",
+        "isFetching": true,
         "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
         "name": "Ножницы портновские, 23 см, цвет МИКС",
         "oldPrice": null,
@@ -3586,6 +3591,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
         "currencyGrapheme": "₽",
         "imageAlt": "Ножницы портновские, 22 см, цвет серебряный, Ножницы",
         "imageSrc": "https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830",
+        "inCart": true,
         "name": "Ножницы портновские, 22 см, цвет серебряный",
         "oldPrice": null,
         "price": 619,
@@ -3718,6 +3724,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
             "currencyGrapheme": "₽",
             "imageAlt": "Ножницы портновские, 23 см, цвет МИКС, Ножницы",
             "imageSrc": "https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085",
+            "isFetching": true,
             "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
             "name": "Ножницы портновские, 23 см, цвет МИКС",
             "oldPrice": null,
@@ -3749,6 +3756,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
             "currencyGrapheme": "₽",
             "imageAlt": "Ножницы портновские, 22 см, цвет серебряный, Ножницы",
             "imageSrc": "https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830",
+            "inCart": true,
             "name": "Ножницы портновские, 22 см, цвет серебряный",
             "oldPrice": null,
             "price": 619,
@@ -4585,6 +4593,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                     currencyGrapheme="₽"
                     imageAlt="Ножницы портновские, 23 см, цвет МИКС, Ножницы"
                     imageSrc="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+                    isFetching={true}
                     markupText="Комплектация + 50 ₽ при покупке до 20 шт"
                     name="Ножницы портновские, 23 см, цвет МИКС"
                     oldPrice={null}
@@ -4778,6 +4787,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                     currencyGrapheme="₽"
                     imageAlt="Ножницы портновские, 22 см, цвет серебряный, Ножницы"
                     imageSrc="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
+                    inCart={true}
                     name="Ножницы портновские, 22 см, цвет серебряный"
                     oldPrice={null}
                     price={619}
@@ -5066,14 +5076,9 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
         className="card hidden"
         inCartControl={
           Object {
-            "canAdd": undefined,
-            "canSubtract": undefined,
-            "markupText": undefined,
             "onAdd": [Function],
             "onChange": [Function],
             "onSubtract": [Function],
-            "qty": undefined,
-            "stepText": undefined,
           }
         }
         onMouseLeave={[Function]}
@@ -5181,17 +5186,18 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
             className="control-wrapper"
           >
             <InCartControl
+              className="control"
               onAdd={[Function]}
               onChange={[Function]}
               onSubtract={[Function]}
             >
               <ForwardRef(Button)
-                className="control"
+                className="control control"
                 onClick={[Function]}
                 size="small"
               >
                 <button
-                  className="control button-base button-primary button-small text-button-small"
+                  className="control control button-base button-primary button-small text-button-small"
                   onClick={[Function]}
                 >
                   В корзину
@@ -5284,6 +5290,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
         "currencyGrapheme": "₽",
         "imageAlt": "Ножницы портновские, 23 см, цвет МИКС, Ножницы",
         "imageSrc": "https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085",
+        "isFetching": true,
         "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
         "name": "Ножницы портновские, 23 см, цвет МИКС",
         "oldPrice": null,
@@ -5315,6 +5322,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
         "currencyGrapheme": "₽",
         "imageAlt": "Ножницы портновские, 22 см, цвет серебряный, Ножницы",
         "imageSrc": "https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830",
+        "inCart": true,
         "name": "Ножницы портновские, 22 см, цвет серебряный",
         "oldPrice": null,
         "price": 619,
@@ -5447,6 +5455,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
             "currencyGrapheme": "₽",
             "imageAlt": "Ножницы портновские, 23 см, цвет МИКС, Ножницы",
             "imageSrc": "https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085",
+            "isFetching": true,
             "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
             "name": "Ножницы портновские, 23 см, цвет МИКС",
             "oldPrice": null,
@@ -5478,6 +5487,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
             "currencyGrapheme": "₽",
             "imageAlt": "Ножницы портновские, 22 см, цвет серебряный, Ножницы",
             "imageSrc": "https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830",
+            "inCart": true,
             "name": "Ножницы портновские, 22 см, цвет серебряный",
             "oldPrice": null,
             "price": 619,
@@ -6314,6 +6324,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                     currencyGrapheme="₽"
                     imageAlt="Ножницы портновские, 23 см, цвет МИКС, Ножницы"
                     imageSrc="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+                    isFetching={true}
                     markupText="Комплектация + 50 ₽ при покупке до 20 шт"
                     name="Ножницы портновские, 23 см, цвет МИКС"
                     oldPrice={null}
@@ -6507,6 +6518,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                     currencyGrapheme="₽"
                     imageAlt="Ножницы портновские, 22 см, цвет серебряный, Ножницы"
                     imageSrc="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
+                    inCart={true}
                     name="Ножницы портновские, 22 см, цвет серебряный"
                     oldPrice={null}
                     price={619}
@@ -6795,14 +6807,9 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
         className="card hidden"
         inCartControl={
           Object {
-            "canAdd": undefined,
-            "canSubtract": undefined,
-            "markupText": undefined,
             "onAdd": [Function],
             "onChange": [Function],
             "onSubtract": [Function],
-            "qty": undefined,
-            "stepText": undefined,
           }
         }
         onMouseLeave={[Function]}
@@ -6910,17 +6917,18 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
             className="control-wrapper"
           >
             <InCartControl
+              className="control"
               onAdd={[Function]}
               onChange={[Function]}
               onSubtract={[Function]}
             >
               <ForwardRef(Button)
-                className="control"
+                className="control control"
                 onClick={[Function]}
                 size="small"
               >
                 <button
-                  className="control button-base button-primary button-small text-button-small"
+                  className="control control button-base button-primary button-small text-button-small"
                   onClick={[Function]}
                 >
                   В корзину

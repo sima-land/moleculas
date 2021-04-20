@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import { BoxShadow as Shadow } from '@dev-dep/ui-nucleons/styling/shadows';
 import { MediumRounds as Rounds } from '@dev-dep/ui-nucleons/styling/shapes';
 import { ProductInfo } from './product-info';
-import { InCartControl } from './in-cart-control';
+import { InCartControl } from '../../../common/components/in-cart-control';
 import classnames from 'classnames/bind';
 import styles from './product-card.scss';
 
@@ -30,7 +30,7 @@ export const ProductCard = forwardRef(({
     />
 
     <div className={cx('control-wrapper')}>
-      <InCartControl {...inCartControl} />
+      <InCartControl {...inCartControl} className={cx('control')} />
 
       {inCartControl && inCartControl.stepText && (
         <div className={cx('unit-text')}>
