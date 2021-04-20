@@ -47,6 +47,7 @@ export const items = [
     oldPrice: null,
     stepText: 'по 5 шт',
     markupText: 'Комплектация + 50 ₽ при покупке до 20 шт',
+    isFetching: true,
   },
   {
     name: 'Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный',
@@ -78,6 +79,7 @@ export const items = [
     oldPrice: null,
     stepText: 'по 1 шт',
     qty: 23,
+    inCart: true,
   },
   {
     name: 'Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный',

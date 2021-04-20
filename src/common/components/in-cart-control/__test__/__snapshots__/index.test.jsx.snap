@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InCartControl /> should render button 1`] = `
+<InCartControl
+  inCart={false}
+  onAdd={[MockFunction]}
+  qty={12}
+>
+  <ForwardRef(Button)
+    className="control"
+    onClick={[Function]}
+    size="small"
+  >
+    <button
+      className="control button-base button-primary button-small text-button-small"
+      onClick={[Function]}
+    >
+      В корзину
+    </button>
+  </ForwardRef(Button)>
+</InCartControl>
+`;
+
+exports[`<InCartControl /> should render button 2`] = `
+<InCartControl
+  inCart={false}
+  isFetching={true}
+  onAdd={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  qty={12}
+>
+  <ForwardRef(Button)
+    className="control"
+    onClick={[Function]}
+    size="small"
+  >
+    <button
+      className="control button-base button-primary button-small text-button-small"
+      onClick={[Function]}
+    >
+      <SpinnerSVG
+        className="button-spinner"
+        fill="none"
+        height={24}
+        viewBox="0 0 24 24"
+        width={24}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <svg
+          className="button-spinner"
+          fill="none"
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 21a9 9 0 1 1 9-9"
+            stroke="#fff"
+            strokeLinecap="round"
+            strokeWidth="2"
+          />
+        </svg>
+      </SpinnerSVG>
+    </button>
+  </ForwardRef(Button)>
+</InCartControl>
+`;
+
+exports[`<InCartControl /> should renders correctly 1`] = `
+<InCartControl
+  canAdd={true}
+  canSubtract={true}
+  inCart={true}
+  onAdd={[MockFunction]}
+  onChange={[MockFunction]}
+  onSubtract={[MockFunction]}
+  qty={12}
+>
+  <Stepper
+    canAdd={true}
+    canSubtract={true}
+    className="control"
+    onAdd={[Function]}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    onSubtract={[Function]}
+    size="s"
+    value="12"
+  >
+    <div
+      className="root size-s control"
+    >
+      <MinusSVG
+        className="button"
+        data-testid="stepper:minus"
+        onClick={[Function]}
+      >
+        <svg
+          className="button"
+          data-testid="stepper:minus"
+          height={16}
+          onClick={[Function]}
+          viewBox="0 0 16 16"
+          width={16}
+        >
+          <path
+            clipRule="evenodd"
+            d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </MinusSVG>
+      <input
+        className="input"
+        data-testid="stepper:input"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        value="12"
+      />
+      <PlusSVG
+        className="button"
+        data-testid="stepper:plus"
+        onClick={[Function]}
+      >
+        <svg
+          className="button"
+          data-testid="stepper:plus"
+          height={16}
+          onClick={[Function]}
+          viewBox="0 0 16 16"
+          width={16}
+        >
+          <path
+            d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+          />
+        </svg>
+      </PlusSVG>
+    </div>
+  </Stepper>
+</InCartControl>
+`;

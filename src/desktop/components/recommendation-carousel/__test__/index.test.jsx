@@ -162,6 +162,7 @@ describe('<RecommendationCarousel />', () => {
             stepText: 'по 1 шт',
             markupText: 'Комплектация + 50$ при покупке до 20 шт',
             qty: 12,
+            inCart: true,
           },
         ]}
         onItemAdd={Spy.onItemAdd}
@@ -175,7 +176,7 @@ describe('<RecommendationCarousel />', () => {
     });
     wrapper.update();
 
-    expect(wrapper.find(HoverCard).find(Stepper).find('[data-testid="stepper:input"]').prop('value')).toBe(12);
+    expect(wrapper.find(HoverCard).find(Stepper).find('[data-testid="stepper:input"]').prop('value')).toBe('12');
 
     Object.values(Spy).forEach(fn => {
       expect(fn).toBeCalledTimes(0);
@@ -197,13 +198,15 @@ describe('<RecommendationCarousel />', () => {
 
     expect(Spy.onItemSubtract).toBeCalledTimes(1);
 
-    // subtract
+    // change
     act(() => {
-      wrapper.find(HoverCard).find(Stepper).find('[data-testid="stepper:input"]').simulate('blur', {
-        target: {
-          value: 15,
-        },
+      wrapper.find(HoverCard).find(Stepper).find('[data-testid="stepper:input"]').simulate('change', {
+        target: { value: '15' },
       });
+    });
+    wrapper.update();
+    act(() => {
+      wrapper.find(HoverCard).find(Stepper).find('[data-testid="stepper:input"]').simulate('blur');
     });
     wrapper.update();
 

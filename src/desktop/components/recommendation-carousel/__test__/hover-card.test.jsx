@@ -112,6 +112,7 @@ describe('<HoverCard />', () => {
       stepText: 'по 1 шт',
       markupText: 'Комплектация + 50$ при покупке до 20 шт',
       qty: 5,
+      inCart: true,
     };
 
     const wrapper = mount(
@@ -129,7 +130,7 @@ describe('<HoverCard />', () => {
     });
     wrapper.update();
 
-    expect(wrapper.find(HoverCard).find(Stepper).find('[data-testid="stepper:input"]').prop('value')).toBe(5);
+    expect(wrapper.find(HoverCard).find(Stepper).find('[data-testid="stepper:input"]').prop('value')).toBe('5');
 
     Object.values(Spy).forEach(fn => {
       expect(fn).toBeCalledTimes(0);
@@ -151,13 +152,15 @@ describe('<HoverCard />', () => {
 
     expect(Spy.onSubtract).toBeCalledTimes(1);
 
-    // subtract
+    // change
     act(() => {
-      wrapper.find(HoverCard).find(Stepper).find('[data-testid="stepper:input"]').simulate('blur', {
-        target: {
-          value: 15,
-        },
+      wrapper.find(HoverCard).find(Stepper).find('[data-testid="stepper:input"]').simulate('change', {
+        target: { value: '15' },
       });
+    });
+    wrapper.update();
+    act(() => {
+      wrapper.find(HoverCard).find(Stepper).find('[data-testid="stepper:input"]').simulate('blur');
     });
     wrapper.update();
 
