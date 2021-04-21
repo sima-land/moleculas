@@ -20,7 +20,7 @@ exports[`<ItemRating /> should render with props 1`] = `
         <div
           className="rating"
         >
-          <SvgStar
+          <ForwardRef(SvgStar)
             className="rating-star empty-star"
             height={16}
             key="5"
@@ -44,8 +44,8 @@ exports[`<ItemRating /> should render with props 1`] = `
                 data-star-type="half"
               />
             </svg>
-          </SvgStar>
-          <SvgStar
+          </ForwardRef(SvgStar)>
+          <ForwardRef(SvgStar)
             className="rating-star empty-star"
             height={16}
             key="4"
@@ -69,8 +69,8 @@ exports[`<ItemRating /> should render with props 1`] = `
                 data-star-type="half"
               />
             </svg>
-          </SvgStar>
-          <SvgStar
+          </ForwardRef(SvgStar)>
+          <ForwardRef(SvgStar)
             className="rating-star empty-star"
             height={16}
             key="3"
@@ -94,8 +94,8 @@ exports[`<ItemRating /> should render with props 1`] = `
                 data-star-type="half"
               />
             </svg>
-          </SvgStar>
-          <SvgStar
+          </ForwardRef(SvgStar)>
+          <ForwardRef(SvgStar)
             className="rating-star full-star"
             height={16}
             key="2"
@@ -119,8 +119,8 @@ exports[`<ItemRating /> should render with props 1`] = `
                 data-star-type="half"
               />
             </svg>
-          </SvgStar>
-          <SvgStar
+          </ForwardRef(SvgStar)>
+          <ForwardRef(SvgStar)
             className="rating-star full-star"
             height={16}
             key="1"
@@ -144,7 +144,7 @@ exports[`<ItemRating /> should render with props 1`] = `
                 data-star-type="half"
               />
             </svg>
-          </SvgStar>
+          </ForwardRef(SvgStar)>
         </div>
       </Rating>
       <Box
@@ -199,7 +199,7 @@ exports[`<ItemRating /> should render without props 1`] = `
         <div
           className="rating"
         >
-          <SvgStar
+          <ForwardRef(SvgStar)
             className="rating-star empty-star"
             height={16}
             key="5"
@@ -223,8 +223,8 @@ exports[`<ItemRating /> should render without props 1`] = `
                 data-star-type="half"
               />
             </svg>
-          </SvgStar>
-          <SvgStar
+          </ForwardRef(SvgStar)>
+          <ForwardRef(SvgStar)
             className="rating-star empty-star"
             height={16}
             key="4"
@@ -248,8 +248,8 @@ exports[`<ItemRating /> should render without props 1`] = `
                 data-star-type="half"
               />
             </svg>
-          </SvgStar>
-          <SvgStar
+          </ForwardRef(SvgStar)>
+          <ForwardRef(SvgStar)
             className="rating-star empty-star"
             height={16}
             key="3"
@@ -273,8 +273,8 @@ exports[`<ItemRating /> should render without props 1`] = `
                 data-star-type="half"
               />
             </svg>
-          </SvgStar>
-          <SvgStar
+          </ForwardRef(SvgStar)>
+          <ForwardRef(SvgStar)
             className="rating-star empty-star"
             height={16}
             key="2"
@@ -298,8 +298,8 @@ exports[`<ItemRating /> should render without props 1`] = `
                 data-star-type="half"
               />
             </svg>
-          </SvgStar>
-          <SvgStar
+          </ForwardRef(SvgStar)>
+          <ForwardRef(SvgStar)
             className="rating-star empty-star"
             height={16}
             key="1"
@@ -323,7 +323,7 @@ exports[`<ItemRating /> should render without props 1`] = `
                 data-star-type="half"
               />
             </svg>
-          </SvgStar>
+          </ForwardRef(SvgStar)>
         </div>
       </Rating>
     </div>

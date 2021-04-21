@@ -1,4 +1,5 @@
 module.exports = {
+  ref: true,
   plugins: [
     '@svgr/plugin-svgo',
     '@svgr/plugin-jsx',

@@ -31,27 +31,36 @@ exports[`<ProductInfo /> should renders correctly 1`] = `
         />
       </div>
     </Image>
-    <WishButton
-      checked={true}
-      className="on-image-btn wish"
-      onClick={[Function]}
+    <WithHint
+      text="Удалить из избранного"
     >
-      <div
-        className="button on-image-btn wish checked"
-        data-testid="favorite-button"
+      <ForwardRef
+        checked={true}
+        className="on-image-btn wish"
         onClick={[Function]}
-        title="Убрать из избранного"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
       >
-        <HeartFilledSVG
-          className="svg"
+        <ForwardRef(SvgFilledHeart)
+          className="button on-image-btn wish checked"
+          data-testid="favorite-button"
           height={24}
-          viewBox="0 0 24 24"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          role="button"
+          title="Убрать из избранного"
           width={24}
-          xmlns="http://www.w3.org/2000/svg"
         >
           <svg
-            className="svg"
+            className="button on-image-btn wish checked"
+            data-testid="favorite-button"
             height={24}
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="button"
+            title="Убрать из избранного"
             viewBox="0 0 24 24"
             width={24}
             xmlns="http://www.w3.org/2000/svg"
@@ -60,40 +69,49 @@ exports[`<ProductInfo /> should renders correctly 1`] = `
               d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366z"
             />
           </svg>
-        </HeartFilledSVG>
-      </div>
-    </WishButton>
-    <QuickViewButton
-      className="on-image-btn quick-view"
-      onClick={[Function]}
+        </ForwardRef(SvgFilledHeart)>
+      </ForwardRef>
+    </WithHint>
+    <WithHint
+      text="Быстрый просмотр"
     >
-      <div
-        className="button on-image-btn quick-view"
-        data-testid="quick-view-button"
+      <ForwardRef
+        className="on-image-btn quick-view"
         onClick={[Function]}
-        title="Быстрый просмотр"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
       >
-        <QuickViewSVG
-          className="svg"
+        <ForwardRef(SvgQuickView)
+          className="root on-image-btn quick-view"
+          data-testid="quick-view-button"
           height={24}
-          viewBox="0 0 24 24"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          role="button"
+          title="Быстрый просмотр"
           width={24}
-          xmlns="http://www.w3.org/2000/svg"
         >
           <svg
-            className="svg"
+            className="root on-image-btn quick-view"
+            data-testid="quick-view-button"
             height={24}
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="button"
+            title="Быстрый просмотр"
             viewBox="0 0 24 24"
             width={24}
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0 1 11.5 20.5a9 9 0 1 1 9-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 0 1-2.122 2.122zM9 10h1V9a1.5 1.5 0 1 1 3 0v1h1a1.5 1.5 0 1 1 0 3h-1v1a1.5 1.5 0 1 1-3 0v-1H9a1.5 1.5 0 1 1 0-3zm2.5-4.5a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"
+              d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0111.5 20.5a9 9 0 119-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 01-2.122 2.122zM9 10h1V9a1.5 1.5 0 113 0v1h1a1.5 1.5 0 110 3h-1v1a1.5 1.5 0 11-3 0v-1H9a1.5 1.5 0 110-3zm2.5-4.5a6 6 0 100 12 6 6 0 000-12z"
             />
           </svg>
-        </QuickViewSVG>
-      </div>
-    </QuickViewButton>
+        </ForwardRef(SvgQuickView)>
+      </ForwardRef>
+    </WithHint>
   </a>
   <div
     className="row prices-row"

@@ -49,13 +49,10 @@ exports[`<InCartControl /> should render button 2`] = `
       className="control button-base button-primary button-small text-button-small"
       onClick={[Function]}
     >
-      <SpinnerSVG
+      <ForwardRef(SvgWhiteSpinner)
         className="button-spinner"
-        fill="none"
         height={24}
-        viewBox="0 0 24 24"
         width={24}
-        xmlns="http://www.w3.org/2000/svg"
       >
         <svg
           className="button-spinner"
@@ -66,13 +63,13 @@ exports[`<InCartControl /> should render button 2`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M12 21a9 9 0 1 1 9-9"
+            d="M12 21a9 9 0 119-9"
             stroke="#fff"
             strokeLinecap="round"
-            strokeWidth="2"
+            strokeWidth={2}
           />
         </svg>
-      </SpinnerSVG>
+      </ForwardRef(SvgWhiteSpinner)>
     </button>
   </ForwardRef(Button)>
 </InCartControl>
