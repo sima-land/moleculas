@@ -1,4 +1,5 @@
 module.exports = {
+  preset: 'ts-jest/presets/js-with-babel',
   globalSetup: './jest/global-setup.js',
   setupFiles: [
     './jest/setup.js',
@@ -7,7 +8,6 @@ module.exports = {
     'enzyme-to-json/serializer',
   ],
   transformIgnorePatterns: [
-    '/node_modules/(?!(middleware-axios))/',
     '/node_modules/@dev-dep/ui-nucleons/.+\\.(?!(svg))([^.]+$)/',
   ],
   testPathIgnorePatterns: [
@@ -17,7 +17,6 @@ module.exports = {
     '<rootDir>/.yarn-cache/', '<rootDir>/build/',
   ],
   transform: {
-    '\\.jsx?$': 'babel-jest',
     '\\.svg$': '<rootDir>/jest/transforms/svg.js',
     '\\.(jpg|jpeg|png|gif|eot|otf|ttf|woff|woff2)$': '<rootDir>/jest/transforms/media.js',
   },
