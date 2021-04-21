@@ -1,20 +1,17 @@
 @use 'node_modules/@dev-dep/ui-nucleons/colors';
 
 .button {
-  color: colors.$gray87;
+  overflow: visible;
+  stroke-width: 1;
+  stroke: #f5f5f5;
+  fill: colors.$gray87;
   &:hover {
-    color: colors.$gray54;
+    fill: colors.$gray54;
   }
   &.checked {
-    color: colors.$additional-red;
+    fill: colors.$additional-red;
   }
   &.disabled {
     cursor: auto;
-  }
-  .svg {
-    overflow: visible;
-    stroke-width: 1;
-    stroke: #f5f5f5;
-    fill: currentColor;
   }
 }

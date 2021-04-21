@@ -13,30 +13,26 @@ exports[`<ItemRating /> should render with props 1`] = `
     <div
       className="display-flex direction-row align-items-center"
     >
-      <StarSVG
+      <ForwardRef(SvgFilledRate)
         fill="#ffab00"
-        height="16"
         value={2}
-        viewBox="0 0 16 16"
-        width="16"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <svg
           fill="#ffab00"
-          height="16"
+          height={16}
           value={2}
           viewBox="0 0 16 16"
-          width="16"
+          width={16}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clipRule="evenodd"
-            d="M8.001 11.845L3.9 14.419a.4.4 0 0 1-.6-.436l1.18-4.696L.766 6.183a.4.4 0 0 1 .23-.706l4.83-.327L7.629.657a.4.4 0 0 1 .742 0l1.804 4.493 4.831.327a.4.4 0 0 1 .23.706L11.52 9.287l1.181 4.696a.4.4 0 0 1-.6.436L8 11.845z"
+            d="M8.001 11.845L3.9 14.419a.4.4 0 01-.6-.436l1.18-4.696L.766 6.183a.4.4 0 01.23-.706l4.83-.327L7.629.657a.4.4 0 01.742 0l1.804 4.493 4.831.327a.4.4 0 01.23.706L11.52 9.287l1.181 4.696a.4.4 0 01-.6.436L8 11.845z"
             fill="#FFAB00"
             fillRule="evenodd"
           />
         </svg>
-      </StarSVG>
+      </ForwardRef(SvgFilledRate)>
       <div
         className="text value"
       >
@@ -64,30 +60,26 @@ exports[`<ItemRating /> should render without props 1`] = `
     <div
       className="display-flex direction-row align-items-center"
     >
-      <StarSVG
+      <ForwardRef(SvgFilledRate)
         fill="#ffab00"
-        height="16"
         value={0}
-        viewBox="0 0 16 16"
-        width="16"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <svg
           fill="#ffab00"
-          height="16"
+          height={16}
           value={0}
           viewBox="0 0 16 16"
-          width="16"
+          width={16}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clipRule="evenodd"
-            d="M8.001 11.845L3.9 14.419a.4.4 0 0 1-.6-.436l1.18-4.696L.766 6.183a.4.4 0 0 1 .23-.706l4.83-.327L7.629.657a.4.4 0 0 1 .742 0l1.804 4.493 4.831.327a.4.4 0 0 1 .23.706L11.52 9.287l1.181 4.696a.4.4 0 0 1-.6.436L8 11.845z"
+            d="M8.001 11.845L3.9 14.419a.4.4 0 01-.6-.436l1.18-4.696L.766 6.183a.4.4 0 01.23-.706l4.83-.327L7.629.657a.4.4 0 01.742 0l1.804 4.493 4.831.327a.4.4 0 01.23.706L11.52 9.287l1.181 4.696a.4.4 0 01-.6.436L8 11.845z"
             fill="#FFAB00"
             fillRule="evenodd"
           />
         </svg>
-      </StarSVG>
+      </ForwardRef(SvgFilledRate)>
     </div>
   </Box>
 </ItemRating>

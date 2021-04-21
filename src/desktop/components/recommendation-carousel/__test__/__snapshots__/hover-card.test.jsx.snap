@@ -51,68 +51,86 @@ exports[`<HoverCard /> should renders correctly 1`] = `
               <img />
             </div>
           </Image>
-          <WishButton
-            className="on-image-btn wish"
-            onClick={[Function]}
+          <WithHint
+            text="Добавить в избранное"
           >
-            <div
-              className="button on-image-btn wish"
-              data-testid="favorite-button"
+            <ForwardRef
+              className="on-image-btn wish"
               onClick={[Function]}
-              title="Добавить в избранное"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
-              <HeartSVG
-                className="svg"
+              <ForwardRef(SvgHeart)
+                className="button on-image-btn wish"
+                data-testid="favorite-button"
                 height={24}
-                viewBox="0 0 24 24"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                role="button"
+                title="Добавить в избранное"
                 width={24}
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="svg"
+                  className="button on-image-btn wish"
+                  data-testid="favorite-button"
                   height={24}
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="button"
+                  title="Добавить в избранное"
                   viewBox="0 0 24 24"
                   width={24}
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 0 0 3.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
+                    d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 003.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
                   />
                 </svg>
-              </HeartSVG>
-            </div>
-          </WishButton>
-          <QuickViewButton
-            className="on-image-btn quick-view"
-            onClick={[Function]}
+              </ForwardRef(SvgHeart)>
+            </ForwardRef>
+          </WithHint>
+          <WithHint
+            text="Быстрый просмотр"
           >
-            <div
-              className="button on-image-btn quick-view"
-              data-testid="quick-view-button"
+            <ForwardRef
+              className="on-image-btn quick-view"
               onClick={[Function]}
-              title="Быстрый просмотр"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
-              <QuickViewSVG
-                className="svg"
+              <ForwardRef(SvgQuickView)
+                className="root on-image-btn quick-view"
+                data-testid="quick-view-button"
                 height={24}
-                viewBox="0 0 24 24"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                role="button"
+                title="Быстрый просмотр"
                 width={24}
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="svg"
+                  className="root on-image-btn quick-view"
+                  data-testid="quick-view-button"
                   height={24}
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="button"
+                  title="Быстрый просмотр"
                   viewBox="0 0 24 24"
                   width={24}
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0 1 11.5 20.5a9 9 0 1 1 9-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 0 1-2.122 2.122zM9 10h1V9a1.5 1.5 0 1 1 3 0v1h1a1.5 1.5 0 1 1 0 3h-1v1a1.5 1.5 0 1 1-3 0v-1H9a1.5 1.5 0 1 1 0-3zm2.5-4.5a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"
+                    d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0111.5 20.5a9 9 0 119-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 01-2.122 2.122zM9 10h1V9a1.5 1.5 0 113 0v1h1a1.5 1.5 0 110 3h-1v1a1.5 1.5 0 11-3 0v-1H9a1.5 1.5 0 110-3zm2.5-4.5a6 6 0 100 12 6 6 0 000-12z"
                   />
                 </svg>
-              </QuickViewSVG>
-            </div>
-          </QuickViewButton>
+              </ForwardRef(SvgQuickView)>
+            </ForwardRef>
+          </WithHint>
         </a>
         <ForwardRef(Link)
           className="row link"
@@ -200,68 +218,86 @@ exports[`<HoverCard /> should set control to ref 1`] = `
               <img />
             </div>
           </Image>
-          <WishButton
-            className="on-image-btn wish"
-            onClick={[Function]}
+          <WithHint
+            text="Добавить в избранное"
           >
-            <div
-              className="button on-image-btn wish"
-              data-testid="favorite-button"
+            <ForwardRef
+              className="on-image-btn wish"
               onClick={[Function]}
-              title="Добавить в избранное"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
-              <HeartSVG
-                className="svg"
+              <ForwardRef(SvgHeart)
+                className="button on-image-btn wish"
+                data-testid="favorite-button"
                 height={24}
-                viewBox="0 0 24 24"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                role="button"
+                title="Добавить в избранное"
                 width={24}
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="svg"
+                  className="button on-image-btn wish"
+                  data-testid="favorite-button"
                   height={24}
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="button"
+                  title="Добавить в избранное"
                   viewBox="0 0 24 24"
                   width={24}
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 0 0 3.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
+                    d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 003.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
                   />
                 </svg>
-              </HeartSVG>
-            </div>
-          </WishButton>
-          <QuickViewButton
-            className="on-image-btn quick-view"
-            onClick={[Function]}
+              </ForwardRef(SvgHeart)>
+            </ForwardRef>
+          </WithHint>
+          <WithHint
+            text="Быстрый просмотр"
           >
-            <div
-              className="button on-image-btn quick-view"
-              data-testid="quick-view-button"
+            <ForwardRef
+              className="on-image-btn quick-view"
               onClick={[Function]}
-              title="Быстрый просмотр"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
-              <QuickViewSVG
-                className="svg"
+              <ForwardRef(SvgQuickView)
+                className="root on-image-btn quick-view"
+                data-testid="quick-view-button"
                 height={24}
-                viewBox="0 0 24 24"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                role="button"
+                title="Быстрый просмотр"
                 width={24}
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="svg"
+                  className="root on-image-btn quick-view"
+                  data-testid="quick-view-button"
                   height={24}
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="button"
+                  title="Быстрый просмотр"
                   viewBox="0 0 24 24"
                   width={24}
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0 1 11.5 20.5a9 9 0 1 1 9-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 0 1-2.122 2.122zM9 10h1V9a1.5 1.5 0 1 1 3 0v1h1a1.5 1.5 0 1 1 0 3h-1v1a1.5 1.5 0 1 1-3 0v-1H9a1.5 1.5 0 1 1 0-3zm2.5-4.5a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"
+                    d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0111.5 20.5a9 9 0 119-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 01-2.122 2.122zM9 10h1V9a1.5 1.5 0 113 0v1h1a1.5 1.5 0 110 3h-1v1a1.5 1.5 0 11-3 0v-1H9a1.5 1.5 0 110-3zm2.5-4.5a6 6 0 100 12 6 6 0 000-12z"
                   />
                 </svg>
-              </QuickViewSVG>
-            </div>
-          </QuickViewButton>
+              </ForwardRef(SvgQuickView)>
+            </ForwardRef>
+          </WithHint>
         </a>
         <ForwardRef(Link)
           className="row link"
@@ -371,69 +407,87 @@ exports[`<HoverCard /> should set control to ref 2`] = `
               />
             </div>
           </Image>
-          <WishButton
-            checked={false}
-            className="on-image-btn wish"
-            onClick={[Function]}
+          <WithHint
+            text="Добавить в избранное"
           >
-            <div
-              className="button on-image-btn wish"
-              data-testid="favorite-button"
+            <ForwardRef
+              checked={false}
+              className="on-image-btn wish"
               onClick={[Function]}
-              title="Добавить в избранное"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
-              <HeartSVG
-                className="svg"
+              <ForwardRef(SvgHeart)
+                className="button on-image-btn wish"
+                data-testid="favorite-button"
                 height={24}
-                viewBox="0 0 24 24"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                role="button"
+                title="Добавить в избранное"
                 width={24}
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="svg"
+                  className="button on-image-btn wish"
+                  data-testid="favorite-button"
                   height={24}
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="button"
+                  title="Добавить в избранное"
                   viewBox="0 0 24 24"
                   width={24}
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 0 0 3.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
+                    d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 003.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
                   />
                 </svg>
-              </HeartSVG>
-            </div>
-          </WishButton>
-          <QuickViewButton
-            className="on-image-btn quick-view"
-            onClick={[Function]}
+              </ForwardRef(SvgHeart)>
+            </ForwardRef>
+          </WithHint>
+          <WithHint
+            text="Быстрый просмотр"
           >
-            <div
-              className="button on-image-btn quick-view"
-              data-testid="quick-view-button"
+            <ForwardRef
+              className="on-image-btn quick-view"
               onClick={[Function]}
-              title="Быстрый просмотр"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
-              <QuickViewSVG
-                className="svg"
+              <ForwardRef(SvgQuickView)
+                className="root on-image-btn quick-view"
+                data-testid="quick-view-button"
                 height={24}
-                viewBox="0 0 24 24"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                role="button"
+                title="Быстрый просмотр"
                 width={24}
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="svg"
+                  className="root on-image-btn quick-view"
+                  data-testid="quick-view-button"
                   height={24}
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="button"
+                  title="Быстрый просмотр"
                   viewBox="0 0 24 24"
                   width={24}
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0 1 11.5 20.5a9 9 0 1 1 9-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 0 1-2.122 2.122zM9 10h1V9a1.5 1.5 0 1 1 3 0v1h1a1.5 1.5 0 1 1 0 3h-1v1a1.5 1.5 0 1 1-3 0v-1H9a1.5 1.5 0 1 1 0-3zm2.5-4.5a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"
+                    d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0111.5 20.5a9 9 0 119-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 01-2.122 2.122zM9 10h1V9a1.5 1.5 0 113 0v1h1a1.5 1.5 0 110 3h-1v1a1.5 1.5 0 11-3 0v-1H9a1.5 1.5 0 110-3zm2.5-4.5a6 6 0 100 12 6 6 0 000-12z"
                   />
                 </svg>
-              </QuickViewSVG>
-            </div>
-          </QuickViewButton>
+              </ForwardRef(SvgQuickView)>
+            </ForwardRef>
+          </WithHint>
         </a>
         <div
           className="row prices-row"

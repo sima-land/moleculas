@@ -143,6 +143,7 @@ export default class ItemImage extends Component {
                   <div
                     className={cx('fake-hover', { selected: index === currentPhotoIndex })}
                     style={{
+                      // @todo переделать это без добавления лишних элементов
                       width: this.imageWrapper.current.offsetWidth / photos.length,
                       left: (this.imageWrapper.current.offsetWidth / photos.length) * index,
                     }}

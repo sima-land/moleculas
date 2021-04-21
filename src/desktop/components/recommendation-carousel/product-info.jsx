@@ -9,6 +9,7 @@ import styles from './product-info.scss';
 import { WishButton } from '../../../common/components/wish-button';
 import { QuickViewButton } from '../../../common/components/quick-view-button';
 import withPrevent from '@dev-dep/ui-nucleons/helpers/with-prevent';
+import { WithHint } from '../with-hint';
 
 const cx = classnames.bind(styles);
 
@@ -39,15 +40,29 @@ export const ProductInfo = ({
       />
       {withImageButtons && (
         <>
-          <WishButton
-            checked={favorite}
-            className={cx('on-image-btn', 'wish')}
-            onClick={withPrevent(onFavoriteClick)}
-          />
-          <QuickViewButton
-            className={cx('on-image-btn', 'quick-view')}
-            onClick={withPrevent(onQuickViewClick)}
-          />
+          <WithHint text={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}>
+            {(ref, toggle) => (
+              <WishButton
+                ref={ref}
+                checked={favorite}
+                onMouseEnter={() => toggle(true)}
+                onMouseLeave={() => toggle(false)}
+                className={cx('on-image-btn', 'wish')}
+                onClick={withPrevent(onFavoriteClick)}
+              />
+            )}
+          </WithHint>
+          <WithHint text='Быстрый просмотр'>
+            {(ref, toggle) => (
+              <QuickViewButton
+                ref={ref}
+                onMouseEnter={() => toggle(true)}
+                onMouseLeave={() => toggle(false)}
+                className={cx('on-image-btn', 'quick-view')}
+                onClick={withPrevent(onQuickViewClick)}
+              />
+            )}
+          </WithHint>
         </>
       )}
     </a>

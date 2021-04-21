@@ -36,14 +36,14 @@ describe('<HoverCard />', () => {
     // quick view
     expect(Spy.onQuickViewClick).toBeCalledTimes(0);
     act(() => {
-      wrapper.find('[data-testid="quick-view-button"]').simulate('click');
+      wrapper.find('svg[data-testid="quick-view-button"]').simulate('click');
     });
     expect(Spy.onQuickViewClick).toBeCalledTimes(1);
 
     // favorite
     expect(Spy.onFavoriteClick).toBeCalledTimes(0);
     act(() => {
-      wrapper.find('[data-testid="favorite-button"]').simulate('click');
+      wrapper.find('svg[data-testid="favorite-button"]').simulate('click');
     });
     expect(Spy.onFavoriteClick).toBeCalledTimes(1);
   });

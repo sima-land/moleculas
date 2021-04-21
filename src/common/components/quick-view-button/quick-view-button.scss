@@ -1,14 +1,12 @@
 @use 'node_modules/@dev-dep/ui-nucleons/colors';
 
-.button {
-  color: colors.$gray87;
+.root {
+  display: block;
+  overflow: visible;
+  stroke-width: 1;
+  stroke: colors.$gray4;
+  fill: colors.$gray87;
   &:hover {
-    color: colors.$gray54;
-  }
-  .svg {
-    overflow: visible;
-    stroke-width: 1;
-    stroke: colors.$gray4;
-    fill: currentColor;
+    fill: colors.$gray54;
   }
 }

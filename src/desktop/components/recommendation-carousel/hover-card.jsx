@@ -1,9 +1,9 @@
-import { getOriginCorrection } from '@dev-dep/ui-nucleons/with-tooltip/utils';
 import React, { useRef, useState } from 'react';
+import { getOriginCorrection } from '@dev-dep/ui-nucleons/with-tooltip/utils';
 import { ProductCard } from './product-card';
+import { omit, pick } from 'lodash';
 import classnames from 'classnames/bind';
 import styles from './hover-card.scss';
-import { omit, pick } from 'lodash';
 
 const cx = classnames.bind(styles);
 
@@ -24,32 +24,31 @@ export const HoverCard = ({
   const ref = useRef();
   const [itemInfo, setItemInfo] = useState();
 
-  // eslint-disable-next-line require-jsdoc
-  const show = (info, target) => {
-    setItemInfo(info);
+  const Control = {
+    show: (info, target) => {
+      setItemInfo(info);
 
-    const element = ref.current;
-    const rect = target.getBoundingClientRect();
-    const correction = getOriginCorrection(ref.current);
+      const element = ref.current;
+      const rect = target.getBoundingClientRect();
+      const correction = getOriginCorrection(ref.current);
 
-    element.classList.remove(cx('hidden'));
-    element.style.left = `${correction.x + rect.left - 16}px`;
-    element.style.top = `${correction.y + rect.top - 16}px`;
-    element.style.width = `${rect.width + 32}px`;
-  };
+      element.classList.remove(cx('hidden'));
+      element.style.left = `${correction.x + rect.left - 16}px`;
+      element.style.top = `${correction.y + rect.top - 16}px`;
+      element.style.width = `${rect.width + 32}px`;
+    },
 
-  // eslint-disable-next-line require-jsdoc
-  const hide = () => {
-    // не нужно сбрасывать данные тут (например setInfo(null)) так как blur не будет работать из-за размонтирования
-    ref.current && ref.current.classList.add(cx('hidden'));
+    hide: () => {
+      // не нужно сбрасывать данные тут (например setInfo(null)) так как blur не будет работать из-за размонтирования
+      ref.current && ref.current.classList.add(cx('hidden'));
+    },
   };
 
   // eslint-disable-next-line require-jsdoc
   const bindInfo = fn => () => fn && fn(itemInfo);
 
   // отдаем управление чтобы не поднимать состояние выше
-  controlRef.current = controlRef.current || {};
-  Object.assign(controlRef.current, { show, hide });
+  controlRef.current = Control;
 
   const [cartData, productData] = [pick, omit].map(fn => fn(itemInfo, [
     'allowFloat',
@@ -67,7 +66,7 @@ export const HoverCard = ({
       {...restProps}
       ref={ref}
       className={cx('card', 'hidden')}
-      onMouseLeave={hide}
+      onMouseLeave={Control.hide}
       inCartControl={{
         ...cartData,
         onAdd: bindInfo(onAdd),

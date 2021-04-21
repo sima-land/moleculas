@@ -33,12 +33,9 @@ exports[`GarlandCalculatorButton should render component 1`] = `
     <Box
       flex="none"
     >
-      <TreeSVG
-        fill="none"
+      <ForwardRef(SvgTreeInCircle)
         height={48}
-        viewBox="0 0 36 36"
         width={48}
-        xmlns="http://www.w3.org/2000/svg"
       />
     </Box>
   </Box>
