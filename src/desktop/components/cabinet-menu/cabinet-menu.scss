@@ -6,10 +6,10 @@
   display: flex;
   flex-direction: column;
   width: 280px;
-  height: 800px;
+  min-height: 800px;
   @media (max-width: 1280px) {
     width: 104px;
-    height: 734px;
+    min-height: 734px;
   }
 }
 
@@ -52,7 +52,7 @@
   margin-top: 64px;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  flex-grow: 1;
 }
 
 .item {
