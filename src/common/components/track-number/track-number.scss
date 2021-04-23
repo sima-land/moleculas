@@ -1,0 +1,34 @@
+@import 'node_modules/@dev-dep/ui-nucleons/colors';
+
+.track-number {
+  cursor: pointer;
+  padding: 16px 16px 0;
+  &:hover {
+    color: $gray54;
+    .icon {
+      fill: $gray54;
+    }
+  }
+  .title {
+    font-size: 12px;
+    line-height: 16px;
+    color: $gray38;
+  }
+  .content {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid $gray12;
+    padding-bottom: 16px;
+  }
+  .icon {
+    fill: $gray87;
+    margin-left: 8px;
+    width: 16px;
+    height: 16px;
+  }
+}
