@@ -1,0 +1,21 @@
+@import 'node_modules/@dev-dep/ui-nucleons/colors';
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 48px;
+}
+
+.text {
+  margin-top: 16px;
+  line-height: 24px;
+  text-align: center;
+  padding: 0 16px;
+}
+
+.track-numbers {
+  width: 100%;
+  position: relative;
+}
