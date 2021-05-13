@@ -1,0 +1,28 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+import { TrackingInfoModal } from '../index';
+import {
+  Primary,
+} from './tracking-info-modal.stories.jsx';
+
+<Meta
+  title='desktop/TrackingInfoModal'
+  component={TrackingInfoModal}
+/>
+
+# TrackingInfoModal
+### Компонент модального окна отслеживания.
+
+### Пример использования
+```jsx
+import TrackingInfoModal from '@dev-dep/moleculas/desktop/components/tracking-info-modal';
+
+<TrackingInfoModal {...trackingInfoModalProps} />
+```
+
+### Вид элемента
+<Canvas>
+  <Story story={Primary} />
+</Canvas>
+
+### Свойства компонента
+<ArgsTable of={TrackingInfoModal} />

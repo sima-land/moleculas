@@ -1,0 +1,623 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TrackingInfoModal should hide Hint correctly 1`] = `
+<TrackingInfoModal
+  deliverySite="cdek.ru"
+  onCopy={[Function]}
+  trackNumbers={
+    Array [
+      Object {
+        "text": "text",
+        "title": "title",
+      },
+      Object {
+        "text": "text",
+        "title": "title",
+      },
+      Object {
+        "text": "text",
+        "title": "title",
+      },
+      Object {
+        "text": "text",
+        "title": "title",
+      },
+      Object {
+        "text": "text",
+        "title": "title",
+      },
+      Object {
+        "text": "text",
+        "title": "title",
+      },
+      Object {
+        "text": "text",
+        "title": "title",
+      },
+      Object {
+        "text": "text",
+        "title": "title",
+      },
+      Object {
+        "text": "text",
+        "title": "title",
+      },
+      Object {
+        "text": "text",
+        "title": "title",
+      },
+    ]
+  }
+>
+  <Modal
+    extended={true}
+    footer={
+      <CleanGroup>
+        <CleanButton
+          href="cdek.ru"
+        >
+          Перейти на 
+          cdek.ru
+        </CleanButton>
+      </CleanGroup>
+    }
+    withCloseButton={true}
+  >
+    <div
+      className="overlay"
+      data-testid="modal:overlay"
+    >
+      <div
+        className="modal size-m shadow-z4"
+        data-testid="modal"
+      >
+        <TopBar
+          buttonsProps={
+            Object {
+              "end": Object {
+                "data-testid": "modal:close",
+                "icon": <CrossSVG
+                  className="cursor-pointer"
+                />,
+                "onClick": undefined,
+              },
+            }
+          }
+          className="header"
+          size="s"
+        >
+          <div
+            className="modal-header size-s header"
+          >
+            <div
+              className="icon-button"
+            />
+            <div
+              className="main-section"
+            >
+              <div
+                className="title ellipsis"
+              />
+            </div>
+            <IconButton
+              data-testid="modal:close"
+              icon={
+                <CrossSVG
+                  className="cursor-pointer"
+                />
+              }
+            >
+              <button
+                className="icon-button"
+                data-testid="modal:close"
+                type="button"
+              >
+                <CrossSVG
+                  className="cursor-pointer"
+                >
+                  <svg
+                    className="cursor-pointer"
+                    height={24}
+                    viewBox="0 0 24 24"
+                    width={24}
+                  >
+                    <path
+                      clipRule="evenodd"
+                      d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
+                      fillRule="evenodd"
+                    />
+                  </svg>
+                </CrossSVG>
+              </button>
+            </IconButton>
+          </div>
+        </TopBar>
+        <div
+          className="wrap"
+        >
+          <img
+            alt=""
+            src="/src/common/images/tracking-info-delivery.png"
+            width={324}
+          />
+          <div
+            className="text"
+          >
+            Чтобы узнать, где находится ваше отправление, введите на 
+          сайте cdek.ru в разделе отслеживания трек-номера посылок:
+          </div>
+          <div
+            className="track-numbers"
+            onScroll={[Function]}
+          >
+            <TrackNumber
+              item={
+                Object {
+                  "text": "text",
+                  "title": "title",
+                }
+              }
+              key="0"
+              onCopy={[Function]}
+            >
+              <div
+                className="track-number"
+                onClick={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <div
+                  className="title"
+                >
+                  title
+                </div>
+                <div
+                  className="content"
+                >
+                  <div
+                    className="icon"
+                  >
+                    <CopySVG>
+                      <svg
+                        height={16}
+                        viewBox="0 0 16 16"
+                        width={16}
+                      >
+                        <path
+                          clipRule="evenodd"
+                          d="M6 2a1 1 0 011-1h7a1 1 0 011 1v7a1 1 0 11-2 0V3H7a1 1 0 01-1-1zM2 5a1 1 0 011-1h8a1 1 0 011 1v8.5a1 1 0 01-1 1H3a1 1 0 01-1-1V5zm2 1v6.5h6V6H4z"
+                          fillRule="evenodd"
+                        />
+                      </svg>
+                    </CopySVG>
+                  </div>
+                </div>
+              </div>
+            </TrackNumber>
+            <TrackNumber
+              item={
+                Object {
+                  "text": "text",
+                  "title": "title",
+                }
+              }
+              key="1"
+              onCopy={[Function]}
+            >
+              <div
+                className="track-number"
+                onClick={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <div
+                  className="title"
+                >
+                  title
+                </div>
+                <div
+                  className="content"
+                >
+                  <div
+                    className="icon"
+                  >
+                    <CopySVG>
+                      <svg
+                        height={16}
+                        viewBox="0 0 16 16"
+                        width={16}
+                      >
+                        <path
+                          clipRule="evenodd"
+                          d="M6 2a1 1 0 011-1h7a1 1 0 011 1v7a1 1 0 11-2 0V3H7a1 1 0 01-1-1zM2 5a1 1 0 011-1h8a1 1 0 011 1v8.5a1 1 0 01-1 1H3a1 1 0 01-1-1V5zm2 1v6.5h6V6H4z"
+                          fillRule="evenodd"
+                        />
+                      </svg>
+                    </CopySVG>
+                  </div>
+                </div>
+              </div>
+            </TrackNumber>
+            <TrackNumber
+              item={
+                Object {
+                  "text": "text",
+                  "title": "title",
+                }
+              }
+              key="2"
+              onCopy={[Function]}
+            >
+              <div
+                className="track-number"
+                onClick={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <div
+                  className="title"
+                >
+                  title
+                </div>
+                <div
+                  className="content"
+                >
+                  <div
+                    className="icon"
+                  >
+                    <CopySVG>
+                      <svg
+                        height={16}
+                        viewBox="0 0 16 16"
+                        width={16}
+                      >
+                        <path
+                          clipRule="evenodd"
+                          d="M6 2a1 1 0 011-1h7a1 1 0 011 1v7a1 1 0 11-2 0V3H7a1 1 0 01-1-1zM2 5a1 1 0 011-1h8a1 1 0 011 1v8.5a1 1 0 01-1 1H3a1 1 0 01-1-1V5zm2 1v6.5h6V6H4z"
+                          fillRule="evenodd"
+                        />
+                      </svg>
+                    </CopySVG>
+                  </div>
+                </div>
+              </div>
+            </TrackNumber>
+            <TrackNumber
+              item={
+                Object {
+                  "text": "text",
+                  "title": "title",
+                }
+              }
+              key="3"
+              onCopy={[Function]}
+            >
+              <div
+                className="track-number"
+                onClick={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <div
+                  className="title"
+                >
+                  title
+                </div>
+                <div
+                  className="content"
+                >
+                  <div
+                    className="icon"
+                  >
+                    <CopySVG>
+                      <svg
+                        height={16}
+                        viewBox="0 0 16 16"
+                        width={16}
+                      >
+                        <path
+                          clipRule="evenodd"
+                          d="M6 2a1 1 0 011-1h7a1 1 0 011 1v7a1 1 0 11-2 0V3H7a1 1 0 01-1-1zM2 5a1 1 0 011-1h8a1 1 0 011 1v8.5a1 1 0 01-1 1H3a1 1 0 01-1-1V5zm2 1v6.5h6V6H4z"
+                          fillRule="evenodd"
+                        />
+                      </svg>
+                    </CopySVG>
+                  </div>
+                </div>
+              </div>
+            </TrackNumber>
+            <TrackNumber
+              item={
+                Object {
+                  "text": "text",
+                  "title": "title",
+                }
+              }
+              key="4"
+              onCopy={[Function]}
+            >
+              <div
+                className="track-number"
+                onClick={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <div
+                  className="title"
+                >
+                  title
+                </div>
+                <div
+                  className="content"
+                >
+                  <div
+                    className="icon"
+                  >
+                    <CopySVG>
+                      <svg
+                        height={16}
+                        viewBox="0 0 16 16"
+                        width={16}
+                      >
+                        <path
+                          clipRule="evenodd"
+                          d="M6 2a1 1 0 011-1h7a1 1 0 011 1v7a1 1 0 11-2 0V3H7a1 1 0 01-1-1zM2 5a1 1 0 011-1h8a1 1 0 011 1v8.5a1 1 0 01-1 1H3a1 1 0 01-1-1V5zm2 1v6.5h6V6H4z"
+                          fillRule="evenodd"
+                        />
+                      </svg>
+                    </CopySVG>
+                  </div>
+                </div>
+              </div>
+            </TrackNumber>
+            <TrackNumber
+              item={
+                Object {
+                  "text": "text",
+                  "title": "title",
+                }
+              }
+              key="5"
+              onCopy={[Function]}
+            >
+              <div
+                className="track-number"
+                onClick={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <div
+                  className="title"
+                >
+                  title
+                </div>
+                <div
+                  className="content"
+                >
+                  <div
+                    className="icon"
+                  >
+                    <CopySVG>
+                      <svg
+                        height={16}
+                        viewBox="0 0 16 16"
+                        width={16}
+                      >
+                        <path
+                          clipRule="evenodd"
+                          d="M6 2a1 1 0 011-1h7a1 1 0 011 1v7a1 1 0 11-2 0V3H7a1 1 0 01-1-1zM2 5a1 1 0 011-1h8a1 1 0 011 1v8.5a1 1 0 01-1 1H3a1 1 0 01-1-1V5zm2 1v6.5h6V6H4z"
+                          fillRule="evenodd"
+                        />
+                      </svg>
+                    </CopySVG>
+                  </div>
+                </div>
+              </div>
+            </TrackNumber>
+            <TrackNumber
+              item={
+                Object {
+                  "text": "text",
+                  "title": "title",
+                }
+              }
+              key="6"
+              onCopy={[Function]}
+            >
+              <div
+                className="track-number"
+                onClick={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <div
+                  className="title"
+                >
+                  title
+                </div>
+                <div
+                  className="content"
+                >
+                  <div
+                    className="icon"
+                  >
+                    <CopySVG>
+                      <svg
+                        height={16}
+                        viewBox="0 0 16 16"
+                        width={16}
+                      >
+                        <path
+                          clipRule="evenodd"
+                          d="M6 2a1 1 0 011-1h7a1 1 0 011 1v7a1 1 0 11-2 0V3H7a1 1 0 01-1-1zM2 5a1 1 0 011-1h8a1 1 0 011 1v8.5a1 1 0 01-1 1H3a1 1 0 01-1-1V5zm2 1v6.5h6V6H4z"
+                          fillRule="evenodd"
+                        />
+                      </svg>
+                    </CopySVG>
+                  </div>
+                </div>
+              </div>
+            </TrackNumber>
+            <TrackNumber
+              item={
+                Object {
+                  "text": "text",
+                  "title": "title",
+                }
+              }
+              key="7"
+              onCopy={[Function]}
+            >
+              <div
+                className="track-number"
+                onClick={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <div
+                  className="title"
+                >
+                  title
+                </div>
+                <div
+                  className="content"
+                >
+                  <div
+                    className="icon"
+                  >
+                    <CopySVG>
+                      <svg
+                        height={16}
+                        viewBox="0 0 16 16"
+                        width={16}
+                      >
+                        <path
+                          clipRule="evenodd"
+                          d="M6 2a1 1 0 011-1h7a1 1 0 011 1v7a1 1 0 11-2 0V3H7a1 1 0 01-1-1zM2 5a1 1 0 011-1h8a1 1 0 011 1v8.5a1 1 0 01-1 1H3a1 1 0 01-1-1V5zm2 1v6.5h6V6H4z"
+                          fillRule="evenodd"
+                        />
+                      </svg>
+                    </CopySVG>
+                  </div>
+                </div>
+              </div>
+            </TrackNumber>
+            <TrackNumber
+              item={
+                Object {
+                  "text": "text",
+                  "title": "title",
+                }
+              }
+              key="8"
+              onCopy={[Function]}
+            >
+              <div
+                className="track-number"
+                onClick={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <div
+                  className="title"
+                >
+                  title
+                </div>
+                <div
+                  className="content"
+                >
+                  <div
+                    className="icon"
+                  >
+                    <CopySVG>
+                      <svg
+                        height={16}
+                        viewBox="0 0 16 16"
+                        width={16}
+                      >
+                        <path
+                          clipRule="evenodd"
+                          d="M6 2a1 1 0 011-1h7a1 1 0 011 1v7a1 1 0 11-2 0V3H7a1 1 0 01-1-1zM2 5a1 1 0 011-1h8a1 1 0 011 1v8.5a1 1 0 01-1 1H3a1 1 0 01-1-1V5zm2 1v6.5h6V6H4z"
+                          fillRule="evenodd"
+                        />
+                      </svg>
+                    </CopySVG>
+                  </div>
+                </div>
+              </div>
+            </TrackNumber>
+            <TrackNumber
+              item={
+                Object {
+                  "text": "text",
+                  "title": "title",
+                }
+              }
+              key="9"
+              onCopy={[Function]}
+            >
+              <div
+                className="track-number"
+                onClick={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <div
+                  className="title"
+                >
+                  title
+                </div>
+                <div
+                  className="content"
+                >
+                  <div
+                    className="icon"
+                  >
+                    <CopySVG>
+                      <svg
+                        height={16}
+                        viewBox="0 0 16 16"
+                        width={16}
+                      >
+                        <path
+                          clipRule="evenodd"
+                          d="M6 2a1 1 0 011-1h7a1 1 0 011 1v7a1 1 0 11-2 0V3H7a1 1 0 01-1-1zM2 5a1 1 0 011-1h8a1 1 0 011 1v8.5a1 1 0 01-1 1H3a1 1 0 01-1-1V5zm2 1v6.5h6V6H4z"
+                          fillRule="evenodd"
+                        />
+                      </svg>
+                    </CopySVG>
+                  </div>
+                </div>
+              </div>
+            </TrackNumber>
+          </div>
+        </div>
+        <div
+          className="footer inner-border-top"
+        >
+          <CleanGroup>
+            <div
+              className="clean-group"
+            >
+              <CleanButton
+                href="cdek.ru"
+                key=".0"
+                size="m"
+              >
+                <a
+                  className="clean-button size-m"
+                  href="cdek.ru"
+                  type="button"
+                >
+                  Перейти на 
+                  cdek.ru
+                </a>
+              </CleanButton>
+            </div>
+          </CleanGroup>
+        </div>
+      </div>
+    </div>
+  </Modal>
+</TrackingInfoModal>
+`;
