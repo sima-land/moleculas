@@ -112,7 +112,6 @@ exports[`SearchBar should renders properly with all props 1`] = `
           aria-label="Очистить"
           className="link clear-icon color__brand-blue hover-color__brand-deep-blue"
           data-testid="search-bar:clear-icon"
-          href="javascript:;"
           onClick={[Function]}
           role="button"
           tabIndex={0}
