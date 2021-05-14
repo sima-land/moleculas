@@ -134,6 +134,7 @@ exports[`TrackingInfoModal should hide Hint correctly 1`] = `
         </TopBar>
         <div
           className="wrap"
+          onScroll={[Function]}
         >
           <img
             alt=""
@@ -148,7 +149,6 @@ exports[`TrackingInfoModal should hide Hint correctly 1`] = `
           </div>
           <div
             className="track-numbers"
-            onScroll={[Function]}
           >
             <TrackNumber
               item={

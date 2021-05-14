@@ -3,10 +3,17 @@
 .wrap {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding-bottom: 48px;
-  max-height: 100%;
+  max-height: 696px;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    width: 4px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+  }
 }
 
 .text {
@@ -17,20 +24,9 @@
 }
 
 .track-numbers {
-  max-height: 286px; // Максимальная высота поля с трек номерами равняется 4 высотам одного трек номера - высота разделителя (при максимально возможной высоте модального окна)
-  overflow-y: auto;
   width: 100%;
-  margin: 0 12px;
-  padding-bottom: 48px;
   position: relative;
-  &::-webkit-scrollbar {
-    width: 4px;
-  }
-  &::-webkit-scrollbar-thumb {
-    width: 4px;
-    background-color: #e0e0e0;
-    border-radius: 4px;
-  }
+  padding: 0 104px 48px;
 }
 
 .hint {

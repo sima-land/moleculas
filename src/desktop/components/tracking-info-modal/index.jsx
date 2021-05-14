@@ -38,7 +38,8 @@ export const TrackingInfoModal = ({
       onCopy(item);
       toggleHint();
       const { parentNode, offsetTop } = ref.current;
-      const { offsetTop: parentOffsetTop, scrollTop } = parentNode;
+      const { offsetTop: parentOffsetTop, parentNode: wrapNode } = parentNode;
+      const { scrollTop } = wrapNode;
 
       const hintPosition = (offsetTop + parentOffsetTop) - scrollTop;
       setHintOffset(hintPosition - OFFSET_TO_BUTTON);
@@ -67,7 +68,7 @@ export const TrackingInfoModal = ({
         </Clean.Group>
       )}
     >
-      <div className={cx('wrap')}>
+      <div className={cx('wrap')} onScroll={() => setHintOffset(0)}>
         <img src={DeliveryImg} alt='' width={324} />
         <div className={cx('text')}>
           {
@@ -75,7 +76,7 @@ export const TrackingInfoModal = ({
           сайте ${deliverySite} в разделе отслеживания трек-номера посылок:`
           }
         </div>
-        <div className={cx('track-numbers')} onScroll={() => setHintOffset(0)}>
+        <div className={cx('track-numbers')}>
           {
             map(trackNumbers, (item, key) => (
               <TrackNumber onCopy={handleCopy} item={item} key={key} />
