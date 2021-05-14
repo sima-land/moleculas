@@ -6,10 +6,9 @@ import { isNonEmptyArray } from '../../../common/helpers/is-non-empty';
 import { Badge } from '../../../common/components/badge';
 import classnames from 'classnames/bind';
 import styles from './product-info.scss';
-import { WishButton } from '../../../common/components/wish-button';
 import { QuickViewButton } from '../../../common/components/quick-view-button';
 import withPrevent from '@dev-dep/ui-nucleons/helpers/with-prevent';
-import { WithHint } from '../with-hint';
+import { WithHint } from '@dev-dep/ui-nucleons/with-hint';
 
 const cx = classnames.bind(styles);
 
@@ -21,15 +20,13 @@ const cx = classnames.bind(styles);
 export const ProductInfo = ({
   badges,
   currencyGrapheme,
-  favorite,
   imageSrc,
   name,
   oldPrice,
-  onFavoriteClick,
   onQuickViewClick,
   price,
   url,
-  withImageButtons,
+  withQuickView,
 }) => (
   <>
     <a className={cx('row', 'image-row')} href={url}>
@@ -38,32 +35,18 @@ export const ProductInfo = ({
         alt={name}
         src={imageSrc}
       />
-      {withImageButtons && (
-        <>
-          <WithHint text={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}>
-            {(ref, toggle) => (
-              <WishButton
-                ref={ref}
-                checked={favorite}
-                onMouseEnter={() => toggle(true)}
-                onMouseLeave={() => toggle(false)}
-                className={cx('on-image-btn', 'wish')}
-                onClick={withPrevent(onFavoriteClick)}
-              />
-            )}
-          </WithHint>
-          <WithHint text='Быстрый просмотр'>
-            {(ref, toggle) => (
-              <QuickViewButton
-                ref={ref}
-                onMouseEnter={() => toggle(true)}
-                onMouseLeave={() => toggle(false)}
-                className={cx('on-image-btn', 'quick-view')}
-                onClick={withPrevent(onQuickViewClick)}
-              />
-            )}
-          </WithHint>
-        </>
+      {withQuickView && (
+        <WithHint hint='Быстрый просмотр' direction='left'>
+          {(ref, toggle) => (
+            <QuickViewButton
+              ref={ref}
+              onMouseEnter={() => toggle(true)}
+              onMouseLeave={() => toggle(false)}
+              className={cx('quick-view-btn')}
+              onClick={withPrevent(onQuickViewClick)}
+            />
+          )}
+        </WithHint>
       )}
     </a>
 

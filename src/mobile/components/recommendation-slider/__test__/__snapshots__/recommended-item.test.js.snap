@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<RecommendedItem /> render with props should correct render with all props 1`] = `
-<withGlobalListeners(RecommendedItem)
-  addGlobalListener={[MockFunction]}
+<RecommendedItem
   currencyGrapheme="$"
   imageAlt="alt text"
   imageSrc="https://cdn2.static1-sima-land.com/items/3592229/4/140.jpg?v=1549604912"
@@ -11,76 +10,64 @@ exports[`<RecommendedItem /> render with props should correct render with all pr
   price={135.4}
   url="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
 >
-  <RecommendedItem
-    addGlobalListener={[Function]}
-    currencyGrapheme="$"
-    imageAlt="alt text"
-    imageSrc="https://cdn2.static1-sima-land.com/items/3592229/4/140.jpg?v=1549604912"
-    name="Милая картина из шерсти Schrodinger cat, А5"
-    oldPrice={234.9}
-    price={135.4}
-    url="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
+  <div
+    className="item"
   >
     <div
-      className="item"
+      className="image-wrapper"
     >
-      <div
-        className="image-wrapper"
+      <img
+        alt="alt text"
+        className="image"
+        src="https://cdn2.static1-sima-land.com/items/3592229/4/140.jpg?v=1549604912"
+      />
+    </div>
+    <div
+      className="price-wrapper"
+    >
+      <Price
+        className="price"
+        currencyGrapheme="$"
+        fractionalSign=","
+        value={135.4}
       >
-        <img
-          alt="alt text"
-          className="image"
-          src="https://cdn2.static1-sima-land.com/items/3592229/4/140.jpg?v=1549604912"
-        />
-      </div>
-      <div
-        className="price-wrapper"
+        <span
+          className="root price"
+        >
+          135,40 $
+        </span>
+      </Price>
+      <Price
+        className="old-price"
+        currencyGrapheme="$"
+        old={true}
+        value={234.9}
       >
-        <Price
-          className="price"
-          currencyGrapheme="$"
-          fractionalSign=","
-          value={135.4}
+        <span
+          className="root old-price"
         >
-          <span
-            className="root price"
-          >
-            135,40 $
-          </span>
-        </Price>
-        <Price
-          className="old-price"
-          currencyGrapheme="$"
-          old={true}
-          value={234.9}
-        >
-          <span
-            className="root old-price"
-          >
-            234,90 $
-          </span>
-        </Price>
-      </div>
-      <ForwardRef(Link)
-        className="link"
-        color="black"
+          234,90 $
+        </span>
+      </Price>
+    </div>
+    <ForwardRef(Link)
+      className="link"
+      color="black"
+      href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
+    >
+      <a
+        className="link link"
         href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
       >
-        <a
-          className="link link"
-          href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
-        >
-          Милая картина из шерсти Schrodinger cat, А5
-        </a>
-      </ForwardRef(Link)>
-    </div>
-  </RecommendedItem>
-</withGlobalListeners(RecommendedItem)>
+        Милая картина из шерсти Schrodinger cat, А5
+      </a>
+    </ForwardRef(Link)>
+  </div>
+</RecommendedItem>
 `;
 
 exports[`<RecommendedItem /> render with props should correct render without oldPrice 1`] = `
-<withGlobalListeners(RecommendedItem)
-  addGlobalListener={[MockFunction]}
+<RecommendedItem
   currencyGrapheme="$"
   imageAlt="alt text"
   imageSrc="https://cdn2.static1-sima-land.com/items/3592229/4/140.jpg?v=1549604912"
@@ -88,62 +75,57 @@ exports[`<RecommendedItem /> render with props should correct render without old
   price={135.4}
   url="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
 >
-  <RecommendedItem
-    addGlobalListener={[Function]}
-    currencyGrapheme="$"
-    imageAlt="alt text"
-    imageSrc="https://cdn2.static1-sima-land.com/items/3592229/4/140.jpg?v=1549604912"
-    name="Милая картина из шерсти Schrodinger cat, А5"
-    price={135.4}
-    url="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
+  <div
+    className="item"
   >
     <div
-      className="item"
+      className="image-wrapper"
     >
-      <div
-        className="image-wrapper"
+      <img
+        alt="alt text"
+        className="image"
+        src="https://cdn2.static1-sima-land.com/items/3592229/4/140.jpg?v=1549604912"
+      />
+    </div>
+    <div
+      className="price-wrapper"
+    >
+      <Price
+        className="price"
+        currencyGrapheme="$"
+        fractionalSign=","
+        value={135.4}
       >
-        <img
-          alt="alt text"
-          className="image"
-          src="https://cdn2.static1-sima-land.com/items/3592229/4/140.jpg?v=1549604912"
-        />
-      </div>
-      <div
-        className="price-wrapper"
-      >
-        <Price
-          className="price"
-          currencyGrapheme="$"
-          fractionalSign=","
-          value={135.4}
+        <span
+          className="root price"
         >
-          <span
-            className="root price"
-          >
-            135,40 $
-          </span>
-        </Price>
-      </div>
-      <ForwardRef(Link)
-        className="link"
-        color="black"
+          135,40 $
+        </span>
+      </Price>
+    </div>
+    <ForwardRef(Link)
+      className="link"
+      color="black"
+      href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
+    >
+      <a
+        className="link link"
         href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
       >
-        <a
-          className="link link"
-          href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
-        >
-          Милая картина из шерсти Schrodinger cat, А5
-        </a>
-      </ForwardRef(Link)>
-    </div>
-  </RecommendedItem>
-</withGlobalListeners(RecommendedItem)>
+        Милая картина из шерсти Schrodinger cat, А5
+      </a>
+    </ForwardRef(Link)>
+  </div>
+</RecommendedItem>
 `;
 
 exports[`<RecommendedItem /> without props should match snapshot 1`] = `
-<RecommendedItem
-  addGlobalListener={[Function]}
-/>
+<div
+  className="item"
+>
+  <ForwardRef(Link)
+    className="link"
+    color="black"
+  />
+</div>
 `;

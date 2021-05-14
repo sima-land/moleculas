@@ -1,7 +1,7 @@
 import React, { Component, createRef } from 'react';
 import isFunction from 'lodash/isFunction';
-import withGlobalListeners from '@dev-dep/ui-nucleons/hoc/with-global-listeners';
-import PositioningPopup from '@dev-dep/ui-nucleons/popups/positioning-popup';
+import on from '@dev-dep/ui-nucleons/helpers/on';
+import PositioningPopup from '../__temp__/popups/positioning-popup';
 import classnames from 'classnames/bind';
 import style from './wholesale-price.scss';
 
@@ -14,7 +14,7 @@ export const cx = classnames.bind(style);
  * @param {string} [props.className] Дополнительный класс компонента.
  * @param {Function} [props.onDetailsClick] Дополнительные действия при клике открытия описания.
  */
-export class WholesaleText extends Component {
+class WholesaleText extends Component {
   state = {
     isPopupOpen: false,
   };
@@ -45,9 +45,10 @@ export class WholesaleText extends Component {
    * @inheritdoc
    */
   componentDidMount () {
-    const { addGlobalListener, description } = this.props;
-    if (description && isFunction(addGlobalListener)) {
-      this.removeGlobalListener = addGlobalListener('click', this.handleOutsideClick);
+    const { description } = this.props;
+
+    if (description) {
+      this.removeGlobalListener = on(window, 'click', this.handleOutsideClick);
     }
   }
 
@@ -100,4 +101,4 @@ export class WholesaleText extends Component {
   }
 }
 
-export default withGlobalListeners(WholesaleText);
+export default WholesaleText;

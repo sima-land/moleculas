@@ -92,6 +92,7 @@ exports[`<InCartControl /> should renders correctly 1`] = `
     onAdd={[Function]}
     onBlur={[Function]}
     onChange={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     onSubtract={[Function]}
     size="s"
@@ -99,6 +100,7 @@ exports[`<InCartControl /> should renders correctly 1`] = `
   >
     <div
       className="root size-s control"
+      data-testid="stepper"
     >
       <MinusSVG
         className="button"

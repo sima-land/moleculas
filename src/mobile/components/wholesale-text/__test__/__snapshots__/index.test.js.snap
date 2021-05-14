@@ -2,22 +2,6 @@
 
 exports[`<WholesaleText /> should render with props and cutTextContent calls correctly 1`] = `
 <WholesaleText
-  addGlobalListener={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          "resize",
-          [Function],
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
   text="Крупный опт «Галантерея и швейная галантерея»"
 >
   <span>
@@ -27,24 +11,7 @@ exports[`<WholesaleText /> should render with props and cutTextContent calls cor
 `;
 
 exports[`<WholesaleText /> should render without props 1`] = `
-<WholesaleText
-  addGlobalListener={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          "resize",
-          [Function],
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
->
+<WholesaleText>
   <span />
 </WholesaleText>
 `;

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import debounce from 'lodash/debounce';
-import withGlobalListeners from '@dev-dep/ui-nucleons/hoc/with-global-listeners';
+import on from '@dev-dep/ui-nucleons/helpers/on';
 import { cutTextContent } from '../helpers/cut-text-content';
 
 /**
@@ -23,10 +23,9 @@ export const cutItemWholesaleText = element => {
  * @param {string} [props.className] Дополнительный класс компонента.
  * @return {ReactElement} Компонент цены крупного опта с описанием.
  */
-export const WholesaleText = ({
+const WholesaleText = ({
   text,
   className,
-  addGlobalListener,
 }) => {
   const linkRef = useRef(null);
 
@@ -39,7 +38,7 @@ export const WholesaleText = ({
       cutItemWholesaleText(element);
     }, 500);
 
-    return addGlobalListener('resize', cutItemText);
+    return on(window, 'resize', cutItemText);
   }, [text]);
 
   return (
@@ -47,4 +46,4 @@ export const WholesaleText = ({
   );
 };
 
-export default withGlobalListeners(WholesaleText);
+export default WholesaleText;

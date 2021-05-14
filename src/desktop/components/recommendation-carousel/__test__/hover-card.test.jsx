@@ -8,48 +8,33 @@ import { ProductCard } from '../product-card';
 import { Stepper } from '@dev-dep/ui-nucleons/stepper';
 
 describe('<HoverCard />', () => {
-  it('should renders correctly', () => {
+  it('should renders hidden', () => {
     const wrapper = mount(
       <HoverCard
-        controlRef={createRef()}
+        info={{
+          url: 'https://www.sima-land.ru/123456',
+          name: 'Ножницы портновские, 10, 26 см, цвет чёрный',
+          imageSrc: 'https://cdn3.static1-sima-land.com/items/29455/0/1600.jpg?v: 1617955476',
+          price: 225,
+          oldPrice: 250,
+          favorite: false,
+          currencyGrapheme: '₽',
+          withImageButtons: true,
+          markupText: 'Комплектация + 50 ₽ при покупке до 20 шт',
+        }}
+        targetRef={createRef()}
         onQuickViewClick={jest.fn()}
-        onFavoriteClick={jest.fn()}
       />
     );
 
     expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find(ProductCard).hasClass('hidden')).toBe(true);
   });
 
-  it('should handle image button click callbacks', () => {
-    const Spy = {
-      onQuickViewClick: jest.fn(),
-      onFavoriteClick: jest.fn(),
-    };
+  it('should renders with positioning', () => {
+    const spy = jest.fn();
 
-    const wrapper = mount(
-      <HoverCard
-        controlRef={createRef()}
-        {...Spy}
-      />
-    );
-
-    // quick view
-    expect(Spy.onQuickViewClick).toBeCalledTimes(0);
-    act(() => {
-      wrapper.find('svg[data-testid="quick-view-button"]').simulate('click');
-    });
-    expect(Spy.onQuickViewClick).toBeCalledTimes(1);
-
-    // favorite
-    expect(Spy.onFavoriteClick).toBeCalledTimes(0);
-    act(() => {
-      wrapper.find('svg[data-testid="favorite-button"]').simulate('click');
-    });
-    expect(Spy.onFavoriteClick).toBeCalledTimes(1);
-  });
-
-  it('should set control to ref', () => {
-    const controlRef = createRef();
+    const targetRef = createRef();
 
     const itemInfo = {
       url: 'https://www.sima-land.ru/123456',
@@ -60,46 +45,109 @@ describe('<HoverCard />', () => {
       favorite: false,
       currencyGrapheme: '₽',
       withImageButtons: true,
-      onQuickViewClick: jest.fn(),
-      onFavoriteClick: jest.fn(),
       markupText: 'Комплектация + 50 ₽ при покупке до 20 шт',
     };
 
     const wrapper = mount(
-      <HoverCard
-        controlRef={controlRef}
-      />
+      <>
+        <div ref={targetRef}>Target</div>
+
+        <HoverCard
+          info={itemInfo}
+          targetRef={targetRef}
+          onQuickViewClick={spy}
+        />
+      </>
     );
 
     expect(wrapper).toMatchSnapshot();
-    expect(wrapper.find(ProductCard).getDOMNode().classList.contains('hidden')).toBe(true);
-
-    act(() => {
-      const fakeTarget = document.createElement('div');
-      controlRef.current.show(itemInfo, fakeTarget);
-    });
-    wrapper.update();
-
-    expect(wrapper).toMatchSnapshot();
     expect(wrapper.find(ProductInfo).find(Link).text()).toBe(itemInfo.name);
-    expect(wrapper.find(ProductCard).getDOMNode().classList.contains('hidden')).toBe(false);
+    expect(wrapper.find(ProductCard).hasClass('hidden')).toBe(false);
+  });
+
+  it('should handle mouseleave', () => {
+    const spy = jest.fn();
+
+    const targetRef = createRef();
+
+    const itemInfo = {
+      url: 'https://www.sima-land.ru/123456',
+      name: 'Ножницы портновские, 10, 26 см, цвет чёрный',
+      imageSrc: 'https://cdn3.static1-sima-land.com/items/29455/0/1600.jpg?v: 1617955476',
+      price: 225,
+      oldPrice: 250,
+      favorite: false,
+      currencyGrapheme: '₽',
+      withImageButtons: true,
+      markupText: 'Комплектация + 50 ₽ при покупке до 20 шт',
+    };
+
+    const wrapper = mount(
+      <>
+        <div ref={targetRef}>Target</div>
+
+        <HoverCard
+          info={itemInfo}
+          targetRef={targetRef}
+          onMouseLeave={spy}
+        />
+      </>
+    );
+
+    expect(spy).toBeCalledTimes(0);
 
     act(() => {
       wrapper.find(ProductCard).simulate('mouseleave');
     });
     wrapper.update();
 
-    expect(wrapper.find(ProductCard).getDOMNode().classList.contains('hidden')).toBe(true);
+    expect(spy).toBeCalledTimes(1);
+  });
+
+  it('should handle image button click callbacks', () => {
+    const spy = jest.fn();
+
+    const targetRef = createRef();
+
+    const wrapper = mount(
+      <>
+        <div ref={targetRef}>Target</div>
+
+        <HoverCard
+          info={{
+            url: 'https://www.sima-land.ru/123456',
+            name: 'Ножницы портновские, 10, 26 см, цвет чёрный',
+            imageSrc: 'https://cdn3.static1-sima-land.com/items/29455/0/1600.jpg?v: 1617955476',
+            price: 225,
+            oldPrice: 250,
+            favorite: false,
+            currencyGrapheme: '₽',
+            withImageButtons: true,
+            markupText: 'Комплектация + 50 ₽ при покупке до 20 шт',
+          }}
+          targetRef={targetRef}
+          onQuickViewClick={spy}
+        />
+      </>
+    );
+
+    expect(spy).toBeCalledTimes(0);
+
+    act(() => {
+      wrapper.find('svg[data-testid="quick-view-button"]').simulate('click');
+    });
+
+    expect(spy).toBeCalledTimes(1);
   });
 
   it('should handle cart data/control props', () => {
-    const controlRef = createRef();
-
     const Spy = {
       onAdd: jest.fn(),
       onChange: jest.fn(),
       onSubtract: jest.fn(),
     };
+
+    const targetRef = createRef();
 
     const productInfo = {
       name: 'Test Product',
@@ -116,19 +164,17 @@ describe('<HoverCard />', () => {
     };
 
     const wrapper = mount(
-      <HoverCard
-        controlRef={controlRef}
-        onAdd={Spy.onAdd}
-        onChange={Spy.onChange}
-        onSubtract={Spy.onSubtract}
-      />
+      <>
+        <div ref={targetRef}>Target</div>
+        <HoverCard
+          info={productInfo}
+          targetRef={targetRef}
+          onAdd={Spy.onAdd}
+          onChange={Spy.onChange}
+          onSubtract={Spy.onSubtract}
+        />
+      </>
     );
-
-    act(() => {
-      const fakeTarget = document.createElement('div');
-      controlRef.current.show(productInfo, fakeTarget);
-    });
-    wrapper.update();
 
     expect(wrapper.find(HoverCard).find(Stepper).find('[data-testid="stepper:input"]').prop('value')).toBe('5');
 

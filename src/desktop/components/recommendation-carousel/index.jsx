@@ -1,9 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Carousel } from '@dev-dep/ui-nucleons/carousel';
 import { ProductInfo } from './product-info';
 import { HoverCard } from './hover-card';
 import { isNonEmptyArray } from '../../../common/helpers/is-non-empty';
-import { useAllowFlag, useMedia, useViewport } from './utils';
+import { useAllowFlag, useChildWidth, useViewport } from './utils';
+import { useMedia } from '@dev-dep/ui-nucleons/hooks/media';
 import classnames from 'classnames/bind';
 import styles from './recommendation-carousel.scss';
 
@@ -30,18 +31,21 @@ export const RecommendationCarousel = ({
   onInViewport,
   onItemAdd,
   onItemChange,
-  onItemFavoriteClick,
   onItemQuickViewClick,
   onItemSubtract,
   onNeedRequest,
   title,
   titleTag: Header = 'h2',
 }) => {
-  const stubRef = useRef();
-  const sectionRef = useRef();
-  const needBigArrows = useMedia('(min-width: 1440px)');
+  const [activeItem, setActiveItem] = useState(null);
   const cardShow = useAllowFlag();
-  const cardControlRef = useRef();
+  const needBigArrows = useMedia('(min-width: 1440px)');
+  const sectionRef = useRef();
+  const stubRef = useRef();
+  const targetItemRef = useRef();
+
+  // вычисляем ширину элемента карусели для позиционирования стрелок
+  const itemWidth = useChildWidth(sectionRef, `.${cx('item')}`, [items]);
 
   // инициируем загрузку данных, когда компонент почти попал в зону видимости
   useViewport(stubRef, onNeedRequest);
@@ -53,19 +57,20 @@ export const RecommendationCarousel = ({
 
   return isNonEmptyArray(items)
     ? (
-      <section
-        className={cx('root', className)}
-        ref={sectionRef}
-      >
+      <section ref={sectionRef} className={cx('root', className)}>
         <Header className={cx('title')}>{title}</Header>
 
         <Carousel
-          step={3} // по гайдам
-          draggable={false} // по гайдам
+          step={3}
+          draggable={false}
           items={items}
+          withControls={itemWidth !== null}
           controlProps={{
-            size: needBigArrows ? 'l' : 's', // по гайдам
-            style: { zIndex: 1 }, // чтобы были над HoverCard
+            size: needBigArrows ? 'l' : 's',
+            style: {
+              zIndex: 1, // чтобы были над HoverCard
+              top: `${itemWidth / 2}px`,
+            },
           }}
           renderItem={(item, key) => (
             <div
@@ -73,9 +78,10 @@ export const RecommendationCarousel = ({
               data-testid='reco-item'
               className={cx('item', getSizeClasses(itemSize))}
               onMouseEnter={e => {
-                cardShow.allowed()
-                  && cardControlRef.current
-                  && cardControlRef.current.show(item, e.currentTarget);
+                if (cardShow.allowed()) {
+                  targetItemRef.current = e.currentTarget;
+                  setActiveItem(item);
+                }
               }}
             >
               <ProductInfo {...item} />
@@ -89,14 +95,17 @@ export const RecommendationCarousel = ({
           }}
         />
 
-        <HoverCard
-          controlRef={cardControlRef}
-          onQuickViewClick={onItemQuickViewClick}
-          onFavoriteClick={onItemFavoriteClick}
-          onAdd={onItemAdd}
-          onSubtract={onItemSubtract}
-          onChange={onItemChange}
-        />
+        {activeItem && (
+          <HoverCard
+            info={activeItem}
+            targetRef={targetItemRef}
+            onQuickViewClick={onItemQuickViewClick}
+            onAdd={onItemAdd}
+            onSubtract={onItemSubtract}
+            onChange={onItemChange}
+            onMouseLeave={() => setActiveItem(null)}
+          />
+        )}
       </section>
     )
     : <div ref={stubRef} />;

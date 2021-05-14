@@ -169,6 +169,7 @@ exports[`<RecommendationCarousel /> should handle "titleContainer" prop 1`] = `
         Object {
           "size": "s",
           "style": Object {
+            "top": "0px",
             "zIndex": 1,
           },
         }
@@ -322,6 +323,7 @@ exports[`<RecommendationCarousel /> should handle "titleContainer" prop 1`] = `
       onChangeTargetIndex={[Function]}
       renderItem={[Function]}
       step={3}
+      withControls={true}
     >
       <div
         className="carousel-wrapper"
@@ -1586,172 +1588,94 @@ exports[`<RecommendationCarousel /> should handle "titleContainer" prop 1`] = `
             </div>
           </div>
         </Draggable>
+        <ArrowButton
+          className="control backward"
+          direction="left"
+          disabled={false}
+          onClick={[Function]}
+          size="s"
+          style={
+            Object {
+              "top": "0px",
+              "zIndex": 1,
+            }
+          }
+        >
+          <button
+            className="arrow-button size-s control backward"
+            disabled={false}
+            onClick={[Function]}
+            style={
+              Object {
+                "top": "0px",
+                "zIndex": 1,
+              }
+            }
+            type="button"
+          >
+            <ArrowLeftSVG
+              aria-hidden={true}
+              fill="currentColor"
+            >
+              <svg
+                aria-hidden={true}
+                fill="currentColor"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+              >
+                <path
+                  d="M7.253 4.659a1 1 0 00-1.506-1.317l-3.5 4a1 1 0 000 1.317l3.5 4a1 1 0 101.506-1.318L5.203 9H13a1 1 0 100-2H5.204l2.049-2.341z"
+                />
+              </svg>
+            </ArrowLeftSVG>
+          </button>
+        </ArrowButton>
+        <ArrowButton
+          className="control forward"
+          direction="right"
+          disabled={false}
+          onClick={[Function]}
+          size="s"
+          style={
+            Object {
+              "top": "0px",
+              "zIndex": 1,
+            }
+          }
+        >
+          <button
+            className="arrow-button size-s control forward"
+            disabled={false}
+            onClick={[Function]}
+            style={
+              Object {
+                "top": "0px",
+                "zIndex": 1,
+              }
+            }
+            type="button"
+          >
+            <ArrowRightSVG
+              aria-hidden={true}
+              fill="currentColor"
+            >
+              <svg
+                aria-hidden={true}
+                fill="currentColor"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+              >
+                <path
+                  d="M8.747 4.659a1 1 0 111.506-1.317l3.5 4a1 1 0 010 1.317l-3.5 4a1 1 0 11-1.506-1.318L10.797 9H3a1 1 0 110-2h7.796L8.747 4.659z"
+                />
+              </svg>
+            </ArrowRightSVG>
+          </button>
+        </ArrowButton>
       </div>
     </Carousel>
-    <HoverCard
-      controlRef={
-        Object {
-          "current": Object {
-            "hide": [Function],
-            "show": [Function],
-          },
-        }
-      }
-    >
-      <ForwardRef
-        className="card hidden"
-        inCartControl={
-          Object {
-            "onAdd": [Function],
-            "onChange": [Function],
-            "onSubtract": [Function],
-          }
-        }
-        onMouseLeave={[Function]}
-        productInfo={
-          Object {
-            "onFavoriteClick": [Function],
-            "onQuickViewClick": [Function],
-          }
-        }
-      >
-        <div
-          className="root rounds-md__all shadow-z4 card hidden"
-          onMouseLeave={[Function]}
-        >
-          <ProductInfo
-            onFavoriteClick={[Function]}
-            onQuickViewClick={[Function]}
-            withImageButtons={true}
-          >
-            <a
-              className="row image-row"
-            >
-              <Image
-                className="image"
-              >
-                <div
-                  className="root image"
-                >
-                  <img />
-                </div>
-              </Image>
-              <WithHint
-                text="Добавить в избранное"
-              >
-                <ForwardRef
-                  className="on-image-btn wish"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                >
-                  <ForwardRef(SvgHeart)
-                    className="button on-image-btn wish"
-                    data-testid="favorite-button"
-                    height={24}
-                    onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    role="button"
-                    title="Добавить в избранное"
-                    width={24}
-                  >
-                    <svg
-                      className="button on-image-btn wish"
-                      data-testid="favorite-button"
-                      height={24}
-                      onClick={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      role="button"
-                      title="Добавить в избранное"
-                      viewBox="0 0 24 24"
-                      width={24}
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 003.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
-                      />
-                    </svg>
-                  </ForwardRef(SvgHeart)>
-                </ForwardRef>
-              </WithHint>
-              <WithHint
-                text="Быстрый просмотр"
-              >
-                <ForwardRef
-                  className="on-image-btn quick-view"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                >
-                  <ForwardRef(SvgQuickView)
-                    className="root on-image-btn quick-view"
-                    data-testid="quick-view-button"
-                    height={24}
-                    onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    role="button"
-                    title="Быстрый просмотр"
-                    width={24}
-                  >
-                    <svg
-                      className="root on-image-btn quick-view"
-                      data-testid="quick-view-button"
-                      height={24}
-                      onClick={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      role="button"
-                      title="Быстрый просмотр"
-                      viewBox="0 0 24 24"
-                      width={24}
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0111.5 20.5a9 9 0 119-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 01-2.122 2.122zM9 10h1V9a1.5 1.5 0 113 0v1h1a1.5 1.5 0 110 3h-1v1a1.5 1.5 0 11-3 0v-1H9a1.5 1.5 0 110-3zm2.5-4.5a6 6 0 100 12 6 6 0 000-12z"
-                      />
-                    </svg>
-                  </ForwardRef(SvgQuickView)>
-                </ForwardRef>
-              </WithHint>
-            </a>
-            <ForwardRef(Link)
-              className="row link"
-              color="gray87"
-            >
-              <a
-                className="link row link color__gray87 hover-color__gray54"
-              />
-            </ForwardRef(Link)>
-          </ProductInfo>
-          <div
-            className="control-wrapper"
-          >
-            <InCartControl
-              className="control"
-              onAdd={[Function]}
-              onChange={[Function]}
-              onSubtract={[Function]}
-            >
-              <ForwardRef(Button)
-                className="control control"
-                onClick={[Function]}
-                size="small"
-              >
-                <button
-                  className="control control button-base button-primary button-small text-button-small"
-                  onClick={[Function]}
-                >
-                  В корзину
-                </button>
-              </ForwardRef(Button)>
-            </InCartControl>
-          </div>
-        </div>
-      </ForwardRef>
-    </HoverCard>
   </section>
 </RecommendationCarousel>
 `;
@@ -1930,6 +1854,7 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
         Object {
           "size": "s",
           "style": Object {
+            "top": "0px",
             "zIndex": 1,
           },
         }
@@ -2083,6 +2008,7 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
       onChangeTargetIndex={[Function]}
       renderItem={[Function]}
       step={3}
+      withControls={true}
     >
       <div
         className="carousel-wrapper"
@@ -3347,172 +3273,94 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
             </div>
           </div>
         </Draggable>
+        <ArrowButton
+          className="control backward"
+          direction="left"
+          disabled={false}
+          onClick={[Function]}
+          size="s"
+          style={
+            Object {
+              "top": "0px",
+              "zIndex": 1,
+            }
+          }
+        >
+          <button
+            className="arrow-button size-s control backward"
+            disabled={false}
+            onClick={[Function]}
+            style={
+              Object {
+                "top": "0px",
+                "zIndex": 1,
+              }
+            }
+            type="button"
+          >
+            <ArrowLeftSVG
+              aria-hidden={true}
+              fill="currentColor"
+            >
+              <svg
+                aria-hidden={true}
+                fill="currentColor"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+              >
+                <path
+                  d="M7.253 4.659a1 1 0 00-1.506-1.317l-3.5 4a1 1 0 000 1.317l3.5 4a1 1 0 101.506-1.318L5.203 9H13a1 1 0 100-2H5.204l2.049-2.341z"
+                />
+              </svg>
+            </ArrowLeftSVG>
+          </button>
+        </ArrowButton>
+        <ArrowButton
+          className="control forward"
+          direction="right"
+          disabled={false}
+          onClick={[Function]}
+          size="s"
+          style={
+            Object {
+              "top": "0px",
+              "zIndex": 1,
+            }
+          }
+        >
+          <button
+            className="arrow-button size-s control forward"
+            disabled={false}
+            onClick={[Function]}
+            style={
+              Object {
+                "top": "0px",
+                "zIndex": 1,
+              }
+            }
+            type="button"
+          >
+            <ArrowRightSVG
+              aria-hidden={true}
+              fill="currentColor"
+            >
+              <svg
+                aria-hidden={true}
+                fill="currentColor"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+              >
+                <path
+                  d="M8.747 4.659a1 1 0 111.506-1.317l3.5 4a1 1 0 010 1.317l-3.5 4a1 1 0 11-1.506-1.318L10.797 9H3a1 1 0 110-2h7.796L8.747 4.659z"
+                />
+              </svg>
+            </ArrowRightSVG>
+          </button>
+        </ArrowButton>
       </div>
     </Carousel>
-    <HoverCard
-      controlRef={
-        Object {
-          "current": Object {
-            "hide": [Function],
-            "show": [Function],
-          },
-        }
-      }
-    >
-      <ForwardRef
-        className="card hidden"
-        inCartControl={
-          Object {
-            "onAdd": [Function],
-            "onChange": [Function],
-            "onSubtract": [Function],
-          }
-        }
-        onMouseLeave={[Function]}
-        productInfo={
-          Object {
-            "onFavoriteClick": [Function],
-            "onQuickViewClick": [Function],
-          }
-        }
-      >
-        <div
-          className="root rounds-md__all shadow-z4 card hidden"
-          onMouseLeave={[Function]}
-        >
-          <ProductInfo
-            onFavoriteClick={[Function]}
-            onQuickViewClick={[Function]}
-            withImageButtons={true}
-          >
-            <a
-              className="row image-row"
-            >
-              <Image
-                className="image"
-              >
-                <div
-                  className="root image"
-                >
-                  <img />
-                </div>
-              </Image>
-              <WithHint
-                text="Добавить в избранное"
-              >
-                <ForwardRef
-                  className="on-image-btn wish"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                >
-                  <ForwardRef(SvgHeart)
-                    className="button on-image-btn wish"
-                    data-testid="favorite-button"
-                    height={24}
-                    onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    role="button"
-                    title="Добавить в избранное"
-                    width={24}
-                  >
-                    <svg
-                      className="button on-image-btn wish"
-                      data-testid="favorite-button"
-                      height={24}
-                      onClick={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      role="button"
-                      title="Добавить в избранное"
-                      viewBox="0 0 24 24"
-                      width={24}
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 003.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
-                      />
-                    </svg>
-                  </ForwardRef(SvgHeart)>
-                </ForwardRef>
-              </WithHint>
-              <WithHint
-                text="Быстрый просмотр"
-              >
-                <ForwardRef
-                  className="on-image-btn quick-view"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                >
-                  <ForwardRef(SvgQuickView)
-                    className="root on-image-btn quick-view"
-                    data-testid="quick-view-button"
-                    height={24}
-                    onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    role="button"
-                    title="Быстрый просмотр"
-                    width={24}
-                  >
-                    <svg
-                      className="root on-image-btn quick-view"
-                      data-testid="quick-view-button"
-                      height={24}
-                      onClick={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      role="button"
-                      title="Быстрый просмотр"
-                      viewBox="0 0 24 24"
-                      width={24}
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0111.5 20.5a9 9 0 119-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 01-2.122 2.122zM9 10h1V9a1.5 1.5 0 113 0v1h1a1.5 1.5 0 110 3h-1v1a1.5 1.5 0 11-3 0v-1H9a1.5 1.5 0 110-3zm2.5-4.5a6 6 0 100 12 6 6 0 000-12z"
-                      />
-                    </svg>
-                  </ForwardRef(SvgQuickView)>
-                </ForwardRef>
-              </WithHint>
-            </a>
-            <ForwardRef(Link)
-              className="row link"
-              color="gray87"
-            >
-              <a
-                className="link row link color__gray87 hover-color__gray54"
-              />
-            </ForwardRef(Link)>
-          </ProductInfo>
-          <div
-            className="control-wrapper"
-          >
-            <InCartControl
-              className="control"
-              onAdd={[Function]}
-              onChange={[Function]}
-              onSubtract={[Function]}
-            >
-              <ForwardRef(Button)
-                className="control control"
-                onClick={[Function]}
-                size="small"
-              >
-                <button
-                  className="control control button-base button-primary button-small text-button-small"
-                  onClick={[Function]}
-                >
-                  В корзину
-                </button>
-              </ForwardRef(Button)>
-            </InCartControl>
-          </div>
-        </div>
-      </ForwardRef>
-    </HoverCard>
   </section>
 </RecommendationCarousel>
 `;
@@ -3679,6 +3527,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
         Object {
           "size": "s",
           "style": Object {
+            "top": "0px",
             "zIndex": 1,
           },
         }
@@ -3832,6 +3681,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
       onChangeTargetIndex={[Function]}
       renderItem={[Function]}
       step={3}
+      withControls={true}
     >
       <div
         className="carousel-wrapper"
@@ -5096,172 +4946,94 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
             </div>
           </div>
         </Draggable>
+        <ArrowButton
+          className="control backward"
+          direction="left"
+          disabled={false}
+          onClick={[Function]}
+          size="s"
+          style={
+            Object {
+              "top": "0px",
+              "zIndex": 1,
+            }
+          }
+        >
+          <button
+            className="arrow-button size-s control backward"
+            disabled={false}
+            onClick={[Function]}
+            style={
+              Object {
+                "top": "0px",
+                "zIndex": 1,
+              }
+            }
+            type="button"
+          >
+            <ArrowLeftSVG
+              aria-hidden={true}
+              fill="currentColor"
+            >
+              <svg
+                aria-hidden={true}
+                fill="currentColor"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+              >
+                <path
+                  d="M7.253 4.659a1 1 0 00-1.506-1.317l-3.5 4a1 1 0 000 1.317l3.5 4a1 1 0 101.506-1.318L5.203 9H13a1 1 0 100-2H5.204l2.049-2.341z"
+                />
+              </svg>
+            </ArrowLeftSVG>
+          </button>
+        </ArrowButton>
+        <ArrowButton
+          className="control forward"
+          direction="right"
+          disabled={false}
+          onClick={[Function]}
+          size="s"
+          style={
+            Object {
+              "top": "0px",
+              "zIndex": 1,
+            }
+          }
+        >
+          <button
+            className="arrow-button size-s control forward"
+            disabled={false}
+            onClick={[Function]}
+            style={
+              Object {
+                "top": "0px",
+                "zIndex": 1,
+              }
+            }
+            type="button"
+          >
+            <ArrowRightSVG
+              aria-hidden={true}
+              fill="currentColor"
+            >
+              <svg
+                aria-hidden={true}
+                fill="currentColor"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+              >
+                <path
+                  d="M8.747 4.659a1 1 0 111.506-1.317l3.5 4a1 1 0 010 1.317l-3.5 4a1 1 0 11-1.506-1.318L10.797 9H3a1 1 0 110-2h7.796L8.747 4.659z"
+                />
+              </svg>
+            </ArrowRightSVG>
+          </button>
+        </ArrowButton>
       </div>
     </Carousel>
-    <HoverCard
-      controlRef={
-        Object {
-          "current": Object {
-            "hide": [Function],
-            "show": [Function],
-          },
-        }
-      }
-    >
-      <ForwardRef
-        className="card hidden"
-        inCartControl={
-          Object {
-            "onAdd": [Function],
-            "onChange": [Function],
-            "onSubtract": [Function],
-          }
-        }
-        onMouseLeave={[Function]}
-        productInfo={
-          Object {
-            "onFavoriteClick": [Function],
-            "onQuickViewClick": [Function],
-          }
-        }
-      >
-        <div
-          className="root rounds-md__all shadow-z4 card hidden"
-          onMouseLeave={[Function]}
-        >
-          <ProductInfo
-            onFavoriteClick={[Function]}
-            onQuickViewClick={[Function]}
-            withImageButtons={true}
-          >
-            <a
-              className="row image-row"
-            >
-              <Image
-                className="image"
-              >
-                <div
-                  className="root image"
-                >
-                  <img />
-                </div>
-              </Image>
-              <WithHint
-                text="Добавить в избранное"
-              >
-                <ForwardRef
-                  className="on-image-btn wish"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                >
-                  <ForwardRef(SvgHeart)
-                    className="button on-image-btn wish"
-                    data-testid="favorite-button"
-                    height={24}
-                    onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    role="button"
-                    title="Добавить в избранное"
-                    width={24}
-                  >
-                    <svg
-                      className="button on-image-btn wish"
-                      data-testid="favorite-button"
-                      height={24}
-                      onClick={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      role="button"
-                      title="Добавить в избранное"
-                      viewBox="0 0 24 24"
-                      width={24}
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 003.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
-                      />
-                    </svg>
-                  </ForwardRef(SvgHeart)>
-                </ForwardRef>
-              </WithHint>
-              <WithHint
-                text="Быстрый просмотр"
-              >
-                <ForwardRef
-                  className="on-image-btn quick-view"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                >
-                  <ForwardRef(SvgQuickView)
-                    className="root on-image-btn quick-view"
-                    data-testid="quick-view-button"
-                    height={24}
-                    onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    role="button"
-                    title="Быстрый просмотр"
-                    width={24}
-                  >
-                    <svg
-                      className="root on-image-btn quick-view"
-                      data-testid="quick-view-button"
-                      height={24}
-                      onClick={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      role="button"
-                      title="Быстрый просмотр"
-                      viewBox="0 0 24 24"
-                      width={24}
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0111.5 20.5a9 9 0 119-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 01-2.122 2.122zM9 10h1V9a1.5 1.5 0 113 0v1h1a1.5 1.5 0 110 3h-1v1a1.5 1.5 0 11-3 0v-1H9a1.5 1.5 0 110-3zm2.5-4.5a6 6 0 100 12 6 6 0 000-12z"
-                      />
-                    </svg>
-                  </ForwardRef(SvgQuickView)>
-                </ForwardRef>
-              </WithHint>
-            </a>
-            <ForwardRef(Link)
-              className="row link"
-              color="gray87"
-            >
-              <a
-                className="link row link color__gray87 hover-color__gray54"
-              />
-            </ForwardRef(Link)>
-          </ProductInfo>
-          <div
-            className="control-wrapper"
-          >
-            <InCartControl
-              className="control"
-              onAdd={[Function]}
-              onChange={[Function]}
-              onSubtract={[Function]}
-            >
-              <ForwardRef(Button)
-                className="control control"
-                onClick={[Function]}
-                size="small"
-              >
-                <button
-                  className="control control button-base button-primary button-small text-button-small"
-                  onClick={[Function]}
-                >
-                  В корзину
-                </button>
-              </ForwardRef(Button)>
-            </InCartControl>
-          </div>
-        </div>
-      </ForwardRef>
-    </HoverCard>
   </section>
 </RecommendationCarousel>
 `;
@@ -5428,6 +5200,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
         Object {
           "size": "l",
           "style": Object {
+            "top": "0px",
             "zIndex": 1,
           },
         }
@@ -5581,6 +5354,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
       onChangeTargetIndex={[Function]}
       renderItem={[Function]}
       step={3}
+      withControls={true}
     >
       <div
         className="carousel-wrapper"
@@ -6845,172 +6619,94 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
             </div>
           </div>
         </Draggable>
+        <ArrowButton
+          className="control backward"
+          direction="left"
+          disabled={false}
+          onClick={[Function]}
+          size="l"
+          style={
+            Object {
+              "top": "0px",
+              "zIndex": 1,
+            }
+          }
+        >
+          <button
+            className="arrow-button size-l control backward"
+            disabled={false}
+            onClick={[Function]}
+            style={
+              Object {
+                "top": "0px",
+                "zIndex": 1,
+              }
+            }
+            type="button"
+          >
+            <ArrowLeftSVG
+              aria-hidden={true}
+              fill="currentColor"
+            >
+              <svg
+                aria-hidden={true}
+                fill="currentColor"
+                height={24}
+                viewBox="0 0 24 24"
+                width={24}
+              >
+                <path
+                  d="M5.414 13l5.293 5.293a1 1 0 01-1.414 1.414l-7-7a1 1 0 010-1.414l7-7a1 1 0 011.414 1.414L5.414 11H21a1 1 0 110 2H5.414z"
+                />
+              </svg>
+            </ArrowLeftSVG>
+          </button>
+        </ArrowButton>
+        <ArrowButton
+          className="control forward"
+          direction="right"
+          disabled={false}
+          onClick={[Function]}
+          size="l"
+          style={
+            Object {
+              "top": "0px",
+              "zIndex": 1,
+            }
+          }
+        >
+          <button
+            className="arrow-button size-l control forward"
+            disabled={false}
+            onClick={[Function]}
+            style={
+              Object {
+                "top": "0px",
+                "zIndex": 1,
+              }
+            }
+            type="button"
+          >
+            <ArrowRightSVG
+              aria-hidden={true}
+              fill="currentColor"
+            >
+              <svg
+                aria-hidden={true}
+                fill="currentColor"
+                height={24}
+                viewBox="0 0 24 24"
+                width={24}
+              >
+                <path
+                  d="M12.247 4.342a1 1 0 00.095 1.41L18.338 11H3a1 1 0 100 2h15.339l-5.997 5.247a1 1 0 001.316 1.506l8-7a1 1 0 000-1.506l-8-7a1 1 0 00-1.41.095z"
+                />
+              </svg>
+            </ArrowRightSVG>
+          </button>
+        </ArrowButton>
       </div>
     </Carousel>
-    <HoverCard
-      controlRef={
-        Object {
-          "current": Object {
-            "hide": [Function],
-            "show": [Function],
-          },
-        }
-      }
-    >
-      <ForwardRef
-        className="card hidden"
-        inCartControl={
-          Object {
-            "onAdd": [Function],
-            "onChange": [Function],
-            "onSubtract": [Function],
-          }
-        }
-        onMouseLeave={[Function]}
-        productInfo={
-          Object {
-            "onFavoriteClick": [Function],
-            "onQuickViewClick": [Function],
-          }
-        }
-      >
-        <div
-          className="root rounds-md__all shadow-z4 card hidden"
-          onMouseLeave={[Function]}
-        >
-          <ProductInfo
-            onFavoriteClick={[Function]}
-            onQuickViewClick={[Function]}
-            withImageButtons={true}
-          >
-            <a
-              className="row image-row"
-            >
-              <Image
-                className="image"
-              >
-                <div
-                  className="root image"
-                >
-                  <img />
-                </div>
-              </Image>
-              <WithHint
-                text="Добавить в избранное"
-              >
-                <ForwardRef
-                  className="on-image-btn wish"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                >
-                  <ForwardRef(SvgHeart)
-                    className="button on-image-btn wish"
-                    data-testid="favorite-button"
-                    height={24}
-                    onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    role="button"
-                    title="Добавить в избранное"
-                    width={24}
-                  >
-                    <svg
-                      className="button on-image-btn wish"
-                      data-testid="favorite-button"
-                      height={24}
-                      onClick={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      role="button"
-                      title="Добавить в избранное"
-                      viewBox="0 0 24 24"
-                      width={24}
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 003.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
-                      />
-                    </svg>
-                  </ForwardRef(SvgHeart)>
-                </ForwardRef>
-              </WithHint>
-              <WithHint
-                text="Быстрый просмотр"
-              >
-                <ForwardRef
-                  className="on-image-btn quick-view"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                >
-                  <ForwardRef(SvgQuickView)
-                    className="root on-image-btn quick-view"
-                    data-testid="quick-view-button"
-                    height={24}
-                    onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    role="button"
-                    title="Быстрый просмотр"
-                    width={24}
-                  >
-                    <svg
-                      className="root on-image-btn quick-view"
-                      data-testid="quick-view-button"
-                      height={24}
-                      onClick={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      role="button"
-                      title="Быстрый просмотр"
-                      viewBox="0 0 24 24"
-                      width={24}
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0111.5 20.5a9 9 0 119-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 01-2.122 2.122zM9 10h1V9a1.5 1.5 0 113 0v1h1a1.5 1.5 0 110 3h-1v1a1.5 1.5 0 11-3 0v-1H9a1.5 1.5 0 110-3zm2.5-4.5a6 6 0 100 12 6 6 0 000-12z"
-                      />
-                    </svg>
-                  </ForwardRef(SvgQuickView)>
-                </ForwardRef>
-              </WithHint>
-            </a>
-            <ForwardRef(Link)
-              className="row link"
-              color="gray87"
-            >
-              <a
-                className="link row link color__gray87 hover-color__gray54"
-              />
-            </ForwardRef(Link)>
-          </ProductInfo>
-          <div
-            className="control-wrapper"
-          >
-            <InCartControl
-              className="control"
-              onAdd={[Function]}
-              onChange={[Function]}
-              onSubtract={[Function]}
-            >
-              <ForwardRef(Button)
-                className="control control"
-                onClick={[Function]}
-                size="small"
-              >
-                <button
-                  className="control control button-base button-primary button-small text-button-small"
-                  onClick={[Function]}
-                >
-                  В корзину
-                </button>
-              </ForwardRef(Button)>
-            </InCartControl>
-          </div>
-        </div>
-      </ForwardRef>
-    </HoverCard>
   </section>
 </RecommendationCarousel>
 `;

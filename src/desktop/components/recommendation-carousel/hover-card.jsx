@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import { getOriginCorrection } from '@dev-dep/ui-nucleons/with-tooltip/utils';
 import { ProductCard } from './product-card';
 import { omit, pick } from 'lodash';
@@ -13,44 +13,36 @@ const cx = classnames.bind(styles);
  * @return {ReactElement} Элемент.
  */
 export const HoverCard = ({
-  controlRef,
+  info,
+  targetRef,
   onAdd,
   onChange,
-  onFavoriteClick,
+  onMouseLeave,
   onQuickViewClick,
   onSubtract,
   ...restProps
 }) => {
   const ref = useRef();
-  const [itemInfo, setItemInfo] = useState();
+  const [ready, setReady] = useState(false);
 
-  const Control = {
-    show: (info, target) => {
-      setItemInfo(info);
-
+  useLayoutEffect(() => {
+    if (info && targetRef.current) {
       const element = ref.current;
-      const rect = target.getBoundingClientRect();
+      const rect = targetRef.current.getBoundingClientRect();
       const correction = getOriginCorrection(ref.current);
 
-      element.classList.remove(cx('hidden'));
       element.style.left = `${correction.x + rect.left - 16}px`;
       element.style.top = `${correction.y + rect.top - 16}px`;
       element.style.width = `${rect.width + 32}px`;
-    },
 
-    hide: () => {
-      // не нужно сбрасывать данные тут (например setInfo(null)) так как blur не будет работать из-за размонтирования
-      ref.current && ref.current.classList.add(cx('hidden'));
-    },
-  };
+      setReady(true);
+    }
+  }, [info]);
 
   // eslint-disable-next-line require-jsdoc
-  const bindInfo = fn => () => fn && fn(itemInfo);
+  const bindInfo = fn => () => fn && fn(info);
 
-  // отдаем управление чтобы не поднимать состояние выше
-  controlRef.current = Control;
-
-  const [cartData, productData] = [pick, omit].map(fn => fn(itemInfo, [
+  const [cartData, productData] = [pick, omit].map(fn => fn(info, [
     'allowFloat',
     'canAdd',
     'canSubtract',
@@ -65,17 +57,19 @@ export const HoverCard = ({
     <ProductCard
       {...restProps}
       ref={ref}
-      className={cx('card', 'hidden')}
-      onMouseLeave={Control.hide}
+      className={cx('card', !ready && 'hidden')}
+      onMouseLeave={() => {
+        setReady(false);
+        onMouseLeave && onMouseLeave();
+      }}
       inCartControl={{
         ...cartData,
         onAdd: bindInfo(onAdd),
-        onChange: newQty => onChange && onChange(itemInfo, newQty),
+        onChange: newQty => onChange && onChange(info, newQty),
         onSubtract: bindInfo(onSubtract),
       }}
       productInfo={{
         ...productData,
-        onFavoriteClick: bindInfo(onFavoriteClick),
         onQuickViewClick: bindInfo(onQuickViewClick),
       }}
     />

@@ -9,15 +9,10 @@
   .image {
     width: 100%;
   }
-  .on-image-btn {
+  .quick-view-btn {
     position: absolute;
     right: 8px;
-    &.wish {
-      top: 8px;
-    }
-    &.quick-view {
-      top: 40px;
-    }
+    top: 8px;
   }
 }
 
