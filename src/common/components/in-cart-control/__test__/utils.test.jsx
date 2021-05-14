@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { render, unmountComponentAtNode } from 'react-dom';
 import { act, Simulate } from 'react-dom/test-utils';
 import { useCartItemInput } from '../utils';
 
@@ -19,6 +19,28 @@ describe('useCartItemInput', () => {
 
   afterEach(() => {
     container.remove();
+  });
+
+  it('should handle focus/blur/unmount', () => {
+    const spy = jest.fn();
+
+    act(() => {
+      render(
+        <TestComponent qty={null} onApply={spy} />,
+        container
+      );
+    });
+
+    act(() => {
+      Simulate.focus(container.querySelector('input'));
+      Simulate.change(container.querySelector('input'), { target: { value: '12' } });
+    });
+
+    act(() => {
+      unmountComponentAtNode(container);
+    });
+
+    expect(spy).toBeCalledTimes(1);
   });
 
   it('should handle non numeric values', () => {

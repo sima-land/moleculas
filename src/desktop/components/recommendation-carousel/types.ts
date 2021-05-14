@@ -1,4 +1,4 @@
-export interface BaseProductData {
+export interface ProductData {
   badges?: any[]
   currencyGrapheme: string
   favorite?: boolean
@@ -9,7 +9,7 @@ export interface BaseProductData {
   url: string
 }
 
-export interface ProductData extends BaseProductData {
+export interface CartItemData {
   markupText?: string
   stepText?: string
   qty?: number

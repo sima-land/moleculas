@@ -37,22 +37,16 @@ exports[`<WholesalePrice /> should render with props 1`] = `
           >
             Опт 
           </span>
-          <withGlobalListeners(WholesaleText)
+          <WholesaleText
             className="wholesale-text"
             text="Крупный опт «Галантерея и швейная галантерея»"
           >
-            <WholesaleText
-              addGlobalListener={[Function]}
+            <span
               className="wholesale-text"
-              text="Крупный опт «Галантерея и швейная галантерея»"
             >
-              <span
-                className="wholesale-text"
-              >
-                Крупный опт «Галантерея и швейная галантерея»
-              </span>
-            </WholesaleText>
-          </withGlobalListeners(WholesaleText)>
+              Крупный опт «Галантерея и швейная галантерея»
+            </span>
+          </WholesaleText>
         </span>
       </ForwardRef(Text)>
     </div>

@@ -1,8 +1,9 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { WholesaleText } from '../wholesale-text';
+import WholesaleText from '../wholesale-text';
 import { cutTextContent } from '../../helpers/cut-text-content';
 import debounce from 'lodash/debounce';
+import { act } from 'react-dom/test-utils';
 
 jest.mock('lodash/debounce', () => jest.fn(fn => fn));
 
@@ -17,13 +18,8 @@ jest.mock('../../helpers/cut-text-content', () => {
 });
 
 describe('<WholesaleText />', () => {
-  const addGlobalListener = jest.fn();
-  beforeEach(() => {
-    addGlobalListener.mockClear();
-  });
-
   it('should render without props', () => {
-    const wrapper = mount(<WholesaleText addGlobalListener={addGlobalListener} />);
+    const wrapper = mount(<WholesaleText />);
     expect(wrapper).toMatchSnapshot();
     wrapper.unmount();
   });
@@ -32,7 +28,6 @@ describe('<WholesaleText />', () => {
     const wrapper = mount(
       <WholesaleText
         text='Крупный опт «Галантерея и швейная галантерея»'
-        addGlobalListener={addGlobalListener}
       />
     );
     expect(wrapper).toMatchSnapshot();
@@ -41,12 +36,12 @@ describe('<WholesaleText />', () => {
     cutTextContent.mockClear();
     expect(cutTextContent).toHaveBeenCalledTimes(0);
 
-    expect(debounce).toHaveBeenCalled();
-    expect(addGlobalListener).toHaveBeenCalledTimes(1);
-    expect(addGlobalListener.mock.calls[0][0]).toEqual('resize');
-    const callback = addGlobalListener.mock.calls[0][1];
-    callback();
+    act(() => {
+      window.dispatchEvent(new UIEvent('resize'));
+    });
+    wrapper.update();
 
+    expect(debounce).toHaveBeenCalled();
     expect(cutTextContent).toHaveBeenCalledTimes(1);
   });
 });

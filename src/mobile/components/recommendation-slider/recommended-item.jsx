@@ -5,7 +5,7 @@ import classes from './recommended-item.scss';
 import classnames from 'classnames/bind';
 import cutTextContent from '@dev-dep/ui-nucleons/helpers/cut-text-content';
 import debounce from 'lodash/debounce';
-import withGlobalListeners from '@dev-dep/ui-nucleons/hoc/with-global-listeners';
+import on from '@dev-dep/ui-nucleons/helpers/on';
 
 const cx = classnames.bind(classes);
 
@@ -47,7 +47,6 @@ const RecommendedItem = ({
   oldPrice,
   currencyGrapheme,
   onItemClick,
-  addGlobalListener,
   canLoadImage = true,
   needLoadImage = true,
 }) => {
@@ -64,7 +63,7 @@ const RecommendedItem = ({
       cutItemLink(element);
     }, 250);
 
-    return addGlobalListener('resize', cutItemText);
+    return on(window, 'resize', cutItemText);
   }, [name]);
 
   useEffect(() => {
@@ -123,4 +122,4 @@ const RecommendedItem = ({
   );
 };
 
-export default withGlobalListeners(RecommendedItem);
+export default RecommendedItem;

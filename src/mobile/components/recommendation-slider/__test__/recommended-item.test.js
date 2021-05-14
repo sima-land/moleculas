@@ -19,7 +19,6 @@ jest.mock('@dev-dep/ui-nucleons/helpers/cut-text-content', () => {
 jest.mock('lodash/debounce', () => jest.fn(fn => fn));
 
 describe('<RecommendedItem />', () => {
-  const addGlobalListener = jest.fn();
   const props = {
     name: 'Милая картина из шерсти Schrodinger cat, А5',
     url: 'https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/',
@@ -27,8 +26,8 @@ describe('<RecommendedItem />', () => {
     imageAlt: 'alt text',
     price: 135.4,
     currencyGrapheme: '$',
-    addGlobalListener,
   };
+
   describe('render with props', () => {
     const allProps = {
       ...props,

@@ -68,28 +68,22 @@ exports[`<WholesalePrice /> should render with props 1`] = `
         </span>
       </div>
     </Box>
-    <withGlobalListeners(WholesaleText)
+    <WholesaleText
       description="<b>lorem</b>"
       text="Опт Детские товары"
     >
-      <WholesaleText
-        addGlobalListener={[Function]}
-        description="<b>lorem</b>"
-        text="Опт Детские товары"
+      <div
+        className="wholesale-text-wrapper"
       >
-        <div
-          className="wholesale-text-wrapper"
+        <span
+          className="wholesale-text"
+          onClick={[Function]}
+          role="note"
         >
-          <span
-            className="wholesale-text"
-            onClick={[Function]}
-            role="note"
-          >
-            Опт Детские товары
-          </span>
-        </div>
-      </WholesaleText>
-    </withGlobalListeners(WholesaleText)>
+          Опт Детские товары
+        </span>
+      </div>
+    </WholesaleText>
   </div>
 </WholesalePrice>
 `;
@@ -136,28 +130,22 @@ exports[`<WholesalePrice /> should render with props 2`] = `
              / опт
           </span>
         </ForwardRef(Text)>
-        <withGlobalListeners(WholesaleText)
+        <WholesaleText
           description="<b>lorem</b>"
           text="Опт Детские товары"
         >
-          <WholesaleText
-            addGlobalListener={[Function]}
-            description="<b>lorem</b>"
-            text="Опт Детские товары"
+          <div
+            className="wholesale-text-wrapper"
           >
-            <div
-              className="wholesale-text-wrapper"
+            <span
+              className="wholesale-text"
+              onClick={[Function]}
+              role="note"
             >
-              <span
-                className="wholesale-text"
-                onClick={[Function]}
-                role="note"
-              >
-                Опт Детские товары
-              </span>
-            </div>
-          </WholesaleText>
-        </withGlobalListeners(WholesaleText)>
+              Опт Детские товары
+            </span>
+          </div>
+        </WholesaleText>
         <span
           className="price-unit"
         >

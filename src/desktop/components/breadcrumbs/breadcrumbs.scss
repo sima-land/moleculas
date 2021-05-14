@@ -1,8 +1,8 @@
 @use 'node_modules/@dev-dep/ui-nucleons/colors';
 
 //Ширина контейнеров разделителя крошек
-$leftGapWidth: 1em;
-$rightGapWidth: 1.5em;
+$leftGapWidth: 16px;
+$rightGapWidth: 24px;
 
 .breadcrumbs {
   position: relative;
@@ -43,11 +43,13 @@ $rightGapWidth: 1.5em;
   .popup {
     white-space: nowrap;
     min-width: 15em;
-    padding: 1em;
+    padding: 16px;
     position: absolute;
-    top: -1em;
-    left: $rightGapWidth - 1em;
+    top: -16px;
+    left: $rightGapWidth - 16px;
     z-index: 2;
+    background: #fff;
+    border-radius: 8px;
     .disabled {
       color: #ccc;
     }

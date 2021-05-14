@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 import { RecommendationCarousel } from '..';
 import { items } from '../../../../common/__fixtures__/recommendation-carousel';
-import { useMedia } from '../utils';
+import { useMedia } from '@dev-dep/ui-nucleons/hooks/media';
 import { HoverCard } from '../hover-card';
 import { ProductCard } from '../product-card';
 import { ProductInfo } from '../product-info';
@@ -11,8 +11,8 @@ import { Link } from '@dev-dep/ui-nucleons/link';
 import { Carousel } from '@dev-dep/ui-nucleons/carousel';
 import { Stepper } from '@dev-dep/ui-nucleons/stepper';
 
-jest.mock('../utils', () => {
-  const original = jest.requireActual('../utils');
+jest.mock('@dev-dep/ui-nucleons/hooks/media', () => {
+  const original = jest.requireActual('@dev-dep/ui-nucleons/hooks/media');
 
   const fakeUseMedia = () => Boolean(fakeUseMedia.__flag);
 
@@ -25,6 +25,7 @@ jest.mock('../utils', () => {
 
 describe('<RecommendationCarousel />', () => {
   const Find = {
+    hoverCard: wrapper => wrapper.find(HoverCard),
     hoverCardItemName: wrapper => wrapper.find(HoverCard)
       .find(ProductCard)
       .find(ProductInfo)
@@ -105,6 +106,32 @@ describe('<RecommendationCarousel />', () => {
     expect(Find.hoverCardItemName(wrapper)).toBe(items[0].name);
   });
 
+  it('should handle hover card mouseleave', () => {
+    const wrapper = mount(
+      <RecommendationCarousel
+        title='Hello, world!'
+        titleContainer='h1'
+        items={items}
+        itemSize={{ xs: 3 }}
+        className='additional-class'
+      />
+    );
+
+    act(() => {
+      Find.item(wrapper).at(0).simulate('mouseenter');
+    });
+    wrapper.update();
+
+    expect(Find.hoverCardItemName(wrapper)).toBe(items[0].name);
+
+    act(() => {
+      Find.hoverCard(wrapper).prop('onMouseLeave')();
+    });
+    wrapper.update();
+
+    expect(Find.hoverCard(wrapper)).toHaveLength(0);
+  });
+
   it('should handle carousel slide', () => {
     jest.useFakeTimers();
 
@@ -122,14 +149,14 @@ describe('<RecommendationCarousel />', () => {
     });
     wrapper.update();
 
-    expect(Find.hoverCardItemName(wrapper)).toBe('');
+    expect(Find.hoverCard(wrapper)).toHaveLength(0);
 
     act(() => {
       Find.item(wrapper).at(0).simulate('mouseenter');
     });
     wrapper.update();
 
-    expect(Find.hoverCardItemName(wrapper)).toBe('');
+    expect(Find.hoverCard(wrapper)).toHaveLength(0);
 
     jest.advanceTimersByTime(400);
 

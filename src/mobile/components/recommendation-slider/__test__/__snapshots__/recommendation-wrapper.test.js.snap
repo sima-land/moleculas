@@ -49,70 +49,54 @@ exports[`<RecommendationWrapper /> should match a snapshot with items 1`] = `
             <div
               className="inner"
             >
-              <withGlobalListeners(RecommendedItem)
+              <RecommendedItem
                 canLoadImage={false}
                 key="0"
                 name="first item"
                 needLoadImage={true}
                 onItemClick={[Function]}
               >
-                <RecommendedItem
-                  addGlobalListener={[Function]}
-                  canLoadImage={false}
-                  name="first item"
-                  needLoadImage={true}
-                  onItemClick={[Function]}
+                <div
+                  className="item"
                 >
-                  <div
-                    className="item"
+                  <ForwardRef(Link)
+                    className="link"
+                    color="black"
+                    onClick={[Function]}
                   >
-                    <ForwardRef(Link)
-                      className="link"
-                      color="black"
+                    <a
+                      className="link link"
                       onClick={[Function]}
                     >
-                      <a
-                        className="link link"
-                        onClick={[Function]}
-                      >
-                        first item
-                      </a>
-                    </ForwardRef(Link)>
-                  </div>
-                </RecommendedItem>
-              </withGlobalListeners(RecommendedItem)>
-              <withGlobalListeners(RecommendedItem)
+                      first item
+                    </a>
+                  </ForwardRef(Link)>
+                </div>
+              </RecommendedItem>
+              <RecommendedItem
                 canLoadImage={false}
                 key="1"
                 name="second item"
                 needLoadImage={true}
                 onItemClick={[Function]}
               >
-                <RecommendedItem
-                  addGlobalListener={[Function]}
-                  canLoadImage={false}
-                  name="second item"
-                  needLoadImage={true}
-                  onItemClick={[Function]}
+                <div
+                  className="item"
                 >
-                  <div
-                    className="item"
+                  <ForwardRef(Link)
+                    className="link"
+                    color="black"
+                    onClick={[Function]}
                   >
-                    <ForwardRef(Link)
-                      className="link"
-                      color="black"
+                    <a
+                      className="link link"
                       onClick={[Function]}
                     >
-                      <a
-                        className="link link"
-                        onClick={[Function]}
-                      >
-                        second item
-                      </a>
-                    </ForwardRef(Link)>
-                  </div>
-                </RecommendedItem>
-              </withGlobalListeners(RecommendedItem)>
+                      second item
+                    </a>
+                  </ForwardRef(Link)>
+                </div>
+              </RecommendedItem>
             </div>
           </div>
         </div>

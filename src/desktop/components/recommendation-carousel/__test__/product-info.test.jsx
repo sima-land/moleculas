@@ -2,7 +2,6 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 import { ProductInfo } from '../product-info';
-import { WishButton } from '../../../../common/components/wish-button';
 import { QuickViewButton } from '../../../../common/components/quick-view-button';
 
 describe('<ProductInfo />', () => {
@@ -16,9 +15,8 @@ describe('<ProductInfo />', () => {
         oldPrice={250}
         favorite
         currencyGrapheme='₽'
-        withImageButtons
+        withQuickView
         onQuickViewClick={jest.fn()}
-        onFavoriteClick={jest.fn()}
       />
     );
 
@@ -35,25 +33,10 @@ describe('<ProductInfo />', () => {
         oldPrice={250}
         favorite
         currencyGrapheme='₽'
-        withImageButtons
+        withQuickView
         onQuickViewClick={jest.fn()}
-        onFavoriteClick={jest.fn()}
       />
     );
-
-    act(() => {
-      wrapper.find(WishButton).simulate('mouseenter');
-    });
-    wrapper.update();
-
-    expect(wrapper.find('[data-testid="hint"]')).toHaveLength(1);
-
-    act(() => {
-      wrapper.find(WishButton).simulate('mouseleave');
-    });
-    wrapper.update();
-
-    expect(wrapper.find('[data-testid="hint"]')).toHaveLength(0);
 
     act(() => {
       wrapper.find(QuickViewButton).simulate('mouseenter');

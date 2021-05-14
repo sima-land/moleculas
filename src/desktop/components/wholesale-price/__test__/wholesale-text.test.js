@@ -1,19 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { WholesaleText } from '../wholesale-text';
+import WholesaleText from '../wholesale-text';
 
 describe('<WholesaleText />', () => {
-  it('should adds and removes global listener correctly', () => {
-    const onUnloadSpy = jest.fn();
-    const spy = jest.fn().mockImplementation(() => onUnloadSpy);
-    const wrapper = mount(
-      <WholesaleText description='lorem' addGlobalListener={spy} />
-    );
-    expect(spy).toHaveBeenCalled();
-    expect(spy.mock.calls[0][0]).toEqual('click');
-    wrapper.unmount();
-    expect(onUnloadSpy).toHaveBeenCalled();
-  });
   it('should render without props', () => {
     const wrapper = mount(<WholesaleText />);
     expect(wrapper).toMatchSnapshot();

@@ -1,5 +1,7 @@
 .card {
   position: absolute;
+  top: -1000px;
+  left: -1000px;
   opacity: 1;
   visibility: visible;
   &.hidden {

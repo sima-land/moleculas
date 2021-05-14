@@ -22,7 +22,6 @@ export const Primary = () => (
     <RecommendationCarousel
       title='Рекомендованные товары'
       items={items}
-      onItemFavoriteClick={action('click:favorite')}
       onItemQuickViewClick={action('click:quick-view')}
       onItemAdd={action('item-add')}
       onItemChange={action('item-change')}

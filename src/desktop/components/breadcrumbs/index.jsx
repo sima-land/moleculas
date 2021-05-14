@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import CSSTransition from 'react-transition-group/CSSTransition';
-import Popup from '@dev-dep/ui-nucleons/popups/popup';
 import on from '@dev-dep/ui-nucleons/helpers/on';
 import classnames from 'classnames/bind';
 import prop from 'lodash/fp/prop';
 import DownSVG from './square-arrow-down.svg';
 import styles from './breadcrumbs.scss';
+import { BoxShadow } from '@dev-dep/ui-nucleons/styling/shadows';
 
 const cx = classnames.bind(styles);
 
@@ -119,10 +119,7 @@ const Breadcrumb = ({
             exitActive: cx('fade-exit-active'),
           }}
         >
-          <Popup
-            additionalClass={cx('popup')}
-            ref={popupRef}
-          >
+          <div ref={popupRef} className={cx('popup', BoxShadow.z3)}>
             {breadcrumbName}
             <DownSVG
               data-testid='breadcrumb:siblings-closer'
@@ -154,7 +151,7 @@ const Breadcrumb = ({
                 );
               })}
             </ul>
-          </Popup>
+          </div>
         </CSSTransition>
       )}
     </li>

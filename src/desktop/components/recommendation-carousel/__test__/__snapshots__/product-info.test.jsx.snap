@@ -7,11 +7,10 @@ exports[`<ProductInfo /> should renders correctly 1`] = `
   imageSrc="https://cdn3.static1-sima-land.com/items/29455/0/1600.jpg?v=1617955476"
   name="Ножницы портновские, 10, 26 см, цвет чёрный"
   oldPrice={250}
-  onFavoriteClick={[MockFunction]}
   onQuickViewClick={[MockFunction]}
   price={225}
   url="https://www.sima-land.ru/123456"
-  withImageButtons={true}
+  withQuickView={true}
 >
   <a
     className="row image-row"
@@ -32,57 +31,17 @@ exports[`<ProductInfo /> should renders correctly 1`] = `
       </div>
     </Image>
     <WithHint
-      text="Удалить из избранного"
+      direction="left"
+      hint="Быстрый просмотр"
     >
       <ForwardRef
-        checked={true}
-        className="on-image-btn wish"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <ForwardRef(SvgFilledHeart)
-          className="button on-image-btn wish checked"
-          data-testid="favorite-button"
-          height={24}
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          role="button"
-          title="Убрать из избранного"
-          width={24}
-        >
-          <svg
-            className="button on-image-btn wish checked"
-            data-testid="favorite-button"
-            height={24}
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            role="button"
-            title="Убрать из избранного"
-            viewBox="0 0 24 24"
-            width={24}
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366z"
-            />
-          </svg>
-        </ForwardRef(SvgFilledHeart)>
-      </ForwardRef>
-    </WithHint>
-    <WithHint
-      text="Быстрый просмотр"
-    >
-      <ForwardRef
-        className="on-image-btn quick-view"
+        className="quick-view-btn"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
       >
         <ForwardRef(SvgQuickView)
-          className="root on-image-btn quick-view"
+          className="root quick-view-btn"
           data-testid="quick-view-button"
           height={24}
           onClick={[Function]}
@@ -93,7 +52,7 @@ exports[`<ProductInfo /> should renders correctly 1`] = `
           width={24}
         >
           <svg
-            className="root on-image-btn quick-view"
+            className="root quick-view-btn"
             data-testid="quick-view-button"
             height={24}
             onClick={[Function]}
