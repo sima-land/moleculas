@@ -591,6 +591,35 @@ exports[`TrackingInfoModal should hide Hint correctly 1`] = `
               </div>
             </TrackNumber>
           </div>
+          <ForwardRef
+            className="hint"
+            direction="top"
+            style={
+              Object {
+                "left": undefined,
+                "top": undefined,
+                "visibility": "hidden",
+              }
+            }
+          >
+            <div
+              className="root hint top"
+              data-testid="hint"
+              style={
+                Object {
+                  "left": undefined,
+                  "top": undefined,
+                  "visibility": "hidden",
+                }
+              }
+            >
+              <div
+                className="body shadow-z4"
+              >
+                Трек-номер скопирован
+              </div>
+            </div>
+          </ForwardRef>
         </div>
         <div
           className="footer inner-border-top"

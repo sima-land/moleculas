@@ -4,15 +4,12 @@ import { Clean } from '@dev-dep/ui-nucleons/clean-buttons';
 import classNames from 'classnames/bind';
 import classes from './tracking-info-modal.scss';
 import DeliveryImg from '../../../common/images/tracking-info-delivery.png';
-import { map } from 'lodash';
+import { isNil, map } from 'lodash';
 import { TrackNumber } from '../../../common/components/track-number';
 import Types from 'prop-types';
 import { Hint } from '@dev-dep/ui-nucleons/hint';
 
 const cx = classNames.bind(classes);
-
-// отступ в половину высоты элемента свг 8пх + отступ от границы  (по макету 5 пх)
-const OFFSET_TO_BUTTON = 13;
 
 const HINT_DISPLAY_DURATION = 3000;
 
@@ -29,20 +26,23 @@ export const TrackingInfoModal = ({
   deliverySite,
   onCopy,
 }) => {
-  const [hintOffset, setHintOffset] = useState(0);
+  const [hintOffset, setHintOffset] = useState(null);
 
   const timerId = React.createRef();
 
   const handleCopy = useCallback(
-    (item, ref) => {
+    (item, iconRef) => {
       onCopy(item);
       toggleHint();
-      const { parentNode, offsetTop } = ref.current;
-      const { offsetTop: parentOffsetTop, parentNode: wrapNode } = parentNode;
-      const { scrollTop } = wrapNode;
 
-      const hintPosition = (offsetTop + parentOffsetTop) - scrollTop;
-      setHintOffset(hintPosition - OFFSET_TO_BUTTON);
+      const { top, left, width } = iconRef.current.getBoundingClientRect();
+
+      setHintOffset({
+        top,
+
+        // Отступ слева + половина ширины иконки
+        left: left + (width / 2),
+      });
     },
     [onCopy]
   );
@@ -54,7 +54,7 @@ export const TrackingInfoModal = ({
     clearTimeout(timerId.current);
 
     timerId.current = setTimeout(() => {
-      setHintOffset(0);
+      setHintOffset(null);
     }, HINT_DISPLAY_DURATION);
   };
 
@@ -68,7 +68,7 @@ export const TrackingInfoModal = ({
         </Clean.Group>
       )}
     >
-      <div className={cx('wrap')} onScroll={() => setHintOffset(0)}>
+      <div className={cx('wrap')} onScroll={() => setHintOffset(null)}>
         <img src={DeliveryImg} alt='' width={324} />
         <div className={cx('text')}>
           {
@@ -83,21 +83,17 @@ export const TrackingInfoModal = ({
             ))
           }
         </div>
-        {
-          hintOffset
-            ? (
-              <div
-                className={cx('hint')}
-                style={{
-                  top: hintOffset,
-                }}
-              >
-                <Hint direction='top'>Трек-номер скопирован</Hint>
-              </div>
-            )
-            : null
-        }
-
+        <Hint
+          direction='top'
+          className={cx('hint')}
+          style={{
+            top: hintOffset?.top,
+            left: hintOffset?.left,
+            visibility: isNil(hintOffset) ? 'hidden' : 'visible',
+          }}
+        >
+          Трек-номер скопирован
+        </Hint>
       </div>
     </Modal>
   );
