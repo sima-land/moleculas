@@ -80,7 +80,7 @@ describe('TrackingInfoModal', () => {
 
     wrapper.update();
 
-    expect(wrapper.find('.hint')).toHaveLength(1);
+    expect(wrapper.find('.hint').get(0).props.style).toHaveProperty('visibility', 'visible');
 
     expect(fakeOnCopy).toBeCalled();
   });
@@ -106,7 +106,7 @@ describe('TrackingInfoModal', () => {
 
     wrapper.update();
 
-    expect(wrapper.find('.hint')).toHaveLength(1);
+    expect(wrapper.find('.hint').get(0).props.style).toHaveProperty('visibility', 'visible');
 
     const mEvent = {
       target: { scrollWidth: 100, scrollTop: 50, clientWidth: 50 },
@@ -118,7 +118,7 @@ describe('TrackingInfoModal', () => {
 
     wrapper.update();
 
-    expect(wrapper.find('.hint')).toHaveLength(0);
+    expect(wrapper.find('.hint').get(0).props.style).toHaveProperty('visibility', 'hidden');
   });
 
   it('should hide Hint correctly', async () => {
@@ -152,13 +152,13 @@ describe('TrackingInfoModal', () => {
 
     expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 3000);
 
-    expect(wrapper.find('.hint')).toHaveLength(1);
+    expect(wrapper.find('.hint').get(0).props.style).toHaveProperty('visibility', 'visible');
     await act(async () => {
       await jest.runAllTimers();
     });
 
     wrapper.update();
-    expect(wrapper.find('.hint')).toHaveLength(0);
+    expect(wrapper.find('.hint').get(0).props.style).toHaveProperty('visibility', 'hidden');
 
     expect(wrapper).toMatchSnapshot();
   });

@@ -17,14 +17,14 @@ export const TrackNumber = ({
   item,
   onCopy,
 }) => {
-  const ref = useRef();
+  const iconRef = useRef();
 
   /**
    * Копирование трек номера.
    */
   const handleCopy = async () => {
     await navigator.clipboard.writeText(item.trackNumber);
-    onCopy && onCopy(item, ref);
+    onCopy && onCopy(item, iconRef);
   };
   return (
     <div
@@ -32,12 +32,11 @@ export const TrackNumber = ({
       onClick={handleCopy}
       tabIndex={0}
       role='button'
-      ref={ref}
     >
       <div className={cx('title')}>{item.title}</div>
       <div className={cx('content')}>
         {item.trackNumber}
-        <div className={cx('icon')}>
+        <div className={cx('icon')} ref={iconRef}>
           <CopySVG />
         </div>
       </div>
