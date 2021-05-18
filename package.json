@@ -69,6 +69,7 @@
     "type-check": "tsc -p . --noEmit",
     "test": "jest",
     "coverage": "jest --coverage",
+    "test:ci": "jest --maxWorkers=2",
     "lint": "yarn eslint && yarn stylelint",
     "eslint": "eslint --cache src/ --ext .js,.jsx,.ts,.tsx",
     "stylelint": "stylelint 'src/**/*.scss'",

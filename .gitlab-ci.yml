@@ -13,7 +13,7 @@ stages:
   before_script:
     - yarn install
   script:
-    - yarn test
+    - yarn test:ci
   tags:
     - sl-frontend
 
