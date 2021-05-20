@@ -12,6 +12,10 @@ describe('<ItemImage />', () => {
     const wrapper = mount(<ItemImage wishProps={{}} hasWishButton />);
     expect(wrapper).toMatchSnapshot();
   });
+  it('should render wish, no props', () => {
+    const wrapper = mount(<ItemImage wishProps={undefined} hasWishButton />);
+    expect(wrapper).toMatchSnapshot();
+  });
   it('should render with withBlur prop', () => {
     const wrapper = mount(<ItemImage withBlur />);
     expect(wrapper).toMatchSnapshot();

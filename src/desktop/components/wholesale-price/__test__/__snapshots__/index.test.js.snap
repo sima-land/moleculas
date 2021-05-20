@@ -29,7 +29,6 @@ exports[`<WholesalePrice /> should render with props 1`] = `
             className="size-16 line-height-24 color__gray87 weight-600"
           >
             <Price
-              currencyGraphemeClass="currency-grapheme"
               value={222222}
             >
               <span
@@ -54,7 +53,6 @@ exports[`<WholesalePrice /> should render with props 1`] = `
             >
               <Price
                 currencyGrapheme="шт."
-                currencyGraphemeClass="currency-grapheme"
                 value={520}
               >
                 <span
@@ -118,7 +116,6 @@ exports[`<WholesalePrice /> should render with props 2`] = `
             className="size-16 line-height-24 color__gray87 weight-600"
           >
             <Price
-              currencyGraphemeClass="currency-grapheme"
               value={222222}
             >
               <span
@@ -159,7 +156,6 @@ exports[`<WholesalePrice /> should render with props 2`] = `
             >
               <Price
                 currencyGrapheme="шт."
-                currencyGraphemeClass="currency-grapheme"
                 value={520}
               >
                 <span
@@ -199,9 +195,7 @@ exports[`<WholesalePrice /> should render without props 1`] = `
           <span
             className="size-16 line-height-24 color__gray87 weight-600"
           >
-            <Price
-              currencyGraphemeClass="currency-grapheme"
-            >
+            <Price>
               <span
                 className="root"
               />

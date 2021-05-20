@@ -1,7 +1,4 @@
-import mockedIsElement from 'lodash/isElement';
 import getContainedItems from '../get-contained-items';
-
-jest.mock('lodash/isElement');
 
 describe('getContainedItems()', () => {
   it('should return correctly quantity', function () {
@@ -12,6 +9,8 @@ describe('getContainedItems()', () => {
     function Child (right) {
       this.right = right;
       this.getBoundingClientRect = () => ({ right: this.right });
+      this.__proto__ = HTMLElement.prototype;
+      this.constructor = HTMLElement;
     }
 
     const child1 = new Child(50);
@@ -28,13 +27,13 @@ describe('getContainedItems()', () => {
         child4,
         child5,
       ],
+      __proto__: HTMLElement.prototype,
+      constructor: HTMLElement,
     };
 
-    mockedIsElement.mockReturnValue(true);
     expect(getContainedItems(testNode)).toEqual(3);
     child4.right = 200;
     expect(getContainedItems(testNode)).toEqual(5);
-    mockedIsElement.mockRestore();
     expect(getContainedItems()).toEqual(0);
   });
 });

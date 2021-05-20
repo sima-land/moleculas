@@ -9,7 +9,7 @@ import on from '@dev-dep/ui-nucleons/helpers/on';
  */
 export const useViewport = (
   ref: React.MutableRefObject<HTMLElement | null>,
-  callback: () => void,
+  callback?: () => void,
   options?: IntersectionObserverInit
 ) => {
   useEffect(() => {

@@ -33,7 +33,6 @@ exports[`<ItemPrice /> should render with props 1`] = `
   >
     <Box
       alignItems="baseline"
-      dangerouslySetInlineStyle={Object {}}
       direction="column"
       display="flex"
       justifyContent="between"
@@ -66,7 +65,6 @@ exports[`<ItemPrice /> should render with props 1`] = `
                     className="size-16 line-height-24 weight-600"
                   >
                     <Price
-                      currencyGraphemeClass="currency-grapheme"
                       value={15}
                     >
                       <span
@@ -90,12 +88,11 @@ exports[`<ItemPrice /> should render with props 1`] = `
                   className="size-12 line-height-16 color__gray38"
                 >
                   <Price
-                    currencyGraphemeClass="currency-grapheme"
-                    old={true}
+                    crossedOut={true}
                     value={20}
                   >
                     <span
-                      className="root"
+                      className="root crossed-out"
                     >
                       20
                     </span>
@@ -175,7 +172,6 @@ exports[`<ItemPrice /> should render with props 1`] = `
             >
               <Price
                 currencyGrapheme="Р / пог. м"
-                currencyGraphemeClass="currency-grapheme"
                 value={421}
               >
                 <span
@@ -219,7 +215,6 @@ exports[`<ItemPrice /> should render with props 1`] = `
                   className="size-16 line-height-24 color__gray87 weight-600"
                 >
                   <Price
-                    currencyGraphemeClass="currency-grapheme"
                     value={14}
                   >
                     <span

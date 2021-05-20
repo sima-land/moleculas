@@ -44,27 +44,24 @@ exports[`ProductCard renders properly 1`] = `
         checked={true}
         className="wish-button is-wished"
         disabled={[Function]}
+        height={20}
         onClick={[Function]}
-        size={20}
+        width={20}
       >
         <ForwardRef(SvgFilledHeart)
+          aria-label="Убрать из избранного"
           className="button wish-button is-wished checked disabled"
           data-testid="favorite-button"
           height={24}
-          onClick={null}
           role="button"
-          size={20}
-          title="Убрать из избранного"
           width={24}
         >
           <svg
+            aria-label="Убрать из избранного"
             className="button wish-button is-wished checked disabled"
             data-testid="favorite-button"
             height={24}
-            onClick={null}
             role="button"
-            size={20}
-            title="Убрать из избранного"
             viewBox="0 0 24 24"
             width={24}
             xmlns="http://www.w3.org/2000/svg"

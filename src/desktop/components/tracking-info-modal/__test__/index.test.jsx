@@ -29,6 +29,7 @@ describe('TrackingInfoModal', () => {
   it('has correct call onCopy callback', async () => {
     const fakeOnCopy = jest.fn();
     const fakeClipboard = jest.fn();
+
     Object.defineProperty(window.navigator, 'clipboard', {
       writable: true,
       value: {

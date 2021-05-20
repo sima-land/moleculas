@@ -28,7 +28,6 @@ exports[`<RecommendedItem /> render with props should correct render with all pr
       <Price
         className="price"
         currencyGrapheme="$"
-        fractionalSign=","
         value={135.4}
       >
         <span
@@ -39,12 +38,12 @@ exports[`<RecommendedItem /> render with props should correct render with all pr
       </Price>
       <Price
         className="old-price"
+        crossedOut={true}
         currencyGrapheme="$"
-        old={true}
         value={234.9}
       >
         <span
-          className="root old-price"
+          className="root old-price crossed-out"
         >
           234,90 $
         </span>
@@ -52,11 +51,11 @@ exports[`<RecommendedItem /> render with props should correct render with all pr
     </div>
     <ForwardRef(Link)
       className="link"
-      color="black"
+      color="gray87"
       href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
     >
       <a
-        className="link link"
+        className="link link color__gray87 hover-color__gray54"
         href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
       >
         Милая картина из шерсти Schrodinger cat, А5
@@ -93,7 +92,6 @@ exports[`<RecommendedItem /> render with props should correct render without old
       <Price
         className="price"
         currencyGrapheme="$"
-        fractionalSign=","
         value={135.4}
       >
         <span
@@ -105,11 +103,11 @@ exports[`<RecommendedItem /> render with props should correct render without old
     </div>
     <ForwardRef(Link)
       className="link"
-      color="black"
+      color="gray87"
       href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
     >
       <a
-        className="link link"
+        className="link link color__gray87 hover-color__gray54"
         href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
       >
         Милая картина из шерсти Schrodinger cat, А5
@@ -125,7 +123,7 @@ exports[`<RecommendedItem /> without props should match snapshot 1`] = `
 >
   <ForwardRef(Link)
     className="link"
-    color="black"
+    color="gray87"
   />
 </div>
 `;

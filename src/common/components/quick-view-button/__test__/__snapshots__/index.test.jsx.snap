@@ -7,23 +7,23 @@ exports[`<QuickViewButton /> should works with default props 1`] = `
   size={15}
 >
   <ForwardRef(SvgQuickView)
+    aria-label="Быстрый просмотр"
     className="root btn"
     data-testid="quick-view-button"
     height={24}
     onClick={[MockFunction]}
     role="button"
     size={15}
-    title="Быстрый просмотр"
     width={24}
   >
     <svg
+      aria-label="Быстрый просмотр"
       className="root btn"
       data-testid="quick-view-button"
       height={24}
       onClick={[MockFunction]}
       role="button"
       size={15}
-      title="Быстрый просмотр"
       viewBox="0 0 24 24"
       width={24}
       xmlns="http://www.w3.org/2000/svg"
@@ -39,19 +39,19 @@ exports[`<QuickViewButton /> should works with default props 1`] = `
 exports[`<QuickViewButton /> should works without props 1`] = `
 <ForwardRef>
   <ForwardRef(SvgQuickView)
+    aria-label="Быстрый просмотр"
     className="root"
     data-testid="quick-view-button"
     height={24}
     role="button"
-    title="Быстрый просмотр"
     width={24}
   >
     <svg
+      aria-label="Быстрый просмотр"
       className="root"
       data-testid="quick-view-button"
       height={24}
       role="button"
-      title="Быстрый просмотр"
       viewBox="0 0 24 24"
       width={24}
       xmlns="http://www.w3.org/2000/svg"

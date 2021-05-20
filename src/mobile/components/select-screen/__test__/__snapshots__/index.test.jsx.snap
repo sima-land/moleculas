@@ -104,7 +104,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                 class="content full-width"
               >
                 <div
-                  class="layout mobile disabled-xxs"
+                  class="layout mobile disabled-mxs disabled-ms"
                 >
                   <div
                     class="container"
@@ -310,12 +310,13 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
               <MobileLayout
                 disabledOn={
                   Array [
-                    "xxs",
+                    "mxs",
+                    "ms",
                   ]
                 }
               >
                 <div
-                  className="layout mobile disabled-xxs"
+                  className="layout mobile disabled-mxs disabled-ms"
                 >
                   <div
                     className="container"
@@ -528,7 +529,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                 class="content full-width"
               >
                 <div
-                  class="layout mobile disabled-xxs"
+                  class="layout mobile disabled-mxs disabled-ms"
                 >
                   <div
                     class="container"
@@ -704,12 +705,13 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
               <MobileLayout
                 disabledOn={
                   Array [
-                    "xxs",
+                    "mxs",
+                    "ms",
                   ]
                 }
               >
                 <div
-                  className="layout mobile disabled-xxs"
+                  className="layout mobile disabled-mxs disabled-ms"
                 >
                   <div
                     className="container"
@@ -916,7 +918,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                 class="content full-width"
               >
                 <div
-                  class="layout mobile disabled-xxs"
+                  class="layout mobile disabled-mxs disabled-ms"
                 >
                   <div
                     class="container"
@@ -1113,12 +1115,13 @@ exports[`<SelectScreen /> should handle props 1`] = `
               <MobileLayout
                 disabledOn={
                   Array [
-                    "xxs",
+                    "mxs",
+                    "ms",
                   ]
                 }
               >
                 <div
-                  className="layout mobile disabled-xxs"
+                  className="layout mobile disabled-mxs disabled-ms"
                 >
                   <div
                     className="container"
@@ -1335,7 +1338,7 @@ exports[`<SelectScreen /> should render without props 1`] = `
                 class="content full-width"
               >
                 <div
-                  class="layout mobile disabled-xxs"
+                  class="layout mobile disabled-mxs disabled-ms"
                 >
                   <div
                     class="container"
@@ -1448,12 +1451,13 @@ exports[`<SelectScreen /> should render without props 1`] = `
               <MobileLayout
                 disabledOn={
                   Array [
-                    "xxs",
+                    "mxs",
+                    "ms",
                   ]
                 }
               >
                 <div
-                  className="layout mobile disabled-xxs"
+                  className="layout mobile disabled-mxs disabled-ms"
                 >
                   <div
                     className="container"

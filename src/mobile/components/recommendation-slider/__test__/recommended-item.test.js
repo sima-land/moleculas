@@ -1,22 +1,8 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import debounce from 'lodash/debounce';
 import RecommendedItem from '../recommended-item';
 import { Link } from '@dev-dep/ui-nucleons/link';
 import { Price } from '@dev-dep/ui-nucleons/price';
-import cutTextContent from '@dev-dep/ui-nucleons/helpers/cut-text-content';
-
-jest.mock('@dev-dep/ui-nucleons/helpers/cut-text-content', () => {
-  const original = jest.requireActual('@dev-dep/ui-nucleons/helpers/cut-text-content');
-
-  return {
-    ...original,
-    __esModule: true,
-    default: jest.fn(original.default),
-  };
-});
-
-jest.mock('lodash/debounce', () => jest.fn(fn => fn));
 
 describe('<RecommendedItem />', () => {
   const props = {
@@ -35,30 +21,14 @@ describe('<RecommendedItem />', () => {
     };
     it('onItemClick calls correctly', () => {
       const onItemFn = jest.fn();
-      debounce.mockClear();
 
       const component = mount(<RecommendedItem {...allProps} onItemClick={onItemFn} />);
-      expect(cutTextContent).toHaveBeenCalledTimes(1);
       expect(onItemFn).not.toHaveBeenCalled();
 
       const link = component.find(Link);
       link.simulate('click');
 
       expect(onItemFn).toHaveBeenCalledTimes(1);
-
-      cutTextContent.mockClear();
-
-      expect(cutTextContent).toHaveBeenCalledTimes(0);
-
-      // dispatch window event resize
-      const resizeEvent = document.createEvent('Event');
-      resizeEvent.initEvent('resize', true, true);
-      window.dispatchEvent(resizeEvent);
-
-      // wait for debounce
-      expect(debounce).toHaveBeenCalledTimes(1);
-
-      expect(cutTextContent).toHaveBeenCalledTimes(1);
     });
     it('should correct render with all props', () => {
       const component = mount(<RecommendedItem {...allProps} />);

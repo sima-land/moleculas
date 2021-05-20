@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { WholesalePrice } from '../index';
+import { WholesalePrice } from '..';
 
 describe('<WholesalePrice />', () => {
   it('should render without props', () => {
@@ -19,6 +19,7 @@ describe('<WholesalePrice />', () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
+
   it('should onDetailsClick calls on click', () => {
     const wrapper = mount(
       <WholesalePrice

@@ -25,13 +25,12 @@ exports[`<ModifiersWidget /> should renders correctly with prop 1`] = `
     <ModifiersGroup
       getItemContent={[Function]}
       getItemCount={[Function]}
-      getSelectItem={[Function]}
       items={
         Array [
           "test",
         ]
       }
-      onSelectItem={[MockFunction]}
+      onSelectItem={[Function]}
     >
       <div
         className="modifiers-group height-limited"
@@ -97,7 +96,7 @@ exports[`<ModifiersWidget /> should renders correctly without props 1`] = `
   <ModifiersGroup
     getItemContent={[Function]}
     getItemCount={[Function]}
-    getSelectItem={[Function]}
+    onSelectItem={[Function]}
   />
 </div>
 `;

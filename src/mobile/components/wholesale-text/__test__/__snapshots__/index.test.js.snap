@@ -4,14 +4,10 @@ exports[`<WholesaleText /> should render with props and cutTextContent calls cor
 <WholesaleText
   text="Крупный опт «Галантерея и швейная галантерея»"
 >
-  <span>
+  <span
+    className="root"
+  >
     Крупный опт «Галантерея и швейная галантерея»
   </span>
-</WholesaleText>
-`;
-
-exports[`<WholesaleText /> should render without props 1`] = `
-<WholesaleText>
-  <span />
 </WholesaleText>
 `;
