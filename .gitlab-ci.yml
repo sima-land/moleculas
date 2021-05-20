@@ -14,6 +14,9 @@ stages:
     - yarn install
   script:
     - yarn test:ci
+  artifacts:
+    reports:
+      junit: junit.xml
   tags:
     - sl-frontend
 
