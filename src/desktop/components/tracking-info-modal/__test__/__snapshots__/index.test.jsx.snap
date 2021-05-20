@@ -50,7 +50,6 @@ exports[`TrackingInfoModal should hide Hint correctly 1`] = `
   }
 >
   <Modal
-    extended={true}
     footer={
       <CleanGroup>
         <CleanButton
@@ -144,8 +143,8 @@ exports[`TrackingInfoModal should hide Hint correctly 1`] = `
           <div
             className="text"
           >
-            Чтобы узнать, где находится ваше отправление, введите на 
-          сайте cdek.ru в разделе отслеживания трек-номера посылок:
+            Чтобы узнать, где находится ваше отправление, введите на
+            сайте cdek.ru в разделе отслеживания трек-номера посылок:
           </div>
           <div
             className="track-numbers"

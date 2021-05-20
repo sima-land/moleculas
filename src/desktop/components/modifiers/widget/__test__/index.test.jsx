@@ -1,9 +1,9 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import { ModifiersWidget, getSelectItem } from '..';
+import { ModifiersWidget } from '..';
 import { ModifiersGroup } from '../../group';
 import { Link } from '@dev-dep/ui-nucleons/link';
-import isFunction from 'lodash/isFunction';
+import { act } from 'react-dom/test-utils';
 
 describe('<ModifiersWidget />', () => {
   it('should renders correctly without props', () => {
@@ -14,7 +14,7 @@ describe('<ModifiersWidget />', () => {
 
   it('should renders correctly with prop', () => {
     const onSelectItem = jest.fn();
-    const modifiersWidget = mount(
+    const wrapper = mount(
       <ModifiersWidget
         title='test'
         items={['test']}
@@ -23,28 +23,15 @@ describe('<ModifiersWidget />', () => {
       />
     );
 
-    expect(modifiersWidget.find('h3').prop('className')).toEqual('modifiers-title');
-    expect(modifiersWidget.find(Link).prop('className')).toEqual('modifiers-link');
-    expect(modifiersWidget.find(ModifiersGroup).prop('items')).toEqual(['test']);
-    expect(modifiersWidget.find(ModifiersGroup).prop('onSelectItem')).toEqual(onSelectItem);
-    expect(modifiersWidget.find(ModifiersGroup).prop('getSelectItem')).toEqual(getSelectItem);
-    expect(modifiersWidget).toMatchSnapshot();
-  });
-});
+    expect(wrapper.find('h3').prop('className')).toEqual('modifiers-title');
+    expect(wrapper.find(Link).prop('className')).toEqual('modifiers-link');
+    expect(wrapper.find(ModifiersGroup).prop('items')).toEqual(['test']);
+    expect(wrapper).toMatchSnapshot();
 
-describe('getSelectItem()', () => {
-  it('should return null if item is selected', () => {
-    expect(getSelectItem(jest.fn(), { selected: true })).toBe(null);
-  });
-
-  it('should return function if item is not selected', () => {
-    const onSelectItem = jest.fn();
-    const item = { selected: false };
-    const onClick = getSelectItem(onSelectItem, item);
-
-    expect(isFunction(onClick)).toBe(true);
-
-    onClick();
-    expect(onSelectItem).toBeCalledWith(item);
+    expect(onSelectItem).toBeCalledTimes(0);
+    act(() => {
+      wrapper.find(ModifiersGroup).prop('onSelectItem')('test', true);
+    });
+    expect(onSelectItem).toBeCalledTimes(1);
   });
 });

@@ -58,13 +58,15 @@ $itemIncreaseRatio: ($largeSize - $smallSize) / (720px - 320px);
 }
 
 .link {
-  display: block;
   overflow: hidden;
   word-break: break-word;
-  max-height: 41px;
+  max-height: 40px;
   max-width: 100%;
   font-size: 14px;
   line-height: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   &:hover {
     color: #000;
   }

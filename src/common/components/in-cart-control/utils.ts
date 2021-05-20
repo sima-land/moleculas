@@ -22,7 +22,7 @@ export const useCartItemInput = ({ qty: qtyArg, allowFloat, onApply }: {
     const parsedQty = parseFloat(value) || 0; // ноль, так как можно ввести пустую сроку
     const isDifferent = parsedQty !== qty;
 
-    isDifferent && onApply && onApply(parsedQty);
+    isDifferent && onApply(parsedQty);
   }, [qty, value, onApply]));
 
   useEffect(() => setValue(String(qty)), [qty]);

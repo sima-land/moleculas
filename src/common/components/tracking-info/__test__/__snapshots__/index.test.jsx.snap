@@ -18,7 +18,7 @@ exports[`<TrackNumber /> should match snapshot in desktop version 1`] = `
     <div
       className="text"
     >
-      Чтобы узнать, где находится ваша посылка, введите на сайте www.boxberry.ru 
+      Чтобы узнать, где находится ваша посылка, введите на сайте www.boxberry.ru
           в разделе отслеживания свой трек-номер:
     </div>
     <div
@@ -67,7 +67,7 @@ exports[`<TrackNumber /> should match snapshot in mobile version 1`] = `
     <div
       className="text"
     >
-      Чтобы узнать, где находится ваша посылка, введите на сайте www.boxberry.ru 
+      Чтобы узнать, где находится ваша посылка, введите на сайте www.boxberry.ru
           в разделе отслеживания свой трек-номер:
     </div>
     <div
@@ -116,7 +116,7 @@ exports[`<TrackNumber /> should render and handle click correctly 1`] = `
     <div
       className="text"
     >
-      Чтобы узнать, где находится ваша посылка, введите на сайте www.boxberry.ru 
+      Чтобы узнать, где находится ваша посылка, введите на сайте www.boxberry.ru
           в разделе отслеживания свой трек-номер:
     </div>
     <div

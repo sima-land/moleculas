@@ -15,12 +15,10 @@ exports[`<ItemRating /> should render with props 1`] = `
     >
       <ForwardRef(SvgFilledRate)
         fill="#ffab00"
-        value={2}
       >
         <svg
           fill="#ffab00"
           height={16}
-          value={2}
           viewBox="0 0 16 16"
           width={16}
           xmlns="http://www.w3.org/2000/svg"
@@ -62,12 +60,10 @@ exports[`<ItemRating /> should render without props 1`] = `
     >
       <ForwardRef(SvgFilledRate)
         fill="#ffab00"
-        value={0}
       >
         <svg
           fill="#ffab00"
           height={16}
-          value={0}
           viewBox="0 0 16 16"
           width={16}
           xmlns="http://www.w3.org/2000/svg"

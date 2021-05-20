@@ -61,11 +61,11 @@ exports[`<RecommendationWrapper /> should match a snapshot with items 1`] = `
                 >
                   <ForwardRef(Link)
                     className="link"
-                    color="black"
+                    color="gray87"
                     onClick={[Function]}
                   >
                     <a
-                      className="link link"
+                      className="link link color__gray87 hover-color__gray54"
                       onClick={[Function]}
                     >
                       first item
@@ -85,11 +85,11 @@ exports[`<RecommendationWrapper /> should match a snapshot with items 1`] = `
                 >
                   <ForwardRef(Link)
                     className="link"
-                    color="black"
+                    color="gray87"
                     onClick={[Function]}
                   >
                     <a
-                      className="link link"
+                      className="link link color__gray87 hover-color__gray54"
                       onClick={[Function]}
                     >
                       second item

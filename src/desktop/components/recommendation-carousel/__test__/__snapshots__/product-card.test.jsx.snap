@@ -76,6 +76,7 @@ exports[`<ProductCard /> should renders correctly 1`] = `
             onMouseLeave={[Function]}
           >
             <ForwardRef(SvgQuickView)
+              aria-label="Быстрый просмотр"
               className="root quick-view-btn"
               data-testid="quick-view-button"
               height={24}
@@ -83,10 +84,10 @@ exports[`<ProductCard /> should renders correctly 1`] = `
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
               role="button"
-              title="Быстрый просмотр"
               width={24}
             >
               <svg
+                aria-label="Быстрый просмотр"
                 className="root quick-view-btn"
                 data-testid="quick-view-button"
                 height={24}
@@ -94,7 +95,6 @@ exports[`<ProductCard /> should renders correctly 1`] = `
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
                 role="button"
-                title="Быстрый просмотр"
                 viewBox="0 0 24 24"
                 width={24}
                 xmlns="http://www.w3.org/2000/svg"

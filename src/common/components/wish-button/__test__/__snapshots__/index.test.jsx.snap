@@ -6,21 +6,21 @@ exports[`<WishButton /> should render with props 1`] = `
   onClick={[MockFunction]}
 >
   <ForwardRef(SvgFilledHeart)
+    aria-label="Убрать из избранного"
     className="button checked"
     data-testid="favorite-button"
     height={24}
     onClick={[MockFunction]}
     role="button"
-    title="Убрать из избранного"
     width={24}
   >
     <svg
+      aria-label="Убрать из избранного"
       className="button checked"
       data-testid="favorite-button"
       height={24}
       onClick={[MockFunction]}
       role="button"
-      title="Убрать из избранного"
       viewBox="0 0 24 24"
       width={24}
       xmlns="http://www.w3.org/2000/svg"
@@ -36,19 +36,19 @@ exports[`<WishButton /> should render with props 1`] = `
 exports[`<WishButton /> should render without props 1`] = `
 <ForwardRef>
   <ForwardRef(SvgHeart)
+    aria-label="Добавить в избранное"
     className="button"
     data-testid="favorite-button"
     height={24}
     role="button"
-    title="Добавить в избранное"
     width={24}
   >
     <svg
+      aria-label="Добавить в избранное"
       className="button"
       data-testid="favorite-button"
       height={24}
       role="button"
-      title="Добавить в избранное"
       viewBox="0 0 24 24"
       width={24}
       xmlns="http://www.w3.org/2000/svg"

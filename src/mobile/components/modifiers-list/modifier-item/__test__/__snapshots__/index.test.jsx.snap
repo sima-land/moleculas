@@ -23,7 +23,6 @@ exports[`<ModifierItem /> should render correctly color modifier 1`] = `
     <Price
       className="price"
       currencyGrapheme="$"
-      fractionalSign=","
       value={745}
     />
   </div>
@@ -48,7 +47,6 @@ exports[`<ModifierItem /> should render correctly default text type modifier 1`]
     <Price
       className="price"
       currencyGrapheme="$"
-      fractionalSign=","
       value={745}
     />
   </div>
@@ -78,7 +76,6 @@ exports[`<ModifierItem /> should render correctly image modifier 1`] = `
     <Price
       className="price"
       currencyGrapheme="$"
-      fractionalSign=","
       value={745}
     />
   </div>
@@ -103,7 +100,6 @@ exports[`<ModifierItem /> should render correctly with additionalText and select
     <Price
       className="price additional"
       currencyGrapheme="$"
-      fractionalSign=","
       value={745}
     />
     <Memo([object Object])

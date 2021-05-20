@@ -671,7 +671,6 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           <Price
                             className="price"
                             currencyGrapheme="₽"
-                            fractionalSign=","
                             value={261}
                           >
                             <span
@@ -683,12 +682,12 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         </div>
                         <ForwardRef(Link)
                           className="link"
-                          color="black"
+                          color="gray87"
                           href=""
                           onClick={[Function]}
                         >
                           <a
-                            className="link link"
+                            className="link link color__gray87 hover-color__gray54"
                             href=""
                             onClick={[Function]}
                           >
@@ -730,7 +729,6 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           <Price
                             className="price"
                             currencyGrapheme="₽"
-                            fractionalSign=","
                             value={322}
                           >
                             <span
@@ -742,12 +740,12 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         </div>
                         <ForwardRef(Link)
                           className="link"
-                          color="black"
+                          color="gray87"
                           href=""
                           onClick={[Function]}
                         >
                           <a
-                            className="link link"
+                            className="link link color__gray87 hover-color__gray54"
                             href=""
                             onClick={[Function]}
                           >
@@ -827,7 +825,6 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           <Price
                             className="price"
                             currencyGrapheme="₽"
-                            fractionalSign=","
                             value={238}
                           >
                             <span
@@ -839,12 +836,12 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         </div>
                         <ForwardRef(Link)
                           className="link"
-                          color="black"
+                          color="gray87"
                           href=""
                           onClick={[Function]}
                         >
                           <a
-                            className="link link"
+                            className="link link color__gray87 hover-color__gray54"
                             href=""
                             onClick={[Function]}
                           >
@@ -887,7 +884,6 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           <Price
                             className="price"
                             currencyGrapheme="₽"
-                            fractionalSign=","
                             value={171}
                           >
                             <span
@@ -899,12 +895,12 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         </div>
                         <ForwardRef(Link)
                           className="link"
-                          color="black"
+                          color="gray87"
                           href=""
                           onClick={[Function]}
                         >
                           <a
-                            className="link link"
+                            className="link link color__gray87 hover-color__gray54"
                             href=""
                             onClick={[Function]}
                           >
@@ -944,7 +940,6 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           <Price
                             className="price"
                             currencyGrapheme="₽"
-                            fractionalSign=","
                             value={483}
                           >
                             <span
@@ -956,12 +951,12 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         </div>
                         <ForwardRef(Link)
                           className="link"
-                          color="black"
+                          color="gray87"
                           href=""
                           onClick={[Function]}
                         >
                           <a
-                            className="link link"
+                            className="link link color__gray87 hover-color__gray54"
                             href=""
                             onClick={[Function]}
                           >
@@ -1003,7 +998,6 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           <Price
                             className="price"
                             currencyGrapheme="₽"
-                            fractionalSign=","
                             value={988}
                           >
                             <span
@@ -1015,12 +1009,12 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         </div>
                         <ForwardRef(Link)
                           className="link"
-                          color="black"
+                          color="gray87"
                           href=""
                           onClick={[Function]}
                         >
                           <a
-                            className="link link"
+                            className="link link color__gray87 hover-color__gray54"
                             href=""
                             onClick={[Function]}
                           >
@@ -1063,7 +1057,6 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           <Price
                             className="price"
                             currencyGrapheme="₽"
-                            fractionalSign=","
                             value={619}
                           >
                             <span
@@ -1075,12 +1068,12 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         </div>
                         <ForwardRef(Link)
                           className="link"
-                          color="black"
+                          color="gray87"
                           href=""
                           onClick={[Function]}
                         >
                           <a
-                            className="link link"
+                            className="link link color__gray87 hover-color__gray54"
                             href=""
                             onClick={[Function]}
                           >
@@ -1120,7 +1113,6 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           <Price
                             className="price"
                             currencyGrapheme="₽"
-                            fractionalSign=","
                             value={539}
                           >
                             <span
@@ -1131,12 +1123,12 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           </Price>
                           <Price
                             className="old-price"
+                            crossedOut={true}
                             currencyGrapheme="₽"
-                            old={true}
                             value={595}
                           >
                             <span
-                              className="root old-price"
+                              className="root old-price crossed-out"
                             >
                               595 ₽
                             </span>
@@ -1144,12 +1136,12 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         </div>
                         <ForwardRef(Link)
                           className="link"
-                          color="black"
+                          color="gray87"
                           href=""
                           onClick={[Function]}
                         >
                           <a
-                            className="link link"
+                            className="link link color__gray87 hover-color__gray54"
                             href=""
                             onClick={[Function]}
                           >
@@ -1189,7 +1181,6 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           <Price
                             className="price"
                             currencyGrapheme="₽"
-                            fractionalSign=","
                             value={599}
                           >
                             <span
@@ -1200,12 +1191,12 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           </Price>
                           <Price
                             className="old-price"
+                            crossedOut={true}
                             currencyGrapheme="₽"
-                            old={true}
                             value={717}
                           >
                             <span
-                              className="root old-price"
+                              className="root old-price crossed-out"
                             >
                               717 ₽
                             </span>
@@ -1213,12 +1204,12 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         </div>
                         <ForwardRef(Link)
                           className="link"
-                          color="black"
+                          color="gray87"
                           href=""
                           onClick={[Function]}
                         >
                           <a
-                            className="link link"
+                            className="link link color__gray87 hover-color__gray54"
                             href=""
                             onClick={[Function]}
                           >
@@ -1258,7 +1249,6 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           <Price
                             className="price"
                             currencyGrapheme="₽"
-                            fractionalSign=","
                             value={253}
                           >
                             <span
@@ -1270,12 +1260,12 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         </div>
                         <ForwardRef(Link)
                           className="link"
-                          color="black"
+                          color="gray87"
                           href=""
                           onClick={[Function]}
                         >
                           <a
-                            className="link link"
+                            className="link link color__gray87 hover-color__gray54"
                             href=""
                             onClick={[Function]}
                           >

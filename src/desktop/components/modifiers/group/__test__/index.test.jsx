@@ -2,12 +2,10 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import {
   ModifiersGroup,
-  defaultOnSelectItem,
   createHiddenNodeIndexFinder,
 } from '..';
 import { ModifierButton } from '../../button';
 import prop from 'lodash/fp/prop';
-import isFunction from 'lodash/isFunction';
 
 jest.mock('..', () => {
   const original = jest.requireActual('..');
@@ -375,7 +373,7 @@ describe('<ModifiersGroup />', () => {
     expect(spy).toHaveBeenCalledTimes(0);
     wrapper.find(ModifierButton).first().simulate('click');
     expect(spy).toHaveBeenCalledTimes(1);
-    expect(spy).toHaveBeenCalledWith({ content: 'Test 1' });
+    expect(spy.mock.calls[0][0]).toEqual({ content: 'Test 1' });
   });
 
   it('should handle "getItemType" prop', () => {
@@ -448,22 +446,6 @@ describe('<ModifiersGroup />', () => {
     });
   });
 
-  it('should handle "getSelectItem" prop', () => {
-    const spy = jest.fn();
-    const onSelectItem = jest.fn();
-    const testItems = getTestItems();
-    mount(
-      <ModifiersGroup
-        items={getTestItems()}
-        onSelectItem={onSelectItem}
-        getSelectItem={spy}
-      />
-    );
-    testItems.forEach((item, index) => {
-      expect(spy).toHaveBeenNthCalledWith(index + 1, onSelectItem, item);
-    });
-  });
-
   it('should match snapshot', () => {
     const testItems = getTestItems().map((item, index) => ({
       ...item,
@@ -511,19 +493,6 @@ describe('<ModifiersGroup />', () => {
     expect(spy).not.toBeCalled();
     component.find(ModifierButton).last().simulate('click');
     expect(spy).toBeCalledTimes(1);
-  });
-});
-
-describe('defaultOnSelectItem()', () => {
-  it('should return function', () => {
-    const onSelectItem = jest.fn();
-    const item = { selected: false };
-    const onClick = defaultOnSelectItem(onSelectItem, item);
-
-    expect(isFunction(onClick)).toBe(true);
-
-    onClick();
-    expect(onSelectItem).toBeCalledWith(item);
   });
 });
 
