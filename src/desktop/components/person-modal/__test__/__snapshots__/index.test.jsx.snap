@@ -288,13 +288,18 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
                 onClick={[MockFunction]}
                 size="m"
               >
-                <button
+                <ForwardRef(Link)
                   className="clean-button size-m"
                   onClick={[MockFunction]}
-                  type="button"
+                  pseudo={false}
                 >
-                  Закрыть
-                </button>
+                  <a
+                    className="link clean-button size-m color__brand-blue hover-color__brand-deep-blue"
+                    onClick={[MockFunction]}
+                  >
+                    Закрыть
+                  </a>
+                </ForwardRef(Link)>
               </CleanButton>
             </div>
           </CleanGroup>
@@ -413,12 +418,16 @@ exports[`<PersonModal /> should renders properly with minimal props 1`] = `
                 key=".0"
                 size="m"
               >
-                <button
+                <ForwardRef(Link)
                   className="clean-button size-m"
-                  type="button"
+                  pseudo={false}
                 >
-                  Закрыть
-                </button>
+                  <a
+                    className="link clean-button size-m color__brand-blue hover-color__brand-deep-blue"
+                  >
+                    Закрыть
+                  </a>
+                </ForwardRef(Link)>
               </CleanButton>
             </div>
           </CleanGroup>

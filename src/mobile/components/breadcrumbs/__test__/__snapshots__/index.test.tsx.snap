@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumbs should renders correctly 1`] = `
+<Breadcrumbs
+  items={
+    Array [
+      Object {
+        "name": "Каталог",
+        "url": "#",
+      },
+      Object {
+        "name": "Одежда и обувь",
+        "url": "#",
+      },
+      Object {
+        "name": "Женская одежда",
+        "url": "#",
+      },
+      Object {
+        "name": "Аксессуары",
+        "url": "#",
+      },
+      Object {
+        "name": "Брендированные стойки «Этель» и «Доляна» в подарок за покупку кухонного текстиля",
+        "url": "#",
+      },
+      Object {
+        "name": "Головные уборы",
+        "url": "#",
+      },
+      Object {
+        "name": "Кепки, бейсболки",
+        "url": "#",
+      },
+      Object {
+        "name": "Текущая страница",
+        "url": "#",
+      },
+    ]
+  }
+>
+  <nav
+    className="root"
+  >
+    <ForwardRef(Link)
+      className="item"
+      color="gray87"
+      href="#"
+      key="0"
+    >
+      <a
+        className="link item color__gray87 hover-color__gray54"
+        href="#"
+      >
+        Каталог
+      </a>
+    </ForwardRef(Link)>
+    <ForwardRef(Link)
+      className="item"
+      color="gray87"
+      href="#"
+      key="1"
+    >
+      <a
+        className="link item color__gray87 hover-color__gray54"
+        href="#"
+      >
+        Одежда и обувь
+      </a>
+    </ForwardRef(Link)>
+    <ForwardRef(Link)
+      className="item"
+      color="gray87"
+      href="#"
+      key="2"
+    >
+      <a
+        className="link item color__gray87 hover-color__gray54"
+        href="#"
+      >
+        Женская одежда
+      </a>
+    </ForwardRef(Link)>
+    <ForwardRef(Link)
+      className="item"
+      color="gray87"
+      href="#"
+      key="3"
+    >
+      <a
+        className="link item color__gray87 hover-color__gray54"
+        href="#"
+      >
+        Аксессуары
+      </a>
+    </ForwardRef(Link)>
+    <ForwardRef(Link)
+      className="item"
+      color="gray87"
+      href="#"
+      key="4"
+    >
+      <a
+        className="link item color__gray87 hover-color__gray54"
+        href="#"
+      >
+        Брендированные стойки «Этель» и «Доляна» в подарок за покупку кухонного текстиля
+      </a>
+    </ForwardRef(Link)>
+    <ForwardRef(Link)
+      className="item"
+      color="gray87"
+      href="#"
+      key="5"
+    >
+      <a
+        className="link item color__gray87 hover-color__gray54"
+        href="#"
+      >
+        Головные уборы
+      </a>
+    </ForwardRef(Link)>
+    <ForwardRef(Link)
+      className="item"
+      color="gray87"
+      href="#"
+      key="6"
+    >
+      <a
+        className="link item color__gray87 hover-color__gray54"
+        href="#"
+      >
+        Кепки, бейсболки
+      </a>
+    </ForwardRef(Link)>
+    <ForwardRef(Link)
+      className="item"
+      color="gray87"
+      href="#"
+      key="7"
+    >
+      <a
+        className="link item color__gray87 hover-color__gray54"
+        href="#"
+      >
+        Текущая страница
+      </a>
+    </ForwardRef(Link)>
+  </nav>
+</Breadcrumbs>
+`;

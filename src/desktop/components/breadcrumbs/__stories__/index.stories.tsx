@@ -15,10 +15,13 @@ export default {
 };
 
 export const Primary = () => (
-  <div style={{ width: '500px' }}>
+  <>
+    <div style={{ background: '#ddd', height: 32 }} />
     <Breadcrumbs
       items={items}
-      onOpenBreadcrumbs={action('popup was opened')}
+      onSiblingsPopupOpen={action('popup was opened')}
+      isSiblingActive={s => s.isActive}
     />
-  </div>
+    <div style={{ background: '#ddd', height: 32 }} />
+  </>
 );

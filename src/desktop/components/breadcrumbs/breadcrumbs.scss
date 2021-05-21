@@ -1,79 +1,78 @@
 @use 'node_modules/@dev-dep/ui-nucleons/colors';
 
-//Ширина контейнеров разделителя крошек
-$leftGapWidth: 16px;
-$rightGapWidth: 24px;
+$popup-padding: 16px;
+$line-gutter: 12px;
 
-.breadcrumbs {
-  position: relative;
+.root {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
   border: 0;
   outline: 0;
-  box-sizing: border-box;
-  line-height: 16px;
-  list-style: none;
   font-size: 12px;
+  line-height: 16px;
   user-select: none;
-  > li {
-    position: relative;
-    white-space: nowrap;
-    margin-bottom: 8px;
-    &:not(:first-child)::before {
-      content: '/';
-      display: inline-block;
-      width: $rightGapWidth;
-    }
-    &:not(:last-child)::after {
-      content: '';
-      display: inline-block;
-      width: $leftGapWidth;
-    }
-    &:first-child {
-      .popup {
-        left: -$leftGapWidth;
-      }
-    }
-    .active {
-      color: #3a3a3b;
-    }
+  margin-bottom: -$line-gutter;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  white-space: nowrap;
+  margin-bottom: $line-gutter;
+  &:not(:last-child)::after {
+    content: '/';
+    display: block;
+    margin: 0 16px;
   }
-  .popup {
-    white-space: nowrap;
-    min-width: 15em;
-    padding: 16px;
-    position: absolute;
-    top: -16px;
-    left: $rightGapWidth - 16px;
-    z-index: 2;
-    background: #fff;
-    border-radius: 8px;
-    .disabled {
-      color: #ccc;
-    }
-    .siblings-list {
-      margin-top: 1em;
-      margin-bottom: .3em;
-      list-style: none;
-      padding: 0;
-      .sibling-item {
-        display: block;
-        white-space: normal;
-        + .sibling-item {
-          margin-top: .5em;
-        }
-      }
-    }
+}
+
+.toggle-icon {
+  display: block;
+  cursor: pointer;
+  &.close {
+    transform: scaleY(-1);
   }
-  .toggle-icon {
-    vertical-align: middle;
-    margin: 0 0 1px 6px;
-    cursor: pointer;
-    &.close {
-      transform: scaleY(-1);
-    }
+}
+
+.popup {
+  min-width: 180px;
+  padding: $popup-padding;
+  position: absolute;
+  top: -$popup-padding;
+  left: -$popup-padding;
+  z-index: 2;
+}
+
+.popup-header {
+  display: flex;
+}
+
+.siblings {
+  margin-top: 16px;
+  list-style: none;
+  padding: 0;
+}
+
+.sibling {
+  display: block;
+  white-space: normal;
+  & + & {
+    margin-top: 8px;
+  }
+  .active {
+    color: colors.$gray24;
+  }
+}
+
+.sibling-placeholder {
+  background: colors.$gray4;
+  border-radius: 4px;
+  height: 12px;
+  & + & {
+    margin-top: 8px;
   }
 }
 
@@ -93,14 +92,4 @@ $rightGapWidth: 24px;
 .fade-exit-active {
   opacity: 0;
   transition: opacity .2s ease-in-out;
-}
-
-.link {
-  font-size: 12px;
-  line-height: 16px;
-  color: colors.$gray76;
-  text-decoration: none;
-  &:hover {
-    color: colors.$additional-red;
-  }
 }
