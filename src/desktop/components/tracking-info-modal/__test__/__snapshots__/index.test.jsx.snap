@@ -75,9 +75,7 @@ exports[`TrackingInfoModal should hide Hint correctly 1`] = `
             Object {
               "end": Object {
                 "data-testid": "modal:close",
-                "icon": <CrossSVG
-                  className="cursor-pointer"
-                />,
+                "icon": <CrossSVG />,
                 "onClick": undefined,
               },
             }
@@ -89,7 +87,7 @@ exports[`TrackingInfoModal should hide Hint correctly 1`] = `
             className="modal-header size-s header"
           >
             <div
-              className="icon-button"
+              className="icon-button stub"
             />
             <div
               className="main-section"
@@ -100,22 +98,15 @@ exports[`TrackingInfoModal should hide Hint correctly 1`] = `
             </div>
             <IconButton
               data-testid="modal:close"
-              icon={
-                <CrossSVG
-                  className="cursor-pointer"
-                />
-              }
+              icon={<CrossSVG />}
             >
               <button
                 className="icon-button"
                 data-testid="modal:close"
                 type="button"
               >
-                <CrossSVG
-                  className="cursor-pointer"
-                >
+                <CrossSVG>
                   <svg
-                    className="cursor-pointer"
                     height={24}
                     viewBox="0 0 24 24"
                     width={24}
@@ -632,14 +623,21 @@ exports[`TrackingInfoModal should hide Hint correctly 1`] = `
                 key=".0"
                 size="m"
               >
-                <a
+                <ForwardRef(Link)
                   className="clean-button size-m"
                   href="cdek.ru"
-                  type="button"
+                  pseudo={true}
                 >
-                  Перейти на 
-                  cdek.ru
-                </a>
+                  <a
+                    className="link clean-button size-m color__brand-blue hover-color__brand-deep-blue"
+                    href="cdek.ru"
+                    role="button"
+                    tabIndex={0}
+                  >
+                    Перейти на 
+                    cdek.ru
+                  </a>
+                </ForwardRef(Link)>
               </CleanButton>
             </div>
           </CleanGroup>

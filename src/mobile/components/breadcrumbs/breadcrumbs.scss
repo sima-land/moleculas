@@ -1,0 +1,22 @@
+@use 'node_modules/@dev-dep/ui-nucleons/colors';
+
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -4px;
+  line-height: 16px;
+  font-size: 12px;
+}
+
+.item {
+  white-space: nowrap;
+  display: block;
+  margin: 0 4px 4px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &:not(:last-child)::after {
+    content: '/';
+    margin-left: 4px;
+    color: colors.$gray87;
+  }
+}

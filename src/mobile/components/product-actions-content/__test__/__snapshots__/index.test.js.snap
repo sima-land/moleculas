@@ -113,12 +113,11 @@ exports[`ProductActionsContent renders properly 1`] = `
                   <div
                     class="clean-group"
                   >
-                    <button
-                      class="clean-button size-m"
-                      type="button"
+                    <a
+                      class="link clean-button size-m color__brand-blue hover-color__brand-deep-blue"
                     >
                       Закрыть
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -235,12 +234,16 @@ exports[`ProductActionsContent renders properly 1`] = `
                     key=".0"
                     size="m"
                   >
-                    <button
+                    <ForwardRef(Link)
                       className="clean-button size-m"
-                      type="button"
+                      pseudo={false}
                     >
-                      Закрыть
-                    </button>
+                      <a
+                        className="link clean-button size-m color__brand-blue hover-color__brand-deep-blue"
+                      >
+                        Закрыть
+                      </a>
+                    </ForwardRef(Link)>
                   </CleanButton>
                 </div>
               </CleanGroup>

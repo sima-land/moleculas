@@ -2,6 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { PersonModal } from '..';
 import { colorKey } from '@dev-dep/ui-nucleons/avatar/user';
+import { Clean } from '@dev-dep/ui-nucleons/clean-buttons';
 
 describe('<PersonModal />', () => {
   beforeEach(() => {
@@ -60,7 +61,7 @@ describe('<PersonModal />', () => {
     expect(wrapper).toMatchSnapshot();
 
     expect(onClose).not.toHaveBeenCalled();
-    wrapper.find('button.clean-button').at(0).simulate('click');
+    wrapper.find(Clean.Button).at(0).simulate('click');
     expect(onClose).toHaveBeenCalled();
   });
 });
