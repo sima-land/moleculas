@@ -15,6 +15,7 @@ exports[`<Badge /> should renders correctly 1`] = `
 >
   <a
     className="root interactive"
+    data-testid="badge"
     href="https://sima-land.ru"
     style={
       Object {
@@ -46,6 +47,7 @@ exports[`<Badge /> should renders correctly 2`] = `
 >
   <a
     className="root icon-only interactive"
+    data-testid="badge"
     href="https://sima-land.ru"
     style={
       Object {
@@ -76,6 +78,7 @@ exports[`<Badge /> should renders correctly 3`] = `
 >
   <a
     className="root interactive"
+    data-testid="badge"
     href="https://sima-land.ru"
     style={
       Object {
@@ -118,6 +121,7 @@ exports[`<Badge /> should renders correctly 4`] = `
 >
   <a
     className="root interactive"
+    data-testid="badge"
     href="https://sima-land.ru"
     style={
       Object {
@@ -157,6 +161,7 @@ exports[`<Badge /> should renders correctly 5`] = `
 >
   <span
     className="root"
+    data-testid="badge"
     style={
       Object {
         "--badge-color": "#607d8b",

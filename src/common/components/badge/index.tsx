@@ -12,6 +12,7 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
   color?: string
   fields: Array<BadgeField>
   href?: string
+  'data-testid'?: string
 }
 
 const cx = classnames.bind(styles);
@@ -30,6 +31,7 @@ export const Badge = ({
   fields,
   href,
   style,
+  'data-testid': testId = 'badge',
   ...restProps
 }: BadgeProps) => {
   const Element = href ? 'a' : 'span';
@@ -38,6 +40,7 @@ export const Badge = ({
   return (
     <Element
       {...restProps}
+      data-testid={testId}
       href={href}
       style={{ ...style, '--badge-color': color } as any}
       className={cx(

@@ -93,6 +93,7 @@ exports[`<ItemImage /> should render badges 1`] = `
             <span
               bgColor="#b52ea8"
               className="root item"
+              data-testid="badge"
               definitions={
                 Object {
                   "label": Object {

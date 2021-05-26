@@ -6,6 +6,7 @@ exports[`<ModifierButton /> should handle "className" properly 1`] = `
 >
   <div
     className="modifier-button test-class"
+    data-testid="modifier-button"
   >
     <div
       className="content"
@@ -24,6 +25,7 @@ exports[`<ModifierButton /> should handle "color" properly 1`] = `
 >
   <div
     className="modifier-button"
+    data-testid="modifier-button"
     style={
       Object {
         "background": "#bada55",
@@ -45,6 +47,7 @@ exports[`<ModifierButton /> should handle "color" properly 2`] = `
 <ForwardRef(ModifierButton)>
   <div
     className="modifier-button"
+    data-testid="modifier-button"
   >
     <div
       className="content"
@@ -60,6 +63,7 @@ exports[`<ModifierButton /> should handle "color" properly 2`] = `
 exports[`<ModifierButton /> should handle "onClick" prop 1`] = `
 <div
   className="modifier-button test-class"
+  data-testid="modifier-button"
   onClick={[MockFunction]}
 >
   <div
@@ -80,6 +84,7 @@ exports[`<ModifierButton /> should handle "selected" properly 1`] = `
 >
   <div
     className="modifier-button selected"
+    data-testid="modifier-button"
   >
     <div
       className="content"
@@ -96,6 +101,7 @@ exports[`<ModifierButton /> should handle "selected" properly 2`] = `
 <ForwardRef(ModifierButton)>
   <div
     className="modifier-button"
+    data-testid="modifier-button"
   >
     <div
       className="content"
@@ -115,6 +121,7 @@ exports[`<ModifierButton /> should handle "type" and "content" properly 1`] = `
 >
   <div
     className="modifier-button"
+    data-testid="modifier-button"
   >
     <div
       className="content"
@@ -137,6 +144,7 @@ exports[`<ModifierButton /> should handle "type" and "content" properly 2`] = `
 >
   <div
     className="modifier-button squared"
+    data-testid="modifier-button"
   >
     <div
       className="content"
@@ -157,6 +165,7 @@ exports[`<ModifierButton /> should handle "type" and "content" properly 3`] = `
 >
   <div
     className="modifier-button"
+    data-testid="modifier-button"
   >
     <div
       className="content"
@@ -176,6 +185,7 @@ exports[`<ModifierButton /> should not show title when type is color 1`] = `
 >
   <div
     className="modifier-button squared"
+    data-testid="modifier-button"
   />
 </ForwardRef(ModifierButton)>
 `;
@@ -186,9 +196,11 @@ exports[`<ModifierButton /> should render count 1`] = `
 >
   <div
     className="modifier-button"
+    data-testid="modifier-button"
   >
     <span
       className="label with-count"
+      data-testid="modifier-button:badge"
     >
       12
     </span>
@@ -207,6 +219,7 @@ exports[`<ModifierButton /> should render count 2`] = `
 <ForwardRef(ModifierButton)>
   <div
     className="modifier-button"
+    data-testid="modifier-button"
   >
     <div
       className="content"
@@ -225,9 +238,11 @@ exports[`<ModifierButton /> should render count 3`] = `
 >
   <div
     className="modifier-button"
+    data-testid="modifier-button"
   >
     <span
       className="label with-count"
+      data-testid="modifier-button:badge"
     >
       99+
     </span>
@@ -249,9 +264,11 @@ exports[`<ModifierButton /> should render markdown and count 1`] = `
 >
   <div
     className="modifier-button"
+    data-testid="modifier-button"
   >
     <span
       className="label with-count"
+      data-testid="modifier-button:badge"
     >
       99+
       (У)
@@ -273,9 +290,11 @@ exports[`<ModifierButton /> should render markdown and count 2`] = `
 >
   <div
     className="modifier-button"
+    data-testid="modifier-button"
   >
     <span
       className="label"
+      data-testid="modifier-button:badge"
     >
       У
     </span>
@@ -294,6 +313,7 @@ exports[`<ModifierButton /> should render without props 1`] = `
 <ForwardRef(ModifierButton)>
   <div
     className="modifier-button"
+    data-testid="modifier-button"
   >
     <div
       className="content"

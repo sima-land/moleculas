@@ -18,6 +18,7 @@ export interface ModifierButtonProps extends Modifier {
   onClick?: React.MouseEventHandler<HTMLDivElement>
   squared?: boolean
   selected?: boolean
+  'data-testid'?: string
 }
 
 const cx = classnames.bind(classes);
@@ -25,20 +26,7 @@ const cx = classnames.bind(classes);
 const typesList = Object.values(TYPES);
 
 /**
- * Возвращает компонент модификатора.
- * @param props Свойства компонента.
- * @param props.count Количество компонента.
- * @param props.content Содержимое модификатора.
- * @param props.image URL изображения модификатора.
- * @param props.type Тип содержимого модификатора.
- * @param props.selected Выбран ли модификатор.
- * @param props.color Цвет модификатора.
- * @param props.className Дополнительный CSS-класс.
- * @param props.onClick Сработает при клике на модификатор.
- * @param props.isMarkdown Имеет ли товар уценку.
- * @param props.squared Должна ли быть кнопка квадратной.
- * @param ref Реф.
- * @return Элемент.
+ * Компонент модификатора.
  */
 export const ModifierButton = forwardRef<HTMLDivElement | null, ModifierButtonProps>(function ModifierButton ({
   count = null,
@@ -51,6 +39,7 @@ export const ModifierButton = forwardRef<HTMLDivElement | null, ModifierButtonPr
   onClick,
   isMarkdown: hasMarkdown,
   squared = [TYPES.color, TYPES.image].includes(typeProp),
+  'data-testid': testId = 'modifier-button',
 }, ref) {
   const type = typesList.includes(typeProp) ? typeProp : 'text';
   const hasCount = isNumber(count) && count >= 0;
@@ -66,6 +55,7 @@ export const ModifierButton = forwardRef<HTMLDivElement | null, ModifierButtonPr
       )}
       style={color ? { background: color } : undefined}
       onClick={onClick}
+      data-testid={testId}
     >
       {/* label */}
       {(hasCount || hasMarkdown) && (
@@ -74,6 +64,7 @@ export const ModifierButton = forwardRef<HTMLDivElement | null, ModifierButtonPr
             'label',
             hasCount && 'with-count'
           )}
+          data-testid='modifier-button:badge'
         >
           {hasCount && ((count as any) > 99 ? '99+' : count)}
           {hasMarkdown && (hasCount ? '(У)' : 'У')}
