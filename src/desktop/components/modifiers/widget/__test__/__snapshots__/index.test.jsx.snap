@@ -34,6 +34,7 @@ exports[`<ModifiersWidget /> should renders correctly with prop 1`] = `
     >
       <div
         className="modifiers-group height-limited"
+        data-testid="data-tetsid"
       >
         <ForwardRef(ModifierButton)
           className="guttered"
@@ -42,6 +43,7 @@ exports[`<ModifiersWidget /> should renders correctly with prop 1`] = `
         >
           <div
             className="modifier-button guttered"
+            data-testid="modifier-button"
             onClick={[Function]}
           >
             <div
@@ -56,11 +58,13 @@ exports[`<ModifiersWidget /> should renders correctly with prop 1`] = `
         <ForwardRef(ModifierButton)
           className="show-all-button guttered invisible"
           content="+1"
+          data-testid="modifier-group:show-all-button"
           onClick={[Function]}
           squared={true}
         >
           <div
             className="modifier-button squared show-all-button guttered invisible"
+            data-testid="modifier-group:show-all-button"
             onClick={[Function]}
           >
             <div

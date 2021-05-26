@@ -138,6 +138,7 @@ exports[`<ItemPrice /> should render with props 1`] = `
                     >
                       <span
                         className="root item"
+                        data-testid="badge"
                         link="/sale/?is_label=1"
                         style={
                           Object {

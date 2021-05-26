@@ -13,6 +13,7 @@ export interface Sibling {
   url: string
   [key: string]: any
 }
+
 export interface Breadcrumb extends Sibling {
   siblings?: {
     state: 'initial' | 'fetching' | 'ready'
@@ -61,12 +62,10 @@ const Breadcrumb = ({
   data,
   onSiblingsPopupOpen,
   isSiblingActive,
-  'data-testid': testId = 'breadcrumb',
 }: {
   data: Breadcrumb
   isSiblingActive: (sibling: Breadcrumb) => boolean
   onSiblingsPopupOpen: () => void
-  'data-testid'?: string
 }) => {
   const popupRef = useRef<HTMLDivElement>(null);
 
@@ -81,7 +80,7 @@ const Breadcrumb = ({
   useOutsideClick(popupRef, () => togglePopup(false));
 
   return (
-    <div data-testid={testId} className={cx('breadcrumb')}>
+    <div data-testid='breadcrumb' className={cx('breadcrumb')}>
       {selfName}
 
       {data.siblings && (

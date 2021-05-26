@@ -3,6 +3,7 @@
 exports[`<ModifiersGroup /> should match snapshot 1`] = `
 <div
   className="modifiers-group height-limited"
+  data-testid="data-tetsid"
 >
   <ForwardRef(ModifierButton)
     className="guttered"
@@ -54,6 +55,7 @@ exports[`<ModifiersGroup /> should match snapshot 1`] = `
   <ForwardRef(ModifierButton)
     className="show-all-button guttered invisible"
     content="+5"
+    data-testid="modifier-group:show-all-button"
     onClick={[Function]}
     squared={true}
   />

@@ -25,6 +25,7 @@ export interface ModifiersGroupProps {
   getItemImage?: ModifierPredicate<string>
   isMarkdown?: ModifierPredicate<boolean>
   onClickShowAll?: () => void
+  'data-tetsid'?: string
 }
 
 const cx = classnames.bind(classes);
@@ -189,13 +190,18 @@ export class ModifiersGroup extends Component<ModifiersGroupProps, State> {
       isSelectedItem = defaultIsSelectedItem,
       getItemImage = defaultGetItemImage,
       isMarkdown = defaultGetIsMarkdown,
+      'data-tetsid': testId = 'data-tetsid',
     } = this.props;
 
     const { needShowAll, hasHiddenNodes, lastVisibleChildIndex } = this.state;
     const needHideModifiers = !needShowAll && lastVisibleChildIndex !== null;
 
     return (
-      <div className={cx('modifiers-group', !needShowAll && 'height-limited')} ref={this.containerRef}>
+      <div
+        className={cx('modifiers-group', !needShowAll && 'height-limited')}
+        ref={this.containerRef}
+        data-testid={testId}
+      >
         {Array.isArray(items) && items.map((item, index) => {
           const isDisplayed = !needHideModifiers || index < (lastVisibleChildIndex as any);
 
@@ -222,6 +228,7 @@ export class ModifiersGroup extends Component<ModifiersGroupProps, State> {
             content={`+${items.length - (lastVisibleChildIndex as any)}`}
             className={cx('show-all-button', 'guttered', lastVisibleChildIndex === null && 'invisible')}
             onClick={this.handleShowAllClick}
+            data-testid='modifier-group:show-all-button'
           />
         )}
       </div>
