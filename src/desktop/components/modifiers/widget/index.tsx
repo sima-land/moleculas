@@ -44,7 +44,7 @@ export const ModifiersWidget = ({
       getItemContent={prop('name')}
       getItemCount={prop('inCartQty')}
       onSelectItem={(item, selected) => {
-        selected && onSelectItem && onSelectItem(item);
+        !selected && onSelectItem && onSelectItem(item);
       }}
     />
 

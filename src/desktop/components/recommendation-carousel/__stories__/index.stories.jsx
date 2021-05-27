@@ -2,7 +2,7 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { RecommendationCarousel } from '..';
 import { Box } from '@dev-dep/ui-nucleons/box';
-import { items } from '../../../../common/__fixtures__/recommendation-carousel';
+import { items } from '../__test__/test-items';
 
 export default {
   title: 'desktop/RecommendationCarousel',

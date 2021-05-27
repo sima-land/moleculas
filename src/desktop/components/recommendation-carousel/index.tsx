@@ -95,8 +95,8 @@ export const RecommendationCarousel = ({
               top: `${itemWidth / 2}px`,
             },
           }}
-          renderItem={(item: CarouselItem, key) => (
-            <div key={key}
+          renderItem={(item: CarouselItem) => (
+            <div
               data-testid='reco-item'
               className={cx('item', getSizeClasses(itemSize))}
               onMouseEnter={e => {

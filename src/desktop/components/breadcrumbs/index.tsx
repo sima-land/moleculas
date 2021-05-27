@@ -10,7 +10,7 @@ import DownSVG from './square-arrow-down.svg';
 
 export interface Sibling {
   name: string
-  url: string
+  url?: string
   [key: string]: any
 }
 
