@@ -11,13 +11,13 @@ export interface Modifier {
   image?: string
   type?: 'text' | 'image'
   isMarkdown?: boolean
+  selected?: boolean
 }
 
 export interface ModifierButtonProps extends Modifier {
   className?: string
   onClick?: React.MouseEventHandler<HTMLDivElement>
   squared?: boolean
-  selected?: boolean
   'data-testid'?: string
 }
 
