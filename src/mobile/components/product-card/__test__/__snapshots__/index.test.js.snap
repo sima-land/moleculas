@@ -261,3 +261,233 @@ exports[`ProductCard renders properly 1`] = `
   </div>
 </ProductCard>
 `;
+
+exports[`ProductCard renders properly without heart 1`] = `
+<ProductCard
+  commonPrice={50}
+  count={23}
+  currencyGrapheme="₽"
+  deliveryCost={10}
+  flags={Array []}
+  imageUrl="https://cdn3.static1-sima-land.com/items/29455/1/140.jpg?v=1598850721"
+  initialCount={42}
+  isFetchingWishItems={[Function]}
+  isWished={true}
+  itemPrice={5}
+  itemUrl="test"
+  movedOrderId={123456}
+  name="Зеленый слоник 25мм МИКС"
+  notInStock={true}
+  onActionsClick={[Function]}
+  onWishButtonClick={null}
+  sid={123}
+  unit="шт."
+>
+  <div
+    className="wrapper"
+  >
+    <div
+      className="image-wrapper"
+    >
+      <ForwardRef(Link)
+        href="test"
+      >
+        <a
+          className="link color__brand-blue hover-color__brand-deep-blue"
+          href="test"
+        >
+          <img
+            className="image"
+            src="https://cdn3.static1-sima-land.com/items/29455/1/140.jpg?v=1598850721"
+          />
+        </a>
+      </ForwardRef(Link)>
+    </div>
+    <div
+      className="info-column"
+    >
+      <ForwardRef(Link)
+        className="link"
+        color="gray87"
+        href="test"
+      >
+        <a
+          className="link link color__gray87 hover-color__gray54"
+          href="test"
+        >
+          <ForwardRef(Text)
+            weight={500}
+          >
+            <span
+              className="weight-500"
+            >
+              Зеленый слоник 25мм МИКС
+            </span>
+          </ForwardRef(Text)>
+        </a>
+      </ForwardRef(Link)>
+      <Box
+        marginTop={2}
+      >
+        <div
+          className="M-t__2"
+        >
+          <ForwardRef(Text)
+            color="gray38"
+          >
+            <span
+              className="color__gray38"
+            >
+              Арт.: 
+              123
+            </span>
+          </ForwardRef(Text)>
+        </div>
+      </Box>
+      <Box
+        marginTop={2}
+      >
+        <div
+          className="M-t__2"
+        >
+          <ForwardRef(Text)
+            element="div"
+            size={12}
+          >
+            <div
+              className="size-12 line-height-16"
+            >
+              <div>
+                Было в заказе: 42 шт.
+              </div>
+              <div>
+                Вы получите: 23 шт.
+              </div>
+            </div>
+          </ForwardRef(Text)>
+        </div>
+      </Box>
+      <Box
+        marginTop={2}
+      >
+        <div
+          className="M-t__2"
+        >
+          <ForwardRef(Text)
+            element="div"
+            size={12}
+            weight={500}
+          >
+            <div
+              className="size-12 line-height-16 weight-500"
+            >
+              <Price
+                currencyGrapheme="₽"
+                value={5}
+              >
+                <span
+                  className="root"
+                >
+                  5 ₽
+                </span>
+              </Price>
+               × 23 шт.
+            </div>
+          </ForwardRef(Text)>
+        </div>
+      </Box>
+      <Box
+        marginTop={4}
+      >
+        <div
+          className="M-t__4"
+        >
+          <ForwardRef(Text)
+            element="div"
+            weight={500}
+          >
+            <div
+              className="weight-500"
+            >
+              <Price
+                currencyGrapheme="₽"
+                value={50}
+              >
+                <span
+                  className="root"
+                >
+                  50 ₽
+                </span>
+              </Price>
+            </div>
+          </ForwardRef(Text)>
+        </div>
+      </Box>
+      <Box
+        marginTop={2}
+      >
+        <div
+          className="M-t__2"
+        >
+          <ForwardRef(Text)
+            color="gray38"
+            element="div"
+          >
+            <div
+              className="color__gray38"
+            >
+              Перемещен в заказ
+            </div>
+          </ForwardRef(Text)>
+          <ForwardRef(Link)>
+            <a
+              className="link color__brand-blue hover-color__brand-deep-blue"
+            >
+              №
+              123456
+            </a>
+          </ForwardRef(Link)>
+        </div>
+      </Box>
+      <Box
+        marginTop={2}
+      >
+        <div
+          className="M-t__2"
+        >
+          <ForwardRef(Text)
+            color="gray38"
+            element="div"
+          >
+            <div
+              className="color__gray38"
+            >
+              Нет на складе
+            </div>
+          </ForwardRef(Text)>
+        </div>
+      </Box>
+    </div>
+    <div
+      className="action-button"
+    >
+      <MoreSVG
+        onClick={[Function]}
+      >
+        <svg
+          height={24}
+          onClick={[Function]}
+          viewBox="0 0 24 24"
+          width={24}
+        >
+          <path
+            clipRule="evenodd"
+            d="M16 12c0 1.1.9 2 2 2s2-.9 2-2-.9-2-2-2-2 .9-2 2zM14 12c0-1.1-.9-2-2-2s-2 .9-2 2 .9 2 2 2 2-.9 2-2zM8 12c0-1.1-.9-2-2-2s-2 .9-2 2 .9 2 2 2 2-.9 2-2z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </MoreSVG>
+    </div>
+  </div>
+</ProductCard>
+`;

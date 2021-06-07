@@ -1,5 +1,5 @@
 import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
-import { Primary, Secondary, Thirdy } from './product-card.stories'
+import { Primary, Secondary, Thirdy, WithoutHeart } from './product-card.stories'
 import ProductCard from '../'
 
 <Meta
@@ -30,6 +30,12 @@ export const Template = args => <ProductCard {...args} />;
 
 <Canvas>
   <Story story={Thirdy} />
+</Canvas>
+
+### Без сердца
+
+<Canvas>
+  <Story story={WithoutHeart} />
 </Canvas>
 
 ### Свойства компонента

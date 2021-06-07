@@ -10,6 +10,7 @@ const Template = args => (
 export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
 export const Thirdy = Template.bind({});
+export const WithoutHeart = Template.bind({});
 
 const baseArgs = {
   itemUrl: '/',
@@ -47,4 +48,12 @@ Thirdy.args = {
   commonPrice: 0,
   itemPrice: 0,
   movedOrderId: null,
+};
+
+WithoutHeart.args = {
+  ...baseArgs,
+  commonPrice: 0,
+  itemPrice: 0,
+  movedOrderId: null,
+  onWishButtonClick: null,
 };

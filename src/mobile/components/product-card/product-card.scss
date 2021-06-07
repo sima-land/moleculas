@@ -4,11 +4,6 @@
   display: flex;
   padding: 16px 0;
   font-size: 14px;
-  &:hover {
-    .wish-button {
-      opacity: 1;
-    }
-  }
   &:not(:last-of-type) {
     border-bottom: 1px solid colors.$gray12;
   }
@@ -29,13 +24,9 @@
     max-width: 100%;
   }
   .wish-button {
-    opacity: 0;
     position: absolute;
     right: 10px;
     top: 11px;
-    &.is-wished {
-      opacity: 1;
-    }
   }
 }
 
