@@ -28,4 +28,9 @@ describe('ProductCard', () => {
     const wrapper = mount(<ProductCard {...item} />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('renders properly without heart', () => {
+    const wrapper = mount(<ProductCard {...item} onWishButtonClick={null} />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
