@@ -4,9 +4,9 @@ import { ProductInfo } from './product-info';
 import { HoverCard, HoverCardProps } from './hover-card';
 import { useAllowFlag, useChildWidth, useViewport } from './utils';
 import { useMedia } from '@dev-dep/ui-nucleons/hooks/media';
+import { CarouselItem } from './types';
 import classnames from 'classnames/bind';
 import styles from './recommendation-carousel.scss';
-import { CarouselItem } from './types';
 
 interface ItemSize {
   xs?: 2 | 3 | 4
@@ -26,6 +26,7 @@ export interface RecommendationCarouselProps {
   onItemQuickViewClick?: HoverCardProps['onQuickViewClick']
   onItemSubtract?: HoverCardProps['onSubtract']
   onNeedRequest?: () => void
+  withHoverCard?: boolean
   title?: string
   titleTag?: 'div' | 'header' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 }
@@ -34,11 +35,11 @@ const cx = classnames.bind(styles);
 
 // eslint-disable-next-line require-jsdoc
 const getSizeClasses = (size = {}) => [
-    `size-xs-${(size as any).xs || 4}`,
-    `size-s-${(size as any).s || 3}`,
-    `size-m-${(size as any).m || 2}`,
-    `size-l-${(size as any).l || 2}`,
-    `size-xl-${(size as any).xl || 2}`,
+  `size-xs-${(size as any).xs || 4}`,
+  `size-s-${(size as any).s || 3}`,
+  `size-m-${(size as any).m || 2}`,
+  `size-l-${(size as any).l || 2}`,
+  `size-xl-${(size as any).xl || 2}`,
 ];
 
 /**
@@ -56,6 +57,7 @@ export const RecommendationCarousel = ({
   onItemQuickViewClick,
   onItemSubtract,
   onNeedRequest,
+  withHoverCard,
   title,
   titleTag: Header = 'h2',
 }: RecommendationCarouselProps) => {
@@ -117,7 +119,7 @@ export const RecommendationCarousel = ({
           }}
         />
 
-        {activeItem && (
+        {withHoverCard && activeItem && (
           <HoverCard
             info={activeItem}
             targetRef={targetItemRef}

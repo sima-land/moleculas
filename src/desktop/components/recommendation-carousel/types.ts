@@ -22,5 +22,5 @@ export interface CartItem {
 
 export interface CarouselItem {
   product: Product
-  cart: CartItem
+  cart?: CartItem
 }
