@@ -26,6 +26,20 @@ export const Primary = () => (
       onItemAdd={action('item-add')}
       onItemChange={action('item-change')}
       onItemSubtract={action('item-subtract')}
+      withHoverCard
+    />
+  </Box>
+);
+
+export const NoHoverCard = () => (
+  <Box padding={5}>
+    <RecommendationCarousel
+      title='Рекомендованные товары'
+      items={items}
+      onItemQuickViewClick={action('click:quick-view')}
+      onItemAdd={action('item-add')}
+      onItemChange={action('item-change')}
+      onItemSubtract={action('item-subtract')}
     />
   </Box>
 );

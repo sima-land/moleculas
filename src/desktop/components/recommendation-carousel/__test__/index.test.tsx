@@ -95,6 +95,7 @@ describe('<RecommendationCarousel />', () => {
         items={items}
         itemSize={{ xs: 3 }}
         className='additional-class'
+        withHoverCard
       />
     );
 
@@ -114,6 +115,7 @@ describe('<RecommendationCarousel />', () => {
         items={items}
         itemSize={{ xs: 3 }}
         className='additional-class'
+        withHoverCard
       />
     );
 
@@ -141,6 +143,7 @@ describe('<RecommendationCarousel />', () => {
         titleTag='h1'
         items={items}
         itemSize={{ xs: 3 }}
+        withHoverCard
       />
     );
 
@@ -177,6 +180,7 @@ describe('<RecommendationCarousel />', () => {
 
     const wrapper = mount(
       <RecommendationCarousel
+        withHoverCard
         items={[
           {
             product: {
