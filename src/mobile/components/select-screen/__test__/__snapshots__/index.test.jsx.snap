@@ -334,7 +334,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                         RUB
                         )
                       </div>
-                      <CheckSVG
+                      <ForwardRef(CheckSVG)
                         fill="#212121"
                       >
                         <svg
@@ -349,7 +349,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                             fillRule="evenodd"
                           />
                         </svg>
-                      </CheckSVG>
+                      </ForwardRef(CheckSVG)>
                     </button>
                     <button
                       className="item"
@@ -1193,7 +1193,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                           Кировский
                         </span>
                       </ForwardRef(Text)>
-                      <CheckSVG
+                      <ForwardRef(CheckSVG)
                         fill="#212121"
                       >
                         <svg
@@ -1208,7 +1208,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                             fillRule="evenodd"
                           />
                         </svg>
-                      </CheckSVG>
+                      </ForwardRef(CheckSVG)>
                     </button>
                     <button
                       className="item"

@@ -1,0 +1,114 @@
+@use 'node_modules/@dev-dep/ui-nucleons/colors';
+@use 'node_modules/@dev-dep/ui-nucleons/breakpoints';
+@import 'node_modules/@dev-dep/ui-nucleons/styling/shadows';
+
+.root {
+  background: #fff;
+  border-radius: 8px;
+  transition: transform .2s ease-out, box-shadow .2s ease-out;
+  @extend .shadow-z3;
+  &:hover {
+    transform: translateY(-8px);
+    @extend .shadow-z4;
+    .image {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  padding-top: calc(100% * (488 / 656)); // соотношение сторон по гайдам
+  background: colors.$gray8;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .2s ease-out;
+}
+
+.banner-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 60px;
+  color: colors.$gray76;
+  padding: 24px;
+  @include breakpoints.down('xs') {
+    padding: 16px;
+  }
+}
+
+.info {
+  padding: 16px;
+  color: colors.$gray87;
+}
+
+.header {
+  height: 92px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.subtitle {
+  font-size: 14px;
+  line-height: 20px;
+  color: colors.$gray38;
+  margin-top: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 16px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.timer {
+  display: flex;
+  line-height: 20px;
+  align-items: center;
+}
+
+.timer-svg {
+  fill: currentColor;
+  margin-right: 8px;
+  @include breakpoints.down('xs') {
+    display: none;
+  }
+}
+
+.postfix {
+  margin-left: auto;
+  padding-left: 16px;
+}

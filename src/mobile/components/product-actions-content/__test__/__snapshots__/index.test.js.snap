@@ -11,7 +11,7 @@ exports[`ProductActionsContent renders properly 1`] = `
     Array [
       Object {
         "href": "href",
-        "icon": <StatementSVG />,
+        "icon": <ForwardRef(StatementSVG) />,
         "onClick": [Function],
         "text": "text",
       },
@@ -171,7 +171,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                     <div
                       className="icon-wrapper"
                     >
-                      <StatementSVG>
+                      <ForwardRef(StatementSVG)>
                         <svg
                           height={24}
                           viewBox="0 0 24 24"
@@ -186,7 +186,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                             fillRule="evenodd"
                           />
                         </svg>
-                      </StatementSVG>
+                      </ForwardRef(StatementSVG)>
                     </div>
                     text
                   </a>

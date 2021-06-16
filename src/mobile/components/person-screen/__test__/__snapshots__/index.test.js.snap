@@ -492,7 +492,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
               >
                 <CommunicateLink
                   href="mailto:example@email.com"
-                  icon={<MailSVG />}
+                  icon={<ForwardRef(MailSVG) />}
                   primaryText="example@email.com"
                   secondaryText="Электронная почта"
                 >
@@ -542,7 +542,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                     <div
                       className="icon-circle"
                     >
-                      <MailSVG>
+                      <ForwardRef(MailSVG)>
                         <svg
                           height={24}
                           viewBox="0 0 24 24"
@@ -554,13 +554,13 @@ exports[`<PersonScreen /> should handle props 1`] = `
                             fillRule="evenodd"
                           />
                         </svg>
-                      </MailSVG>
+                      </ForwardRef(MailSVG)>
                     </div>
                   </a>
                 </CommunicateLink>
                 <CommunicateLink
                   href="skype:example@skype.com?chat"
-                  icon={<SkypeSVG />}
+                  icon={<ForwardRef(SkypeSVG) />}
                   primaryText="example@skype.com"
                   secondaryText="Skype"
                 >
@@ -610,7 +610,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                     <div
                       className="icon-circle"
                     >
-                      <SkypeSVG>
+                      <ForwardRef(SkypeSVG)>
                         <svg
                           height={24}
                           viewBox="0 0 24 24"
@@ -638,13 +638,13 @@ exports[`<PersonScreen /> should handle props 1`] = `
                             </clipPath>
                           </defs>
                         </svg>
-                      </SkypeSVG>
+                      </ForwardRef(SkypeSVG)>
                     </div>
                   </a>
                 </CommunicateLink>
                 <CommunicateLink
                   href="tel:88000000000;postd=8823"
-                  icon={<PhoneSVG />}
+                  icon={<ForwardRef(PhoneSVG) />}
                   primaryText="88000000000 доб. 8823"
                   secondaryText="Рабочий"
                 >
@@ -694,7 +694,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                     <div
                       className="icon-circle"
                     >
-                      <PhoneSVG>
+                      <ForwardRef(PhoneSVG)>
                         <svg
                           height={24}
                           viewBox="0 0 24 24"
@@ -706,13 +706,13 @@ exports[`<PersonScreen /> should handle props 1`] = `
                             fillRule="evenodd"
                           />
                         </svg>
-                      </PhoneSVG>
+                      </ForwardRef(PhoneSVG)>
                     </div>
                   </a>
                 </CommunicateLink>
                 <CommunicateLink
                   href="tel:+7900000000"
-                  icon={<MobileSVG />}
+                  icon={<ForwardRef(MobileSVG) />}
                   primaryText="+7 (900) 000 000"
                   secondaryText="Сотовый"
                 >
@@ -762,7 +762,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                     <div
                       className="icon-circle"
                     >
-                      <MobileSVG>
+                      <ForwardRef(MobileSVG)>
                         <svg
                           height={24}
                           viewBox="0 0 24 24"
@@ -774,7 +774,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                             fillRule="evenodd"
                           />
                         </svg>
-                      </MobileSVG>
+                      </ForwardRef(MobileSVG)>
                     </div>
                   </a>
                 </CommunicateLink>
@@ -1144,7 +1144,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                 className="items inner-border-bottom"
               >
                 <CommunicateLink
-                  icon={<PhoneSVG />}
+                  icon={<ForwardRef(PhoneSVG) />}
                   primaryText="88000000000 доб. 8823"
                   secondaryText="Рабочий"
                 >
@@ -1193,7 +1193,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                     <div
                       className="icon-circle"
                     >
-                      <PhoneSVG>
+                      <ForwardRef(PhoneSVG)>
                         <svg
                           height={24}
                           viewBox="0 0 24 24"
@@ -1205,12 +1205,12 @@ exports[`<PersonScreen /> should render with name 1`] = `
                             fillRule="evenodd"
                           />
                         </svg>
-                      </PhoneSVG>
+                      </ForwardRef(PhoneSVG)>
                     </div>
                   </a>
                 </CommunicateLink>
                 <CommunicateLink
-                  icon={<MobileSVG />}
+                  icon={<ForwardRef(MobileSVG) />}
                   primaryText="+7 (900) 000 000"
                   secondaryText="Сотовый"
                 >
@@ -1259,7 +1259,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                     <div
                       className="icon-circle"
                     >
-                      <MobileSVG>
+                      <ForwardRef(MobileSVG)>
                         <svg
                           height={24}
                           viewBox="0 0 24 24"
@@ -1271,7 +1271,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                             fillRule="evenodd"
                           />
                         </svg>
-                      </MobileSVG>
+                      </ForwardRef(MobileSVG)>
                     </div>
                   </a>
                 </CommunicateLink>

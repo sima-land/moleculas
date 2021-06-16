@@ -58,7 +58,7 @@ exports[`<WholesalePrice /> should render with props 1`] = `
         onClick={[Function]}
         role="button"
       >
-        <InformationSVG
+        <ForwardRef(InformationSVG)
           className="svg"
           role="presentation"
         >
@@ -78,7 +78,7 @@ exports[`<WholesalePrice /> should render with props 1`] = `
               fillRule="evenodd"
             />
           </svg>
-        </InformationSVG>
+        </ForwardRef(InformationSVG)>
       </span>
     </div>
   </div>
