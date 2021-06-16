@@ -241,7 +241,7 @@ exports[`ProductCard renders properly 1`] = `
     <div
       className="action-button"
     >
-      <MoreSVG
+      <ForwardRef(MoreSVG)
         onClick={[Function]}
       >
         <svg
@@ -256,7 +256,7 @@ exports[`ProductCard renders properly 1`] = `
             fillRule="evenodd"
           />
         </svg>
-      </MoreSVG>
+      </ForwardRef(MoreSVG)>
     </div>
   </div>
 </ProductCard>
@@ -471,7 +471,7 @@ exports[`ProductCard renders properly without heart 1`] = `
     <div
       className="action-button"
     >
-      <MoreSVG
+      <ForwardRef(MoreSVG)
         onClick={[Function]}
       >
         <svg
@@ -486,7 +486,7 @@ exports[`ProductCard renders properly without heart 1`] = `
             fillRule="evenodd"
           />
         </svg>
-      </MoreSVG>
+      </ForwardRef(MoreSVG)>
     </div>
   </div>
 </ProductCard>

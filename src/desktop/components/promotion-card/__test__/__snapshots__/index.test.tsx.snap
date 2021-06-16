@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PromotionCard /> should handle "promotionType" prop 1`] = `
+<PromotionCard
+  dueDate={2021-01-01T09:00:00.000Z}
+  imageSrc="https://www.images.com/123"
+  promotionType="volume-discount"
+  subtitle="Foo, bar, baz..."
+  title="Hello, world!"
+  volumeDiscount={23}
+>
+  <div
+    className="root"
+  >
+    <a
+      className="link"
+    >
+      <div
+        className="banner"
+      >
+        <img
+          alt="Hello, world!"
+          className="image"
+          src="https://www.images.com/123"
+        />
+        <div
+          className="banner-content"
+        >
+          <BannerTitle
+            dueDate={2021-01-01T09:00:00.000Z}
+            promotionType="volume-discount"
+            volumeDiscount={23}
+          >
+            <div
+              className="discount"
+            >
+              скидки до
+              <div
+                className="percent"
+              >
+                23
+                %
+              </div>
+            </div>
+          </BannerTitle>
+        </div>
+      </div>
+      <div
+        className="info"
+      >
+        <div
+          className="header"
+        >
+          <h4
+            className="title"
+          >
+            Hello, world!
+          </h4>
+          <p
+            className="subtitle"
+          >
+            Foo, bar, baz...
+          </p>
+        </div>
+        <div
+          className="footer"
+        >
+          <time
+            className="timer"
+          >
+            <ForwardRef(WatchSVG)
+              className="timer-svg"
+            >
+              <svg
+                className="timer-svg"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+              >
+                <path
+                  d="M9.778 8H8V6.222a.889.889 0 00-1.778 0V8.89c0 .49.398.889.89.889h2.666a.889.889 0 100-1.778z"
+                />
+                <path
+                  clipRule="evenodd"
+                  d="M8 .889c3.913 0 7.111 3.198 7.111 7.111S11.913 15.111 8 15.111.889 11.913.889 8 4.087.889 8 .889zm0 1.778C5.069 2.667 2.667 5.069 2.667 8S5.069 13.333 8 13.333 13.333 10.931 13.333 8 10.931 2.667 8 2.667z"
+                  fillRule="evenodd"
+                />
+              </svg>
+            </ForwardRef(WatchSVG)>
+            <Estimate
+              dueDate={2021-01-01T09:00:00.000Z}
+            >
+              <Timer
+                date="2021-01-01T09:00:00Z"
+                format={[Function]}
+              >
+                00 : 00 : 00
+              </Timer>
+            </Estimate>
+          </time>
+          <div
+            className="postfix"
+          >
+            Скидка за объём
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</PromotionCard>
+`;
+
+exports[`<PromotionCard /> should renders correctly 1`] = `
+<PromotionCard
+  dueDate={2021-01-01T09:00:00.000Z}
+  imageSrc="https://www.images.com/123"
+  subtitle="Foo, bar, baz..."
+  title="Hello, world!"
+>
+  <div
+    className="root"
+  >
+    <a
+      className="link"
+    >
+      <div
+        className="banner"
+      >
+        <img
+          alt="Hello, world!"
+          className="image"
+          src="https://www.images.com/123"
+        />
+      </div>
+      <div
+        className="info"
+      >
+        <div
+          className="header"
+        >
+          <h4
+            className="title"
+          >
+            Hello, world!
+          </h4>
+          <p
+            className="subtitle"
+          >
+            Foo, bar, baz...
+          </p>
+        </div>
+        <div
+          className="footer"
+        >
+          <time
+            className="timer"
+          >
+            <ForwardRef(WatchSVG)
+              className="timer-svg"
+            >
+              <svg
+                className="timer-svg"
+                height={16}
+                viewBox="0 0 16 16"
+                width={16}
+              >
+                <path
+                  d="M9.778 8H8V6.222a.889.889 0 00-1.778 0V8.89c0 .49.398.889.89.889h2.666a.889.889 0 100-1.778z"
+                />
+                <path
+                  clipRule="evenodd"
+                  d="M8 .889c3.913 0 7.111 3.198 7.111 7.111S11.913 15.111 8 15.111.889 11.913.889 8 4.087.889 8 .889zm0 1.778C5.069 2.667 2.667 5.069 2.667 8S5.069 13.333 8 13.333 13.333 10.931 13.333 8 10.931 2.667 8 2.667z"
+                  fillRule="evenodd"
+                />
+              </svg>
+            </ForwardRef(WatchSVG)>
+            <Estimate
+              dueDate={2021-01-01T09:00:00.000Z}
+            >
+              <Timer
+                date="2021-01-01T09:00:00Z"
+                format={[Function]}
+              >
+                00 : 00 : 00
+              </Timer>
+            </Estimate>
+          </time>
+        </div>
+      </div>
+    </a>
+  </div>
+</PromotionCard>
+`;

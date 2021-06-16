@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Estimate /> should renders correctly 1`] = `
+<Estimate
+  dueDate={2021-01-01T12:00:00.000Z}
+>
+  <Timer
+    date="2021-01-01T12:00:00Z"
+    format={[Function]}
+  >
+    03 : 00 : 00
+  </Timer>
+</Estimate>
+`;
+
+exports[`<Estimate /> should renders correctly 2`] = `
+<Estimate
+  dueDate={2026-01-01T09:00:00.000Z}
+>
+  До 01.00.2026
+</Estimate>
+`;
+
+exports[`<Estimate /> should renders correctly 3`] = `
+<Estimate
+  dueDate={2021-01-08T09:00:00.000Z}
+>
+  До 0 янв
+</Estimate>
+`;

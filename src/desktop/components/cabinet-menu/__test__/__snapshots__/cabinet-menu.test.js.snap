@@ -370,7 +370,7 @@ exports[`<CabinetMenu /> should renders properly w/o user name 1`] = `
         onClick={[MockFunction]}
         role="button"
       >
-        <MailSVG
+        <ForwardRef(MailSVG)
           className="icon"
         >
           <svg
@@ -385,7 +385,7 @@ exports[`<CabinetMenu /> should renders properly w/o user name 1`] = `
               fillRule="evenodd"
             />
           </svg>
-        </MailSVG>
+        </ForwardRef(MailSVG)>
         <div
           className="text"
         >
@@ -770,7 +770,7 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
         onClick={[MockFunction]}
         role="button"
       >
-        <MailSVG
+        <ForwardRef(MailSVG)
           className="icon"
         >
           <svg
@@ -785,7 +785,7 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
               fillRule="evenodd"
             />
           </svg>
-        </MailSVG>
+        </ForwardRef(MailSVG)>
         <div
           className="text"
         >

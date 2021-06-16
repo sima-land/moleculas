@@ -28,7 +28,7 @@ exports[`<ModifierSelect /> should match a snapshot 1`] = `
   <div
     className="arrow"
   >
-    <RightSVG
+    <ForwardRef(RightSVG)
       className="arrow-icon"
       role="presentation"
     />

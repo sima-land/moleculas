@@ -116,7 +116,7 @@ exports[`<ModifierItem /> should render correctly with additionalText and select
     <div
       className="icon"
     >
-      <CheckSVG
+      <ForwardRef(CheckSVG)
         fill="#fff"
         role="presentation"
       />

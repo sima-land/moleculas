@@ -83,7 +83,7 @@ exports[`<ItemModifier /> should render with props 1`] = `
           <div
             className="arrow"
           >
-            <RightSVG
+            <ForwardRef(RightSVG)
               className="arrow-icon"
               role="presentation"
             >
@@ -100,7 +100,7 @@ exports[`<ItemModifier /> should render with props 1`] = `
                   fillRule="evenodd"
                 />
               </svg>
-            </RightSVG>
+            </ForwardRef(RightSVG)>
           </div>
         </div>
       </ModifierSelect>
@@ -183,7 +183,7 @@ exports[`<ItemModifier /> should render with props 2`] = `
           <div
             className="arrow"
           >
-            <RightSVG
+            <ForwardRef(RightSVG)
               className="arrow-icon"
               role="presentation"
             >
@@ -200,7 +200,7 @@ exports[`<ItemModifier /> should render with props 2`] = `
                   fillRule="evenodd"
                 />
               </svg>
-            </RightSVG>
+            </ForwardRef(RightSVG)>
           </div>
         </div>
       </ModifierSelect>
