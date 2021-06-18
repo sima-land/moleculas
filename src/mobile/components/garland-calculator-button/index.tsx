@@ -4,7 +4,7 @@ import { Text } from '@dev-dep/ui-nucleons/text';
 import { Link } from '@dev-dep/ui-nucleons/link';
 import TreeSVG from './tree-in-circle.svg';
 import classnames from 'classnames/bind';
-import styles from './garland-calculator-button.scss';
+import styles from './garland-calculator-button.module.scss';
 
 const cx = classnames.bind(styles);
 

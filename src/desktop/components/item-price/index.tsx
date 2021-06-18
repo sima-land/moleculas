@@ -4,7 +4,7 @@ import { Text } from '@dev-dep/ui-nucleons/text';
 import { Price } from '@dev-dep/ui-nucleons/price';
 import WholesalePrice, { WholesalePriceProps } from '../wholesale-price';
 import classnames from 'classnames/bind';
-import styles from './item-price.scss';
+import styles from './item-price.module.scss';
 import FlagsList, { FlagsListProps } from '../../../common/components/flags-list';
 
 export interface ItemPrice {

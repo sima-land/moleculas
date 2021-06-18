@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Link } from '@dev-dep/ui-nucleons/link';
 import { Price } from '@dev-dep/ui-nucleons/price';
-import classes from './recommended-item.scss';
+import classes from './recommended-item.module.scss';
 import classnames from 'classnames/bind';
 
 const cx = classnames.bind(classes);

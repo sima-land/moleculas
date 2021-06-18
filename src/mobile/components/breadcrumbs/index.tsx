@@ -1,6 +1,6 @@
 import { Link } from '@dev-dep/ui-nucleons/link';
 import React from 'react';
-import styles from './breadcrumbs.scss';
+import styles from './breadcrumbs.module.scss';
 
 export interface BreadcrumbsProps {
   items: {

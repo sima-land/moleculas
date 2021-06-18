@@ -1,6 +1,6 @@
 @use 'node_modules/@dev-dep/ui-nucleons/colors';
 @use 'node_modules/@dev-dep/ui-nucleons/breakpoints';
-@import 'node_modules/@dev-dep/ui-nucleons/styling/shadows';
+@import 'node_modules/@dev-dep/ui-nucleons/styling/shadows.module';
 
 .root {
   background: #fff;

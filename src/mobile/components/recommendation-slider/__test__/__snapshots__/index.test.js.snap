@@ -675,6 +675,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           >
                             <span
                               className="root price"
+                              data-testid="price"
                             >
                               261 ₽
                             </span>
@@ -688,6 +689,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         >
                           <a
                             className="link link color__gray87 hover-color__gray54"
+                            data-testid="anchor"
                             href=""
                             onClick={[Function]}
                           >
@@ -733,6 +735,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           >
                             <span
                               className="root price"
+                              data-testid="price"
                             >
                               322 ₽
                             </span>
@@ -746,6 +749,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         >
                           <a
                             className="link link color__gray87 hover-color__gray54"
+                            data-testid="anchor"
                             href=""
                             onClick={[Function]}
                           >
@@ -829,6 +833,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           >
                             <span
                               className="root price"
+                              data-testid="price"
                             >
                               238 ₽
                             </span>
@@ -842,6 +847,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         >
                           <a
                             className="link link color__gray87 hover-color__gray54"
+                            data-testid="anchor"
                             href=""
                             onClick={[Function]}
                           >
@@ -888,6 +894,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           >
                             <span
                               className="root price"
+                              data-testid="price"
                             >
                               171 ₽
                             </span>
@@ -901,6 +908,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         >
                           <a
                             className="link link color__gray87 hover-color__gray54"
+                            data-testid="anchor"
                             href=""
                             onClick={[Function]}
                           >
@@ -944,6 +952,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           >
                             <span
                               className="root price"
+                              data-testid="price"
                             >
                               483 ₽
                             </span>
@@ -957,6 +966,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         >
                           <a
                             className="link link color__gray87 hover-color__gray54"
+                            data-testid="anchor"
                             href=""
                             onClick={[Function]}
                           >
@@ -1002,6 +1012,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           >
                             <span
                               className="root price"
+                              data-testid="price"
                             >
                               988 ₽
                             </span>
@@ -1015,6 +1026,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         >
                           <a
                             className="link link color__gray87 hover-color__gray54"
+                            data-testid="anchor"
                             href=""
                             onClick={[Function]}
                           >
@@ -1061,6 +1073,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           >
                             <span
                               className="root price"
+                              data-testid="price"
                             >
                               619 ₽
                             </span>
@@ -1074,6 +1087,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         >
                           <a
                             className="link link color__gray87 hover-color__gray54"
+                            data-testid="anchor"
                             href=""
                             onClick={[Function]}
                           >
@@ -1117,6 +1131,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           >
                             <span
                               className="root price"
+                              data-testid="price"
                             >
                               539 ₽
                             </span>
@@ -1129,6 +1144,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           >
                             <span
                               className="root old-price crossed-out"
+                              data-testid="price"
                             >
                               595 ₽
                             </span>
@@ -1142,6 +1158,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         >
                           <a
                             className="link link color__gray87 hover-color__gray54"
+                            data-testid="anchor"
                             href=""
                             onClick={[Function]}
                           >
@@ -1185,6 +1202,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           >
                             <span
                               className="root price"
+                              data-testid="price"
                             >
                               599 ₽
                             </span>
@@ -1197,6 +1215,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           >
                             <span
                               className="root old-price crossed-out"
+                              data-testid="price"
                             >
                               717 ₽
                             </span>
@@ -1210,6 +1229,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         >
                           <a
                             className="link link color__gray87 hover-color__gray54"
+                            data-testid="anchor"
                             href=""
                             onClick={[Function]}
                           >
@@ -1253,6 +1273,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           >
                             <span
                               className="root price"
+                              data-testid="price"
                             >
                               253 ₽
                             </span>
@@ -1266,6 +1287,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                         >
                           <a
                             className="link link color__gray87 hover-color__gray54"
+                            data-testid="anchor"
                             href=""
                             onClick={[Function]}
                           >

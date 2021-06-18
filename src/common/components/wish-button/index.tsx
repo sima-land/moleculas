@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import HeartSVG from '../../icons/heart.svg';
 import HeartFilledSVG from '../../icons/filled-heart.svg';
 import classnames from 'classnames/bind';
-import styles from './wish-button.scss';
+import styles from './wish-button.module.scss';
 
 export interface WishButtonProps extends React.SVGAttributes<SVGSVGElement> {
   checked?: boolean

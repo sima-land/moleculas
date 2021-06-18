@@ -4,7 +4,7 @@ import getDeclination from '@dev-dep/ui-nucleons/helpers/get-declination';
 import { COLORS } from '@dev-dep/ui-nucleons/colors';
 import classnames from 'classnames/bind';
 import StarSVG from '../../../common/icons/filled-rate.svg';
-import styles from './item-rating.scss';
+import styles from './item-rating.module.scss';
 
 export interface ItemRatingProps {
   value?: number

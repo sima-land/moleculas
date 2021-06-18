@@ -82,6 +82,7 @@ exports[`<ProductInfo /> should renders correctly 1`] = `
     >
       <span
         className="root price"
+        data-testid="price"
       >
         225 ₽
       </span>
@@ -94,6 +95,7 @@ exports[`<ProductInfo /> should renders correctly 1`] = `
     >
       <span
         className="root old-price crossed-out"
+        data-testid="price"
       >
         250 ₽
       </span>
@@ -106,6 +108,7 @@ exports[`<ProductInfo /> should renders correctly 1`] = `
   >
     <a
       className="link row link color__gray87 hover-color__gray54"
+      data-testid="anchor"
       href="https://www.sima-land.ru/123456"
     >
       Ножницы портновские, 10, 26 см, цвет чёрный

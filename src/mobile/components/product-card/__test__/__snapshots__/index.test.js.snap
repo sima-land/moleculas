@@ -32,6 +32,7 @@ exports[`ProductCard renders properly 1`] = `
       >
         <a
           className="link color__brand-blue hover-color__brand-deep-blue"
+          data-testid="anchor"
           href="test"
         >
           <img
@@ -83,6 +84,7 @@ exports[`ProductCard renders properly 1`] = `
       >
         <a
           className="link link color__gray87 hover-color__gray54"
+          data-testid="anchor"
           href="test"
         >
           <ForwardRef(Text)
@@ -157,6 +159,7 @@ exports[`ProductCard renders properly 1`] = `
               >
                 <span
                   className="root"
+                  data-testid="price"
                 >
                   5 ₽
                 </span>
@@ -185,6 +188,7 @@ exports[`ProductCard renders properly 1`] = `
               >
                 <span
                   className="root"
+                  data-testid="price"
                 >
                   50 ₽
                 </span>
@@ -212,6 +216,7 @@ exports[`ProductCard renders properly 1`] = `
           <ForwardRef(Link)>
             <a
               className="link color__brand-blue hover-color__brand-deep-blue"
+              data-testid="anchor"
             >
               №
               123456
@@ -294,6 +299,7 @@ exports[`ProductCard renders properly without heart 1`] = `
       >
         <a
           className="link color__brand-blue hover-color__brand-deep-blue"
+          data-testid="anchor"
           href="test"
         >
           <img
@@ -313,6 +319,7 @@ exports[`ProductCard renders properly without heart 1`] = `
       >
         <a
           className="link link color__gray87 hover-color__gray54"
+          data-testid="anchor"
           href="test"
         >
           <ForwardRef(Text)
@@ -387,6 +394,7 @@ exports[`ProductCard renders properly without heart 1`] = `
               >
                 <span
                   className="root"
+                  data-testid="price"
                 >
                   5 ₽
                 </span>
@@ -415,6 +423,7 @@ exports[`ProductCard renders properly without heart 1`] = `
               >
                 <span
                   className="root"
+                  data-testid="price"
                 >
                   50 ₽
                 </span>
@@ -442,6 +451,7 @@ exports[`ProductCard renders properly without heart 1`] = `
           <ForwardRef(Link)>
             <a
               className="link color__brand-blue hover-color__brand-deep-blue"
+              data-testid="anchor"
             >
               №
               123456

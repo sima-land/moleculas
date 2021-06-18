@@ -1,5 +1,5 @@
 @use 'node_modules/@dev-dep/ui-nucleons/colors';
-@import 'node_modules/@dev-dep/ui-nucleons/link/link'; // @todo решить: можно ли использовать стили компонентов таким образом
+@import 'node_modules/@dev-dep/ui-nucleons/link/link.module'; // @todo решить: можно ли использовать стили компонентов таким образом
 
 .wrapper {
   display: inline;

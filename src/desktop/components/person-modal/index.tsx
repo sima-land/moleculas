@@ -4,7 +4,7 @@ import { Box } from '@dev-dep/ui-nucleons/box';
 import { Text } from '@dev-dep/ui-nucleons/text';
 import { Link } from '@dev-dep/ui-nucleons/link';
 import { Clean } from '@dev-dep/ui-nucleons/clean-buttons';
-import classes from './person-card.scss';
+import classes from './person-card.module.scss';
 import classnames from 'classnames/bind';
 import { Modal } from '@dev-dep/ui-nucleons/modal';
 import { useKeyDownHandler } from '../../../common/hooks/use-key-down-handler';
@@ -21,7 +21,7 @@ export interface PersonModalProps {
   secondPhoneHref?: string
   secondPhoneText?: string
   arbitraryLinkProps?: any
-  onClose: (...args: any[]) => void
+  onClose: () => void
 }
 
 const cx = classnames.bind(classes);
@@ -60,11 +60,8 @@ export const PersonModal = ({
   useKeyDownHandler('Escape', onClose);
 
   return (
-    <Modal
-      size='s'
-      withTopBar={false}
-      withScrollDisable={false}
-      children={(
+    <Modal size='s' withScrollDisable={false} onClose={onClose}>
+      <Modal.Body>
         <div className={cx('main')}>
           <Box marginBottom={6}>
             <UserAvatar
@@ -145,14 +142,14 @@ export const PersonModal = ({
             )}
           </div>
         </div>
-      )}
-      footer={(
-        <Clean.Group size='m'>
+      </Modal.Body>
+
+      <Modal.Footer divided>
+        <Clean.Group>
           <Clean.Button onClick={onClose}>Закрыть</Clean.Button>
         </Clean.Group>
-      )}
-      onClose={onClose}
-    />
+      </Modal.Footer>
+    </Modal>
   );
 };
 

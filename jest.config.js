@@ -17,7 +17,10 @@ module.exports = {
     '<rootDir>/.yarn-cache/', '<rootDir>/build/',
   ],
   transform: {
+    // svg заменяем на React-компоненты
     '\\.svg$': '<rootDir>/jest/transforms/svg.js',
+
+    // все что должно заменяться на строку с url
     '\\.(jpg|jpeg|png|gif|eot|otf|ttf|woff|woff2)$': '<rootDir>/jest/transforms/media.js',
   },
   moduleNameMapper: {

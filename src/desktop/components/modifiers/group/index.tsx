@@ -3,7 +3,7 @@ import debounce from 'lodash/debounce';
 import prop from 'lodash/fp/prop';
 import { ModifierButton, ModifierButtonProps, Modifier } from '../button';
 import on from '@dev-dep/ui-nucleons/helpers/on';
-import classes from './modifiers-group.scss';
+import classes from './modifiers-group.module.scss';
 import classnames from 'classnames/bind';
 
 type ModifierPredicate<T> = (item: Modifier) => T;

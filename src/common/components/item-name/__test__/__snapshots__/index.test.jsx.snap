@@ -13,6 +13,7 @@ exports[`<ItemName /> should render with props 1`] = `
     >
       <a
         className="link color__brand-blue hover-color__brand-deep-blue"
+        data-testid="anchor"
         href="#"
       >
         <ForwardRef(Text)>
@@ -40,6 +41,7 @@ exports[`<ItemName /> should render without props 1`] = `
     <ForwardRef(Link)>
       <a
         className="link color__brand-blue hover-color__brand-deep-blue"
+        data-testid="anchor"
       >
         <ForwardRef(Text)>
           <span

@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import styles from './popup-arrow.scss';
+import styles from './popup-arrow.module.scss';
 
 const bindClassNames = classNames.bind(styles);
 

@@ -3,7 +3,7 @@ import { ReactSVG } from 'react-svg';
 import { UserAvatar } from '@dev-dep/ui-nucleons/avatar/user';
 import { Link } from '@dev-dep/ui-nucleons/link';
 import IconMail from '@dev-dep/ui-quarks/icons/24x24/Stroked/mail';
-import classes from './cabinet-menu.scss';
+import classes from './cabinet-menu.module.scss';
 import classnames from 'classnames/bind';
 import { map } from 'lodash';
 

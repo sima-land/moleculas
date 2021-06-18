@@ -3,7 +3,7 @@ import isFunction from 'lodash/isFunction';
 import on from '@dev-dep/ui-nucleons/helpers/on';
 import PositioningPopup from '../__temp__/popups/positioning-popup';
 import classnames from 'classnames/bind';
-import style from './wholesale-price.scss';
+import style from './wholesale-price.module.scss';
 
 export interface WholesaleTextProps {
   description: string

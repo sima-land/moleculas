@@ -4,7 +4,7 @@ import { Stepper } from '@dev-dep/ui-nucleons/stepper';
 import { useCartItemInput } from './utils';
 import SpinnerSVG from '../../../common/icons/white-spinner.svg';
 import classnames from 'classnames/bind';
-import styles from './in-cart-control.scss';
+import styles from './in-cart-control.module.scss';
 
 export interface InCartControlProps {
   canAdd?: boolean
@@ -57,7 +57,7 @@ export const InCartControl = ({
             />
           ) : (
             <Button
-              size='small'
+              size='s'
               className={cx('control', className)}
               onClick={() => !isFetching && onAdd && onAdd()}
             >

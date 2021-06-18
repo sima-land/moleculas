@@ -117,6 +117,7 @@ exports[`<ProductCard /> should renders correctly 1`] = `
         >
           <span
             className="root price"
+            data-testid="price"
           >
             225 ₽
           </span>
@@ -129,6 +130,7 @@ exports[`<ProductCard /> should renders correctly 1`] = `
         >
           <span
             className="root old-price crossed-out"
+            data-testid="price"
           >
             250 ₽
           </span>
@@ -141,6 +143,7 @@ exports[`<ProductCard /> should renders correctly 1`] = `
       >
         <a
           className="link row link color__gray87 hover-color__gray54"
+          data-testid="anchor"
           href="https://www.sima-land.ru/123456"
         >
           Ножницы портновские, 10, 26 см, цвет чёрный
@@ -164,10 +167,11 @@ exports[`<ProductCard /> should renders correctly 1`] = `
         <ForwardRef(Button)
           className="control control"
           onClick={[Function]}
-          size="small"
+          size="s"
         >
           <button
-            className="control control button-base button-primary button-small text-button-small"
+            className="control control button-base button-primary button-s text-button-s"
+            data-testid="button"
             onClick={[Function]}
           >
             В корзину

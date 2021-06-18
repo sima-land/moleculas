@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 import { InCartControl } from '..';
 import { Stepper } from '@dev-dep/ui-nucleons/stepper';
-import Button from '@dev-dep/ui-nucleons/button';
+import { Button } from '@dev-dep/ui-nucleons/button';
 
 describe('<InCartControl />', () => {
   it('should render button', () => {

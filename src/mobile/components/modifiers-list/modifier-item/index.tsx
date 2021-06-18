@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './modifier-item.scss';
+import classes from './modifier-item.module.scss';
 import classnames from 'classnames/bind';
 import { MODIFIERS_TYPES } from '../../../../common/constants';
 import { Price } from '@dev-dep/ui-nucleons/price';

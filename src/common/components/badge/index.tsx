@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames/bind';
 import { Timer } from '@dev-dep/ui-nucleons/timer';
-import styles from './badge.scss';
+import styles from './badge.module.scss';
 
 export interface BadgeField {
   type: 'text' | 'timer' | 'svg-url'

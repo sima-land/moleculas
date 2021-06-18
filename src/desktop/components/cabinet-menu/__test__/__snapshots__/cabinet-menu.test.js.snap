@@ -63,6 +63,7 @@ exports[`<CabinetMenu /> should renders properly w/o user name 1`] = `
       <a
         aria-label="Настройки"
         className="link avatar-wrap color__brand-blue hover-color__brand-deep-blue"
+        data-testid="anchor"
         href="/"
       >
         <UserAvatar
@@ -78,6 +79,7 @@ exports[`<CabinetMenu /> should renders properly w/o user name 1`] = `
           >
             <div
               className="root size-56 color__white"
+              data-testid="avatar"
               style={
                 Object {
                   "--avatar-color": undefined,
@@ -105,6 +107,7 @@ exports[`<CabinetMenu /> should renders properly w/o user name 1`] = `
     >
       <a
         className="link user-info color__brand-blue hover-color__brand-deep-blue"
+        data-testid="anchor"
         href="/"
       >
         <div
@@ -130,6 +133,7 @@ exports[`<CabinetMenu /> should renders properly w/o user name 1`] = `
       >
         <a
           className="link item color__gray38 hover-color__gray54"
+          data-testid="anchor"
           href="/0"
         >
           <ReactSVG
@@ -164,6 +168,7 @@ exports[`<CabinetMenu /> should renders properly w/o user name 1`] = `
       >
         <a
           className="link item active color__gray38 hover-color__gray54"
+          data-testid="anchor"
         >
           <ReactSVG
             afterInjection={[Function]}
@@ -198,6 +203,7 @@ exports[`<CabinetMenu /> should renders properly w/o user name 1`] = `
       >
         <a
           className="link item color__gray38 hover-color__gray54"
+          data-testid="anchor"
           href="/2"
         >
           <ReactSVG
@@ -233,6 +239,7 @@ exports[`<CabinetMenu /> should renders properly w/o user name 1`] = `
       >
         <a
           className="link item color__gray38 hover-color__gray54"
+          data-testid="anchor"
           href="/3"
         >
           <ReactSVG
@@ -268,6 +275,7 @@ exports[`<CabinetMenu /> should renders properly w/o user name 1`] = `
       >
         <a
           className="link item color__gray38 hover-color__gray54"
+          data-testid="anchor"
           href="/4"
         >
           <ReactSVG
@@ -303,6 +311,7 @@ exports[`<CabinetMenu /> should renders properly w/o user name 1`] = `
       >
         <a
           className="link item color__gray38 hover-color__gray54"
+          data-testid="anchor"
           href="/5"
         >
           <ReactSVG
@@ -338,6 +347,7 @@ exports[`<CabinetMenu /> should renders properly w/o user name 1`] = `
       >
         <a
           className="link item color__gray38 hover-color__gray54"
+          data-testid="anchor"
           href="/6"
         >
           <ReactSVG
@@ -461,6 +471,7 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
       <a
         aria-label="Настройки"
         className="link avatar-wrap color__brand-blue hover-color__brand-deep-blue"
+        data-testid="anchor"
         href="/"
       >
         <UserAvatar
@@ -478,6 +489,7 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
           >
             <div
               className="root size-56 color__white"
+              data-testid="avatar"
               style={
                 Object {
                   "--avatar-color": undefined,
@@ -505,6 +517,7 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
     >
       <a
         className="link user-info color__brand-blue hover-color__brand-deep-blue"
+        data-testid="anchor"
         href="/"
       >
         <div
@@ -530,6 +543,7 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
       >
         <a
           className="link item color__gray38 hover-color__gray54"
+          data-testid="anchor"
           href="/0"
         >
           <ReactSVG
@@ -564,6 +578,7 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
       >
         <a
           className="link item active color__gray38 hover-color__gray54"
+          data-testid="anchor"
         >
           <ReactSVG
             afterInjection={[Function]}
@@ -598,6 +613,7 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
       >
         <a
           className="link item color__gray38 hover-color__gray54"
+          data-testid="anchor"
           href="/2"
         >
           <ReactSVG
@@ -633,6 +649,7 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
       >
         <a
           className="link item color__gray38 hover-color__gray54"
+          data-testid="anchor"
           href="/3"
         >
           <ReactSVG
@@ -668,6 +685,7 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
       >
         <a
           className="link item color__gray38 hover-color__gray54"
+          data-testid="anchor"
           href="/4"
         >
           <ReactSVG
@@ -703,6 +721,7 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
       >
         <a
           className="link item color__gray38 hover-color__gray54"
+          data-testid="anchor"
           href="/5"
         >
           <ReactSVG
@@ -738,6 +757,7 @@ exports[`<CabinetMenu /> should renders properly with user name 1`] = `
       >
         <a
           className="link item color__gray38 hover-color__gray54"
+          data-testid="anchor"
           href="/6"
         >
           <ReactSVG

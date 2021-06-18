@@ -2,7 +2,7 @@ import Popup from '../popup';
 import isNumber from 'lodash/isNumber';
 import classnames from 'classnames/bind';
 import PopupArrow from '../popup-arrow';
-import classes from './positioning-popup.scss';
+import classes from './positioning-popup.module.scss';
 import isBrowser from '@dev-dep/ui-nucleons/helpers/is-browser';
 import React, { Component, createRef } from 'react';
 
