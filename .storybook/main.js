@@ -38,8 +38,21 @@ module.exports = {
         ...config.module,
         rules: [
           ...baseRules,
+
+          // regular scss
           {
             test: /\.scss$/,
+            exclude: /\.module\.scss$/,
+            use: [
+              'style-loader',
+              'css-loader',
+              'sass-loader',
+            ],
+          },
+
+          // css-modules
+          {
+            test: /\.module\.(css|scss)$/,
             use: [
               'style-loader',
               {
@@ -52,8 +65,21 @@ module.exports = {
               },
               'sass-loader',
             ],
-            include: path.resolve(__dirname, '../'),
           },
+
+          // svg as react components
+          {
+            test: /\.svg$/,
+            use: [
+              {
+                loader: '@svgr/webpack',
+                options: svgrOptions,
+              },
+            ],
+            include: path.resolve(__dirname, '../'),
+            exclude: /node_modules\/(?!(@dev-dep)).*/,
+          },
+
           {
             test: /\.(woff|woff2|eot|ttf)$/,
             use: [
@@ -65,17 +91,6 @@ module.exports = {
               }
             ],
             include: path.resolve(__dirname, '../'),
-          },
-          {
-            test: /\.svg$/,
-            use: [
-              {
-                loader: '@svgr/webpack',
-                options: svgrOptions,
-              },
-            ],
-            include: path.resolve(__dirname, '../'),
-            exclude: /node_modules\/(?!(@dev-dep)).*/,
           },
         ],
       },

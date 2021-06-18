@@ -35,7 +35,7 @@ exports[`ProductActionsContent renders properly 1`] = `
     }
     title="title"
   >
-    <Layer>
+    <Portal>
       <Portal
         containerInfo={
           <div>
@@ -66,6 +66,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                   >
                     <a
                       class="link button color__gray87 hover-color__gray54"
+                      data-testid="anchor"
                       href="href"
                     >
                       <div
@@ -90,6 +91,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                     </a>
                     <a
                       class="link button color__gray87 hover-color__gray54"
+                      data-testid="anchor"
                       href="href"
                     >
                       <div
@@ -99,6 +101,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                     </a>
                     <a
                       class="link button color__gray87 hover-color__gray54"
+                      data-testid="anchor"
                     >
                       <div
                         class="icon-wrapper"
@@ -114,7 +117,8 @@ exports[`ProductActionsContent renders properly 1`] = `
                     class="clean-group"
                   >
                     <a
-                      class="link clean-button size-m color__brand-blue hover-color__brand-deep-blue"
+                      class="link clean-button color__brand-blue hover-color__brand-deep-blue"
+                      data-testid="anchor"
                     >
                       Закрыть
                     </a>
@@ -165,6 +169,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                 >
                   <a
                     className="link button color__gray87 hover-color__gray54"
+                    data-testid="anchor"
                     href="href"
                     onClick={[Function]}
                   >
@@ -199,6 +204,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                 >
                   <a
                     className="link button color__gray87 hover-color__gray54"
+                    data-testid="anchor"
                     href="href"
                   >
                     <div
@@ -214,6 +220,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                 >
                   <a
                     className="link button color__gray87 hover-color__gray54"
+                    data-testid="anchor"
                   >
                     <div
                       className="icon-wrapper"
@@ -232,14 +239,14 @@ exports[`ProductActionsContent renders properly 1`] = `
                 >
                   <CleanButton
                     key=".0"
-                    size="m"
                   >
                     <ForwardRef(Link)
-                      className="clean-button size-m"
+                      className="clean-button"
                       pseudo={false}
                     >
                       <a
-                        className="link clean-button size-m color__brand-blue hover-color__brand-deep-blue"
+                        className="link clean-button color__brand-blue hover-color__brand-deep-blue"
+                        data-testid="anchor"
                       >
                         Закрыть
                       </a>
@@ -251,7 +258,7 @@ exports[`ProductActionsContent renders properly 1`] = `
           </div>
         </div>
       </Portal>
-    </Layer>
+    </Portal>
   </Alert>
 </ProductActionsAlert>
 `;

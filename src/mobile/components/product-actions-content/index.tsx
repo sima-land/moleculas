@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from '@dev-dep/ui-nucleons/link';
 import { Alert, Props as AlertProps } from '@dev-dep/ui-nucleons/alert';
 import { Clean } from '@dev-dep/ui-nucleons/clean-buttons';
-import styles from './product-actions-content.scss';
+import styles from './product-actions-content.module.scss';
 import classnames from 'classnames/bind';
 
 const cx = classnames.bind(styles);

@@ -5,7 +5,7 @@ import { Link } from '@dev-dep/ui-nucleons/link';
 import { times } from 'lodash';
 import { useOutsideClick } from '@dev-dep/ui-nucleons/hooks';
 import classnames from 'classnames/bind';
-import styles from './breadcrumbs.scss';
+import styles from './breadcrumbs.module.scss';
 import DownSVG from './square-arrow-down.svg';
 
 export interface Sibling {

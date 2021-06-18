@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import isNumber from 'lodash/isNumber';
-import classes from './modifier-button.scss';
+import classes from './modifier-button.module.scss';
 import classnames from 'classnames/bind';
 import { MODIFIERS_TYPES as TYPES } from '../../../../common/constants';
 

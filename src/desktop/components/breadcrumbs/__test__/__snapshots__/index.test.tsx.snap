@@ -184,6 +184,7 @@ exports[`<Breadcrumbs /> should renders correctly 1`] = `
         >
           <a
             className="link color__gray87 hover-color__gray54"
+            data-testid="anchor"
             href="/root_path"
           >
             Root
@@ -246,6 +247,7 @@ exports[`<Breadcrumbs /> should renders correctly 1`] = `
         >
           <a
             className="link color__gray87 hover-color__gray54"
+            data-testid="anchor"
             href="/first_level_path"
           >
             First Level
@@ -353,6 +355,7 @@ exports[`<Breadcrumbs /> should renders correctly 1`] = `
         >
           <a
             className="link color__gray87 hover-color__gray54"
+            data-testid="anchor"
             href="/second_level_path"
           >
             Second Level very long title here
@@ -460,6 +463,7 @@ exports[`<Breadcrumbs /> should renders correctly 1`] = `
         >
           <a
             className="link color__gray87 hover-color__gray54"
+            data-testid="anchor"
             href="/third_level_path"
           >
             Third Level
@@ -587,6 +591,7 @@ exports[`<Breadcrumbs /> should renders correctly 1`] = `
         >
           <a
             className="link color__gray87 hover-color__gray54"
+            data-testid="anchor"
             href="/first_level_path"
           >
             Fourth Level
@@ -694,6 +699,7 @@ exports[`<Breadcrumbs /> should renders correctly 1`] = `
         >
           <a
             className="link color__gray87 hover-color__gray54"
+            data-testid="anchor"
             href="/fifth_level_path"
           >
             Fifth Level
@@ -801,6 +807,7 @@ exports[`<Breadcrumbs /> should renders correctly 1`] = `
         >
           <a
             className="link color__gray87 hover-color__gray54"
+            data-testid="anchor"
             href="/sixth_level_path"
           >
             Sixth Level

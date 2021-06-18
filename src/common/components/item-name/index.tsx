@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-import styles from './item-name.scss';
+import styles from './item-name.module.scss';
 import { Link } from '@dev-dep/ui-nucleons/link';
 import { Text, Props as TextProps } from '@dev-dep/ui-nucleons/text';
 

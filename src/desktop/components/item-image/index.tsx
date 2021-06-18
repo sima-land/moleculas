@@ -2,7 +2,7 @@ import React, { Component, createRef } from 'react';
 import { Link } from '@dev-dep/ui-nucleons/link';
 import classnames from 'classnames/bind';
 import isFunction from 'lodash/isFunction';
-import style from './item-image.scss';
+import style from './item-image.module.scss';
 import FlagsList from '../../../common/components/flags-list';
 import EighteenPlusSVG from '../../../common/icons/eighteen-plus.svg';
 import SelectedSVG from '../../../common/icons/selected.svg';

@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import styles from './popup.scss';
+import styles from './popup.module.scss';
 import classnames from 'classnames';
 
 /**

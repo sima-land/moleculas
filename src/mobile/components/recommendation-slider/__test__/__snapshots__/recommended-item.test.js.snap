@@ -32,6 +32,7 @@ exports[`<RecommendedItem /> render with props should correct render with all pr
       >
         <span
           className="root price"
+          data-testid="price"
         >
           135,40 $
         </span>
@@ -44,6 +45,7 @@ exports[`<RecommendedItem /> render with props should correct render with all pr
       >
         <span
           className="root old-price crossed-out"
+          data-testid="price"
         >
           234,90 $
         </span>
@@ -56,6 +58,7 @@ exports[`<RecommendedItem /> render with props should correct render with all pr
     >
       <a
         className="link link color__gray87 hover-color__gray54"
+        data-testid="anchor"
         href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
       >
         Милая картина из шерсти Schrodinger cat, А5
@@ -96,6 +99,7 @@ exports[`<RecommendedItem /> render with props should correct render without old
       >
         <span
           className="root price"
+          data-testid="price"
         >
           135,40 $
         </span>
@@ -108,6 +112,7 @@ exports[`<RecommendedItem /> render with props should correct render without old
     >
       <a
         className="link link color__gray87 hover-color__gray54"
+        data-testid="anchor"
         href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
       >
         Милая картина из шерсти Schrodinger cat, А5

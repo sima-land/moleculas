@@ -1,5 +1,4 @@
 import React from 'react';
-import isFunction from 'lodash/isFunction';
 import map from 'lodash/map';
 import noop from 'lodash/noop';
 import prop from 'lodash/fp/prop';
@@ -8,7 +7,7 @@ import { Text } from '@dev-dep/ui-nucleons/text';
 import { COLORS } from '@dev-dep/ui-nucleons/colors';
 import { MobileLayout } from '@dev-dep/ui-nucleons/layout';
 import CheckSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/check';
-import styles from './select-screen.scss';
+import styles from './select-screen.module.scss';
 
 export interface SelectScreenProps {
   items?: any[]
@@ -46,7 +45,7 @@ const SelectScreen = ({
             <button
               key={index}
               className={styles.item}
-              onClick={() => isFunction(onItemClick) && onItemClick(item)}
+              onClick={() => onItemClick && onItemClick(item)}
             >
               {displayItem(item, { getItemName, isSelected })}
               {isSelected && (

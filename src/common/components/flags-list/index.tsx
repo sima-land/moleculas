@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './flags-list.scss';
+import classes from './flags-list.module.scss';
 import classnames from 'classnames/bind';
 import { Badge, BadgeProps } from '../badge';
 

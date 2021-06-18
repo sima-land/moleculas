@@ -20,12 +20,13 @@ exports[`<PersonScreen /> should handle props 1`] = `
   <Screen
     withDivideHeader={false}
   >
-    <Layer>
+    <Portal>
       <Portal
         containerInfo={
           <div>
             <div
               class="screen full-width"
+              style="z-index: 300;"
             >
               <div
                 class="nav-bar"
@@ -84,6 +85,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                 >
                   <div
                     class="root size-64 color__white"
+                    data-testid="avatar"
                     style="--avatar-color: #d50000; --avatar-color-opacity: 0.48;"
                   >
                     <span
@@ -98,6 +100,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                 >
                   <div
                     class="root size-104 color__white"
+                    data-testid="avatar"
                     style="--avatar-color: #d50000; --avatar-color-opacity: 0.48;"
                   >
                     <span
@@ -306,6 +309,11 @@ exports[`<PersonScreen /> should handle props 1`] = `
       >
         <div
           className="screen full-width"
+          style={
+            Object {
+              "zIndex": 300,
+            }
+          }
         >
           <ScreenLayout
             childrenRef={[Function]}
@@ -419,6 +427,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                   >
                     <div
                       className="root size-64 color__white"
+                      data-testid="avatar"
                       style={
                         Object {
                           "--avatar-color": "#d50000",
@@ -451,6 +460,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                   >
                     <div
                       className="root size-104 color__white"
+                      data-testid="avatar"
                       style={
                         Object {
                           "--avatar-color": "#d50000",
@@ -783,7 +793,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
           </ScreenLayout>
         </div>
       </Portal>
-    </Layer>
+    </Portal>
   </Screen>
 </PersonScreen>
 `;
@@ -797,12 +807,13 @@ exports[`<PersonScreen /> should render with name 1`] = `
   <Screen
     withDivideHeader={false}
   >
-    <Layer>
+    <Portal>
       <Portal
         containerInfo={
           <div>
             <div
               class="screen full-width"
+              style="z-index: 300;"
             >
               <div
                 class="nav-bar"
@@ -861,6 +872,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                 >
                   <div
                     class="root size-64 color__white"
+                    data-testid="avatar"
                     style="--avatar-color: #d50000; --avatar-color-opacity: 0.48;"
                   >
                     <span
@@ -875,6 +887,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                 >
                   <div
                     class="root size-104 color__white"
+                    data-testid="avatar"
                     style="--avatar-color: #d50000; --avatar-color-opacity: 0.48;"
                   >
                     <span
@@ -974,6 +987,11 @@ exports[`<PersonScreen /> should render with name 1`] = `
       >
         <div
           className="screen full-width"
+          style={
+            Object {
+              "zIndex": 300,
+            }
+          }
         >
           <ScreenLayout
             childrenRef={[Function]}
@@ -1087,6 +1105,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                   >
                     <div
                       className="root size-64 color__white"
+                      data-testid="avatar"
                       style={
                         Object {
                           "--avatar-color": "#d50000",
@@ -1119,6 +1138,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                   >
                     <div
                       className="root size-104 color__white"
+                      data-testid="avatar"
                       style={
                         Object {
                           "--avatar-color": "#d50000",
@@ -1280,7 +1300,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
           </ScreenLayout>
         </div>
       </Portal>
-    </Layer>
+    </Portal>
   </Screen>
 </PersonScreen>
 `;

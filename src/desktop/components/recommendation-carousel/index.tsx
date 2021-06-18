@@ -6,7 +6,7 @@ import { useAllowFlag, useChildWidth, useViewport } from './utils';
 import { useMedia } from '@dev-dep/ui-nucleons/hooks/media';
 import { CarouselItem } from './types';
 import classnames from 'classnames/bind';
-import styles from './recommendation-carousel.scss';
+import styles from './recommendation-carousel.module.scss';
 
 interface ItemSize {
   xs?: 2 | 3 | 4

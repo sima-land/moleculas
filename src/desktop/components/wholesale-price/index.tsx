@@ -3,7 +3,7 @@ import { Box } from '@dev-dep/ui-nucleons/box';
 import { Price } from '@dev-dep/ui-nucleons/price';
 import { Text } from '@dev-dep/ui-nucleons/text';
 import classnames from 'classnames/bind';
-import style from './wholesale-price.scss';
+import style from './wholesale-price.module.scss';
 import WholesaleText, { WholesaleTextProps } from './wholesale-text';
 
 export interface WholesalePriceProps {

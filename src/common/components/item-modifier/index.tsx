@@ -3,7 +3,7 @@ import { Box } from '@dev-dep/ui-nucleons/box';
 import { Text } from '@dev-dep/ui-nucleons/text';
 import ModifierSelect from '../modifier-select';
 import classnames from 'classnames/bind';
-import styles from './item-modifier.scss';
+import styles from './item-modifier.module.scss';
 
 export interface ItemModifierProps {
   layout?: 'block' | 'inline'

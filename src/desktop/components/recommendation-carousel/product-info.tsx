@@ -4,7 +4,7 @@ import { Price } from '@dev-dep/ui-nucleons/price';
 import { Image } from '../../../common/components/image';
 import { Badge } from '../../../common/components/badge';
 import classnames from 'classnames/bind';
-import styles from './product-info.scss';
+import styles from './product-info.module.scss';
 import { QuickViewButton } from '../../../common/components/quick-view-button';
 import withPrevent from '@dev-dep/ui-nucleons/helpers/with-prevent';
 import { WithHint } from '@dev-dep/ui-nucleons/with-hint';

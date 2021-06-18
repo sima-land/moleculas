@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './modifier-select.scss';
+import classes from './modifier-select.module.scss';
 import classnames from 'classnames/bind';
 import RightSVG from '@dev-dep/ui-quarks/icons/16x16/Stroked/Arrows/right';
 

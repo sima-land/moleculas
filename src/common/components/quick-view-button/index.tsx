@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import classnames from 'classnames/bind';
 import QuickViewSVG from '../../icons/quick-view.svg';
-import styles from './quick-view-button.scss';
+import styles from './quick-view-button.module.scss';
 
 export type QuickViewButtonProps = React.SVGAttributes<SVGSVGElement>;
 

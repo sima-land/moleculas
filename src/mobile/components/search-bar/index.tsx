@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, forwardRef } from 'react';
 import classnames from 'classnames/bind';
-import classes from './search-bar.scss';
+import classes from './search-bar.module.scss';
 import { isFunction, throttle } from 'lodash';
 import { Link } from '@dev-dep/ui-nucleons/link';
 import { COLORS, Token } from '@dev-dep/ui-nucleons/colors';

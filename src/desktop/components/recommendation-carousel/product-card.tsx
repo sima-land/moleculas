@@ -4,7 +4,7 @@ import { MediumRounds as Rounds } from '@dev-dep/ui-nucleons/styling/shapes';
 import { ProductInfo, ProductInfoProps } from './product-info';
 import { InCartControl, InCartControlProps } from '../../../common/components/in-cart-control';
 import classnames from 'classnames/bind';
-import styles from './product-card.scss';
+import styles from './product-card.module.scss';
 import { CartItem } from './types';
 
 export interface ProductCardProps extends React.HTMLAttributes<HTMLDivElement> {

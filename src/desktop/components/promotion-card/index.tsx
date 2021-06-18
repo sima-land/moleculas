@@ -4,7 +4,7 @@ import { BannerTitle } from './banner-title';
 import { Estimate } from './estimate';
 import WatchSVG from '@dev-dep/ui-quarks/icons/16x16/Stroked/watch';
 import classNames from 'classnames';
-import styles from './index.m.scss';
+import styles from './index.m.module.scss';
 
 export interface PromotionCardProps extends React.HTMLAttributes<HTMLDivElement> {
   href?: string

@@ -5,7 +5,7 @@ import prop from 'lodash/fp/prop';
 import { Link } from '@dev-dep/ui-nucleons/link';
 import { Modifier } from '../button';
 import classnames from 'classnames/bind';
-import styles from './modifiers-widget.scss';
+import styles from './modifiers-widget.module.scss';
 
 export interface ModifiersWidgetProps {
   title?: string

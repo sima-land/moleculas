@@ -38,12 +38,13 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
     title="Валюта"
     withDivideHeader={false}
   >
-    <Layer>
+    <Portal>
       <Portal
         containerInfo={
           <div>
             <div
               class="screen full-width"
+              style="z-index: 300;"
             >
               <div
                 class="nav-bar"
@@ -202,6 +203,11 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
       >
         <div
           className="screen full-width"
+          style={
+            Object {
+              "zIndex": 300,
+            }
+          }
         >
           <ScreenLayout
             childrenRef={[Function]}
@@ -428,7 +434,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
           </ScreenLayout>
         </div>
       </Portal>
-    </Layer>
+    </Portal>
   </Screen>
 </SelectScreen>
 `;
@@ -463,12 +469,13 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
     title="Валюта"
     withDivideHeader={false}
   >
-    <Layer>
+    <Portal>
       <Portal
         containerInfo={
           <div>
             <div
               class="screen full-width"
+              style="z-index: 300;"
             >
               <div
                 class="nav-bar"
@@ -597,6 +604,11 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
       >
         <div
           className="screen full-width"
+          style={
+            Object {
+              "zIndex": 300,
+            }
+          }
         >
           <ScreenLayout
             childrenRef={[Function]}
@@ -825,7 +837,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
           </ScreenLayout>
         </div>
       </Portal>
-    </Layer>
+    </Portal>
   </Screen>
 </SelectScreen>
 `;
@@ -852,12 +864,13 @@ exports[`<SelectScreen /> should handle props 1`] = `
     title="Районы"
     withDivideHeader={false}
   >
-    <Layer>
+    <Portal>
       <Portal
         containerInfo={
           <div>
             <div
               class="screen full-width"
+              style="z-index: 300;"
             >
               <div
                 class="nav-bar"
@@ -1007,6 +1020,11 @@ exports[`<SelectScreen /> should handle props 1`] = `
       >
         <div
           className="screen full-width"
+          style={
+            Object {
+              "zIndex": 300,
+            }
+          }
         >
           <ScreenLayout
             childrenRef={[Function]}
@@ -1268,7 +1286,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
           </ScreenLayout>
         </div>
       </Portal>
-    </Layer>
+    </Portal>
   </Screen>
 </SelectScreen>
 `;
@@ -1278,12 +1296,13 @@ exports[`<SelectScreen /> should render without props 1`] = `
   <Screen
     withDivideHeader={false}
   >
-    <Layer>
+    <Portal>
       <Portal
         containerInfo={
           <div>
             <div
               class="screen full-width"
+              style="z-index: 300;"
             >
               <div
                 class="nav-bar"
@@ -1351,6 +1370,11 @@ exports[`<SelectScreen /> should render without props 1`] = `
       >
         <div
           className="screen full-width"
+          style={
+            Object {
+              "zIndex": 300,
+            }
+          }
         >
           <ScreenLayout
             childrenRef={[Function]}
@@ -1468,7 +1492,7 @@ exports[`<SelectScreen /> should render without props 1`] = `
           </ScreenLayout>
         </div>
       </Portal>
-    </Layer>
+    </Portal>
   </Screen>
 </SelectScreen>
 `;

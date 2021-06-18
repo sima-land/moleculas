@@ -9,10 +9,11 @@ exports[`<InCartControl /> should render button 1`] = `
   <ForwardRef(Button)
     className="control"
     onClick={[Function]}
-    size="small"
+    size="s"
   >
     <button
-      className="control button-base button-primary button-small text-button-small"
+      className="control button-base button-primary button-s text-button-s"
+      data-testid="button"
       onClick={[Function]}
     >
       В корзину
@@ -43,10 +44,11 @@ exports[`<InCartControl /> should render button 2`] = `
   <ForwardRef(Button)
     className="control"
     onClick={[Function]}
-    size="small"
+    size="s"
   >
     <button
-      className="control button-base button-primary button-small text-button-small"
+      className="control button-base button-primary button-s text-button-s"
+      data-testid="button"
       onClick={[Function]}
     >
       <ForwardRef(SvgWhiteSpinner)

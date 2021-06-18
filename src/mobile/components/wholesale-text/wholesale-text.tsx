@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import styles from './wholesale-text.scss';
+import styles from './wholesale-text.module.scss';
 
 /**
  * Компонент текста крупного опта.

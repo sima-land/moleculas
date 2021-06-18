@@ -33,6 +33,7 @@ exports[`<WholesalePrice /> should render with props 1`] = `
             >
               <span
                 className="root"
+                data-testid="price"
               >
                 222 222
               </span>
@@ -57,6 +58,7 @@ exports[`<WholesalePrice /> should render with props 1`] = `
               >
                 <span
                   className="root"
+                  data-testid="price"
                 >
                   520 шт.
                 </span>
@@ -120,6 +122,7 @@ exports[`<WholesalePrice /> should render with props 2`] = `
             >
               <span
                 className="root"
+                data-testid="price"
               >
                 222 222
               </span>
@@ -160,6 +163,7 @@ exports[`<WholesalePrice /> should render with props 2`] = `
               >
                 <span
                   className="root"
+                  data-testid="price"
                 >
                   520 шт.
                 </span>
@@ -198,6 +202,7 @@ exports[`<WholesalePrice /> should render without props 1`] = `
             <Price>
               <span
                 className="root"
+                data-testid="price"
               />
             </Price>
              / опт

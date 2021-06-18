@@ -4,7 +4,7 @@ import { Text } from '@dev-dep/ui-nucleons/text';
 import { Price } from '@dev-dep/ui-nucleons/price';
 import WholesalePrice from '../wholesale-price';
 import classnames from 'classnames/bind';
-import styles from './item-price.scss';
+import styles from './item-price.module.scss';
 
 const cx = classnames.bind(styles);
 

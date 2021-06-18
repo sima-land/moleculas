@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useRef, useState } from 'react';
 import { getOriginCorrection } from '@dev-dep/ui-nucleons/with-tooltip/utils';
 import { ProductCard, ProductCardProps } from './product-card';
 import classnames from 'classnames/bind';
-import styles from './hover-card.scss';
+import styles from './hover-card.module.scss';
 import { CarouselItem } from './types';
 
 export interface HoverCardProps extends Omit<ProductCardProps, 'onChange' | 'inCartControl' | 'productInfo'> {

@@ -50,6 +50,7 @@ exports[`Breadcrumbs should renders correctly 1`] = `
     >
       <a
         className="link item color__gray87 hover-color__gray54"
+        data-testid="anchor"
         href="#"
       >
         Каталог
@@ -63,6 +64,7 @@ exports[`Breadcrumbs should renders correctly 1`] = `
     >
       <a
         className="link item color__gray87 hover-color__gray54"
+        data-testid="anchor"
         href="#"
       >
         Одежда и обувь
@@ -76,6 +78,7 @@ exports[`Breadcrumbs should renders correctly 1`] = `
     >
       <a
         className="link item color__gray87 hover-color__gray54"
+        data-testid="anchor"
         href="#"
       >
         Женская одежда
@@ -89,6 +92,7 @@ exports[`Breadcrumbs should renders correctly 1`] = `
     >
       <a
         className="link item color__gray87 hover-color__gray54"
+        data-testid="anchor"
         href="#"
       >
         Аксессуары
@@ -102,6 +106,7 @@ exports[`Breadcrumbs should renders correctly 1`] = `
     >
       <a
         className="link item color__gray87 hover-color__gray54"
+        data-testid="anchor"
         href="#"
       >
         Брендированные стойки «Этель» и «Доляна» в подарок за покупку кухонного текстиля
@@ -115,6 +120,7 @@ exports[`Breadcrumbs should renders correctly 1`] = `
     >
       <a
         className="link item color__gray87 hover-color__gray54"
+        data-testid="anchor"
         href="#"
       >
         Головные уборы
@@ -128,6 +134,7 @@ exports[`Breadcrumbs should renders correctly 1`] = `
     >
       <a
         className="link item color__gray87 hover-color__gray54"
+        data-testid="anchor"
         href="#"
       >
         Кепки, бейсболки
@@ -141,6 +148,7 @@ exports[`Breadcrumbs should renders correctly 1`] = `
     >
       <a
         className="link item color__gray87 hover-color__gray54"
+        data-testid="anchor"
         href="#"
       >
         Текущая страница

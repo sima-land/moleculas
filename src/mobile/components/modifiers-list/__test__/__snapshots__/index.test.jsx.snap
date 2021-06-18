@@ -54,6 +54,7 @@ exports[`<ModifiersList /> should render correct with sizesTableUrl 1`] = `
       >
         <a
           className="link sizes-table-link color__brand-blue hover-color__brand-deep-blue"
+          data-testid="anchor"
           href="test.ru/123"
         >
           Таблица размеров

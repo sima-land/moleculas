@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { action } from '@storybook/addon-actions';
 import { ModifiersList } from '..';
-import classes from './modifiers-list.scss';
+import classes from './modifiers-list.module.scss';
 import items from './items';
 
 export default {

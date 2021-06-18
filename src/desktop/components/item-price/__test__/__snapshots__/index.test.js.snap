@@ -69,6 +69,7 @@ exports[`<ItemPrice /> should render with props 1`] = `
                     >
                       <span
                         className="root"
+                        data-testid="price"
                       >
                         15
                       </span>
@@ -93,6 +94,7 @@ exports[`<ItemPrice /> should render with props 1`] = `
                   >
                     <span
                       className="root crossed-out"
+                      data-testid="price"
                     >
                       20
                     </span>
@@ -177,6 +179,7 @@ exports[`<ItemPrice /> should render with props 1`] = `
               >
                 <span
                   className="root"
+                  data-testid="price"
                 >
                   421 Р / пог. м
                 </span>
@@ -220,6 +223,7 @@ exports[`<ItemPrice /> should render with props 1`] = `
                   >
                     <span
                       className="root"
+                      data-testid="price"
                     >
                       14
                     </span>

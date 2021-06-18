@@ -9,7 +9,7 @@ import MailSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/mail';
 import SkypeSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/skype';
 import PhoneSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/phone';
 import MobileSVG from '@dev-dep/ui-quarks/icons/24x24/Filled/mobile';
-import classes from './person-screen.scss';
+import classes from './person-screen.module.scss';
 
 export interface PersonScreenProps extends ScreenProps {
   name?: string;

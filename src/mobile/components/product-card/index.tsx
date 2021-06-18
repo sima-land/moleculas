@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './product-card.scss';
+import styles from './product-card.module.scss';
 import classnames from 'classnames/bind';
 import MoreSVG from '@dev-dep/ui-quarks/icons/24x24/Filled/more';
 import { Link } from '@dev-dep/ui-nucleons/link';
