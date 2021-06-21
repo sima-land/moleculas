@@ -15,16 +15,17 @@ export default {
   },
 };
 
-export const Primary = props => <Badge {...props} />;
+export const Primary = () => (
+  <Badge
+    href='https://sima-land.ru'
+    color='#002b41'
+    fields={[
+      { type: 'text', value: 'Товар партнёра' },
+    ]}
+  />
+);
 
 Primary.storyName = 'Использование';
-Primary.args = {
-  href: 'https://sima-land.ru',
-  color: '#002b41',
-  fields: [
-    { type: 'text', value: 'Товар партнёра' },
-  ],
-};
 
 export const TextView = () => (
   <Badge

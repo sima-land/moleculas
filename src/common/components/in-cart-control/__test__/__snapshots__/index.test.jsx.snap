@@ -104,7 +104,7 @@ exports[`<InCartControl /> should renders correctly 1`] = `
       className="root size-s control"
       data-testid="stepper"
     >
-      <MinusSVG
+      <ForwardRef(MinusSVG)
         className="button"
         data-testid="stepper:minus"
         onClick={[Function]}
@@ -123,7 +123,7 @@ exports[`<InCartControl /> should renders correctly 1`] = `
             fillRule="evenodd"
           />
         </svg>
-      </MinusSVG>
+      </ForwardRef(MinusSVG)>
       <input
         className="input"
         data-testid="stepper:input"
@@ -133,7 +133,7 @@ exports[`<InCartControl /> should renders correctly 1`] = `
         onKeyDown={[Function]}
         value="12"
       />
-      <PlusSVG
+      <ForwardRef(PlusSVG)
         className="button"
         data-testid="stepper:plus"
         onClick={[Function]}
@@ -150,7 +150,7 @@ exports[`<InCartControl /> should renders correctly 1`] = `
             d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
           />
         </svg>
-      </PlusSVG>
+      </ForwardRef(PlusSVG)>
     </div>
   </Stepper>
 </InCartControl>

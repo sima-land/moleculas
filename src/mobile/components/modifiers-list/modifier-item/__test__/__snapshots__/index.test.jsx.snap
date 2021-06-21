@@ -102,13 +102,13 @@ exports[`<ModifierItem /> should render correctly with additionalText and select
       currencyGrapheme="$"
       value={745}
     />
-    <Memo([object Object])
+    <Memo(ForwardRef(Text))
       color="gray38"
       lineHeight={16}
       size={12}
     >
       В корзине 5 шт
-    </Memo([object Object])>
+    </Memo(ForwardRef(Text))>
   </div>
   <div
     className="icon-wrapper"

@@ -1683,7 +1683,7 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
             }
             type="button"
           >
-            <ArrowLeftSVG
+            <ForwardRef(ArrowLeftSVG)
               aria-hidden={true}
               fill="currentColor"
             >
@@ -1698,7 +1698,7 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                   d="M7.253 4.659a1 1 0 00-1.506-1.317l-3.5 4a1 1 0 000 1.317l3.5 4a1 1 0 101.506-1.318L5.203 9H13a1 1 0 100-2H5.204l2.049-2.341z"
                 />
               </svg>
-            </ArrowLeftSVG>
+            </ForwardRef(ArrowLeftSVG)>
           </button>
         </ArrowButton>
         <ArrowButton
@@ -1727,7 +1727,7 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
             }
             type="button"
           >
-            <ArrowRightSVG
+            <ForwardRef(ArrowRightSVG)
               aria-hidden={true}
               fill="currentColor"
             >
@@ -1742,7 +1742,7 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                   d="M8.747 4.659a1 1 0 111.506-1.317l3.5 4a1 1 0 010 1.317l-3.5 4a1 1 0 11-1.506-1.318L10.797 9H3a1 1 0 110-2h7.796L8.747 4.659z"
                 />
               </svg>
-            </ArrowRightSVG>
+            </ForwardRef(ArrowRightSVG)>
           </button>
         </ArrowButton>
       </div>
@@ -3441,7 +3441,7 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
             }
             type="button"
           >
-            <ArrowLeftSVG
+            <ForwardRef(ArrowLeftSVG)
               aria-hidden={true}
               fill="currentColor"
             >
@@ -3456,7 +3456,7 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                   d="M7.253 4.659a1 1 0 00-1.506-1.317l-3.5 4a1 1 0 000 1.317l3.5 4a1 1 0 101.506-1.318L5.203 9H13a1 1 0 100-2H5.204l2.049-2.341z"
                 />
               </svg>
-            </ArrowLeftSVG>
+            </ForwardRef(ArrowLeftSVG)>
           </button>
         </ArrowButton>
         <ArrowButton
@@ -3485,7 +3485,7 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
             }
             type="button"
           >
-            <ArrowRightSVG
+            <ForwardRef(ArrowRightSVG)
               aria-hidden={true}
               fill="currentColor"
             >
@@ -3500,7 +3500,7 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                   d="M8.747 4.659a1 1 0 111.506-1.317l3.5 4a1 1 0 010 1.317l-3.5 4a1 1 0 11-1.506-1.318L10.797 9H3a1 1 0 110-2h7.796L8.747 4.659z"
                 />
               </svg>
-            </ArrowRightSVG>
+            </ForwardRef(ArrowRightSVG)>
           </button>
         </ArrowButton>
       </div>
@@ -5185,7 +5185,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
             }
             type="button"
           >
-            <ArrowLeftSVG
+            <ForwardRef(ArrowLeftSVG)
               aria-hidden={true}
               fill="currentColor"
             >
@@ -5200,7 +5200,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                   d="M7.253 4.659a1 1 0 00-1.506-1.317l-3.5 4a1 1 0 000 1.317l3.5 4a1 1 0 101.506-1.318L5.203 9H13a1 1 0 100-2H5.204l2.049-2.341z"
                 />
               </svg>
-            </ArrowLeftSVG>
+            </ForwardRef(ArrowLeftSVG)>
           </button>
         </ArrowButton>
         <ArrowButton
@@ -5229,7 +5229,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
             }
             type="button"
           >
-            <ArrowRightSVG
+            <ForwardRef(ArrowRightSVG)
               aria-hidden={true}
               fill="currentColor"
             >
@@ -5244,7 +5244,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                   d="M8.747 4.659a1 1 0 111.506-1.317l3.5 4a1 1 0 010 1.317l-3.5 4a1 1 0 11-1.506-1.318L10.797 9H3a1 1 0 110-2h7.796L8.747 4.659z"
                 />
               </svg>
-            </ArrowRightSVG>
+            </ForwardRef(ArrowRightSVG)>
           </button>
         </ArrowButton>
       </div>
@@ -6929,7 +6929,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
             }
             type="button"
           >
-            <ArrowLeftSVG
+            <ForwardRef(ArrowLeftSVG)
               aria-hidden={true}
               fill="currentColor"
             >
@@ -6944,7 +6944,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                   d="M5.414 13l5.293 5.293a1 1 0 01-1.414 1.414l-7-7a1 1 0 010-1.414l7-7a1 1 0 011.414 1.414L5.414 11H21a1 1 0 110 2H5.414z"
                 />
               </svg>
-            </ArrowLeftSVG>
+            </ForwardRef(ArrowLeftSVG)>
           </button>
         </ArrowButton>
         <ArrowButton
@@ -6973,7 +6973,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
             }
             type="button"
           >
-            <ArrowRightSVG
+            <ForwardRef(ArrowRightSVG)
               aria-hidden={true}
               fill="currentColor"
             >
@@ -6988,7 +6988,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                   d="M12.247 4.342a1 1 0 00.095 1.41L18.338 11H3a1 1 0 100 2h15.339l-5.997 5.247a1 1 0 001.316 1.506l8-7a1 1 0 000-1.506l-8-7a1 1 0 00-1.41.095z"
                 />
               </svg>
-            </ArrowRightSVG>
+            </ForwardRef(ArrowRightSVG)>
           </button>
         </ArrowButton>
       </div>

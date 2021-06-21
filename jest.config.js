@@ -1,8 +1,8 @@
 module.exports = {
   preset: 'ts-jest/presets/js-with-babel',
-  globalSetup: './jest/global-setup.js',
+  globalSetup: './.jest/global-setup.js',
   setupFiles: [
-    './jest/setup.js',
+    './.jest/setup.js',
   ],
   snapshotSerializers: [
     'enzyme-to-json/serializer',
@@ -18,17 +18,17 @@ module.exports = {
   ],
   transform: {
     // svg заменяем на React-компоненты
-    '\\.svg$': '<rootDir>/jest/transforms/svg.js',
+    '\\.svg$': '<rootDir>/.jest/transforms/svg.js',
 
     // все что должно заменяться на строку с url
-    '\\.(jpg|jpeg|png|gif|eot|otf|ttf|woff|woff2)$': '<rootDir>/jest/transforms/media.js',
+    '\\.(jpg|jpeg|png|gif|eot|otf|ttf|woff|woff2)$': '<rootDir>/.jest/transforms/media.js',
   },
   moduleNameMapper: {
     '\\.(css|scss)$': 'identity-obj-proxy',
   },
   coveragePathIgnorePatterns: [
     '\\.svg$',
-    'jest/',
+    '.jest/',
   ],
   coverageThreshold: {
     global: {
