@@ -8,9 +8,6 @@ export default {
   component: Breadcrumbs,
   parameters: {
     layout: 'padded',
-    docs: {
-      page: null,
-    },
   },
 };
 

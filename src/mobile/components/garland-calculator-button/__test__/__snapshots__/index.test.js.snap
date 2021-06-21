@@ -13,13 +13,13 @@ exports[`GarlandCalculatorButton should render component 1`] = `
     <Box
       paddingRight={5}
     >
-      <Memo([object Object])
+      <Memo(ForwardRef(Text))
         lineHeight={20}
         size={14}
         weight={400}
       >
         Сколько метров гирлянды покупать? Поможем рассчитать оптимальную длину
-      </Memo([object Object])>
+      </Memo(ForwardRef(Text))>
       <Box
         marginTop={3}
       >

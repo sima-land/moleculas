@@ -1,14 +1,11 @@
-const path = require('path');
-const svgrOptions = require('../svgr.config');
-
 module.exports = {
   stories: [
-    '../src/**/*.stories.mdx',
     '../src/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
+    '@storybook/addon-actions',
+    '@storybook/addon-storysource',
+    '@storybook/addon-viewport',
     {
       name: '@storybook/addon-docs',
       options: {
@@ -17,83 +14,18 @@ module.exports = {
         },
       },
     },
-    '@storybook/addon-controls',
-    '@storybook/addon-storysource',
   ],
-  webpackFinal: async config => {
-    const baseRules = config.module.rules.map(
-      rule => (Array.isArray(rule.test) ? rule.test.some(item => item.test('.svg')) : rule.test.test('.svg'))
-        ? {
-          ...rule,
+  typescript: {
+    check: false,
+    checkOptions: {},
 
-          // исключаем svg так как он будет обрабатываться другим загрузчиком (ниже)
-          exclude: /\.svg$/
-        }
-        : rule
-    );
+    // @todo перестал работать, ждем обновления
+    // https://github.com/styleguidist/react-docgen-typescript/issues/356
+    reactDocgen: null, // reactDocgen: 'react-docgen-typescript',
 
-    return {
-      ...config,
-      module: {
-        ...config.module,
-        rules: [
-          ...baseRules,
-
-          // regular scss
-          {
-            test: /\.scss$/,
-            exclude: /\.module\.scss$/,
-            use: [
-              'style-loader',
-              'css-loader',
-              'sass-loader',
-            ],
-          },
-
-          // css-modules
-          {
-            test: /\.module\.(css|scss)$/,
-            use: [
-              'style-loader',
-              {
-                loader: 'css-loader',
-                options: {
-                  modules: {
-                    localIdentName: '[name]__[local]__[hash:hex:3]',
-                  },
-                },
-              },
-              'sass-loader',
-            ],
-          },
-
-          // svg as react components
-          {
-            test: /\.svg$/,
-            use: [
-              {
-                loader: '@svgr/webpack',
-                options: svgrOptions,
-              },
-            ],
-            include: path.resolve(__dirname, '../'),
-            exclude: /node_modules\/(?!(@dev-dep)).*/,
-          },
-
-          {
-            test: /\.(woff|woff2|eot|ttf)$/,
-            use: [
-              {
-                loader: 'file-loader',
-                query: {
-                  name: '[name].[ext]'
-                }
-              }
-            ],
-            include: path.resolve(__dirname, '../'),
-          },
-        ],
-      },
-    };
+    reactDocgenTypescriptOptions: {
+      shouldExtractLiteralValuesFromEnum: true,
+      propFilter: prop => !prop.parent || !/node_modules/.test(prop.parent.fileName),
+    },
   },
 };

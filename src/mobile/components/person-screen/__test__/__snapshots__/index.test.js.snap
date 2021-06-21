@@ -331,7 +331,10 @@ exports[`<PersonScreen /> should handle props 1`] = `
                 Object {
                   "end": Object {
                     "aria-label": "Закрыть",
-                    "icon": [Function],
+                    "icon": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "render": [Function],
+                    },
                     "onClick": [Function],
                   },
                   "start": undefined,
@@ -349,7 +352,12 @@ exports[`<PersonScreen /> should handle props 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть"
-                      icon={[Function]}
+                      icon={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "render": [Function],
+                        }
+                      }
                       onClick={[Function]}
                       stub={true}
                     >
@@ -374,7 +382,12 @@ exports[`<PersonScreen /> should handle props 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть"
-                      icon={[Function]}
+                      icon={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "render": [Function],
+                        }
+                      }
                       onClick={[Function]}
                     >
                       <button
@@ -384,7 +397,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                         onClick={[Function]}
                         type="button"
                       >
-                        <CrossSVG
+                        <ForwardRef(CrossSVG)
                           aria-hidden="true"
                           fill="#212121"
                         >
@@ -401,7 +414,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                               fillRule="evenodd"
                             />
                           </svg>
-                        </CrossSVG>
+                        </ForwardRef(CrossSVG)>
                       </button>
                     </NavButton>
                   </div>
@@ -1009,7 +1022,10 @@ exports[`<PersonScreen /> should render with name 1`] = `
                 Object {
                   "end": Object {
                     "aria-label": "Закрыть",
-                    "icon": [Function],
+                    "icon": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "render": [Function],
+                    },
                     "onClick": [Function],
                   },
                   "start": undefined,
@@ -1027,7 +1043,12 @@ exports[`<PersonScreen /> should render with name 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть"
-                      icon={[Function]}
+                      icon={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "render": [Function],
+                        }
+                      }
                       onClick={[Function]}
                       stub={true}
                     >
@@ -1052,7 +1073,12 @@ exports[`<PersonScreen /> should render with name 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть"
-                      icon={[Function]}
+                      icon={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "render": [Function],
+                        }
+                      }
                       onClick={[Function]}
                     >
                       <button
@@ -1062,7 +1088,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                         onClick={[Function]}
                         type="button"
                       >
-                        <CrossSVG
+                        <ForwardRef(CrossSVG)
                           aria-hidden="true"
                           fill="#212121"
                         >
@@ -1079,7 +1105,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                               fillRule="evenodd"
                             />
                           </svg>
-                        </CrossSVG>
+                        </ForwardRef(CrossSVG)>
                       </button>
                     </NavButton>
                   </div>

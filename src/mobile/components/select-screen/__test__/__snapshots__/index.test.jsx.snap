@@ -226,7 +226,10 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                 Object {
                   "end": Object {
                     "aria-label": "Закрыть Валюта",
-                    "icon": [Function],
+                    "icon": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "render": [Function],
+                    },
                     "onClick": [Function],
                   },
                   "start": undefined,
@@ -245,7 +248,12 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть Валюта"
-                      icon={[Function]}
+                      icon={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "render": [Function],
+                        }
+                      }
                       onClick={[Function]}
                       stub={true}
                     >
@@ -276,7 +284,12 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть Валюта"
-                      icon={[Function]}
+                      icon={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "render": [Function],
+                        }
+                      }
                       onClick={[Function]}
                     >
                       <button
@@ -286,7 +299,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                         onClick={[Function]}
                         type="button"
                       >
-                        <CrossSVG
+                        <ForwardRef(CrossSVG)
                           aria-hidden="true"
                           fill="#212121"
                         >
@@ -303,7 +316,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                               fillRule="evenodd"
                             />
                           </svg>
-                        </CrossSVG>
+                        </ForwardRef(CrossSVG)>
                       </button>
                     </NavButton>
                   </div>
@@ -627,7 +640,10 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                 Object {
                   "end": Object {
                     "aria-label": "Закрыть Валюта",
-                    "icon": [Function],
+                    "icon": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "render": [Function],
+                    },
                     "onClick": [Function],
                   },
                   "start": undefined,
@@ -646,7 +662,12 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть Валюта"
-                      icon={[Function]}
+                      icon={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "render": [Function],
+                        }
+                      }
                       onClick={[Function]}
                       stub={true}
                     >
@@ -677,7 +698,12 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть Валюта"
-                      icon={[Function]}
+                      icon={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "render": [Function],
+                        }
+                      }
                       onClick={[Function]}
                     >
                       <button
@@ -687,7 +713,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                         onClick={[Function]}
                         type="button"
                       >
-                        <CrossSVG
+                        <ForwardRef(CrossSVG)
                           aria-hidden="true"
                           fill="#212121"
                         >
@@ -704,7 +730,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                               fillRule="evenodd"
                             />
                           </svg>
-                        </CrossSVG>
+                        </ForwardRef(CrossSVG)>
                       </button>
                     </NavButton>
                   </div>
@@ -1043,7 +1069,10 @@ exports[`<SelectScreen /> should handle props 1`] = `
                 Object {
                   "end": Object {
                     "aria-label": "Закрыть Районы",
-                    "icon": [Function],
+                    "icon": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "render": [Function],
+                    },
                     "onClick": [Function],
                   },
                   "start": undefined,
@@ -1062,7 +1091,12 @@ exports[`<SelectScreen /> should handle props 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть Районы"
-                      icon={[Function]}
+                      icon={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "render": [Function],
+                        }
+                      }
                       onClick={[Function]}
                       stub={true}
                     >
@@ -1093,7 +1127,12 @@ exports[`<SelectScreen /> should handle props 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть Районы"
-                      icon={[Function]}
+                      icon={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "render": [Function],
+                        }
+                      }
                       onClick={[Function]}
                     >
                       <button
@@ -1103,7 +1142,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                         onClick={[Function]}
                         type="button"
                       >
-                        <CrossSVG
+                        <ForwardRef(CrossSVG)
                           aria-hidden="true"
                           fill="#212121"
                         >
@@ -1120,7 +1159,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                               fillRule="evenodd"
                             />
                           </svg>
-                        </CrossSVG>
+                        </ForwardRef(CrossSVG)>
                       </button>
                     </NavButton>
                   </div>
@@ -1392,7 +1431,10 @@ exports[`<SelectScreen /> should render without props 1`] = `
                 Object {
                   "end": Object {
                     "aria-label": "Закрыть",
-                    "icon": [Function],
+                    "icon": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "render": [Function],
+                    },
                     "onClick": [Function],
                   },
                   "start": undefined,
@@ -1410,7 +1452,12 @@ exports[`<SelectScreen /> should render without props 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть"
-                      icon={[Function]}
+                      icon={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "render": [Function],
+                        }
+                      }
                       onClick={[Function]}
                       stub={true}
                     >
@@ -1435,7 +1482,12 @@ exports[`<SelectScreen /> should render without props 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть"
-                      icon={[Function]}
+                      icon={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "render": [Function],
+                        }
+                      }
                       onClick={[Function]}
                     >
                       <button
@@ -1445,7 +1497,7 @@ exports[`<SelectScreen /> should render without props 1`] = `
                         onClick={[Function]}
                         type="button"
                       >
-                        <CrossSVG
+                        <ForwardRef(CrossSVG)
                           aria-hidden="true"
                           fill="#212121"
                         >
@@ -1462,7 +1514,7 @@ exports[`<SelectScreen /> should render without props 1`] = `
                               fillRule="evenodd"
                             />
                           </svg>
-                        </CrossSVG>
+                        </ForwardRef(CrossSVG)>
                       </button>
                     </NavButton>
                   </div>
