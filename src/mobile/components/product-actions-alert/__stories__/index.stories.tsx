@@ -1,12 +1,26 @@
 import React from 'react';
-import ProductActionsContent from '../';
+import { ProductActionsAlert, ProductActionsAlertProps } from '..';
 import { action } from '@storybook/addon-actions';
+import { Story } from '@storybook/react';
 import StatementSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/statement';
 import ThumbsUpSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/thumbs-up';
 
-const Template = args => (
+export default {
+  title: 'mobile/ProductActionsAlert',
+  component: ProductActionsAlert,
+  parameters: {
+    layout: 'padded',
+    docs: {
+      description: {
+        component: 'Компонент алерта действий над товаром',
+      },
+    },
+  },
+};
+
+const Template: Story<ProductActionsAlertProps> = args => (
   <div style={{ margin: '16px' }}>
-    <ProductActionsContent {...args} />
+    <ProductActionsAlert {...args} />
   </div>
 );
 

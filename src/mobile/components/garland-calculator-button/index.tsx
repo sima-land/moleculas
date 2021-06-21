@@ -9,7 +9,7 @@ import styles from './garland-calculator-button.module.scss';
 const cx = classnames.bind(styles);
 
 export interface GarlandCalculatorButtonProps {
-  onClick: React.MouseEventHandler
+  onClick?: React.MouseEventHandler
 }
 
 /**

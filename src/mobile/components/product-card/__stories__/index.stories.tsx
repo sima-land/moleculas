@@ -1,18 +1,33 @@
+import { Story } from '@storybook/react';
 import { noop } from 'lodash';
 import React from 'react';
-import ProductCard from '../';
+import ProductCard, { Props } from '..';
 
-const Template = args => (
+export default {
+  title: 'mobile/ProductCard',
+  component: ProductCard,
+  parameters: {
+    layout: 'padded',
+    docs: {
+      description: {
+        component: 'Компонент информации о товаре',
+      },
+    },
+  },
+};
+
+const Template: Story<Props> = props => (
   <div style={{ width: '480px', height: '160px', margin: '80px auto' }}>
-    <ProductCard {...args} />
+    <ProductCard {...props} />
   </div>
 );
+
 export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
 export const Thirdy = Template.bind({});
 export const WithoutHeart = Template.bind({});
 
-const baseArgs = {
+const baseArgs: Props = {
   itemUrl: '/',
   imageUrl: 'https://cdn3.static1-sima-land.com/items/4243920/0/280.jpg?v=1584652193',
   name: 'Тестовое название',
@@ -28,7 +43,7 @@ const baseArgs = {
   itemPrice: 1234,
   onWishButtonClick: noop,
   onActionsClick: noop,
-  isFetchingWishItems: noop,
+  isFetchingWishItems: false,
 };
 
 Primary.args = {
@@ -47,13 +62,13 @@ Thirdy.args = {
   ...baseArgs,
   commonPrice: 0,
   itemPrice: 0,
-  movedOrderId: null,
+  movedOrderId: undefined,
 };
 
 WithoutHeart.args = {
   ...baseArgs,
   commonPrice: 0,
   itemPrice: 0,
-  movedOrderId: null,
-  onWishButtonClick: null,
+  movedOrderId: undefined,
+  onWishButtonClick: undefined,
 };

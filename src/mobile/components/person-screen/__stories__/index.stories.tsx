@@ -1,14 +1,27 @@
 import React, { Fragment } from 'react';
-import { PersonScreen } from '../';
+import { PersonScreen, PersonScreenProps } from '..';
+import { Story } from '@storybook/react';
 
-const Template = args => (
+export default {
+  title: 'mobile/PersonScreen',
+  component: PersonScreen,
+  parameters: {
+    layout: 'padded',
+    docs: {
+      description: {
+        component: 'Компонент экрана информации о сотруднике',
+      },
+    },
+  },
+};
+
+const Template: Story<PersonScreenProps> = args => (
   <Fragment>
     <PersonScreen {...args} />
   </Fragment>
 );
 
 export const NoArbitraryLinkView = Template.bind({});
-export const ArbitraryLinkView = Template.bind({});
 
 NoArbitraryLinkView.storyName = 'Без произвольной ссылки';
 NoArbitraryLinkView.args = {
@@ -21,6 +34,8 @@ NoArbitraryLinkView.args = {
   secondPhoneHref: 'tel:+7900000000',
   secondPhoneText: '+7 (900) 000 000',
 };
+
+export const ArbitraryLinkView = Template.bind({});
 
 ArbitraryLinkView.storyName = 'С произвольной ссылкой';
 ArbitraryLinkView.args = {
