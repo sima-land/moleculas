@@ -7,7 +7,7 @@ import { Clean } from '@dev-dep/ui-nucleons/clean-buttons';
 import classes from './person-card.module.scss';
 import classnames from 'classnames/bind';
 import { Modal } from '@dev-dep/ui-nucleons/modal';
-import { useKeyDownHandler } from '../../../common/hooks/use-key-down-handler';
+import { useKeydown } from '@dev-dep/ui-nucleons/hooks/keydown';
 
 export interface PersonModalProps {
   name: string
@@ -57,7 +57,7 @@ export const PersonModal = ({
   arbitraryLinkProps,
   onClose,
 }: PersonModalProps) => {
-  useKeyDownHandler('Escape', onClose);
+  useKeydown('Escape', onClose);
 
   return (
     <Modal size='s' withScrollDisable={false} onClose={onClose}>
