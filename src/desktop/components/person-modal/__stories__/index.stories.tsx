@@ -1,8 +1,21 @@
 import React from 'react';
-import PersonModal from '../index';
+import PersonModal, { PersonModalProps } from '..';
 import { action } from '@storybook/addon-actions';
+import { Story } from '@storybook/react';
 
-const Template = args => <PersonModal {...args} />;
+export default {
+  title: 'desktop/PersonModal',
+  component: PersonModal,
+  parameters: {
+    docs: {
+      description: {
+        component: ' Компонент модального окна сотрудника.',
+      },
+    },
+  },
+};
+
+const Template: Story<PersonModalProps> = args => <PersonModal {...args} />;
 export const DefaultView = Template.bind({});
 export const ArbitraryLinkView = Template.bind({});
 
@@ -47,16 +60,4 @@ ArbitraryLinkView.args = {
   },
   photoUrl: 'http://themoviescore.com/wp-content/uploads/2013/08/ff072a39a2709e4fec2cd05e3763d68d.jpg',
   onClose: action('Закрыть'),
-};
-
-export default {
-  title: 'desktop/PersonModal',
-  component: PersonModal,
-  parameters: {
-    docs: {
-      description: {
-        component: ' Компонент модального окна сотрудника.',
-      },
-    },
-  },
 };

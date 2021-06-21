@@ -1,13 +1,13 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import ProductActionsContent from '..';
+import { ProductActionsAlert } from '..';
 import { noop } from 'lodash';
 import StatementSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/statement';
 
 describe('ProductActionsContent', () => {
   it('renders properly', () => {
     const wrapper = mount(
-      <ProductActionsContent
+      <ProductActionsAlert
         buttons={[
           { text: 'text', href: 'href', onClick: noop, icon: <StatementSVG /> },
           { text: 'text', href: 'href' },
@@ -23,7 +23,7 @@ describe('ProductActionsContent', () => {
   it('handlers should works properly', () => {
     const onClose = jest.fn();
     const wrapper = mount(
-      <ProductActionsContent
+      <ProductActionsAlert
         buttons={[
           { text: 'text', href: 'href', onClick: noop, icon: <StatementSVG /> },
           { text: 'text', href: 'href' },

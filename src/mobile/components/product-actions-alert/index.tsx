@@ -2,15 +2,15 @@ import React from 'react';
 import { Link } from '@dev-dep/ui-nucleons/link';
 import { Alert, Props as AlertProps } from '@dev-dep/ui-nucleons/alert';
 import { Clean } from '@dev-dep/ui-nucleons/clean-buttons';
-import styles from './product-actions-content.module.scss';
 import classnames from 'classnames/bind';
+import styles from './product-actions-alert.module.scss';
 
 const cx = classnames.bind(styles);
 
 export interface ProductActionsAlertProps {
-  buttons?: Array<{ text: string, icon: React.ReactNode, onClick: React.MouseEventHandler, href: string }>
+  buttons?: Array<{ text: string, icon: React.ReactNode, onClick?: React.MouseEventHandler, href?: string }>
   alertProps?: AlertProps
-  onClose?: () => React.MouseEventHandler
+  onClose?: React.MouseEventHandler
 }
 
 /**
@@ -21,7 +21,7 @@ export interface ProductActionsAlertProps {
  * @param props.onClose Обработчик закрытия.
  * @return Элемент.
  */
-const ProductActionsAlert = ({ buttons, alertProps, onClose }: ProductActionsAlertProps) => (
+export const ProductActionsAlert = ({ buttons, alertProps, onClose }: ProductActionsAlertProps) => (
   <Alert
     {...alertProps}
     footer={(
@@ -48,5 +48,3 @@ const ProductActionsAlert = ({ buttons, alertProps, onClose }: ProductActionsAle
     </div>
   </Alert>
 );
-
-export default ProductActionsAlert;
