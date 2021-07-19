@@ -1,0 +1,56 @@
+@use 'node_modules/@dev-dep/ui-nucleons/colors';
+
+.root {
+  width: var(--all-round-view-size, 360px);
+  height: var(--all-round-view-size, 360px);
+  position: relative;
+  cursor: move;
+  overflow: hidden;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.controls {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  display: flex;
+  align-items: center;
+  .control {
+    display: block;
+    flex-shrink: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    + .control {
+      margin-left: 8px;
+    }
+  }
+  svg {
+    fill: currentColor;
+  }
+  .primary {
+    width: 68px;
+    height: 68px;
+    border: 0;
+    padding: 0;
+    color: #fff;
+    background: colors.$brand-blue;
+  }
+  .pause:not(:hover) {
+    background: rgba(colors.$brand-blue, .4);
+  }
+  .turn {
+    width: 32px;
+    height: 32px;
+    border: 2px solid colors.$gray24;
+    color: colors.$gray24;
+    background: transparent;
+    &:disabled {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}
