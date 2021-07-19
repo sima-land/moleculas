@@ -1,0 +1,22 @@
+@use 'node_modules/@dev-dep/ui-nucleons/colors';
+
+.root {
+  height: 20px;
+  display: flex;
+  font-size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.author {
+  flex: 1;
+  margin-left: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: colors.$gray24;
+}
+
+.link {
+  margin-left: 16px;
+  font-weight: 500;
+}

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageOverlay should renders correctly 1`] = `
+<ImageOverlay
+  className="test-class"
+  id="test-id"
+  onClick={[MockFunction]}
+>
+  <div
+    className="root test-class"
+    id="test-id"
+    onClick={[MockFunction]}
+  >
+    <img
+      src="https://images.com/2"
+    />
+  </div>
+</ImageOverlay>
+`;
