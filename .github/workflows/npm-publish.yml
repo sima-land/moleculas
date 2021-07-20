@@ -1,0 +1,39 @@
+name: Publish NPM package
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install dependencies
+        run: |
+          yarn install
+          npm i -g npm@7 --registry=https://registry.npmjs.org
+
+      - name: Lint
+        run: |
+          yarn lint
+          yarn type-check
+
+      - name: Test
+        run: yarn test:ci
+
+      - name: Build package
+        run: |
+          npm --no-git-tag-version version ${GITHUB_REF#refs/*/}
+          npm set-script prepare ""
+          yarn build
+
+      - name: Publish build
+        run: npm publish ./build --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
