@@ -1,9 +1,9 @@
 import React, { useState, useRef } from 'react';
 import CSSTransition from 'react-transition-group/CSSTransition';
-import { Plate } from '@dev-dep/ui-nucleons/plate';
-import { Link } from '@dev-dep/ui-nucleons/link';
+import { Plate } from '@sima-land/ui-nucleons/plate';
+import { Link } from '@sima-land/ui-nucleons/link';
 import { times } from 'lodash';
-import { useOutsideClick } from '@dev-dep/ui-nucleons/hooks';
+import { useOutsideClick } from '@sima-land/ui-nucleons/hooks';
 import classnames from 'classnames/bind';
 import styles from './breadcrumbs.module.scss';
 import DownSVG from './square-arrow-down.svg';

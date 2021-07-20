@@ -1,6 +1,6 @@
-@import 'node_modules/@dev-dep/ui-nucleons/colors';
+@import 'node_modules/@sima-land/ui-nucleons/colors';
 
-.wrapper {  
+.wrapper {
   display: flex;
 }
 
@@ -26,7 +26,7 @@
     }
     .description-container {
       display: none;
-    }   
+    }
   }
 }
 
@@ -104,7 +104,7 @@
   @media (max-width: 360px) {
     &.wide-screen { display: none; }
     &.narrow-screen { display: block; }
-  }  
+  }
 }
 
 .buttons-container {

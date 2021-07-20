@@ -1,8 +1,8 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import RecommendedItem from '../recommended-item';
-import { Link } from '@dev-dep/ui-nucleons/link';
-import { Price } from '@dev-dep/ui-nucleons/price';
+import { Link } from '@sima-land/ui-nucleons/link';
+import { Price } from '@sima-land/ui-nucleons/price';
 
 describe('<RecommendedItem />', () => {
   const props = {

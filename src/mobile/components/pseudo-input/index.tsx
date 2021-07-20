@@ -1,8 +1,8 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-import Search from '@dev-dep/ui-quarks/icons/24x24/Stroked/magnifier';
+import Search from '@sima-land/ui-quarks/icons/24x24/Stroked/magnifier';
 import styles from './pseudo-input.module.scss';
-import { COLORS } from '@dev-dep/ui-nucleons/colors';
+import { COLORS } from '@sima-land/ui-nucleons/colors';
 
 export interface Props {
   text?: string

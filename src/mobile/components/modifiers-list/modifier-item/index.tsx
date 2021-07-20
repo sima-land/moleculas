@@ -2,9 +2,9 @@ import React from 'react';
 import classes from './modifier-item.module.scss';
 import classnames from 'classnames/bind';
 import { MODIFIERS_TYPES } from '../../../../common/constants';
-import { Price } from '@dev-dep/ui-nucleons/price';
-import { Text } from '@dev-dep/ui-nucleons/text';
-import CheckSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/check';
+import { Price } from '@sima-land/ui-nucleons/price';
+import { Text } from '@sima-land/ui-nucleons/text';
+import CheckSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/check';
 
 export interface ModifierItemProps {
   name: string

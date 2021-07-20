@@ -1,6 +1,6 @@
 import React from 'react';
 import { formatISO, getMonth, differenceInDays, getDate, getYear } from 'date-fns';
-import { Timer } from '@dev-dep/ui-nucleons/timer';
+import { Timer } from '@sima-land/ui-nucleons/timer';
 
 export interface EstimateProps {
   dueDate: Date

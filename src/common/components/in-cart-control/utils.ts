@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { formatQtyString } from '../../helpers/format-qty-string';
-import { useIdentityRef } from '@dev-dep/ui-nucleons/hooks/identity';
+import { useIdentityRef } from '@sima-land/ui-nucleons/hooks/identity';
 
 /**
  * Возвращает свойства input, которые фиксируют поведение управления количеством в корзине.

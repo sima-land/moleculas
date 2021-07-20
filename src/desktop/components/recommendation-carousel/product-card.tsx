@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
-import { BoxShadow as Shadow } from '@dev-dep/ui-nucleons/styling/shadows';
-import { MediumRounds as Rounds } from '@dev-dep/ui-nucleons/styling/shapes';
+import { BoxShadow as Shadow } from '@sima-land/ui-nucleons/styling/shadows';
+import { MediumRounds as Rounds } from '@sima-land/ui-nucleons/styling/shapes';
 import { ProductInfo, ProductInfoProps } from './product-info';
 import { InCartControl, InCartControlProps } from '../../../common/components/in-cart-control';
 import classnames from 'classnames/bind';

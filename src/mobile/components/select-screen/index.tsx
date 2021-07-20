@@ -2,11 +2,11 @@ import React from 'react';
 import map from 'lodash/map';
 import noop from 'lodash/noop';
 import prop from 'lodash/fp/prop';
-import { Screen } from '@dev-dep/ui-nucleons/screen';
-import { Text } from '@dev-dep/ui-nucleons/text';
-import { COLORS } from '@dev-dep/ui-nucleons/colors';
-import { MobileLayout } from '@dev-dep/ui-nucleons/layout';
-import CheckSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/check';
+import { Screen } from '@sima-land/ui-nucleons/screen';
+import { Text } from '@sima-land/ui-nucleons/text';
+import { COLORS } from '@sima-land/ui-nucleons/colors';
+import { MobileLayout } from '@sima-land/ui-nucleons/layout';
+import CheckSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/check';
 import styles from './select-screen.module.scss';
 
 export interface SelectScreenProps {

@@ -1,4 +1,4 @@
-import { Link } from '@dev-dep/ui-nucleons/link';
+import { Link } from '@sima-land/ui-nucleons/link';
 import React from 'react';
 import styles from './breadcrumbs.module.scss';
 

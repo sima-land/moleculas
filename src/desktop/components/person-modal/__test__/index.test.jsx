@@ -1,8 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { PersonModal } from '..';
-import { colorKey } from '@dev-dep/ui-nucleons/avatar/user';
-import { Clean } from '@dev-dep/ui-nucleons/clean-buttons';
+import { colorKey } from '@sima-land/ui-nucleons/avatar/user';
+import { Clean } from '@sima-land/ui-nucleons/clean-buttons';
 
 describe('<PersonModal />', () => {
   beforeEach(() => {

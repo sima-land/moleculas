@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 import { SearchBar } from '../index';
-import ArrowLeftSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/arrow-left';
-import { DropdownItem } from '@dev-dep/ui-nucleons/dropdown-item';
+import ArrowLeftSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/arrow-left';
+import { DropdownItem } from '@sima-land/ui-nucleons/dropdown-item';
 
 describe('SearchBar', () => {
   it('should renders properly with minimal props', () => {

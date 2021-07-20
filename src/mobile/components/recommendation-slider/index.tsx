@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import withInViewportObserver from '@dev-dep/ui-nucleons/with-in-viewport-observer';
+import withInViewportObserver from '@sima-land/ui-nucleons/with-in-viewport-observer';
 import isFunction from 'lodash/isFunction';
 import RecommendationWrapper from './recommendation-wrapper';
 

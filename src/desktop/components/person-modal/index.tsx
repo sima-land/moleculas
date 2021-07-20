@@ -1,13 +1,13 @@
 import React from 'react';
-import { UserAvatar } from '@dev-dep/ui-nucleons/avatar/user';
-import { Box } from '@dev-dep/ui-nucleons/box';
-import { Text } from '@dev-dep/ui-nucleons/text';
-import { Link } from '@dev-dep/ui-nucleons/link';
-import { Clean } from '@dev-dep/ui-nucleons/clean-buttons';
+import { UserAvatar } from '@sima-land/ui-nucleons/avatar/user';
+import { Box } from '@sima-land/ui-nucleons/box';
+import { Text } from '@sima-land/ui-nucleons/text';
+import { Link } from '@sima-land/ui-nucleons/link';
+import { Clean } from '@sima-land/ui-nucleons/clean-buttons';
 import classes from './person-card.module.scss';
 import classnames from 'classnames/bind';
-import { Modal } from '@dev-dep/ui-nucleons/modal';
-import { useKeydown } from '@dev-dep/ui-nucleons/hooks/keydown';
+import { Modal } from '@sima-land/ui-nucleons/modal';
+import { useKeydown } from '@sima-land/ui-nucleons/hooks/keydown';
 
 export interface PersonModalProps {
   name: string

@@ -1,13 +1,13 @@
 import React from 'react';
-import { Link } from '@dev-dep/ui-nucleons/link';
-import { Price } from '@dev-dep/ui-nucleons/price';
+import { Link } from '@sima-land/ui-nucleons/link';
+import { Price } from '@sima-land/ui-nucleons/price';
 import { Image } from '../../../common/components/image';
 import { Badge } from '../../../common/components/badge';
 import classnames from 'classnames/bind';
 import styles from './product-info.module.scss';
 import { QuickViewButton } from '../../../common/components/quick-view-button';
-import withPrevent from '@dev-dep/ui-nucleons/helpers/with-prevent';
-import { WithHint } from '@dev-dep/ui-nucleons/with-hint';
+import withPrevent from '@sima-land/ui-nucleons/helpers/with-prevent';
+import { WithHint } from '@sima-land/ui-nucleons/with-hint';
 import { Product } from './types';
 
 export interface ProductInfoProps extends Product {

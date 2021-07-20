@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import on from '@dev-dep/ui-nucleons/helpers/on';
+import on from '@sima-land/ui-nucleons/helpers/on';
 
 /**
  * Хук, вернет true когда все фото будут загружен.

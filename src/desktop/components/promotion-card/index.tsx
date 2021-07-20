@@ -2,7 +2,7 @@ import React from 'react';
 import { PromotionType } from './types';
 import { BannerTitle } from './banner-title';
 import { Estimate } from './estimate';
-import WatchSVG from '@dev-dep/ui-quarks/icons/16x16/Stroked/watch';
+import WatchSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/watch';
 import classNames from 'classnames';
 import styles from './index.m.module.scss';
 

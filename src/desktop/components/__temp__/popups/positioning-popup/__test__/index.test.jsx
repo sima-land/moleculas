@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import PopupArrow from '../../popup-arrow';
-import isBrowser from '@dev-dep/ui-nucleons/helpers/is-browser';
+import isBrowser from '@sima-land/ui-nucleons/helpers/is-browser';
 import PositioningPopup, { defaultArrowProps } from '..';
 
 const createFakeRef = (width, left) => ({
@@ -15,7 +15,7 @@ const createFakeRef = (width, left) => ({
   },
 });
 
-jest.mock('@dev-dep/ui-nucleons/helpers/is-browser');
+jest.mock('@sima-land/ui-nucleons/helpers/is-browser');
 
 describe('<PositioningPopup />', () => {
   beforeAll(() => {

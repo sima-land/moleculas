@@ -39,371 +39,377 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
     size="s"
     withScrollDisable={false}
   >
-    <div
-      className="overlay"
-      data-testid="modal:overlay"
-      onMouseDown={[Function]}
-      onMouseUp={[Function]}
-      style={
-        Object {
-          "zIndex": 100,
-        }
-      }
+    <ModalInner
+      onClose={[MockFunction]}
+      size="s"
+      withScrollDisable={false}
     >
       <div
-        className="modal size-s shadow-z4"
-        data-testid="modal"
+        className="overlay"
+        data-testid="modal:overlay"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
         style={
           Object {
-            "--footer-height": "72px",
-            "--header-height": "0px",
-            "--modal-height": undefined,
+            "zIndex": 100,
           }
         }
       >
-        <ModalBody
-          key=".0"
-        >
-          <CustomScrollbar
-            className="body"
-            inFlexBox={true}
-            overflow={
-              Object {
-                "x": "h",
-                "y": "s",
-              }
+        <div
+          className="modal size-s shadow-z4"
+          data-testid="modal"
+          style={
+            Object {
+              "--footer-height": "72px",
+              "--header-height": "0px",
+              "--modal-height": undefined,
             }
+          }
+        >
+          <ModalBody
+            key=".0"
           >
-            <OverlayScrollbarsComponent
-              className="custom-scrollbar body os-host-flexbox"
-              options={
+            <CustomScrollbar
+              className="body"
+              inFlexBox={true}
+              overflow={
                 Object {
-                  "callbacks": undefined,
-                  "overflowBehavior": Object {
-                    "x": "h",
-                    "y": "s",
-                  },
+                  "x": "h",
+                  "y": "s",
                 }
               }
             >
-              <div
-                className="os-host"
+              <OverlayScrollbarsComponent
+                className="custom-scrollbar body os-host-flexbox"
+                options={
+                  Object {
+                    "callbacks": undefined,
+                    "overflowBehavior": Object {
+                      "x": "h",
+                      "y": "s",
+                    },
+                  }
+                }
               >
                 <div
-                  className="os-resize-observer-host"
-                />
-                <div
-                  className="os-padding"
+                  className="os-host"
                 >
                   <div
-                    className="os-viewport"
+                    className="os-resize-observer-host"
+                  />
+                  <div
+                    className="os-padding"
                   >
                     <div
-                      className="os-content"
+                      className="os-viewport"
                     >
                       <div
-                        className="main"
+                        className="os-content"
                       >
                         <div
                           className="main"
                         >
-                          <Box
-                            marginBottom={6}
+                          <div
+                            className="main"
                           >
-                            <div
-                              className="M-b__6"
+                            <Box
+                              marginBottom={6}
                             >
-                              <UserAvatar
-                                size={104}
-                                title="Марина Михайловская"
+                              <div
+                                className="M-b__6"
                               >
-                                <Avatar
-                                  bgColor="additional-deep-red"
-                                  bgOpacity={0.48}
+                                <UserAvatar
                                   size={104}
-                                  textColor="white"
                                   title="Марина Михайловская"
                                 >
-                                  <div
-                                    className="root size-104 color__white"
-                                    data-testid="avatar"
-                                    style={
-                                      Object {
-                                        "--avatar-color": "#d50000",
-                                        "--avatar-color-opacity": 0.48,
+                                  <Avatar
+                                    bgColor="additional-deep-red"
+                                    bgOpacity={0.48}
+                                    size={104}
+                                    textColor="white"
+                                    title="Марина Михайловская"
+                                  >
+                                    <div
+                                      className="root size-104 color__white"
+                                      data-testid="avatar"
+                                      style={
+                                        Object {
+                                          "--avatar-color": "#d50000",
+                                          "--avatar-color-opacity": 0.48,
+                                        }
                                       }
-                                    }
-                                  >
-                                    <span
-                                      className="monogram"
                                     >
-                                      ММ
-                                    </span>
-                                  </div>
-                                </Avatar>
-                              </UserAvatar>
-                            </div>
-                          </Box>
-                          <Box
-                            marginBottom={1}
-                          >
-                            <div
-                              className="M-b__1"
+                                      <span
+                                        className="monogram"
+                                      >
+                                        ММ
+                                      </span>
+                                    </div>
+                                  </Avatar>
+                                </UserAvatar>
+                              </div>
+                            </Box>
+                            <Box
+                              marginBottom={1}
                             >
-                              <ForwardRef(Text)
-                                color="gray38"
-                                size={14}
-                                weight={400}
+                              <div
+                                className="M-b__1"
                               >
-                                <span
-                                  className="size-14 line-height-20 color__gray38 weight-400"
+                                <ForwardRef(Text)
+                                  color="gray38"
+                                  size={14}
+                                  weight={400}
                                 >
-                                  Менеджер по игрушке
-                                </span>
-                              </ForwardRef(Text)>
-                            </div>
-                          </Box>
-                          <div
-                            className="name"
-                          >
-                            Марина Михайловская
-                          </div>
-                          <Box
-                            marginTop={2}
-                          >
-                            <div
-                              className="M-t__2"
-                            >
-                              <ForwardRef(Text)
-                                size={12}
-                                weight={500}
-                              >
-                                <span
-                                  className="size-12 line-height-16 weight-500"
-                                >
-                                  <ForwardRef(Link)
-                                    href="/test"
+                                  <span
+                                    className="size-14 line-height-20 color__gray38 weight-400"
                                   >
-                                    <a
-                                      className="link color__brand-blue hover-color__brand-deep-blue"
-                                      data-testid="anchor"
+                                    Менеджер по игрушке
+                                  </span>
+                                </ForwardRef(Text)>
+                              </div>
+                            </Box>
+                            <div
+                              className="name"
+                            >
+                              Марина Михайловская
+                            </div>
+                            <Box
+                              marginTop={2}
+                            >
+                              <div
+                                className="M-t__2"
+                              >
+                                <ForwardRef(Text)
+                                  size={12}
+                                  weight={500}
+                                >
+                                  <span
+                                    className="size-12 line-height-16 weight-500"
+                                  >
+                                    <ForwardRef(Link)
                                       href="/test"
                                     >
-                                      test
-                                    </a>
-                                  </ForwardRef(Link)>
-                                </span>
-                              </ForwardRef(Text)>
-                            </div>
-                          </Box>
-                          <div
-                            className="contacts"
-                          >
-                            <span
-                              className="contacts-item"
+                                      <a
+                                        className="link color__brand-blue hover-color__brand-deep-blue"
+                                        data-testid="anchor"
+                                        href="/test"
+                                      >
+                                        test
+                                      </a>
+                                    </ForwardRef(Link)>
+                                  </span>
+                                </ForwardRef(Text)>
+                              </div>
+                            </Box>
+                            <div
+                              className="contacts"
                             >
-                              Email: 
-                              <ForwardRef(Link)
-                                color="gray87"
-                                href="mailto:example@email.com"
+                              <span
+                                className="contacts-item"
                               >
-                                <a
-                                  className="link color__gray87 hover-color__gray54"
-                                  data-testid="anchor"
+                                Email: 
+                                <ForwardRef(Link)
+                                  color="gray87"
                                   href="mailto:example@email.com"
                                 >
-                                  example@email.com
-                                </a>
-                              </ForwardRef(Link)>
-                            </span>
-                            <span
-                              className="contacts-item"
-                            >
-                              Соц. сети: 
-                              <ForwardRef(Link)
-                                className="inline"
-                                color="gray87"
-                                href="https://example.com"
-                                key="0"
-                                rel="nofollow"
-                                target="_blank"
+                                  <a
+                                    className="link color__gray87 hover-color__gray54"
+                                    data-testid="anchor"
+                                    href="mailto:example@email.com"
+                                  >
+                                    example@email.com
+                                  </a>
+                                </ForwardRef(Link)>
+                              </span>
+                              <span
+                                className="contacts-item"
                               >
-                                <a
-                                  className="link inline color__gray87 hover-color__gray54"
-                                  data-testid="anchor"
+                                Соц. сети: 
+                                <ForwardRef(Link)
+                                  className="inline"
+                                  color="gray87"
                                   href="https://example.com"
+                                  key="0"
                                   rel="nofollow"
                                   target="_blank"
                                 >
-                                  vk.com/oks2art
-                                </a>
-                              </ForwardRef(Link)>
-                              <ForwardRef(Link)
-                                className="inline"
-                                color="gray87"
-                                href="https://example.com"
-                                key="1"
-                                rel="nofollow"
-                                target="_blank"
-                              >
-                                <a
-                                  className="link inline color__gray87 hover-color__gray54"
-                                  data-testid="anchor"
+                                  <a
+                                    className="link inline color__gray87 hover-color__gray54"
+                                    data-testid="anchor"
+                                    href="https://example.com"
+                                    rel="nofollow"
+                                    target="_blank"
+                                  >
+                                    vk.com/oks2art
+                                  </a>
+                                </ForwardRef(Link)>
+                                <ForwardRef(Link)
+                                  className="inline"
+                                  color="gray87"
                                   href="https://example.com"
+                                  key="1"
                                   rel="nofollow"
                                   target="_blank"
                                 >
-                                  twitter.com/oks2art
-                                </a>
-                              </ForwardRef(Link)>
-                              <ForwardRef(Link)
-                                className="inline"
-                                color="gray87"
-                                href="https://example.com"
-                                key="2"
-                                rel="nofollow"
-                                target="_blank"
-                              >
-                                <a
-                                  className="link inline color__gray87 hover-color__gray54"
-                                  data-testid="anchor"
+                                  <a
+                                    className="link inline color__gray87 hover-color__gray54"
+                                    data-testid="anchor"
+                                    href="https://example.com"
+                                    rel="nofollow"
+                                    target="_blank"
+                                  >
+                                    twitter.com/oks2art
+                                  </a>
+                                </ForwardRef(Link)>
+                                <ForwardRef(Link)
+                                  className="inline"
+                                  color="gray87"
                                   href="https://example.com"
+                                  key="2"
                                   rel="nofollow"
                                   target="_blank"
                                 >
-                                  odnoklassniki.ru/oks2art
-                                </a>
-                              </ForwardRef(Link)>
-                            </span>
-                            <span
-                              className="contacts-item"
-                            >
-                              Skype: 
-                              <ForwardRef(Link)
-                                color="gray87"
-                                href="skype:example@skype.com"
+                                  <a
+                                    className="link inline color__gray87 hover-color__gray54"
+                                    data-testid="anchor"
+                                    href="https://example.com"
+                                    rel="nofollow"
+                                    target="_blank"
+                                  >
+                                    odnoklassniki.ru/oks2art
+                                  </a>
+                                </ForwardRef(Link)>
+                              </span>
+                              <span
+                                className="contacts-item"
                               >
-                                <a
-                                  className="link color__gray87 hover-color__gray54"
-                                  data-testid="anchor"
+                                Skype: 
+                                <ForwardRef(Link)
+                                  color="gray87"
                                   href="skype:example@skype.com"
                                 >
-                                  example@skype.com
-                                </a>
-                              </ForwardRef(Link)>
-                            </span>
-                            <span
-                              className="contacts-item"
-                            >
-                              <ForwardRef(Link)
-                                color="gray87"
-                                href="tel:88000000000;postd=8823"
+                                  <a
+                                    className="link color__gray87 hover-color__gray54"
+                                    data-testid="anchor"
+                                    href="skype:example@skype.com"
+                                  >
+                                    example@skype.com
+                                  </a>
+                                </ForwardRef(Link)>
+                              </span>
+                              <span
+                                className="contacts-item"
                               >
-                                <a
-                                  className="link color__gray87 hover-color__gray54"
-                                  data-testid="anchor"
+                                <ForwardRef(Link)
+                                  color="gray87"
                                   href="tel:88000000000;postd=8823"
                                 >
-                                  88000000000 доб. 8823
-                                </a>
-                              </ForwardRef(Link)>
-                            </span>
-                            <span
-                              className="contacts-item"
-                            >
-                              <ForwardRef(Link)
-                                color="gray87"
-                                href="tel:+7900000000"
+                                  <a
+                                    className="link color__gray87 hover-color__gray54"
+                                    data-testid="anchor"
+                                    href="tel:88000000000;postd=8823"
+                                  >
+                                    88000000000 доб. 8823
+                                  </a>
+                                </ForwardRef(Link)>
+                              </span>
+                              <span
+                                className="contacts-item"
                               >
-                                <a
-                                  className="link color__gray87 hover-color__gray54"
-                                  data-testid="anchor"
+                                <ForwardRef(Link)
+                                  color="gray87"
                                   href="tel:+7900000000"
                                 >
-                                  +7 (900) 000 000
-                                </a>
-                              </ForwardRef(Link)>
-                            </span>
+                                  <a
+                                    className="link color__gray87 hover-color__gray54"
+                                    data-testid="anchor"
+                                    href="tel:+7900000000"
+                                  >
+                                    +7 (900) 000 000
+                                  </a>
+                                </ForwardRef(Link)>
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  className="os-scrollbar os-scrollbar-horizontal "
-                >
                   <div
-                    className="os-scrollbar-track"
+                    className="os-scrollbar os-scrollbar-horizontal "
                   >
                     <div
-                      className="os-scrollbar-handle"
-                    />
-                  </div>
-                </div>
-                <div
-                  className="os-scrollbar os-scrollbar-vertical"
-                >
-                  <div
-                    className="os-scrollbar-track"
-                  >
-                    <div
-                      className="os-scrollbar-handle"
-                    />
-                  </div>
-                </div>
-                <div
-                  className="os-scrollbar-corner"
-                />
-              </div>
-            </OverlayScrollbarsComponent>
-          </CustomScrollbar>
-        </ModalBody>
-        <ModalFooter
-          divided={true}
-          key=".1"
-        >
-          <BottomBar
-            divided={true}
-          >
-            <div
-              className="root divided rounds-md__b"
-              data-testid="bottom-bar"
-              style={
-                Object {
-                  "height": "72px",
-                }
-              }
-            >
-              <CleanGroup>
-                <div
-                  className="clean-group"
-                >
-                  <CleanButton
-                    key=".0"
-                    onClick={[MockFunction]}
-                  >
-                    <ForwardRef(Link)
-                      className="clean-button"
-                      onClick={[MockFunction]}
-                      pseudo={false}
+                      className="os-scrollbar-track"
                     >
-                      <a
-                        className="link clean-button color__brand-blue hover-color__brand-deep-blue"
-                        data-testid="anchor"
-                        onClick={[MockFunction]}
-                      >
-                        Закрыть
-                      </a>
-                    </ForwardRef(Link)>
-                  </CleanButton>
+                      <div
+                        className="os-scrollbar-handle"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="os-scrollbar os-scrollbar-vertical"
+                  >
+                    <div
+                      className="os-scrollbar-track"
+                    >
+                      <div
+                        className="os-scrollbar-handle"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="os-scrollbar-corner"
+                  />
                 </div>
-              </CleanGroup>
-            </div>
-          </BottomBar>
-        </ModalFooter>
+              </OverlayScrollbarsComponent>
+            </CustomScrollbar>
+          </ModalBody>
+          <ModalFooter
+            divided={true}
+            key=".1"
+          >
+            <BottomBar
+              divided={true}
+            >
+              <div
+                className="root divided rounds-md__b"
+                data-testid="bottom-bar"
+                style={
+                  Object {
+                    "height": "72px",
+                  }
+                }
+              >
+                <CleanGroup>
+                  <div
+                    className="clean-group"
+                  >
+                    <CleanButton
+                      key=".0"
+                      onClick={[MockFunction]}
+                    >
+                      <ForwardRef(Link)
+                        className="clean-button"
+                        onClick={[MockFunction]}
+                        pseudo={false}
+                      >
+                        <a
+                          className="link clean-button color__brand-blue hover-color__brand-deep-blue"
+                          data-testid="anchor"
+                          onClick={[MockFunction]}
+                        >
+                          Закрыть
+                        </a>
+                      </ForwardRef(Link)>
+                    </CleanButton>
+                  </div>
+                </CleanGroup>
+              </div>
+            </BottomBar>
+          </ModalFooter>
+        </div>
       </div>
-    </div>
+    </ModalInner>
   </Modal>
 </PersonModal>
 `;
@@ -418,214 +424,219 @@ exports[`<PersonModal /> should renders properly with minimal props 1`] = `
     size="s"
     withScrollDisable={false}
   >
-    <div
-      className="overlay"
-      data-testid="modal:overlay"
-      onMouseDown={[Function]}
-      onMouseUp={[Function]}
-      style={
-        Object {
-          "zIndex": 100,
-        }
-      }
+    <ModalInner
+      size="s"
+      withScrollDisable={false}
     >
       <div
-        className="modal size-s shadow-z4"
-        data-testid="modal"
+        className="overlay"
+        data-testid="modal:overlay"
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
         style={
           Object {
-            "--footer-height": "72px",
-            "--header-height": "0px",
-            "--modal-height": undefined,
+            "zIndex": 100,
           }
         }
       >
-        <ModalBody
-          key=".0"
-        >
-          <CustomScrollbar
-            className="body"
-            inFlexBox={true}
-            overflow={
-              Object {
-                "x": "h",
-                "y": "s",
-              }
+        <div
+          className="modal size-s shadow-z4"
+          data-testid="modal"
+          style={
+            Object {
+              "--footer-height": "72px",
+              "--header-height": "0px",
+              "--modal-height": undefined,
             }
+          }
+        >
+          <ModalBody
+            key=".0"
           >
-            <OverlayScrollbarsComponent
-              className="custom-scrollbar body os-host-flexbox"
-              options={
+            <CustomScrollbar
+              className="body"
+              inFlexBox={true}
+              overflow={
                 Object {
-                  "callbacks": undefined,
-                  "overflowBehavior": Object {
-                    "x": "h",
-                    "y": "s",
-                  },
+                  "x": "h",
+                  "y": "s",
                 }
               }
             >
-              <div
-                className="os-host"
+              <OverlayScrollbarsComponent
+                className="custom-scrollbar body os-host-flexbox"
+                options={
+                  Object {
+                    "callbacks": undefined,
+                    "overflowBehavior": Object {
+                      "x": "h",
+                      "y": "s",
+                    },
+                  }
+                }
               >
                 <div
-                  className="os-resize-observer-host"
-                />
-                <div
-                  className="os-padding"
+                  className="os-host"
                 >
                   <div
-                    className="os-viewport"
+                    className="os-resize-observer-host"
+                  />
+                  <div
+                    className="os-padding"
                   >
                     <div
-                      className="os-content"
+                      className="os-viewport"
                     >
                       <div
-                        className="main"
+                        className="os-content"
                       >
                         <div
                           className="main"
                         >
-                          <Box
-                            marginBottom={6}
+                          <div
+                            className="main"
                           >
-                            <div
-                              className="M-b__6"
+                            <Box
+                              marginBottom={6}
                             >
-                              <UserAvatar
-                                size={104}
-                                title="Марина Михайловская"
+                              <div
+                                className="M-b__6"
                               >
-                                <Avatar
-                                  bgColor="additional-deep-red"
-                                  bgOpacity={0.48}
+                                <UserAvatar
                                   size={104}
-                                  textColor="white"
                                   title="Марина Михайловская"
                                 >
-                                  <div
-                                    className="root size-104 color__white"
-                                    data-testid="avatar"
-                                    style={
-                                      Object {
-                                        "--avatar-color": "#d50000",
-                                        "--avatar-color-opacity": 0.48,
-                                      }
-                                    }
+                                  <Avatar
+                                    bgColor="additional-deep-red"
+                                    bgOpacity={0.48}
+                                    size={104}
+                                    textColor="white"
+                                    title="Марина Михайловская"
                                   >
-                                    <span
-                                      className="monogram"
+                                    <div
+                                      className="root size-104 color__white"
+                                      data-testid="avatar"
+                                      style={
+                                        Object {
+                                          "--avatar-color": "#d50000",
+                                          "--avatar-color-opacity": 0.48,
+                                        }
+                                      }
                                     >
-                                      ММ
-                                    </span>
-                                  </div>
-                                </Avatar>
-                              </UserAvatar>
-                            </div>
-                          </Box>
-                          <Box
-                            marginBottom={1}
-                          >
-                            <div
-                              className="M-b__1"
+                                      <span
+                                        className="monogram"
+                                      >
+                                        ММ
+                                      </span>
+                                    </div>
+                                  </Avatar>
+                                </UserAvatar>
+                              </div>
+                            </Box>
+                            <Box
+                              marginBottom={1}
                             >
-                              <ForwardRef(Text)
-                                color="gray38"
-                                size={14}
-                                weight={400}
+                              <div
+                                className="M-b__1"
                               >
-                                <span
-                                  className="size-14 line-height-20 color__gray38 weight-400"
+                                <ForwardRef(Text)
+                                  color="gray38"
+                                  size={14}
+                                  weight={400}
                                 >
-                                  Дворник
-                                </span>
-                              </ForwardRef(Text)>
+                                  <span
+                                    className="size-14 line-height-20 color__gray38 weight-400"
+                                  >
+                                    Дворник
+                                  </span>
+                                </ForwardRef(Text)>
+                              </div>
+                            </Box>
+                            <div
+                              className="name"
+                            >
+                              Марина Михайловская
                             </div>
-                          </Box>
-                          <div
-                            className="name"
-                          >
-                            Марина Михайловская
+                            <div
+                              className="contacts"
+                            />
                           </div>
-                          <div
-                            className="contacts"
-                          />
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  className="os-scrollbar os-scrollbar-horizontal "
-                >
                   <div
-                    className="os-scrollbar-track"
+                    className="os-scrollbar os-scrollbar-horizontal "
                   >
                     <div
-                      className="os-scrollbar-handle"
-                    />
-                  </div>
-                </div>
-                <div
-                  className="os-scrollbar os-scrollbar-vertical"
-                >
-                  <div
-                    className="os-scrollbar-track"
-                  >
-                    <div
-                      className="os-scrollbar-handle"
-                    />
-                  </div>
-                </div>
-                <div
-                  className="os-scrollbar-corner"
-                />
-              </div>
-            </OverlayScrollbarsComponent>
-          </CustomScrollbar>
-        </ModalBody>
-        <ModalFooter
-          divided={true}
-          key=".1"
-        >
-          <BottomBar
-            divided={true}
-          >
-            <div
-              className="root divided rounds-md__b"
-              data-testid="bottom-bar"
-              style={
-                Object {
-                  "height": "72px",
-                }
-              }
-            >
-              <CleanGroup>
-                <div
-                  className="clean-group"
-                >
-                  <CleanButton
-                    key=".0"
-                  >
-                    <ForwardRef(Link)
-                      className="clean-button"
-                      pseudo={false}
+                      className="os-scrollbar-track"
                     >
-                      <a
-                        className="link clean-button color__brand-blue hover-color__brand-deep-blue"
-                        data-testid="anchor"
-                      >
-                        Закрыть
-                      </a>
-                    </ForwardRef(Link)>
-                  </CleanButton>
+                      <div
+                        className="os-scrollbar-handle"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="os-scrollbar os-scrollbar-vertical"
+                  >
+                    <div
+                      className="os-scrollbar-track"
+                    >
+                      <div
+                        className="os-scrollbar-handle"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="os-scrollbar-corner"
+                  />
                 </div>
-              </CleanGroup>
-            </div>
-          </BottomBar>
-        </ModalFooter>
+              </OverlayScrollbarsComponent>
+            </CustomScrollbar>
+          </ModalBody>
+          <ModalFooter
+            divided={true}
+            key=".1"
+          >
+            <BottomBar
+              divided={true}
+            >
+              <div
+                className="root divided rounds-md__b"
+                data-testid="bottom-bar"
+                style={
+                  Object {
+                    "height": "72px",
+                  }
+                }
+              >
+                <CleanGroup>
+                  <div
+                    className="clean-group"
+                  >
+                    <CleanButton
+                      key=".0"
+                    >
+                      <ForwardRef(Link)
+                        className="clean-button"
+                        pseudo={false}
+                      >
+                        <a
+                          className="link clean-button color__brand-blue hover-color__brand-deep-blue"
+                          data-testid="anchor"
+                        >
+                          Закрыть
+                        </a>
+                      </ForwardRef(Link)>
+                    </CleanButton>
+                  </div>
+                </CleanGroup>
+              </div>
+            </BottomBar>
+          </ModalFooter>
+        </div>
       </div>
-    </div>
+    </ModalInner>
   </Modal>
 </PersonModal>
 `;

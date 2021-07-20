@@ -58,7 +58,7 @@ module.exports = ({ config }) => {
             },
           ],
           include: path.resolve(__dirname, '../'),
-          exclude: /node_modules\/(?!(@dev-dep)).*/,
+          exclude: /node_modules\/(?!(@sima-land)).*/,
         },
 
         {

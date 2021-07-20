@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './product-card.module.scss';
 import classnames from 'classnames/bind';
-import MoreSVG from '@dev-dep/ui-quarks/icons/24x24/Filled/more';
-import { Link } from '@dev-dep/ui-nucleons/link';
-import { Price } from '@dev-dep/ui-nucleons/price';
-import { Box } from '@dev-dep/ui-nucleons/box';
-import { Text } from '@dev-dep/ui-nucleons/text';
+import MoreSVG from '@sima-land/ui-quarks/icons/24x24/Filled/more';
+import { Link } from '@sima-land/ui-nucleons/link';
+import { Price } from '@sima-land/ui-nucleons/price';
+import { Box } from '@sima-land/ui-nucleons/box';
+import { Text } from '@sima-land/ui-nucleons/text';
 import { WishButton } from '../../../common/components/wish-button';
 import { isFunction } from 'lodash';
 

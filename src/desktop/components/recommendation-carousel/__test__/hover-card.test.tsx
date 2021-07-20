@@ -3,9 +3,9 @@ import { mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 import { HoverCard } from '../hover-card';
 import { ProductInfo } from '../product-info';
-import { Link } from '@dev-dep/ui-nucleons/link';
+import { Link } from '@sima-land/ui-nucleons/link';
 import { ProductCard } from '../product-card';
-import { Stepper } from '@dev-dep/ui-nucleons/stepper';
+import { Stepper } from '@sima-land/ui-nucleons/stepper';
 
 describe('<HoverCard />', () => {
   it('should renders hidden', () => {

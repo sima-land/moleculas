@@ -2,7 +2,7 @@ import React, { Component, createRef } from 'react';
 import debounce from 'lodash/debounce';
 import prop from 'lodash/fp/prop';
 import { ModifierButton, ModifierButtonProps, Modifier } from '../button';
-import on from '@dev-dep/ui-nucleons/helpers/on';
+import on from '@sima-land/ui-nucleons/helpers/on';
 import classes from './modifiers-group.module.scss';
 import classnames from 'classnames/bind';
 

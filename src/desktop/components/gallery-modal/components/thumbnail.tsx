@@ -1,7 +1,7 @@
 import React from 'react';
 import { MediaType } from '../types';
 import { ImageOverlay } from './image-overlay';
-import PlaySVG from '@dev-dep/ui-quarks/icons/24x24/Filled/play';
+import PlaySVG from '@sima-land/ui-quarks/icons/24x24/Filled/play';
 import classNames from 'classnames/bind';
 import styles from './thumbnail.module.scss';
 import AllRoundSVG from '../icons/360.svg';

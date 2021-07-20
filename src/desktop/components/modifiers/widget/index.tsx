@@ -1,8 +1,8 @@
 import React from 'react';
-import getDeclination from '@dev-dep/ui-nucleons/helpers/get-declination';
+import getDeclination from '@sima-land/ui-nucleons/helpers/get-declination';
 import { ModifiersGroup } from '../group';
 import prop from 'lodash/fp/prop';
-import { Link } from '@dev-dep/ui-nucleons/link';
+import { Link } from '@sima-land/ui-nucleons/link';
 import { Modifier } from '../button';
 import classnames from 'classnames/bind';
 import styles from './modifiers-widget.module.scss';

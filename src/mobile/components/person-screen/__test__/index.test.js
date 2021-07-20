@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { PersonScreen } from '..';
-import { colorKey } from '@dev-dep/ui-nucleons/avatar/user';
+import { colorKey } from '@sima-land/ui-nucleons/avatar/user';
 
 describe('<PersonScreen />', () => {
   beforeEach(() => {

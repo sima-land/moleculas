@@ -8,7 +8,7 @@ module.exports = {
     'enzyme-to-json/serializer',
   ],
   transformIgnorePatterns: [
-    '/node_modules/@dev-dep/ui-nucleons/.+\\.(?!(svg))([^.]+$)/',
+    '/node_modules/@sima-land/ui-nucleons/.+\\.(?!(svg))([^.]+$)/',
   ],
   testPathIgnorePatterns: [
     '<rootDir>/.yarn-cache/', '<rootDir>/node_modules/',

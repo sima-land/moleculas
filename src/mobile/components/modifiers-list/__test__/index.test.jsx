@@ -3,8 +3,8 @@ import { shallow, mount } from 'enzyme';
 import omit from 'lodash/omit';
 import { ModifiersList } from '..';
 import { ModifierItem } from '../modifier-item';
-import { Link } from '@dev-dep/ui-nucleons/link';
-import StatementSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/statement';
+import { Link } from '@sima-land/ui-nucleons/link';
+import StatementSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/statement';
 
 describe('<ModifiersList />', () => {
   const items = [

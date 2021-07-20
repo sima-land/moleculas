@@ -41,9 +41,11 @@ exports[`ProductActionsContent renders properly 1`] = `
           <div>
             <div
               class="overlay"
+              style="z-index: 100;"
             >
               <div
                 class="alert"
+                data-testid="alert"
               >
                 <div
                   class="nav-bar header"
@@ -129,134 +131,150 @@ exports[`ProductActionsContent renders properly 1`] = `
           </div>
         }
       >
-        <div
-          className="overlay"
+        <AlertInner
+          footer={
+            <CleanGroup>
+              <CleanButton>
+                Закрыть
+              </CleanButton>
+            </CleanGroup>
+          }
+          title="title"
         >
           <div
-            className="alert"
+            className="overlay"
+            style={
+              Object {
+                "zIndex": 100,
+              }
+            }
           >
-            <NavBar
-              bottomBordered={false}
-              className="header"
-              title="title"
+            <div
+              className="alert"
+              data-testid="alert"
             >
-              <div
-                className="nav-bar header"
+              <NavBar
+                className="header"
+                title="title"
               >
                 <div
-                  className="main"
+                  className="nav-bar header"
                 >
                   <div
-                    className="title truncate"
+                    className="main"
                   >
-                    title
+                    <div
+                      className="title truncate"
+                    >
+                      title
+                    </div>
                   </div>
                 </div>
-              </div>
-            </NavBar>
-            <div
-              className="main"
-            >
+              </NavBar>
               <div
-                className="buttons"
+                className="main"
               >
-                <ForwardRef(Link)
-                  className="button"
-                  color="gray87"
-                  href="href"
-                  key="0"
-                  onClick={[Function]}
+                <div
+                  className="buttons"
                 >
-                  <a
-                    className="link button color__gray87 hover-color__gray54"
-                    data-testid="anchor"
+                  <ForwardRef(Link)
+                    className="button"
+                    color="gray87"
                     href="href"
+                    key="0"
                     onClick={[Function]}
                   >
-                    <div
-                      className="icon-wrapper"
+                    <a
+                      className="link button color__gray87 hover-color__gray54"
+                      data-testid="anchor"
+                      href="href"
+                      onClick={[Function]}
                     >
-                      <ForwardRef(StatementSVG)>
-                        <svg
-                          height={24}
-                          viewBox="0 0 24 24"
-                          width={24}
-                        >
-                          <path
-                            d="M8 16a1 1 0 001 1h4a1 1 0 100-2H9a1 1 0 00-1 1zM9 13a1 1 0 110-2h6a1 1 0 110 2H9zM8 8a1 1 0 001 1h6a1 1 0 100-2H9a1 1 0 00-1 1z"
-                          />
-                          <path
-                            clipRule="evenodd"
-                            d="M6 2h12a3 3 0 013 3v14a3 3 0 01-3 3H6a3 3 0 01-3-3V5a3 3 0 013-3zm0 2a1 1 0 00-1 1v14a1 1 0 001 1h12a1 1 0 001-1V5a1 1 0 00-1-1H6z"
-                            fillRule="evenodd"
-                          />
-                        </svg>
-                      </ForwardRef(StatementSVG)>
-                    </div>
-                    text
-                  </a>
-                </ForwardRef(Link)>
-                <ForwardRef(Link)
-                  className="button"
-                  color="gray87"
-                  href="href"
-                  key="1"
-                >
-                  <a
-                    className="link button color__gray87 hover-color__gray54"
-                    data-testid="anchor"
+                      <div
+                        className="icon-wrapper"
+                      >
+                        <ForwardRef(StatementSVG)>
+                          <svg
+                            height={24}
+                            viewBox="0 0 24 24"
+                            width={24}
+                          >
+                            <path
+                              d="M8 16a1 1 0 001 1h4a1 1 0 100-2H9a1 1 0 00-1 1zM9 13a1 1 0 110-2h6a1 1 0 110 2H9zM8 8a1 1 0 001 1h6a1 1 0 100-2H9a1 1 0 00-1 1z"
+                            />
+                            <path
+                              clipRule="evenodd"
+                              d="M6 2h12a3 3 0 013 3v14a3 3 0 01-3 3H6a3 3 0 01-3-3V5a3 3 0 013-3zm0 2a1 1 0 00-1 1v14a1 1 0 001 1h12a1 1 0 001-1V5a1 1 0 00-1-1H6z"
+                              fillRule="evenodd"
+                            />
+                          </svg>
+                        </ForwardRef(StatementSVG)>
+                      </div>
+                      text
+                    </a>
+                  </ForwardRef(Link)>
+                  <ForwardRef(Link)
+                    className="button"
+                    color="gray87"
                     href="href"
+                    key="1"
                   >
-                    <div
-                      className="icon-wrapper"
-                    />
-                    text
-                  </a>
-                </ForwardRef(Link)>
-                <ForwardRef(Link)
-                  className="button"
-                  color="gray87"
-                  key="2"
-                >
-                  <a
-                    className="link button color__gray87 hover-color__gray54"
-                    data-testid="anchor"
+                    <a
+                      className="link button color__gray87 hover-color__gray54"
+                      data-testid="anchor"
+                      href="href"
+                    >
+                      <div
+                        className="icon-wrapper"
+                      />
+                      text
+                    </a>
+                  </ForwardRef(Link)>
+                  <ForwardRef(Link)
+                    className="button"
+                    color="gray87"
+                    key="2"
                   >
-                    <div
-                      className="icon-wrapper"
-                    />
-                    text
-                  </a>
-                </ForwardRef(Link)>
+                    <a
+                      className="link button color__gray87 hover-color__gray54"
+                      data-testid="anchor"
+                    >
+                      <div
+                        className="icon-wrapper"
+                      />
+                      text
+                    </a>
+                  </ForwardRef(Link)>
+                </div>
+              </div>
+              <div
+                className="inner-border-top"
+              >
+                <CleanGroup>
+                  <div
+                    className="clean-group"
+                  >
+                    <CleanButton
+                      key=".0"
+                    >
+                      <ForwardRef(Link)
+                        className="clean-button"
+                        pseudo={false}
+                      >
+                        <a
+                          className="link clean-button color__brand-blue hover-color__brand-deep-blue"
+                          data-testid="anchor"
+                        >
+                          Закрыть
+                        </a>
+                      </ForwardRef(Link)>
+                    </CleanButton>
+                  </div>
+                </CleanGroup>
               </div>
             </div>
-            <div
-              className="inner-border-top"
-            >
-              <CleanGroup>
-                <div
-                  className="clean-group"
-                >
-                  <CleanButton
-                    key=".0"
-                  >
-                    <ForwardRef(Link)
-                      className="clean-button"
-                      pseudo={false}
-                    >
-                      <a
-                        className="link clean-button color__brand-blue hover-color__brand-deep-blue"
-                        data-testid="anchor"
-                      >
-                        Закрыть
-                      </a>
-                    </ForwardRef(Link)>
-                  </CleanButton>
-                </div>
-              </CleanGroup>
-            </div>
           </div>
-        </div>
+        </AlertInner>
       </Portal>
     </Portal>
   </Alert>

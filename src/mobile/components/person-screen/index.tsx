@@ -1,14 +1,14 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-import { UserAvatar } from '@dev-dep/ui-nucleons/avatar/user';
-import { Box } from '@dev-dep/ui-nucleons/box';
-import { Text } from '@dev-dep/ui-nucleons/text';
-import { Screen, Props as ScreenProps } from '@dev-dep/ui-nucleons/screen';
-import { InnerBorder } from '@dev-dep/ui-nucleons/styling/borders';
-import MailSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/mail';
-import SkypeSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/skype';
-import PhoneSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/phone';
-import MobileSVG from '@dev-dep/ui-quarks/icons/24x24/Filled/mobile';
+import { UserAvatar } from '@sima-land/ui-nucleons/avatar/user';
+import { Box } from '@sima-land/ui-nucleons/box';
+import { Text } from '@sima-land/ui-nucleons/text';
+import { Screen, Props as ScreenProps } from '@sima-land/ui-nucleons/screen';
+import { InnerBorder } from '@sima-land/ui-nucleons/styling/borders';
+import MailSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/mail';
+import SkypeSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/skype';
+import PhoneSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/phone';
+import MobileSVG from '@sima-land/ui-quarks/icons/24x24/Filled/mobile';
 import classes from './person-screen.module.scss';
 
 export interface PersonScreenProps extends ScreenProps {

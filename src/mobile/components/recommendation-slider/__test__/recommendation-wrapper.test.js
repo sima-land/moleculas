@@ -6,8 +6,8 @@ import RecommendationWrapper, {
   RecommendationWrapper as PureRecommendationWrapper,
 } from '../recommendation-wrapper';
 import RecommendedItem from '../recommended-item';
-import { Text } from '@dev-dep/ui-nucleons/text';
-import { TouchSlider } from '@dev-dep/ui-nucleons/touch-slider';
+import { Text } from '@sima-land/ui-nucleons/text';
+import { TouchSlider } from '@sima-land/ui-nucleons/touch-slider';
 import isFunction from 'lodash/isFunction';
 
 describe('<RecommendationWrapper />', () => {

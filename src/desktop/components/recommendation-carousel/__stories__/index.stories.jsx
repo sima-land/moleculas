@@ -1,7 +1,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { RecommendationCarousel } from '..';
-import { Box } from '@dev-dep/ui-nucleons/box';
+import { Box } from '@sima-land/ui-nucleons/box';
 import { items } from '../__test__/test-items';
 
 export default {

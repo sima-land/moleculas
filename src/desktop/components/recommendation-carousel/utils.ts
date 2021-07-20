@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import on from '@dev-dep/ui-nucleons/helpers/on';
+import on from '@sima-land/ui-nucleons/helpers/on';
 
 /**
  * Вызывает callback когда заданный в ref элемент попал во viewport.

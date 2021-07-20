@@ -1,6 +1,6 @@
 import React from 'react';
 import { PromotionType } from './types';
-import { Timer } from '@dev-dep/ui-nucleons/timer';
+import { Timer } from '@sima-land/ui-nucleons/timer';
 import { formatISO } from 'date-fns';
 import styles from './banner-title.m.module.scss';
 

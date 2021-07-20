@@ -1,7 +1,7 @@
 import React from 'react';
 import { ModifierItem, ModifierItemProps } from './modifier-item';
-import { Link } from '@dev-dep/ui-nucleons/link';
-import StatementSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/statement';
+import { Link } from '@sima-land/ui-nucleons/link';
+import StatementSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/statement';
 import classes from './modifiers-list.module.scss';
 import classnames from 'classnames/bind';
 

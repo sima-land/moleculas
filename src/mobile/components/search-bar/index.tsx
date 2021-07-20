@@ -2,15 +2,15 @@ import React, { useState, useRef, useEffect, forwardRef } from 'react';
 import classnames from 'classnames/bind';
 import classes from './search-bar.module.scss';
 import { isFunction, throttle } from 'lodash';
-import { Link } from '@dev-dep/ui-nucleons/link';
-import { COLORS, Token } from '@dev-dep/ui-nucleons/colors';
-import { Dropdown } from '@dev-dep/ui-nucleons/dropdown';
-import { DropdownItem } from '@dev-dep/ui-nucleons/dropdown-item';
-import { useOutsideClick } from '@dev-dep/ui-nucleons/hooks/';
-import on from '@dev-dep/ui-nucleons/helpers/on';
-import CrossSVG from '@dev-dep/ui-quarks/icons/24x24/Filled/cross';
-import SearchSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/magnifier';
-import MoreVertSVG from '@dev-dep/ui-quarks/icons/24x24/Filled/more-vert';
+import { Link } from '@sima-land/ui-nucleons/link';
+import { COLORS, Token } from '@sima-land/ui-nucleons/colors';
+import { Dropdown } from '@sima-land/ui-nucleons/dropdown';
+import { DropdownItem } from '@sima-land/ui-nucleons/dropdown-item';
+import { useOutsideClick } from '@sima-land/ui-nucleons/hooks/';
+import on from '@sima-land/ui-nucleons/helpers/on';
+import CrossSVG from '@sima-land/ui-quarks/icons/24x24/Filled/cross';
+import SearchSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/magnifier';
+import MoreVertSVG from '@sima-land/ui-quarks/icons/24x24/Filled/more-vert';
 
 export const cx = classnames.bind(classes);
 

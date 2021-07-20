@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { useIdentityRef } from '@dev-dep/ui-nucleons/hooks/identity';
-import { WithHint } from '@dev-dep/ui-nucleons/with-hint';
-import on from '@dev-dep/ui-nucleons/helpers/on';
+import { useIdentityRef } from '@sima-land/ui-nucleons/hooks/identity';
+import { WithHint } from '@sima-land/ui-nucleons/with-hint';
+import on from '@sima-land/ui-nucleons/helpers/on';
 import { useImagesLoad } from '../utils';
 import classNames from 'classnames/bind';
 import styles from './all-round-view.module.scss';

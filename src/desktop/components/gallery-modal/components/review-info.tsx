@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from '@dev-dep/ui-nucleons/link';
-import { Rating } from '@dev-dep/ui-nucleons/rating';
+import { Link } from '@sima-land/ui-nucleons/link';
+import { Rating } from '@sima-land/ui-nucleons/rating';
 import cn from 'classnames';
 import styles from './review-info.module.scss';
 

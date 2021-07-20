@@ -3,16 +3,16 @@ import { mount, ReactWrapper } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 import { RecommendationCarousel } from '..';
 import { items } from './test-items';
-import { useMedia } from '@dev-dep/ui-nucleons/hooks/media';
+import { useMedia } from '@sima-land/ui-nucleons/hooks/media';
 import { HoverCard } from '../hover-card';
 import { ProductCard } from '../product-card';
 import { ProductInfo } from '../product-info';
-import { Link } from '@dev-dep/ui-nucleons/link';
-import { Carousel } from '@dev-dep/ui-nucleons/carousel';
-import { Stepper } from '@dev-dep/ui-nucleons/stepper';
+import { Link } from '@sima-land/ui-nucleons/link';
+import { Carousel } from '@sima-land/ui-nucleons/carousel';
+import { Stepper } from '@sima-land/ui-nucleons/stepper';
 
-jest.mock('@dev-dep/ui-nucleons/hooks/media', () => {
-  const original = jest.requireActual('@dev-dep/ui-nucleons/hooks/media');
+jest.mock('@sima-land/ui-nucleons/hooks/media', () => {
+  const original = jest.requireActual('@sima-land/ui-nucleons/hooks/media');
 
   const fakeUseMedia = (): boolean => Boolean((fakeUseMedia as any).__flag);
 

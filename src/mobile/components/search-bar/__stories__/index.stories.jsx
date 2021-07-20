@@ -1,6 +1,6 @@
 import React from 'react';
 import { SearchBar } from '..';
-import ArrowLeftSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/arrow-left';
+import ArrowLeftSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/arrow-left';
 import { action } from '@storybook/addon-actions';
 
 export default {

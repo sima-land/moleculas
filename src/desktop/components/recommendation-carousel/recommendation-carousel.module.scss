@@ -1,5 +1,5 @@
-@use 'node_modules/@dev-dep/ui-nucleons/breakpoints';
-@use 'node_modules/@dev-dep/ui-nucleons/colors';
+@use 'node_modules/@sima-land/ui-nucleons/breakpoints';
+@use 'node_modules/@sima-land/ui-nucleons/colors';
 
 $breakpoints: 'xs', 's', 'm', 'l', 'xl';
 $gutter: 32px;

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button } from '@dev-dep/ui-nucleons/button';
-import { Stepper } from '@dev-dep/ui-nucleons/stepper';
+import { Button } from '@sima-land/ui-nucleons/button';
+import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import { useCartItemInput } from './utils';
 import SpinnerSVG from '../../../common/icons/white-spinner.svg';
 import classnames from 'classnames/bind';

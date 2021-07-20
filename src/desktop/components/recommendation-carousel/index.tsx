@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react';
-import { Carousel } from '@dev-dep/ui-nucleons/carousel';
+import { Carousel } from '@sima-land/ui-nucleons/carousel';
 import { ProductInfo } from './product-info';
 import { HoverCard, HoverCardProps } from './hover-card';
 import { useAllowFlag, useChildWidth, useViewport } from './utils';
-import { useMedia } from '@dev-dep/ui-nucleons/hooks/media';
+import { useMedia } from '@sima-land/ui-nucleons/hooks/media';
 import { CarouselItem } from './types';
 import classnames from 'classnames/bind';
 import styles from './recommendation-carousel.module.scss';

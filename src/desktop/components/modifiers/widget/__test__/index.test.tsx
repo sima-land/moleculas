@@ -2,7 +2,7 @@ import React from 'react';
 import { act } from 'react-dom/test-utils';
 import { mount } from 'enzyme';
 import { ModifiersWidget } from '..';
-import { Link } from '@dev-dep/ui-nucleons/link';
+import { Link } from '@sima-land/ui-nucleons/link';
 
 describe('<ModifiersWidget />', () => {
   it('should renders correctly with prop', () => {

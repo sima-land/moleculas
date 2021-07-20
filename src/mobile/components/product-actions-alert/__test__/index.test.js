@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { ProductActionsAlert } from '..';
 import { noop } from 'lodash';
-import StatementSVG from '@dev-dep/ui-quarks/icons/24x24/Stroked/statement';
+import StatementSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/statement';
 
 describe('ProductActionsContent', () => {
   it('renders properly', () => {
