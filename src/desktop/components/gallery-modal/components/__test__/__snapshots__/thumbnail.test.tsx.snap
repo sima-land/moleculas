@@ -74,9 +74,11 @@ exports[`Thumbnail should render image 1`] = `
     data-testid="gallery-modal:thumbnail"
     onClick={[MockFunction]}
   >
-    <ImageOverlay>
+    <ImageOverlay
+      className="image-overlay"
+    >
       <div
-        className="root"
+        className="root image-overlay"
       >
         <img
           src="https://image.com/1"

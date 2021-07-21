@@ -98,6 +98,14 @@ export const data: { media: MediaData[] } = {
       type: 'image',
       data: {
         alt: 'Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1',
+        src: 'https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg',
+        thumbnailSrc: 'https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg',
+      },
+    },
+    {
+      type: 'image',
+      data: {
+        alt: 'Фото из отзыва, не квадратное',
         src: 'https://cdn3.static1-sima-land.com/items/3243668/0/700.jpg?v=1586378755',
         thumbnailSrc: 'https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755',
       },

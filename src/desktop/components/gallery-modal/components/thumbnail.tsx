@@ -37,7 +37,7 @@ export const Thumbnail = ({
       <PlaySVG width={32} height={32} fill='currentColor' />
     )}
     {src && (
-      <ImageOverlay>
+      <ImageOverlay className={cx('image-overlay')}>
         <img src={src} alt={alt} />
       </ImageOverlay>
     )}

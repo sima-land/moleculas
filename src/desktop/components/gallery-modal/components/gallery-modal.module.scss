@@ -1,16 +1,16 @@
 @use 'node_modules/@sima-land/ui-nucleons/colors';
 
 .root {
-  position: relative;
   height: calc(100vh - var(--header-height) - 40px);
+  position: relative;
 }
 
 .thumbnails {
+  height: var(--area-height);
+  overflow-x: hidden;
+  overflow-y: auto;
   position: absolute;
   width: 104px;
-  height: var(--area-height);
-  overflow: hidden;
-  overflow-y: auto;
   .thumbnail + .thumbnail {
     margin-top: 8px;
   }
@@ -18,20 +18,19 @@
 
 .area {
   height: 100%;
-  width: calc(100% - (2 * (120px + 56px + 24px)));
   margin: 0 auto;
+  width: calc(100% - (2 * (120px + 56px + 24px)));
   .inner {
-    margin: 0 auto;
     height: 100%;
+    margin: 0 auto;
   }
   .square {
     position: relative;
-    background: #eee;
     &::after {
       content: '';
       display: block;
-      width: 100%;
       padding-top: 100%;
+      width: 100%;
     }
     .button {
       position: absolute;
@@ -48,25 +47,26 @@
 }
 
 .media {
+  height: 100%;
   position: absolute;
   width: 100%;
-  height: 100%;
   .media-image-wrap,
   video {
-    position: absolute;
     display: block;
-    top: 0;
+    height: 100%;
     left: 0;
+    position: absolute;
+    top: 0;
     width: 100%;
-    height: 100%;
-  }
-  .media-image-wrap img {
-    display: block;
-    width: 100;
-    height: 100%;
   }
   video {
     background: #000;
+  }
+  .media-image-wrap img {
+    display: block;
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
   }
 }
 
