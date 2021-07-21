@@ -99,6 +99,14 @@ exports[`GalleryModal should renders 1`] = `
       Object {
         "data": Object {
           "alt": "Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1",
+          "src": "https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg",
+          "thumbnailSrc": "https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg",
+        },
+        "type": "image",
+      },
+      Object {
+        "data": Object {
+          "alt": "Фото из отзыва, не квадратное",
           "src": "https://cdn3.static1-sima-land.com/items/3243668/0/700.jpg?v=1586378755",
           "thumbnailSrc": "https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755",
         },
@@ -325,6 +333,34 @@ exports[`GalleryModal should renders 1`] = `
                                   className="thumbnail"
                                   key="2"
                                   onClick={[Function]}
+                                  src="https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg"
+                                  type="image"
+                                >
+                                  <button
+                                    className="root thumbnail"
+                                    data-testid="gallery-modal:thumbnail"
+                                    onClick={[Function]}
+                                  >
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
+                                      <div
+                                        className="root image-overlay"
+                                      >
+                                        <img
+                                          alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1"
+                                          src="https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg"
+                                        />
+                                      </div>
+                                    </ImageOverlay>
+                                  </button>
+                                </Thumbnail>
+                                <Thumbnail
+                                  alt="Фото из отзыва, не квадратное"
+                                  checked={false}
+                                  className="thumbnail"
+                                  key="3"
+                                  onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755"
                                   type="image"
                                 >
@@ -333,12 +369,14 @@ exports[`GalleryModal should renders 1`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
-                                          alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1"
+                                          alt="Фото из отзыва, не квадратное"
                                           src="https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755"
                                         />
                                       </div>
@@ -349,7 +387,7 @@ exports[`GalleryModal should renders 1`] = `
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 2"
                                   checked={false}
                                   className="thumbnail"
-                                  key="3"
+                                  key="4"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/1/400.jpg?v=1586378264"
                                   type="image"
@@ -359,9 +397,11 @@ exports[`GalleryModal should renders 1`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 2"
@@ -375,7 +415,7 @@ exports[`GalleryModal should renders 1`] = `
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 3"
                                   checked={false}
                                   className="thumbnail"
-                                  key="4"
+                                  key="5"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/2/400.jpg?v=1586378424"
                                   type="image"
@@ -385,9 +425,11 @@ exports[`GalleryModal should renders 1`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 3"
@@ -401,7 +443,7 @@ exports[`GalleryModal should renders 1`] = `
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 4"
                                   checked={false}
                                   className="thumbnail"
-                                  key="5"
+                                  key="6"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/3/400.jpg?v=1586378301"
                                   type="image"
@@ -411,9 +453,11 @@ exports[`GalleryModal should renders 1`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 4"
@@ -427,7 +471,7 @@ exports[`GalleryModal should renders 1`] = `
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 5"
                                   checked={false}
                                   className="thumbnail"
-                                  key="6"
+                                  key="7"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/4/400.jpg?v=1586379815"
                                   type="image"
@@ -437,9 +481,11 @@ exports[`GalleryModal should renders 1`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 5"
@@ -971,6 +1017,14 @@ exports[`GalleryModal should renders with review footer 1`] = `
       Object {
         "data": Object {
           "alt": "Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1",
+          "src": "https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg",
+          "thumbnailSrc": "https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg",
+        },
+        "type": "image",
+      },
+      Object {
+        "data": Object {
+          "alt": "Фото из отзыва, не квадратное",
           "src": "https://cdn3.static1-sima-land.com/items/3243668/0/700.jpg?v=1586378755",
           "thumbnailSrc": "https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755",
         },
@@ -1305,6 +1359,34 @@ exports[`GalleryModal should renders with review footer 1`] = `
                                   className="thumbnail"
                                   key="2"
                                   onClick={[Function]}
+                                  src="https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg"
+                                  type="image"
+                                >
+                                  <button
+                                    className="root thumbnail"
+                                    data-testid="gallery-modal:thumbnail"
+                                    onClick={[Function]}
+                                  >
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
+                                      <div
+                                        className="root image-overlay"
+                                      >
+                                        <img
+                                          alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1"
+                                          src="https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg"
+                                        />
+                                      </div>
+                                    </ImageOverlay>
+                                  </button>
+                                </Thumbnail>
+                                <Thumbnail
+                                  alt="Фото из отзыва, не квадратное"
+                                  checked={false}
+                                  className="thumbnail"
+                                  key="3"
+                                  onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755"
                                   type="image"
                                 >
@@ -1313,12 +1395,14 @@ exports[`GalleryModal should renders with review footer 1`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
-                                          alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1"
+                                          alt="Фото из отзыва, не квадратное"
                                           src="https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755"
                                         />
                                       </div>
@@ -1329,7 +1413,7 @@ exports[`GalleryModal should renders with review footer 1`] = `
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 2"
                                   checked={false}
                                   className="thumbnail"
-                                  key="3"
+                                  key="4"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/1/400.jpg?v=1586378264"
                                   type="image"
@@ -1339,9 +1423,11 @@ exports[`GalleryModal should renders with review footer 1`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 2"
@@ -1355,7 +1441,7 @@ exports[`GalleryModal should renders with review footer 1`] = `
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 3"
                                   checked={false}
                                   className="thumbnail"
-                                  key="4"
+                                  key="5"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/2/400.jpg?v=1586378424"
                                   type="image"
@@ -1365,9 +1451,11 @@ exports[`GalleryModal should renders with review footer 1`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 3"
@@ -1381,7 +1469,7 @@ exports[`GalleryModal should renders with review footer 1`] = `
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 4"
                                   checked={false}
                                   className="thumbnail"
-                                  key="5"
+                                  key="6"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/3/400.jpg?v=1586378301"
                                   type="image"
@@ -1391,9 +1479,11 @@ exports[`GalleryModal should renders with review footer 1`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 4"
@@ -1407,7 +1497,7 @@ exports[`GalleryModal should renders with review footer 1`] = `
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 5"
                                   checked={false}
                                   className="thumbnail"
-                                  key="6"
+                                  key="7"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/4/400.jpg?v=1586379815"
                                   type="image"
@@ -1417,9 +1507,11 @@ exports[`GalleryModal should renders with review footer 1`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 5"
@@ -2113,6 +2205,14 @@ exports[`GalleryModal should renders with review footer 2`] = `
       Object {
         "data": Object {
           "alt": "Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1",
+          "src": "https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg",
+          "thumbnailSrc": "https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg",
+        },
+        "type": "image",
+      },
+      Object {
+        "data": Object {
+          "alt": "Фото из отзыва, не квадратное",
           "src": "https://cdn3.static1-sima-land.com/items/3243668/0/700.jpg?v=1586378755",
           "thumbnailSrc": "https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755",
         },
@@ -2460,6 +2560,34 @@ exports[`GalleryModal should renders with review footer 2`] = `
                                   className="thumbnail"
                                   key="2"
                                   onClick={[Function]}
+                                  src="https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg"
+                                  type="image"
+                                >
+                                  <button
+                                    className="root thumbnail"
+                                    data-testid="gallery-modal:thumbnail"
+                                    onClick={[Function]}
+                                  >
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
+                                      <div
+                                        className="root image-overlay"
+                                      >
+                                        <img
+                                          alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1"
+                                          src="https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg"
+                                        />
+                                      </div>
+                                    </ImageOverlay>
+                                  </button>
+                                </Thumbnail>
+                                <Thumbnail
+                                  alt="Фото из отзыва, не квадратное"
+                                  checked={false}
+                                  className="thumbnail"
+                                  key="3"
+                                  onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755"
                                   type="image"
                                 >
@@ -2468,12 +2596,14 @@ exports[`GalleryModal should renders with review footer 2`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
-                                          alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1"
+                                          alt="Фото из отзыва, не квадратное"
                                           src="https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755"
                                         />
                                       </div>
@@ -2484,7 +2614,7 @@ exports[`GalleryModal should renders with review footer 2`] = `
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 2"
                                   checked={false}
                                   className="thumbnail"
-                                  key="3"
+                                  key="4"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/1/400.jpg?v=1586378264"
                                   type="image"
@@ -2494,9 +2624,11 @@ exports[`GalleryModal should renders with review footer 2`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 2"
@@ -2510,7 +2642,7 @@ exports[`GalleryModal should renders with review footer 2`] = `
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 3"
                                   checked={false}
                                   className="thumbnail"
-                                  key="4"
+                                  key="5"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/2/400.jpg?v=1586378424"
                                   type="image"
@@ -2520,9 +2652,11 @@ exports[`GalleryModal should renders with review footer 2`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 3"
@@ -2536,7 +2670,7 @@ exports[`GalleryModal should renders with review footer 2`] = `
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 4"
                                   checked={false}
                                   className="thumbnail"
-                                  key="5"
+                                  key="6"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/3/400.jpg?v=1586378301"
                                   type="image"
@@ -2546,9 +2680,11 @@ exports[`GalleryModal should renders with review footer 2`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 4"
@@ -2562,7 +2698,7 @@ exports[`GalleryModal should renders with review footer 2`] = `
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 5"
                                   checked={false}
                                   className="thumbnail"
-                                  key="6"
+                                  key="7"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/4/400.jpg?v=1586379815"
                                   type="image"
@@ -2572,9 +2708,11 @@ exports[`GalleryModal should renders with review footer 2`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 5"
@@ -2987,6 +3125,14 @@ exports[`GalleryModal should renders with review footer 3`] = `
       Object {
         "data": Object {
           "alt": "Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1",
+          "src": "https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg",
+          "thumbnailSrc": "https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg",
+        },
+        "type": "image",
+      },
+      Object {
+        "data": Object {
+          "alt": "Фото из отзыва, не квадратное",
           "src": "https://cdn3.static1-sima-land.com/items/3243668/0/700.jpg?v=1586378755",
           "thumbnailSrc": "https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755",
         },
@@ -3132,8 +3278,8 @@ exports[`GalleryModal should renders with review footer 3`] = `
           Object {
             "data": Object {
               "alt": "Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1",
-              "src": "https://cdn3.static1-sima-land.com/items/3243668/0/700.jpg?v=1586378755",
-              "thumbnailSrc": "https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755",
+              "src": "https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg",
+              "thumbnailSrc": "https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg",
             },
             "type": "image",
           },
@@ -3349,7 +3495,7 @@ exports[`GalleryModal should renders with review footer 3`] = `
                                   className="thumbnail"
                                   key="2"
                                   onClick={[Function]}
-                                  src="https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755"
+                                  src="https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg"
                                   type="image"
                                 >
                                   <button
@@ -3357,12 +3503,42 @@ exports[`GalleryModal should renders with review footer 3`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1"
+                                          src="https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg"
+                                        />
+                                      </div>
+                                    </ImageOverlay>
+                                  </button>
+                                </Thumbnail>
+                                <Thumbnail
+                                  alt="Фото из отзыва, не квадратное"
+                                  checked={false}
+                                  className="thumbnail"
+                                  key="3"
+                                  onClick={[Function]}
+                                  src="https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755"
+                                  type="image"
+                                >
+                                  <button
+                                    className="root thumbnail"
+                                    data-testid="gallery-modal:thumbnail"
+                                    onClick={[Function]}
+                                  >
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
+                                      <div
+                                        className="root image-overlay"
+                                      >
+                                        <img
+                                          alt="Фото из отзыва, не квадратное"
                                           src="https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755"
                                         />
                                       </div>
@@ -3373,7 +3549,7 @@ exports[`GalleryModal should renders with review footer 3`] = `
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 2"
                                   checked={false}
                                   className="thumbnail"
-                                  key="3"
+                                  key="4"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/1/400.jpg?v=1586378264"
                                   type="image"
@@ -3383,9 +3559,11 @@ exports[`GalleryModal should renders with review footer 3`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 2"
@@ -3399,7 +3577,7 @@ exports[`GalleryModal should renders with review footer 3`] = `
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 3"
                                   checked={false}
                                   className="thumbnail"
-                                  key="4"
+                                  key="5"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/2/400.jpg?v=1586378424"
                                   type="image"
@@ -3409,9 +3587,11 @@ exports[`GalleryModal should renders with review footer 3`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 3"
@@ -3425,7 +3605,7 @@ exports[`GalleryModal should renders with review footer 3`] = `
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 4"
                                   checked={false}
                                   className="thumbnail"
-                                  key="5"
+                                  key="6"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/3/400.jpg?v=1586378301"
                                   type="image"
@@ -3435,9 +3615,11 @@ exports[`GalleryModal should renders with review footer 3`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 4"
@@ -3451,7 +3633,7 @@ exports[`GalleryModal should renders with review footer 3`] = `
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 5"
                                   checked={false}
                                   className="thumbnail"
-                                  key="6"
+                                  key="7"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/4/400.jpg?v=1586379815"
                                   type="image"
@@ -3461,9 +3643,11 @@ exports[`GalleryModal should renders with review footer 3`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 5"
@@ -3492,8 +3676,8 @@ exports[`GalleryModal should renders with review footer 3`] = `
                                       data={
                                         Object {
                                           "alt": "Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1",
-                                          "src": "https://cdn3.static1-sima-land.com/items/3243668/0/700.jpg?v=1586378755",
-                                          "thumbnailSrc": "https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755",
+                                          "src": "https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg",
+                                          "thumbnailSrc": "https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg",
                                         }
                                       }
                                       type="image"
@@ -3509,7 +3693,7 @@ exports[`GalleryModal should renders with review footer 3`] = `
                                           >
                                             <img
                                               alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1"
-                                              src="https://cdn3.static1-sima-land.com/items/3243668/0/700.jpg?v=1586378755"
+                                              src="https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg"
                                             />
                                           </div>
                                         </ImageOverlay>
@@ -3881,6 +4065,14 @@ exports[`GalleryModal should renders with review footer 4`] = `
       Object {
         "data": Object {
           "alt": "Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1",
+          "src": "https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg",
+          "thumbnailSrc": "https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg",
+        },
+        "type": "image",
+      },
+      Object {
+        "data": Object {
+          "alt": "Фото из отзыва, не квадратное",
           "src": "https://cdn3.static1-sima-land.com/items/3243668/0/700.jpg?v=1586378755",
           "thumbnailSrc": "https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755",
         },
@@ -4026,8 +4218,8 @@ exports[`GalleryModal should renders with review footer 4`] = `
           Object {
             "data": Object {
               "alt": "Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1",
-              "src": "https://cdn3.static1-sima-land.com/items/3243668/0/700.jpg?v=1586378755",
-              "thumbnailSrc": "https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755",
+              "src": "https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg",
+              "thumbnailSrc": "https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg",
             },
             "type": "image",
           },
@@ -4036,9 +4228,9 @@ exports[`GalleryModal should renders with review footer 4`] = `
         Array [
           Object {
             "data": Object {
-              "alt": "Сапоги детские MINAKU, цвет синий, размер 31 - Фото 4",
-              "src": "https://cdn3.static1-sima-land.com/items/3243668/3/700.jpg?v=1586378301",
-              "thumbnailSrc": "https://cdn3.static1-sima-land.com/items/3243668/3/400.jpg?v=1586378301",
+              "alt": "Сапоги детские MINAKU, цвет синий, размер 31 - Фото 3",
+              "src": "https://cdn3.static1-sima-land.com/items/3243668/2/700.jpg?v=1586378424",
+              "thumbnailSrc": "https://cdn3.static1-sima-land.com/items/3243668/2/400.jpg?v=1586378424",
             },
             "type": "image",
           },
@@ -4258,6 +4450,34 @@ exports[`GalleryModal should renders with review footer 4`] = `
                                   className="thumbnail"
                                   key="2"
                                   onClick={[Function]}
+                                  src="https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg"
+                                  type="image"
+                                >
+                                  <button
+                                    className="root thumbnail"
+                                    data-testid="gallery-modal:thumbnail"
+                                    onClick={[Function]}
+                                  >
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
+                                      <div
+                                        className="root image-overlay"
+                                      >
+                                        <img
+                                          alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1"
+                                          src="https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg"
+                                        />
+                                      </div>
+                                    </ImageOverlay>
+                                  </button>
+                                </Thumbnail>
+                                <Thumbnail
+                                  alt="Фото из отзыва, не квадратное"
+                                  checked={false}
+                                  className="thumbnail"
+                                  key="3"
+                                  onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755"
                                   type="image"
                                 >
@@ -4266,12 +4486,14 @@ exports[`GalleryModal should renders with review footer 4`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
-                                          alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1"
+                                          alt="Фото из отзыва, не квадратное"
                                           src="https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755"
                                         />
                                       </div>
@@ -4282,7 +4504,7 @@ exports[`GalleryModal should renders with review footer 4`] = `
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 2"
                                   checked={false}
                                   className="thumbnail"
-                                  key="3"
+                                  key="4"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/1/400.jpg?v=1586378264"
                                   type="image"
@@ -4292,9 +4514,11 @@ exports[`GalleryModal should renders with review footer 4`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 2"
@@ -4306,21 +4530,23 @@ exports[`GalleryModal should renders with review footer 4`] = `
                                 </Thumbnail>
                                 <Thumbnail
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 3"
-                                  checked={false}
+                                  checked={true}
                                   className="thumbnail"
-                                  key="4"
+                                  key="5"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/2/400.jpg?v=1586378424"
                                   type="image"
                                 >
                                   <button
-                                    className="root thumbnail"
+                                    className="root checked thumbnail"
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 3"
@@ -4332,21 +4558,23 @@ exports[`GalleryModal should renders with review footer 4`] = `
                                 </Thumbnail>
                                 <Thumbnail
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 4"
-                                  checked={true}
+                                  checked={false}
                                   className="thumbnail"
-                                  key="5"
+                                  key="6"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/3/400.jpg?v=1586378301"
                                   type="image"
                                 >
                                   <button
-                                    className="root checked thumbnail"
+                                    className="root thumbnail"
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 4"
@@ -4360,7 +4588,7 @@ exports[`GalleryModal should renders with review footer 4`] = `
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 5"
                                   checked={false}
                                   className="thumbnail"
-                                  key="6"
+                                  key="7"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/4/400.jpg?v=1586379815"
                                   type="image"
@@ -4370,9 +4598,11 @@ exports[`GalleryModal should renders with review footer 4`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 5"
@@ -4400,9 +4630,9 @@ exports[`GalleryModal should renders with review footer 4`] = `
                                     <Media
                                       data={
                                         Object {
-                                          "alt": "Сапоги детские MINAKU, цвет синий, размер 31 - Фото 4",
-                                          "src": "https://cdn3.static1-sima-land.com/items/3243668/3/700.jpg?v=1586378301",
-                                          "thumbnailSrc": "https://cdn3.static1-sima-land.com/items/3243668/3/400.jpg?v=1586378301",
+                                          "alt": "Сапоги детские MINAKU, цвет синий, размер 31 - Фото 3",
+                                          "src": "https://cdn3.static1-sima-land.com/items/3243668/2/700.jpg?v=1586378424",
+                                          "thumbnailSrc": "https://cdn3.static1-sima-land.com/items/3243668/2/400.jpg?v=1586378424",
                                         }
                                       }
                                       type="image"
@@ -4417,8 +4647,8 @@ exports[`GalleryModal should renders with review footer 4`] = `
                                             className="root media-image-wrap"
                                           >
                                             <img
-                                              alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 4"
-                                              src="https://cdn3.static1-sima-land.com/items/3243668/3/700.jpg?v=1586378301"
+                                              alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 3"
+                                              src="https://cdn3.static1-sima-land.com/items/3243668/2/700.jpg?v=1586378424"
                                             />
                                           </div>
                                         </ImageOverlay>
@@ -4790,6 +5020,14 @@ exports[`GalleryModal should renders with review footer 5`] = `
       Object {
         "data": Object {
           "alt": "Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1",
+          "src": "https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg",
+          "thumbnailSrc": "https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg",
+        },
+        "type": "image",
+      },
+      Object {
+        "data": Object {
+          "alt": "Фото из отзыва, не квадратное",
           "src": "https://cdn3.static1-sima-land.com/items/3243668/0/700.jpg?v=1586378755",
           "thumbnailSrc": "https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755",
         },
@@ -4935,8 +5173,8 @@ exports[`GalleryModal should renders with review footer 5`] = `
           Object {
             "data": Object {
               "alt": "Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1",
-              "src": "https://cdn3.static1-sima-land.com/items/3243668/0/700.jpg?v=1586378755",
-              "thumbnailSrc": "https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755",
+              "src": "https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg",
+              "thumbnailSrc": "https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg",
             },
             "type": "image",
           },
@@ -4945,9 +5183,9 @@ exports[`GalleryModal should renders with review footer 5`] = `
         Array [
           Object {
             "data": Object {
-              "alt": "Сапоги детские MINAKU, цвет синий, размер 31 - Фото 4",
-              "src": "https://cdn3.static1-sima-land.com/items/3243668/3/700.jpg?v=1586378301",
-              "thumbnailSrc": "https://cdn3.static1-sima-land.com/items/3243668/3/400.jpg?v=1586378301",
+              "alt": "Сапоги детские MINAKU, цвет синий, размер 31 - Фото 3",
+              "src": "https://cdn3.static1-sima-land.com/items/3243668/2/700.jpg?v=1586378424",
+              "thumbnailSrc": "https://cdn3.static1-sima-land.com/items/3243668/2/400.jpg?v=1586378424",
             },
             "type": "image",
           },
@@ -4956,9 +5194,9 @@ exports[`GalleryModal should renders with review footer 5`] = `
         Array [
           Object {
             "data": Object {
-              "alt": "Сапоги детские MINAKU, цвет синий, размер 31 - Фото 3",
-              "src": "https://cdn3.static1-sima-land.com/items/3243668/2/700.jpg?v=1586378424",
-              "thumbnailSrc": "https://cdn3.static1-sima-land.com/items/3243668/2/400.jpg?v=1586378424",
+              "alt": "Сапоги детские MINAKU, цвет синий, размер 31 - Фото 2",
+              "src": "https://cdn3.static1-sima-land.com/items/3243668/1/700.jpg?v=1586378264",
+              "thumbnailSrc": "https://cdn3.static1-sima-land.com/items/3243668/1/400.jpg?v=1586378264",
             },
             "type": "image",
           },
@@ -5182,6 +5420,34 @@ exports[`GalleryModal should renders with review footer 5`] = `
                                   className="thumbnail"
                                   key="2"
                                   onClick={[Function]}
+                                  src="https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg"
+                                  type="image"
+                                >
+                                  <button
+                                    className="root thumbnail"
+                                    data-testid="gallery-modal:thumbnail"
+                                    onClick={[Function]}
+                                  >
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
+                                      <div
+                                        className="root image-overlay"
+                                      >
+                                        <img
+                                          alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1"
+                                          src="https://user-content.static1-sima-land.com/item_comment/718435/60d8a52754d803.73596025.jpeg"
+                                        />
+                                      </div>
+                                    </ImageOverlay>
+                                  </button>
+                                </Thumbnail>
+                                <Thumbnail
+                                  alt="Фото из отзыва, не квадратное"
+                                  checked={false}
+                                  className="thumbnail"
+                                  key="3"
+                                  onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755"
                                   type="image"
                                 >
@@ -5190,12 +5456,14 @@ exports[`GalleryModal should renders with review footer 5`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
-                                          alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1"
+                                          alt="Фото из отзыва, не квадратное"
                                           src="https://cdn3.static1-sima-land.com/items/3243668/0/400.jpg?v=1586378755"
                                         />
                                       </div>
@@ -5204,21 +5472,23 @@ exports[`GalleryModal should renders with review footer 5`] = `
                                 </Thumbnail>
                                 <Thumbnail
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 2"
-                                  checked={false}
+                                  checked={true}
                                   className="thumbnail"
-                                  key="3"
+                                  key="4"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/1/400.jpg?v=1586378264"
                                   type="image"
                                 >
                                   <button
-                                    className="root thumbnail"
+                                    className="root checked thumbnail"
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 2"
@@ -5230,21 +5500,23 @@ exports[`GalleryModal should renders with review footer 5`] = `
                                 </Thumbnail>
                                 <Thumbnail
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 3"
-                                  checked={true}
+                                  checked={false}
                                   className="thumbnail"
-                                  key="4"
+                                  key="5"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/2/400.jpg?v=1586378424"
                                   type="image"
                                 >
                                   <button
-                                    className="root checked thumbnail"
+                                    className="root thumbnail"
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 3"
@@ -5258,7 +5530,7 @@ exports[`GalleryModal should renders with review footer 5`] = `
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 4"
                                   checked={false}
                                   className="thumbnail"
-                                  key="5"
+                                  key="6"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/3/400.jpg?v=1586378301"
                                   type="image"
@@ -5268,9 +5540,11 @@ exports[`GalleryModal should renders with review footer 5`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 4"
@@ -5284,7 +5558,7 @@ exports[`GalleryModal should renders with review footer 5`] = `
                                   alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 5"
                                   checked={false}
                                   className="thumbnail"
-                                  key="6"
+                                  key="7"
                                   onClick={[Function]}
                                   src="https://cdn3.static1-sima-land.com/items/3243668/4/400.jpg?v=1586379815"
                                   type="image"
@@ -5294,9 +5568,11 @@ exports[`GalleryModal should renders with review footer 5`] = `
                                     data-testid="gallery-modal:thumbnail"
                                     onClick={[Function]}
                                   >
-                                    <ImageOverlay>
+                                    <ImageOverlay
+                                      className="image-overlay"
+                                    >
                                       <div
-                                        className="root"
+                                        className="root image-overlay"
                                       >
                                         <img
                                           alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 5"
@@ -5324,9 +5600,9 @@ exports[`GalleryModal should renders with review footer 5`] = `
                                     <Media
                                       data={
                                         Object {
-                                          "alt": "Сапоги детские MINAKU, цвет синий, размер 31 - Фото 3",
-                                          "src": "https://cdn3.static1-sima-land.com/items/3243668/2/700.jpg?v=1586378424",
-                                          "thumbnailSrc": "https://cdn3.static1-sima-land.com/items/3243668/2/400.jpg?v=1586378424",
+                                          "alt": "Сапоги детские MINAKU, цвет синий, размер 31 - Фото 2",
+                                          "src": "https://cdn3.static1-sima-land.com/items/3243668/1/700.jpg?v=1586378264",
+                                          "thumbnailSrc": "https://cdn3.static1-sima-land.com/items/3243668/1/400.jpg?v=1586378264",
                                         }
                                       }
                                       type="image"
@@ -5341,8 +5617,8 @@ exports[`GalleryModal should renders with review footer 5`] = `
                                             className="root media-image-wrap"
                                           >
                                             <img
-                                              alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 3"
-                                              src="https://cdn3.static1-sima-land.com/items/3243668/2/700.jpg?v=1586378424"
+                                              alt="Сапоги детские MINAKU, цвет синий, размер 31 - Фото 2"
+                                              src="https://cdn3.static1-sima-land.com/items/3243668/1/700.jpg?v=1586378264"
                                             />
                                           </div>
                                         </ImageOverlay>
