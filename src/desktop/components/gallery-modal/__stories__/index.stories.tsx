@@ -17,7 +17,11 @@ export default {
 };
 
 export const Primary = () => (
-  <GalleryModal media={data.media} onClose={action('GalleryModal:close')} />
+  <GalleryModal
+    media={data.media}
+    onClose={action('GalleryModal:close')}
+    onVideoEvent={e => action('GalleryModal:video-event')(e.type)}
+  />
 );
 
 export const WithReview = () => (
@@ -28,6 +32,7 @@ export const WithReview = () => (
       rating: 3.2,
       author: 'Пелагеевская Вероника Сергеевна',
     }}
-    onGoToReview={() => action('GalleryModal:go-to-review')}
+    onGoToReview={() => action('GalleryModal:go-to-review')()}
+    onVideoEvent={e => action('GalleryModal:video-event')(e.type)}
   />
 );

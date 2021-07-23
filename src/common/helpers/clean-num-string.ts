@@ -1,12 +1,9 @@
-import pipe from 'lodash/fp/pipe';
-import toString from 'lodash/toString';
-
 /**
  * Очищает строку от любых символов, кроме цифр и удаляет лишние нули вначале.
- * @param {string} str Строка.
- * @return {string} Возвращает очищенную строку.
+ * @param value Строка.
+ * @return Возвращает очищенную строку.
  */
-export const cleanNumString = pipe(
-  str => toString(str) && str.replace(/[^0-9]/g, ''),
-  str => str === '' ? '' : Number(str).toString()
-);
+export const cleanNumString = (value: unknown): string => {
+  const string = String(value).replace(/\D/g, '');
+  return string.length > 0 ? Number(string).toString() : '';
+};

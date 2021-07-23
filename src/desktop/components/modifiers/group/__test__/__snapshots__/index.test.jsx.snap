@@ -3,7 +3,7 @@
 exports[`<ModifiersGroup /> should match snapshot 1`] = `
 <div
   className="modifiers-group height-limited"
-  data-testid="data-tetsid"
+  data-testid="modifiers-group"
 >
   <ForwardRef(ModifierButton)
     className="guttered"

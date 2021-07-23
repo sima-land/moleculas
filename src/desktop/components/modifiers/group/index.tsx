@@ -25,7 +25,7 @@ export interface ModifiersGroupProps {
   getItemImage?: ModifierPredicate<string>
   isMarkdown?: ModifierPredicate<boolean>
   onClickShowAll?: () => void
-  'data-tetsid'?: string
+  'data-testid'?: string
 }
 
 const cx = classnames.bind(classes);
@@ -190,7 +190,7 @@ export class ModifiersGroup extends Component<ModifiersGroupProps, State> {
       isSelectedItem = defaultIsSelectedItem,
       getItemImage = defaultGetItemImage,
       isMarkdown = defaultGetIsMarkdown,
-      'data-tetsid': testId = 'data-tetsid',
+      'data-testid': testId = 'modifiers-group',
     } = this.props;
 
     const { needShowAll, hasHiddenNodes, lastVisibleChildIndex } = this.state;

@@ -56,7 +56,7 @@ exports[`<ModifiersWidget /> should renders correctly with prop 1`] = `
     >
       <div
         className="modifiers-group height-limited"
-        data-testid="data-tetsid"
+        data-testid="modifiers-group"
       >
         <ForwardRef(ModifierButton)
           className="guttered"
