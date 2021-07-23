@@ -13,6 +13,72 @@ describe('GalleryModal', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should handle video events', () => {
+    const spy = jest.fn();
+
+    const wrapper = mount(
+      <GalleryModal
+        media={data.media.filter(item => item.type === 'video')}
+        onVideoEvent={spy}
+      />
+    );
+
+    expect(spy).toBeCalledTimes(0);
+
+    // play
+    act(() => {
+      wrapper.find('video').simulate('play');
+    });
+    wrapper.update();
+
+    expect(spy).toBeCalledTimes(1);
+    expect(spy.mock.calls[0][0].type).toBe('play');
+
+    // pause
+    act(() => {
+      wrapper.find('video').simulate('pause');
+    });
+    wrapper.update();
+
+    expect(spy).toBeCalledTimes(2);
+    expect(spy.mock.calls[1][0].type).toBe('pause');
+
+    // ended
+    act(() => {
+      wrapper.find('video').simulate('ended');
+    });
+    wrapper.update();
+
+    expect(spy).toBeCalledTimes(3);
+    expect(spy.mock.calls[2][0].type).toBe('ended');
+  });
+
+  it('should handle video events without callback', () => {
+    const wrapper = mount(
+      <GalleryModal
+        media={data.media.filter(item => item.type === 'video')}
+      />
+    );
+
+    // play
+    act(() => {
+      wrapper.find('video').simulate('play');
+    });
+    wrapper.update();
+
+    // pause
+    act(() => {
+      wrapper.find('video').simulate('pause');
+    });
+    wrapper.update();
+
+    // ended
+    act(() => {
+      wrapper.find('video').simulate('ended');
+    });
+    wrapper.update();
+  });
+
   it('should renders with review footer', () => {
     const spy = jest.fn();
 

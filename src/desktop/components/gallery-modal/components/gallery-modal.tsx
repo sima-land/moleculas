@@ -23,6 +23,7 @@ export interface GalleryModalProps extends Pick<ModalProps, 'withScrollDisable' 
   }
   onGoToReview?: () => void
   onClose?: () => void
+  onVideoEvent?: (event: React.SyntheticEvent<HTMLVideoElement>) => void
 }
 
 interface InnerStyles extends React.CSSProperties {
@@ -41,6 +42,7 @@ export const GalleryModal = ({
   onMediaChange,
   withScrollDisable,
   scrollDisableOptions,
+  onVideoEvent,
 }: GalleryModalProps) => {
   const [currentIndex, setCurrent] = useState<number>(defaultMediaIndex);
 
@@ -101,7 +103,7 @@ export const GalleryModal = ({
             {size !== null && (
               <div className={cx('inner')} style={{ width: `${size}px` }}>
                 <div className={cx('square')}>
-                  <Media {...media[currentIndex]} />
+                  <Media {...media[currentIndex]} onVideoEvent={onVideoEvent} />
 
                   {media.length > 1 && (
                     <>
@@ -138,20 +140,29 @@ export const GalleryModal = ({
   );
 };
 
-const Media = (props: MediaData) => (
+const Media = ({ onVideoEvent, ...media }: MediaData & {
+  onVideoEvent?: (event: React.SyntheticEvent<HTMLVideoElement>) => void
+}) => (
   <div className={cx('media')}>
-    {props.type === 'image' && (
+    {media.type === 'image' && (
       <ImageOverlay className={cx('media-image-wrap')}>
-        <img src={props.data.src} alt={props.data.alt || ''} />
+        <img src={media.data.src} alt={media.data.alt || ''} />
       </ImageOverlay>
     )}
-    {props.type === 'video' && (
-      <video autoPlay controls controlsList='nodownload'>
-        <source src={props.data.src} />
+    {media.type === 'video' && (
+      <video
+        autoPlay
+        controls
+        controlsList='nodownload'
+        onPlay={e => onVideoEvent?.(e)}
+        onPause={e => onVideoEvent?.(e)}
+        onEnded={e => onVideoEvent?.(e)}
+      >
+        <source src={media.data.src} />
       </video>
     )}
-    {props.type === '360' && (
-      <AllRoundView photos={props.data.photos} />
+    {media.type === '360' && (
+      <AllRoundView photos={media.data.photos} />
     )}
   </div>
 );

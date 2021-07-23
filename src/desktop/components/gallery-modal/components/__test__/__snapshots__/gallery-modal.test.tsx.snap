@@ -2752,6 +2752,9 @@ exports[`GalleryModal should renders with review footer 2`] = `
                                           autoPlay={true}
                                           controls={true}
                                           controlsList="nodownload"
+                                          onEnded={[Function]}
+                                          onPause={[Function]}
+                                          onPlay={[Function]}
                                         >
                                           <source
                                             src="https://cdn2.static1-sima-land.com/flv/3404953.mp4"
