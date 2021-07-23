@@ -154,9 +154,9 @@ const Media = ({ onVideoEvent, ...media }: MediaData & {
         autoPlay
         controls
         controlsList='nodownload'
-        onPlay={e => onVideoEvent?.(e)}
-        onPause={e => onVideoEvent?.(e)}
-        onEnded={e => onVideoEvent?.(e)}
+        onPlay={onVideoEvent}
+        onPause={onVideoEvent}
+        onEnded={onVideoEvent}
       >
         <source src={media.data.src} />
       </video>
