@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "repository": "ssh://git@github.com:sima-land/moleculas.git",
   "author": "www.sima-land.ru team",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "private": false,
   "engines": {
     "node": ">=14.16.0"
@@ -17,7 +17,6 @@
     "type-check": "tsc -p . --noEmit",
     "test": "jest",
     "coverage": "jest --coverage",
-    "test:ci": "yarn coverage --maxWorkers=2 --colors --reporters=jest-junit --reporters=default",
     "lint:scripts": "eslint --cache src/ --ext .js,.jsx,.ts,.tsx",
     "lint:styles": "stylelint 'src/**/*.scss'",
     "storybook": "start-storybook -p 6006",
@@ -56,7 +55,6 @@
     "husky": "^7.0.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
-    "jest-junit": "^12.0.0",
     "lint-staged": "^11.1.1",
     "lodash": "4.17.15",
     "react": "^16.8.5",
