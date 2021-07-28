@@ -21,7 +21,8 @@ jobs:
 
       - name: Lint
         run: |
-          yarn lint
+          yarn lint:styles
+          yarn lint:scripts
           yarn type-check
 
       - name: Test
