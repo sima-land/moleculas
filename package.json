@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "repository": "ssh://git@github.com:sima-land/moleculas.git",
   "author": "www.sima-land.ru team",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "private": false,
   "engines": {
     "node": ">=14.16.0"

@@ -37,12 +37,10 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
   <Modal
     onClose={[MockFunction]}
     size="s"
-    withScrollDisable={false}
   >
     <ModalInner
       onClose={[MockFunction]}
       size="s"
-      withScrollDisable={false}
     >
       <div
         className="overlay"
@@ -422,11 +420,9 @@ exports[`<PersonModal /> should renders properly with minimal props 1`] = `
 >
   <Modal
     size="s"
-    withScrollDisable={false}
   >
     <ModalInner
       size="s"
-      withScrollDisable={false}
     >
       <div
         className="overlay"
