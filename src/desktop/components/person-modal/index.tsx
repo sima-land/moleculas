@@ -4,9 +4,9 @@ import { Box } from '@sima-land/ui-nucleons/box';
 import { Text } from '@sima-land/ui-nucleons/text';
 import { Link } from '@sima-land/ui-nucleons/link';
 import { Clean } from '@sima-land/ui-nucleons/clean-buttons';
-import classes from './person-card.module.scss';
+import classes from './person-modal.module.scss';
 import classnames from 'classnames/bind';
-import { Modal } from '@sima-land/ui-nucleons/modal';
+import { Modal, ModalProps } from '@sima-land/ui-nucleons/modal';
 import { useKeydown } from '@sima-land/ui-nucleons/hooks/keydown';
 
 export interface PersonModalProps {
@@ -22,6 +22,8 @@ export interface PersonModalProps {
   secondPhoneText?: string
   arbitraryLinkProps?: any
   onClose: () => void
+  withScrollDisable?: ModalProps['withScrollDisable']
+  scrollDisableOptions?: ModalProps['scrollDisableOptions']
 }
 
 const cx = classnames.bind(classes);
@@ -56,11 +58,18 @@ export const PersonModal = ({
   secondPhoneText,
   arbitraryLinkProps,
   onClose,
+  withScrollDisable,
+  scrollDisableOptions,
 }: PersonModalProps) => {
   useKeydown('Escape', onClose);
 
   return (
-    <Modal size='s' withScrollDisable={false} onClose={onClose}>
+    <Modal
+      size='s'
+      withScrollDisable={withScrollDisable}
+      scrollDisableOptions={scrollDisableOptions}
+      onClose={onClose}
+    >
       <Modal.Body>
         <div className={cx('main')}>
           <Box marginBottom={6}>

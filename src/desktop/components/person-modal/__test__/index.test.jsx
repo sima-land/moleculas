@@ -3,6 +3,7 @@ import { mount } from 'enzyme';
 import { PersonModal } from '..';
 import { colorKey } from '@sima-land/ui-nucleons/avatar/user';
 import { Clean } from '@sima-land/ui-nucleons/clean-buttons';
+import { Modal } from '@sima-land/ui-nucleons/modal';
 
 describe('<PersonModal />', () => {
   beforeEach(() => {
@@ -22,6 +23,21 @@ describe('<PersonModal />', () => {
       />
     );
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should pass scroll disable props to Modal', () => {
+    const wrapper = mount(
+      <PersonModal
+        name='Марина Михайловская'
+        appointment='Дворник'
+        social='bad value'
+        withScrollDisable
+        scrollDisableOptions={{ reserveScrollBarGap: true }}
+      />
+    );
+
+    expect(wrapper.find(Modal).props().withScrollDisable).toBe(true);
+    expect(wrapper.find(Modal).props().scrollDisableOptions).toEqual({ reserveScrollBarGap: true });
   });
 
   it('should renders properly with all props', () => {
