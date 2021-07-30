@@ -86,6 +86,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                     >
                       <svg
                         aria-hidden="true"
+                        class="svg"
                         fill="#212121"
                         height="24"
                         viewBox="0 0 24 24"
@@ -93,7 +94,12 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
+                          d="M20.707 3.293a1 1 0 010 1.414l-16 16a1 1 0 01-1.414-1.414l16-16a1 1 0 011.414 0z"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M3.293 3.293a1 1 0 011.414 0l16 16a1 1 0 01-1.414 1.414l-16-16a1 1 0 010-1.414z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -129,7 +135,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M8.971 16.557L20.265 4.322a1 1 0 011.47 1.356l-12 13a1 1 0 01-1.442.03l-4-4a1 1 0 111.414-1.415l3.264 3.264z"
+                          d="M21.678 5.265a1 1 0 01.057 1.413l-12 13a1 1 0 01-1.36.103l-5-4a1 1 0 011.25-1.562l4.272 3.418L20.265 5.322a1 1 0 011.413-.057z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -301,10 +307,12 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                       >
                         <ForwardRef(CrossSVG)
                           aria-hidden="true"
+                          className="svg"
                           fill="#212121"
                         >
                           <svg
                             aria-hidden="true"
+                            className="svg"
                             fill="#212121"
                             height={24}
                             viewBox="0 0 24 24"
@@ -312,7 +320,12 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                           >
                             <path
                               clipRule="evenodd"
-                              d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
+                              d="M20.707 3.293a1 1 0 010 1.414l-16 16a1 1 0 01-1.414-1.414l16-16a1 1 0 011.414 0z"
+                              fillRule="evenodd"
+                            />
+                            <path
+                              clipRule="evenodd"
+                              d="M3.293 3.293a1 1 0 011.414 0l16 16a1 1 0 01-1.414 1.414l-16-16a1 1 0 010-1.414z"
                               fillRule="evenodd"
                             />
                           </svg>
@@ -364,7 +377,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                         >
                           <path
                             clipRule="evenodd"
-                            d="M8.971 16.557L20.265 4.322a1 1 0 011.47 1.356l-12 13a1 1 0 01-1.442.03l-4-4a1 1 0 111.414-1.415l3.264 3.264z"
+                            d="M21.678 5.265a1 1 0 01.057 1.413l-12 13a1 1 0 01-1.36.103l-5-4a1 1 0 011.25-1.562l4.272 3.418L20.265 5.322a1 1 0 011.413-.057z"
                             fillRule="evenodd"
                           />
                         </svg>
@@ -530,6 +543,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                     >
                       <svg
                         aria-hidden="true"
+                        class="svg"
                         fill="#212121"
                         height="24"
                         viewBox="0 0 24 24"
@@ -537,7 +551,12 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
+                          d="M20.707 3.293a1 1 0 010 1.414l-16 16a1 1 0 01-1.414-1.414l16-16a1 1 0 011.414 0z"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M3.293 3.293a1 1 0 011.414 0l16 16a1 1 0 01-1.414 1.414l-16-16a1 1 0 010-1.414z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -715,10 +734,12 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       >
                         <ForwardRef(CrossSVG)
                           aria-hidden="true"
+                          className="svg"
                           fill="#212121"
                         >
                           <svg
                             aria-hidden="true"
+                            className="svg"
                             fill="#212121"
                             height={24}
                             viewBox="0 0 24 24"
@@ -726,7 +747,12 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                           >
                             <path
                               clipRule="evenodd"
-                              d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
+                              d="M20.707 3.293a1 1 0 010 1.414l-16 16a1 1 0 01-1.414-1.414l16-16a1 1 0 011.414 0z"
+                              fillRule="evenodd"
+                            />
+                            <path
+                              clipRule="evenodd"
+                              d="M3.293 3.293a1 1 0 011.414 0l16 16a1 1 0 01-1.414 1.414l-16-16a1 1 0 010-1.414z"
                               fillRule="evenodd"
                             />
                           </svg>
@@ -938,6 +964,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                     >
                       <svg
                         aria-hidden="true"
+                        class="svg"
                         fill="#212121"
                         height="24"
                         viewBox="0 0 24 24"
@@ -945,7 +972,12 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
+                          d="M20.707 3.293a1 1 0 010 1.414l-16 16a1 1 0 01-1.414-1.414l16-16a1 1 0 011.414 0z"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M3.293 3.293a1 1 0 011.414 0l16 16a1 1 0 01-1.414 1.414l-16-16a1 1 0 010-1.414z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -1005,7 +1037,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M8.971 16.557L20.265 4.322a1 1 0 011.47 1.356l-12 13a1 1 0 01-1.442.03l-4-4a1 1 0 111.414-1.415l3.264 3.264z"
+                          d="M21.678 5.265a1 1 0 01.057 1.413l-12 13a1 1 0 01-1.36.103l-5-4a1 1 0 011.25-1.562l4.272 3.418L20.265 5.322a1 1 0 011.413-.057z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -1144,10 +1176,12 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       >
                         <ForwardRef(CrossSVG)
                           aria-hidden="true"
+                          className="svg"
                           fill="#212121"
                         >
                           <svg
                             aria-hidden="true"
+                            className="svg"
                             fill="#212121"
                             height={24}
                             viewBox="0 0 24 24"
@@ -1155,7 +1189,12 @@ exports[`<SelectScreen /> should handle props 1`] = `
                           >
                             <path
                               clipRule="evenodd"
-                              d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
+                              d="M20.707 3.293a1 1 0 010 1.414l-16 16a1 1 0 01-1.414-1.414l16-16a1 1 0 011.414 0z"
+                              fillRule="evenodd"
+                            />
+                            <path
+                              clipRule="evenodd"
+                              d="M3.293 3.293a1 1 0 011.414 0l16 16a1 1 0 01-1.414 1.414l-16-16a1 1 0 010-1.414z"
                               fillRule="evenodd"
                             />
                           </svg>
@@ -1261,7 +1300,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                         >
                           <path
                             clipRule="evenodd"
-                            d="M8.971 16.557L20.265 4.322a1 1 0 011.47 1.356l-12 13a1 1 0 01-1.442.03l-4-4a1 1 0 111.414-1.415l3.264 3.264z"
+                            d="M21.678 5.265a1 1 0 01.057 1.413l-12 13a1 1 0 01-1.36.103l-5-4a1 1 0 011.25-1.562l4.272 3.418L20.265 5.322a1 1 0 011.413-.057z"
                             fillRule="evenodd"
                           />
                         </svg>
@@ -1377,6 +1416,7 @@ exports[`<SelectScreen /> should render without props 1`] = `
                     >
                       <svg
                         aria-hidden="true"
+                        class="svg"
                         fill="#212121"
                         height="24"
                         viewBox="0 0 24 24"
@@ -1384,7 +1424,12 @@ exports[`<SelectScreen /> should render without props 1`] = `
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
+                          d="M20.707 3.293a1 1 0 010 1.414l-16 16a1 1 0 01-1.414-1.414l16-16a1 1 0 011.414 0z"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M3.293 3.293a1 1 0 011.414 0l16 16a1 1 0 01-1.414 1.414l-16-16a1 1 0 010-1.414z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -1499,10 +1544,12 @@ exports[`<SelectScreen /> should render without props 1`] = `
                       >
                         <ForwardRef(CrossSVG)
                           aria-hidden="true"
+                          className="svg"
                           fill="#212121"
                         >
                           <svg
                             aria-hidden="true"
+                            className="svg"
                             fill="#212121"
                             height={24}
                             viewBox="0 0 24 24"
@@ -1510,7 +1557,12 @@ exports[`<SelectScreen /> should render without props 1`] = `
                           >
                             <path
                               clipRule="evenodd"
-                              d="M4.293 19.707a1 1 0 001.414 0L12 13.414l6.293 6.293a1 1 0 001.414-1.414L13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 000 1.414z"
+                              d="M20.707 3.293a1 1 0 010 1.414l-16 16a1 1 0 01-1.414-1.414l16-16a1 1 0 011.414 0z"
+                              fillRule="evenodd"
+                            />
+                            <path
+                              clipRule="evenodd"
+                              d="M3.293 3.293a1 1 0 011.414 0l16 16a1 1 0 01-1.414 1.414l-16-16a1 1 0 010-1.414z"
                               fillRule="evenodd"
                             />
                           </svg>

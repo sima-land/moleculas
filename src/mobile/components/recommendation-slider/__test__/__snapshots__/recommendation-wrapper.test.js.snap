@@ -65,7 +65,7 @@ exports[`<RecommendationWrapper /> should match a snapshot with items 1`] = `
                     onClick={[Function]}
                   >
                     <a
-                      className="link link color__gray87 hover-color__gray54"
+                      className="link link gray87"
                       data-testid="anchor"
                       onClick={[Function]}
                     >
@@ -90,7 +90,7 @@ exports[`<RecommendationWrapper /> should match a snapshot with items 1`] = `
                     onClick={[Function]}
                   >
                     <a
-                      className="link link color__gray87 hover-color__gray54"
+                      className="link link gray87"
                       data-testid="anchor"
                       onClick={[Function]}
                     >

@@ -67,7 +67,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                     class="buttons"
                   >
                     <a
-                      class="link button color__gray87 hover-color__gray54"
+                      class="link button gray87"
                       data-testid="anchor"
                       href="href"
                     >
@@ -80,11 +80,13 @@ exports[`ProductActionsContent renders properly 1`] = `
                           width="24"
                         >
                           <path
-                            d="M8 16a1 1 0 001 1h4a1 1 0 100-2H9a1 1 0 00-1 1zM9 13a1 1 0 110-2h6a1 1 0 110 2H9zM8 8a1 1 0 001 1h6a1 1 0 100-2H9a1 1 0 00-1 1z"
+                            clip-rule="evenodd"
+                            d="M3 5a3 3 0 013-3h12a3 3 0 013 3v14a3 3 0 01-3 3H6a3 3 0 01-3-3V5zm3-1a1 1 0 00-1 1v14a1 1 0 001 1h12a1 1 0 001-1V5a1 1 0 00-1-1H6z"
+                            fill-rule="evenodd"
                           />
                           <path
                             clip-rule="evenodd"
-                            d="M6 2h12a3 3 0 013 3v14a3 3 0 01-3 3H6a3 3 0 01-3-3V5a3 3 0 013-3zm0 2a1 1 0 00-1 1v14a1 1 0 001 1h12a1 1 0 001-1V5a1 1 0 00-1-1H6z"
+                            d="M7 16a1 1 0 011-1h5a1 1 0 110 2H8a1 1 0 01-1-1zM7 12a1 1 0 011-1h7a1 1 0 110 2H8a1 1 0 01-1-1zM7 8a1 1 0 011-1h7a1 1 0 110 2H8a1 1 0 01-1-1z"
                             fill-rule="evenodd"
                           />
                         </svg>
@@ -92,7 +94,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                       text
                     </a>
                     <a
-                      class="link button color__gray87 hover-color__gray54"
+                      class="link button gray87"
                       data-testid="anchor"
                       href="href"
                     >
@@ -102,7 +104,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                       text
                     </a>
                     <a
-                      class="link button color__gray87 hover-color__gray54"
+                      class="link button gray87"
                       data-testid="anchor"
                     >
                       <div
@@ -119,7 +121,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                     class="clean-group"
                   >
                     <a
-                      class="link clean-button color__brand-blue hover-color__brand-deep-blue"
+                      class="link clean-button brand-blue"
                       data-testid="anchor"
                     >
                       Закрыть
@@ -185,7 +187,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                     onClick={[Function]}
                   >
                     <a
-                      className="link button color__gray87 hover-color__gray54"
+                      className="link button gray87"
                       data-testid="anchor"
                       href="href"
                       onClick={[Function]}
@@ -200,11 +202,13 @@ exports[`ProductActionsContent renders properly 1`] = `
                             width={24}
                           >
                             <path
-                              d="M8 16a1 1 0 001 1h4a1 1 0 100-2H9a1 1 0 00-1 1zM9 13a1 1 0 110-2h6a1 1 0 110 2H9zM8 8a1 1 0 001 1h6a1 1 0 100-2H9a1 1 0 00-1 1z"
+                              clipRule="evenodd"
+                              d="M3 5a3 3 0 013-3h12a3 3 0 013 3v14a3 3 0 01-3 3H6a3 3 0 01-3-3V5zm3-1a1 1 0 00-1 1v14a1 1 0 001 1h12a1 1 0 001-1V5a1 1 0 00-1-1H6z"
+                              fillRule="evenodd"
                             />
                             <path
                               clipRule="evenodd"
-                              d="M6 2h12a3 3 0 013 3v14a3 3 0 01-3 3H6a3 3 0 01-3-3V5a3 3 0 013-3zm0 2a1 1 0 00-1 1v14a1 1 0 001 1h12a1 1 0 001-1V5a1 1 0 00-1-1H6z"
+                              d="M7 16a1 1 0 011-1h5a1 1 0 110 2H8a1 1 0 01-1-1zM7 12a1 1 0 011-1h7a1 1 0 110 2H8a1 1 0 01-1-1zM7 8a1 1 0 011-1h7a1 1 0 110 2H8a1 1 0 01-1-1z"
                               fillRule="evenodd"
                             />
                           </svg>
@@ -220,7 +224,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                     key="1"
                   >
                     <a
-                      className="link button color__gray87 hover-color__gray54"
+                      className="link button gray87"
                       data-testid="anchor"
                       href="href"
                     >
@@ -236,7 +240,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                     key="2"
                   >
                     <a
-                      className="link button color__gray87 hover-color__gray54"
+                      className="link button gray87"
                       data-testid="anchor"
                     >
                       <div
@@ -262,7 +266,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                         pseudo={false}
                       >
                         <a
-                          className="link clean-button color__brand-blue hover-color__brand-deep-blue"
+                          className="link clean-button brand-blue"
                           data-testid="anchor"
                         >
                           Закрыть

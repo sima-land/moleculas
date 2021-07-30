@@ -151,7 +151,7 @@ exports[`ReviewInfo should renders correctly 1`] = `
       pseudo={true}
     >
       <a
-        className="link link color__brand-blue hover-color__brand-deep-blue"
+        className="link link brand-blue"
         data-testid="gallery-modal:go-to-review-link"
         onClick={[MockFunction]}
         role="button"

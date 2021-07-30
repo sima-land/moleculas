@@ -53,7 +53,7 @@ exports[`<ModifiersList /> should render correct with sizesTableUrl 1`] = `
         href="test.ru/123"
       >
         <a
-          className="link sizes-table-link color__brand-blue hover-color__brand-deep-blue"
+          className="link sizes-table-link brand-blue"
           data-testid="anchor"
           href="test.ru/123"
         >
@@ -70,11 +70,13 @@ exports[`<ModifiersList /> should render correct with sizesTableUrl 1`] = `
               width={24}
             >
               <path
-                d="M8 16a1 1 0 001 1h4a1 1 0 100-2H9a1 1 0 00-1 1zM9 13a1 1 0 110-2h6a1 1 0 110 2H9zM8 8a1 1 0 001 1h6a1 1 0 100-2H9a1 1 0 00-1 1z"
+                clipRule="evenodd"
+                d="M3 5a3 3 0 013-3h12a3 3 0 013 3v14a3 3 0 01-3 3H6a3 3 0 01-3-3V5zm3-1a1 1 0 00-1 1v14a1 1 0 001 1h12a1 1 0 001-1V5a1 1 0 00-1-1H6z"
+                fillRule="evenodd"
               />
               <path
                 clipRule="evenodd"
-                d="M6 2h12a3 3 0 013 3v14a3 3 0 01-3 3H6a3 3 0 01-3-3V5a3 3 0 013-3zm0 2a1 1 0 00-1 1v14a1 1 0 001 1h12a1 1 0 001-1V5a1 1 0 00-1-1H6z"
+                d="M7 16a1 1 0 011-1h5a1 1 0 110 2H8a1 1 0 01-1-1zM7 12a1 1 0 011-1h7a1 1 0 110 2H8a1 1 0 01-1-1zM7 8a1 1 0 011-1h7a1 1 0 110 2H8a1 1 0 01-1-1z"
                 fillRule="evenodd"
               />
             </svg>

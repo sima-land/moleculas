@@ -9,7 +9,7 @@ import { DropdownItem } from '@sima-land/ui-nucleons/dropdown-item';
 import { useOutsideClick } from '@sima-land/ui-nucleons/hooks/';
 import on from '@sima-land/ui-nucleons/helpers/on';
 import CrossSVG from '@sima-land/ui-quarks/icons/24x24/Filled/cross';
-import SearchSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/magnifier';
+import SearchSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/search';
 import MoreVertSVG from '@sima-land/ui-quarks/icons/24x24/Filled/more-vert';
 
 export const cx = classnames.bind(classes);

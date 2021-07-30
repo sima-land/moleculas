@@ -53,7 +53,7 @@ describe('<Breadcrumbs />', () => {
     }, 500);
   });
 
-  it('should close on popup outside click', done => {
+  it('should close on popup outside mousedown', () => new Promise<void>(resolve => {
     const spy = jest.fn();
 
     render(
@@ -70,14 +70,14 @@ describe('<Breadcrumbs />', () => {
     expect(container.querySelectorAll('[data-testid="plate"]')).toHaveLength(1);
 
     act(() => {
-      document.documentElement.dispatchEvent(new MouseEvent('click'));
+      window.dispatchEvent(new MouseEvent('mousedown'));
     });
 
     setTimeout(() => {
       expect(container.querySelectorAll('[data-testid="plate"]')).toHaveLength(0);
-      done();
+      resolve();
     }, 500);
-  });
+  }));
 
   it('should open siblings popup with fetching state', () => {
     const spy = jest.fn();
