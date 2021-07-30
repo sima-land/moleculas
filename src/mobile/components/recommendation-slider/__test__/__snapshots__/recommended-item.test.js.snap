@@ -57,7 +57,7 @@ exports[`<RecommendedItem /> render with props should correct render with all pr
       href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
     >
       <a
-        className="link link color__gray87 hover-color__gray54"
+        className="link link gray87"
         data-testid="anchor"
         href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
       >
@@ -111,7 +111,7 @@ exports[`<RecommendedItem /> render with props should correct render without old
       href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
     >
       <a
-        className="link link color__gray87 hover-color__gray54"
+        className="link link gray87"
         data-testid="anchor"
         href="https://www.sima-land.ru/3266880/nabor-dlya-tvorchestva-topiariy-xyezhnost-d-shara-6-cm/"
       >

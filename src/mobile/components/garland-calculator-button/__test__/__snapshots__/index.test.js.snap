@@ -7,7 +7,6 @@ exports[`GarlandCalculatorButton should render component 1`] = `
   <Box
     display="flex"
     justifyContent="between"
-    marginTop={6}
     padding={6}
   >
     <Box

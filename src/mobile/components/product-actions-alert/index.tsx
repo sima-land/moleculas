@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from '@sima-land/ui-nucleons/link';
-import { Alert, Props as AlertProps } from '@sima-land/ui-nucleons/alert';
+import { Alert, AlertProps } from '@sima-land/ui-nucleons/alert';
 import { Clean } from '@sima-land/ui-nucleons/clean-buttons';
 import classnames from 'classnames/bind';
 import styles from './product-actions-alert.module.scss';

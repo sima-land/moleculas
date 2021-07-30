@@ -31,7 +31,7 @@ exports[`ProductCard renders properly 1`] = `
         href="test"
       >
         <a
-          className="link color__brand-blue hover-color__brand-deep-blue"
+          className="link brand-blue"
           data-testid="anchor"
           href="test"
         >
@@ -83,7 +83,7 @@ exports[`ProductCard renders properly 1`] = `
         href="test"
       >
         <a
-          className="link link color__gray87 hover-color__gray54"
+          className="link link gray87"
           data-testid="anchor"
           href="test"
         >
@@ -215,7 +215,7 @@ exports[`ProductCard renders properly 1`] = `
           </ForwardRef(Text)>
           <ForwardRef(Link)>
             <a
-              className="link color__brand-blue hover-color__brand-deep-blue"
+              className="link brand-blue"
               data-testid="anchor"
             >
               №
@@ -298,7 +298,7 @@ exports[`ProductCard renders properly without heart 1`] = `
         href="test"
       >
         <a
-          className="link color__brand-blue hover-color__brand-deep-blue"
+          className="link brand-blue"
           data-testid="anchor"
           href="test"
         >
@@ -318,7 +318,7 @@ exports[`ProductCard renders properly without heart 1`] = `
         href="test"
       >
         <a
-          className="link link color__gray87 hover-color__gray54"
+          className="link link gray87"
           data-testid="anchor"
           href="test"
         >
@@ -450,7 +450,7 @@ exports[`ProductCard renders properly without heart 1`] = `
           </ForwardRef(Text)>
           <ForwardRef(Link)>
             <a
-              className="link color__brand-blue hover-color__brand-deep-blue"
+              className="link brand-blue"
               data-testid="anchor"
             >
               №

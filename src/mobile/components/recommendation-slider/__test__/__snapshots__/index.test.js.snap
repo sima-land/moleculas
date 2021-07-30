@@ -688,7 +688,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           onClick={[Function]}
                         >
                           <a
-                            className="link link color__gray87 hover-color__gray54"
+                            className="link link gray87"
                             data-testid="anchor"
                             href=""
                             onClick={[Function]}
@@ -748,7 +748,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           onClick={[Function]}
                         >
                           <a
-                            className="link link color__gray87 hover-color__gray54"
+                            className="link link gray87"
                             data-testid="anchor"
                             href=""
                             onClick={[Function]}
@@ -846,7 +846,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           onClick={[Function]}
                         >
                           <a
-                            className="link link color__gray87 hover-color__gray54"
+                            className="link link gray87"
                             data-testid="anchor"
                             href=""
                             onClick={[Function]}
@@ -907,7 +907,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           onClick={[Function]}
                         >
                           <a
-                            className="link link color__gray87 hover-color__gray54"
+                            className="link link gray87"
                             data-testid="anchor"
                             href=""
                             onClick={[Function]}
@@ -965,7 +965,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           onClick={[Function]}
                         >
                           <a
-                            className="link link color__gray87 hover-color__gray54"
+                            className="link link gray87"
                             data-testid="anchor"
                             href=""
                             onClick={[Function]}
@@ -1025,7 +1025,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           onClick={[Function]}
                         >
                           <a
-                            className="link link color__gray87 hover-color__gray54"
+                            className="link link gray87"
                             data-testid="anchor"
                             href=""
                             onClick={[Function]}
@@ -1086,7 +1086,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           onClick={[Function]}
                         >
                           <a
-                            className="link link color__gray87 hover-color__gray54"
+                            className="link link gray87"
                             data-testid="anchor"
                             href=""
                             onClick={[Function]}
@@ -1157,7 +1157,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           onClick={[Function]}
                         >
                           <a
-                            className="link link color__gray87 hover-color__gray54"
+                            className="link link gray87"
                             data-testid="anchor"
                             href=""
                             onClick={[Function]}
@@ -1228,7 +1228,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           onClick={[Function]}
                         >
                           <a
-                            className="link link color__gray87 hover-color__gray54"
+                            className="link link gray87"
                             data-testid="anchor"
                             href=""
                             onClick={[Function]}
@@ -1286,7 +1286,7 @@ exports[`<RecommendationSlider /> should match a snapshot with items 1`] = `
                           onClick={[Function]}
                         >
                           <a
-                            className="link link color__gray87 hover-color__gray54"
+                            className="link link gray87"
                             data-testid="anchor"
                             href=""
                             onClick={[Function]}

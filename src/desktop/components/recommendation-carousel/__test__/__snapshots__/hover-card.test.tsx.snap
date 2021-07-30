@@ -156,7 +156,7 @@ exports[`<HoverCard /> should renders hidden 1`] = `
           href="https://www.sima-land.ru/123456"
         >
           <a
-            className="link row link color__gray87 hover-color__gray54"
+            className="link row link gray87"
             data-testid="anchor"
             href="https://www.sima-land.ru/123456"
           >
@@ -367,7 +367,7 @@ Array [
             href="https://www.sima-land.ru/123456"
           >
             <a
-              className="link row link color__gray87 hover-color__gray54"
+              className="link row link gray87"
               data-testid="anchor"
               href="https://www.sima-land.ru/123456"
             >

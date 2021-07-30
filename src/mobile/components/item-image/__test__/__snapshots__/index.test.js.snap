@@ -28,7 +28,7 @@ exports[`<ItemImage /> should render badges 1`] = `
     >
       <ForwardRef(Link)>
         <a
-          className="link color__brand-blue hover-color__brand-deep-blue"
+          className="link brand-blue"
           data-testid="anchor"
         >
           <img
@@ -120,7 +120,7 @@ exports[`<ItemImage /> should render wish 1`] = `
     >
       <ForwardRef(Link)>
         <a
-          className="link color__brand-blue hover-color__brand-deep-blue"
+          className="link brand-blue"
           data-testid="anchor"
         >
           <img
@@ -170,7 +170,7 @@ exports[`<ItemImage /> should render wish, no props 1`] = `
     >
       <ForwardRef(Link)>
         <a
-          className="link color__brand-blue hover-color__brand-deep-blue"
+          className="link brand-blue"
           data-testid="anchor"
         >
           <img
@@ -241,7 +241,7 @@ exports[`<ItemImage /> should render with withBlur prop 1`] = `
     >
       <ForwardRef(Link)>
         <a
-          className="link color__brand-blue hover-color__brand-deep-blue"
+          className="link brand-blue"
           data-testid="anchor"
         >
           <div
@@ -268,7 +268,7 @@ exports[`<ItemImage /> should render without props 1`] = `
     >
       <ForwardRef(Link)>
         <a
-          className="link color__brand-blue hover-color__brand-deep-blue"
+          className="link brand-blue"
           data-testid="anchor"
         >
           <img

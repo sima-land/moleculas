@@ -53,7 +53,7 @@ exports[`<AdultBlock /> should render with props 1`] = `
             pseudo={true}
           >
             <a
-              className="link color__brand-blue hover-color__brand-deep-blue"
+              className="link brand-blue"
               data-testid="anchor"
               onClick={[MockFunction]}
               role="button"
@@ -128,7 +128,7 @@ exports[`<AdultBlock /> should render without props 1`] = `
             pseudo={true}
           >
             <a
-              className="link color__brand-blue hover-color__brand-deep-blue"
+              className="link brand-blue"
               data-testid="anchor"
               role="button"
               tabIndex={0}

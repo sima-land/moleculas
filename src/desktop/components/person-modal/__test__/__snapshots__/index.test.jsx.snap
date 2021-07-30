@@ -188,7 +188,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
                                       href="/test"
                                     >
                                       <a
-                                        className="link color__brand-blue hover-color__brand-deep-blue"
+                                        className="link brand-blue"
                                         data-testid="anchor"
                                         href="/test"
                                       >
@@ -211,7 +211,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
                                   href="mailto:example@email.com"
                                 >
                                   <a
-                                    className="link color__gray87 hover-color__gray54"
+                                    className="link gray87"
                                     data-testid="anchor"
                                     href="mailto:example@email.com"
                                   >
@@ -232,7 +232,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
                                   target="_blank"
                                 >
                                   <a
-                                    className="link inline color__gray87 hover-color__gray54"
+                                    className="link inline gray87"
                                     data-testid="anchor"
                                     href="https://example.com"
                                     rel="nofollow"
@@ -250,7 +250,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
                                   target="_blank"
                                 >
                                   <a
-                                    className="link inline color__gray87 hover-color__gray54"
+                                    className="link inline gray87"
                                     data-testid="anchor"
                                     href="https://example.com"
                                     rel="nofollow"
@@ -268,7 +268,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
                                   target="_blank"
                                 >
                                   <a
-                                    className="link inline color__gray87 hover-color__gray54"
+                                    className="link inline gray87"
                                     data-testid="anchor"
                                     href="https://example.com"
                                     rel="nofollow"
@@ -287,7 +287,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
                                   href="skype:example@skype.com"
                                 >
                                   <a
-                                    className="link color__gray87 hover-color__gray54"
+                                    className="link gray87"
                                     data-testid="anchor"
                                     href="skype:example@skype.com"
                                   >
@@ -303,7 +303,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
                                   href="tel:88000000000;postd=8823"
                                 >
                                   <a
-                                    className="link color__gray87 hover-color__gray54"
+                                    className="link gray87"
                                     data-testid="anchor"
                                     href="tel:88000000000;postd=8823"
                                   >
@@ -319,7 +319,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
                                   href="tel:+7900000000"
                                 >
                                   <a
-                                    className="link color__gray87 hover-color__gray54"
+                                    className="link gray87"
                                     data-testid="anchor"
                                     href="tel:+7900000000"
                                   >
@@ -392,7 +392,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
                         pseudo={false}
                       >
                         <a
-                          className="link clean-button color__brand-blue hover-color__brand-deep-blue"
+                          className="link clean-button brand-blue"
                           data-testid="anchor"
                           onClick={[MockFunction]}
                         >
@@ -618,7 +618,7 @@ exports[`<PersonModal /> should renders properly with minimal props 1`] = `
                         pseudo={false}
                       >
                         <a
-                          className="link clean-button color__brand-blue hover-color__brand-deep-blue"
+                          className="link clean-button brand-blue"
                           data-testid="anchor"
                         >
                           Закрыть

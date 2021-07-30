@@ -1,12 +1,12 @@
-import React, { useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import CSSTransition from 'react-transition-group/CSSTransition';
 import { Plate } from '@sima-land/ui-nucleons/plate';
 import { Link } from '@sima-land/ui-nucleons/link';
 import { times } from 'lodash';
-import { useOutsideClick } from '@sima-land/ui-nucleons/hooks';
 import classnames from 'classnames/bind';
 import styles from './breadcrumbs.module.scss';
 import DownSVG from './square-arrow-down.svg';
+import on from '@sima-land/ui-nucleons/helpers/on';
 
 export interface Sibling {
   name: string
@@ -69,15 +69,20 @@ const Breadcrumb = ({
 }) => {
   const popupRef = useRef<HTMLDivElement>(null);
 
+  const [withPopup, togglePopup] = useState<boolean>(false);
+
+  // с useOutsideClick не работает после обновления React до 17 версии, пока так
+  useEffect(() => {
+    if (withPopup) {
+      return on(window, 'mousedown', togglePopup.bind(null, false));
+    }
+  }, [withPopup]);
+
   const selfName = (
     <Link color='gray87' href={data.url}>
       {data.name}
     </Link>
   );
-
-  const [withPopup, togglePopup] = useState<boolean>(false);
-
-  useOutsideClick(popupRef, () => togglePopup(false));
 
   return (
     <div data-testid='breadcrumb' className={cx('breadcrumb')}>

@@ -9,18 +9,22 @@ import styles from './garland-calculator-button.module.scss';
 const cx = classnames.bind(styles);
 
 export interface GarlandCalculatorButtonProps {
+
+  /** Обработчик нажатия на кнопку рассчитать. */
   onClick?: React.MouseEventHandler
+
+  /** CSS-класс. */
+  className?: string
 }
 
 /**
  * Компонент плашки с кнопкой открытия гирлянды.
  * @param props Свойства компонента.
- * @param props.onClick Обработчик нажатия на кнопку рассчитать.
- * @return Плашка с кнопкой открытия гирлянды.
+ * @return Элемент.
  */
-export const GarlandCalculatorButton = ({ onClick }: GarlandCalculatorButtonProps) => (
-  <div className={cx('wrapper')}>
-    <Box padding={6} display='flex' justifyContent='between' marginTop={6}>
+export const GarlandCalculatorButton = ({ className, onClick }: GarlandCalculatorButtonProps) => (
+  <div className={cx('wrapper', className)}>
+    <Box padding={6} display='flex' justifyContent='between'>
       <Box paddingRight={5}>
         <Text size={14} lineHeight={20} weight={400}>
           Сколько метров
