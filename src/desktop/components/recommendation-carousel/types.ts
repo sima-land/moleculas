@@ -1,6 +1,6 @@
 import { BadgeProps } from '../../../common/components/badge';
 
-// ВАЖНО: здесь только модели данных - никаких свойств компонентов вроде функций или флагов
+// ВАЖНО: в моделях Product, CartItem только данные, никаких свойств компонентов вроде функций или флагов
 
 export interface Product {
   badges?: BadgeProps[]
@@ -23,4 +23,8 @@ export interface CartItem {
 export interface CarouselItem {
   product: Product
   cart?: CartItem
+}
+
+export interface WithLinkClickHandle {
+  onLinkClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void
 }

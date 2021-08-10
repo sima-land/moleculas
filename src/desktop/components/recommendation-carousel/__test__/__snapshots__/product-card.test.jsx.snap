@@ -49,6 +49,7 @@ exports[`<ProductCard /> should renders correctly 1`] = `
     >
       <a
         className="row image-row"
+        data-testid="product-info:image-link"
         href="https://www.sima-land.ru/123456"
       >
         <Image
@@ -139,11 +140,12 @@ exports[`<ProductCard /> should renders correctly 1`] = `
       <ForwardRef(Link)
         className="row link"
         color="gray87"
+        data-testid="product-info:name-link"
         href="https://www.sima-land.ru/123456"
       >
         <a
           className="link row link gray87"
-          data-testid="anchor"
+          data-testid="product-info:name-link"
           href="https://www.sima-land.ru/123456"
         >
           Ножницы портновские, 10, 26 см, цвет чёрный

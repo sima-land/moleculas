@@ -28,7 +28,10 @@ export const ProductCard = forwardRef<HTMLDivElement | null, ProductCardProps>((
     ref={ref}
     className={cx('root', Rounds.all, Shadow.z4, className)}
   >
-    <ProductInfo {...productInfo} withQuickView />
+    <ProductInfo
+      {...productInfo}
+      withQuickView
+    />
 
     <div className={cx('control-wrapper')}>
       <InCartControl {...inCartControl} className={cx('control')} />

@@ -41,6 +41,7 @@ exports[`<HoverCard /> should renders hidden 1`] = `
         "imageSrc": "https://cdn3.static1-sima-land.com/items/29455/0/1600.jpg?v: 1617955476",
         "name": "Ножницы портновские, 10, 26 см, цвет чёрный",
         "oldPrice": 250,
+        "onLinkClick": undefined,
         "onQuickViewClick": [Function],
         "price": 225,
         "url": "https://www.sima-land.ru/123456",
@@ -63,6 +64,7 @@ exports[`<HoverCard /> should renders hidden 1`] = `
       >
         <a
           className="row image-row"
+          data-testid="product-info:image-link"
           href="https://www.sima-land.ru/123456"
         >
           <Image
@@ -153,11 +155,12 @@ exports[`<HoverCard /> should renders hidden 1`] = `
         <ForwardRef(Link)
           className="row link"
           color="gray87"
+          data-testid="product-info:name-link"
           href="https://www.sima-land.ru/123456"
         >
           <a
             className="link row link gray87"
-            data-testid="anchor"
+            data-testid="product-info:name-link"
             href="https://www.sima-land.ru/123456"
           >
             Ножницы портновские, 10, 26 см, цвет чёрный
@@ -248,6 +251,7 @@ Array [
           "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
           "name": "Ножницы портновские, 10, 26 см, цвет чёрный",
           "oldPrice": 250,
+          "onLinkClick": undefined,
           "onQuickViewClick": [Function],
           "price": 225,
           "url": "https://www.sima-land.ru/123456",
@@ -274,6 +278,7 @@ Array [
         >
           <a
             className="row image-row"
+            data-testid="product-info:image-link"
             href="https://www.sima-land.ru/123456"
           >
             <Image
@@ -364,11 +369,12 @@ Array [
           <ForwardRef(Link)
             className="row link"
             color="gray87"
+            data-testid="product-info:name-link"
             href="https://www.sima-land.ru/123456"
           >
             <a
               className="link row link gray87"
-              data-testid="anchor"
+              data-testid="product-info:name-link"
               href="https://www.sima-land.ru/123456"
             >
               Ножницы портновские, 10, 26 см, цвет чёрный

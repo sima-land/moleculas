@@ -47,6 +47,53 @@ describe('<RecommendationCarousel />', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should handle "onItemLinkClick" prop', () => {
+    const spy = jest.fn();
+
+    const wrapper = mount(
+      <RecommendationCarousel
+        items={items}
+        onItemLinkClick={spy}
+      />
+    );
+
+    expect(spy).toBeCalledTimes(0);
+
+    act(() => {
+      wrapper.find('a[data-testid="product-info:image-link"]').at(1).simulate('click');
+    });
+    wrapper.update();
+
+    expect(spy).toBeCalledTimes(1);
+
+    act(() => {
+      wrapper.find('a[data-testid="product-info:name-link"]').at(2).simulate('click');
+    });
+    wrapper.update();
+
+    expect(spy).toBeCalledTimes(2);
+  });
+
+  it('should handle "onItemLinkClick" prop missing', () => {
+    const wrapper = mount(
+      <RecommendationCarousel
+        items={items}
+      />
+    );
+
+    act(() => {
+      wrapper.find('a[data-testid="product-info:image-link"]').at(1).simulate('click');
+    });
+    wrapper.update();
+
+    act(() => {
+      wrapper.find('a[data-testid="product-info:name-link"]').at(2).simulate('click');
+    });
+    wrapper.update();
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should handle "titleTag" prop', () => {
     const wrapper = mount(
       <RecommendationCarousel
@@ -105,6 +152,67 @@ describe('<RecommendationCarousel />', () => {
     wrapper.update();
 
     expect(Find.hoverCardItemName(wrapper)).toBe(items[0].product.name);
+  });
+
+  it('should handle hover card link clicks', () => {
+    const spy = jest.fn();
+
+    const wrapper = mount(
+      <RecommendationCarousel
+        items={items}
+        withHoverCard
+        onItemLinkClick={spy}
+      />
+    );
+
+    act(() => {
+      Find.item(wrapper).at(1).simulate('mouseenter');
+    });
+    wrapper.update();
+
+    expect(Find.hoverCard(wrapper)).toHaveLength(1);
+
+    act(() => {
+      Find.hoverCard(wrapper).find('a[data-testid="product-info:image-link"]').simulate('click');
+    });
+    wrapper.update();
+
+    expect(spy).toBeCalledTimes(1);
+
+    act(() => {
+      Find.hoverCard(wrapper).find('a[data-testid="product-info:name-link"]').simulate('click');
+    });
+    wrapper.update();
+
+    expect(spy).toBeCalledTimes(2);
+  });
+
+  it('should handle hover card link clicks without "onItemLinkClick" prop', () => {
+    const wrapper = mount(
+      <RecommendationCarousel
+        items={items}
+        withHoverCard
+      />
+    );
+
+    act(() => {
+      Find.item(wrapper).at(1).simulate('mouseenter');
+    });
+    wrapper.update();
+
+    expect(Find.hoverCard(wrapper)).toHaveLength(1);
+
+    act(() => {
+      Find.hoverCard(wrapper).find('a[data-testid="product-info:image-link"]').simulate('click');
+    });
+    wrapper.update();
+
+    act(() => {
+      Find.hoverCard(wrapper).find('a[data-testid="product-info:name-link"]').simulate('click');
+    });
+    wrapper.update();
+
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should handle hover card mouseleave', () => {

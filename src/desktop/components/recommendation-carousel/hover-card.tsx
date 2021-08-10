@@ -3,9 +3,11 @@ import { getOriginCorrection } from '@sima-land/ui-nucleons/with-tooltip/utils';
 import { ProductCard, ProductCardProps } from './product-card';
 import classnames from 'classnames/bind';
 import styles from './hover-card.module.scss';
-import { CarouselItem } from './types';
+import { CarouselItem, WithLinkClickHandle } from './types';
 
-export interface HoverCardProps extends Omit<ProductCardProps, 'onChange' | 'inCartControl' | 'productInfo'> {
+export type BaseCardProps = Omit<ProductCardProps, 'onChange' | 'inCartControl' | 'productInfo'>;
+
+export interface HoverCardProps extends BaseCardProps, WithLinkClickHandle {
   info: CarouselItem
   targetRef: React.RefObject<HTMLElement | null>
   onAdd?: (info: CarouselItem) => void
@@ -30,6 +32,7 @@ export const HoverCard = ({
   onMouseLeave,
   onQuickViewClick,
   onSubtract,
+  onLinkClick,
   ...restProps
 }: HoverCardProps) => {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -70,6 +73,7 @@ export const HoverCard = ({
       productInfo={{
         ...info.product,
         onQuickViewClick: bindInfo(onQuickViewClick),
+        onLinkClick,
       } as any}
     />
   );
