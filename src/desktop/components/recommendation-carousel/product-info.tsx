@@ -8,9 +8,9 @@ import styles from './product-info.module.scss';
 import { QuickViewButton } from '../../../common/components/quick-view-button';
 import withPrevent from '@sima-land/ui-nucleons/helpers/with-prevent';
 import { WithHint } from '@sima-land/ui-nucleons/with-hint';
-import { Product } from './types';
+import { Product, WithLinkClickHandle } from './types';
 
-export interface ProductInfoProps extends Product {
+export interface ProductInfoProps extends Product, WithLinkClickHandle {
   onQuickViewClick?: React.MouseEventHandler<SVGSVGElement>
   withQuickView?: boolean
 }
@@ -29,12 +29,13 @@ export const ProductInfo = ({
   name,
   oldPrice,
   onQuickViewClick,
+  onLinkClick,
   price,
   url,
   withQuickView,
 }: ProductInfoProps) => (
   <>
-    <a className={cx('row', 'image-row')} href={url}>
+    <a className={cx('row', 'image-row')} href={url} onClick={onLinkClick} data-testid='product-info:image-link'>
       <Image
         className={cx('image')}
         alt={name}
@@ -91,6 +92,8 @@ export const ProductInfo = ({
       href={url}
       children={name}
       color='gray87'
+      onClick={onLinkClick}
+      data-testid='product-info:name-link'
     />
   </>
 );

@@ -25,6 +25,7 @@ export interface RecommendationCarouselProps {
   onItemChange?: HoverCardProps['onChange']
   onItemQuickViewClick?: HoverCardProps['onQuickViewClick']
   onItemSubtract?: HoverCardProps['onSubtract']
+  onItemLinkClick?: (event: React.MouseEvent<HTMLAnchorElement>, item: CarouselItem) => void
   onNeedRequest?: () => void
   withHoverCard?: boolean
   title?: string
@@ -56,6 +57,7 @@ export const RecommendationCarousel = ({
   onItemChange,
   onItemQuickViewClick,
   onItemSubtract,
+  onItemLinkClick,
   onNeedRequest,
   withHoverCard,
   title,
@@ -108,7 +110,11 @@ export const RecommendationCarousel = ({
                 }
               }}
             >
-              <ProductInfo {...item.product} withQuickView={false} />
+              <ProductInfo
+                {...item.product}
+                withQuickView={false}
+                onLinkClick={e => onItemLinkClick?.(e, item)}
+              />
             </div>
           )}
 
@@ -124,6 +130,7 @@ export const RecommendationCarousel = ({
             info={activeItem}
             targetRef={targetItemRef}
             onQuickViewClick={onItemQuickViewClick}
+            onLinkClick={e => onItemLinkClick?.(e, activeItem)}
             onAdd={onItemAdd}
             onSubtract={onItemSubtract}
             onChange={onItemChange}

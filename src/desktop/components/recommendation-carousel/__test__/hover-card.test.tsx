@@ -33,6 +33,46 @@ describe('<HoverCard />', () => {
     expect(wrapper.find(ProductCard).hasClass('hidden')).toBe(true);
   });
 
+  it('should handle "onLinkClick" prop', () => {
+    const spy = jest.fn();
+
+    const wrapper = mount(
+      <HoverCard
+        info={{
+          product: {
+            url: 'https://www.sima-land.ru/123456',
+            name: 'Ножницы портновские, 10, 26 см, цвет чёрный',
+            imageSrc: 'https://cdn3.static1-sima-land.com/items/29455/0/1600.jpg?v: 1617955476',
+            price: 225,
+            oldPrice: 250,
+            currencyGrapheme: '₽',
+          },
+          cart: {
+            markupText: 'Комплектация + 50 ₽ при покупке до 20 шт',
+          },
+        }}
+        targetRef={createRef()}
+        onLinkClick={spy}
+      />
+    );
+
+    expect(spy).toBeCalledTimes(0);
+
+    act(() => {
+      wrapper.find('a[data-testid="product-info:image-link"]').simulate('click');
+    });
+    wrapper.update();
+
+    expect(spy).toBeCalledTimes(1);
+
+    act(() => {
+      wrapper.find('a[data-testid="product-info:name-link"]').simulate('click');
+    });
+    wrapper.update();
+
+    expect(spy).toBeCalledTimes(2);
+  });
+
   it('should renders with positioning', () => {
     const spy = jest.fn();
 
