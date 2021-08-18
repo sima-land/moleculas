@@ -17,16 +17,15 @@ export const items: CarouselItem[] = [
   },
   {
     product: {
-      name: 'Ножницы портновские, 31 см, цвет чёрный/голубой',
-      imageSrc: 'https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798',
+      name: 'Ткань тюлевая, ширина 300 см, сетка',
+      imageSrc: 'https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605',
       url: '',
-      price: 322,
+      price: 495,
       currencyGrapheme: '₽',
       oldPrice: undefined,
     },
     cart: {
-      stepText: 'по 20 шт',
-      markupText: 'Комплектация + 50 ₽ при покупке до 20 шт',
+      stepText: 'по 15 пог. м',
     },
   },
   {

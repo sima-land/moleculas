@@ -67,20 +67,19 @@ exports[`<HoverCard /> should renders hidden 1`] = `
           data-testid="product-info:image-link"
           href="https://www.sima-land.ru/123456"
         >
-          <Image
-            alt="Ножницы портновские, 10, 26 см, цвет чёрный"
-            className="image"
-            src="https://cdn3.static1-sima-land.com/items/29455/0/1600.jpg?v: 1617955476"
+          <ImageOverlay
+            className="image-overlay"
           >
             <div
-              className="root image"
+              className="root image-overlay"
             >
               <img
                 alt="Ножницы портновские, 10, 26 см, цвет чёрный"
+                className="image"
                 src="https://cdn3.static1-sima-land.com/items/29455/0/1600.jpg?v: 1617955476"
               />
             </div>
-          </Image>
+          </ImageOverlay>
           <WithHint
             direction="left"
             hint="Быстрый просмотр"
@@ -281,20 +280,19 @@ Array [
             data-testid="product-info:image-link"
             href="https://www.sima-land.ru/123456"
           >
-            <Image
-              alt="Ножницы портновские, 10, 26 см, цвет чёрный"
-              className="image"
-              src="https://cdn3.static1-sima-land.com/items/29455/0/1600.jpg?v: 1617955476"
+            <ImageOverlay
+              className="image-overlay"
             >
               <div
-                className="root image"
+                className="root image-overlay"
               >
                 <img
                   alt="Ножницы портновские, 10, 26 см, цвет чёрный"
+                  className="image"
                   src="https://cdn3.static1-sima-land.com/items/29455/0/1600.jpg?v: 1617955476"
                 />
               </div>
-            </Image>
+            </ImageOverlay>
             <WithHint
               direction="left"
               hint="Быстрый просмотр"

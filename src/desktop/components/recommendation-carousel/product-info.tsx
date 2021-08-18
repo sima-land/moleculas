@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from '@sima-land/ui-nucleons/link';
 import { Price } from '@sima-land/ui-nucleons/price';
-import { Image } from '../../../common/components/image';
 import { Badge } from '../../../common/components/badge';
 import classnames from 'classnames/bind';
 import styles from './product-info.module.scss';
@@ -9,6 +8,7 @@ import { QuickViewButton } from '../../../common/components/quick-view-button';
 import withPrevent from '@sima-land/ui-nucleons/helpers/with-prevent';
 import { WithHint } from '@sima-land/ui-nucleons/with-hint';
 import { Product, WithLinkClickHandle } from './types';
+import { ImageOverlay } from '../gallery-modal/components/image-overlay';
 
 export interface ProductInfoProps extends Product, WithLinkClickHandle {
   onQuickViewClick?: React.MouseEventHandler<SVGSVGElement>
@@ -36,11 +36,14 @@ export const ProductInfo = ({
 }: ProductInfoProps) => (
   <>
     <a className={cx('row', 'image-row')} href={url} onClick={onLinkClick} data-testid='product-info:image-link'>
-      <Image
-        className={cx('image')}
-        alt={name}
-        src={imageSrc}
-      />
+      <ImageOverlay className={cx('image-overlay')}>
+        <img
+          className={cx('image')}
+          alt={name}
+          src={imageSrc}
+        />
+      </ImageOverlay>
+
       {withQuickView && (
         <WithHint hint='Быстрый просмотр' direction='left'>
           {(ref, toggle) => (
