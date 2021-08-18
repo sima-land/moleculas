@@ -20,15 +20,14 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
       },
       Object {
         "cart": Object {
-          "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
-          "stepText": "по 20 шт",
+          "stepText": "по 15 пог. м",
         },
         "product": Object {
           "currencyGrapheme": "₽",
-          "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
-          "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
+          "imageSrc": "https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605",
+          "name": "Ткань тюлевая, ширина 300 см, сетка",
           "oldPrice": undefined,
-          "price": 322,
+          "price": 495,
           "url": "",
         },
       },
@@ -207,15 +206,14 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
           },
           Object {
             "cart": Object {
-              "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
-              "stepText": "по 20 шт",
+              "stepText": "по 15 пог. м",
             },
             "product": Object {
               "currencyGrapheme": "₽",
-              "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
-              "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
+              "imageSrc": "https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605",
+              "name": "Ткань тюлевая, ширина 300 см, сетка",
               "oldPrice": undefined,
-              "price": 322,
+              "price": 495,
               "url": "",
             },
           },
@@ -395,10 +393,11 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 19 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                             />
                           </div>
@@ -431,11 +430,12 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
-                              alt="Ножницы портновские, 31 см, цвет чёрный/голубой"
-                              src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                              alt="Ткань тюлевая, ширина 300 см, сетка"
+                              class="image"
+                              src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
                             />
                           </div>
                         </a>
@@ -446,7 +446,7 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                             class="root price"
                             data-testid="price"
                           >
-                            322 ₽
+                            495 ₽
                           </span>
                         </div>
                         <a
@@ -454,7 +454,7 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                           data-testid="product-info:name-link"
                           href=""
                         >
-                          Ножницы портновские, 31 см, цвет чёрный/голубой
+                          Ткань тюлевая, ширина 300 см, сетка
                         </a>
                       </div>
                       <div
@@ -467,10 +467,11 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 21,5 см, цвет чёрный/голубой"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
                             />
                           </div>
@@ -551,10 +552,11 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 23 см, цвет МИКС"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
                             />
                           </div>
@@ -587,10 +589,11 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
                             />
                           </div>
@@ -623,10 +626,11 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 22,5 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
                             />
                           </div>
@@ -659,10 +663,11 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 22 см, цвет серебряный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
                             />
                           </div>
@@ -695,10 +700,11 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
                             />
                           </div>
@@ -737,10 +743,11 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
                             />
                           </div>
@@ -779,10 +786,11 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
                             />
                           </div>
@@ -855,20 +863,19 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 19 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 19 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -911,10 +918,10 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                 >
                   <ProductInfo
                     currencyGrapheme="₽"
-                    imageSrc="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
-                    name="Ножницы портновские, 31 см, цвет чёрный/голубой"
+                    imageSrc="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
+                    name="Ткань тюлевая, ширина 300 см, сетка"
                     onLinkClick={[Function]}
-                    price={322}
+                    price={495}
                     url=""
                     withQuickView={false}
                   >
@@ -924,20 +931,19 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 31 см, цвет чёрный/голубой"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
-                            alt="Ножницы портновские, 31 см, цвет чёрный/голубой"
-                            src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                            alt="Ткань тюлевая, ширина 300 см, сетка"
+                            className="image"
+                            src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -945,13 +951,13 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                       <Price
                         className="price"
                         currencyGrapheme="₽"
-                        value={322}
+                        value={495}
                       >
                         <span
                           className="root price"
                           data-testid="price"
                         >
-                          322 ₽
+                          495 ₽
                         </span>
                       </Price>
                     </div>
@@ -968,7 +974,7 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                         href=""
                         onClick={[Function]}
                       >
-                        Ножницы портновские, 31 см, цвет чёрный/голубой
+                        Ткань тюлевая, ширина 300 см, сетка
                       </a>
                     </ForwardRef(Link)>
                   </ProductInfo>
@@ -1033,20 +1039,19 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 21,5 см, цвет чёрный/голубой"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 21,5 см, цвет чёрный/голубой"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -1222,20 +1227,19 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 23 см, цвет МИКС"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 23 см, цвет МИКС"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -1291,20 +1295,19 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -1360,20 +1363,19 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 22,5 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 22,5 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -1429,20 +1431,19 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 22 см, цвет серебряный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 22 см, цвет серебряный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -1499,20 +1500,19 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -1582,20 +1582,19 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -1664,20 +1663,19 @@ exports[`<RecommendationCarousel /> should handle "onItemLinkClick" prop missing
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -1837,15 +1835,14 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
       },
       Object {
         "cart": Object {
-          "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
-          "stepText": "по 20 шт",
+          "stepText": "по 15 пог. м",
         },
         "product": Object {
           "currencyGrapheme": "₽",
-          "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
-          "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
+          "imageSrc": "https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605",
+          "name": "Ткань тюлевая, ширина 300 см, сетка",
           "oldPrice": undefined,
-          "price": 322,
+          "price": 495,
           "url": "",
         },
       },
@@ -2028,15 +2025,14 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
           },
           Object {
             "cart": Object {
-              "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
-              "stepText": "по 20 шт",
+              "stepText": "по 15 пог. м",
             },
             "product": Object {
               "currencyGrapheme": "₽",
-              "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
-              "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
+              "imageSrc": "https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605",
+              "name": "Ткань тюлевая, ширина 300 см, сетка",
               "oldPrice": undefined,
-              "price": 322,
+              "price": 495,
               "url": "",
             },
           },
@@ -2216,10 +2212,11 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 19 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                             />
                           </div>
@@ -2252,11 +2249,12 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
-                              alt="Ножницы портновские, 31 см, цвет чёрный/голубой"
-                              src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                              alt="Ткань тюлевая, ширина 300 см, сетка"
+                              class="image"
+                              src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
                             />
                           </div>
                         </a>
@@ -2267,7 +2265,7 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                             class="root price"
                             data-testid="price"
                           >
-                            322 ₽
+                            495 ₽
                           </span>
                         </div>
                         <a
@@ -2275,7 +2273,7 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                           data-testid="product-info:name-link"
                           href=""
                         >
-                          Ножницы портновские, 31 см, цвет чёрный/голубой
+                          Ткань тюлевая, ширина 300 см, сетка
                         </a>
                       </div>
                       <div
@@ -2288,10 +2286,11 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 21,5 см, цвет чёрный/голубой"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
                             />
                           </div>
@@ -2372,10 +2371,11 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 23 см, цвет МИКС"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
                             />
                           </div>
@@ -2408,10 +2408,11 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
                             />
                           </div>
@@ -2444,10 +2445,11 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 22,5 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
                             />
                           </div>
@@ -2480,10 +2482,11 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 22 см, цвет серебряный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
                             />
                           </div>
@@ -2516,10 +2519,11 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
                             />
                           </div>
@@ -2558,10 +2562,11 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
                             />
                           </div>
@@ -2600,10 +2605,11 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
                             />
                           </div>
@@ -2676,20 +2682,19 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 19 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 19 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -2732,10 +2737,10 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                 >
                   <ProductInfo
                     currencyGrapheme="₽"
-                    imageSrc="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
-                    name="Ножницы портновские, 31 см, цвет чёрный/голубой"
+                    imageSrc="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
+                    name="Ткань тюлевая, ширина 300 см, сетка"
                     onLinkClick={[Function]}
-                    price={322}
+                    price={495}
                     url=""
                     withQuickView={false}
                   >
@@ -2745,20 +2750,19 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 31 см, цвет чёрный/голубой"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
-                            alt="Ножницы портновские, 31 см, цвет чёрный/голубой"
-                            src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                            alt="Ткань тюлевая, ширина 300 см, сетка"
+                            className="image"
+                            src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -2766,13 +2770,13 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                       <Price
                         className="price"
                         currencyGrapheme="₽"
-                        value={322}
+                        value={495}
                       >
                         <span
                           className="root price"
                           data-testid="price"
                         >
-                          322 ₽
+                          495 ₽
                         </span>
                       </Price>
                     </div>
@@ -2789,7 +2793,7 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                         href=""
                         onClick={[Function]}
                       >
-                        Ножницы портновские, 31 см, цвет чёрный/голубой
+                        Ткань тюлевая, ширина 300 см, сетка
                       </a>
                     </ForwardRef(Link)>
                   </ProductInfo>
@@ -2854,20 +2858,19 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 21,5 см, цвет чёрный/голубой"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 21,5 см, цвет чёрный/голубой"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -3043,20 +3046,19 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 23 см, цвет МИКС"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 23 см, цвет МИКС"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -3112,20 +3114,19 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -3181,20 +3182,19 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 22,5 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 22,5 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -3250,20 +3250,19 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 22 см, цвет серебряный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 22 см, цвет серебряный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -3320,20 +3319,19 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -3403,20 +3401,19 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -3485,20 +3482,19 @@ exports[`<RecommendationCarousel /> should handle "titleTag" prop 1`] = `
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -3652,15 +3648,14 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
       },
       Object {
         "cart": Object {
-          "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
-          "stepText": "по 20 шт",
+          "stepText": "по 15 пог. м",
         },
         "product": Object {
           "currencyGrapheme": "₽",
-          "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
-          "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
+          "imageSrc": "https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605",
+          "name": "Ткань тюлевая, ширина 300 см, сетка",
           "oldPrice": undefined,
-          "price": 322,
+          "price": 495,
           "url": "",
         },
       },
@@ -3840,15 +3835,14 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
           },
           Object {
             "cart": Object {
-              "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
-              "stepText": "по 20 шт",
+              "stepText": "по 15 пог. м",
             },
             "product": Object {
               "currencyGrapheme": "₽",
-              "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
-              "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
+              "imageSrc": "https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605",
+              "name": "Ткань тюлевая, ширина 300 см, сетка",
               "oldPrice": undefined,
-              "price": 322,
+              "price": 495,
               "url": "",
             },
           },
@@ -4028,10 +4022,11 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 19 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                             />
                           </div>
@@ -4064,11 +4059,12 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
-                              alt="Ножницы портновские, 31 см, цвет чёрный/голубой"
-                              src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                              alt="Ткань тюлевая, ширина 300 см, сетка"
+                              class="image"
+                              src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
                             />
                           </div>
                         </a>
@@ -4079,7 +4075,7 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                             class="root price"
                             data-testid="price"
                           >
-                            322 ₽
+                            495 ₽
                           </span>
                         </div>
                         <a
@@ -4087,7 +4083,7 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                           data-testid="product-info:name-link"
                           href=""
                         >
-                          Ножницы портновские, 31 см, цвет чёрный/голубой
+                          Ткань тюлевая, ширина 300 см, сетка
                         </a>
                       </div>
                       <div
@@ -4100,10 +4096,11 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 21,5 см, цвет чёрный/голубой"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
                             />
                           </div>
@@ -4184,10 +4181,11 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 23 см, цвет МИКС"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
                             />
                           </div>
@@ -4220,10 +4218,11 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
                             />
                           </div>
@@ -4256,10 +4255,11 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 22,5 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
                             />
                           </div>
@@ -4292,10 +4292,11 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 22 см, цвет серебряный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
                             />
                           </div>
@@ -4328,10 +4329,11 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
                             />
                           </div>
@@ -4370,10 +4372,11 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
                             />
                           </div>
@@ -4412,10 +4415,11 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
                             />
                           </div>
@@ -4488,20 +4492,19 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 19 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 19 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -4544,10 +4547,10 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                 >
                   <ProductInfo
                     currencyGrapheme="₽"
-                    imageSrc="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
-                    name="Ножницы портновские, 31 см, цвет чёрный/голубой"
+                    imageSrc="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
+                    name="Ткань тюлевая, ширина 300 см, сетка"
                     onLinkClick={[Function]}
-                    price={322}
+                    price={495}
                     url=""
                     withQuickView={false}
                   >
@@ -4557,20 +4560,19 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 31 см, цвет чёрный/голубой"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
-                            alt="Ножницы портновские, 31 см, цвет чёрный/голубой"
-                            src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                            alt="Ткань тюлевая, ширина 300 см, сетка"
+                            className="image"
+                            src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -4578,13 +4580,13 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                       <Price
                         className="price"
                         currencyGrapheme="₽"
-                        value={322}
+                        value={495}
                       >
                         <span
                           className="root price"
                           data-testid="price"
                         >
-                          322 ₽
+                          495 ₽
                         </span>
                       </Price>
                     </div>
@@ -4601,7 +4603,7 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                         href=""
                         onClick={[Function]}
                       >
-                        Ножницы портновские, 31 см, цвет чёрный/голубой
+                        Ткань тюлевая, ширина 300 см, сетка
                       </a>
                     </ForwardRef(Link)>
                   </ProductInfo>
@@ -4666,20 +4668,19 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 21,5 см, цвет чёрный/голубой"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 21,5 см, цвет чёрный/голубой"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -4855,20 +4856,19 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 23 см, цвет МИКС"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 23 см, цвет МИКС"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -4924,20 +4924,19 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -4993,20 +4992,19 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 22,5 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 22,5 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -5062,20 +5060,19 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 22 см, цвет серебряный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 22 см, цвет серебряный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -5132,20 +5129,19 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -5215,20 +5211,19 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -5297,20 +5292,19 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -5458,15 +5452,14 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
       info={
         Object {
           "cart": Object {
-            "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
-            "stepText": "по 20 шт",
+            "stepText": "по 15 пог. м",
           },
           "product": Object {
             "currencyGrapheme": "₽",
-            "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
-            "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
+            "imageSrc": "https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605",
+            "name": "Ткань тюлевая, ширина 300 см, сетка",
             "oldPrice": undefined,
-            "price": 322,
+            "price": 495,
             "url": "",
           },
         }
@@ -5485,11 +5478,12 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
               href=""
             >
               <div
-                class="root image"
+                class="root image-overlay"
               >
                 <img
-                  alt="Ножницы портновские, 31 см, цвет чёрный/голубой"
-                  src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                  alt="Ткань тюлевая, ширина 300 см, сетка"
+                  class="image"
+                  src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
                 />
               </div>
             </a>
@@ -5500,7 +5494,7 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                 class="root price"
                 data-testid="price"
               >
-                322 ₽
+                495 ₽
               </span>
             </div>
             <a
@@ -5508,7 +5502,7 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
               data-testid="product-info:name-link"
               href=""
             >
-              Ножницы портновские, 31 см, цвет чёрный/голубой
+              Ткань тюлевая, ширина 300 см, сетка
             </a>
           </div>,
         }
@@ -5518,23 +5512,22 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
         className="card"
         inCartControl={
           Object {
-            "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
             "onAdd": [Function],
             "onChange": [Function],
             "onSubtract": [Function],
-            "stepText": "по 20 шт",
+            "stepText": "по 15 пог. м",
           }
         }
         onMouseLeave={[Function]}
         productInfo={
           Object {
             "currencyGrapheme": "₽",
-            "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
-            "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
+            "imageSrc": "https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605",
+            "name": "Ткань тюлевая, ширина 300 см, сетка",
             "oldPrice": undefined,
             "onLinkClick": [Function],
             "onQuickViewClick": [Function],
-            "price": 322,
+            "price": 495,
             "url": "",
           }
         }
@@ -5545,11 +5538,11 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
         >
           <ProductInfo
             currencyGrapheme="₽"
-            imageSrc="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
-            name="Ножницы портновские, 31 см, цвет чёрный/голубой"
+            imageSrc="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
+            name="Ткань тюлевая, ширина 300 см, сетка"
             onLinkClick={[Function]}
             onQuickViewClick={[Function]}
-            price={322}
+            price={495}
             url=""
             withQuickView={true}
           >
@@ -5559,20 +5552,19 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
               href=""
               onClick={[Function]}
             >
-              <Image
-                alt="Ножницы портновские, 31 см, цвет чёрный/голубой"
-                className="image"
-                src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+              <ImageOverlay
+                className="image-overlay"
               >
                 <div
-                  className="root image"
+                  className="root image-overlay"
                 >
                   <img
-                    alt="Ножницы портновские, 31 см, цвет чёрный/голубой"
-                    src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                    alt="Ткань тюлевая, ширина 300 см, сетка"
+                    className="image"
+                    src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
                   />
                 </div>
-              </Image>
+              </ImageOverlay>
               <WithHint
                 direction="left"
                 hint="Быстрый просмотр"
@@ -5621,13 +5613,13 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
               <Price
                 className="price"
                 currencyGrapheme="₽"
-                value={322}
+                value={495}
               >
                 <span
                   className="root price"
                   data-testid="price"
                 >
-                  322 ₽
+                  495 ₽
                 </span>
               </Price>
             </div>
@@ -5644,7 +5636,7 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
                 href=""
                 onClick={[Function]}
               >
-                Ножницы портновские, 31 см, цвет чёрный/голубой
+                Ткань тюлевая, ширина 300 см, сетка
               </a>
             </ForwardRef(Link)>
           </ProductInfo>
@@ -5653,11 +5645,10 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
           >
             <InCartControl
               className="control"
-              markupText="Комплектация + 50 ₽ при покупке до 20 шт"
               onAdd={[Function]}
               onChange={[Function]}
               onSubtract={[Function]}
-              stepText="по 20 шт"
+              stepText="по 15 пог. м"
             >
               <ForwardRef(Button)
                 className="control control"
@@ -5676,12 +5667,7 @@ exports[`<RecommendationCarousel /> should handle hover card link clicks without
             <div
               className="unit-text"
             >
-              по 20 шт
-            </div>
-            <div
-              className="bottom-text"
-            >
-              Комплектация + 50 ₽ при покупке до 20 шт
+              по 15 пог. м
             </div>
           </div>
         </div>
@@ -5725,15 +5711,14 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
       },
       Object {
         "cart": Object {
-          "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
-          "stepText": "по 20 шт",
+          "stepText": "по 15 пог. м",
         },
         "product": Object {
           "currencyGrapheme": "₽",
-          "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
-          "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
+          "imageSrc": "https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605",
+          "name": "Ткань тюлевая, ширина 300 см, сетка",
           "oldPrice": undefined,
-          "price": 322,
+          "price": 495,
           "url": "",
         },
       },
@@ -5915,15 +5900,14 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
           },
           Object {
             "cart": Object {
-              "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
-              "stepText": "по 20 шт",
+              "stepText": "по 15 пог. м",
             },
             "product": Object {
               "currencyGrapheme": "₽",
-              "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
-              "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
+              "imageSrc": "https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605",
+              "name": "Ткань тюлевая, ширина 300 см, сетка",
               "oldPrice": undefined,
-              "price": 322,
+              "price": 495,
               "url": "",
             },
           },
@@ -6103,10 +6087,11 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 19 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                             />
                           </div>
@@ -6139,11 +6124,12 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
-                              alt="Ножницы портновские, 31 см, цвет чёрный/голубой"
-                              src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                              alt="Ткань тюлевая, ширина 300 см, сетка"
+                              class="image"
+                              src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
                             />
                           </div>
                         </a>
@@ -6154,7 +6140,7 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                             class="root price"
                             data-testid="price"
                           >
-                            322 ₽
+                            495 ₽
                           </span>
                         </div>
                         <a
@@ -6162,7 +6148,7 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                           data-testid="product-info:name-link"
                           href=""
                         >
-                          Ножницы портновские, 31 см, цвет чёрный/голубой
+                          Ткань тюлевая, ширина 300 см, сетка
                         </a>
                       </div>
                       <div
@@ -6175,10 +6161,11 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 21,5 см, цвет чёрный/голубой"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
                             />
                           </div>
@@ -6259,10 +6246,11 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 23 см, цвет МИКС"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
                             />
                           </div>
@@ -6295,10 +6283,11 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
                             />
                           </div>
@@ -6331,10 +6320,11 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 22,5 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
                             />
                           </div>
@@ -6367,10 +6357,11 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 22 см, цвет серебряный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
                             />
                           </div>
@@ -6403,10 +6394,11 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
                             />
                           </div>
@@ -6445,10 +6437,11 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
                             />
                           </div>
@@ -6487,10 +6480,11 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
                             />
                           </div>
@@ -6563,20 +6557,19 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 19 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 19 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -6619,10 +6612,10 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                 >
                   <ProductInfo
                     currencyGrapheme="₽"
-                    imageSrc="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
-                    name="Ножницы портновские, 31 см, цвет чёрный/голубой"
+                    imageSrc="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
+                    name="Ткань тюлевая, ширина 300 см, сетка"
                     onLinkClick={[Function]}
-                    price={322}
+                    price={495}
                     url=""
                     withQuickView={false}
                   >
@@ -6632,20 +6625,19 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 31 см, цвет чёрный/голубой"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
-                            alt="Ножницы портновские, 31 см, цвет чёрный/голубой"
-                            src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                            alt="Ткань тюлевая, ширина 300 см, сетка"
+                            className="image"
+                            src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -6653,13 +6645,13 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                       <Price
                         className="price"
                         currencyGrapheme="₽"
-                        value={322}
+                        value={495}
                       >
                         <span
                           className="root price"
                           data-testid="price"
                         >
-                          322 ₽
+                          495 ₽
                         </span>
                       </Price>
                     </div>
@@ -6676,7 +6668,7 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                         href=""
                         onClick={[Function]}
                       >
-                        Ножницы портновские, 31 см, цвет чёрный/голубой
+                        Ткань тюлевая, ширина 300 см, сетка
                       </a>
                     </ForwardRef(Link)>
                   </ProductInfo>
@@ -6741,20 +6733,19 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 21,5 см, цвет чёрный/голубой"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 21,5 см, цвет чёрный/голубой"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -6930,20 +6921,19 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 23 см, цвет МИКС"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 23 см, цвет МИКС"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -6999,20 +6989,19 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -7068,20 +7057,19 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 22,5 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 22,5 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -7137,20 +7125,19 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 22 см, цвет серебряный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 22 см, цвет серебряный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -7207,20 +7194,19 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -7290,20 +7276,19 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -7372,20 +7357,19 @@ exports[`<RecommendationCarousel /> should renders correctly 1`] = `
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -7539,15 +7523,14 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
       },
       Object {
         "cart": Object {
-          "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
-          "stepText": "по 20 шт",
+          "stepText": "по 15 пог. м",
         },
         "product": Object {
           "currencyGrapheme": "₽",
-          "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
-          "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
+          "imageSrc": "https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605",
+          "name": "Ткань тюлевая, ширина 300 см, сетка",
           "oldPrice": undefined,
-          "price": 322,
+          "price": 495,
           "url": "",
         },
       },
@@ -7729,15 +7712,14 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
           },
           Object {
             "cart": Object {
-              "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
-              "stepText": "по 20 шт",
+              "stepText": "по 15 пог. м",
             },
             "product": Object {
               "currencyGrapheme": "₽",
-              "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
-              "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
+              "imageSrc": "https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605",
+              "name": "Ткань тюлевая, ширина 300 см, сетка",
               "oldPrice": undefined,
-              "price": 322,
+              "price": 495,
               "url": "",
             },
           },
@@ -7917,10 +7899,11 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 19 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                             />
                           </div>
@@ -7953,11 +7936,12 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
-                              alt="Ножницы портновские, 31 см, цвет чёрный/голубой"
-                              src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                              alt="Ткань тюлевая, ширина 300 см, сетка"
+                              class="image"
+                              src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
                             />
                           </div>
                         </a>
@@ -7968,7 +7952,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                             class="root price"
                             data-testid="price"
                           >
-                            322 ₽
+                            495 ₽
                           </span>
                         </div>
                         <a
@@ -7976,7 +7960,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                           data-testid="product-info:name-link"
                           href=""
                         >
-                          Ножницы портновские, 31 см, цвет чёрный/голубой
+                          Ткань тюлевая, ширина 300 см, сетка
                         </a>
                       </div>
                       <div
@@ -7989,10 +7973,11 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 21,5 см, цвет чёрный/голубой"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
                             />
                           </div>
@@ -8073,10 +8058,11 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 23 см, цвет МИКС"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
                             />
                           </div>
@@ -8109,10 +8095,11 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
                             />
                           </div>
@@ -8145,10 +8132,11 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 22,5 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
                             />
                           </div>
@@ -8181,10 +8169,11 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 22 см, цвет серебряный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
                             />
                           </div>
@@ -8217,10 +8206,11 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
                             />
                           </div>
@@ -8259,10 +8249,11 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
                             />
                           </div>
@@ -8301,10 +8292,11 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
                             />
                           </div>
@@ -8377,20 +8369,19 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 19 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 19 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -8433,10 +8424,10 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                 >
                   <ProductInfo
                     currencyGrapheme="₽"
-                    imageSrc="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
-                    name="Ножницы портновские, 31 см, цвет чёрный/голубой"
+                    imageSrc="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
+                    name="Ткань тюлевая, ширина 300 см, сетка"
                     onLinkClick={[Function]}
-                    price={322}
+                    price={495}
                     url=""
                     withQuickView={false}
                   >
@@ -8446,20 +8437,19 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 31 см, цвет чёрный/голубой"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
-                            alt="Ножницы портновские, 31 см, цвет чёрный/голубой"
-                            src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                            alt="Ткань тюлевая, ширина 300 см, сетка"
+                            className="image"
+                            src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -8467,13 +8457,13 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                       <Price
                         className="price"
                         currencyGrapheme="₽"
-                        value={322}
+                        value={495}
                       >
                         <span
                           className="root price"
                           data-testid="price"
                         >
-                          322 ₽
+                          495 ₽
                         </span>
                       </Price>
                     </div>
@@ -8490,7 +8480,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                         href=""
                         onClick={[Function]}
                       >
-                        Ножницы портновские, 31 см, цвет чёрный/голубой
+                        Ткань тюлевая, ширина 300 см, сетка
                       </a>
                     </ForwardRef(Link)>
                   </ProductInfo>
@@ -8555,20 +8545,19 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 21,5 см, цвет чёрный/голубой"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 21,5 см, цвет чёрный/голубой"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -8744,20 +8733,19 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 23 см, цвет МИКС"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 23 см, цвет МИКС"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -8813,20 +8801,19 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -8882,20 +8869,19 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 22,5 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 22,5 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -8951,20 +8937,19 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 22 см, цвет серебряный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 22 см, цвет серебряный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -9021,20 +9006,19 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -9104,20 +9088,19 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -9186,20 +9169,19 @@ exports[`<RecommendationCarousel /> should set size depend on media query 1`] = 
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -9353,15 +9335,14 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
       },
       Object {
         "cart": Object {
-          "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
-          "stepText": "по 20 шт",
+          "stepText": "по 15 пог. м",
         },
         "product": Object {
           "currencyGrapheme": "₽",
-          "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
-          "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
+          "imageSrc": "https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605",
+          "name": "Ткань тюлевая, ширина 300 см, сетка",
           "oldPrice": undefined,
-          "price": 322,
+          "price": 495,
           "url": "",
         },
       },
@@ -9543,15 +9524,14 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
           },
           Object {
             "cart": Object {
-              "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
-              "stepText": "по 20 шт",
+              "stepText": "по 15 пог. м",
             },
             "product": Object {
               "currencyGrapheme": "₽",
-              "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
-              "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
+              "imageSrc": "https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605",
+              "name": "Ткань тюлевая, ширина 300 см, сетка",
               "oldPrice": undefined,
-              "price": 322,
+              "price": 495,
               "url": "",
             },
           },
@@ -9731,10 +9711,11 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 19 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                             />
                           </div>
@@ -9767,11 +9748,12 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
-                              alt="Ножницы портновские, 31 см, цвет чёрный/голубой"
-                              src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                              alt="Ткань тюлевая, ширина 300 см, сетка"
+                              class="image"
+                              src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
                             />
                           </div>
                         </a>
@@ -9782,7 +9764,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                             class="root price"
                             data-testid="price"
                           >
-                            322 ₽
+                            495 ₽
                           </span>
                         </div>
                         <a
@@ -9790,7 +9772,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                           data-testid="product-info:name-link"
                           href=""
                         >
-                          Ножницы портновские, 31 см, цвет чёрный/голубой
+                          Ткань тюлевая, ширина 300 см, сетка
                         </a>
                       </div>
                       <div
@@ -9803,10 +9785,11 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 21,5 см, цвет чёрный/голубой"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
                             />
                           </div>
@@ -9887,10 +9870,11 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 23 см, цвет МИКС"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
                             />
                           </div>
@@ -9923,10 +9907,11 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
                             />
                           </div>
@@ -9959,10 +9944,11 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 22,5 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
                             />
                           </div>
@@ -9995,10 +9981,11 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, 22 см, цвет серебряный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
                             />
                           </div>
@@ -10031,10 +10018,11 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
                             />
                           </div>
@@ -10073,10 +10061,11 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
                             />
                           </div>
@@ -10115,10 +10104,11 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                           href=""
                         >
                           <div
-                            class="root image"
+                            class="root image-overlay"
                           >
                             <img
                               alt="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный"
+                              class="image"
                               src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
                             />
                           </div>
@@ -10191,20 +10181,19 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 19 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 19 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -10247,10 +10236,10 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                 >
                   <ProductInfo
                     currencyGrapheme="₽"
-                    imageSrc="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
-                    name="Ножницы портновские, 31 см, цвет чёрный/голубой"
+                    imageSrc="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
+                    name="Ткань тюлевая, ширина 300 см, сетка"
                     onLinkClick={[Function]}
-                    price={322}
+                    price={495}
                     url=""
                     withQuickView={false}
                   >
@@ -10260,20 +10249,19 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 31 см, цвет чёрный/голубой"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
-                            alt="Ножницы портновские, 31 см, цвет чёрный/голубой"
-                            src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                            alt="Ткань тюлевая, ширина 300 см, сетка"
+                            className="image"
+                            src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -10281,13 +10269,13 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                       <Price
                         className="price"
                         currencyGrapheme="₽"
-                        value={322}
+                        value={495}
                       >
                         <span
                           className="root price"
                           data-testid="price"
                         >
-                          322 ₽
+                          495 ₽
                         </span>
                       </Price>
                     </div>
@@ -10304,7 +10292,7 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                         href=""
                         onClick={[Function]}
                       >
-                        Ножницы портновские, 31 см, цвет чёрный/голубой
+                        Ткань тюлевая, ширина 300 см, сетка
                       </a>
                     </ForwardRef(Link)>
                   </ProductInfo>
@@ -10369,20 +10357,19 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 21,5 см, цвет чёрный/голубой"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 21,5 см, цвет чёрный/голубой"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -10558,20 +10545,19 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 23 см, цвет МИКС"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 23 см, цвет МИКС"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -10627,20 +10613,19 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -10696,20 +10681,19 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 22,5 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 22,5 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -10765,20 +10749,19 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, 22 см, цвет серебряный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, 22 см, цвет серебряный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -10835,20 +10818,19 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -10918,20 +10900,19 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
@@ -11000,20 +10981,19 @@ exports[`<RecommendationCarousel /> should set size depend on media query 2`] = 
                       href=""
                       onClick={[Function]}
                     >
-                      <Image
-                        alt="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный"
-                        className="image"
-                        src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
+                      <ImageOverlay
+                        className="image-overlay"
                       >
                         <div
-                          className="root image"
+                          className="root image-overlay"
                         >
                           <img
                             alt="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный"
+                            className="image"
                             src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
                           />
                         </div>
-                      </Image>
+                      </ImageOverlay>
                     </a>
                     <div
                       className="row prices-row"
