@@ -28,6 +28,9 @@
   background: colors.$gray8;
   border-radius: 8px 8px 0 0;
   overflow: hidden;
+
+  // для исправления бага Safari border-radius
+  -webkit-mask-image: -webkit-radial-gradient(#fff, #000);
 }
 
 .image {
