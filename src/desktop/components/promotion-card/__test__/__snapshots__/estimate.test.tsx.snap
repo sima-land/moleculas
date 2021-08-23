@@ -25,6 +25,6 @@ exports[`<Estimate /> should renders correctly 3`] = `
 <Estimate
   dueDate={2021-01-08T09:00:00.000Z}
 >
-  До 0 янв
+  До 8 янв
 </Estimate>
 `;

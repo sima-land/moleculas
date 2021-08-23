@@ -48,7 +48,7 @@ export const Estimate = ({ dueDate }: EstimateProps) => {
 
     content = `До ${text}`;
   } else {
-    content = `До ${getMonth(dueDate)} ${MONTH_NAME[getMonth(dueDate)]}`;
+    content = `До ${getDate(dueDate)} ${MONTH_NAME[getMonth(dueDate)]}`;
   }
 
   return (
