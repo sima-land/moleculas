@@ -1,6 +1,8 @@
+@use 'sass:math';
+
 $smallSize: 160px;
 $largeSize: 194px;
-$itemIncreaseRatio: ($largeSize - $smallSize) / (720px - 320px);
+$itemIncreaseRatio: math.div($largeSize - $smallSize, 720px - 320px);
 
 .item {
   position: relative;
