@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { PromotionType } from './types';
 import { BannerTitle } from './banner-title';
 import { Estimate } from './estimate';
@@ -42,49 +42,60 @@ export const PromotionCard = ({
   // div props
   className,
   ...restProps
-}: PromotionCardProps) => (
-  <div className={classNames(className, styles.root)} {...restProps}>
-    <a href={href} className={styles.link}>
-      <div className={styles.banner}>
-        <img src={imageSrc} alt={title} className={styles.image} />
+}: PromotionCardProps) => {
+  // время нужно выводить только на клиенте - вводим состояние
+  const [mounted, setMounted] = useState<boolean>(false);
 
-        {promotionType && (
-          <div className={styles['banner-content']}>
-            <BannerTitle
-              promotionType={promotionType}
-              volumeDiscount={volumeDiscount}
-              dueDate={dueDate}
-            />
-          </div>
-        )}
-      </div>
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-      <div className={styles.info}>
-        <div className={styles.header}>
-          <h4 className={styles.title}>
-            {title}
-          </h4>
+  return (
+    <div className={classNames(className, styles.root)} {...restProps}>
+      <a href={href} className={styles.link}>
+        <div className={styles.banner}>
+          <img src={imageSrc} alt={title} className={styles.image} />
 
-          {subtitle && (
-            <p className={styles.subtitle}>
-              {subtitle}
-            </p>
-          )}
-        </div>
-
-        <div className={styles.footer}>
-          <time className={styles.timer}>
-            <WatchSVG className={styles['timer-svg']} />
-            <Estimate dueDate={dueDate} />
-          </time>
-
-          {postfix && (
-            <div className={styles.postfix}>
-              {postfix}
+          {promotionType && (mounted || promotionType !== 'special') && (
+            <div className={styles['banner-content']}>
+              <BannerTitle
+                promotionType={promotionType}
+                volumeDiscount={volumeDiscount}
+                dueDate={dueDate}
+              />
             </div>
           )}
         </div>
-      </div>
-    </a>
-  </div>
-);
+
+        <div className={styles.info}>
+          <div className={styles.header}>
+            <h4 className={styles.title}>
+              {title}
+            </h4>
+
+            {subtitle && (
+              <p className={styles.subtitle}>
+                {subtitle}
+              </p>
+            )}
+          </div>
+
+          <div className={styles.footer}>
+            {mounted && (
+              <time className={styles.timer}>
+                <WatchSVG className={styles['timer-svg']} />
+                <Estimate dueDate={dueDate} />
+              </time>
+            )}
+
+            {postfix && (
+              <div className={styles.postfix}>
+                {postfix}
+              </div>
+            )}
+          </div>
+        </div>
+      </a>
+    </div>
+  );
+};
