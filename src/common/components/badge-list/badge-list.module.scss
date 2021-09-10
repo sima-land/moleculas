@@ -1,10 +1,14 @@
-.wrap {
+.root {
   display: flex;
   flex-wrap: wrap;
   line-height: 1;
-  margin-bottom: -7px;
   position: relative;
   z-index: 2;
+  overflow: hidden;
+}
+
+.line-limit {
+  max-height: calc((20px * var(--line-limit)) + (4px * (var(--line-limit) - 1)));
 }
 
 .item {
