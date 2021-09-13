@@ -17,7 +17,7 @@ export default {
 
 const exampleData: ProductInfoProps['data'] = {
   name: 'Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый',
-  imageSrc: 'https://picsum.photos/360',
+  imageSrc: 'https://picsum.photos/240/360',
   url: '',
   price: 23476.23,
   currencyGrapheme: '₽',
