@@ -1,9 +1,9 @@
 import React, { Component, createRef } from 'react';
 import { Link } from '@sima-land/ui-nucleons/link';
 import isFunction from 'lodash/isFunction';
-import style from './item-image.module.scss';
+import styles from './item-image.module.scss';
 import classnames from 'classnames/bind';
-import FlagsList from '../../../common/components/flags-list';
+import { BadgeList } from '../../../common/components/badge-list';
 import EighteenPlusSVG from '../../../common/icons/eighteen-plus.svg';
 import { WishButton } from '../../../common/components/wish-button';
 import { BadgeProps } from '../../../common/components/badge';
@@ -26,7 +26,7 @@ export interface ItemImageProps {
   onLoadImage: (duration: number) => void
 }
 
-const cx = classnames.bind(style);
+const cx = classnames.bind(styles);
 
 /**
  * Компонент изображения товара с избранным.
@@ -119,9 +119,7 @@ export default class ItemImage extends Component<ItemImageProps> {
         </div>
         {Array.isArray(badges) && Boolean(badges.length) && !withBlur && (
           <div className={cx('badges')}>
-            <FlagsList
-              flags={badges}
-            />
+            <BadgeList items={badges} />
           </div>
         )}
         {hasWishButton && (

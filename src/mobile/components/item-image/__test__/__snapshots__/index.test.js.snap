@@ -40,8 +40,8 @@ exports[`<ItemImage /> should render badges 1`] = `
     <div
       className="badges"
     >
-      <FlagsList
-        flags={
+      <BadgeList
+        items={
           Array [
             Object {
               "bgColor": "#b52ea8",
@@ -60,7 +60,7 @@ exports[`<ItemImage /> should render badges 1`] = `
         }
       >
         <div
-          className="wrap"
+          className="root"
         >
           <Badge
             bgColor="#b52ea8"
@@ -101,7 +101,7 @@ exports[`<ItemImage /> should render badges 1`] = `
             </span>
           </Badge>
         </div>
-      </FlagsList>
+      </BadgeList>
     </div>
   </div>
 </ItemImage>
