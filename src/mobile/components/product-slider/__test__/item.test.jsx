@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import RecommendedItem from '../recommended-item';
+import RecommendedItem from '../item';
 import { Link } from '@sima-land/ui-nucleons/link';
 import { Price } from '@sima-land/ui-nucleons/price';
 

@@ -3,6 +3,22 @@
 .root {
   padding: 16px 16px 24px;
   background: #fff;
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  opacity: 1;
+  visibility: visible;
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.quick-view-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
 }
 
 .control-wrapper {
@@ -12,6 +28,8 @@
 }
 
 .control {
+  width: 122px;
+  height: 40px;
   margin-right: 16px;
 }
 

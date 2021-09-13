@@ -1,15 +1,12 @@
 import React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 import { act } from 'react-dom/test-utils';
-import { RecommendationCarousel } from '..';
+import { ProductCarousel } from '..';
 import { items } from './test-items';
 import { useMedia } from '@sima-land/ui-nucleons/hooks/media';
 import { HoverCard } from '../hover-card';
-import { ProductCard } from '../product-card';
-import { ProductInfo } from '../product-info';
-import { Link } from '@sima-land/ui-nucleons/link';
 import { Carousel } from '@sima-land/ui-nucleons/carousel';
-import { Stepper } from '@sima-land/ui-nucleons/stepper';
+import { ProductInfo } from '../../../../common/components/product-info';
 
 jest.mock('@sima-land/ui-nucleons/hooks/media', () => {
   const original = jest.requireActual('@sima-land/ui-nucleons/hooks/media');
@@ -23,21 +20,20 @@ jest.mock('@sima-land/ui-nucleons/hooks/media', () => {
   };
 });
 
-describe('<RecommendationCarousel />', () => {
+describe('<ProductCarousel />', () => {
   const Find = {
     hoverCard: (wrapper: ReactWrapper) => wrapper.find(HoverCard),
     hoverCardItemName: (wrapper: ReactWrapper) => wrapper.find(HoverCard)
-      .find(ProductCard)
+      .find(HoverCard)
       .find(ProductInfo)
-      .find(Link)
+      .find('a[data-testid="product-info:name-link"]')
       .text(),
-    item: (wrapper: ReactWrapper) => wrapper.find('[data-testid="reco-item"]'),
+    item: (wrapper: ReactWrapper) => wrapper.find('[data-testid="product-carousel:item"]'),
   };
 
   it('should renders correctly', () => {
     const wrapper = mount(
-      <RecommendationCarousel
-        title='Hello, world!'
+      <ProductCarousel
         items={items}
         itemSize={{ xs: 3 }}
         className='additional-class'
@@ -51,7 +47,7 @@ describe('<RecommendationCarousel />', () => {
     const spy = jest.fn();
 
     const wrapper = mount(
-      <RecommendationCarousel
+      <ProductCarousel
         items={items}
         onItemLinkClick={spy}
       />
@@ -76,7 +72,7 @@ describe('<RecommendationCarousel />', () => {
 
   it('should handle "onItemLinkClick" prop missing', () => {
     const wrapper = mount(
-      <RecommendationCarousel
+      <ProductCarousel
         items={items}
       />
     );
@@ -96,9 +92,7 @@ describe('<RecommendationCarousel />', () => {
 
   it('should handle "titleTag" prop', () => {
     const wrapper = mount(
-      <RecommendationCarousel
-        title='Hello, world!'
-        titleTag='h1'
+      <ProductCarousel
         items={items}
         itemSize={{ xs: 3 }}
         className='additional-class'
@@ -110,7 +104,7 @@ describe('<RecommendationCarousel />', () => {
 
   it('should render empty ref', () => {
     const wrapper = mount(
-      <RecommendationCarousel items={[]} />
+      <ProductCarousel items={[]} />
     );
 
     expect(wrapper).toMatchSnapshot();
@@ -118,8 +112,7 @@ describe('<RecommendationCarousel />', () => {
 
   it('should set size depend on media query', () => {
     const wrapper = mount(
-      <RecommendationCarousel
-        title='Hello, world!'
+      <ProductCarousel
         items={items}
       />
     );
@@ -136,9 +129,7 @@ describe('<RecommendationCarousel />', () => {
 
   it('should handle item mouseenter event', () => {
     const wrapper = mount(
-      <RecommendationCarousel
-        title='Hello, world!'
-        titleTag='h1'
+      <ProductCarousel
         items={items}
         itemSize={{ xs: 3 }}
         className='additional-class'
@@ -158,7 +149,7 @@ describe('<RecommendationCarousel />', () => {
     const spy = jest.fn();
 
     const wrapper = mount(
-      <RecommendationCarousel
+      <ProductCarousel
         items={items}
         withHoverCard
         onItemLinkClick={spy}
@@ -189,7 +180,7 @@ describe('<RecommendationCarousel />', () => {
 
   it('should handle hover card link clicks without "onItemLinkClick" prop', () => {
     const wrapper = mount(
-      <RecommendationCarousel
+      <ProductCarousel
         items={items}
         withHoverCard
       />
@@ -217,9 +208,7 @@ describe('<RecommendationCarousel />', () => {
 
   it('should handle hover card mouseleave', () => {
     const wrapper = mount(
-      <RecommendationCarousel
-        title='Hello, world!'
-        titleTag='h1'
+      <ProductCarousel
         items={items}
         itemSize={{ xs: 3 }}
         className='additional-class'
@@ -246,9 +235,7 @@ describe('<RecommendationCarousel />', () => {
     jest.useFakeTimers();
 
     const wrapper = mount(
-      <RecommendationCarousel
-        title='Hello, world!'
-        titleTag='h1'
+      <ProductCarousel
         items={items}
         itemSize={{ xs: 3 }}
         withHoverCard
@@ -277,81 +264,5 @@ describe('<RecommendationCarousel />', () => {
     wrapper.update();
 
     expect(Find.hoverCardItemName(wrapper)).toBe(items[0].product.name);
-  });
-
-  it('should handle cart data/control props', () => {
-    const Spy = {
-      onItemAdd: jest.fn(),
-      onItemChange: jest.fn(),
-      onItemSubtract: jest.fn(),
-    };
-
-    const wrapper = mount(
-      <RecommendationCarousel
-        withHoverCard
-        items={[
-          {
-            product: {
-              name: 'Test Product',
-              imageSrc: 'http://image.com/test',
-              url: 'https://www.sima-land.ru/123',
-              price: 100,
-              currencyGrapheme: '$',
-              oldPrice: 200,
-            },
-            cart: {
-              stepText: 'по 1 шт',
-              markupText: 'Комплектация + 50$ при покупке до 20 шт',
-              qty: 12,
-              inCart: true,
-            },
-          },
-        ]}
-        onItemAdd={Spy.onItemAdd}
-        onItemChange={Spy.onItemChange}
-        onItemSubtract={Spy.onItemSubtract}
-      />
-    );
-
-    act(() => {
-      Find.item(wrapper).at(0).simulate('mouseenter');
-    });
-    wrapper.update();
-
-    expect(wrapper.find(HoverCard).find(Stepper).find('[data-testid="stepper:input"]').prop('value')).toBe('12');
-
-    Object.values(Spy).forEach(fn => {
-      expect(fn).toBeCalledTimes(0);
-    });
-
-    // add
-    act(() => {
-      wrapper.find(HoverCard).find(Stepper).find('svg[data-testid="stepper:plus"]').simulate('click');
-    });
-    wrapper.update();
-
-    expect(Spy.onItemAdd).toBeCalledTimes(1);
-
-    // subtract
-    act(() => {
-      wrapper.find(HoverCard).find(Stepper).find('svg[data-testid="stepper:minus"]').simulate('click');
-    });
-    wrapper.update();
-
-    expect(Spy.onItemSubtract).toBeCalledTimes(1);
-
-    // change
-    act(() => {
-      wrapper.find(HoverCard).find(Stepper).find('[data-testid="stepper:input"]').simulate('change', {
-        target: { value: '15' },
-      });
-    });
-    wrapper.update();
-    act(() => {
-      wrapper.find(HoverCard).find(Stepper).find('[data-testid="stepper:input"]').simulate('blur');
-    });
-    wrapper.update();
-
-    expect(Spy.onItemChange).toBeCalledTimes(1);
   });
 });

@@ -3,7 +3,7 @@ import { shallow, mount } from 'enzyme';
 import { render, unmountComponentAtNode } from 'react-dom';
 import RecommendationSlider, {
   RecommendationSlider as PureRecommendationSlider,
-} from '../';
+} from '..';
 import { act } from 'react-dom/test-utils';
 import { items } from '../../../../common/__fixtures__/recommendation-carousel';
 
