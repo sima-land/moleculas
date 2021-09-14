@@ -6,7 +6,7 @@ import { ImageOverlay } from '../../../desktop/components/gallery-modal/componen
 import { BadgeList } from '../badge-list';
 import { BadgeProps } from '../badge';
 import classnames from 'classnames/bind';
-import styles from './product-card.module.scss';
+import styles from './product-info.module.scss';
 
 export interface ProductData {
 
