@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import { getOriginCorrection } from '@sima-land/ui-nucleons/with-tooltip/utils';
-import { ProductInfo, ProductData, ProductInfoProps } from '../../../common/components/product-info';
+import { ProductInfo, ProductInfoProps } from '../../../common/components/product-info';
 import classnames from 'classnames/bind';
 import styles from './hover-card.module.scss';
 import { WithHint } from '@sima-land/ui-nucleons/with-hint';
@@ -12,7 +12,7 @@ import { BoxShadow } from '@sima-land/ui-nucleons/styling/shadows';
 export interface HoverCardProps extends ProductInfoProps {
   targetRef: React.RefObject<HTMLElement | null>
   onMouseLeave?: () => void
-  onQuickViewClick?: (info: ProductData) => void
+  onQuickViewClick?: () => void
   renderCartControl?: (Slot: typeof CartControlSlot) => React.ReactNode;
 }
 
@@ -100,7 +100,7 @@ export const HoverCard = ({
                 onMouseEnter={() => toggle(true)}
                 onMouseLeave={() => toggle(false)}
                 className={cx('quick-view-button')}
-                onClick={withPrevent(() => onQuickViewClick?.(data))}
+                onClick={withPrevent(onQuickViewClick)}
               />
             )}
           </WithHint>

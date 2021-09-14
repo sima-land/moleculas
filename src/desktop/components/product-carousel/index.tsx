@@ -3,7 +3,7 @@ import { Carousel } from '@sima-land/ui-nucleons/carousel';
 import { HoverCard, HoverCardProps } from './hover-card';
 import { useAllowFlag, useChildWidth, useViewport } from './utils';
 import { useMedia } from '@sima-land/ui-nucleons/hooks/media';
-import { ProductInfo, ProductData, ProductInfoProps } from '../../../common/components/product-info';
+import { ProductInfo, ProductInfoProps } from '../../../common/components/product-info';
 import classnames from 'classnames/bind';
 import styles from './product-carousel.module.scss';
 
@@ -17,11 +17,9 @@ interface ItemSize {
 
 export interface ProductCarouselProps {
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   itemSize?: ItemSize;
   onInViewport?: () => void;
-  onItemQuickViewClick?: HoverCardProps['onQuickViewClick'];
-  onItemLinkClick?: (event: React.MouseEvent<HTMLAnchorElement>, item: ProductData) => void;
   onNeedRequest?: () => void;
   withHoverCard?: boolean;
 }
@@ -40,6 +38,7 @@ const getSizeClasses = (size = {}) => [
 
 /**
  * Компонент для проброса данных элемента карусели в компонент карусели.
+ * Экспериментальный вариант.
  * @return Null.
  */
 const Item: (props: CarouselItemProps) => null = () => null;
@@ -126,11 +125,13 @@ export const ProductCarousel = ({
 
         {withHoverCard && activeItemIndex !== null && (
           <HoverCard
-            data={items[activeItemIndex].data}
             targetRef={targetItemRef}
+            onMouseLeave={() => setActiveItemIndex(null)}
+
+            // данные элемента карусели
+            data={items[activeItemIndex].data}
             onLinkClick={items[activeItemIndex].onLinkClick}
             onQuickViewClick={items[activeItemIndex].onQuickViewClick}
-            onMouseLeave={() => setActiveItemIndex(null)}
             renderCartControl={items[activeItemIndex].renderCartControl}
           />
         )}

@@ -31,26 +31,31 @@ describe('<ProductCarousel />', () => {
     item: (wrapper: ReactWrapper) => wrapper.find('[data-testid="product-carousel:item"]'),
   };
 
+  it('ProductCarousel.Item should return null', () => {
+    expect(ProductCarousel.Item({ data: items[0] })).toBe(null);
+  });
+
   it('should renders correctly', () => {
     const wrapper = mount(
-      <ProductCarousel
-        items={items}
-        itemSize={{ xs: 3 }}
-        className='additional-class'
-      />
+      <ProductCarousel itemSize={{ xs: 3 }} className='additional-class'>
+        {items.map((item, index) => (
+          <ProductCarousel.Item key={index} data={item} />
+        ))}
+      </ProductCarousel>
     );
 
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should handle "onItemLinkClick" prop', () => {
+  it('should handle item "onLinkClick" prop', () => {
     const spy = jest.fn();
 
     const wrapper = mount(
-      <ProductCarousel
-        items={items}
-        onItemLinkClick={spy}
-      />
+      <ProductCarousel>
+        {items.map((item, index) => (
+          <ProductCarousel.Item key={index} data={item} onLinkClick={spy} />
+        ))}
+      </ProductCarousel>
     );
 
     expect(spy).toBeCalledTimes(0);
@@ -70,11 +75,13 @@ describe('<ProductCarousel />', () => {
     expect(spy).toBeCalledTimes(2);
   });
 
-  it('should handle "onItemLinkClick" prop missing', () => {
+  it('should handle item "onLinkClick" prop missing', () => {
     const wrapper = mount(
-      <ProductCarousel
-        items={items}
-      />
+      <ProductCarousel>
+        {items.map((item, index) => (
+          <ProductCarousel.Item key={index} data={item} onLinkClick={undefined} />
+        ))}
+      </ProductCarousel>
     );
 
     act(() => {
@@ -90,21 +97,9 @@ describe('<ProductCarousel />', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should handle "titleTag" prop', () => {
-    const wrapper = mount(
-      <ProductCarousel
-        items={items}
-        itemSize={{ xs: 3 }}
-        className='additional-class'
-      />
-    );
-
-    expect(wrapper).toMatchSnapshot();
-  });
-
   it('should render empty ref', () => {
     const wrapper = mount(
-      <ProductCarousel items={[]} />
+      <ProductCarousel />
     );
 
     expect(wrapper).toMatchSnapshot();
@@ -112,9 +107,11 @@ describe('<ProductCarousel />', () => {
 
   it('should set size depend on media query', () => {
     const wrapper = mount(
-      <ProductCarousel
-        items={items}
-      />
+      <ProductCarousel>
+        {items.map((item, index) => (
+          <ProductCarousel.Item key={index} data={item} />
+        ))}
+      </ProductCarousel>
     );
 
     expect(wrapper).toMatchSnapshot();
@@ -129,12 +126,11 @@ describe('<ProductCarousel />', () => {
 
   it('should handle item mouseenter event', () => {
     const wrapper = mount(
-      <ProductCarousel
-        items={items}
-        itemSize={{ xs: 3 }}
-        className='additional-class'
-        withHoverCard
-      />
+      <ProductCarousel itemSize={{ xs: 3 }} className='additional-class' withHoverCard>
+        {items.map((item, index) => (
+          <ProductCarousel.Item key={index} data={item} />
+        ))}
+      </ProductCarousel>
     );
 
     act(() => {
@@ -142,18 +138,18 @@ describe('<ProductCarousel />', () => {
     });
     wrapper.update();
 
-    expect(Find.hoverCardItemName(wrapper)).toBe(items[0].product.name);
+    expect(Find.hoverCardItemName(wrapper)).toBe(items[0].name);
   });
 
   it('should handle hover card link clicks', () => {
     const spy = jest.fn();
 
     const wrapper = mount(
-      <ProductCarousel
-        items={items}
-        withHoverCard
-        onItemLinkClick={spy}
-      />
+      <ProductCarousel withHoverCard>
+        {items.map((item, index) => (
+          <ProductCarousel.Item key={index} data={item} onLinkClick={spy} />
+        ))}
+      </ProductCarousel>
     );
 
     act(() => {
@@ -178,12 +174,13 @@ describe('<ProductCarousel />', () => {
     expect(spy).toBeCalledTimes(2);
   });
 
-  it('should handle hover card link clicks without "onItemLinkClick" prop', () => {
+  it('should handle hover card link clicks without item "onLinkClick" prop', () => {
     const wrapper = mount(
-      <ProductCarousel
-        items={items}
-        withHoverCard
-      />
+      <ProductCarousel withHoverCard>
+        {items.map((item, index) => (
+          <ProductCarousel.Item key={index} data={item} />
+        ))}
+      </ProductCarousel>
     );
 
     act(() => {
@@ -208,12 +205,11 @@ describe('<ProductCarousel />', () => {
 
   it('should handle hover card mouseleave', () => {
     const wrapper = mount(
-      <ProductCarousel
-        items={items}
-        itemSize={{ xs: 3 }}
-        className='additional-class'
-        withHoverCard
-      />
+      <ProductCarousel itemSize={{ xs: 3 }} className='additional-class' withHoverCard>
+        {items.map((item, index) => (
+          <ProductCarousel.Item key={index} data={item} />
+        ))}
+      </ProductCarousel>
     );
 
     act(() => {
@@ -221,7 +217,7 @@ describe('<ProductCarousel />', () => {
     });
     wrapper.update();
 
-    expect(Find.hoverCardItemName(wrapper)).toBe(items[0].product.name);
+    expect(Find.hoverCardItemName(wrapper)).toBe(items[0].name);
 
     act(() => {
       (Find.hoverCard(wrapper).prop('onMouseLeave') as any)();
@@ -235,11 +231,11 @@ describe('<ProductCarousel />', () => {
     jest.useFakeTimers();
 
     const wrapper = mount(
-      <ProductCarousel
-        items={items}
-        itemSize={{ xs: 3 }}
-        withHoverCard
-      />
+      <ProductCarousel itemSize={{ xs: 3 }} withHoverCard>
+        {items.map((item, index) => (
+          <ProductCarousel.Item key={index} data={item} />
+        ))}
+      </ProductCarousel>
     );
 
     act(() => {
@@ -263,6 +259,6 @@ describe('<ProductCarousel />', () => {
     });
     wrapper.update();
 
-    expect(Find.hoverCardItemName(wrapper)).toBe(items[0].product.name);
+    expect(Find.hoverCardItemName(wrapper)).toBe(items[0].name);
   });
 });

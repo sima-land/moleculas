@@ -4,6 +4,7 @@ import { items } from '../__test__/test-items';
 import { action } from '@storybook/addon-actions';
 import { MobileLayout } from '@sima-land/ui-nucleons/layout';
 import { Button } from '@sima-land/ui-nucleons/button';
+import { omit } from 'lodash';
 
 export default {
   title: 'mobile/ProductSlider',
@@ -58,7 +59,7 @@ export const Primary = () => (
   </>
 );
 
-export const WithCartControl = () => (
+export const ItemFooter = () => (
   <>
     <MobileLayout>
       <Placeholder />
@@ -68,7 +69,7 @@ export const WithCartControl = () => (
       {items.map((item, index) => (
         <ProductSlider.Item
           key={index}
-          data={item}
+          data={omit(item, 'badges')}
           onLinkClick={event => {
             event.preventDefault();
             action('item:link-click')(item.name);

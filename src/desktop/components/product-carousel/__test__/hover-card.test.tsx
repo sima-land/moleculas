@@ -21,7 +21,7 @@ describe('<HoverCard />', () => {
     );
 
     expect(wrapper).toMatchSnapshot();
-    expect(wrapper.find('[data-testid="hover-card"]').hasClass('hidden')).toBe(true);
+    expect(wrapper.find('[data-testid="product-carousel:hover-card"]').hasClass('hidden')).toBe(true);
   });
 
   it('should handle "onLinkClick" prop', () => {
@@ -90,7 +90,7 @@ describe('<HoverCard />', () => {
 
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.find('a[data-testid="product-info:name-link"]').text()).toBe(itemInfo.name);
-    expect(wrapper.find('[data-testid="hover-card"]').hasClass('hidden')).toBe(false);
+    expect(wrapper.find('[data-testid="product-carousel:hover-card"]').hasClass('hidden')).toBe(false);
   });
 
   it('should handle mouseleave', () => {
@@ -122,7 +122,7 @@ describe('<HoverCard />', () => {
     expect(spy).toBeCalledTimes(0);
 
     act(() => {
-      wrapper.find('[data-testid="hover-card"]').simulate('mouseleave');
+      wrapper.find('[data-testid="product-carousel:hover-card"]').simulate('mouseleave');
     });
     wrapper.update();
 
@@ -162,5 +162,74 @@ describe('<HoverCard />', () => {
     });
 
     expect(spy).toBeCalledTimes(1);
+  });
+
+  it('should handle "renderCartControl" prop', () => {
+    const targetRef = createRef<HTMLDivElement>();
+
+    const productInfo = {
+      name: 'Test Product',
+      imageSrc: 'http://image.com/test',
+      url: 'https://www.sima-land.ru/123',
+      price: 100,
+      currencyGrapheme: '$',
+      oldPrice: 200,
+    };
+
+    const wrapper = mount(
+      <>
+        <div ref={targetRef}>Target</div>
+        <HoverCard
+          data={productInfo}
+          targetRef={targetRef}
+          renderCartControl={Slot => (
+            <Slot stepText='Foo' markupText='Bar'>
+              <button>В корзину</button>
+            </Slot>
+          )}
+        />
+      </>
+    );
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should show/hide hint for quick view button', () => {
+    const targetRef = createRef<HTMLDivElement>();
+
+    const productInfo = {
+      name: 'Test Product',
+      imageSrc: 'http://image.com/test',
+      url: 'https://www.sima-land.ru/123',
+      price: 100,
+      currencyGrapheme: '$',
+      oldPrice: 200,
+    };
+
+    const wrapper = mount(
+      <>
+        <div ref={targetRef}>Target</div>
+        <HoverCard
+          data={productInfo}
+          targetRef={targetRef}
+        />
+      </>
+    );
+
+    expect(wrapper.find('[data-testid="hint"]')).toHaveLength(0);
+
+    act(() => {
+      wrapper.find('svg[data-testid="quick-view-button"]').simulate('mouseenter');
+    });
+    wrapper.update();
+
+    expect(wrapper.find('[data-testid="hint"]')).toHaveLength(1);
+
+    act(() => {
+      wrapper.find('svg[data-testid="quick-view-button"]').simulate('mouseleave');
+    });
+    wrapper.update();
+
+    expect(wrapper.find('[data-testid="hint"]')).toHaveLength(0);
   });
 });
