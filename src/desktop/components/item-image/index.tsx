@@ -3,7 +3,7 @@ import { Link } from '@sima-land/ui-nucleons/link';
 import classnames from 'classnames/bind';
 import isFunction from 'lodash/isFunction';
 import style from './item-image.module.scss';
-import FlagsList from '../../../common/components/flags-list';
+import { BadgeList } from '../../../common/components/badge-list';
 import EighteenPlusSVG from '../../../common/icons/eighteen-plus.svg';
 import SelectedSVG from '../../../common/icons/selected.svg';
 import { WishButton } from '../../../common/components/wish-button';
@@ -204,13 +204,13 @@ export default class ItemImage extends Component<ItemImageProps, any> {
             />
           )}
         </div>
+
         {Array.isArray(badges) && Boolean(badges.length) && (
           <div className={cx('badges')}>
-            <FlagsList
-              flags={badges}
-            />
+            <BadgeList items={badges} />
           </div>
         )}
+
         {hasWishButton && (
           <WishButton
             checked={wishProps.isWished}

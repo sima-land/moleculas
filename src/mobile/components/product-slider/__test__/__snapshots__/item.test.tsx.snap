@@ -1,0 +1,251 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductSliderItem /> should render footer 1`] = `
+<ProductSliderItem
+  data={
+    Object {
+      "currencyGrapheme": "₽",
+      "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
+      "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
+      "name": "Ножницы портновские, 19 см, цвет чёрный",
+      "oldPrice": undefined,
+      "price": 261,
+      "url": "",
+    }
+  }
+  footer={
+    <div>
+      Test Footer
+    </div>
+  }
+>
+  <div
+    className="root"
+  >
+    <ProductInfo
+      data={
+        Object {
+          "currencyGrapheme": "₽",
+          "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
+          "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
+          "name": "Ножницы портновские, 19 см, цвет чёрный",
+          "oldPrice": undefined,
+          "price": 261,
+          "url": "",
+        }
+      }
+    >
+      <ImageOverlay
+        className="image-overlay"
+      >
+        <div
+          className="root image-overlay"
+        >
+          <a
+            className="image-link"
+            data-testid="product-info:image-link"
+            href=""
+          >
+            <img
+              alt="Ножницы портновские, 19 см, цвет чёрный, Ножницы"
+              className="image"
+              src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
+            />
+          </a>
+          <div
+            className="on-image"
+          >
+            <OnImage
+              key=".0"
+            >
+              <ForwardRef
+                className="favorite-button"
+              >
+                <ForwardRef(SvgHeart)
+                  aria-label="Добавить в избранное"
+                  className="button favorite-button"
+                  data-testid="favorite-button"
+                  height={24}
+                  role="button"
+                  width={24}
+                >
+                  <svg
+                    aria-label="Добавить в избранное"
+                    className="button favorite-button"
+                    data-testid="favorite-button"
+                    height={24}
+                    role="button"
+                    viewBox="0 0 24 24"
+                    width={24}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 003.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
+                    />
+                  </svg>
+                </ForwardRef(SvgHeart)>
+              </ForwardRef>
+            </OnImage>
+          </div>
+        </div>
+      </ImageOverlay>
+      <div
+        className="prices"
+      >
+        <Price
+          className="price"
+          currencyGrapheme="₽"
+          value={261}
+        >
+          <span
+            className="root price"
+            data-testid="price"
+          >
+            261 ₽
+          </span>
+        </Price>
+      </div>
+      <ForwardRef(Link)
+        className="link"
+        color="gray87"
+        data-testid="product-info:name-link"
+        href=""
+      >
+        <a
+          className="link link gray87"
+          data-testid="product-info:name-link"
+          href=""
+        >
+          Ножницы портновские, 19 см, цвет чёрный
+        </a>
+      </ForwardRef(Link)>
+    </ProductInfo>
+    <div
+      className="footer"
+    >
+      <div>
+        Test Footer
+      </div>
+    </div>
+  </div>
+</ProductSliderItem>
+`;
+
+exports[`<ProductSliderItem /> should renders correctly 1`] = `
+<ProductSliderItem
+  data={
+    Object {
+      "currencyGrapheme": "₽",
+      "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
+      "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
+      "name": "Ножницы портновские, 19 см, цвет чёрный",
+      "oldPrice": undefined,
+      "price": 261,
+      "url": "",
+    }
+  }
+>
+  <div
+    className="root"
+  >
+    <ProductInfo
+      data={
+        Object {
+          "currencyGrapheme": "₽",
+          "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
+          "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
+          "name": "Ножницы портновские, 19 см, цвет чёрный",
+          "oldPrice": undefined,
+          "price": 261,
+          "url": "",
+        }
+      }
+    >
+      <ImageOverlay
+        className="image-overlay"
+      >
+        <div
+          className="root image-overlay"
+        >
+          <a
+            className="image-link"
+            data-testid="product-info:image-link"
+            href=""
+          >
+            <img
+              alt="Ножницы портновские, 19 см, цвет чёрный, Ножницы"
+              className="image"
+              src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
+            />
+          </a>
+          <div
+            className="on-image"
+          >
+            <OnImage
+              key=".0"
+            >
+              <ForwardRef
+                className="favorite-button"
+              >
+                <ForwardRef(SvgHeart)
+                  aria-label="Добавить в избранное"
+                  className="button favorite-button"
+                  data-testid="favorite-button"
+                  height={24}
+                  role="button"
+                  width={24}
+                >
+                  <svg
+                    aria-label="Добавить в избранное"
+                    className="button favorite-button"
+                    data-testid="favorite-button"
+                    height={24}
+                    role="button"
+                    viewBox="0 0 24 24"
+                    width={24}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 003.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
+                    />
+                  </svg>
+                </ForwardRef(SvgHeart)>
+              </ForwardRef>
+            </OnImage>
+          </div>
+        </div>
+      </ImageOverlay>
+      <div
+        className="prices"
+      >
+        <Price
+          className="price"
+          currencyGrapheme="₽"
+          value={261}
+        >
+          <span
+            className="root price"
+            data-testid="price"
+          >
+            261 ₽
+          </span>
+        </Price>
+      </div>
+      <ForwardRef(Link)
+        className="link"
+        color="gray87"
+        data-testid="product-info:name-link"
+        href=""
+      >
+        <a
+          className="link link gray87"
+          data-testid="product-info:name-link"
+          href=""
+        >
+          Ножницы портновские, 19 см, цвет чёрный
+        </a>
+      </ForwardRef(Link)>
+    </ProductInfo>
+  </div>
+</ProductSliderItem>
+`;
