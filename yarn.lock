@@ -1812,10 +1812,10 @@
     stylelint-config-sass-guidelines "^7.1.0"
     stylelint-scss "^3.18.0"
 
-"@sima-land/ui-nucleons@^38.1.0":
-  version "38.1.0"
-  resolved "https://registry.yarnpkg.com/@sima-land/ui-nucleons/-/ui-nucleons-38.1.0.tgz#0b97d2e999ebe6de44749a9f9ea006f217723cd1"
-  integrity sha512-rFtQEGEvBM6U8pNOgERjkEYBlwHnJ6u7pE/O8AON1puN6QhzYV6xhl8mUfjSw4y+irgda1iVzMtZQ1lDhYoffw==
+"@sima-land/ui-nucleons@^39.0.1":
+  version "39.0.1"
+  resolved "https://registry.yarnpkg.com/@sima-land/ui-nucleons/-/ui-nucleons-39.0.1.tgz#4fa9ed118d15ea5fb9f74bd72342bf6273870208"
+  integrity sha512-U3EXWZDhgScCJ8r7k458Ofx7RBAdnDemqvs+NforPLl7Z47roip81ZE0dYD2lIpwXJOJrgTXZ+CgnE9HDVkYOw==
   dependencies:
     "@krutoo/input-mask" "^0.0.8"
     "@sima-land/ui-quarks" "^2.0.1"

@@ -90,7 +90,7 @@ export const PersonModal = ({
 
           {arbitraryLinkProps && (
             <Box marginTop={2}>
-              <Text size={12} weight={500}>
+              <Text size={12} weight={600}>
                 <Link {...arbitraryLinkProps} />
               </Text>
             </Box>
