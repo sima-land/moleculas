@@ -147,7 +147,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                       class="flex-grow"
                     >
                       <span
-                        class="size-16 line-height-24 color__gray87 weight-500"
+                        class="size-16 line-height-24 color__gray87 weight-600"
                       >
                         example@email.com
                       </span>
@@ -185,7 +185,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                       class="flex-grow"
                     >
                       <span
-                        class="size-16 line-height-24 color__gray87 weight-500"
+                        class="size-16 line-height-24 color__gray87 weight-600"
                       >
                         example@skype.com
                       </span>
@@ -226,7 +226,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                       class="flex-grow"
                     >
                       <span
-                        class="size-16 line-height-24 color__gray87 weight-500"
+                        class="size-16 line-height-24 color__gray87 weight-600"
                       >
                         88000000000 доб. 8823
                       </span>
@@ -264,7 +264,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                       class="flex-grow"
                     >
                       <span
-                        class="size-16 line-height-24 color__gray87 weight-500"
+                        class="size-16 line-height-24 color__gray87 weight-600"
                       >
                         +7 (900) 000 000
                       </span>
@@ -533,10 +533,10 @@ exports[`<PersonScreen /> should handle props 1`] = `
                           color="gray87"
                           lineHeight={24}
                           size={16}
-                          weight={500}
+                          weight={600}
                         >
                           <span
-                            className="size-16 line-height-24 color__gray87 weight-500"
+                            className="size-16 line-height-24 color__gray87 weight-600"
                           >
                             example@email.com
                           </span>
@@ -601,10 +601,10 @@ exports[`<PersonScreen /> should handle props 1`] = `
                           color="gray87"
                           lineHeight={24}
                           size={16}
-                          weight={500}
+                          weight={600}
                         >
                           <span
-                            className="size-16 line-height-24 color__gray87 weight-500"
+                            className="size-16 line-height-24 color__gray87 weight-600"
                           >
                             example@skype.com
                           </span>
@@ -672,10 +672,10 @@ exports[`<PersonScreen /> should handle props 1`] = `
                           color="gray87"
                           lineHeight={24}
                           size={16}
-                          weight={500}
+                          weight={600}
                         >
                           <span
-                            className="size-16 line-height-24 color__gray87 weight-500"
+                            className="size-16 line-height-24 color__gray87 weight-600"
                           >
                             88000000000 доб. 8823
                           </span>
@@ -740,10 +740,10 @@ exports[`<PersonScreen /> should handle props 1`] = `
                           color="gray87"
                           lineHeight={24}
                           size={16}
-                          weight={500}
+                          weight={600}
                         >
                           <span
-                            className="size-16 line-height-24 color__gray87 weight-500"
+                            className="size-16 line-height-24 color__gray87 weight-600"
                           >
                             +7 (900) 000 000
                           </span>
@@ -918,7 +918,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                       class="flex-grow"
                     >
                       <span
-                        class="size-16 line-height-24 color__gray87 weight-500"
+                        class="size-16 line-height-24 color__gray87 weight-600"
                       >
                         88000000000 доб. 8823
                       </span>
@@ -955,7 +955,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                       class="flex-grow"
                     >
                       <span
-                        class="size-16 line-height-24 color__gray87 weight-500"
+                        class="size-16 line-height-24 color__gray87 weight-600"
                       >
                         +7 (900) 000 000
                       </span>
@@ -1207,10 +1207,10 @@ exports[`<PersonScreen /> should render with name 1`] = `
                           color="gray87"
                           lineHeight={24}
                           size={16}
-                          weight={500}
+                          weight={600}
                         >
                           <span
-                            className="size-16 line-height-24 color__gray87 weight-500"
+                            className="size-16 line-height-24 color__gray87 weight-600"
                           >
                             88000000000 доб. 8823
                           </span>
@@ -1273,10 +1273,10 @@ exports[`<PersonScreen /> should render with name 1`] = `
                           color="gray87"
                           lineHeight={24}
                           size={16}
-                          weight={500}
+                          weight={600}
                         >
                           <span
-                            className="size-16 line-height-24 color__gray87 weight-500"
+                            className="size-16 line-height-24 color__gray87 weight-600"
                           >
                             +7 (900) 000 000
                           </span>

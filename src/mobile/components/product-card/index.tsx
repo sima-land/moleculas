@@ -87,7 +87,7 @@ const ProductCard = ({
     </div>
     <div className={cx('info-column')}>
       <Link href={itemUrl} className={cx('link')} color='gray87'>
-        <Text weight={500}>{name}</Text>
+        <Text weight={600}>{name}</Text>
       </Link>
       <Box marginTop={2}>
         <Text color='gray38'>
@@ -106,7 +106,7 @@ const ProductCard = ({
       {Boolean(itemPrice)
         && (
           <Box marginTop={2}>
-            <Text element='div' weight={500} size={12}>
+            <Text element='div' weight={600} size={12}>
               <Price value={itemPrice} currencyGrapheme={currencyGrapheme} />{` × ${count} ${unit}`}
             </Text>
           </Box>
@@ -115,7 +115,7 @@ const ProductCard = ({
       {Boolean(commonPrice && itemPrice)
         && (
           <Box marginTop={4}>
-            <Text element='div' weight={500}>
+            <Text element='div' weight={600}>
               <Price value={commonPrice} currencyGrapheme={currencyGrapheme} />
             </Text>
           </Box>

@@ -147,7 +147,7 @@ export const CommunicateLink = ({
 }) => (
   <a href={href} className={cx('item', InnerBorder.top)}>
     <Box flex='grow'>
-      <Text size={16} lineHeight={24} color='gray87' weight={500}>
+      <Text size={16} lineHeight={24} color='gray87' weight={600}>
         {primaryText}
       </Text>
       <Box marginTop={1}>

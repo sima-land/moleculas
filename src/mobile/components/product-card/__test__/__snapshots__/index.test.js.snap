@@ -88,10 +88,10 @@ exports[`ProductCard renders properly 1`] = `
           href="test"
         >
           <ForwardRef(Text)
-            weight={500}
+            weight={600}
           >
             <span
-              className="weight-500"
+              className="weight-600"
             >
               Зеленый слоник 25мм МИКС
             </span>
@@ -148,10 +148,10 @@ exports[`ProductCard renders properly 1`] = `
           <ForwardRef(Text)
             element="div"
             size={12}
-            weight={500}
+            weight={600}
           >
             <div
-              className="size-12 line-height-16 weight-500"
+              className="size-12 line-height-16 weight-600"
             >
               <Price
                 currencyGrapheme="₽"
@@ -177,10 +177,10 @@ exports[`ProductCard renders properly 1`] = `
         >
           <ForwardRef(Text)
             element="div"
-            weight={500}
+            weight={600}
           >
             <div
-              className="weight-500"
+              className="weight-600"
             >
               <Price
                 currencyGrapheme="₽"
@@ -323,10 +323,10 @@ exports[`ProductCard renders properly without heart 1`] = `
           href="test"
         >
           <ForwardRef(Text)
-            weight={500}
+            weight={600}
           >
             <span
-              className="weight-500"
+              className="weight-600"
             >
               Зеленый слоник 25мм МИКС
             </span>
@@ -383,10 +383,10 @@ exports[`ProductCard renders properly without heart 1`] = `
           <ForwardRef(Text)
             element="div"
             size={12}
-            weight={500}
+            weight={600}
           >
             <div
-              className="size-12 line-height-16 weight-500"
+              className="size-12 line-height-16 weight-600"
             >
               <Price
                 currencyGrapheme="₽"
@@ -412,10 +412,10 @@ exports[`ProductCard renders properly without heart 1`] = `
         >
           <ForwardRef(Text)
             element="div"
-            weight={500}
+            weight={600}
           >
             <div
-              className="weight-500"
+              className="weight-600"
             >
               <Price
                 currencyGrapheme="₽"

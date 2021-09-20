@@ -179,10 +179,10 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
                               >
                                 <ForwardRef(Text)
                                   size={12}
-                                  weight={500}
+                                  weight={600}
                                 >
                                   <span
-                                    className="size-12 line-height-16 weight-500"
+                                    className="size-12 line-height-16 weight-600"
                                   >
                                     <ForwardRef(Link)
                                       href="/test"
