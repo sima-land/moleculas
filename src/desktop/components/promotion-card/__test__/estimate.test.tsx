@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { Estimate, EstimateProps } from '../estimate';
-import { addDays, addHours, addYears } from 'date-fns';
+import { addDays, addYears } from 'date-fns';
 
 describe('<Estimate />', () => {
   beforeEach(() => {
@@ -11,12 +11,12 @@ describe('<Estimate />', () => {
 
   it('should renders correctly', () => {
     const variants: EstimateProps[] = [
-      {
-        dueDate: addHours(new Date(), 3),
-      },
+      // целевая дата в текущем году
       {
         dueDate: addYears(new Date(), 5),
       },
+
+      // целевая дата в следующем году или позже
       {
         dueDate: addDays(new Date(), 7),
       },
