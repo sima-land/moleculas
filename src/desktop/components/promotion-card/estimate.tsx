@@ -1,12 +1,11 @@
 import React from 'react';
-import { formatISO, getMonth, differenceInDays, getDate, getYear } from 'date-fns';
-import { Timer } from '@sima-land/ui-nucleons/timer';
+import { getMonth, getDate, getYear } from 'date-fns';
 
 export interface EstimateProps {
   dueDate: Date
 }
 
-const MONTH_NAME = [
+const MONTH_SHORT_NAME = [
   'янв',
   'фев',
   'мар',
@@ -28,27 +27,14 @@ export const Estimate = ({ dueDate }: EstimateProps) => {
 
   let content: React.ReactNode = null;
 
-  if (differenceInDays(dueDate, now) < 1) {
-    content = (
-      <Timer
-        date={formatISO(dueDate)}
-        format={
-          d => [
-            d.hours % 24,
-            d.minutes % 60,
-            d.seconds % 60,
-          ].map(toTimePart).join(' : ')
-        }
-      />
-    );
-  } else if (getYear(dueDate) !== getYear(now)) {
+  if (getYear(dueDate) !== getYear(now)) {
     const text = [getDate, getMonth, getYear]
       .map(fn => toTimePart(fn(dueDate)))
       .join('.');
 
     content = `До ${text}`;
   } else {
-    content = `До ${getDate(dueDate)} ${MONTH_NAME[getMonth(dueDate)]}`;
+    content = `До ${getDate(dueDate)} ${MONTH_SHORT_NAME[getMonth(dueDate)]}`;
   }
 
   return (

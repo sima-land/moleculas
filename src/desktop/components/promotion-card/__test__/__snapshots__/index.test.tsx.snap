@@ -90,12 +90,7 @@ exports[`<PromotionCard /> should handle "promotionType" prop 1`] = `
             <Estimate
               dueDate={2021-01-01T09:00:00.000Z}
             >
-              <Timer
-                date="2021-01-01T09:00:00Z"
-                format={[Function]}
-              >
-                00 : 00 : 00
-              </Timer>
+              До 1 янв
             </Estimate>
           </time>
           <div
@@ -177,12 +172,7 @@ exports[`<PromotionCard /> should renders correctly 1`] = `
             <Estimate
               dueDate={2021-01-01T09:00:00.000Z}
             >
-              <Timer
-                date="2021-01-01T09:00:00Z"
-                format={[Function]}
-              >
-                00 : 00 : 00
-              </Timer>
+              До 1 янв
             </Estimate>
           </time>
         </div>
