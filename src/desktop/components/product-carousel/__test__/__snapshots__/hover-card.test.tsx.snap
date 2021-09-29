@@ -25,67 +25,71 @@ Array [
       }
     }
   >
-    <div
+    <ForwardRef
       className="root rounds-sm__all shadow-z4"
+      data={
+        Object {
+          "currencyGrapheme": "$",
+          "imageSrc": "http://image.com/test",
+          "name": "Test Product",
+          "oldPrice": 200,
+          "price": 100,
+          "url": "https://www.sima-land.ru/123",
+        }
+      }
       data-testid="product-carousel:hover-card"
       onMouseLeave={[Function]}
     >
-      <ProductInfo
-        data={
-          Object {
-            "currencyGrapheme": "$",
-            "imageSrc": "http://image.com/test",
-            "name": "Test Product",
-            "oldPrice": 200,
-            "price": 100,
-            "url": "https://www.sima-land.ru/123",
-          }
-        }
+      <div
+        className="root rounds-sm__all shadow-z4 root rounds-sm__all shadow-z4"
+        data-testid="product-carousel:hover-card"
+        onMouseLeave={[Function]}
       >
-        <ImageOverlay
-          className="image-overlay"
+        <ProductInfo
+          data={
+            Object {
+              "currencyGrapheme": "$",
+              "imageSrc": "http://image.com/test",
+              "name": "Test Product",
+              "oldPrice": 200,
+              "price": 100,
+              "url": "https://www.sima-land.ru/123",
+            }
+          }
         >
-          <div
-            className="root image-overlay"
+          <ImageOverlay
+            className="image-overlay"
           >
-            <a
-              className="image-link"
-              data-testid="product-info:image-link"
-              href="https://www.sima-land.ru/123"
-            >
-              <img
-                className="image"
-                src="http://image.com/test"
-              />
-            </a>
             <div
-              className="on-image"
+              className="root image-overlay"
             >
-              <OnImage
-                key=".0"
+              <a
+                className="image-link"
+                data-testid="product-info:image-link"
+                href="https://www.sima-land.ru/123"
               >
-                <WithHint
-                  direction="left"
-                  hint="Быстрый просмотр"
+                <img
+                  className="image"
+                  src="http://image.com/test"
+                />
+              </a>
+              <div
+                className="on-image"
+              >
+                <OnImage
+                  key=".0"
                 >
-                  <ForwardRef
-                    className="quick-view-button"
-                    onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
+                  <WithHint
+                    direction="left"
+                    hint="Быстрый просмотр"
                   >
-                    <ForwardRef(SvgQuickView)
-                      aria-label="Быстрый просмотр"
-                      className="root quick-view-button"
-                      data-testid="quick-view-button"
-                      height={24}
+                    <ForwardRef
+                      className="quick-view-button"
                       onClick={[Function]}
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
-                      role="button"
-                      width={24}
                     >
-                      <svg
+                      <ForwardRef(SvgQuickView)
                         aria-label="Быстрый просмотр"
                         className="root quick-view-button"
                         data-testid="quick-view-button"
@@ -94,92 +98,105 @@ Array [
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
                         role="button"
-                        viewBox="0 0 24 24"
                         width={24}
-                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <path
-                          d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0111.5 20.5a9 9 0 119-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 01-2.122 2.122zM9 10h1V9a1.5 1.5 0 113 0v1h1a1.5 1.5 0 110 3h-1v1a1.5 1.5 0 11-3 0v-1H9a1.5 1.5 0 110-3zm2.5-4.5a6 6 0 100 12 6 6 0 000-12z"
-                        />
-                      </svg>
-                    </ForwardRef(SvgQuickView)>
-                  </ForwardRef>
-                </WithHint>
-              </OnImage>
+                        <svg
+                          aria-label="Быстрый просмотр"
+                          className="root quick-view-button"
+                          data-testid="quick-view-button"
+                          height={24}
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          role="button"
+                          viewBox="0 0 24 24"
+                          width={24}
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0111.5 20.5a9 9 0 119-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 01-2.122 2.122zM9 10h1V9a1.5 1.5 0 113 0v1h1a1.5 1.5 0 110 3h-1v1a1.5 1.5 0 11-3 0v-1H9a1.5 1.5 0 110-3zm2.5-4.5a6 6 0 100 12 6 6 0 000-12z"
+                          />
+                        </svg>
+                      </ForwardRef(SvgQuickView)>
+                    </ForwardRef>
+                  </WithHint>
+                </OnImage>
+              </div>
             </div>
+          </ImageOverlay>
+          <div
+            className="prices"
+          >
+            <Price
+              className="price"
+              currencyGrapheme="$"
+              value={100}
+            >
+              <span
+                className="root price"
+                data-testid="price"
+              >
+                100 $
+              </span>
+            </Price>
+            <Price
+              className="old-price"
+              crossedOut={true}
+              currencyGrapheme="$"
+              value={200}
+            >
+              <span
+                className="root old-price crossed-out"
+                data-testid="price"
+              >
+                200 $
+              </span>
+            </Price>
           </div>
-        </ImageOverlay>
-        <div
-          className="prices"
-        >
-          <Price
-            className="price"
-            currencyGrapheme="$"
-            value={100}
-          >
-            <span
-              className="root price"
-              data-testid="price"
-            >
-              100 $
-            </span>
-          </Price>
-          <Price
-            className="old-price"
-            crossedOut={true}
-            currencyGrapheme="$"
-            value={200}
-          >
-            <span
-              className="root old-price crossed-out"
-              data-testid="price"
-            >
-              200 $
-            </span>
-          </Price>
-        </div>
-        <ForwardRef(Link)
-          className="link"
-          color="gray87"
-          data-testid="product-info:name-link"
-          href="https://www.sima-land.ru/123"
-        >
-          <a
-            className="link link gray87"
+          <ForwardRef(Link)
+            className="link"
+            color="gray87"
             data-testid="product-info:name-link"
             href="https://www.sima-land.ru/123"
           >
-            Test Product
-          </a>
-        </ForwardRef(Link)>
-      </ProductInfo>
-      <CartControlSlot
-        markupText="Bar"
-        stepText="Foo"
-      >
-        <div
-          className="control-wrapper"
+            <a
+              className="link link gray87"
+              data-testid="product-info:name-link"
+              href="https://www.sima-land.ru/123"
+            >
+              Test Product
+            </a>
+          </ForwardRef(Link)>
+        </ProductInfo>
+        <CartControlSlot
+          key=".0"
+          markupText="Bar"
+          stepText="Foo"
         >
           <div
-            className="control"
+            className="control-wrapper"
           >
-            <button>
-              В корзину
-            </button>
+            <div
+              className="control"
+            >
+              <button>
+                В корзину
+              </button>
+            </div>
+            <div
+              className="unit-text"
+            >
+              Foo
+            </div>
+            <div
+              className="bottom-text"
+            >
+              Bar
+            </div>
           </div>
-          <div
-            className="unit-text"
-          >
-            Foo
-          </div>
-          <div
-            className="bottom-text"
-          >
-            Bar
-          </div>
-        </div>
-      </CartControlSlot>
-    </div>
+        </CartControlSlot>
+      </div>
+    </ForwardRef>
   </HoverCard>,
 ]
 `;
@@ -203,168 +220,24 @@ exports[`<HoverCard /> should renders hidden 1`] = `
     }
   }
 >
-  <div
+  <ForwardRef
     className="root hidden rounds-sm__all shadow-z4"
-    data-testid="product-carousel:hover-card"
-    onMouseLeave={[Function]}
-  >
-    <ProductInfo
-      data={
-        Object {
-          "currencyGrapheme": "₽",
-          "imageSrc": "https://cdn3.static1-sima-land.com/items/29455/0/1600.jpg?v: 1617955476",
-          "name": "Ножницы портновские, 10, 26 см, цвет чёрный",
-          "oldPrice": 250,
-          "price": 225,
-          "url": "https://www.sima-land.ru/123456",
-        }
-      }
-    >
-      <ImageOverlay
-        className="image-overlay"
-      >
-        <div
-          className="root image-overlay"
-        >
-          <a
-            className="image-link"
-            data-testid="product-info:image-link"
-            href="https://www.sima-land.ru/123456"
-          >
-            <img
-              className="image"
-              src="https://cdn3.static1-sima-land.com/items/29455/0/1600.jpg?v: 1617955476"
-            />
-          </a>
-          <div
-            className="on-image"
-          >
-            <OnImage
-              key=".0"
-            >
-              <WithHint
-                direction="left"
-                hint="Быстрый просмотр"
-              >
-                <ForwardRef
-                  className="quick-view-button"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                >
-                  <ForwardRef(SvgQuickView)
-                    aria-label="Быстрый просмотр"
-                    className="root quick-view-button"
-                    data-testid="quick-view-button"
-                    height={24}
-                    onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    role="button"
-                    width={24}
-                  >
-                    <svg
-                      aria-label="Быстрый просмотр"
-                      className="root quick-view-button"
-                      data-testid="quick-view-button"
-                      height={24}
-                      onClick={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      role="button"
-                      viewBox="0 0 24 24"
-                      width={24}
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0111.5 20.5a9 9 0 119-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 01-2.122 2.122zM9 10h1V9a1.5 1.5 0 113 0v1h1a1.5 1.5 0 110 3h-1v1a1.5 1.5 0 11-3 0v-1H9a1.5 1.5 0 110-3zm2.5-4.5a6 6 0 100 12 6 6 0 000-12z"
-                      />
-                    </svg>
-                  </ForwardRef(SvgQuickView)>
-                </ForwardRef>
-              </WithHint>
-            </OnImage>
-          </div>
-        </div>
-      </ImageOverlay>
-      <div
-        className="prices"
-      >
-        <Price
-          className="price"
-          currencyGrapheme="₽"
-          value={225}
-        >
-          <span
-            className="root price"
-            data-testid="price"
-          >
-            225 ₽
-          </span>
-        </Price>
-        <Price
-          className="old-price"
-          crossedOut={true}
-          currencyGrapheme="₽"
-          value={250}
-        >
-          <span
-            className="root old-price crossed-out"
-            data-testid="price"
-          >
-            250 ₽
-          </span>
-        </Price>
-      </div>
-      <ForwardRef(Link)
-        className="link"
-        color="gray87"
-        data-testid="product-info:name-link"
-        href="https://www.sima-land.ru/123456"
-      >
-        <a
-          className="link link gray87"
-          data-testid="product-info:name-link"
-          href="https://www.sima-land.ru/123456"
-        >
-          Ножницы портновские, 10, 26 см, цвет чёрный
-        </a>
-      </ForwardRef(Link)>
-    </ProductInfo>
-  </div>
-</HoverCard>
-`;
-
-exports[`<HoverCard /> should renders with positioning 1`] = `
-Array [
-  <div>
-    Target
-  </div>,
-  <HoverCard
     data={
       Object {
         "currencyGrapheme": "₽",
-        "favorite": false,
         "imageSrc": "https://cdn3.static1-sima-land.com/items/29455/0/1600.jpg?v: 1617955476",
-        "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
         "name": "Ножницы портновские, 10, 26 см, цвет чёрный",
         "oldPrice": 250,
         "price": 225,
         "url": "https://www.sima-land.ru/123456",
-        "withImageButtons": true,
       }
     }
+    data-testid="product-carousel:hover-card"
+    onMouseLeave={[Function]}
     onQuickViewClick={[MockFunction]}
-    targetRef={
-      Object {
-        "current": <div>
-          Target
-        </div>,
-      }
-    }
   >
     <div
-      className="root rounds-sm__all shadow-z4"
+      className="root rounds-sm__all shadow-z4 root hidden rounds-sm__all shadow-z4"
       data-testid="product-carousel:hover-card"
       onMouseLeave={[Function]}
     >
@@ -372,14 +245,11 @@ Array [
         data={
           Object {
             "currencyGrapheme": "₽",
-            "favorite": false,
             "imageSrc": "https://cdn3.static1-sima-land.com/items/29455/0/1600.jpg?v: 1617955476",
-            "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
             "name": "Ножницы портновские, 10, 26 см, цвет чёрный",
             "oldPrice": 250,
             "price": 225,
             "url": "https://www.sima-land.ru/123456",
-            "withImageButtons": true,
           }
         }
       >
@@ -495,6 +365,190 @@ Array [
         </ForwardRef(Link)>
       </ProductInfo>
     </div>
+  </ForwardRef>
+</HoverCard>
+`;
+
+exports[`<HoverCard /> should renders with positioning 1`] = `
+Array [
+  <div>
+    Target
+  </div>,
+  <HoverCard
+    data={
+      Object {
+        "currencyGrapheme": "₽",
+        "favorite": false,
+        "imageSrc": "https://cdn3.static1-sima-land.com/items/29455/0/1600.jpg?v: 1617955476",
+        "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
+        "name": "Ножницы портновские, 10, 26 см, цвет чёрный",
+        "oldPrice": 250,
+        "price": 225,
+        "url": "https://www.sima-land.ru/123456",
+        "withImageButtons": true,
+      }
+    }
+    onQuickViewClick={[MockFunction]}
+    targetRef={
+      Object {
+        "current": <div>
+          Target
+        </div>,
+      }
+    }
+  >
+    <ForwardRef
+      className="root rounds-sm__all shadow-z4"
+      data={
+        Object {
+          "currencyGrapheme": "₽",
+          "favorite": false,
+          "imageSrc": "https://cdn3.static1-sima-land.com/items/29455/0/1600.jpg?v: 1617955476",
+          "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
+          "name": "Ножницы портновские, 10, 26 см, цвет чёрный",
+          "oldPrice": 250,
+          "price": 225,
+          "url": "https://www.sima-land.ru/123456",
+          "withImageButtons": true,
+        }
+      }
+      data-testid="product-carousel:hover-card"
+      onMouseLeave={[Function]}
+      onQuickViewClick={[MockFunction]}
+    >
+      <div
+        className="root rounds-sm__all shadow-z4 root rounds-sm__all shadow-z4"
+        data-testid="product-carousel:hover-card"
+        onMouseLeave={[Function]}
+      >
+        <ProductInfo
+          data={
+            Object {
+              "currencyGrapheme": "₽",
+              "favorite": false,
+              "imageSrc": "https://cdn3.static1-sima-land.com/items/29455/0/1600.jpg?v: 1617955476",
+              "markupText": "Комплектация + 50 ₽ при покупке до 20 шт",
+              "name": "Ножницы портновские, 10, 26 см, цвет чёрный",
+              "oldPrice": 250,
+              "price": 225,
+              "url": "https://www.sima-land.ru/123456",
+              "withImageButtons": true,
+            }
+          }
+        >
+          <ImageOverlay
+            className="image-overlay"
+          >
+            <div
+              className="root image-overlay"
+            >
+              <a
+                className="image-link"
+                data-testid="product-info:image-link"
+                href="https://www.sima-land.ru/123456"
+              >
+                <img
+                  className="image"
+                  src="https://cdn3.static1-sima-land.com/items/29455/0/1600.jpg?v: 1617955476"
+                />
+              </a>
+              <div
+                className="on-image"
+              >
+                <OnImage
+                  key=".0"
+                >
+                  <WithHint
+                    direction="left"
+                    hint="Быстрый просмотр"
+                  >
+                    <ForwardRef
+                      className="quick-view-button"
+                      onClick={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                    >
+                      <ForwardRef(SvgQuickView)
+                        aria-label="Быстрый просмотр"
+                        className="root quick-view-button"
+                        data-testid="quick-view-button"
+                        height={24}
+                        onClick={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        role="button"
+                        width={24}
+                      >
+                        <svg
+                          aria-label="Быстрый просмотр"
+                          className="root quick-view-button"
+                          data-testid="quick-view-button"
+                          height={24}
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          role="button"
+                          viewBox="0 0 24 24"
+                          width={24}
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0111.5 20.5a9 9 0 119-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 01-2.122 2.122zM9 10h1V9a1.5 1.5 0 113 0v1h1a1.5 1.5 0 110 3h-1v1a1.5 1.5 0 11-3 0v-1H9a1.5 1.5 0 110-3zm2.5-4.5a6 6 0 100 12 6 6 0 000-12z"
+                          />
+                        </svg>
+                      </ForwardRef(SvgQuickView)>
+                    </ForwardRef>
+                  </WithHint>
+                </OnImage>
+              </div>
+            </div>
+          </ImageOverlay>
+          <div
+            className="prices"
+          >
+            <Price
+              className="price"
+              currencyGrapheme="₽"
+              value={225}
+            >
+              <span
+                className="root price"
+                data-testid="price"
+              >
+                225 ₽
+              </span>
+            </Price>
+            <Price
+              className="old-price"
+              crossedOut={true}
+              currencyGrapheme="₽"
+              value={250}
+            >
+              <span
+                className="root old-price crossed-out"
+                data-testid="price"
+              >
+                250 ₽
+              </span>
+            </Price>
+          </div>
+          <ForwardRef(Link)
+            className="link"
+            color="gray87"
+            data-testid="product-info:name-link"
+            href="https://www.sima-land.ru/123456"
+          >
+            <a
+              className="link link gray87"
+              data-testid="product-info:name-link"
+              href="https://www.sima-land.ru/123456"
+            >
+              Ножницы портновские, 10, 26 см, цвет чёрный
+            </a>
+          </ForwardRef(Link)>
+        </ProductInfo>
+      </div>
+    </ForwardRef>
   </HoverCard>,
 ]
 `;

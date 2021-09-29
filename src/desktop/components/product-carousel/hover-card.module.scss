@@ -1,8 +1,6 @@
 @use 'node_modules/@sima-land/ui-nucleons/colors';
 
 .root {
-  padding: 16px 16px 24px;
-  background: #fff;
   position: absolute;
   top: -1000px;
   left: -1000px;
@@ -13,36 +11,4 @@
     visibility: hidden;
     pointer-events: none;
   }
-}
-
-.quick-view-button {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-}
-
-.control-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 16px;
-}
-
-.control {
-  width: 122px;
-  height: 40px;
-  margin-right: 16px;
-}
-
-.unit-text {
-  padding-top: 12px; // чтобы при переносе на следующую строку правильно отступил от кнопки
-  font-size: 12px;
-  line-height: 16px;
-  color: colors.$gray38;
-}
-
-.bottom-text {
-  margin-top: 12px;
-  font-size: 12px;
-  line-height: 16px;
-  color: colors.$gray38;
 }

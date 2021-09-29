@@ -1733,67 +1733,71 @@ exports[`<ProductCarousel /> should handle hover card link clicks without item "
         }
       }
     >
-      <div
+      <ForwardRef
         className="root rounds-sm__all shadow-z4"
+        data={
+          Object {
+            "currencyGrapheme": "₽",
+            "imageSrc": "https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605",
+            "name": "Ткань тюлевая, ширина 300 см, сетка",
+            "oldPrice": undefined,
+            "price": 495,
+            "url": "https://www.sima-land.ru/",
+          }
+        }
         data-testid="product-carousel:hover-card"
         onMouseLeave={[Function]}
       >
-        <ProductInfo
-          data={
-            Object {
-              "currencyGrapheme": "₽",
-              "imageSrc": "https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605",
-              "name": "Ткань тюлевая, ширина 300 см, сетка",
-              "oldPrice": undefined,
-              "price": 495,
-              "url": "https://www.sima-land.ru/",
-            }
-          }
+        <div
+          className="root rounds-sm__all shadow-z4 root rounds-sm__all shadow-z4"
+          data-testid="product-carousel:hover-card"
+          onMouseLeave={[Function]}
         >
-          <ImageOverlay
-            className="image-overlay"
+          <ProductInfo
+            data={
+              Object {
+                "currencyGrapheme": "₽",
+                "imageSrc": "https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605",
+                "name": "Ткань тюлевая, ширина 300 см, сетка",
+                "oldPrice": undefined,
+                "price": 495,
+                "url": "https://www.sima-land.ru/",
+              }
+            }
           >
-            <div
-              className="root image-overlay"
+            <ImageOverlay
+              className="image-overlay"
             >
-              <a
-                className="image-link"
-                data-testid="product-info:image-link"
-                href="https://www.sima-land.ru/"
-              >
-                <img
-                  className="image"
-                  src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
-                />
-              </a>
               <div
-                className="on-image"
+                className="root image-overlay"
               >
-                <OnImage
-                  key=".0"
+                <a
+                  className="image-link"
+                  data-testid="product-info:image-link"
+                  href="https://www.sima-land.ru/"
                 >
-                  <WithHint
-                    direction="left"
-                    hint="Быстрый просмотр"
+                  <img
+                    className="image"
+                    src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
+                  />
+                </a>
+                <div
+                  className="on-image"
+                >
+                  <OnImage
+                    key=".0"
                   >
-                    <ForwardRef
-                      className="quick-view-button"
-                      onClick={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
+                    <WithHint
+                      direction="left"
+                      hint="Быстрый просмотр"
                     >
-                      <ForwardRef(SvgQuickView)
-                        aria-label="Быстрый просмотр"
-                        className="root quick-view-button"
-                        data-testid="quick-view-button"
-                        height={24}
+                      <ForwardRef
+                        className="quick-view-button"
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
-                        role="button"
-                        width={24}
                       >
-                        <svg
+                        <ForwardRef(SvgQuickView)
                           aria-label="Быстрый просмотр"
                           className="root quick-view-button"
                           data-testid="quick-view-button"
@@ -1802,53 +1806,65 @@ exports[`<ProductCarousel /> should handle hover card link clicks without item "
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                           role="button"
-                          viewBox="0 0 24 24"
                           width={24}
-                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <path
-                            d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0111.5 20.5a9 9 0 119-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 01-2.122 2.122zM9 10h1V9a1.5 1.5 0 113 0v1h1a1.5 1.5 0 110 3h-1v1a1.5 1.5 0 11-3 0v-1H9a1.5 1.5 0 110-3zm2.5-4.5a6 6 0 100 12 6 6 0 000-12z"
-                          />
-                        </svg>
-                      </ForwardRef(SvgQuickView)>
-                    </ForwardRef>
-                  </WithHint>
-                </OnImage>
+                          <svg
+                            aria-label="Быстрый просмотр"
+                            className="root quick-view-button"
+                            data-testid="quick-view-button"
+                            height={24}
+                            onClick={[Function]}
+                            onMouseEnter={[Function]}
+                            onMouseLeave={[Function]}
+                            role="button"
+                            viewBox="0 0 24 24"
+                            width={24}
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0111.5 20.5a9 9 0 119-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 01-2.122 2.122zM9 10h1V9a1.5 1.5 0 113 0v1h1a1.5 1.5 0 110 3h-1v1a1.5 1.5 0 11-3 0v-1H9a1.5 1.5 0 110-3zm2.5-4.5a6 6 0 100 12 6 6 0 000-12z"
+                            />
+                          </svg>
+                        </ForwardRef(SvgQuickView)>
+                      </ForwardRef>
+                    </WithHint>
+                  </OnImage>
+                </div>
               </div>
-            </div>
-          </ImageOverlay>
-          <div
-            className="prices"
-          >
-            <Price
-              className="price"
-              currencyGrapheme="₽"
-              value={495}
+            </ImageOverlay>
+            <div
+              className="prices"
             >
-              <span
-                className="root price"
-                data-testid="price"
+              <Price
+                className="price"
+                currencyGrapheme="₽"
+                value={495}
               >
-                495 ₽
-              </span>
-            </Price>
-          </div>
-          <ForwardRef(Link)
-            className="link"
-            color="gray87"
-            data-testid="product-info:name-link"
-            href="https://www.sima-land.ru/"
-          >
-            <a
-              className="link link gray87"
+                <span
+                  className="root price"
+                  data-testid="price"
+                >
+                  495 ₽
+                </span>
+              </Price>
+            </div>
+            <ForwardRef(Link)
+              className="link"
+              color="gray87"
               data-testid="product-info:name-link"
               href="https://www.sima-land.ru/"
             >
-              Ткань тюлевая, ширина 300 см, сетка
-            </a>
-          </ForwardRef(Link)>
-        </ProductInfo>
-      </div>
+              <a
+                className="link link gray87"
+                data-testid="product-info:name-link"
+                href="https://www.sima-land.ru/"
+              >
+                Ткань тюлевая, ширина 300 см, сетка
+              </a>
+            </ForwardRef(Link)>
+          </ProductInfo>
+        </div>
+      </ForwardRef>
     </HoverCard>
   </div>
 </ProductCarousel>
