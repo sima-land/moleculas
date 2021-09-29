@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProductCard renders properly 1`] = `
-<ProductCard
+exports[`ProductRow renders properly 1`] = `
+<ProductRow
   commonPrice={50}
   count={23}
   currencyGrapheme="₽"
@@ -264,11 +264,11 @@ exports[`ProductCard renders properly 1`] = `
       </ForwardRef(MoreSVG)>
     </div>
   </div>
-</ProductCard>
+</ProductRow>
 `;
 
-exports[`ProductCard renders properly without heart 1`] = `
-<ProductCard
+exports[`ProductRow renders properly without heart 1`] = `
+<ProductRow
   commonPrice={50}
   count={23}
   currencyGrapheme="₽"
@@ -499,5 +499,5 @@ exports[`ProductCard renders properly without heart 1`] = `
       </ForwardRef(MoreSVG)>
     </div>
   </div>
-</ProductCard>
+</ProductRow>
 `;
