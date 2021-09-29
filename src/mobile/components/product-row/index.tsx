@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './product-card.module.scss';
+import styles from './product-row.module.scss';
 import classnames from 'classnames/bind';
 import MoreSVG from '@sima-land/ui-quarks/icons/24x24/Filled/more';
 import { Link } from '@sima-land/ui-nucleons/link';
@@ -7,31 +7,30 @@ import { Price } from '@sima-land/ui-nucleons/price';
 import { Box } from '@sima-land/ui-nucleons/box';
 import { Text } from '@sima-land/ui-nucleons/text';
 import { WishButton } from '../../../common/components/wish-button';
-import { isFunction } from 'lodash';
 
 const cx = classnames.bind(styles);
 
-export type Props = {
-  sid: number,
-  itemUrl: string,
-  imageUrl: string,
-  name: string,
-  currencyGrapheme: string,
-  itemPrice: number,
-  commonPrice: number,
-  isFetchingWishItems: boolean,
-  isWished: boolean,
-  unit: string,
-  onActionsClick: () => void,
-  onWishButtonClick?: () => void,
-  count?: number,
-  initialCount?: number,
-  movedOrderId?: number,
-  notInStock?: boolean,
-};
+export interface ProductRowProps {
+  sid: number;
+  itemUrl: string;
+  imageUrl: string;
+  name: string;
+  currencyGrapheme: string;
+  itemPrice: number;
+  commonPrice: number;
+  isFetchingWishItems: boolean;
+  isWished: boolean;
+  unit: string;
+  onActionsClick: () => void;
+  onWishButtonClick?: () => void;
+  count?: number;
+  initialCount?: number;
+  movedOrderId?: number;
+  notInStock?: boolean;
+}
 
 /**
- * Компонент карточки товара.
+ * Компонент вертикальной карточки товара для списков товаров.
  * @param props Свойства компонента.
  * @param props.itemUrl Ссылка на страницу товара.
  * @param props.imageUrl Ссылка на картинку товара.
@@ -51,7 +50,7 @@ export type Props = {
  * @param props.isFetchingWishItems Признак загрузки добавления товара в список избранного.
  * @return Компонент карточки товара.
  */
-const ProductCard = ({
+export const ProductRow = ({
   itemUrl,
   imageUrl,
   name,
@@ -68,13 +67,13 @@ const ProductCard = ({
   onWishButtonClick,
   onActionsClick,
   isFetchingWishItems,
-}: Props): React.ReactElement => (
+}: ProductRowProps) => (
   <div className={cx('wrapper')}>
     <div className={cx('image-wrapper')}>
       <Link href={itemUrl}>
         <img src={imageUrl} className={cx('image')} />
       </Link>
-      {isFunction(onWishButtonClick) && (
+      {onWishButtonClick && (
         <WishButton
           onClick={onWishButtonClick}
           className={cx('wish-button', { 'is-wished': isWished })}
@@ -142,5 +141,3 @@ const ProductCard = ({
     </div>
   </div>
 );
-
-export default ProductCard;

@@ -1,11 +1,11 @@
 import { Story } from '@storybook/react';
 import { noop } from 'lodash';
 import React from 'react';
-import ProductCard, { Props } from '..';
+import { ProductRow, ProductRowProps } from '..';
 
 export default {
-  title: 'mobile/ProductCard',
-  component: ProductCard,
+  title: 'mobile/ProductRow',
+  component: ProductRow,
   parameters: {
     layout: 'padded',
     docs: {
@@ -16,9 +16,9 @@ export default {
   },
 };
 
-const Template: Story<Props> = props => (
+const Template: Story<ProductRowProps> = props => (
   <div style={{ width: '480px', height: '160px', margin: '80px auto' }}>
-    <ProductCard {...props} />
+    <ProductRow {...props} />
   </div>
 );
 
@@ -27,7 +27,7 @@ export const Secondary = Template.bind({});
 export const Thirdy = Template.bind({});
 export const WithoutHeart = Template.bind({});
 
-const baseArgs: Props = {
+const baseArgs: ProductRowProps = {
   itemUrl: '/',
   imageUrl: 'https://cdn3.static1-sima-land.com/items/4243920/0/280.jpg?v=1584652193',
   name: 'Тестовое название',

@@ -1,9 +1,9 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import ProductCard from '..';
+import { ProductRow } from '..';
 import noop from 'lodash/noop';
 
-describe('ProductCard', () => {
+describe('ProductRow', () => {
   const item = {
     itemUrl: 'test',
     imageUrl: 'https://cdn3.static1-sima-land.com/items/29455/1/140.jpg?v=1598850721',
@@ -24,13 +24,14 @@ describe('ProductCard', () => {
     deliveryCost: 10,
     flags: [],
   };
+
   it('renders properly', () => {
-    const wrapper = mount(<ProductCard {...item} />);
+    const wrapper = mount(<ProductRow {...item} />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('renders properly without heart', () => {
-    const wrapper = mount(<ProductCard {...item} onWishButtonClick={null} />);
+    const wrapper = mount(<ProductRow {...item} onWishButtonClick={null} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
