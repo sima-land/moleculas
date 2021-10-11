@@ -1,0 +1,17 @@
+@use 'node_modules/@sima-land/ui-nucleons/colors';
+
+.part {
+  background: colors.$gray4;
+  border-radius: 4px;
+  & + & {
+    margin-top: 12px;
+  }
+}
+
+.banner {
+  padding-top: calc(100% * (488 / 656)); // соотношение сторон по гайдам
+}
+
+.text {
+  height: 48px;
+}

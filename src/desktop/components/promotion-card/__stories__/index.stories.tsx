@@ -56,8 +56,19 @@ export const Primary = () => (
     {demoItems.map((props, index) => (
       <PromotionCard
         key={index}
-        style={{ width: '320px', margin: '0 24px 24px 0', flexShrink: 0 }}
+        style={{ width: '320px', margin: '0 32px 32px 0', flexShrink: 0 }}
         {...props}
+      />
+    ))}
+  </div>
+);
+
+export const Placeholder = () => (
+  <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
+    {demoItems.map((_, index) => (
+      <PromotionCard.Placeholder
+        key={index}
+        style={{ width: '320px', margin: '0 32px 32px 0', flexShrink: 0 }}
       />
     ))}
   </div>

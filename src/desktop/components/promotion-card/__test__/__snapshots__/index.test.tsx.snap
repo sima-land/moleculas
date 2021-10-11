@@ -105,6 +105,22 @@ exports[`<PromotionCard /> should handle "promotionType" prop 1`] = `
 </PromotionCard>
 `;
 
+exports[`<PromotionCard /> should have placeholder component property 1`] = `
+<PromotionCardPlaceholder>
+  <div>
+    <div
+      className="part banner"
+    />
+    <div
+      className="part text"
+    />
+    <div
+      className="part text"
+    />
+  </div>
+</PromotionCardPlaceholder>
+`;
+
 exports[`<PromotionCard /> should renders correctly 1`] = `
 <PromotionCard
   dueDate={2021-01-01T09:00:00.000Z}
