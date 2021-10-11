@@ -1,5 +1,6 @@
 @use 'node_modules/@sima-land/ui-nucleons/colors';
 @use 'node_modules/@sima-land/ui-nucleons/breakpoints';
+@use './variables';
 @import 'node_modules/@sima-land/ui-nucleons/styling/shadows.module';
 
 .root {
@@ -24,7 +25,7 @@
 .banner {
   position: relative;
   width: 100%;
-  padding-top: calc(100% * (488 / 656)); // соотношение сторон по гайдам
+  padding-top: variables.$banner-height;
   background: colors.$gray8;
   border-radius: 8px 8px 0 0;
   overflow: hidden;

@@ -1,0 +1,18 @@
+@use 'node_modules/@sima-land/ui-nucleons/colors';
+@use './variables';
+
+.part {
+  background: colors.$gray4;
+  border-radius: 4px;
+  & + & {
+    margin-top: 12px;
+  }
+}
+
+.banner {
+  padding-top: variables.$banner-height;
+}
+
+.text {
+  height: 48px;
+}

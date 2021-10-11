@@ -35,4 +35,12 @@ describe('<PromotionCard />', () => {
 
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should have placeholder component property', () => {
+    const wrapper = mount(
+      <PromotionCard.Placeholder />
+    );
+
+    expect(wrapper).toMatchSnapshot();
+  });
 });

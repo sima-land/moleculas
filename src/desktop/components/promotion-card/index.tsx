@@ -5,6 +5,7 @@ import { Estimate } from './estimate';
 import WatchSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/watch';
 import classNames from 'classnames';
 import styles from './index.module.scss';
+import { PromotionCardPlaceholder } from './placeholder';
 
 export interface PromotionCardProps extends React.HTMLAttributes<HTMLDivElement> {
   href?: string
@@ -99,3 +100,5 @@ export const PromotionCard = ({
     </div>
   );
 };
+
+PromotionCard.Placeholder = PromotionCardPlaceholder;
