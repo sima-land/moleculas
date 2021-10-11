@@ -1,4 +1,5 @@
 @use 'node_modules/@sima-land/ui-nucleons/colors';
+@use './variables';
 
 .part {
   background: colors.$gray4;
@@ -9,7 +10,7 @@
 }
 
 .banner {
-  padding-top: calc(100% * (488 / 656)); // соотношение сторон по гайдам
+  padding-top: variables.$banner-height;
 }
 
 .text {
