@@ -52,6 +52,27 @@ export const Primary = () => (
   </DemoBlock>
 );
 
+export const CartLoading = () => (
+  <DemoBlock>
+    <ProductCarousel withHoverCard>
+      {items.map((item, index) => (
+        <ProductCarousel.Item
+          key={index}
+          data={item}
+          onQuickViewClick={action('click:quick-view')}
+          renderCartControl={Slot => (
+            <Slot
+              loading
+              stepText='По 5 шт.'
+              markupText='Комплектация + 50 ₽ при покупке до 20 шт'
+            />
+          )}
+        />
+      ))}
+    </ProductCarousel>
+  </DemoBlock>
+);
+
 export const NoHoverCard = () => (
   <DemoBlock>
     <ProductCarousel>

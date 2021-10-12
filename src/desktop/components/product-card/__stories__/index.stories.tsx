@@ -32,41 +32,71 @@ const product: ProductData = {
     { color: '#00b8d4', fields: [{ type: 'text', value: 'Акция' }] },
   ],
 };
+const variants: Array<React.CSSProperties> = [
+  { width: '240px' },
+  { width: '180px', marginLeft: '32px' },
+];
 
 export const Primary = () => {
   const [amount, setAmount] = useState<number>(0);
 
   return (
-    <ProductCard
-      style={{ width: '240px' }}
-      data={product}
-      onLinkClick={event => {
-        event.preventDefault();
-        action('product link click')();
-      }}
-      onQuickViewClick={() => {
-        action('quick view button click')();
-      }}
-    >
-      <ProductCard.CartControl
-        stepText={amount > 0 ? 'по 1 шт.' : 'от 2 шт.'}
-        markupText='Комплектация + 50 ₽ при покупке до 20 шт'
-      >
-        {amount > 0 ? (
-          <Stepper
-            size='s'
-            value={amount}
-            onAdd={() => setAmount(amount + 1)}
-            onSubtract={() => setAmount(amount - 1)}
-          />
-        ) : (
-          <Button
-            size='s'
-            style={{ width: '122px' }}
-            onClick={() => setAmount(Math.max(2, amount + 1))}
-          >В корзину</Button>
-        )}
-      </ProductCard.CartControl>
-    </ProductCard>
+    <div style={{ display: 'flex', alignItems: 'flex-start' }}>
+      {variants.map((style, index) => (
+        <ProductCard
+          key={index}
+          style={style}
+          data={product}
+          onLinkClick={event => {
+            event.preventDefault();
+            action('product link click')();
+          }}
+          onQuickViewClick={() => {
+            action('quick view button click')();
+          }}
+        >
+          <ProductCard.CartControl
+            stepText={amount > 0 ? 'по 1 шт.' : 'от 2 шт.'}
+            markupText='Комплектация + 50 ₽ при покупке до 20 шт'
+          >
+            {amount > 0 ? (
+              <Stepper
+                size='s'
+                value={amount}
+                onAdd={() => setAmount(amount + 1)}
+                onSubtract={() => setAmount(amount - 1)}
+              />
+            ) : (
+              <Button
+                size='s'
+                style={{ width: '122px' }}
+                onClick={() => setAmount(Math.max(2, amount + 1))}
+              >В корзину</Button>
+            )}
+          </ProductCard.CartControl>
+        </ProductCard>
+      ))}
+    </div>
   );
 };
+
+export const CartLoading = () => (
+  <div style={{ display: 'flex', alignItems: 'flex-start' }}>
+    {variants.map((style, index) => (
+      <ProductCard
+        key={index}
+        style={style}
+        data={product}
+        onLinkClick={event => {
+          event.preventDefault();
+          action('product link click')();
+        }}
+        onQuickViewClick={() => {
+          action('quick view button click')();
+        }}
+      >
+        <ProductCard.CartControl loading />
+      </ProductCard>
+    ))}
+  </div>
+);
