@@ -134,6 +134,131 @@ exports[`ProductCard should handle slots in children 1`] = `
 </div>
 `;
 
+exports[`ProductCard should render cart control loading state 1`] = `
+<body>
+  <div>
+    <div
+      class="root rounds-sm__all shadow-z4"
+    >
+      <div
+        class="root image-overlay"
+      >
+        <a
+          class="image-link"
+          data-testid="product-info:image-link"
+          href="https://sima-land.ru"
+        >
+          <img
+            class="image"
+            src="https://picsum.photos/240"
+          />
+        </a>
+        <div
+          class="on-image"
+        >
+          <svg
+            aria-label="Быстрый просмотр"
+            class="root quick-view-button"
+            data-testid="quick-view-button"
+            height="24"
+            role="button"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0111.5 20.5a9 9 0 119-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 01-2.122 2.122zM9 10h1V9a1.5 1.5 0 113 0v1h1a1.5 1.5 0 110 3h-1v1a1.5 1.5 0 11-3 0v-1H9a1.5 1.5 0 110-3zm2.5-4.5a6 6 0 100 12 6 6 0 000-12z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="root badges line-limit"
+        style="--line-limit: 1;"
+      >
+        <span
+          class="root item"
+          data-testid="badge"
+          style="--badge-color: #b52ea8;"
+        >
+          <span
+            class="content"
+          >
+            -56%
+          </span>
+        </span>
+        <span
+          class="root item"
+          data-testid="badge"
+          style="--badge-color: #ff7200;"
+        >
+          <span
+            class="content"
+          >
+            3 по цене 2
+          </span>
+        </span>
+        <span
+          class="root item"
+          data-testid="badge"
+          style="--badge-color: #2962ff;"
+        >
+          <span
+            class="content"
+          >
+            Товар месяца
+          </span>
+        </span>
+        <span
+          class="root item"
+          data-testid="badge"
+          style="--badge-color: #00b8d4;"
+        >
+          <span
+            class="content"
+          >
+            Акция
+          </span>
+        </span>
+      </div>
+      <div
+        class="prices"
+      >
+        <span
+          class="root price"
+          data-testid="price"
+        >
+          1 200 ₽
+        </span>
+        <span
+          class="root old-price crossed-out"
+          data-testid="price"
+        >
+          1 450 ₽
+        </span>
+      </div>
+      <a
+        class="link link gray87"
+        data-testid="product-info:name-link"
+        href="https://sima-land.ru"
+      >
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, nulla.
+      </a>
+      <div
+        class="control-wrapper loading"
+      >
+        <div
+          class="control"
+        />
+        <div
+          class="unit-text"
+        />
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
 exports[`ProductCard should renders correctly 1`] = `
 <div>
   <div

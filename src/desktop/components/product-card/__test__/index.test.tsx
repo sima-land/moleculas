@@ -44,6 +44,18 @@ describe('ProductCard', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should render cart control loading state', async () => {
+    const { baseElement } = render(
+      <ProductCard data={product}>
+        <ProductCard.CartControl loading stepText='hello' markupText='world'>
+          <button>Add to cart</button>
+        </ProductCard.CartControl>
+      </ProductCard>
+    );
+
+    expect(baseElement).toMatchSnapshot();
+  });
+
   it('should handle "onLinkClick" prop', async () => {
     const spy = jest.fn();
 

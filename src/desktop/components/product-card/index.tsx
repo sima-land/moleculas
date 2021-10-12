@@ -25,23 +25,25 @@ const CartControlSlot = ({
   children,
   stepText,
   markupText,
+  loading,
 }: {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   stepText?: string;
   markupText?: string;
+  loading?: boolean;
 }) => (
-  <div className={cx('control-wrapper')}>
+  <div className={cx('control-wrapper', { loading })}>
     <div className={cx('control')}>
-      {children}
+      {!loading && children}
     </div>
 
-    {stepText && (
+    {(loading || stepText) && (
       <div className={cx('unit-text')}>
-        {stepText}
+        {!loading && stepText}
       </div>
     )}
 
-    {markupText && (
+    {!loading && markupText && (
       <div className={cx('bottom-text')}>
         {markupText}
       </div>

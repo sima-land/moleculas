@@ -16,6 +16,20 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 16px;
+  &.loading {
+    .control {
+      background: colors.$gray4;
+      border-radius: 4px;
+    }
+    .unit-text::before {
+      content: '';
+      display: block;
+      background: colors.$gray4;
+      border-radius: 4px;
+      width: 48px;
+      height: 16px;
+    }
+  }
 }
 
 .control {
