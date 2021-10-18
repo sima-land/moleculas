@@ -49,6 +49,7 @@ exports[`ProductActionsContent renders properly 1`] = `
               >
                 <div
                   class="nav-bar header"
+                  style="height: 56px;"
                 >
                   <div
                     class="main"
@@ -161,6 +162,11 @@ exports[`ProductActionsContent renders properly 1`] = `
               >
                 <div
                   className="nav-bar header"
+                  style={
+                    Object {
+                      "height": "56px",
+                    }
+                  }
                 >
                   <div
                     className="main"
