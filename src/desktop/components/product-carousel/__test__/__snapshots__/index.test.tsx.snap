@@ -1691,6 +1691,7 @@ exports[`<ProductCarousel /> should handle hover card link clicks without item "
           "url": "https://www.sima-land.ru/",
         }
       }
+      key="1"
       onMouseLeave={[Function]}
       targetRef={
         Object {

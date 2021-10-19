@@ -30,6 +30,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
             >
               <div
                 class="nav-bar"
+                style="height: 56px;"
               >
                 <div
                   class="button-groups"
@@ -336,6 +337,11 @@ exports[`<PersonScreen /> should handle props 1`] = `
             >
               <div
                 className="nav-bar"
+                style={
+                  Object {
+                    "height": "56px",
+                  }
+                }
               >
                 <div
                   className="button-groups"
@@ -537,6 +543,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                         >
                           <span
                             className="size-16 line-height-24 color__gray87 weight-600"
+                            style={Object {}}
                           >
                             example@email.com
                           </span>
@@ -554,6 +561,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                             >
                               <span
                                 className="size-14 line-height-20 color__gray38"
+                                style={Object {}}
                               >
                                 Электронная почта
                               </span>
@@ -605,6 +613,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                         >
                           <span
                             className="size-16 line-height-24 color__gray87 weight-600"
+                            style={Object {}}
                           >
                             example@skype.com
                           </span>
@@ -622,6 +631,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                             >
                               <span
                                 className="size-14 line-height-20 color__gray38"
+                                style={Object {}}
                               >
                                 Skype
                               </span>
@@ -676,6 +686,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                         >
                           <span
                             className="size-16 line-height-24 color__gray87 weight-600"
+                            style={Object {}}
                           >
                             88000000000 доб. 8823
                           </span>
@@ -693,6 +704,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                             >
                               <span
                                 className="size-14 line-height-20 color__gray38"
+                                style={Object {}}
                               >
                                 Рабочий
                               </span>
@@ -744,6 +756,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                         >
                           <span
                             className="size-16 line-height-24 color__gray87 weight-600"
+                            style={Object {}}
                           >
                             +7 (900) 000 000
                           </span>
@@ -761,6 +774,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                             >
                               <span
                                 className="size-14 line-height-20 color__gray38"
+                                style={Object {}}
                               >
                                 Сотовый
                               </span>
@@ -817,6 +831,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
             >
               <div
                 class="nav-bar"
+                style="height: 56px;"
               >
                 <div
                   class="button-groups"
@@ -1027,6 +1042,11 @@ exports[`<PersonScreen /> should render with name 1`] = `
             >
               <div
                 className="nav-bar"
+                style={
+                  Object {
+                    "height": "56px",
+                  }
+                }
               >
                 <div
                   className="button-groups"
@@ -1211,6 +1231,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                         >
                           <span
                             className="size-16 line-height-24 color__gray87 weight-600"
+                            style={Object {}}
                           >
                             88000000000 доб. 8823
                           </span>
@@ -1228,6 +1249,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                             >
                               <span
                                 className="size-14 line-height-20 color__gray38"
+                                style={Object {}}
                               >
                                 Рабочий
                               </span>
@@ -1277,6 +1299,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                         >
                           <span
                             className="size-16 line-height-24 color__gray87 weight-600"
+                            style={Object {}}
                           >
                             +7 (900) 000 000
                           </span>
@@ -1294,6 +1317,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                             >
                               <span
                                 className="size-14 line-height-20 color__gray38"
+                                style={Object {}}
                               >
                                 Сотовый
                               </span>

@@ -92,6 +92,7 @@ exports[`ProductRow renders properly 1`] = `
           >
             <span
               className="weight-600"
+              style={Object {}}
             >
               Зеленый слоник 25мм МИКС
             </span>
@@ -109,6 +110,7 @@ exports[`ProductRow renders properly 1`] = `
           >
             <span
               className="color__gray38"
+              style={Object {}}
             >
               Арт.: 
               123
@@ -128,6 +130,7 @@ exports[`ProductRow renders properly 1`] = `
           >
             <div
               className="size-12 line-height-16"
+              style={Object {}}
             >
               <div>
                 Было в заказе: 42 шт.
@@ -152,6 +155,7 @@ exports[`ProductRow renders properly 1`] = `
           >
             <div
               className="size-12 line-height-16 weight-600"
+              style={Object {}}
             >
               <Price
                 currencyGrapheme="₽"
@@ -181,6 +185,7 @@ exports[`ProductRow renders properly 1`] = `
           >
             <div
               className="weight-600"
+              style={Object {}}
             >
               <Price
                 currencyGrapheme="₽"
@@ -209,6 +214,7 @@ exports[`ProductRow renders properly 1`] = `
           >
             <div
               className="color__gray38"
+              style={Object {}}
             >
               Перемещен в заказ
             </div>
@@ -236,6 +242,7 @@ exports[`ProductRow renders properly 1`] = `
           >
             <div
               className="color__gray38"
+              style={Object {}}
             >
               Нет на складе
             </div>
@@ -327,6 +334,7 @@ exports[`ProductRow renders properly without heart 1`] = `
           >
             <span
               className="weight-600"
+              style={Object {}}
             >
               Зеленый слоник 25мм МИКС
             </span>
@@ -344,6 +352,7 @@ exports[`ProductRow renders properly without heart 1`] = `
           >
             <span
               className="color__gray38"
+              style={Object {}}
             >
               Арт.: 
               123
@@ -363,6 +372,7 @@ exports[`ProductRow renders properly without heart 1`] = `
           >
             <div
               className="size-12 line-height-16"
+              style={Object {}}
             >
               <div>
                 Было в заказе: 42 шт.
@@ -387,6 +397,7 @@ exports[`ProductRow renders properly without heart 1`] = `
           >
             <div
               className="size-12 line-height-16 weight-600"
+              style={Object {}}
             >
               <Price
                 currencyGrapheme="₽"
@@ -416,6 +427,7 @@ exports[`ProductRow renders properly without heart 1`] = `
           >
             <div
               className="weight-600"
+              style={Object {}}
             >
               <Price
                 currencyGrapheme="₽"
@@ -444,6 +456,7 @@ exports[`ProductRow renders properly without heart 1`] = `
           >
             <div
               className="color__gray38"
+              style={Object {}}
             >
               Перемещен в заказ
             </div>
@@ -471,6 +484,7 @@ exports[`ProductRow renders properly without heart 1`] = `
           >
             <div
               className="color__gray38"
+              style={Object {}}
             >
               Нет на складе
             </div>

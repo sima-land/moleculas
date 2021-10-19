@@ -3,6 +3,7 @@ import { action } from '@storybook/addon-actions';
 import { ProductCarousel } from '..';
 import { items } from '../__test__/test-items';
 import { Button } from '@sima-land/ui-nucleons/button';
+import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import { DesktopLayout } from '@sima-land/ui-nucleons/layout';
 
 export default {
@@ -104,9 +105,7 @@ export const LinkClickHandle = () => (
               stepText='По 5 шт.'
               markupText='Комплектация + 50 ₽ при покупке до 20 шт'
             >
-              <Button size='s' style={{ width: '122px' }}>
-                В корзину
-              </Button>
+              <Stepper size='s' value='99' />
             </Slot>
           )}
         />

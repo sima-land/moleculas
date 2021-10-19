@@ -160,6 +160,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
                                 >
                                   <span
                                     className="size-14 line-height-20 color__gray38 weight-400"
+                                    style={Object {}}
                                   >
                                     Менеджер по игрушке
                                   </span>
@@ -183,6 +184,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
                                 >
                                   <span
                                     className="size-12 line-height-16 weight-600"
+                                    style={Object {}}
                                   >
                                     <ForwardRef(Link)
                                       href="/test"
@@ -542,6 +544,7 @@ exports[`<PersonModal /> should renders properly with minimal props 1`] = `
                                 >
                                   <span
                                     className="size-14 line-height-20 color__gray38 weight-400"
+                                    style={Object {}}
                                   >
                                     Дворник
                                   </span>

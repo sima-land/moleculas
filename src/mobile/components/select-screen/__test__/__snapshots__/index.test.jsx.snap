@@ -48,6 +48,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
             >
               <div
                 class="nav-bar"
+                style="height: 56px;"
               >
                 <div
                   class="button-groups"
@@ -245,6 +246,11 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
             >
               <div
                 className="nav-bar"
+                style={
+                  Object {
+                    "height": "56px",
+                  }
+                }
               >
                 <div
                   className="button-groups"
@@ -505,6 +511,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
             >
               <div
                 class="nav-bar"
+                style="height: 56px;"
               >
                 <div
                   class="button-groups"
@@ -672,6 +679,11 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
             >
               <div
                 className="nav-bar"
+                style={
+                  Object {
+                    "height": "56px",
+                  }
+                }
               >
                 <div
                   className="button-groups"
@@ -792,6 +804,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
                         >
                           Российский рубль
                         </span>
@@ -809,6 +822,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
                         >
                           Американский доллар
                         </span>
@@ -826,6 +840,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
                         >
                           Единая европейская валюта
                         </span>
@@ -843,6 +858,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
                         >
                           Белорусский рубль
                         </span>
@@ -860,6 +876,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
                         >
                           Украинская гривна
                         </span>
@@ -877,6 +894,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
                         >
                           Казахстанский тенге
                         </span>
@@ -926,6 +944,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
             >
               <div
                 class="nav-bar"
+                style="height: 56px;"
               >
                 <div
                   class="button-groups"
@@ -1114,6 +1133,11 @@ exports[`<SelectScreen /> should handle props 1`] = `
             >
               <div
                 className="nav-bar"
+                style={
+                  Object {
+                    "height": "56px",
+                  }
+                }
               >
                 <div
                   className="button-groups"
@@ -1234,6 +1258,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
                         >
                           Верх-Исетский
                         </span>
@@ -1251,6 +1276,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
                         >
                           Чкаловский
                         </span>
@@ -1268,6 +1294,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
                         >
                           Железнодорожный
                         </span>
@@ -1285,6 +1312,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
                         >
                           Кировский
                         </span>
@@ -1318,6 +1346,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
                         >
                           Орджоникидзевский
                         </span>
@@ -1335,6 +1364,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
                         >
                           Октябрьский
                         </span>
@@ -1352,6 +1382,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
                         >
                           Ленинский
                         </span>
@@ -1384,6 +1415,7 @@ exports[`<SelectScreen /> should render without props 1`] = `
             >
               <div
                 class="nav-bar"
+                style="height: 56px;"
               >
                 <div
                   class="button-groups"
@@ -1488,6 +1520,11 @@ exports[`<SelectScreen /> should render without props 1`] = `
             >
               <div
                 className="nav-bar"
+                style={
+                  Object {
+                    "height": "56px",
+                  }
+                }
               >
                 <div
                   className="button-groups"
