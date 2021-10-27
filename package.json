@@ -23,7 +23,7 @@
     "storybook:build": "build-storybook --no-dll --quiet --loglevel error -o build-storybook"
   },
   "dependencies": {
-    "@sima-land/ui-nucleons": "^39.0.1",
+    "@sima-land/ui-nucleons": "^40.0.0",
     "@sima-land/ui-quarks": "^2.0.1",
     "classnames": "^2.3.1",
     "lodash": "^4.17.21",

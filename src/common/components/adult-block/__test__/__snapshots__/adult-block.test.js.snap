@@ -26,6 +26,7 @@ exports[`<AdultBlock /> should render with props 1`] = `
           >
             <span
               className="size-16 line-height-24 weight-600"
+              style={Object {}}
             >
               Товар для взрослых
             </span>
@@ -38,6 +39,7 @@ exports[`<AdultBlock /> should render with props 1`] = `
       >
         <span
           className="size-12 line-height-20"
+          style={Object {}}
         >
           Подтвердите, что вы старше 18 лет, чтобы посмотреть товар.
         </span>
@@ -66,6 +68,7 @@ exports[`<AdultBlock /> should render with props 1`] = `
               >
                 <span
                   className="size-16 line-height-32 weight-600"
+                  style={Object {}}
                 >
                   Подтвердить
                 </span>
@@ -102,6 +105,7 @@ exports[`<AdultBlock /> should render without props 1`] = `
           >
             <span
               className="size-16 line-height-24 weight-600"
+              style={Object {}}
             >
               Товар для взрослых
             </span>
@@ -114,6 +118,7 @@ exports[`<AdultBlock /> should render without props 1`] = `
       >
         <span
           className="size-12 line-height-20"
+          style={Object {}}
         >
           Если вам уже есть 18 лет, авторизуйтесь, чтобы перейти к товару.
         </span>
@@ -140,6 +145,7 @@ exports[`<AdultBlock /> should render without props 1`] = `
               >
                 <span
                   className="size-16 line-height-32 weight-600"
+                  style={Object {}}
                 >
                   Авторизоваться
                 </span>

@@ -123,18 +123,20 @@ export const ProductCarousel = ({
           onChangeTargetIndex={() => cardShow.disallowFor(360)}
         />
 
-        {withHoverCard && activeItemIndex !== null && (
+        {/* ВАЖНО: чтобы размонтировать всплывающую карточку строго каждый раз используем массив и key */}
+        {withHoverCard && activeItemIndex !== null && [items[activeItemIndex]].map(item => (
           <HoverCard
+            key={activeItemIndex}
             targetRef={targetItemRef}
             onMouseLeave={() => setActiveItemIndex(null)}
 
             // данные элемента карусели
-            data={items[activeItemIndex].data}
-            onLinkClick={items[activeItemIndex].onLinkClick}
-            onQuickViewClick={items[activeItemIndex].onQuickViewClick}
-            renderCartControl={items[activeItemIndex].renderCartControl}
+            data={item.data}
+            onLinkClick={item.onLinkClick}
+            onQuickViewClick={item.onQuickViewClick}
+            renderCartControl={item.renderCartControl}
           />
-        )}
+        ))}
       </div>
     ) : (
       <div ref={stubRef} />
