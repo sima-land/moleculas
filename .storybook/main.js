@@ -18,11 +18,7 @@ module.exports = {
   typescript: {
     check: false,
     checkOptions: {},
-
-    // @todo перестал работать, ждем обновления
-    // https://github.com/styleguidist/react-docgen-typescript/issues/356
-    reactDocgen: null, // reactDocgen: 'react-docgen-typescript',
-
+    reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,
       propFilter: prop => !prop.parent || !/node_modules/.test(prop.parent.fileName),

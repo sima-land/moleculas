@@ -10,40 +10,56 @@ import { Modal, ModalProps } from '@sima-land/ui-nucleons/modal';
 import { useKeydown } from '@sima-land/ui-nucleons/hooks/keydown';
 
 export interface PersonModalProps {
+
+  /** Имя. */
   name: string
+
+  /** Должность. */
   appointment: string
+
+  /** Ссылка на фото. */
   photoUrl?: string
+
+  /** Почта. */
   email?: string
+
+  /** Skype. */
   skype?: string
+
+  /** Социальные сети. */
   social?: any[]
+
+  /** Ссылка на рабочий номер телефона. */
   phoneHref?: string
+
+  /** Рабочий номер телефона. */
   phoneText?: string
+
+  /** Ссылка на сотовый номер телефона. */
   secondPhoneHref?: string
+
+  /** Сотовый номер телефона. */
   secondPhoneText?: string
+
+  /** Свойства ссылки под именем. */
   arbitraryLinkProps?: any
+
+  /** Сработает при нажатии на кнопку "Закрыть". */
   onClose: () => void
+
+  /** Нужно ли блокировать прокрутку пока открыто окно. */
   withScrollDisable?: ModalProps['withScrollDisable']
+
+  /** Опции блокировки прокрутки. */
   scrollDisableOptions?: ModalProps['scrollDisableOptions']
 }
 
 const cx = classnames.bind(classes);
 
 /**
- * Компонент карточки персоны.
+ * Компонент модального окна сотрудника.
  * @param props Свойства.
- * @param props.name Имя.
- * @param props.appointment Должность.
- * @param props.photoUrl  Ссылка на фото.
- * @param props.email Почта.
- * @param props.skype Skype.
- * @param props.social Социальные сети.
- * @param props.phoneHref Ссылка на рабочий номер телефона.
- * @param props.phoneText Рабочий номер телефона.
- * @param props.secondPhoneHref Ссылка на сотовый номер телефона.
- * @param props.secondPhoneText Сотовый номер телефона.
- * @param props.arbitraryLinkProps Свойства ссылки под именем.
- * @param props.onClose Сработает при нажатии на кнопку "Закрыть".
- * @return Компонент.
+ * @return Элемент.
  */
 export const PersonModal = ({
   name,

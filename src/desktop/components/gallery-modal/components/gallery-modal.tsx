@@ -14,15 +14,29 @@ import classNames from 'classnames/bind';
 import styles from './gallery-modal.module.scss';
 
 export interface GalleryModalProps extends Pick<ModalProps, 'withScrollDisable' | 'scrollDisableOptions'> {
+
+  /** Список медиа. */
   media: MediaData[]
+
+  /** Индекс начального выбранного элемента из списка медиа. */
   defaultMediaIndex?: number
+
+  /** Будет вызвана при переключении элемента из списка медиа. */
   onMediaChange?: (data: MediaData, index: number) => void
+
+  /** Данные отзыва, выводятся внизу окна. */
   review?: {
     rating: number
     author: string
   }
+
+  /** Будет вызвана при попытке перейти к отзыву. */
   onGoToReview?: () => void
+
+  /** Будет вызвана при закрытии. */
   onClose?: () => void
+
+  /** Будет вызвана при событиях проигрывания видео. */
   onVideoEvent?: (event: React.SyntheticEvent<HTMLVideoElement>) => void
 }
 

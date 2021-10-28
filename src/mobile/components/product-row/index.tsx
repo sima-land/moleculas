@@ -48,7 +48,7 @@ export interface ProductRowProps {
  * @param props.onWishButtonClick Обработчик добавления/удаления в избранное.
  * @param props.onActionsClick Обработчик нажатия на кнопку действий над товаром.
  * @param props.isFetchingWishItems Признак загрузки добавления товара в список избранного.
- * @return Компонент карточки товара.
+ * @return Элемент.
  */
 export const ProductRow = ({
   itemUrl,

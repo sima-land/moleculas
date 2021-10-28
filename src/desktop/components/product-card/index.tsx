@@ -10,7 +10,11 @@ import classnames from 'classnames/bind';
 import styles from './product-card.module.scss';
 
 export interface ProductCardProps extends ProductInfoProps, React.HTMLAttributes<HTMLDivElement> {
+
+  /** Будет вызвана при уходе курсора с элемента. */
   onMouseLeave?: () => void
+
+  /** Будет вызвана при нажатии на кнопку-иконку быстрого просмотра. */
   onQuickViewClick?: () => void
 }
 

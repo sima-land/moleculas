@@ -16,11 +16,23 @@ interface ItemSize {
 }
 
 export interface ProductCarouselProps {
+
+  /** CSS-класс для корневого элемента. */
   className?: string;
+
+  /** Элементы карусели. */
   children?: React.ReactNode;
+
+  /** Найстройки размера элемента карусели. */
   itemSize?: ItemSize;
+
+  /** Сработает при попадании карусели во viewport. */
   onInViewport?: () => void;
+
+  /** Сработает при попадании карусели в область достаточно близкую к viewport'у. */
   onNeedRequest?: () => void;
+
+  /** Нужно ли показывать всплывающую карточку при наведении на элемент карусели. */
   withHoverCard?: boolean;
 }
 
