@@ -24,7 +24,7 @@ export interface ProductSliderComponent {
 /**
  * Компонент мобильного слайдера рекомендованных товаров.
  * @param props Свойства компонента.
- * @return Компонент карусели рекомендаций.
+ * @return Элемент.
  */
 export const ProductSlider: ProductSliderComponent = ({
   children,

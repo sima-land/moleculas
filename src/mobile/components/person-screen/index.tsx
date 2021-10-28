@@ -132,7 +132,7 @@ export const PersonScreen = ({
  * @param props.primaryText Основной текст.
  * @param props.secondaryText Дополнительный текст.
  * @param props.icon Иконка.
- * @return Компонент блока-ссылки для связи.
+ * @return Элемент.
  */
 export const CommunicateLink = ({
   href,

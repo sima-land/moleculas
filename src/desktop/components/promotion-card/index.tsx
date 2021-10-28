@@ -8,13 +8,29 @@ import styles from './index.module.scss';
 import { PromotionCardPlaceholder } from './placeholder';
 
 export interface PromotionCardProps extends React.HTMLAttributes<HTMLDivElement> {
+
+  /** Ссылка, переход по которой будет произведён при нажатии на карточку. */
   href?: string
+
+  /** Заголовок, выводится под баннером. */
   title: string
+
+  /** Подзаголовок. */
   subtitle?: string
+
+  /** Дополнительный текст, выводится в правом нижнем углу.  */
   postfix?: string
+
+  /** Путь к изображению для баннера. */
   imageSrc: string
+
+  /** Дата окончания акции. */
   dueDate: Date
+
+  /** Тип акции. */
   promotionType?: PromotionType
+
+  /** Скидка за объем, указывается при соответствующем типе акции. */
   volumeDiscount?: number
 }
 

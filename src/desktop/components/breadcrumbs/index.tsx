@@ -22,9 +22,17 @@ export interface Breadcrumb extends Sibling {
 }
 
 export interface BreadcrumbsProps {
+
+  /** Список хлебных крошек. */
   items: Breadcrumb[]
+
+  /** Получив хлебную крошку должна вернуть true если крошка выбрана. */
   isSiblingActive?: (sibling: Sibling) => boolean
+
+  /** Сработает при открытии попапа со смежными ссылками. */
   onSiblingsPopupOpen?: (item: Breadcrumb) => void
+
+  /** Идентификатор для систем автоматизированного тестирования. */
   'data-testid'?: string
 }
 

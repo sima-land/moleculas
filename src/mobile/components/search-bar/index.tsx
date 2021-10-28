@@ -51,7 +51,7 @@ export interface SearchBarProps {
  * @param props.withSearchIcon Признак наличия иконки поиска слева.
  * @param props.autoFocus Признак автофокуса.
  * @param props.description Описание в поле ввода.
- * @return Компонент.
+ * @return Элемент.
  */
 export const SearchBar = ({
   inputMode,
@@ -186,7 +186,7 @@ export const SearchBar = ({
  * @param props.onClick Обработчик клика.
  * @param props.icon Иконка.
  * @param props.iconColor Цвет иконки.
- * @return Компонент.
+ * @return Элемент.
  */
 const Button = forwardRef<HTMLDivElement | null, ButtonProps>(function Button ({
   text,

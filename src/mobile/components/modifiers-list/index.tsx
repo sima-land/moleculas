@@ -25,7 +25,7 @@ const cx = classnames.bind(classes);
  * @param props.wrapperProps Свойства блока-обертки.
  * @param props.itemsContainerProps Свойства блока-обертки списка модификаторов.
  * @param props.onItemClick Обработчик клика на модификатор.
- * @return Компонент списка модификаторов.
+ * @return Элемент.
  */
 export const ModifiersList = ({
   items,

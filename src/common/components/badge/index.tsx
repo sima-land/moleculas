@@ -9,9 +9,17 @@ export interface BadgeField {
 }
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
+
+  /** Основной цвет, используется как цвет обводки, иконок и текста. */
   color?: string
+
+  /** Содержимое шильдика. */
   fields: Array<BadgeField>
+
+  /** Ссылка, переход по которой будет произведён по нажатию на шильдик. */
   href?: string
+
+  /** Идентификатор для систем автоматизированного тестирования. */
   'data-testid'?: string
 }
 

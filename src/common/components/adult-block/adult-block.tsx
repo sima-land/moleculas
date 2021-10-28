@@ -27,7 +27,7 @@ const textBlocks = {
  * @param props.onClick Обработчик клика на ссылку.
  * @param props.alignItems Расположение блоков.
  * @param props.marginTop Отступ сверху.
- * @return Компонент.
+ * @return Элемент.
  */
 const AdultBlock = ({
   isAuthUser,
