@@ -18,7 +18,7 @@ describe('<PersonScreen />', () => {
         name='Марина Михайловская'
         phoneText='88000000000 доб. 8823'
         secondPhoneText='+7 (900) 000 000'
-      />
+      />,
     );
 
     expect(wrapper).toMatchSnapshot();
@@ -39,7 +39,7 @@ describe('<PersonScreen />', () => {
           href: '/test',
           children: 'test',
         }}
-      />
+      />,
     );
 
     expect(wrapper).toMatchSnapshot();

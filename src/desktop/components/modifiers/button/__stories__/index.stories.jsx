@@ -98,33 +98,21 @@ export const Primary = () => (
         <h3>Текст</h3>
         {textModifiers.map(mapModifier).map((props, index) => (
           <div key={index} style={{ display: 'inline-block', margin: '0 10px 10px 0' }}>
-            <ModifierButton
-              type='text'
-              {...props}
-              {...stateProps}
-            />
+            <ModifierButton type='text' {...props} {...stateProps} />
           </div>
         ))}
 
         <h3>Цвет</h3>
         {colorModifiers.map(mapModifier).map((props, index) => (
           <div key={index} style={{ display: 'inline-block', margin: '0 10px 10px 0' }}>
-            <ModifierButton
-              type='color'
-              {...props}
-              {...stateProps}
-            />
+            <ModifierButton type='color' {...props} {...stateProps} />
           </div>
         ))}
 
         <h3>Изображение</h3>
         {imageItems.map(mapModifier).map((props, index) => (
           <div key={index} style={{ display: 'inline-block', margin: '0 10px 10px 0' }}>
-            <ModifierButton
-              type='image'
-              {...props}
-              {...stateProps}
-            />
+            <ModifierButton type='image' {...props} {...stateProps} />
           </div>
         ))}
       </React.Fragment>

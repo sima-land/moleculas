@@ -12,20 +12,18 @@ const cx = classnames.bind(styles);
  * @param props Свойства компонента.
  * @return Элемент.
  */
-export const QuickViewButton = forwardRef<SVGSVGElement | null, QuickViewButtonProps>(({
-  onClick,
-  className,
-  ...restProps
-}, ref) => (
-  <QuickViewSVG
-    {...restProps}
-    ref={ref}
-    role='button'
-    aria-label='Быстрый просмотр'
-    className={cx('root', className)}
-    width={24}
-    height={24}
-    onClick={onClick}
-    data-testid='quick-view-button'
-  />
-));
+export const QuickViewButton = forwardRef<SVGSVGElement | null, QuickViewButtonProps>(
+  ({ onClick, className, ...restProps }, ref) => (
+    <QuickViewSVG
+      {...restProps}
+      ref={ref}
+      role='button'
+      aria-label='Быстрый просмотр'
+      className={cx('root', className)}
+      width={24}
+      height={24}
+      onClick={onClick}
+      data-testid='quick-view-button'
+    />
+  ),
+);

@@ -56,36 +56,17 @@ export const PersonScreen = ({
 }: PersonScreenProps) => (
   <Screen {...screenProps} withDivideHeader={false}>
     <div className={cx('avatar', 'small')}>
-      <UserAvatar
-        size={64}
-        title={name}
-        imageUrl={photoUrl}
-      />
+      <UserAvatar size={64} title={name} imageUrl={photoUrl} />
     </div>
     <div className={cx('avatar', 'big')}>
-      <UserAvatar
-        size={104}
-        title={name}
-        imageUrl={photoUrl}
-      />
+      <UserAvatar size={104} title={name} imageUrl={photoUrl} />
     </div>
-    <span className={cx('name')}>
-      {name}
-    </span>
-    {Boolean(appointment) && (
-      <span className={cx('appointment')}>
-        {appointment}
-      </span>
-    )}
+    <span className={cx('name')}>{name}</span>
+    {Boolean(appointment) && <span className={cx('appointment')}>{appointment}</span>}
     {arbitraryLinkProps && (
       <div
         className={cx('profile-url')}
-        children={(
-          <a
-            className={cx('link')}
-            {...arbitraryLinkProps}
-          />
-        )}
+        children={<a className={cx('link')} {...arbitraryLinkProps} />}
       />
     )}
     <div className={cx('items', InnerBorder.bottom)}>
@@ -140,10 +121,10 @@ export const CommunicateLink = ({
   secondaryText,
   icon,
 }: {
-  href?: string
-  primaryText?: string
-  secondaryText?: string
-  icon?: React.ReactNode
+  href?: string;
+  primaryText?: string;
+  secondaryText?: string;
+  icon?: React.ReactNode;
 }) => (
   <a href={href} className={cx('item', InnerBorder.top)}>
     <Box flex='grow'>
@@ -156,8 +137,6 @@ export const CommunicateLink = ({
         </Text>
       </Box>
     </Box>
-    <div className={cx('icon-circle')}>
-      {icon}
-    </div>
+    <div className={cx('icon-circle')}>{icon}</div>
   </a>
 );

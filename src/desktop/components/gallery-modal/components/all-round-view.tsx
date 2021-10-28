@@ -11,7 +11,7 @@ import TurnLeftSVG from '../icons/turn-left.svg';
 import TurnRightSVG from '../icons/turn-right.svg';
 
 export interface AllRoundViewProps {
-  photos: string[]
+  photos: string[];
 }
 
 type ViewState = 'default' | 'autoplay' | 'turn-right' | 'turn-left';
@@ -20,7 +20,7 @@ const cx = classNames.bind(styles);
 
 export const AllRoundView = ({ photos }: AllRoundViewProps) => {
   const imageRef = useRef<HTMLImageElement>(null);
-  const dragStartRef = useRef<{ position: number, index: number } | null>(null);
+  const dragStartRef = useRef<{ position: number; index: number } | null>(null);
 
   const [state, setState] = useState<ViewState>('autoplay');
   const autoplay = state === 'autoplay';
@@ -120,18 +120,14 @@ export const AllRoundView = ({ photos }: AllRoundViewProps) => {
               ref={ref as any}
               className={cx('control', 'primary', autoplay && 'pause')}
               onClick={() => {
-                setState(s => s === 'autoplay' ? 'default' : 'autoplay');
+                setState(s => (s === 'autoplay' ? 'default' : 'autoplay'));
                 toggleHint(false);
               }}
               onMouseEnter={() => autoplay && toggleHint(true)}
               onMouseLeave={() => toggleHint(false)}
               data-testid='gallery-modal:toggle-autoplay-button'
             >
-              {autoplay ? (
-                <PauseSVG />
-              ) : (
-                <AllRoundSVG />
-              )}
+              {autoplay ? <PauseSVG /> : <AllRoundSVG />}
             </button>
           )}
         </WithHint>

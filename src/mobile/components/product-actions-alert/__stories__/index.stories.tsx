@@ -36,8 +36,8 @@ Primary.args = {
     {
       text: 'Оставить отзыв',
       icon: <ThumbsUpSVG />,
-      onClick: action('Нажато на \'Оставить отзыв\''),
+      onClick: action("Нажато на 'Оставить отзыв'"),
     },
   ],
-  onClose: action('Нажато на \'Закрыть\''),
+  onClose: action("Нажато на 'Закрыть'"),
 };

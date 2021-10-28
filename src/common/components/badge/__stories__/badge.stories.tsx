@@ -19,9 +19,7 @@ export const Primary = () => (
   <Badge
     href='https://sima-land.ru'
     color='#002b41'
-    fields={[
-      { type: 'text', value: 'Товар партнёра' },
-    ]}
+    fields={[{ type: 'text', value: 'Товар партнёра' }]}
   />
 );
 
@@ -31,9 +29,7 @@ export const TextView = () => (
   <Badge
     color='#00b8d4'
     href='https://sima-land.ru'
-    fields={[
-      { type: 'text', value: 'Система скидок' },
-    ]}
+    fields={[{ type: 'text', value: 'Система скидок' }]}
   />
 );
 
@@ -51,7 +47,10 @@ export const IconView = () => (
     color='#ff7200'
     href='https://sima-land.ru'
     fields={[
-      { type: 'svg-url', value: 'https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg' },
+      {
+        type: 'svg-url',
+        value: 'https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg',
+      },
     ]}
   />
 );
@@ -69,9 +68,7 @@ export const TimerView = () => (
   <Badge
     color='#b52ea8'
     href='https://sima-land.ru'
-    fields={[
-      { type: 'timer', value: addDays(new Date(), 7).toISOString() },
-    ]}
+    fields={[{ type: 'timer', value: addDays(new Date(), 7).toISOString() }]}
   />
 );
 
@@ -120,9 +117,7 @@ export const OverflowView = () => (
     <Badge
       color='#b52ea8'
       href='https://sima-land.ru'
-      fields={[
-        { type: 'text', value: '-56% — Специальные цены на товары для росписи' },
-      ]}
+      fields={[{ type: 'text', value: '-56% — Специальные цены на товары для росписи' }]}
     />
   </div>
 );
@@ -137,12 +132,7 @@ OverflowView.parameters = {
 };
 
 export const NoInteractiveView = () => (
-  <Badge
-    color='#607d8b'
-    fields={[
-      { type: 'text', value: 'Уценённый товар' },
-    ]}
-  />
+  <Badge color='#607d8b' fields={[{ type: 'text', value: 'Уценённый товар' }]} />
 );
 
 NoInteractiveView.storyName = 'Без ссылки и hover';

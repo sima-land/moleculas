@@ -71,7 +71,9 @@ export const Primary = () => {
                 size='s'
                 style={{ width: '122px' }}
                 onClick={() => setAmount(Math.max(2, amount + 1))}
-              >В корзину</Button>
+              >
+                В корзину
+              </Button>
             )}
           </ProductCard.CartControl>
         </ProductCard>

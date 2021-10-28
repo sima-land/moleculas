@@ -4,7 +4,6 @@ import classnames from 'classnames/bind';
 import styles from './badge-list.module.scss';
 
 export interface BadgeListProps {
-
   /** Список данных для шильдиков. */
   items?: BadgeProps[];
 
@@ -25,23 +24,14 @@ const cx = classnames.bind(styles);
  * @param props Свойства компонента.
  * @return Элемент.
  */
-export const BadgeList = ({
-  items,
-  className,
-  lineLimit,
-  style,
-}: BadgeListProps) => (
+export const BadgeList = ({ items, className, lineLimit, style }: BadgeListProps) => (
   <div
     className={cx('root', className, lineLimit && 'line-limit')}
-    style={lineLimit ? { ...style, '--line-limit': lineLimit } as React.CSSProperties : style}
+    style={lineLimit ? ({ ...style, '--line-limit': lineLimit } as React.CSSProperties) : style}
   >
-    {Array.isArray(items) && items.length > 0 && items.map((itemProps, index) => (
-      <Badge
-        key={index}
-        className={cx('item')}
-        {...itemProps}
-      />
-    ))}
+    {Array.isArray(items) &&
+      items.length > 0 &&
+      items.map((itemProps, index) => <Badge key={index} className={cx('item')} {...itemProps} />)}
   </div>
 );
 

@@ -6,12 +6,12 @@ import classes from './modifiers-list.module.scss';
 import classnames from 'classnames/bind';
 
 export interface ModifierListProps {
-  items?: ModifierItemProps[]
-  currencyGrapheme?: string
-  sizesTableUrl?: string
-  wrapperProps: React.HTMLAttributes<HTMLDivElement>
-  itemsContainerProps: React.HTMLAttributes<HTMLDivElement>
-  onItemClick?: (item: ModifierItemProps) => void
+  items?: ModifierItemProps[];
+  currencyGrapheme?: string;
+  sizesTableUrl?: string;
+  wrapperProps: React.HTMLAttributes<HTMLDivElement>;
+  itemsContainerProps: React.HTMLAttributes<HTMLDivElement>;
+  onItemClick?: (item: ModifierItemProps) => void;
 }
 
 const cx = classnames.bind(classes);
@@ -38,15 +38,9 @@ export const ModifiersList = ({
   <div {...wrapperProps}>
     {sizesTableUrl && (
       <div className={cx('sizes-table-wrapper')}>
-        <Link
-          className={cx('sizes-table-link')}
-          href={sizesTableUrl}
-        >
+        <Link className={cx('sizes-table-link')} href={sizesTableUrl}>
           Таблица размеров
-          <StatementSVG
-            role='presentation'
-            className={cx('sizes-table-icon')}
-          />
+          <StatementSVG role='presentation' className={cx('sizes-table-icon')} />
         </Link>
       </div>
     )}

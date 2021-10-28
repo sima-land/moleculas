@@ -9,11 +9,7 @@ import { DropdownItem } from '@sima-land/ui-nucleons/dropdown-item';
 describe('SearchBar', () => {
   it('should renders properly with minimal props', () => {
     const onChange = jest.fn();
-    const component = mount(
-      <SearchBar
-        onChange={onChange}
-      />
-    );
+    const component = mount(<SearchBar onChange={onChange} />);
     expect(component).toMatchSnapshot();
     expect(component.find('.search-icon')).toHaveLength(1);
   });
@@ -38,7 +34,7 @@ describe('SearchBar', () => {
         onClear={onClearClick}
         description='150 324 предложений'
         placeholder='Найти'
-      />
+      />,
     );
     expect(component).toMatchSnapshot();
 
@@ -76,7 +72,7 @@ describe('SearchBar', () => {
           { text: 'Oтмена', onClick: onCancelClick },
           { text: 'Поиск', onClick: onSearchClick },
         ]}
-      />
+      />,
     );
     expect(component.find('.dropdown-container')).toHaveLength(0);
 
@@ -108,7 +104,7 @@ describe('SearchBar', () => {
           { text: 'Oтмена', onClick: onCancelClick },
           { text: 'Поиск', onClick: onSearchClick },
         ]}
-      />
+      />,
     );
     expect(component.find('.dropdown-container')).toHaveLength(0);
 
@@ -139,11 +135,11 @@ describe('SearchBar', () => {
           value='Очень длинный запрос в поисковой строке'
           onChange={onChange}
           endButtons={[
-            { text: 'Oтмена', onClick: onCancelClick },
+            { text: 'Отмена', onClick: onCancelClick },
             { text: 'Поиск', onClick: onSearchClick },
           ]}
         />,
-        container
+        container,
       );
     });
     expect(container.querySelectorAll('.dropdown-container')).toHaveLength(0);

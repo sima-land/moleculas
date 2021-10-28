@@ -20,7 +20,9 @@
     "lint:scripts": "eslint --cache src/ --ext .js,.jsx,.ts,.tsx",
     "lint:styles": "stylelint 'src/**/*.scss'",
     "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook --no-dll --quiet --loglevel error -o build-storybook"
+    "storybook:build": "build-storybook --no-dll --quiet --loglevel error -o build-storybook",
+    "prettier": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,css,scss}\" --loglevel error",
+    "prettier:check": "prettier --check \"./src/**/*.{js,jsx,ts,tsx,css,scss}\" --loglevel error"
   },
   "dependencies": {
     "@sima-land/ui-nucleons": "^40.0.0",
@@ -38,7 +40,8 @@
     "@babel/core": "^7.14.8",
     "@babel/preset-env": "^7.14.8",
     "@babel/preset-react": "^7.14.5",
-    "@sima-land/linters": "^1.0.12",
+    "@rushstack/eslint-patch": "^1.0.9",
+    "@sima-land/linters": "^2.1.0",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-docs": "^6.3.12",
     "@storybook/addon-storysource": "^6.3.12",
@@ -62,10 +65,12 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
+    "eslint": "^7.32.0",
     "husky": "^7.0.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
     "lint-staged": "^11.1.1",
+    "prettier": "^2.4.1",
     "react": "^17.0.2",
     "react-docgen-typescript": "^2.1.1",
     "react-dom": "^17.0.2",
@@ -73,6 +78,7 @@
     "sass": "^1.36.0",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
+    "stylelint": "^13.13.1",
     "ts-jest": "^26.5.5",
     "typescript": "^4.2.4",
     "webpack": "^5.47.1"

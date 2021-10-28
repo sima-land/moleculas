@@ -7,7 +7,8 @@ const demoItems: PromotionCardProps[] = [
     href: 'https://www.sima-land.ru',
     imageSrc: 'https://picsum.photos/id/10/656/488',
     title: '3 уточки по цене 2-х',
-    subtitle: 'При покупке 2-х уточек из акции 3-я в подарок. При покупке 2-х уточек из акции 3-я в подарок',
+    subtitle:
+      'При покупке 2-х уточек из акции 3-я в подарок. При покупке 2-х уточек из акции 3-я в подарок',
     dueDate: addHours(new Date(), 3),
     promotionType: '3-by-2',
   },

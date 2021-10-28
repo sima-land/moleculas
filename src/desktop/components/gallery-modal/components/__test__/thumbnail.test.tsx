@@ -7,9 +7,7 @@ describe('Thumbnail', () => {
   it('should render 360 icon', () => {
     const spy = jest.fn();
 
-    const wrapper = mount(
-      <Thumbnail type='360' onClick={spy} />
-    );
+    const wrapper = mount(<Thumbnail type='360' onClick={spy} />);
 
     expect(wrapper).toMatchSnapshot();
 
@@ -25,9 +23,7 @@ describe('Thumbnail', () => {
   it('should render video icon', () => {
     const spy = jest.fn();
 
-    const wrapper = mount(
-      <Thumbnail type='video' onClick={spy} />
-    );
+    const wrapper = mount(<Thumbnail type='video' onClick={spy} />);
 
     expect(wrapper).toMatchSnapshot();
 
@@ -43,9 +39,7 @@ describe('Thumbnail', () => {
   it('should render image', () => {
     const spy = jest.fn();
 
-    const wrapper = mount(
-      <Thumbnail type='image' src='https://image.com/1' onClick={spy} />
-    );
+    const wrapper = mount(<Thumbnail type='image' src='https://image.com/1' onClick={spy} />);
 
     expect(wrapper).toMatchSnapshot();
 
@@ -61,9 +55,7 @@ describe('Thumbnail', () => {
   it('should render 360 checked icon', () => {
     const spy = jest.fn();
 
-    const wrapper = mount(
-      <Thumbnail checked type='360' onClick={spy} />
-    );
+    const wrapper = mount(<Thumbnail checked type='360' onClick={spy} />);
 
     expect(wrapper).toMatchSnapshot();
   });

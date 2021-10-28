@@ -8,30 +8,29 @@ import styles from './index.module.scss';
 import { PromotionCardPlaceholder } from './placeholder';
 
 export interface PromotionCardProps extends React.HTMLAttributes<HTMLDivElement> {
-
   /** Ссылка, переход по которой будет произведён при нажатии на карточку. */
-  href?: string
+  href?: string;
 
   /** Заголовок, выводится под баннером. */
-  title: string
+  title: string;
 
   /** Подзаголовок. */
-  subtitle?: string
+  subtitle?: string;
 
   /** Дополнительный текст, выводится в правом нижнем углу.  */
-  postfix?: string
+  postfix?: string;
 
   /** Путь к изображению для баннера. */
-  imageSrc: string
+  imageSrc: string;
 
   /** Дата окончания акции. */
-  dueDate: Date
+  dueDate: Date;
 
   /** Тип акции. */
-  promotionType?: PromotionType
+  promotionType?: PromotionType;
 
   /** Скидка за объем, указывается при соответствующем типе акции. */
-  volumeDiscount?: number
+  volumeDiscount?: number;
 }
 
 const PromotionName: Record<PromotionType, string> = {
@@ -86,15 +85,9 @@ export const PromotionCard = ({
 
         <div className={styles.info}>
           <div className={styles.header}>
-            <h4 className={styles.title}>
-              {title}
-            </h4>
+            <h4 className={styles.title}>{title}</h4>
 
-            {subtitle && (
-              <p className={styles.subtitle}>
-                {subtitle}
-              </p>
-            )}
+            {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
           </div>
 
           <div className={styles.footer}>
@@ -105,11 +98,7 @@ export const PromotionCard = ({
               </time>
             )}
 
-            {postfix && (
-              <div className={styles.postfix}>
-                {postfix}
-              </div>
-            )}
+            {postfix && <div className={styles.postfix}>{postfix}</div>}
           </div>
         </div>
       </a>

@@ -34,10 +34,12 @@ describe('<BadgeList />', () => {
     it('contains flags', () => {
       const $flag = wrapper.find(Badge);
       expect($flag).toHaveLength(1);
-      expect($flag.prop('fields')).toEqual([{
-        type: 'text',
-        value: '-10%',
-      }]);
+      expect($flag.prop('fields')).toEqual([
+        {
+          type: 'text',
+          value: '-10%',
+        },
+      ]);
     });
   });
 });

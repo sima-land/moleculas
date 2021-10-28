@@ -11,7 +11,8 @@ const getContainedItems = (node: any) => {
 
     const farItemIndex = children.findIndex(
       (item, index, arr) =>
-        !arr[index + 1] || item.getBoundingClientRect().right > arr[index + 1].getBoundingClientRect().right
+        !arr[index + 1] ||
+        item.getBoundingClientRect().right > arr[index + 1].getBoundingClientRect().right,
     );
 
     count = farItemIndex + 1;

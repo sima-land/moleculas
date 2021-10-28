@@ -1,9 +1,6 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import {
-  ModifiersGroup,
-  createHiddenNodeIndexFinder,
-} from '..';
+import { ModifiersGroup, createHiddenNodeIndexFinder } from '..';
 import { ModifierButton } from '../../button';
 import prop from 'lodash/fp/prop';
 
@@ -28,17 +25,13 @@ describe('<ModifiersGroup />', () => {
   ];
 
   it('should render without props', () => {
-    const wrapper = mount(
-      <ModifiersGroup />
-    );
+    const wrapper = mount(<ModifiersGroup />);
 
     expect(wrapper.find('.modifiers-group')).toHaveLength(1);
   });
 
   it('should call instance.removeGlobalListener on unmount', () => {
-    const wrapper = mount(
-      <ModifiersGroup />
-    );
+    const wrapper = mount(<ModifiersGroup />);
 
     const spy = jest.spyOn(wrapper.instance(), 'removeGlobalListener');
 
@@ -48,9 +41,7 @@ describe('<ModifiersGroup />', () => {
   });
 
   it('should call checkVisibleNodes() on mount', () => {
-    const wrapper = mount(
-      <ModifiersGroup />
-    );
+    const wrapper = mount(<ModifiersGroup />);
     jest.spyOn(wrapper.instance(), 'checkVisibleNodes');
     expect(wrapper.instance().checkVisibleNodes).toHaveBeenCalledTimes(0);
     wrapper.instance().componentDidMount();
@@ -58,15 +49,12 @@ describe('<ModifiersGroup />', () => {
   });
 
   it('resetVisibleNodesData() should update state properly', () => {
-    const wrapper = mount(
-      <ModifiersGroup />
-    );
+    const wrapper = mount(<ModifiersGroup />);
     wrapper.instance().setState({
       hasHiddenNodes: false,
       lastVisibleChildIndex: 10,
     });
-    jest.spyOn(document.documentElement, 'offsetWidth', 'get')
-      .mockImplementation(() => 500);
+    jest.spyOn(document.documentElement, 'offsetWidth', 'get').mockImplementation(() => 500);
     wrapper.instance().resetVisibleNodesData();
     expect(wrapper.instance().state).toMatchObject({
       hasHiddenNodes: true,
@@ -75,9 +63,7 @@ describe('<ModifiersGroup />', () => {
   });
 
   it('resetVisibleNodesData() shouldn`t update state properly', () => {
-    const wrapper = mount(
-      <ModifiersGroup />
-    );
+    const wrapper = mount(<ModifiersGroup />);
     wrapper.instance().setState({
       hasHiddenNodes: false,
       lastVisibleChildIndex: 10,
@@ -90,11 +76,7 @@ describe('<ModifiersGroup />', () => {
   });
 
   it('checkVisibleNodes() should update state properly', () => {
-    const wrapper = mount(
-      <ModifiersGroup
-        items={getTestItems()}
-      />
-    );
+    const wrapper = mount(<ModifiersGroup items={getTestItems()} />);
     const containerEl = wrapper.instance().containerRef.current;
     const showingButtonEl = wrapper.instance().showingButtonRef.current;
 
@@ -158,7 +140,9 @@ describe('<ModifiersGroup />', () => {
      * и кнопке ХВАТИЛО место после последнего влезшего
      */
     jest.spyOn(containerEl, 'getBoundingClientRect').mockImplementation(() => ({ right: 200 }));
-    jest.spyOn(containerEl.children[4], 'getBoundingClientRect').mockImplementation(() => ({ right: 100 }));
+    jest
+      .spyOn(containerEl.children[4], 'getBoundingClientRect')
+      .mockImplementation(() => ({ right: 100 }));
 
     // сбрасываем состояние так чтобы метод прошел все условия внутри
     wrapper.instance().resetVisibleNodesData();
@@ -195,11 +179,7 @@ describe('<ModifiersGroup />', () => {
   });
 
   it('checkVisibleNodes() set state hasHiddenNodes to false', () => {
-    const wrapper = mount(
-      <ModifiersGroup
-        items={getTestItems()}
-      />
-    );
+    const wrapper = mount(<ModifiersGroup items={getTestItems()} />);
 
     const containerEl = wrapper.instance().containerRef.current;
     const showingButtonEl = wrapper.instance().showingButtonRef.current;
@@ -247,11 +227,7 @@ describe('<ModifiersGroup />', () => {
   });
 
   it('checkVisibleNodes(), expect isShowingButtonFit return 1', () => {
-    const wrapper = mount(
-      <ModifiersGroup
-        items={getTestItems()}
-      />
-    );
+    const wrapper = mount(<ModifiersGroup items={getTestItems()} />);
     const containerEl = wrapper.instance().containerRef.current;
     const showingButtonEl = wrapper.instance().showingButtonRef.current;
 
@@ -281,7 +257,9 @@ describe('<ModifiersGroup />', () => {
       });
 
       jest.spyOn(containerEl, 'getBoundingClientRect').mockImplementation(() => ({ right: 200 }));
-      jest.spyOn(containerEl.children[4], 'getBoundingClientRect').mockImplementation(() => ({ right: 100 }));
+      jest
+        .spyOn(containerEl.children[4], 'getBoundingClientRect')
+        .mockImplementation(() => ({ right: 100 }));
 
       /*
        * после 5 элемента подменяем у всех элементов offsetTop так,
@@ -348,11 +326,7 @@ describe('<ModifiersGroup />', () => {
   });
 
   it('showing button click should update state properly', () => {
-    const wrapper = mount(
-      <ModifiersGroup
-        items={getTestItems()}
-      />
-    );
+    const wrapper = mount(<ModifiersGroup items={getTestItems()} />);
 
     expect(wrapper.find(ModifierButton)).toHaveLength(6);
     expect(wrapper.find(ModifierButton).last().prop('className')).toContain('show-all-button');
@@ -364,12 +338,7 @@ describe('<ModifiersGroup />', () => {
 
   it('should handle "onSelectItem" prop', () => {
     const spy = jest.fn();
-    const wrapper = mount(
-      <ModifiersGroup
-        onSelectItem={spy}
-        items={getTestItems()}
-      />
-    );
+    const wrapper = mount(<ModifiersGroup onSelectItem={spy} items={getTestItems()} />);
     expect(spy).toHaveBeenCalledTimes(0);
     wrapper.find(ModifierButton).first().simulate('click');
     expect(spy).toHaveBeenCalledTimes(1);
@@ -379,12 +348,7 @@ describe('<ModifiersGroup />', () => {
   it('should handle "getItemType" prop', () => {
     const spy = jest.fn(() => 'test-type');
     const testItems = getTestItems();
-    const wrapper = mount(
-      <ModifiersGroup
-        getItemType={spy}
-        items={getTestItems()}
-      />
-    );
+    const wrapper = mount(<ModifiersGroup getItemType={spy} items={getTestItems()} />);
     testItems.forEach((item, index) => {
       expect(wrapper.find(ModifierButton).at(index).prop('type')).toBe('test-type');
     });
@@ -393,12 +357,7 @@ describe('<ModifiersGroup />', () => {
   it('should handle "getItemCount" prop', () => {
     const spy = jest.fn(() => 'test-count');
     const testItems = getTestItems();
-    const wrapper = mount(
-      <ModifiersGroup
-        getItemCount={spy}
-        items={getTestItems()}
-      />
-    );
+    const wrapper = mount(<ModifiersGroup getItemCount={spy} items={getTestItems()} />);
     testItems.forEach((item, index) => {
       expect(wrapper.find(ModifierButton).at(index).prop('count')).toBe('test-count');
     });
@@ -407,12 +366,7 @@ describe('<ModifiersGroup />', () => {
   it('should handle "getItemColor" prop', () => {
     const spy = jest.fn(() => 'test-color');
     const testItems = getTestItems();
-    const wrapper = mount(
-      <ModifiersGroup
-        getItemColor={spy}
-        items={getTestItems()}
-      />
-    );
+    const wrapper = mount(<ModifiersGroup getItemColor={spy} items={getTestItems()} />);
     testItems.forEach((item, index) => {
       expect(wrapper.find(ModifierButton).at(index).prop('color')).toBe('test-color');
     });
@@ -421,12 +375,7 @@ describe('<ModifiersGroup />', () => {
   it('should handle "isSelectedItem" prop', () => {
     const spy = jest.fn(() => 'test-selected');
     const testItems = getTestItems();
-    const wrapper = mount(
-      <ModifiersGroup
-        isSelectedItem={spy}
-        items={getTestItems()}
-      />
-    );
+    const wrapper = mount(<ModifiersGroup isSelectedItem={spy} items={getTestItems()} />);
     testItems.forEach((item, index) => {
       expect(wrapper.find(ModifierButton).at(index).prop('selected')).toBe('test-selected');
     });
@@ -435,12 +384,7 @@ describe('<ModifiersGroup />', () => {
   it('should handle "isMarkdown" prop', () => {
     const spy = jest.fn(() => 'testMarkdown');
     const testItems = getTestItems();
-    const wrapper = mount(
-      <ModifiersGroup
-        items={getTestItems()}
-        isMarkdown={spy}
-      />
-    );
+    const wrapper = mount(<ModifiersGroup items={getTestItems()} isMarkdown={spy} />);
     testItems.forEach((item, index) => {
       expect(wrapper.find(ModifierButton).at(index).prop('isMarkdown')).toBe('testMarkdown');
     });
@@ -458,24 +402,19 @@ describe('<ModifiersGroup />', () => {
     const wrapper = shallow(
       <ModifiersGroup
         items={testItems}
-        getItemType={item => item.image ? 'image' : 'text'}
+        getItemType={item => (item.image ? 'image' : 'text')}
         getItemContent={item => item.text || item.image}
         getItemImage={prop('image')}
         getItemCount={prop('amount')}
         getItemColor={prop('bgColor')}
         isSelectedItem={prop('chosen')}
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should show all modifiers, if pass prop needShowAll', () => {
-    const component = mount(
-      <ModifiersGroup
-        items={getTestItems()}
-        needShowAll
-      />
-    );
+    const component = mount(<ModifiersGroup items={getTestItems()} needShowAll />);
     component.setState({ lastVisibleChildIndex: 3 });
     expect(component.find(ModifierButton).filter('.show-all-button')).toHaveLength(0);
     expect(component.find(ModifierButton).children().filter('.not-display')).toHaveLength(0);
@@ -483,12 +422,7 @@ describe('<ModifiersGroup />', () => {
 
   it('should call onClickShowAll if it is a function', function () {
     const spy = jest.fn();
-    const component = shallow(
-      <ModifiersGroup
-        items={getTestItems()}
-        onClickShowAll={spy}
-      />
-    );
+    const component = shallow(<ModifiersGroup items={getTestItems()} onClickShowAll={spy} />);
     component.setState({ lastVisibleChildIndex: 3 });
     expect(spy).not.toBeCalled();
     component.find(ModifierButton).last().simulate('click');

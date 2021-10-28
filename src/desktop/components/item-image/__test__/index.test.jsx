@@ -33,25 +33,24 @@ describe('<ItemImage />', () => {
   });
   it('should render badges', () => {
     const wrapper = mount(
-      <ItemImage badges={[
-        {
-          bgColor: '#b52ea8',
-          definitions: {
-            label: {
-              type: 'text',
-              value: '-36%',
+      <ItemImage
+        badges={[
+          {
+            bgColor: '#b52ea8',
+            definitions: {
+              label: {
+                type: 'text',
+                value: '-36%',
+              },
             },
+            fields: ['label'],
+            link: '/percent/',
+            strokeColor: null,
+            textColor: '#f2f2f2',
+            title: null,
           },
-          fields: [
-            'label',
-          ],
-          link: '/percent/',
-          strokeColor: null,
-          textColor: '#f2f2f2',
-          title: null,
-        },
-      ]}
-      />
+        ]}
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -64,13 +63,15 @@ describe('<ItemImage />', () => {
     // eslint-disable-next-line require-jsdoc
     class Wrp extends Component {
       // eslint-disable-next-line require-jsdoc
-      render () { return (
-        <div>{this.props.children}</div>
-      );}
+      render() {
+        return <div>{this.props.children}</div>;
+      }
     }
     const spy = jest.fn();
     const wrapper = mount(
-      <Wrp><ItemImage onLoadImage={spy} src='https://via.placeholder.com/350x150' /></Wrp>
+      <Wrp>
+        <ItemImage onLoadImage={spy} src='https://via.placeholder.com/350x150' />
+      </Wrp>,
     );
     act(() => {
       document.querySelector('.image')?.load();
@@ -87,7 +88,7 @@ describe('<ItemImage />', () => {
           onClick: jest.fn(),
         }}
         hasTrashButton
-      />
+      />,
     );
     expect(wrapper.find('[data-testid="item-image:remove-button"]')).toHaveLength(1);
     expect(wrapper).toMatchSnapshot();
@@ -100,14 +101,16 @@ describe('<ItemImage />', () => {
           onClick: jest.fn(),
         }}
         hasWishButton
-      />
+      />,
     );
     expect(wrapper.find(WishButton)).toHaveLength(1);
     expect(wrapper.find(WishButton).prop('className')).toEqual('icon left test-wish-button');
     expect(wrapper).toMatchSnapshot();
 
     wrapper.setProps({ hasTrashButton: true, trashButtonProps: {} });
-    expect(wrapper.find(WishButton).prop('className')).toEqual('icon left as-second test-wish-button');
+    expect(wrapper.find(WishButton).prop('className')).toEqual(
+      'icon left as-second test-wish-button',
+    );
   });
   it('should render with quick preview button', () => {
     const wrapper = shallow(
@@ -117,19 +120,23 @@ describe('<ItemImage />', () => {
           onClick: jest.fn(),
         }}
         hasQuickPreview
-      />
+      />,
     );
     expect(wrapper.find(QuickViewButton)).toHaveLength(1);
-    expect(wrapper.find(QuickViewButton).prop('className')).toEqual('icon left test-quick-view-button');
+    expect(wrapper.find(QuickViewButton).prop('className')).toEqual(
+      'icon left test-quick-view-button',
+    );
     expect(wrapper).toMatchSnapshot();
 
     wrapper.setProps({ hasTrashButton: true, trashButtonProps: {} });
-    expect(wrapper.find(QuickViewButton).prop('className'))
-      .toEqual('icon left as-second test-quick-view-button');
+    expect(wrapper.find(QuickViewButton).prop('className')).toEqual(
+      'icon left as-second test-quick-view-button',
+    );
 
     wrapper.setProps({ hasWishButton: true, wishProps: {} });
-    expect(wrapper.find(QuickViewButton).prop('className'))
-      .toEqual('icon left as-second as-third test-quick-view-button');
+    expect(wrapper.find(QuickViewButton).prop('className')).toEqual(
+      'icon left as-second as-third test-quick-view-button',
+    );
   });
   it('should render with selection button', () => {
     const wrapper = shallow(
@@ -139,7 +146,7 @@ describe('<ItemImage />', () => {
           onSelect: jest.fn(),
         }}
         hasSelectionButton
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });

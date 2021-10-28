@@ -9,12 +9,11 @@ import styles from './garland-calculator-button.module.scss';
 const cx = classnames.bind(styles);
 
 export interface GarlandCalculatorButtonProps {
-
   /** Обработчик нажатия на кнопку рассчитать. */
-  onClick?: React.MouseEventHandler
+  onClick?: React.MouseEventHandler;
 
   /** CSS-класс. */
-  className?: string
+  className?: string;
 }
 
 /**
@@ -27,10 +26,7 @@ export const GarlandCalculatorButton = ({ className, onClick }: GarlandCalculato
     <Box padding={6} display='flex' justifyContent='between'>
       <Box paddingRight={5}>
         <Text size={14} lineHeight={20} weight={400}>
-          Сколько метров
-          гирлянды покупать?
-          Поможем рассчитать
-          оптимальную длину
+          Сколько метров гирлянды покупать? Поможем рассчитать оптимальную длину
         </Text>
         <Box marginTop={3}>
           <Link onClick={onClick}>Рассчитать</Link>

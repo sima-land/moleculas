@@ -6,7 +6,7 @@ describe('getContainedItems()', () => {
      * Конструктор тестовых дочерних узлов.
      * @param {number} right Ширина до правой стороны.
      */
-    function Child (right) {
+    function Child(right) {
       this.right = right;
       this.getBoundingClientRect = () => ({ right: this.right });
       this.__proto__ = HTMLElement.prototype;
@@ -20,13 +20,7 @@ describe('getContainedItems()', () => {
     const child5 = new Child(250);
 
     const testNode = {
-      childNodes: [
-        child1,
-        child2,
-        child3,
-        child4,
-        child5,
-      ],
+      childNodes: [child1, child2, child3, child4, child5],
       __proto__: HTMLElement.prototype,
       constructor: HTMLElement,
     };

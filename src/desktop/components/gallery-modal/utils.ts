@@ -29,9 +29,10 @@ export const useImagesLoad = (srcList: string[]): boolean => {
  * @param options Опции.
  * @return Размер или null.
  */
-export const useRectFit = (areaRef: React.RefObject<HTMLDivElement | null>, {
-  correction,
-}: { correction: number }) => {
+export const useRectFit = (
+  areaRef: React.RefObject<HTMLDivElement | null>,
+  { correction }: { correction: number },
+) => {
   const [size, setSize] = useState<number | null>(null);
 
   useEffect(() => {

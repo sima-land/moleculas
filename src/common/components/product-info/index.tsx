@@ -9,7 +9,6 @@ import classnames from 'classnames/bind';
 import styles from './product-info.module.scss';
 
 export interface ProductData {
-
   /** Ссылка на товар. */
   url: string;
 
@@ -36,7 +35,6 @@ export interface ProductData {
 }
 
 export interface ProductInfoProps {
-
   /** Данные товара. */
   data: ProductData;
 
@@ -44,11 +42,11 @@ export interface ProductInfoProps {
   children?: React.ReactNode;
 
   /** Обработчик клика по ссылке на товар. */
-  onLinkClick?: React.MouseEventHandler<HTMLAnchorElement>
+  onLinkClick?: React.MouseEventHandler<HTMLAnchorElement>;
 }
 
 export interface ProductInfoComponent {
-  (props: ProductInfoProps): JSX.Element
+  (props: ProductInfoProps): JSX.Element;
   OnImage: typeof OnImage;
 }
 
@@ -66,11 +64,7 @@ export const OnImage: React.FC = ({ children }) => <>{children}</>;
  * @param props Свойства компонента.
  * @return Элемент.
  */
-export const ProductInfo: ProductInfoComponent = ({
-  data,
-  onLinkClick,
-  children,
-}) => {
+export const ProductInfo: ProductInfoComponent = ({ data, onLinkClick, children }) => {
   const { onImage } = defineSlots(children, {
     onImage: OnImage,
   });
@@ -85,27 +79,15 @@ export const ProductInfo: ProductInfoComponent = ({
             onClick={onLinkClick}
             data-testid='product-info:image-link'
           >
-            <img
-              className={cx('image')}
-              alt={data.imageAlt}
-              src={data.imageSrc}
-            />
+            <img className={cx('image')} alt={data.imageAlt} src={data.imageSrc} />
           </a>
 
-          {onImage && (
-            <div className={cx('on-image')}>
-              {onImage}
-            </div>
-          )}
+          {onImage && <div className={cx('on-image')}>{onImage}</div>}
         </ImageOverlay>
       )}
 
       {data.badges && data.badges.length > 0 && (
-        <BadgeList
-          items={data.badges}
-          lineLimit={1}
-          className={cx('badges')}
-        />
+        <BadgeList items={data.badges} lineLimit={1} className={cx('badges')} />
       )}
 
       {Boolean(data.price) && (

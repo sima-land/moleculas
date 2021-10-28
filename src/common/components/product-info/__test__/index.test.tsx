@@ -24,7 +24,7 @@ describe('ProductInfo', () => {
         <ProductInfo.OnImage>
           <div className='image-button'>Do something</div>
         </ProductInfo.OnImage>
-      </ProductInfo>
+      </ProductInfo>,
     );
 
     expect(baseElement).toMatchSnapshot();

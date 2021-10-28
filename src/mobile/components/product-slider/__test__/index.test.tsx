@@ -10,7 +10,7 @@ describe('<ProductSlider />', () => {
         {items.map((item, index) => (
           <ProductSlider.Item key={index} data={item} />
         ))}
-      </ProductSlider>
+      </ProductSlider>,
     );
 
     expect(wrapper).toMatchSnapshot();

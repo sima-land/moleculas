@@ -10,12 +10,11 @@ import classnames from 'classnames/bind';
 import styles from './product-card.module.scss';
 
 export interface ProductCardProps extends ProductInfoProps, React.HTMLAttributes<HTMLDivElement> {
-
   /** Будет вызвана при уходе курсора с элемента. */
-  onMouseLeave?: () => void
+  onMouseLeave?: () => void;
 
   /** Будет вызвана при нажатии на кнопку-иконку быстрого просмотра. */
-  onQuickViewClick?: () => void
+  onQuickViewClick?: () => void;
 }
 
 const cx = classnames.bind(styles);
@@ -37,27 +36,18 @@ const CartControlSlot = ({
   loading?: boolean;
 }) => (
   <div className={cx('control-wrapper', { loading })}>
-    <div className={cx('control')}>
-      {!loading && children}
-    </div>
+    <div className={cx('control')}>{!loading && children}</div>
 
-    {(loading || stepText) && (
-      <div className={cx('unit-text')}>
-        {!loading && stepText}
-      </div>
-    )}
+    {(loading || stepText) && <div className={cx('unit-text')}>{!loading && stepText}</div>}
 
-    {!loading && markupText && (
-      <div className={cx('bottom-text')}>
-        {markupText}
-      </div>
-    )}
+    {!loading && markupText && <div className={cx('bottom-text')}>{markupText}</div>}
   </div>
 );
 
-export interface ProductCardComponent extends React.ForwardRefExoticComponent<
-React.PropsWithoutRef<ProductCardProps> & React.RefAttributes<HTMLDivElement>
-> {
+export interface ProductCardComponent
+  extends React.ForwardRefExoticComponent<
+    React.PropsWithoutRef<ProductCardProps> & React.RefAttributes<HTMLDivElement>
+  > {
   CartControl: typeof CartControlSlot;
 }
 
@@ -66,43 +56,48 @@ React.PropsWithoutRef<ProductCardProps> & React.RefAttributes<HTMLDivElement>
  * @param props Свойства компонента.
  * @return Элемент.
  */
-export const ProductCard: ProductCardComponent = forwardRef<HTMLDivElement, ProductCardProps>(({
-  data,
-  onLinkClick,
-  onQuickViewClick,
-  children,
+export const ProductCard: ProductCardComponent = forwardRef<HTMLDivElement, ProductCardProps>(
+  (
+    {
+      data,
+      onLinkClick,
+      onQuickViewClick,
+      children,
 
-  // div props
-  className,
-  ...rootProps
-}, rootRef) => {
-  const { cartControl } = defineSlots(children, { cartControl: CartControlSlot });
+      // div props
+      className,
+      ...rootProps
+    },
+    rootRef,
+  ) => {
+    const { cartControl } = defineSlots(children, { cartControl: CartControlSlot });
 
-  return (
-    <div
-      ref={rootRef}
-      className={cx('root', SmallRounds.all, BoxShadow.z4, className)}
-      {...rootProps}
-    >
-      <ProductInfo data={data} onLinkClick={onLinkClick}>
-        <ProductInfo.OnImage>
-          <WithHint hint='Быстрый просмотр' direction='left'>
-            {(ref, toggle) => (
-              <QuickViewButton
-                ref={ref as any}
-                onMouseEnter={() => toggle(true)}
-                onMouseLeave={() => toggle(false)}
-                className={cx('quick-view-button')}
-                onClick={withPrevent(onQuickViewClick)}
-              />
-            )}
-          </WithHint>
-        </ProductInfo.OnImage>
-      </ProductInfo>
+    return (
+      <div
+        ref={rootRef}
+        className={cx('root', SmallRounds.all, BoxShadow.z4, className)}
+        {...rootProps}
+      >
+        <ProductInfo data={data} onLinkClick={onLinkClick}>
+          <ProductInfo.OnImage>
+            <WithHint hint='Быстрый просмотр' direction='left'>
+              {(ref, toggle) => (
+                <QuickViewButton
+                  ref={ref as any}
+                  onMouseEnter={() => toggle(true)}
+                  onMouseLeave={() => toggle(false)}
+                  className={cx('quick-view-button')}
+                  onClick={withPrevent(onQuickViewClick)}
+                />
+              )}
+            </WithHint>
+          </ProductInfo.OnImage>
+        </ProductInfo>
 
-      {cartControl}
-    </div>
-  );
-}) as ProductCardComponent;
+        {cartControl}
+      </div>
+    );
+  },
+) as ProductCardComponent;
 
 ProductCard.CartControl = CartControlSlot;

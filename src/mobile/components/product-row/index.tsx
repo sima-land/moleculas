@@ -89,12 +89,9 @@ export const ProductRow = ({
         <Text weight={600}>{name}</Text>
       </Link>
       <Box marginTop={2}>
-        <Text color='gray38'>
-          Арт.: {sid}
-        </Text>
+        <Text color='gray38'>Арт.: {sid}</Text>
       </Box>
-      {Boolean(initialCount)
-      && (
+      {Boolean(initialCount) && (
         <Box marginTop={2}>
           <Text element='div' size={12}>
             <div>{`Было в заказе: ${initialCount} ${unit}`}</div>
@@ -102,39 +99,36 @@ export const ProductRow = ({
           </Text>
         </Box>
       )}
-      {Boolean(itemPrice)
-        && (
-          <Box marginTop={2}>
-            <Text element='div' weight={600} size={12}>
-              <Price value={itemPrice} currencyGrapheme={currencyGrapheme} />{` × ${count} ${unit}`}
-            </Text>
-          </Box>
-        )
-      }
-      {Boolean(commonPrice && itemPrice)
-        && (
-          <Box marginTop={4}>
-            <Text element='div' weight={600}>
-              <Price value={commonPrice} currencyGrapheme={currencyGrapheme} />
-            </Text>
-          </Box>
-        )
-      }
-      {Boolean(movedOrderId)
-        && (
-          <Box marginTop={2}>
-            <Text element='div' color='gray38'>Перемещен в заказ</Text>
-            <Link>№{movedOrderId}</Link>
-          </Box>
-        )
-      }
-      {notInStock
-        && (
-          <Box marginTop={2}>
-            <Text element='div' color='gray38'>Нет на складе</Text>
-          </Box>
-        )
-      }
+      {Boolean(itemPrice) && (
+        <Box marginTop={2}>
+          <Text element='div' weight={600} size={12}>
+            <Price value={itemPrice} currencyGrapheme={currencyGrapheme} />
+            {` × ${count} ${unit}`}
+          </Text>
+        </Box>
+      )}
+      {Boolean(commonPrice && itemPrice) && (
+        <Box marginTop={4}>
+          <Text element='div' weight={600}>
+            <Price value={commonPrice} currencyGrapheme={currencyGrapheme} />
+          </Text>
+        </Box>
+      )}
+      {Boolean(movedOrderId) && (
+        <Box marginTop={2}>
+          <Text element='div' color='gray38'>
+            Перемещен в заказ
+          </Text>
+          <Link>№{movedOrderId}</Link>
+        </Box>
+      )}
+      {notInStock && (
+        <Box marginTop={2}>
+          <Text element='div' color='gray38'>
+            Нет на складе
+          </Text>
+        </Box>
+      )}
     </div>
     <div className={cx('action-button')}>
       <MoreSVG onClick={onActionsClick} />

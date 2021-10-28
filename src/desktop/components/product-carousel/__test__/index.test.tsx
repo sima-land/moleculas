@@ -23,11 +23,13 @@ jest.mock('@sima-land/ui-nucleons/hooks/media', () => {
 describe('<ProductCarousel />', () => {
   const Find = {
     hoverCard: (wrapper: ReactWrapper) => wrapper.find(HoverCard),
-    hoverCardItemName: (wrapper: ReactWrapper) => wrapper.find(HoverCard)
-      .find(HoverCard)
-      .find(ProductInfo)
-      .find('a[data-testid="product-info:name-link"]')
-      .text(),
+    hoverCardItemName: (wrapper: ReactWrapper) =>
+      wrapper
+        .find(HoverCard)
+        .find(HoverCard)
+        .find(ProductInfo)
+        .find('a[data-testid="product-info:name-link"]')
+        .text(),
     item: (wrapper: ReactWrapper) => wrapper.find('[data-testid="product-carousel:item"]'),
   };
 
@@ -41,7 +43,7 @@ describe('<ProductCarousel />', () => {
         {items.map((item, index) => (
           <ProductCarousel.Item key={index} data={item} />
         ))}
-      </ProductCarousel>
+      </ProductCarousel>,
     );
 
     expect(wrapper).toMatchSnapshot();
@@ -55,7 +57,7 @@ describe('<ProductCarousel />', () => {
         {items.map((item, index) => (
           <ProductCarousel.Item key={index} data={item} onLinkClick={spy} />
         ))}
-      </ProductCarousel>
+      </ProductCarousel>,
     );
 
     expect(spy).toBeCalledTimes(0);
@@ -81,7 +83,7 @@ describe('<ProductCarousel />', () => {
         {items.map((item, index) => (
           <ProductCarousel.Item key={index} data={item} onLinkClick={undefined} />
         ))}
-      </ProductCarousel>
+      </ProductCarousel>,
     );
 
     act(() => {
@@ -98,9 +100,7 @@ describe('<ProductCarousel />', () => {
   });
 
   it('should render empty ref', () => {
-    const wrapper = mount(
-      <ProductCarousel />
-    );
+    const wrapper = mount(<ProductCarousel />);
 
     expect(wrapper).toMatchSnapshot();
   });
@@ -111,7 +111,7 @@ describe('<ProductCarousel />', () => {
         {items.map((item, index) => (
           <ProductCarousel.Item key={index} data={item} />
         ))}
-      </ProductCarousel>
+      </ProductCarousel>,
     );
 
     expect(wrapper).toMatchSnapshot();
@@ -130,7 +130,7 @@ describe('<ProductCarousel />', () => {
         {items.map((item, index) => (
           <ProductCarousel.Item key={index} data={item} />
         ))}
-      </ProductCarousel>
+      </ProductCarousel>,
     );
 
     act(() => {
@@ -149,7 +149,7 @@ describe('<ProductCarousel />', () => {
         {items.map((item, index) => (
           <ProductCarousel.Item key={index} data={item} onLinkClick={spy} />
         ))}
-      </ProductCarousel>
+      </ProductCarousel>,
     );
 
     act(() => {
@@ -180,7 +180,7 @@ describe('<ProductCarousel />', () => {
         {items.map((item, index) => (
           <ProductCarousel.Item key={index} data={item} />
         ))}
-      </ProductCarousel>
+      </ProductCarousel>,
     );
 
     act(() => {
@@ -209,7 +209,7 @@ describe('<ProductCarousel />', () => {
         {items.map((item, index) => (
           <ProductCarousel.Item key={index} data={item} />
         ))}
-      </ProductCarousel>
+      </ProductCarousel>,
     );
 
     act(() => {
@@ -235,7 +235,7 @@ describe('<ProductCarousel />', () => {
         {items.map((item, index) => (
           <ProductCarousel.Item key={index} data={item} />
         ))}
-      </ProductCarousel>
+      </ProductCarousel>,
     );
 
     act(() => {

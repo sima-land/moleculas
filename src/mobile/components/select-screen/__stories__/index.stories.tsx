@@ -26,9 +26,7 @@ export const Primary = () => (
         'Октябрьский',
         'Ленинский',
       ],
-      displayItem: (item, { getItemName }) => (
-        <span>{getItemName(item)}</span>
-      ),
+      displayItem: (item, { getItemName }) => <span>{getItemName(item)}</span>,
       getItemName: String,
       isItemSelected: item => item === 'Кировский',
     }}

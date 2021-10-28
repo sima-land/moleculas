@@ -40,7 +40,7 @@ describe('Breadcrumbs', () => {
             url: '#',
           },
         ]}
-      />
+      />,
     );
 
     expect(wrapper).toMatchSnapshot();

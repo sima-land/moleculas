@@ -13,36 +13,36 @@ import { useRectFit } from '../utils';
 import classNames from 'classnames/bind';
 import styles from './gallery-modal.module.scss';
 
-export interface GalleryModalProps extends Pick<ModalProps, 'withScrollDisable' | 'scrollDisableOptions'> {
-
+export interface GalleryModalProps
+  extends Pick<ModalProps, 'withScrollDisable' | 'scrollDisableOptions'> {
   /** Список медиа. */
-  media: MediaData[]
+  media: MediaData[];
 
   /** Индекс начального выбранного элемента из списка медиа. */
-  defaultMediaIndex?: number
+  defaultMediaIndex?: number;
 
   /** Будет вызвана при переключении элемента из списка медиа. */
-  onMediaChange?: (data: MediaData, index: number) => void
+  onMediaChange?: (data: MediaData, index: number) => void;
 
   /** Данные отзыва, выводятся внизу окна. */
   review?: {
-    rating: number
-    author: string
-  }
+    rating: number;
+    author: string;
+  };
 
   /** Будет вызвана при попытке перейти к отзыву. */
-  onGoToReview?: () => void
+  onGoToReview?: () => void;
 
   /** Будет вызвана при закрытии. */
-  onClose?: () => void
+  onClose?: () => void;
 
   /** Будет вызвана при событиях проигрывания видео. */
-  onVideoEvent?: (event: React.SyntheticEvent<HTMLVideoElement>) => void
+  onVideoEvent?: (event: React.SyntheticEvent<HTMLVideoElement>) => void;
 }
 
 interface InnerStyles extends React.CSSProperties {
-  '--area-height'?: string
-  '--all-round-view-size'?: string
+  '--area-height'?: string;
+  '--all-round-view-size'?: string;
 }
 
 const cx = classNames.bind(styles);
@@ -69,10 +69,10 @@ export const GalleryModal = ({
   const size = useRectFit(areaRef, { correction });
 
   const innerStyles: InnerStyles = {
-    ...size !== null && {
+    ...(size !== null && {
       '--area-height': `${size + correction}px`,
       '--all-round-view-size': `${size}px`,
-    },
+    }),
   };
 
   const handlerRef = useIdentityRef(onMediaChange);
@@ -80,18 +80,15 @@ export const GalleryModal = ({
   useEffect(() => {
     handlerRef.current?.(media[currentIndex], currentIndex);
 
-    thumbnailsRef.current && scrollToChild(
-      thumbnailsRef.current,
-      thumbnailsRef.current.children[currentIndex] as HTMLElement
-    );
+    thumbnailsRef.current &&
+      scrollToChild(
+        thumbnailsRef.current,
+        thumbnailsRef.current.children[currentIndex] as HTMLElement,
+      );
   }, [currentIndex]);
 
   return (
-    <Modal
-      size='fullscreen'
-      onClose={onClose}
-      {...{ withScrollDisable, scrollDisableOptions }}
-    >
+    <Modal size='fullscreen' onClose={onClose} {...{ withScrollDisable, scrollDisableOptions }}>
       <Modal.Header onClose={onClose} />
       <Modal.Body>
         <DesktopLayout className={cx('root')} style={innerStyles}>
@@ -104,10 +101,10 @@ export const GalleryModal = ({
                   type={item.type}
                   checked={index === currentIndex}
                   onClick={() => setCurrent(index)}
-                  {...item.type === 'image' && {
+                  {...(item.type === 'image' && {
                     src: item.data.thumbnailSrc,
                     alt: item.data.alt || '',
-                  }}
+                  })}
                 />
               ))}
             </div>
@@ -154,8 +151,11 @@ export const GalleryModal = ({
   );
 };
 
-const Media = ({ onVideoEvent, ...media }: MediaData & {
-  onVideoEvent?: (event: React.SyntheticEvent<HTMLVideoElement>) => void
+const Media = ({
+  onVideoEvent,
+  ...media
+}: MediaData & {
+  onVideoEvent?: (event: React.SyntheticEvent<HTMLVideoElement>) => void;
 }) => (
   <div className={cx('media')}>
     {media.type === 'image' && (
@@ -175,8 +175,6 @@ const Media = ({ onVideoEvent, ...media }: MediaData & {
         <source src={media.data.src} />
       </video>
     )}
-    {media.type === '360' && (
-      <AllRoundView photos={media.data.photos} />
-    )}
+    {media.type === '360' && <AllRoundView photos={media.data.photos} />}
   </div>
 );

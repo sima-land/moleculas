@@ -10,7 +10,7 @@ describe('ImageOverlay', () => {
     const wrapper = mount(
       <ImageOverlay className='test-class' id='test-id' onClick={spy}>
         <img src='https://images.com/2' />
-      </ImageOverlay>
+      </ImageOverlay>,
     );
 
     expect(wrapper).toMatchSnapshot();

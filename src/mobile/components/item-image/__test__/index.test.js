@@ -22,22 +22,23 @@ describe('<ItemImage />', () => {
   });
   it('should render badges', () => {
     const wrapper = mount(
-      <ItemImage badges={[
-        {
-          bgColor: '#b52ea8',
-          fields: [
-            {
-              type: 'text',
-              value: '-36%',
-            },
-          ],
-          link: '/percent/',
-          strokeColor: null,
-          textColor: '#f2f2f2',
-          title: null,
-        },
-      ]}
-      />
+      <ItemImage
+        badges={[
+          {
+            bgColor: '#b52ea8',
+            fields: [
+              {
+                type: 'text',
+                value: '-36%',
+              },
+            ],
+            link: '/percent/',
+            strokeColor: null,
+            textColor: '#f2f2f2',
+            title: null,
+          },
+        ]}
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -50,13 +51,15 @@ describe('<ItemImage />', () => {
     // eslint-disable-next-line require-jsdoc
     class Wrp extends Component {
       // eslint-disable-next-line require-jsdoc
-      render () { return (
-        <div>{this.props.children}</div>
-      );}
+      render() {
+        return <div>{this.props.children}</div>;
+      }
     }
     const spy = jest.fn();
     const wrapper = mount(
-      <Wrp><ItemImage onLoadImage={spy} src='https://via.placeholder.com/350x150' /></Wrp>
+      <Wrp>
+        <ItemImage onLoadImage={spy} src='https://via.placeholder.com/350x150' />
+      </Wrp>,
     );
     act(() => {
       document.querySelector('.image')?.load();

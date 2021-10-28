@@ -224,7 +224,8 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
                               <span
                                 className="contacts-item"
                               >
-                                Соц. сети: 
+                                Соц. сети:
+                                 
                                 <ForwardRef(Link)
                                   className="inline"
                                   color="gray87"

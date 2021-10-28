@@ -41,11 +41,7 @@ export const Primary = () => (
     />
     <br />
     <h3>Тип &quot;color&quot;:</h3>
-    <ModifiersWidget
-      title='Цвет'
-      items={items.colorItems}
-      onSelectItem={action('item selected')}
-    />
+    <ModifiersWidget title='Цвет' items={items.colorItems} onSelectItem={action('item selected')} />
     <br />
     <h3>Тип &quot;image&quot;, в узком блоке:</h3>
     <div style={{ width: 160, marginBottom: 40, padding: 20, border: '1px dashed #ccc' }}>

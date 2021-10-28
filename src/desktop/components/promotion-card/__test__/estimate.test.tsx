@@ -23,9 +23,7 @@ describe('<Estimate />', () => {
     ];
 
     variants.forEach(variant => {
-      const wrapper = mount(
-        <Estimate {...variant} />
-      );
+      const wrapper = mount(<Estimate {...variant} />);
 
       expect(wrapper).toMatchSnapshot();
     });

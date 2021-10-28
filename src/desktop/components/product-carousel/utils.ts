@@ -10,7 +10,7 @@ import on from '@sima-land/ui-nucleons/helpers/on';
 export const useViewport = (
   ref: React.MutableRefObject<HTMLElement | null>,
   callback?: () => void,
-  options?: IntersectionObserverInit
+  options?: IntersectionObserverInit,
 ) => {
   useEffect(() => {
     const element = ref.current;
@@ -43,7 +43,7 @@ export const useAllowFlag = () => {
   const disallowFor = useCallback(timeout => {
     window.clearTimeout(timerIdRef.current);
     ref.current = false;
-    timerIdRef.current = window.setTimeout(() => ref.current = true, timeout);
+    timerIdRef.current = window.setTimeout(() => (ref.current = true), timeout);
   }, []);
 
   const controlRef = useRef({ allowed, disallowFor });
@@ -61,7 +61,7 @@ export const useAllowFlag = () => {
 export const useChildWidth = (
   ref: React.RefObject<HTMLElement | null>,
   selector: string,
-  deps?: React.DependencyList
+  deps?: React.DependencyList,
 ) => {
   const [itemWidth, setItemWidth] = useState<number | null>(null);
 

@@ -47,11 +47,7 @@ describe('<ModifierItem />', () => {
   });
   it('should render correctly with additionalText and selected', () => {
     const wrapper = shallow(
-      <ModifierItem
-        {...modifier}
-        additionalText='В корзине 5 шт'
-        selected
-      />
+      <ModifierItem {...modifier} additionalText='В корзине 5 шт' selected />,
     );
     expect(wrapper.find(Text).props()).toEqual({
       children: 'В корзине 5 шт',
@@ -65,12 +61,7 @@ describe('<ModifierItem />', () => {
   });
   it('should calls onClick correctly', () => {
     const onClick = jest.fn();
-    const wrapper = shallow(
-      <ModifierItem
-        {...modifier}
-        onClick={onClick}
-      />
-    );
+    const wrapper = shallow(<ModifierItem {...modifier} onClick={onClick} />);
     expect(onClick).not.toHaveBeenCalled();
     wrapper.simulate('click');
     expect(onClick).toHaveBeenCalledTimes(1);

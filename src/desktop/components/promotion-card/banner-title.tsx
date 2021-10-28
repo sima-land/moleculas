@@ -5,9 +5,9 @@ import { formatISO } from 'date-fns';
 import styles from './banner-title.module.scss';
 
 export interface BannerTitleProps {
-  promotionType: PromotionType
-  volumeDiscount?: number
-  dueDate?: Date
+  promotionType: PromotionType;
+  volumeDiscount?: number;
+  dueDate?: Date;
 }
 
 export const BannerTitle = ({ promotionType, volumeDiscount, dueDate }: BannerTitleProps) => {
@@ -19,9 +19,7 @@ export const BannerTitle = ({ promotionType, volumeDiscount, dueDate }: BannerTi
       break;
     case 'special':
       if (dueDate) {
-        content = (
-          <CustomTimer dueDate={dueDate} />
-        );
+        content = <CustomTimer dueDate={dueDate} />;
       }
       break;
     case 'volume-discount':
@@ -36,9 +34,7 @@ export const BannerTitle = ({ promotionType, volumeDiscount, dueDate }: BannerTi
       break;
   }
 
-  return (
-    <>{content}</>
-  );
+  return <>{content}</>;
 };
 
 export const CustomTimer = ({ dueDate }: { dueDate: Date }) => (
@@ -57,13 +53,11 @@ export const CustomTimer = ({ dueDate }: { dueDate: Date }) => (
   />
 );
 
-const TimerPart = ({ label, value }: { label: string, value: number }) => (
+const TimerPart = ({ label, value }: { label: string; value: number }) => (
   <div className={styles.part}>
     <div>{`${value}`.padStart(2, '0')}</div>
     <div className={styles.label}>{label}</div>
   </div>
 );
 
-const Divider = () => (
-  <div className={styles.divider}>:</div>
-);
+const Divider = () => <div className={styles.divider}>:</div>;

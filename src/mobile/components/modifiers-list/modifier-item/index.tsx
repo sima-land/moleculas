@@ -7,15 +7,15 @@ import { Text } from '@sima-land/ui-nucleons/text';
 import CheckSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/check';
 
 export interface ModifierItemProps {
-  name: string
-  selected?: boolean
-  type?: 'text'|'image'|'color'
-  color?: string
-  image?: string
-  price: number
-  currencyGrapheme?: string
-  additionalText?: string
-  onClick: React.MouseEventHandler<HTMLDivElement>
+  name: string;
+  selected?: boolean;
+  type?: 'text' | 'image' | 'color';
+  color?: string;
+  image?: string;
+  price: number;
+  currencyGrapheme?: string;
+  additionalText?: string;
+  onClick: React.MouseEventHandler<HTMLDivElement>;
 }
 
 export const cx = classnames.bind(classes);
@@ -45,22 +45,12 @@ export const ModifierItem = ({
   additionalText,
   onClick,
 }: ModifierItemProps) => (
-  <div
-    onClick={onClick}
-    className={cx('wrapper', selected && 'selected')}
-  >
+  <div onClick={onClick} className={cx('wrapper', selected && 'selected')}>
     {Boolean(type === MODIFIERS_TYPES.image && image) && (
-      <img
-        className={cx('adornment')}
-        src={image}
-        alt={name}
-      />
+      <img className={cx('adornment')} src={image} alt={name} />
     )}
     {Boolean(type === MODIFIERS_TYPES.color && color) && (
-      <div
-        className={cx('adornment', 'color')}
-        style={{ backgroundColor: color }}
-      />
+      <div className={cx('adornment', 'color')} style={{ backgroundColor: color }} />
     )}
     <div className={cx('info')}>
       <span className={cx('name')}>{name}</span>
@@ -72,21 +62,13 @@ export const ModifierItem = ({
         />
       )}
       {Boolean(additionalText) && (
-        <Text
-          color='gray38'
-          children={additionalText}
-          size={12}
-          lineHeight={16}
-        />
+        <Text color='gray38' children={additionalText} size={12} lineHeight={16} />
       )}
     </div>
     <div className={cx('icon-wrapper')}>
       {selected && (
         <div className={cx('icon')}>
-          <CheckSVG
-            fill='#fff'
-            role='presentation'
-          />
+          <CheckSVG fill='#fff' role='presentation' />
         </div>
       )}
     </div>

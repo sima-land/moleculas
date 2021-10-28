@@ -1,6 +1,6 @@
 import React, { Component, createRef } from 'react';
 import { Link } from '@sima-land/ui-nucleons/link';
-import isFunction from 'lodash/isFunction';
+import { isFunction } from 'lodash';
 import styles from './item-image.module.scss';
 import classnames from 'classnames/bind';
 import { BadgeList } from '../../../common/components/badge-list';
@@ -9,21 +9,21 @@ import { WishButton } from '../../../common/components/wish-button';
 import { BadgeProps } from '../../../common/components/badge';
 
 export interface ItemImageProps {
-  src?: string
-  alt?: string
-  hasWishButton?: boolean
+  src?: string;
+  alt?: string;
+  hasWishButton?: boolean;
   wishProps?: {
-    isWished?: boolean
-    className?: string
-    onClick?: React.MouseEventHandler
-  }
-  className?: string
-  onClick: React.MouseEventHandler
-  badges: BadgeProps[]
-  withBlur?: boolean
-  itemUrl?: string
-  isFetchingWishItems?: boolean
-  onLoadImage: (duration: number) => void
+    isWished?: boolean;
+    className?: string;
+    onClick?: React.MouseEventHandler;
+  };
+  className?: string;
+  onClick: React.MouseEventHandler;
+  badges: BadgeProps[];
+  withBlur?: boolean;
+  itemUrl?: string;
+  isFetchingWishItems?: boolean;
+  onLoadImage: (duration: number) => void;
 }
 
 const cx = classnames.bind(styles);
@@ -47,7 +47,7 @@ export default class ItemImage extends Component<ItemImageProps> {
   /**
    * @inheritdoc
    */
-  constructor (props: any) {
+  constructor(props: any) {
     super(props);
     this.image = createRef();
     this.bootStartTime = Date.now();
@@ -56,7 +56,7 @@ export default class ItemImage extends Component<ItemImageProps> {
   /**
    * @inheritdoc
    */
-  componentDidMount () {
+  componentDidMount() {
     const img = this.image.current;
     const { onLoadImage } = this.props;
 
@@ -73,23 +73,14 @@ export default class ItemImage extends Component<ItemImageProps> {
    * @param {Function} onClick Колбэк на клик по изображению.
    * @return {Object} Свойства для компонента.
    */
-  getImage = ({
-    src,
-    alt,
-  }: any, onClick: any) => (
-    <img
-      className={cx('image')}
-      src={src}
-      alt={alt}
-      ref={this.image}
-      onClick={onClick}
-    />
+  getImage = ({ src, alt }: any, onClick: any) => (
+    <img className={cx('image')} src={src} alt={alt} ref={this.image} onClick={onClick} />
   );
 
   /**
    * @inheritdoc
    */
-  render () {
+  render() {
     const {
       src,
       alt,
@@ -111,10 +102,14 @@ export default class ItemImage extends Component<ItemImageProps> {
         )}
         <div className={cx('image-wrapper')}>
           <Link href={itemUrl}>
-            {withBlur
-              ? (<div className={cx('with-filter-blur')} children={this.getImage({ src, alt }, onClick)} />)
-              : this.getImage({ src, alt }, onClick)
-            }
+            {withBlur ? (
+              <div
+                className={cx('with-filter-blur')}
+                children={this.getImage({ src, alt }, onClick)}
+              />
+            ) : (
+              this.getImage({ src, alt }, onClick)
+            )}
           </Link>
         </div>
         {Array.isArray(badges) && Boolean(badges.length) && !withBlur && (

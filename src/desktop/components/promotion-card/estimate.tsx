@@ -2,7 +2,7 @@ import React from 'react';
 import { getMonth, getDate, getYear } from 'date-fns';
 
 export interface EstimateProps {
-  dueDate: Date
+  dueDate: Date;
 }
 
 const MONTH_SHORT_NAME = [
@@ -28,16 +28,12 @@ export const Estimate = ({ dueDate }: EstimateProps) => {
   let content: React.ReactNode = null;
 
   if (getYear(dueDate) !== getYear(now)) {
-    const text = [getDate, getMonth, getYear]
-      .map(fn => toTimePart(fn(dueDate)))
-      .join('.');
+    const text = [getDate, getMonth, getYear].map(fn => toTimePart(fn(dueDate))).join('.');
 
     content = `До ${text}`;
   } else {
     content = `До ${getDate(dueDate)} ${MONTH_SHORT_NAME[getMonth(dueDate)]}`;
   }
 
-  return (
-    <>{content}</>
-  );
+  return <>{content}</>;
 };

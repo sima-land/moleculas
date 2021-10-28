@@ -6,9 +6,7 @@ import { data } from '../../__mocks__';
 
 describe('GalleryModal', () => {
   it('should renders', () => {
-    const wrapper = mount(
-      <GalleryModal media={data.media} />
-    );
+    const wrapper = mount(<GalleryModal media={data.media} />);
 
     expect(wrapper).toMatchSnapshot();
   });
@@ -17,10 +15,7 @@ describe('GalleryModal', () => {
     const spy = jest.fn();
 
     const wrapper = mount(
-      <GalleryModal
-        media={data.media.filter(item => item.type === 'video')}
-        onVideoEvent={spy}
-      />
+      <GalleryModal media={data.media.filter(item => item.type === 'video')} onVideoEvent={spy} />,
     );
 
     expect(spy).toBeCalledTimes(0);
@@ -55,28 +50,28 @@ describe('GalleryModal', () => {
 
   it('should handle video events without callback', () => {
     const wrapper = mount(
-      <GalleryModal
-        media={data.media.filter(item => item.type === 'video')}
-      />
+      <GalleryModal media={data.media.filter(item => item.type === 'video')} />,
     );
 
-    // play
-    act(() => {
-      wrapper.find('video').simulate('play');
-    });
-    wrapper.update();
+    expect(() => {
+      // play
+      act(() => {
+        wrapper.find('video').simulate('play');
+      });
+      wrapper.update();
 
-    // pause
-    act(() => {
-      wrapper.find('video').simulate('pause');
-    });
-    wrapper.update();
+      // pause
+      act(() => {
+        wrapper.find('video').simulate('pause');
+      });
+      wrapper.update();
 
-    // ended
-    act(() => {
-      wrapper.find('video').simulate('ended');
-    });
-    wrapper.update();
+      // ended
+      act(() => {
+        wrapper.find('video').simulate('ended');
+      });
+      wrapper.update();
+    }).not.toThrow();
   });
 
   it('should renders with review footer', () => {
@@ -91,7 +86,7 @@ describe('GalleryModal', () => {
         }}
         onGoToReview={jest.fn()}
         onMediaChange={spy}
-      />
+      />,
     );
 
     expect(wrapper).toMatchSnapshot();
@@ -136,7 +131,7 @@ describe('GalleryModal', () => {
           author: 'Пелагеевская Вероника Сергеевна',
         }}
         onGoToReview={jest.fn()}
-      />
+      />,
     );
 
     expect(wrapper).toMatchSnapshot();
@@ -149,7 +144,7 @@ describe('GalleryModal', () => {
           { type: 'image', data: { src: 'https://img.com/1' } },
           { type: 'image', data: { src: 'https://img.com/2' } },
         ]}
-      />
+      />,
     );
 
     expect(wrapper).toMatchSnapshot();
