@@ -16,7 +16,7 @@ describe('ProductActionsContent', () => {
         alertProps={{
           title: 'title',
         }}
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -30,7 +30,7 @@ describe('ProductActionsContent', () => {
           { text: 'text' },
         ]}
         onClose={onClose}
-      />
+      />,
     );
     expect(onClose).not.toHaveBeenCalled();
     wrapper.find('CleanButton').at(0).simulate('click');

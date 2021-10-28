@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { ProductRow } from '..';
-import noop from 'lodash/noop';
+import { noop } from 'lodash';
 
 describe('ProductRow', () => {
   const item = {

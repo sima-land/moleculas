@@ -11,7 +11,9 @@ describe('useViewport', () => {
     useViewport(ref, callback);
 
     return (
-      <div ref={ref} className='test-block'>Test</div>
+      <div ref={ref} className='test-block'>
+        Test
+      </div>
     );
   };
 
@@ -31,7 +33,7 @@ describe('useViewport', () => {
   const FakeIntersectionObserver = {
     instances: [] as Array<any>,
 
-    dispatchAll (commons: any) {
+    dispatchAll(commons: any) {
       this.instances.forEach(instance => {
         instance.callback(instance.entries.map((e: any) => ({ ...e, ...commons })));
       });
@@ -44,14 +46,14 @@ describe('useViewport', () => {
       callback: () => void;
       disconnect: jest.Mock;
 
-      constructor (callback: () => void) {
+      constructor(callback: () => void) {
         this.entries = [];
         FakeIntersectionObserver.instances.push(this);
         this.callback = callback;
         this.disconnect = jest.fn();
       }
 
-      observe (target: any) {
+      observe(target: any) {
         this.entries.push({ target });
       }
     };
@@ -92,14 +94,8 @@ describe('useAllowFlag', () => {
 
     return (
       <>
-        <div
-          className='test-one'
-          onClick={() => flag.allowed() && callback()}
-        />
-        <div
-          className='test-two'
-          onClick={() => flag.disallowFor(500)}
-        />
+        <div className='test-one' onClick={() => flag.allowed() && callback()} />
+        <div className='test-two' onClick={() => flag.disallowFor(500)} />
       </>
     );
   };

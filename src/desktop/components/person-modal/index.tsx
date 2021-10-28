@@ -10,48 +10,47 @@ import { Modal, ModalProps } from '@sima-land/ui-nucleons/modal';
 import { useKeydown } from '@sima-land/ui-nucleons/hooks/keydown';
 
 export interface PersonModalProps {
-
   /** Имя. */
-  name: string
+  name: string;
 
   /** Должность. */
-  appointment: string
+  appointment: string;
 
   /** Ссылка на фото. */
-  photoUrl?: string
+  photoUrl?: string;
 
   /** Почта. */
-  email?: string
+  email?: string;
 
   /** Skype. */
-  skype?: string
+  skype?: string;
 
   /** Социальные сети. */
-  social?: any[]
+  social?: any[];
 
   /** Ссылка на рабочий номер телефона. */
-  phoneHref?: string
+  phoneHref?: string;
 
   /** Рабочий номер телефона. */
-  phoneText?: string
+  phoneText?: string;
 
   /** Ссылка на сотовый номер телефона. */
-  secondPhoneHref?: string
+  secondPhoneHref?: string;
 
   /** Сотовый номер телефона. */
-  secondPhoneText?: string
+  secondPhoneText?: string;
 
   /** Свойства ссылки под именем. */
-  arbitraryLinkProps?: any
+  arbitraryLinkProps?: any;
 
   /** Сработает при нажатии на кнопку "Закрыть". */
-  onClose: () => void
+  onClose: () => void;
 
   /** Нужно ли блокировать прокрутку пока открыто окно. */
-  withScrollDisable?: ModalProps['withScrollDisable']
+  withScrollDisable?: ModalProps['withScrollDisable'];
 
   /** Опции блокировки прокрутки. */
-  scrollDisableOptions?: ModalProps['scrollDisableOptions']
+  scrollDisableOptions?: ModalProps['scrollDisableOptions'];
 }
 
 const cx = classnames.bind(classes);
@@ -89,20 +88,16 @@ export const PersonModal = ({
       <Modal.Body>
         <div className={cx('main')}>
           <Box marginBottom={6}>
-            <UserAvatar
-              title={name}
-              imageUrl={photoUrl}
-              size={104}
-            />
+            <UserAvatar title={name} imageUrl={photoUrl} size={104} />
           </Box>
 
           <Box marginBottom={1}>
-            <Text color='gray38' size={14} weight={400}>{appointment}</Text>
+            <Text color='gray38' size={14} weight={400}>
+              {appointment}
+            </Text>
           </Box>
 
-          <div className={cx('name')}>
-            {name}
-          </div>
+          <div className={cx('name')}>{name}</div>
 
           {arbitraryLinkProps && (
             <Box marginTop={2}>
@@ -116,16 +111,13 @@ export const PersonModal = ({
             {email && (
               <span className={cx('contacts-item')}>
                 {'Email: '}
-                <Link
-                  color='gray87'
-                  href={`mailto:${email}`}
-                  children={email}
-                />
+                <Link color='gray87' href={`mailto:${email}`} children={email} />
               </span>
             )}
             {Array.isArray(social) && social.length > 0 && (
               <span className={cx('contacts-item')}>
-              Соц. сети: {social.map((props, key) => (
+                Соц. сети:{' '}
+                {social.map((props, key) => (
                   <Link
                     className={cx('inline')}
                     key={key}
@@ -140,29 +132,17 @@ export const PersonModal = ({
             {skype && (
               <span className={cx('contacts-item')}>
                 {'Skype: '}
-                <Link
-                  color='gray87'
-                  href={`skype:${skype}`}
-                  children={skype}
-                />
+                <Link color='gray87' href={`skype:${skype}`} children={skype} />
               </span>
             )}
             {phoneText && (
               <span className={cx('contacts-item')}>
-                <Link
-                  color='gray87'
-                  href={phoneHref}
-                  children={phoneText}
-                />
+                <Link color='gray87' href={phoneHref} children={phoneText} />
               </span>
             )}
             {secondPhoneText && (
               <span className={cx('contacts-item')}>
-                <Link
-                  color='gray87'
-                  href={secondPhoneHref}
-                  children={secondPhoneText}
-                />
+                <Link color='gray87' href={secondPhoneHref} children={secondPhoneText} />
               </span>
             )}
           </div>

@@ -5,7 +5,6 @@ import { TouchSlider } from '@sima-land/ui-nucleons/touch-slider';
 import { SliderContext } from './utils';
 
 export interface ProductSliderProps {
-
   /** Товары. */
   children?: React.ReactNode;
 
@@ -18,7 +17,7 @@ export interface ProductSliderProps {
 
 export interface ProductSliderComponent {
   (props: ProductSliderProps): JSX.Element;
-  Item: typeof ProductSliderItem
+  Item: typeof ProductSliderItem;
 }
 
 /**
@@ -49,7 +48,9 @@ export const ProductSlider: ProductSliderComponent = ({
     <div ref={rootRef}>
       <TouchSlider>
         <SliderContext.Provider value={{ needLoadImages: mounted }}>
-          {Children.toArray(children).filter(x => isValidElement(x) && x.type === ProductSliderItem)}
+          {Children.toArray(children).filter(
+            x => isValidElement(x) && x.type === ProductSliderItem,
+          )}
         </SliderContext.Provider>
       </TouchSlider>
     </div>

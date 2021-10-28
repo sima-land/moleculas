@@ -77,9 +77,7 @@ export const ItemFooter = () => (
           onFavoriteClick={() => {
             action('item:favorite-click')(item.name);
           }}
-          footer={(
-            <Button size='s'>В корзину</Button>
-          )}
+          footer={<Button size='s'>В корзину</Button>}
         />
       ))}
     </ProductSlider>

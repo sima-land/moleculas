@@ -10,12 +10,7 @@ describe('<AdultBlock />', () => {
   });
   it('should render with props', () => {
     const onClick = jest.fn();
-    const wrapper = mount(
-      <AdultBlock
-        isAuthUser
-        onClick={onClick}
-      />
-    );
+    const wrapper = mount(<AdultBlock isAuthUser onClick={onClick} />);
     expect(wrapper).toMatchSnapshot();
     wrapper.find(Link).at(0).prop('onClick')();
     expect(onClick).toHaveBeenCalledTimes(1);

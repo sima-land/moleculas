@@ -16,7 +16,6 @@ interface ItemSize {
 }
 
 export interface ProductCarouselProps {
-
   /** CSS-класс для корневого элемента. */
   className?: string;
 
@@ -36,7 +35,8 @@ export interface ProductCarouselProps {
   withHoverCard?: boolean;
 }
 
-type CarouselItemProps = ProductInfoProps & Pick<HoverCardProps, 'renderCartControl' | 'onQuickViewClick'>;
+type CarouselItemProps = ProductInfoProps &
+  Pick<HoverCardProps, 'renderCartControl' | 'onQuickViewClick'>;
 
 const cx = classnames.bind(styles);
 
@@ -91,57 +91,50 @@ export const ProductCarousel = ({
   // отправляем статистку, когда компонент попадает в зону видимости
   useViewport(sectionRef, onInViewport);
 
-  return Array.isArray(items) && items.length > 0
-    ? (
-      <div ref={sectionRef} className={cx('root', className)}>
-        <Carousel
-          step={3}
-          draggable={false}
-
-          // докидываем индекс чтобы позже брать актуальные данные из списка по нему
-          items={items.map((item, index) => [item, index])}
-
-          {...(itemWidth !== null && {
-            withControls: true,
-            controlProps: {
-              size: needBigArrows ? 'l' : 's',
-              style: {
-                zIndex: 1,
-                top: `${itemWidth / 2}px`,
-              },
+  return Array.isArray(items) && items.length > 0 ? (
+    <div ref={sectionRef} className={cx('root', className)}>
+      <Carousel
+        step={3}
+        draggable={false}
+        // докидываем индекс чтобы позже брать актуальные данные из списка по нему
+        items={items.map((item, index) => [item, index])}
+        {...(itemWidth !== null && {
+          withControls: true,
+          controlProps: {
+            size: needBigArrows ? 'l' : 's',
+            style: {
+              zIndex: 1,
+              top: `${itemWidth / 2}px`,
             },
-          })}
+          },
+        })}
+        renderItem={([item, index]: [CarouselItemProps, number]) => (
+          <div
+            data-testid='product-carousel:item'
+            className={cx('item', getSizeClasses(itemSize))}
+            onMouseEnter={e => {
+              if (cardShow.allowed()) {
+                targetItemRef.current = e.currentTarget;
+                setActiveItemIndex(index);
+              }
+            }}
+          >
+            <ProductInfo data={item.data} onLinkClick={item.onLinkClick} />
+          </div>
+        )}
+        // длительность прокрутки в Carousel - 320, делаем слегка с запасом
+        // @todo после восстановления проверить позицию курсора чтобы показать карточку (если будет критично)
+        onChangeTargetIndex={() => cardShow.disallowFor(360)}
+      />
 
-          renderItem={([item, index]: [CarouselItemProps, number]) => (
-            <div
-              data-testid='product-carousel:item'
-              className={cx('item', getSizeClasses(itemSize))}
-              onMouseEnter={e => {
-                if (cardShow.allowed()) {
-                  targetItemRef.current = e.currentTarget;
-                  setActiveItemIndex(index);
-                }
-              }}
-            >
-              <ProductInfo
-                data={item.data}
-                onLinkClick={item.onLinkClick}
-              />
-            </div>
-          )}
-
-          // длительность прокрутки в Carousel - 320, делаем слегка с запасом
-          // @todo после восстановления проверить позицию курсора чтобы показать карточку (если будет критично)
-          onChangeTargetIndex={() => cardShow.disallowFor(360)}
-        />
-
-        {/* ВАЖНО: чтобы размонтировать всплывающую карточку строго каждый раз используем массив и key */}
-        {withHoverCard && activeItemIndex !== null && [items[activeItemIndex]].map(item => (
+      {/* ВАЖНО: чтобы размонтировать всплывающую карточку строго каждый раз используем массив и key */}
+      {withHoverCard &&
+        activeItemIndex !== null &&
+        [items[activeItemIndex]].map(item => (
           <HoverCard
             key={activeItemIndex}
             targetRef={targetItemRef}
             onMouseLeave={() => setActiveItemIndex(null)}
-
             // данные элемента карусели
             data={item.data}
             onLinkClick={item.onLinkClick}
@@ -149,10 +142,10 @@ export const ProductCarousel = ({
             renderCartControl={item.renderCartControl}
           />
         ))}
-      </div>
-    ) : (
-      <div ref={stubRef} />
-    );
+    </div>
+  ) : (
+    <div ref={stubRef} />
+  );
 };
 
 ProductCarousel.Item = Item;

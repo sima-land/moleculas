@@ -6,12 +6,11 @@ import { ProductInfo, ProductInfoProps } from '../../../common/components/produc
 import styles from './item.module.scss';
 
 export interface ProductSliderItemProps extends ProductInfoProps {
-
   /** Обработчик клика по товару. */
-  onLinkClick?: React.MouseEventHandler<HTMLAnchorElement>
+  onLinkClick?: React.MouseEventHandler<HTMLAnchorElement>;
 
   /** Сработает при клике на сердечко. */
-  onFavoriteClick?: React.MouseEventHandler<SVGSVGElement>
+  onFavoriteClick?: React.MouseEventHandler<SVGSVGElement>;
 
   /** Должна вернуть содержимое для футера. */
   footer?: React.ReactNode;
@@ -51,9 +50,7 @@ export const ProductSliderItem = ({
         </ProductInfo.OnImage>
       </ProductInfo>
 
-      {footer && (
-        <div className={cx('footer')}>{footer}</div>
-      )}
+      {footer && <div className={cx('footer')}>{footer}</div>}
     </div>
   );
 };

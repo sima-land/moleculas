@@ -7,16 +7,12 @@ const items: BadgeProps[] = [
   {
     href: 'https://sima-land.ru',
     color: '#002b41',
-    fields: [
-      { type: 'text', value: 'Товар партнёра' },
-    ],
+    fields: [{ type: 'text', value: 'Товар партнёра' }],
   },
   {
     color: '#00b8d4',
     href: 'https://sima-land.ru',
-    fields: [
-      { type: 'text', value: 'Система скидок' },
-    ],
+    fields: [{ type: 'text', value: 'Система скидок' }],
   },
   {
     color: '#b52ea8',
@@ -44,9 +40,7 @@ export default {
 const DemoBlock = ({ children }: { children: React.ReactNode }) => (
   <div style={{ display: 'flex' }}>
     <div style={{ border: '20px solid #ddd', marginBottom: '16px' }}>
-      <div style={{ maxWidth: '196px' }}>
-        {children}
-      </div>
+      <div style={{ maxWidth: '196px' }}>{children}</div>
     </div>
   </div>
 );
@@ -54,24 +48,15 @@ const DemoBlock = ({ children }: { children: React.ReactNode }) => (
 export const Primary = () => (
   <>
     <DemoBlock>
-      <BadgeList
-        lineLimit={3}
-        items={items}
-      />
+      <BadgeList lineLimit={3} items={items} />
     </DemoBlock>
 
     <DemoBlock>
-      <BadgeList
-        lineLimit={2}
-        items={items}
-      />
+      <BadgeList lineLimit={2} items={items} />
     </DemoBlock>
 
     <DemoBlock>
-      <BadgeList
-        lineLimit={1}
-        items={items}
-      />
+      <BadgeList lineLimit={1} items={items} />
     </DemoBlock>
   </>
 );

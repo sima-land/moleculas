@@ -17,11 +17,13 @@ describe('<HoverCard />', () => {
         }}
         targetRef={createRef()}
         onQuickViewClick={jest.fn()}
-      />
+      />,
     );
 
     expect(wrapper).toMatchSnapshot();
-    expect(wrapper.find('div[data-testid="product-carousel:hover-card"]').hasClass('hidden')).toBe(true);
+    expect(wrapper.find('div[data-testid="product-carousel:hover-card"]').hasClass('hidden')).toBe(
+      true,
+    );
   });
 
   it('should handle "onLinkClick" prop', () => {
@@ -39,7 +41,7 @@ describe('<HoverCard />', () => {
         }}
         targetRef={createRef()}
         onLinkClick={spy}
-      />
+      />,
     );
 
     expect(spy).toBeCalledTimes(0);
@@ -80,17 +82,15 @@ describe('<HoverCard />', () => {
       <>
         <div ref={targetRef}>Target</div>
 
-        <HoverCard
-          data={itemInfo}
-          targetRef={targetRef}
-          onQuickViewClick={spy}
-        />
-      </>
+        <HoverCard data={itemInfo} targetRef={targetRef} onQuickViewClick={spy} />
+      </>,
     );
 
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.find('a[data-testid="product-info:name-link"]').text()).toBe(itemInfo.name);
-    expect(wrapper.find('div[data-testid="product-carousel:hover-card"]').hasClass('hidden')).toBe(false);
+    expect(wrapper.find('div[data-testid="product-carousel:hover-card"]').hasClass('hidden')).toBe(
+      false,
+    );
   });
 
   it('should handle mouseleave', () => {
@@ -111,12 +111,8 @@ describe('<HoverCard />', () => {
       <>
         <div ref={targetRef}>Target</div>
 
-        <HoverCard
-          data={productInfo}
-          targetRef={targetRef}
-          onMouseLeave={spy}
-        />
-      </>
+        <HoverCard data={productInfo} targetRef={targetRef} onMouseLeave={spy} />
+      </>,
     );
 
     expect(spy).toBeCalledTimes(0);
@@ -147,12 +143,8 @@ describe('<HoverCard />', () => {
       <>
         <div ref={targetRef}>Target</div>
 
-        <HoverCard
-          data={productInfo}
-          targetRef={targetRef}
-          onQuickViewClick={spy}
-        />
-      </>
+        <HoverCard data={productInfo} targetRef={targetRef} onQuickViewClick={spy} />
+      </>,
     );
 
     expect(spy).toBeCalledTimes(0);
@@ -188,7 +180,7 @@ describe('<HoverCard />', () => {
             </Slot>
           )}
         />
-      </>
+      </>,
     );
 
     expect(wrapper).toMatchSnapshot();

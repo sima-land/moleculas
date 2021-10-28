@@ -5,8 +5,8 @@ import styles from './pseudo-input.module.scss';
 import { COLORS } from '@sima-land/ui-nucleons/colors';
 
 export interface Props {
-  text?: string
-  onClick?: React.MouseEventHandler<HTMLDivElement>
+  text?: string;
+  onClick?: React.MouseEventHandler<HTMLDivElement>;
 }
 
 const cx = classnames.bind(styles);

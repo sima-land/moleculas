@@ -17,7 +17,7 @@ describe('<ModifiersWidget />', () => {
         ]}
         sizesTableUrl='sima-land.ru'
         onSelectItem={onSelectItem}
-      />
+      />,
     );
 
     expect(wrapper.find('h3').prop('className')).toEqual('modifiers-title');

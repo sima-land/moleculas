@@ -9,7 +9,7 @@ describe('<ProductSliderItem />', () => {
     const wrapper = mount(
       <SliderContext.Provider value={{ needLoadImages: true }}>
         <ProductSliderItem data={items[0]} />
-      </SliderContext.Provider>
+      </SliderContext.Provider>,
     );
 
     expect(wrapper).toMatchSnapshot();
@@ -18,13 +18,8 @@ describe('<ProductSliderItem />', () => {
   it('should render footer', () => {
     const wrapper = mount(
       <SliderContext.Provider value={{ needLoadImages: true }}>
-        <ProductSliderItem
-          data={items[0]}
-          footer={(
-            <div>Test Footer</div>
-          )}
-        />
-      </SliderContext.Provider>
+        <ProductSliderItem data={items[0]} footer={<div>Test Footer</div>} />
+      </SliderContext.Provider>,
     );
 
     expect(wrapper).toMatchSnapshot();

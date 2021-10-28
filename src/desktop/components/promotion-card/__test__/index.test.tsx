@@ -15,7 +15,7 @@ describe('<PromotionCard />', () => {
         subtitle='Foo, bar, baz...'
         imageSrc='https://www.images.com/123'
         dueDate={new Date()}
-      />
+      />,
     );
 
     expect(wrapper).toMatchSnapshot();
@@ -30,16 +30,14 @@ describe('<PromotionCard />', () => {
         dueDate={new Date()}
         promotionType='volume-discount'
         volumeDiscount={23}
-      />
+      />,
     );
 
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should have placeholder component property', () => {
-    const wrapper = mount(
-      <PromotionCard.Placeholder />
-    );
+    const wrapper = mount(<PromotionCard.Placeholder />);
 
     expect(wrapper).toMatchSnapshot();
   });

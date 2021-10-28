@@ -22,11 +22,7 @@ describe('ProductCard', () => {
 
   it('should renders correctly', () => {
     const { container } = render(
-      <ProductCard
-        style={{ width: '240px' }}
-        data={product}
-        className='test-class'
-      />
+      <ProductCard style={{ width: '240px' }} data={product} className='test-class' />,
     );
 
     expect(container).toMatchSnapshot();
@@ -38,7 +34,7 @@ describe('ProductCard', () => {
         <ProductCard.CartControl stepText='hello' markupText='world'>
           <button>Add to cart</button>
         </ProductCard.CartControl>
-      </ProductCard>
+      </ProductCard>,
     );
 
     expect(container).toMatchSnapshot();
@@ -50,7 +46,7 @@ describe('ProductCard', () => {
         <ProductCard.CartControl loading stepText='hello' markupText='world'>
           <button>Add to cart</button>
         </ProductCard.CartControl>
-      </ProductCard>
+      </ProductCard>,
     );
 
     expect(baseElement).toMatchSnapshot();
@@ -59,12 +55,7 @@ describe('ProductCard', () => {
   it('should handle "onLinkClick" prop', async () => {
     const spy = jest.fn();
 
-    const { findByTestId } = render(
-      <ProductCard
-        data={product}
-        onLinkClick={spy}
-      />
-    );
+    const { findByTestId } = render(<ProductCard data={product} onLinkClick={spy} />);
 
     expect(spy).toBeCalledTimes(0);
 
@@ -80,12 +71,7 @@ describe('ProductCard', () => {
   it('should handle image button click callbacks', () => {
     const spy = jest.fn();
 
-    const { container } = render(
-      <ProductCard
-        data={product}
-        onQuickViewClick={spy}
-      />
-    );
+    const { container } = render(<ProductCard data={product} onQuickViewClick={spy} />);
 
     expect(spy).toBeCalledTimes(0);
 
@@ -95,9 +81,7 @@ describe('ProductCard', () => {
   });
 
   it('should show/hide hint for quick view button', async () => {
-    const { baseElement, findByTestId } = render(
-      <ProductCard data={product} />
-    );
+    const { baseElement, findByTestId } = render(<ProductCard data={product} />);
 
     expect(baseElement.querySelectorAll('[data-testid="hint"]')).toHaveLength(0);
 

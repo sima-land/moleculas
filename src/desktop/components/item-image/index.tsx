@@ -1,7 +1,7 @@
 import React, { Component, createRef } from 'react';
 import { Link } from '@sima-land/ui-nucleons/link';
 import classnames from 'classnames/bind';
-import isFunction from 'lodash/isFunction';
+import { isFunction } from 'lodash';
 import style from './item-image.module.scss';
 import { BadgeList } from '../../../common/components/badge-list';
 import EighteenPlusSVG from '../../../common/icons/eighteen-plus.svg';
@@ -11,26 +11,26 @@ import { QuickViewButton } from '../../../common/components/quick-view-button';
 import TrashCartSVG from '../../../common/icons/trash-cart.svg';
 
 export interface ItemImageProps {
-  alt?: string
-  badges?: any
-  buttonsPos?: string // @todo оказывается это класс, переделать
-  className?: string
-  fakeDivClassName?: any
-  hasQuickPreview?: boolean
-  hasSelectionButton?: boolean
-  hasTrashButton?: boolean
-  hasWishButton?: boolean
-  isFetchingWishItems?: boolean
-  itemUrl?: string
-  onClick?: any
-  onLoadImage?: any
-  photos?: string[]
-  quickViewBtnProps?: any
-  selectionProps?: { onSelect: any, isSelected?: boolean }
-  src?: string
-  trashButtonProps?: any
-  wishProps?: any
-  withBlur?: boolean
+  alt?: string;
+  badges?: any;
+  buttonsPos?: string; // @todo оказывается это класс, переделать
+  className?: string;
+  fakeDivClassName?: any;
+  hasQuickPreview?: boolean;
+  hasSelectionButton?: boolean;
+  hasTrashButton?: boolean;
+  hasWishButton?: boolean;
+  isFetchingWishItems?: boolean;
+  itemUrl?: string;
+  onClick?: any;
+  onLoadImage?: any;
+  photos?: string[];
+  quickViewBtnProps?: any;
+  selectionProps?: { onSelect: any; isSelected?: boolean };
+  src?: string;
+  trashButtonProps?: any;
+  wishProps?: any;
+  withBlur?: boolean;
 }
 
 const cx = classnames.bind(style);
@@ -82,7 +82,7 @@ export default class ItemImage extends Component<ItemImageProps, any> {
   /**
    * @inheritdoc
    */
-  constructor (props: ItemImageProps) {
+  constructor(props: ItemImageProps) {
     super(props);
     this.state = {
       currentPhotoIndex: null,
@@ -95,7 +95,7 @@ export default class ItemImage extends Component<ItemImageProps, any> {
   /**
    * @inheritdoc
    */
-  componentDidMount () {
+  componentDidMount() {
     const img = this.image.current;
 
     const { onLoadImage } = this.props;
@@ -113,23 +113,14 @@ export default class ItemImage extends Component<ItemImageProps, any> {
    * @param {Function} onClick Колбэк на клик по изображению.
    * @return {Object} Свойства для компонента.
    */
-  getImage = ({
-    src,
-    alt,
-  }: any, onClick: any) => (
-    <img
-      className={cx('image')}
-      src={src}
-      alt={alt}
-      ref={this.image}
-      onClick={onClick}
-    />
+  getImage = ({ src, alt }: any, onClick: any) => (
+    <img className={cx('image')} src={src} alt={alt} ref={this.image} onClick={onClick} />
   );
 
   /**
    * @inheritdoc
    */
-  render () {
+  render() {
     const {
       alt,
       className,
@@ -184,14 +175,14 @@ export default class ItemImage extends Component<ItemImageProps, any> {
                 ))}
               </div>
             )}
-            {withBlur
-              ? (
-                <div
-                  className={cx('with-filter-blur')}
-                  children={this.getImage({ src: currentPhoto, alt }, onClick)}
-                />
-              ) : this.getImage({ src: currentPhoto, alt }, onClick)
-            }
+            {withBlur ? (
+              <div
+                className={cx('with-filter-blur')}
+                children={this.getImage({ src: currentPhoto, alt }, onClick)}
+              />
+            ) : (
+              this.getImage({ src: currentPhoto, alt }, onClick)
+            )}
           </Link>
           {hasTrashButton && (
             <TrashCartSVG
@@ -214,12 +205,7 @@ export default class ItemImage extends Component<ItemImageProps, any> {
         {hasWishButton && (
           <WishButton
             checked={wishProps.isWished}
-            className={cx(
-              'icon',
-              buttonsPos,
-              hasTrashButton && 'as-second',
-              wishProps.className
-            )}
+            className={cx('icon', buttonsPos, hasTrashButton && 'as-second', wishProps.className)}
             onClick={wishProps.onClick}
             disabled={isFetchingWishItems}
           />
@@ -231,17 +217,15 @@ export default class ItemImage extends Component<ItemImageProps, any> {
               'icon',
               buttonsPos,
               (hasTrashButton || hasWishButton) && 'as-second',
-              (hasTrashButton && hasWishButton) && 'as-third',
-              quickViewBtnProps.className
+              hasTrashButton && hasWishButton && 'as-third',
+              quickViewBtnProps.className,
             )}
           />
         )}
         {hasSelectionButton && selectionProps && (
           <div onClick={selectionProps.onSelect} className={cx('selection-container')}>
             <div className={cx('selection-circle')}>
-              {selectionProps.isSelected && (
-                <SelectedSVG width={56} height={56} />
-              )}
+              {selectionProps.isSelected && <SelectedSVG width={56} height={56} />}
             </div>
           </div>
         )}

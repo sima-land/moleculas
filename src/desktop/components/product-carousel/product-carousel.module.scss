@@ -4,7 +4,7 @@
 $breakpoints: 'xs', 's', 'm', 'l', 'xl';
 $gutter: 32px;
 
-@mixin sizes ($key) {
+@mixin sizes($key) {
   // в соответствии с гайдами ширина может быть 2/3/4
   @for $i from 2 through 4 {
     .size-#{$key}-#{$i} {

@@ -17,9 +17,7 @@ describe('<WishButton />', () => {
   it('onClick not to have been called if disabled', () => {
     const spy = jest.fn();
 
-    const wrapper = mount(
-      <WishButton onClick={spy} disabled />
-    );
+    const wrapper = mount(<WishButton onClick={spy} disabled />);
     expect(spy).toHaveBeenCalledTimes(0);
 
     wrapper.simulate('click');

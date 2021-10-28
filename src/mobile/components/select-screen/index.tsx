@@ -1,6 +1,5 @@
 import React from 'react';
-import map from 'lodash/map';
-import noop from 'lodash/noop';
+import { map, noop } from 'lodash';
 import prop from 'lodash/fp/prop';
 import { Screen } from '@sima-land/ui-nucleons/screen';
 import { Text } from '@sima-land/ui-nucleons/text';
@@ -10,11 +9,14 @@ import CheckSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/check';
 import styles from './select-screen.module.scss';
 
 export interface SelectScreenProps {
-  items?: any[]
-  getItemName?: (item: any) => string
-  displayItem?: (item: any, options: { getItemName: (i: any) => string, isSelected: boolean }) => React.ReactNode
-  isItemSelected?: (item: any) => boolean | void
-  onItemClick?: (item: any) => void
+  items?: any[];
+  getItemName?: (item: any) => string;
+  displayItem?: (
+    item: any,
+    options: { getItemName: (i: any) => string; isSelected: boolean },
+  ) => React.ReactNode;
+  isItemSelected?: (item: any) => boolean | void;
+  onItemClick?: (item: any) => void;
 }
 
 /**
@@ -48,9 +50,7 @@ const SelectScreen = ({
               onClick={() => onItemClick && onItemClick(item)}
             >
               {displayItem(item, { getItemName, isSelected })}
-              {isSelected && (
-                <CheckSVG fill={COLORS.get('gray87')} />
-              )}
+              {isSelected && <CheckSVG fill={COLORS.get('gray87')} />}
             </button>
           );
         })}
@@ -66,15 +66,8 @@ const SelectScreen = ({
  * @param options.getItemName Вернет имя опции.
  * @return Опция в текстовом виде.
  */
-const displayOption = (item: any, {
-  getItemName,
-}: any) => (
-  <Text
-    size={16}
-    lineHeight={24}
-    color='gray87'
-    children={getItemName(item)}
-  />
+const displayOption = (item: any, { getItemName }: any) => (
+  <Text size={16} lineHeight={24} color='gray87' children={getItemName(item)} />
 );
 
 export default SelectScreen;

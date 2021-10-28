@@ -2,7 +2,7 @@ import { cleanNumString } from '../clean-num-string';
 
 describe('cleanNumString()"', () => {
   it('should parse correctly', () => {
-    const values = new Map ([
+    const values = new Map([
       [null, ''],
       ['', ''],
       ['dfasdf', ''],

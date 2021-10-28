@@ -5,9 +5,7 @@ import SelectScreen from '../index';
 
 describe('<SelectScreen />', () => {
   it('should render without props', () => {
-    const wrapper = mount(
-      <SelectScreen />
-    );
+    const wrapper = mount(<SelectScreen />);
 
     expect(wrapper).toMatchSnapshot();
   });
@@ -30,7 +28,7 @@ describe('<SelectScreen />', () => {
         getItemName={String}
         onItemClick={spy}
         isItemSelected={item => item === 'Кировский'}
-      />
+      />,
     );
 
     expect(wrapper).toMatchSnapshot();
@@ -63,7 +61,7 @@ describe('<SelectScreen />', () => {
             {item.name} ({item.shortName})
           </div>
         )}
-      />
+      />,
     );
 
     expect(wrapper).toMatchSnapshot();
@@ -81,7 +79,7 @@ describe('<SelectScreen />', () => {
           { name: 'Украинская гривна' },
           { name: 'Казахстанский тенге' },
         ]}
-      />
+      />,
     );
 
     expect(wrapper).toMatchSnapshot();

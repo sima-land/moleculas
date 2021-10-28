@@ -8,10 +8,10 @@ import classnames from 'classnames/bind';
 import styles from './modifiers-widget.module.scss';
 
 export interface ModifiersWidgetProps {
-  title?: string
-  items: Modifier[]
-  sizesTableUrl?: string
-  onSelectItem?: (item: Modifier) => void
+  title?: string;
+  items: Modifier[];
+  sizesTableUrl?: string;
+  onSelectItem?: (item: Modifier) => void;
 }
 
 const cx = classnames.bind(styles);
@@ -49,10 +49,9 @@ export const ModifiersWidget = ({
     />
 
     {Boolean(sizesTableUrl) && (
-      <Link
-        href={sizesTableUrl}
-        className={cx('modifiers-link')}
-      >Таблица размеров</Link>
+      <Link href={sizesTableUrl} className={cx('modifiers-link')}>
+        Таблица размеров
+      </Link>
     )}
   </div>
 );

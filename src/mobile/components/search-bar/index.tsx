@@ -15,25 +15,25 @@ import MoreVertSVG from '@sima-land/ui-quarks/icons/24x24/Filled/more-vert';
 export const cx = classnames.bind(classes);
 
 export interface ButtonProps {
-  text: string
-  onClick: React.MouseEventHandler
-  icon?: React.ElementType
-  iconColor?: Token
+  text: string;
+  onClick: React.MouseEventHandler;
+  icon?: React.ElementType;
+  iconColor?: Token;
 }
 
 export interface SearchBarProps {
-  inputMode?: 'none' | 'text' | 'decimal' | 'numeric' | 'tel' | 'search' | 'email' | 'url'
-  value?: string
-  onChange: React.ChangeEventHandler<HTMLInputElement>
-  placeholder?: string
-  onClear?: React.MouseEventHandler
-  buttonText?: string
-  onButtonClick?: (...args: any[]) => any
-  endButtons?: any[] // TODO: PropTypes.shape(ButtonTypes)
-  startButtons?: any[] // TODO: PropTypes.shape(ButtonTypes)
-  withSearchIcon?: boolean
-  autoFocus?: boolean
-  description?: string
+  inputMode?: 'none' | 'text' | 'decimal' | 'numeric' | 'tel' | 'search' | 'email' | 'url';
+  value?: string;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
+  placeholder?: string;
+  onClear?: React.MouseEventHandler;
+  buttonText?: string;
+  onButtonClick?: (...args: any[]) => any;
+  endButtons?: any[]; // TODO: PropTypes.shape(ButtonTypes)
+  startButtons?: any[]; // TODO: PropTypes.shape(ButtonTypes)
+  withSearchIcon?: boolean;
+  autoFocus?: boolean;
+  description?: string;
 }
 
 /**
@@ -73,12 +73,20 @@ export const SearchBar = ({
   const needHideEndButtons = endButtons.length > 1;
 
   // @ts-expect-error ts-migrate(2532) FIXME: Object is possibly 'undefined'.
-  useOutsideClick(dropDownRef, event => !dropDownButtonRef.current.contains(event.target) && toggleDropdown(false));
+  useOutsideClick(
+    dropDownRef,
+    event => !dropDownButtonRef.current.contains(event.target) && toggleDropdown(false),
+  );
   useEffect(
-    () => needHideEndButtons
-      ? on(window, 'resize', throttle(() => toggleDropdown(false), 500))
-      : undefined,
-    [needHideEndButtons]
+    () =>
+      needHideEndButtons
+        ? on(
+            window,
+            'resize',
+            throttle(() => toggleDropdown(false), 500),
+          )
+        : undefined,
+    [needHideEndButtons],
   );
 
   return (
@@ -86,17 +94,16 @@ export const SearchBar = ({
       {Boolean(startButtons.length) && (
         <div className={cx('before-field')}>
           <div className={cx('buttons-container')}>
-            {startButtons.map((props, index) => <Button {...props} key={index} />)}
+            {startButtons.map((props, index) => (
+              <Button {...props} key={index} />
+            ))}
           </div>
         </div>
       )}
       <label className={cx('input-wrapper')}>
         {withSearchIcon && (
           <span className={cx('search-icon')}>
-            <SearchSVG
-              fill={COLORS.get('gray38')}
-              aria-hidden
-            />
+            <SearchSVG fill={COLORS.get('gray38')} aria-hidden />
           </span>
         )}
         <div className={cx('input-container')}>
@@ -128,12 +135,7 @@ export const SearchBar = ({
             aria-label='Очистить'
             data-testid='search-bar:clear-icon'
             className={cx('clear-icon')}
-            children={(
-              <CrossSVG
-                fill={COLORS.get('gray38')}
-                aria-hidden
-              />
-            )}
+            children={<CrossSVG fill={COLORS.get('gray38')} aria-hidden />}
           />
         )}
       </label>
@@ -141,7 +143,9 @@ export const SearchBar = ({
         <>
           <div className={cx('after-field', needHideEndButtons && 'wide-screen')}>
             <div className={cx('buttons-container')}>
-              {endButtons.map((props, index) => <Button {...props} key={index} />)}
+              {endButtons.map((props, index) => (
+                <Button {...props} key={index} />
+              ))}
             </div>
           </div>
           {needHideEndButtons && (
@@ -188,12 +192,10 @@ export const SearchBar = ({
  * @param props.iconColor Цвет иконки.
  * @return Элемент.
  */
-const Button = forwardRef<HTMLDivElement | null, ButtonProps>(function Button ({
-  text,
-  icon: Icon,
-  iconColor = 'gray87',
-  onClick,
-}, ref) {
+const Button = forwardRef<HTMLDivElement | null, ButtonProps>(function Button(
+  { text, icon: Icon, iconColor = 'gray87', onClick },
+  ref,
+) {
   return (
     <div
       ref={ref}
@@ -204,15 +206,7 @@ const Button = forwardRef<HTMLDivElement | null, ButtonProps>(function Button ({
       tabIndex={0}
       aria-label={Icon && text}
     >
-      {Icon
-        ? (
-          <Icon
-            fill={COLORS.get(iconColor)}
-            aria-hidden='true'
-          />
-        )
-        : text
-      }
+      {Icon ? <Icon fill={COLORS.get(iconColor)} aria-hidden='true' /> : text}
     </div>
   );
 });

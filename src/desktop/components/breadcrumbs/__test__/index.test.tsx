@@ -18,66 +18,68 @@ describe('<Breadcrumbs />', () => {
   });
 
   it('should renders correctly', () => {
-    const wrapper = mount(
-      <Breadcrumbs items={items} />
-    );
+    const wrapper = mount(<Breadcrumbs items={items} />);
 
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should open/close siblings popup', done => {
-    const spy = jest.fn();
+  it('should open/close siblings popup', () =>
+    new Promise<void>(done => {
+      const spy = jest.fn();
 
-    render(
-      <Breadcrumbs items={items} onSiblingsPopupOpen={spy} />,
-      container
-    );
+      render(<Breadcrumbs items={items} onSiblingsPopupOpen={spy} />, container);
 
-    expect(container.querySelectorAll('[data-testid="plate"]')).toHaveLength(0);
-
-    act(() => {
-      Simulate.click(container.querySelector('[data-testid="breadcrumb:siblings-opener"]') as any);
-    });
-
-    expect(container.querySelectorAll('[data-testid="plate"]')).toHaveLength(1);
-    expect(container.querySelectorAll('[data-testid="breadcrumb-sibling"]')).toHaveLength(7);
-    expect(container.querySelectorAll('[data-testid="breadcrumb:siblings-closer"]')).toHaveLength(1);
-
-    act(() => {
-      Simulate.click(container.querySelector('[data-testid="breadcrumb:siblings-closer"]') as any);
-    });
-
-    setTimeout(() => {
       expect(container.querySelectorAll('[data-testid="plate"]')).toHaveLength(0);
-      done();
-    }, 500);
-  });
 
-  it('should close on popup outside mousedown', () => new Promise<void>(resolve => {
-    const spy = jest.fn();
+      act(() => {
+        Simulate.click(
+          container.querySelector('[data-testid="breadcrumb:siblings-opener"]') as any,
+        );
+      });
 
-    render(
-      <Breadcrumbs items={items} onSiblingsPopupOpen={spy} />,
-      container
-    );
+      expect(container.querySelectorAll('[data-testid="plate"]')).toHaveLength(1);
+      expect(container.querySelectorAll('[data-testid="breadcrumb-sibling"]')).toHaveLength(7);
+      expect(container.querySelectorAll('[data-testid="breadcrumb:siblings-closer"]')).toHaveLength(
+        1,
+      );
 
-    expect(container.querySelectorAll('[data-testid="plate"]')).toHaveLength(0);
+      act(() => {
+        Simulate.click(
+          container.querySelector('[data-testid="breadcrumb:siblings-closer"]') as any,
+        );
+      });
 
-    act(() => {
-      Simulate.click(container.querySelector('[data-testid="breadcrumb:siblings-opener"]') as any);
-    });
+      setTimeout(() => {
+        expect(container.querySelectorAll('[data-testid="plate"]')).toHaveLength(0);
+        done();
+      }, 500);
+    }));
 
-    expect(container.querySelectorAll('[data-testid="plate"]')).toHaveLength(1);
+  it('should close on popup outside mousedown', () =>
+    new Promise<void>(resolve => {
+      const spy = jest.fn();
 
-    act(() => {
-      window.dispatchEvent(new MouseEvent('mousedown'));
-    });
+      render(<Breadcrumbs items={items} onSiblingsPopupOpen={spy} />, container);
 
-    setTimeout(() => {
       expect(container.querySelectorAll('[data-testid="plate"]')).toHaveLength(0);
-      resolve();
-    }, 500);
-  }));
+
+      act(() => {
+        Simulate.click(
+          container.querySelector('[data-testid="breadcrumb:siblings-opener"]') as any,
+        );
+      });
+
+      expect(container.querySelectorAll('[data-testid="plate"]')).toHaveLength(1);
+
+      act(() => {
+        window.dispatchEvent(new MouseEvent('mousedown'));
+      });
+
+      setTimeout(() => {
+        expect(container.querySelectorAll('[data-testid="plate"]')).toHaveLength(0);
+        resolve();
+      }, 500);
+    }));
 
   it('should open siblings popup with fetching state', () => {
     const spy = jest.fn();
@@ -95,7 +97,7 @@ describe('<Breadcrumbs />', () => {
         ]}
         onSiblingsPopupOpen={spy}
       />,
-      container
+      container,
     );
 
     expect(container.querySelectorAll('[data-testid="plate"]')).toHaveLength(0);
@@ -136,7 +138,7 @@ describe('<Breadcrumbs />', () => {
           },
         ]}
         isSiblingActive={s => s.name === 'Sibling 2'}
-      />
+      />,
     );
 
     expect(wrapper.find('[data-testid="plate"]')).toHaveLength(0);
@@ -149,9 +151,15 @@ describe('<Breadcrumbs />', () => {
     expect(wrapper.find('[data-testid="plate"]')).toHaveLength(1);
 
     expect(wrapper.find('[data-testid="breadcrumb-sibling"]')).toHaveLength(3);
-    expect(wrapper.find('[data-testid="breadcrumb-sibling"]').at(0).find('.active')).toHaveLength(0);
-    expect(wrapper.find('[data-testid="breadcrumb-sibling"]').at(1).find('.active')).toHaveLength(1);
-    expect(wrapper.find('[data-testid="breadcrumb-sibling"]').at(0).find('.active')).toHaveLength(0);
+    expect(wrapper.find('[data-testid="breadcrumb-sibling"]').at(0).find('.active')).toHaveLength(
+      0,
+    );
+    expect(wrapper.find('[data-testid="breadcrumb-sibling"]').at(1).find('.active')).toHaveLength(
+      1,
+    );
+    expect(wrapper.find('[data-testid="breadcrumb-sibling"]').at(0).find('.active')).toHaveLength(
+      0,
+    );
   });
 
   it('should handle ready siblings without data', () => {
@@ -168,7 +176,7 @@ describe('<Breadcrumbs />', () => {
           },
         ]}
         isSiblingActive={s => s.name === 'Sibling 2'}
-      />
+      />,
     );
 
     expect(wrapper.find('[data-testid="plate"]')).toHaveLength(0);

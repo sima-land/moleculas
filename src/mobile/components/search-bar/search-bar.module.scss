@@ -100,10 +100,16 @@
 .after-field,
 .before-field {
   position: relative;
-  &.narrow-screen { display: none; }
+  &.narrow-screen {
+    display: none;
+  }
   @media (max-width: 360px) {
-    &.wide-screen { display: none; }
-    &.narrow-screen { display: block; }
+    &.wide-screen {
+      display: none;
+    }
+    &.narrow-screen {
+      display: block;
+    }
   }
 }
 

@@ -40,7 +40,7 @@
     background: colors.$brand-blue;
   }
   .pause:not(:hover) {
-    background: rgba(colors.$brand-blue, .4);
+    background: rgba(colors.$brand-blue, 0.4);
   }
   .turn {
     width: 32px;

@@ -16,11 +16,7 @@ describe('<PersonModal />', () => {
 
   it('should renders properly with minimal props', () => {
     const wrapper = mount(
-      <PersonModal
-        name='Марина Михайловская'
-        appointment='Дворник'
-        social='bad value'
-      />
+      <PersonModal name='Марина Михайловская' appointment='Дворник' social='bad value' />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -33,7 +29,7 @@ describe('<PersonModal />', () => {
         social='bad value'
         withScrollDisable
         scrollDisableOptions={{ reserveScrollBarGap: true }}
-      />
+      />,
     );
 
     expect(wrapper.find(Modal).props().withScrollDisable).toBe(true);
@@ -71,7 +67,7 @@ describe('<PersonModal />', () => {
           children: 'test',
         }}
         onClose={onClose}
-      />
+      />,
     );
 
     expect(wrapper).toMatchSnapshot();

@@ -8,9 +8,9 @@ import { BoxShadow } from '@sima-land/ui-nucleons/styling/shadows';
 import { ProductCard } from '../product-card';
 
 export interface HoverCardProps extends ProductInfoProps {
-  targetRef: React.RefObject<HTMLElement | null>
-  onMouseLeave?: () => void
-  onQuickViewClick?: () => void
+  targetRef: React.RefObject<HTMLElement | null>;
+  onMouseLeave?: () => void;
+  onQuickViewClick?: () => void;
   renderCartControl?: (Slot: typeof ProductCard.CartControl) => React.ReactNode;
 }
 
@@ -51,7 +51,6 @@ export const HoverCard = ({
       data={data}
       onLinkClick={onLinkClick}
       onQuickViewClick={onQuickViewClick}
-
       // div props
       ref={rootRef}
       data-testid='product-carousel:hover-card'

@@ -8,9 +8,14 @@ import styles from './product-actions-alert.module.scss';
 const cx = classnames.bind(styles);
 
 export interface ProductActionsAlertProps {
-  buttons?: Array<{ text: string, icon: React.ReactNode, onClick?: React.MouseEventHandler, href?: string }>
-  alertProps?: AlertProps
-  onClose?: React.MouseEventHandler
+  buttons?: Array<{
+    text: string;
+    icon: React.ReactNode;
+    onClick?: React.MouseEventHandler;
+    href?: string;
+  }>;
+  alertProps?: AlertProps;
+  onClose?: React.MouseEventHandler;
 }
 
 /**
@@ -24,27 +29,20 @@ export interface ProductActionsAlertProps {
 export const ProductActionsAlert = ({ buttons, alertProps, onClose }: ProductActionsAlertProps) => (
   <Alert
     {...alertProps}
-    footer={(
+    footer={
       <Clean.Group>
         <Clean.Button onClick={onClose}>Закрыть</Clean.Button>
       </Clean.Group>
-    )}
+    }
   >
     <div className={cx('buttons')}>
-      {
-        buttons && buttons.map(({ text, icon, onClick, href }, key) => (
-          <Link
-            href={href}
-            className={cx('button')}
-            key={key}
-            color='gray87'
-            onClick={onClick}
-          >
+      {buttons &&
+        buttons.map(({ text, icon, onClick, href }, key) => (
+          <Link href={href} className={cx('button')} key={key} color='gray87' onClick={onClick}>
             <div className={cx('icon-wrapper')}>{icon}</div>
             {text}
           </Link>
-        ))
-      }
+        ))}
     </div>
   </Alert>
 );

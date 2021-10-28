@@ -7,9 +7,7 @@ describe('ReviewInfo', () => {
   it('should renders correctly', () => {
     const spy = jest.fn();
 
-    const wrapper = mount(
-      <ReviewInfo author='John Doe' rating={2.1} onGoToReview={spy} />
-    );
+    const wrapper = mount(<ReviewInfo author='John Doe' rating={2.1} onGoToReview={spy} />);
 
     expect(wrapper).toMatchSnapshot();
 

@@ -4,9 +4,9 @@ import { Text } from '@sima-land/ui-nucleons/text';
 import { Link } from '@sima-land/ui-nucleons/link';
 
 export interface AdultBlockProps {
-  isAuthUser?: boolean
-  onClick?: React.MouseEventHandler
-  marginTop?: number
+  isAuthUser?: boolean;
+  onClick?: React.MouseEventHandler;
+  marginTop?: number;
 }
 
 const textBlocks = {
@@ -29,26 +29,23 @@ const textBlocks = {
  * @param props.marginTop Отступ сверху.
  * @return Элемент.
  */
-const AdultBlock = ({
-  isAuthUser,
-  onClick,
-  marginTop = 0,
-}: AdultBlockProps) => {
+const AdultBlock = ({ isAuthUser, onClick, marginTop = 0 }: AdultBlockProps) => {
   const actualTextBlocks = isAuthUser ? textBlocks.forAuthorized : textBlocks.forGuest;
   return (
-    <Box
-      display='flex'
-      direction='column'
-      flex='grow'
-      marginTop={marginTop}
-    >
+    <Box display='flex' direction='column' flex='grow' marginTop={marginTop}>
       <Box marginBottom={1}>
-        <Text size={16} weight={600}>Товар для взрослых</Text>
+        <Text size={16} weight={600}>
+          Товар для взрослых
+        </Text>
       </Box>
-      <Text size={12} lineHeight={20}>{actualTextBlocks.condition}</Text>
+      <Text size={12} lineHeight={20}>
+        {actualTextBlocks.condition}
+      </Text>
       <Box marginTop={6}>
         <Link onClick={onClick} pseudo>
-          <Text size={16} weight={600} lineHeight={32}>{actualTextBlocks.action}</Text>
+          <Text size={16} weight={600} lineHeight={32}>
+            {actualTextBlocks.action}
+          </Text>
         </Link>
       </Box>
     </Box>

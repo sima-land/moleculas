@@ -1,5 +1,5 @@
 import React, { Component, createRef } from 'react';
-import debounce from 'lodash/debounce';
+import { debounce } from 'lodash';
 import prop from 'lodash/fp/prop';
 import { ModifierButton, ModifierButtonProps, Modifier } from '../button';
 import on from '@sima-land/ui-nucleons/helpers/on';
@@ -9,23 +9,23 @@ import classnames from 'classnames/bind';
 type ModifierPredicate<T> = (item: Modifier) => T;
 
 interface State {
-  needShowAll: boolean
-  hasHiddenNodes: boolean
-  lastVisibleChildIndex: number | null
+  needShowAll: boolean;
+  hasHiddenNodes: boolean;
+  lastVisibleChildIndex: number | null;
 }
 
 export interface ModifiersGroupProps {
-  items?: Modifier[]
-  onSelectItem?: (item: Modifier, selected: boolean) => void
-  getItemType?: ModifierPredicate<ModifierButtonProps['type']>
-  getItemCount?: ModifierPredicate<number>
-  getItemColor?: ModifierPredicate<string>
-  getItemContent?: ModifierPredicate<string>
-  isSelectedItem?: ModifierPredicate<boolean>
-  getItemImage?: ModifierPredicate<string>
-  isMarkdown?: ModifierPredicate<boolean>
-  onClickShowAll?: () => void
-  'data-testid'?: string
+  items?: Modifier[];
+  onSelectItem?: (item: Modifier, selected: boolean) => void;
+  getItemType?: ModifierPredicate<ModifierButtonProps['type']>;
+  getItemCount?: ModifierPredicate<number>;
+  getItemColor?: ModifierPredicate<string>;
+  getItemContent?: ModifierPredicate<string>;
+  isSelectedItem?: ModifierPredicate<boolean>;
+  getItemImage?: ModifierPredicate<string>;
+  isMarkdown?: ModifierPredicate<boolean>;
+  onClickShowAll?: () => void;
+  'data-testid'?: string;
 }
 
 const cx = classnames.bind(classes);
@@ -94,7 +94,7 @@ export class ModifiersGroup extends Component<ModifiersGroupProps, State> {
   /**
    * @inheritdoc
    */
-  componentDidMount () {
+  componentDidMount() {
     this.windowWidth = document.documentElement.offsetWidth;
     this.removeGlobalListener = on(window, 'resize', this.resetVisibleNodesData);
     this.checkVisibleNodes();
@@ -103,29 +103,33 @@ export class ModifiersGroup extends Component<ModifiersGroupProps, State> {
   /**
    * @inheritdoc
    */
-  componentDidUpdate () {
+  componentDidUpdate() {
     this.checkVisibleNodes();
   }
 
   /**
    * @inheritdoc
    */
-  componentWillUnmount () {
+  componentWillUnmount() {
     this.removeGlobalListener();
   }
 
   /**
    * Сбрасывает информацию о видимых и невидимых дочерних узлах контейнера.
    */
-  resetVisibleNodesData = debounce(() => {
-    if (document.documentElement.offsetWidth !== this.windowWidth) {
-      this.windowWidth = document.documentElement.offsetWidth;
-      this.setState({
-        hasHiddenNodes: true,
-        lastVisibleChildIndex: null,
-      });
-    }
-  }, 250, { leading: true });
+  resetVisibleNodesData = debounce(
+    () => {
+      if (document.documentElement.offsetWidth !== this.windowWidth) {
+        this.windowWidth = document.documentElement.offsetWidth;
+        this.setState({
+          hasHiddenNodes: true,
+          lastVisibleChildIndex: null,
+        });
+      }
+    },
+    250,
+    { leading: true },
+  );
 
   /**
    * Обновляет информацию о видимых и невидимых дочерних узлах контейнера,
@@ -150,15 +154,15 @@ export class ModifiersGroup extends Component<ModifiersGroupProps, State> {
             const rightContainerBound = (containerEl as any).getBoundingClientRect().right;
 
             // проверяем, хватает ли кнопке места (с запасом в половину) после последнего видимого дочернего элемента
-            const isShowingButtonFit = rightContainerBound - rightBound >= ((showingButtonEl as any).clientWidth * 1.5);
+            const isShowingButtonFit =
+              rightContainerBound - rightBound >= (showingButtonEl as any).clientWidth * 1.5;
             this.setState({
               // если хватает места - ставим кнопку после последнего, иначе - вместо
               lastVisibleChildIndex: lastVisibleElIndex + (isShowingButtonFit ? 1 : 0),
               hasHiddenNodes: true,
             });
           }
-        }
-        else {
+        } else {
           this.setState({ hasHiddenNodes: false });
         }
       }
@@ -179,7 +183,7 @@ export class ModifiersGroup extends Component<ModifiersGroupProps, State> {
   /**
    * @inheritdoc
    */
-  render () {
+  render() {
     const {
       items,
       onSelectItem,
@@ -202,31 +206,36 @@ export class ModifiersGroup extends Component<ModifiersGroupProps, State> {
         ref={this.containerRef}
         data-testid={testId}
       >
-        {Array.isArray(items) && items.map((item, index) => {
-          const isDisplayed = !needHideModifiers || index < (lastVisibleChildIndex as any);
+        {Array.isArray(items) &&
+          items.map((item, index) => {
+            const isDisplayed = !needHideModifiers || index < (lastVisibleChildIndex as any);
 
-          return (
-            <ModifierButton
-              key={index}
-              type={getItemType(item)}
-              count={getItemCount(item)}
-              color={getItemColor(item)}
-              content={getItemContent(item)}
-              selected={isSelectedItem(item)}
-              image={getItemImage(item)}
-              onClick={() => onSelectItem && onSelectItem(item, isSelectedItem(item))}
-              className={cx('guttered', !isDisplayed && 'not-display')}
-              isMarkdown={isMarkdown(item)}
-            />
-          );
-        })}
+            return (
+              <ModifierButton
+                key={index}
+                type={getItemType(item)}
+                count={getItemCount(item)}
+                color={getItemColor(item)}
+                content={getItemContent(item)}
+                selected={isSelectedItem(item)}
+                image={getItemImage(item)}
+                onClick={() => onSelectItem && onSelectItem(item, isSelectedItem(item))}
+                className={cx('guttered', !isDisplayed && 'not-display')}
+                isMarkdown={isMarkdown(item)}
+              />
+            );
+          })}
 
         {Array.isArray(items) && hasHiddenNodes && !needShowAll && (
           <ModifierButton
             squared
             ref={this.showingButtonRef}
             content={`+${items.length - (lastVisibleChildIndex as any)}`}
-            className={cx('show-all-button', 'guttered', lastVisibleChildIndex === null && 'invisible')}
+            className={cx(
+              'show-all-button',
+              'guttered',
+              lastVisibleChildIndex === null && 'invisible',
+            )}
             onClick={this.handleShowAllClick}
             data-testid='modifier-group:show-all-button'
           />

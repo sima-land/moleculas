@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import omit from 'lodash/omit';
+import { omit } from 'lodash';
 import { ModifiersList } from '..';
 import { ModifierItem } from '../modifier-item';
 import { Link } from '@sima-land/ui-nucleons/link';
@@ -19,35 +19,20 @@ describe('<ModifiersList />', () => {
     expect(wrapper).toMatchSnapshot();
   });
   it('should renders correctly with correct props', () => {
-    const wrapper = shallow(
-      <ModifiersList
-        items={items}
-        currencyGrapheme='$'
-      />
-    );
+    const wrapper = shallow(<ModifiersList items={items} currencyGrapheme='$' />);
     expect(wrapper.find(ModifierItem)).toHaveLength(2);
-    expect(omit(
-      wrapper.find(ModifierItem).at(0).props(),
-      ['onClick']
-    )).toEqual({
+    expect(omit(wrapper.find(ModifierItem).at(0).props(), ['onClick'])).toEqual({
       ...items[0],
       currencyGrapheme: '$',
     });
-    expect(omit(
-      wrapper.find(ModifierItem).at(1).props(),
-      ['onClick']
-    )).toEqual({
+    expect(omit(wrapper.find(ModifierItem).at(1).props(), ['onClick'])).toEqual({
       ...items[1],
       currencyGrapheme: '$',
     });
     expect(wrapper).toMatchSnapshot();
   });
   it('should render correct with sizesTableUrl', () => {
-    const wrapper = mount(
-      <ModifiersList
-        sizesTableUrl='test.ru/123'
-      />
-    );
+    const wrapper = mount(<ModifiersList sizesTableUrl='test.ru/123' />);
     expect(wrapper.find(Link)).toHaveLength(1);
     expect(wrapper.find(Link).text()).toEqual('Таблица размеров');
     expect(wrapper.find(StatementSVG)).toHaveLength(1);
@@ -65,7 +50,7 @@ describe('<ModifiersList />', () => {
         itemsContainerProps={{
           className: 'items-container-test-class',
         }}
-      />
+      />,
     );
 
     const wrapperElement = wrapper.find('.wrapper-test-class');
@@ -80,12 +65,7 @@ describe('<ModifiersList />', () => {
   });
   it('should call onClickItem correctly on click ModifierItem', () => {
     const onItemClickFn = jest.fn();
-    const wrapper = mount(
-      <ModifiersList
-        items={items}
-        onItemClick={onItemClickFn}
-      />
-    );
+    const wrapper = mount(<ModifiersList items={items} onItemClick={onItemClickFn} />);
 
     expect(onItemClickFn).not.toHaveBeenCalled();
     wrapper.find(ModifierItem).at(1).simulate('click');

@@ -21,24 +21,15 @@ export const Primary = () => (
   <>
     <div className={classes.list}>
       <div className={classes.title}>Фото</div>
-      <ModifiersList
-        items={items.withPhoto}
-        currencyGrapheme='₽'
-      />
+      <ModifiersList items={items.withPhoto} currencyGrapheme='₽' />
     </div>
     <div className={classes.list}>
       <div className={classes.title}>Цвет</div>
-      <ModifiersList
-        items={items.withColor}
-        currencyGrapheme='₽'
-      />
+      <ModifiersList items={items.withColor} currencyGrapheme='₽' />
     </div>
     <div className={classes.list}>
       <div className={classes.title}>Текст</div>
-      <ModifiersList
-        items={items.withText}
-        currencyGrapheme='₽'
-      />
+      <ModifiersList items={items.withText} currencyGrapheme='₽' />
     </div>
   </>
 );

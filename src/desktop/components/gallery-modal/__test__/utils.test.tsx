@@ -7,15 +7,11 @@ describe('useImagesLoad', () => {
   const TestComponent = ({ srcList }: { srcList: string[] }) => {
     const isLoaded = useImagesLoad(srcList);
 
-    return (
-      <div>{isLoaded ? 'ready' : 'loading'}</div>
-    );
+    return <div>{isLoaded ? 'ready' : 'loading'}</div>;
   };
 
   it('should return boolean', () => {
-    const wrapper = mount(
-      <TestComponent srcList={['a']} />
-    );
+    const wrapper = mount(<TestComponent srcList={['a']} />);
 
     expect(wrapper.text()).toBe('loading');
   });
@@ -28,13 +24,7 @@ describe('useImagesLoad', () => {
     });
 
     const wrapper = mount(
-      <TestComponent
-        srcList={[
-          'https://img.com/1',
-          'https://img.com/2',
-          'https://img.com/3',
-        ]}
-      />
+      <TestComponent srcList={['https://img.com/1', 'https://img.com/2', 'https://img.com/3']} />,
     );
 
     expect(wrapper.text()).toBe('loading');
@@ -55,20 +45,14 @@ describe('useRectFit', () => {
     const ref = useRef<HTMLDivElement>(null);
     const size = useRectFit(ref, { correction: 0 });
 
-    return hidden ? null : (
-      <div ref={ref}>
-        {size}
-      </div>
-    );
+    return hidden ? null : <div ref={ref}>{size}</div>;
   };
 
   it('should calculate size properly', () => {
     jest.spyOn(HTMLDivElement.prototype, 'clientWidth', 'get').mockImplementation(() => 100);
     jest.spyOn(HTMLDivElement.prototype, 'clientHeight', 'get').mockImplementation(() => 200);
 
-    const wrapper = mount(
-      <TestComponent />
-    );
+    const wrapper = mount(<TestComponent />);
 
     expect(wrapper.text()).toBe('100');
   });
@@ -77,9 +61,7 @@ describe('useRectFit', () => {
     jest.spyOn(HTMLDivElement.prototype, 'clientWidth', 'get').mockImplementation(() => 100);
     jest.spyOn(HTMLDivElement.prototype, 'clientHeight', 'get').mockImplementation(() => 20);
 
-    const wrapper = mount(
-      <TestComponent />
-    );
+    const wrapper = mount(<TestComponent />);
 
     expect(wrapper.text()).toBe('20');
   });
@@ -88,11 +70,11 @@ describe('useRectFit', () => {
     jest.spyOn(window, 'requestAnimationFrame').mockImplementation((fn: any) => fn());
 
     jest.spyOn(HTMLDivElement.prototype, 'clientWidth', 'get').mockImplementation(() => 100);
-    const heightMock = jest.spyOn(HTMLDivElement.prototype, 'clientHeight', 'get').mockImplementation(() => 20);
+    const heightMock = jest
+      .spyOn(HTMLDivElement.prototype, 'clientHeight', 'get')
+      .mockImplementation(() => 20);
 
-    const wrapper = mount(
-      <TestComponent />
-    );
+    const wrapper = mount(<TestComponent />);
 
     expect(wrapper.text()).toBe('20');
 
@@ -107,9 +89,7 @@ describe('useRectFit', () => {
   });
 
   it('should do nothing when ref is empty', () => {
-    const wrapper = mount(
-      <TestComponent hidden />
-    );
+    const wrapper = mount(<TestComponent hidden />);
 
     expect(wrapper.text()).toBe('');
   });

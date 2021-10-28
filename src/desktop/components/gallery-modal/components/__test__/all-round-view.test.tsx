@@ -36,17 +36,13 @@ describe('AllRoundView', () => {
   } as const;
 
   it('should renders correctly', () => {
-    const wrapper = mount(
-      <AllRoundView photos={[]} />
-    );
+    const wrapper = mount(<AllRoundView photos={[]} />);
 
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should renders correctly default state', () => {
-    const wrapper = mount(
-      <AllRoundView photos={testPhotos} />
-    );
+    const wrapper = mount(<AllRoundView photos={testPhotos} />);
 
     act(() => {
       wrapper.find(Selectors.autoplayButton).simulate('click');
@@ -59,21 +55,19 @@ describe('AllRoundView', () => {
   it('should change image src every 1000 / 30 ms', () => {
     jest.useFakeTimers();
 
-    const wrapper = mount(
-      <AllRoundView photos={testPhotos} />
-    );
+    const wrapper = mount(<AllRoundView photos={testPhotos} />);
 
     expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[0]);
 
     act(() => {
-      jest.advanceTimersByTime((1000 / 30) + 10);
+      jest.advanceTimersByTime(1000 / 30 + 10);
     });
     wrapper.update();
 
     expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[1]);
 
     act(() => {
-      jest.advanceTimersByTime((1000 / 30) + 10);
+      jest.advanceTimersByTime(1000 / 30 + 10);
     });
     wrapper.update();
 
@@ -86,7 +80,7 @@ describe('AllRoundView', () => {
     wrapper.update();
 
     act(() => {
-      jest.advanceTimersByTime((1000 / 30) + 10);
+      jest.advanceTimersByTime(1000 / 30 + 10);
     });
     wrapper.update();
 
@@ -96,9 +90,7 @@ describe('AllRoundView', () => {
   it('should handle pointer down on turn left button', () => {
     jest.useFakeTimers();
 
-    const wrapper = mount(
-      <AllRoundView photos={testPhotos} />
-    );
+    const wrapper = mount(<AllRoundView photos={testPhotos} />);
 
     act(() => {
       wrapper.find(Selectors.turnLeftButton).simulate('pointerdown');
@@ -108,14 +100,14 @@ describe('AllRoundView', () => {
     expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[0]);
 
     act(() => {
-      jest.advanceTimersByTime((1000 / 30) + 10);
+      jest.advanceTimersByTime(1000 / 30 + 10);
     });
     wrapper.update();
 
     expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[9]);
 
     act(() => {
-      jest.advanceTimersByTime((1000 / 30) + 10);
+      jest.advanceTimersByTime(1000 / 30 + 10);
     });
     wrapper.update();
 
@@ -125,9 +117,7 @@ describe('AllRoundView', () => {
   it('should handle pointer down on turn right button', () => {
     jest.useFakeTimers();
 
-    const wrapper = mount(
-      <AllRoundView photos={testPhotos} />
-    );
+    const wrapper = mount(<AllRoundView photos={testPhotos} />);
 
     act(() => {
       wrapper.find(Selectors.turnRightButton).simulate('pointerdown');
@@ -137,14 +127,14 @@ describe('AllRoundView', () => {
     expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[0]);
 
     act(() => {
-      jest.advanceTimersByTime((1000 / 30) + 10);
+      jest.advanceTimersByTime(1000 / 30 + 10);
     });
     wrapper.update();
 
     expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[1]);
 
     act(() => {
-      jest.advanceTimersByTime((1000 / 30) + 10);
+      jest.advanceTimersByTime(1000 / 30 + 10);
     });
     wrapper.update();
 
@@ -154,9 +144,7 @@ describe('AllRoundView', () => {
   it('should handle autoplay button click', () => {
     jest.useFakeTimers();
 
-    const wrapper = mount(
-      <AllRoundView photos={testPhotos} />
-    );
+    const wrapper = mount(<AllRoundView photos={testPhotos} />);
 
     act(() => {
       wrapper.find(Selectors.turnRightButton).simulate('pointerdown');
@@ -166,14 +154,14 @@ describe('AllRoundView', () => {
     expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[0]);
 
     act(() => {
-      jest.advanceTimersByTime((1000 / 30) + 10);
+      jest.advanceTimersByTime(1000 / 30 + 10);
     });
     wrapper.update();
 
     expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[1]);
 
     act(() => {
-      jest.advanceTimersByTime((1000 / 30) + 10);
+      jest.advanceTimersByTime(1000 / 30 + 10);
     });
     wrapper.update();
 
@@ -186,7 +174,7 @@ describe('AllRoundView', () => {
     wrapper.update();
 
     act(() => {
-      jest.advanceTimersByTime((1000 / 30) + 10);
+      jest.advanceTimersByTime(1000 / 30 + 10);
     });
     wrapper.update();
 
@@ -194,9 +182,7 @@ describe('AllRoundView', () => {
   });
 
   it('should show/hide hint', () => {
-    const wrapper = mount(
-      <AllRoundView photos={testPhotos} />
-    );
+    const wrapper = mount(<AllRoundView photos={testPhotos} />);
 
     expect(wrapper.find(Selectors.hint)).toHaveLength(0);
 
@@ -216,12 +202,11 @@ describe('AllRoundView', () => {
   });
 
   it('should handle image pointerdown, window pointerup', () => {
-    const wrapper = mount(
-      <AllRoundView photos={testPhotos} />
-    );
+    const wrapper = mount(<AllRoundView photos={testPhotos} />);
 
     act(() => {
-      wrapper.find(Selectors.image)
+      wrapper
+        .find(Selectors.image)
         .getDOMNode()
         .dispatchEvent(new Event('pointerdown', { clientX: 10 } as any));
     });
@@ -241,13 +226,14 @@ describe('AllRoundView', () => {
     jest.useFakeTimers();
 
     jest.spyOn(HTMLImageElement.prototype, 'clientWidth', 'get').mockImplementation(() => 100);
-    jest.spyOn(HTMLImageElement.prototype, 'getBoundingClientRect').mockImplementation(() => ({
-      left: 0,
-    } as any));
-
-    const wrapper = mount(
-      <AllRoundView photos={testPhotos} />
+    jest.spyOn(HTMLImageElement.prototype, 'getBoundingClientRect').mockImplementation(
+      () =>
+        ({
+          left: 0,
+        } as any),
     );
+
+    const wrapper = mount(<AllRoundView photos={testPhotos} />);
 
     expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[0]);
 
@@ -261,7 +247,8 @@ describe('AllRoundView', () => {
 
     // pointer down
     act(() => {
-      wrapper.find(Selectors.image)
+      wrapper
+        .find(Selectors.image)
         .getDOMNode()
         .dispatchEvent(new MouseEvent('pointerdown', { clientX: 2 }));
     });

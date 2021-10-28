@@ -38,9 +38,7 @@ describe('<BannerTitle />', () => {
     ];
 
     variants.forEach(variant => {
-      const wrapper = mount(
-        <BannerTitle {...variant} />
-      );
+      const wrapper = mount(<BannerTitle {...variant} />);
 
       expect(wrapper).toMatchSnapshot();
     });

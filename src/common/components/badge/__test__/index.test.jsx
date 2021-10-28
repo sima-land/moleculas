@@ -15,9 +15,7 @@ describe('<Badge />', () => {
       {
         color: '#00b8d4',
         href: 'https://sima-land.ru',
-        fields: [
-          { type: 'text', value: 'Система скидок' },
-        ],
+        fields: [{ type: 'text', value: 'Система скидок' }],
       },
 
       // icon only view
@@ -25,7 +23,10 @@ describe('<Badge />', () => {
         color: '#ff7200',
         href: 'https://sima-land.ru',
         fields: [
-          { type: 'svg-url', value: 'https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg' },
+          {
+            type: 'svg-url',
+            value: 'https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg',
+          },
         ],
       },
 
@@ -33,9 +34,7 @@ describe('<Badge />', () => {
       {
         color: '#b52ea8',
         href: 'https://sima-land.ru',
-        fields: [
-          { type: 'timer', value: addDays(new Date(), 7).toISOString() },
-        ],
+        fields: [{ type: 'timer', value: addDays(new Date(), 7).toISOString() }],
       },
 
       // timer + text view
@@ -51,16 +50,12 @@ describe('<Badge />', () => {
       // no hover effect
       {
         color: '#607d8b',
-        fields: [
-          { type: 'text', value: 'Уценённый товар' },
-        ],
+        fields: [{ type: 'text', value: 'Уценённый товар' }],
       },
     ];
 
     variants.forEach(variant => {
-      const wrapper = mount(
-        <Badge {...variant} />
-      );
+      const wrapper = mount(<Badge {...variant} />);
 
       expect(wrapper).toMatchSnapshot();
     });

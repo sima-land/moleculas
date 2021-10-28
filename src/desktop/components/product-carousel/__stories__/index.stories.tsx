@@ -19,7 +19,9 @@ export default {
   },
 };
 
-const Placeholder = () => <div style={{ borderRadius: 4, background: '#eee', height: 40, margin: '20px 0' }} />;
+const Placeholder = () => (
+  <div style={{ borderRadius: 4, background: '#eee', height: 40, margin: '20px 0' }} />
+);
 
 const DemoBlock = ({ children }: { children: React.ReactNode }) => (
   <DesktopLayout>
@@ -38,10 +40,7 @@ export const Primary = () => (
           data={item}
           onQuickViewClick={action('click:quick-view')}
           renderCartControl={Slot => (
-            <Slot
-              stepText='По 5 шт.'
-              markupText='Комплектация + 50 ₽ при покупке до 20 шт'
-            >
+            <Slot stepText='По 5 шт.' markupText='Комплектация + 50 ₽ при покупке до 20 шт'>
               <Button size='s' style={{ width: '122px' }}>
                 В корзину
               </Button>
@@ -101,10 +100,7 @@ export const LinkClickHandle = () => (
           }}
           onQuickViewClick={action('click:quick-view')}
           renderCartControl={Slot => (
-            <Slot
-              stepText='По 5 шт.'
-              markupText='Комплектация + 50 ₽ при покупке до 20 шт'
-            >
+            <Slot stepText='По 5 шт.' markupText='Комплектация + 50 ₽ при покупке до 20 шт'>
               <Stepper size='s' value='99' />
             </Slot>
           )}
@@ -127,10 +123,7 @@ export const LinkClickHandleNoHover = () => (
           }}
           onQuickViewClick={action('click:quick-view')}
           renderCartControl={Slot => (
-            <Slot
-              stepText='По 5 шт.'
-              markupText='Комплектация + 50 ₽ при покупке до 20 шт'
-            >
+            <Slot stepText='По 5 шт.' markupText='Комплектация + 50 ₽ при покупке до 20 шт'>
               <Button size='s' style={{ width: '122px' }}>
                 В корзину
               </Button>
