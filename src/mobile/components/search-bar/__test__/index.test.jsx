@@ -135,7 +135,7 @@ describe('SearchBar', () => {
           value='Очень длинный запрос в поисковой строке'
           onChange={onChange}
           endButtons={[
-            { text: 'Oтмена', onClick: onCancelClick },
+            { text: 'Отмена', onClick: onCancelClick },
             { text: 'Поиск', onClick: onSearchClick },
           ]}
         />,

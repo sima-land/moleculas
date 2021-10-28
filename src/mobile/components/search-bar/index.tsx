@@ -65,18 +65,18 @@ export const SearchBar = ({
   autoFocus = true,
   description,
 }: SearchBarProps) => {
-  const [shownDropdown, toggleDropdown] = useState(false);
-  const inputRef = useRef<HTMLInputElement | null>(null);
-  const dropDownRef = useRef<HTMLDivElement | null>(null);
-  const dropDownButtonRef = useRef<HTMLDivElement | null>(null);
+  const [shownDropdown, toggleDropdown] = useState<boolean>(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const dropDownRef = useRef<HTMLDivElement>(null);
+  const dropDownOpenerRef = useRef<HTMLDivElement>(null);
 
   const needHideEndButtons = endButtons.length > 1;
 
-  // @ts-expect-error ts-migrate(2532) FIXME: Object is possibly 'undefined'.
-  useOutsideClick(
-    dropDownRef,
-    event => !dropDownButtonRef.current.contains(event.target) && toggleDropdown(false),
-  );
+  useOutsideClick(dropDownRef, e => {
+    !(dropDownOpenerRef.current as HTMLDivElement).contains(e.target as any) &&
+      toggleDropdown(false);
+  });
+
   useEffect(
     () =>
       needHideEndButtons
@@ -153,8 +153,8 @@ export const SearchBar = ({
               <div className={cx('buttons-container')}>
                 <Button
                   text='Больше'
-                  ref={dropDownButtonRef}
-                  icon={MoreVertSVG as any}
+                  ref={dropDownOpenerRef}
+                  icon={MoreVertSVG}
                   onClick={() => toggleDropdown(!shownDropdown)}
                 />
               </div>
