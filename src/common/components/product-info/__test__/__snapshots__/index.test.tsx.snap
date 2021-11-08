@@ -101,3 +101,101 @@ exports[`ProductInfo should renders correctly 1`] = `
   </div>
 </body>
 `;
+
+exports[`ProductInfo should renders correctly with trademark 1`] = `
+<div>
+  <div
+    class="root image-overlay"
+  >
+    <a
+      class="image-link"
+      data-testid="product-info:image-link"
+      href="https://www.products.com/some-product"
+    >
+      <img
+        class="image"
+        src="https://www.images.com/some-product/1"
+      />
+    </a>
+  </div>
+  <div
+    class="root badges line-limit"
+    style="--line-limit: 1;"
+  >
+    <span
+      class="root item"
+      data-testid="badge"
+      style="--badge-color: #b52ea8;"
+    >
+      <span
+        class="content"
+      >
+        -56%
+      </span>
+    </span>
+    <span
+      class="root item"
+      data-testid="badge"
+      style="--badge-color: #ff7200;"
+    >
+      <span
+        class="content"
+      >
+        3 по цене 2
+      </span>
+    </span>
+    <span
+      class="root item"
+      data-testid="badge"
+      style="--badge-color: #2962ff;"
+    >
+      <span
+        class="content"
+      >
+        Товар месяца
+      </span>
+    </span>
+    <span
+      class="root item"
+      data-testid="badge"
+      style="--badge-color: #00b8d4;"
+    >
+      <span
+        class="content"
+      >
+        Акция
+      </span>
+    </span>
+  </div>
+  <div
+    class="prices"
+  >
+    <span
+      class="root price"
+      data-testid="price"
+    >
+      23 476,23 $
+    </span>
+    <span
+      class="root old-price crossed-out"
+      data-testid="price"
+    >
+      25 000 $
+    </span>
+  </div>
+  <a
+    class="link link gray87"
+    data-testid="product-info:name-link"
+    href="https://www.products.com/some-product"
+  >
+    Some product
+  </a>
+  <a
+    class="link trademark-link brand-blue"
+    data-testid="product-info:trademark-link"
+    href="www.hello.com"
+  >
+    Hello
+  </a>
+</div>
+`;
