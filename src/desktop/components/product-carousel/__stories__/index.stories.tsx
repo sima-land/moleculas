@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { action } from '@storybook/addon-actions';
 import { ProductCarousel } from '..';
 import { items } from '../__test__/test-items';
@@ -134,3 +134,36 @@ export const LinkClickHandleNoHover = () => (
     </ProductCarousel>
   </DemoBlock>
 );
+
+export const DeferredData = () => {
+  const [ready, setReady] = useState<boolean>(false);
+
+  return (
+    <DemoBlock>
+      <Button onClick={() => setReady(true)} size='s' style={{ marginBottom: 20 }}>
+        Загрузить
+      </Button>
+
+      <ProductCarousel>
+        {(ready ? items : []).map((item, index) => (
+          <ProductCarousel.Item
+            key={index}
+            data={item}
+            onLinkClick={event => {
+              event.preventDefault();
+              action('click:link')(item.name);
+            }}
+            onQuickViewClick={action('click:quick-view')}
+            renderCartControl={Slot => (
+              <Slot stepText='По 5 шт.' markupText='Комплектация + 50 ₽ при покупке до 20 шт'>
+                <Button size='s' style={{ width: '122px' }}>
+                  В корзину
+                </Button>
+              </Slot>
+            )}
+          />
+        ))}
+      </ProductCarousel>
+    </DemoBlock>
+  );
+};
