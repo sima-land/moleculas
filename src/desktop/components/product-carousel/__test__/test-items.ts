@@ -16,6 +16,10 @@ export const items: ProductData[] = [
     price: 495,
     currencyGrapheme: '₽',
     oldPrice: undefined,
+    trademark: {
+      name: 'Торговая марка "Сима-ленд"',
+      url: 'https://www.sima-land.ru/',
+    },
   },
   {
     name: 'Ножницы портновские, 21,5 см, цвет чёрный/голубой',
