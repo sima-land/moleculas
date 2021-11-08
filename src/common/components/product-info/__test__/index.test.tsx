@@ -29,4 +29,12 @@ describe('ProductInfo', () => {
 
     expect(baseElement).toMatchSnapshot();
   });
+
+  it('should renders correctly with trademark', () => {
+    const { container } = render(
+      <ProductInfo data={{ ...exampleData, trademark: { name: 'Hello', url: 'www.hello.com' } }} />,
+    );
+
+    expect(container).toMatchSnapshot();
+  });
 });

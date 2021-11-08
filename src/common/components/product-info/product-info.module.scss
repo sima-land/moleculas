@@ -81,3 +81,13 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+
+.trademark-link {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

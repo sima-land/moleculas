@@ -32,6 +32,9 @@ export interface ProductData {
 
   /** Список шильдиков. */
   badges?: BadgeProps[];
+
+  /** Торговая марка. */
+  trademark?: { name: string; url: string };
 }
 
 export interface ProductInfoProps {
@@ -116,6 +119,16 @@ export const ProductInfo: ProductInfoComponent = ({ data, onLinkClick, children 
         color='gray87'
         data-testid='product-info:name-link'
       />
+
+      {data.trademark && (
+        <Link
+          className={cx('trademark-link')}
+          href={data.trademark.url}
+          children={data.trademark.name}
+          color='brand-blue'
+          data-testid='product-info:trademark-link'
+        />
+      )}
     </>
   );
 };

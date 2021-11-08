@@ -21,8 +21,8 @@ export default {
 const product: ProductData = {
   name: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, nulla.',
   url: 'https://sima-land.ru',
-  price: 1200,
-  oldPrice: 1450,
+  price: 1200000,
+  oldPrice: 1450000,
   currencyGrapheme: '₽',
   imageSrc: 'https://picsum.photos/240',
   badges: [
@@ -31,7 +31,12 @@ const product: ProductData = {
     { color: '#2962ff', fields: [{ type: 'text', value: 'Товар месяца' }] },
     { color: '#00b8d4', fields: [{ type: 'text', value: 'Акция' }] },
   ],
+  trademark: {
+    name: 'ART UZOR Predictable trademark name here!',
+    url: 'https://sima-land.ru',
+  },
 };
+
 const variants: Array<React.CSSProperties> = [
   { width: '240px' },
   { width: '180px', marginLeft: '32px' },

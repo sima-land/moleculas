@@ -41,6 +41,10 @@ exports[`<ProductCarousel /> should handle hover card link clicks without item "
                 "name": "Ткань тюлевая, ширина 300 см, сетка",
                 "oldPrice": undefined,
                 "price": 495,
+                "trademark": Object {
+                  "name": "Торговая марка \\"Сима-ленд\\"",
+                  "url": "https://www.sima-land.ru/",
+                },
                 "url": "https://www.sima-land.ru/",
               },
             },
@@ -287,6 +291,13 @@ exports[`<ProductCarousel /> should handle hover card link clicks without item "
                           href="https://www.sima-land.ru/"
                         >
                           Ткань тюлевая, ширина 300 см, сетка
+                        </a>
+                        <a
+                          class="link trademark-link brand-blue"
+                          data-testid="product-info:trademark-link"
+                          href="https://www.sima-land.ru/"
+                        >
+                          Торговая марка "Сима-ленд"
                         </a>
                       </div>
                       <div
@@ -748,6 +759,10 @@ exports[`<ProductCarousel /> should handle hover card link clicks without item "
                         "name": "Ткань тюлевая, ширина 300 см, сетка",
                         "oldPrice": undefined,
                         "price": 495,
+                        "trademark": Object {
+                          "name": "Торговая марка \\"Сима-ленд\\"",
+                          "url": "https://www.sima-land.ru/",
+                        },
                         "url": "https://www.sima-land.ru/",
                       }
                     }
@@ -798,6 +813,20 @@ exports[`<ProductCarousel /> should handle hover card link clicks without item "
                         href="https://www.sima-land.ru/"
                       >
                         Ткань тюлевая, ширина 300 см, сетка
+                      </a>
+                    </ForwardRef(Link)>
+                    <ForwardRef(Link)
+                      className="trademark-link"
+                      color="brand-blue"
+                      data-testid="product-info:trademark-link"
+                      href="https://www.sima-land.ru/"
+                    >
+                      <a
+                        className="link trademark-link brand-blue"
+                        data-testid="product-info:trademark-link"
+                        href="https://www.sima-land.ru/"
+                      >
+                        Торговая марка "Сима-ленд"
                       </a>
                     </ForwardRef(Link)>
                   </ProductInfo>
@@ -1688,6 +1717,10 @@ exports[`<ProductCarousel /> should handle hover card link clicks without item "
           "name": "Ткань тюлевая, ширина 300 см, сетка",
           "oldPrice": undefined,
           "price": 495,
+          "trademark": Object {
+            "name": "Торговая марка \\"Сима-ленд\\"",
+            "url": "https://www.sima-land.ru/",
+          },
           "url": "https://www.sima-land.ru/",
         }
       }
@@ -1730,6 +1763,13 @@ exports[`<ProductCarousel /> should handle hover card link clicks without item "
             >
               Ткань тюлевая, ширина 300 см, сетка
             </a>
+            <a
+              class="link trademark-link brand-blue"
+              data-testid="product-info:trademark-link"
+              href="https://www.sima-land.ru/"
+            >
+              Торговая марка "Сима-ленд"
+            </a>
           </div>,
         }
       }
@@ -1743,6 +1783,10 @@ exports[`<ProductCarousel /> should handle hover card link clicks without item "
             "name": "Ткань тюлевая, ширина 300 см, сетка",
             "oldPrice": undefined,
             "price": 495,
+            "trademark": Object {
+              "name": "Торговая марка \\"Сима-ленд\\"",
+              "url": "https://www.sima-land.ru/",
+            },
             "url": "https://www.sima-land.ru/",
           }
         }
@@ -1762,6 +1806,10 @@ exports[`<ProductCarousel /> should handle hover card link clicks without item "
                 "name": "Ткань тюлевая, ширина 300 см, сетка",
                 "oldPrice": undefined,
                 "price": 495,
+                "trademark": Object {
+                  "name": "Торговая марка \\"Сима-ленд\\"",
+                  "url": "https://www.sima-land.ru/",
+                },
                 "url": "https://www.sima-land.ru/",
               }
             }
@@ -1863,6 +1911,20 @@ exports[`<ProductCarousel /> should handle hover card link clicks without item "
                 Ткань тюлевая, ширина 300 см, сетка
               </a>
             </ForwardRef(Link)>
+            <ForwardRef(Link)
+              className="trademark-link"
+              color="brand-blue"
+              data-testid="product-info:trademark-link"
+              href="https://www.sima-land.ru/"
+            >
+              <a
+                className="link trademark-link brand-blue"
+                data-testid="product-info:trademark-link"
+                href="https://www.sima-land.ru/"
+              >
+                Торговая марка "Сима-ленд"
+              </a>
+            </ForwardRef(Link)>
           </ProductInfo>
         </div>
       </ForwardRef>
@@ -1911,6 +1973,10 @@ exports[`<ProductCarousel /> should handle item "onLinkClick" prop missing 1`] =
                 "name": "Ткань тюлевая, ширина 300 см, сетка",
                 "oldPrice": undefined,
                 "price": 495,
+                "trademark": Object {
+                  "name": "Торговая марка \\"Сима-ленд\\"",
+                  "url": "https://www.sima-land.ru/",
+                },
                 "url": "https://www.sima-land.ru/",
               },
               "onLinkClick": undefined,
@@ -2166,6 +2232,13 @@ exports[`<ProductCarousel /> should handle item "onLinkClick" prop missing 1`] =
                           href="https://www.sima-land.ru/"
                         >
                           Ткань тюлевая, ширина 300 см, сетка
+                        </a>
+                        <a
+                          class="link trademark-link brand-blue"
+                          data-testid="product-info:trademark-link"
+                          href="https://www.sima-land.ru/"
+                        >
+                          Торговая марка "Сима-ленд"
                         </a>
                       </div>
                       <div
@@ -2627,6 +2700,10 @@ exports[`<ProductCarousel /> should handle item "onLinkClick" prop missing 1`] =
                         "name": "Ткань тюлевая, ширина 300 см, сетка",
                         "oldPrice": undefined,
                         "price": 495,
+                        "trademark": Object {
+                          "name": "Торговая марка \\"Сима-ленд\\"",
+                          "url": "https://www.sima-land.ru/",
+                        },
                         "url": "https://www.sima-land.ru/",
                       }
                     }
@@ -2677,6 +2754,20 @@ exports[`<ProductCarousel /> should handle item "onLinkClick" prop missing 1`] =
                         href="https://www.sima-land.ru/"
                       >
                         Ткань тюлевая, ширина 300 см, сетка
+                      </a>
+                    </ForwardRef(Link)>
+                    <ForwardRef(Link)
+                      className="trademark-link"
+                      color="brand-blue"
+                      data-testid="product-info:trademark-link"
+                      href="https://www.sima-land.ru/"
+                    >
+                      <a
+                        className="link trademark-link brand-blue"
+                        data-testid="product-info:trademark-link"
+                        href="https://www.sima-land.ru/"
+                      >
+                        Торговая марка "Сима-ленд"
                       </a>
                     </ForwardRef(Link)>
                   </ProductInfo>
@@ -3601,6 +3692,10 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                 "name": "Ткань тюлевая, ширина 300 см, сетка",
                 "oldPrice": undefined,
                 "price": 495,
+                "trademark": Object {
+                  "name": "Торговая марка \\"Сима-ленд\\"",
+                  "url": "https://www.sima-land.ru/",
+                },
                 "url": "https://www.sima-land.ru/",
               },
             },
@@ -3847,6 +3942,13 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                           href="https://www.sima-land.ru/"
                         >
                           Ткань тюлевая, ширина 300 см, сетка
+                        </a>
+                        <a
+                          class="link trademark-link brand-blue"
+                          data-testid="product-info:trademark-link"
+                          href="https://www.sima-land.ru/"
+                        >
+                          Торговая марка "Сима-ленд"
                         </a>
                       </div>
                       <div
@@ -4308,6 +4410,10 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                         "name": "Ткань тюлевая, ширина 300 см, сетка",
                         "oldPrice": undefined,
                         "price": 495,
+                        "trademark": Object {
+                          "name": "Торговая марка \\"Сима-ленд\\"",
+                          "url": "https://www.sima-land.ru/",
+                        },
                         "url": "https://www.sima-land.ru/",
                       }
                     }
@@ -4358,6 +4464,20 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                         href="https://www.sima-land.ru/"
                       >
                         Ткань тюлевая, ширина 300 см, сетка
+                      </a>
+                    </ForwardRef(Link)>
+                    <ForwardRef(Link)
+                      className="trademark-link"
+                      color="brand-blue"
+                      data-testid="product-info:trademark-link"
+                      href="https://www.sima-land.ru/"
+                    >
+                      <a
+                        className="link trademark-link brand-blue"
+                        data-testid="product-info:trademark-link"
+                        href="https://www.sima-land.ru/"
+                      >
+                        Торговая марка "Сима-ленд"
                       </a>
                     </ForwardRef(Link)>
                   </ProductInfo>
@@ -5269,6 +5389,10 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                 "name": "Ткань тюлевая, ширина 300 см, сетка",
                 "oldPrice": undefined,
                 "price": 495,
+                "trademark": Object {
+                  "name": "Торговая марка \\"Сима-ленд\\"",
+                  "url": "https://www.sima-land.ru/",
+                },
                 "url": "https://www.sima-land.ru/",
               },
             },
@@ -5515,6 +5639,13 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                           href="https://www.sima-land.ru/"
                         >
                           Ткань тюлевая, ширина 300 см, сетка
+                        </a>
+                        <a
+                          class="link trademark-link brand-blue"
+                          data-testid="product-info:trademark-link"
+                          href="https://www.sima-land.ru/"
+                        >
+                          Торговая марка "Сима-ленд"
                         </a>
                       </div>
                       <div
@@ -5976,6 +6107,10 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         "name": "Ткань тюлевая, ширина 300 см, сетка",
                         "oldPrice": undefined,
                         "price": 495,
+                        "trademark": Object {
+                          "name": "Торговая марка \\"Сима-ленд\\"",
+                          "url": "https://www.sima-land.ru/",
+                        },
                         "url": "https://www.sima-land.ru/",
                       }
                     }
@@ -6026,6 +6161,20 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         href="https://www.sima-land.ru/"
                       >
                         Ткань тюлевая, ширина 300 см, сетка
+                      </a>
+                    </ForwardRef(Link)>
+                    <ForwardRef(Link)
+                      className="trademark-link"
+                      color="brand-blue"
+                      data-testid="product-info:trademark-link"
+                      href="https://www.sima-land.ru/"
+                    >
+                      <a
+                        className="link trademark-link brand-blue"
+                        data-testid="product-info:trademark-link"
+                        href="https://www.sima-land.ru/"
+                      >
+                        Торговая марка "Сима-ленд"
                       </a>
                     </ForwardRef(Link)>
                   </ProductInfo>
@@ -6939,6 +7088,10 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                 "name": "Ткань тюлевая, ширина 300 см, сетка",
                 "oldPrice": undefined,
                 "price": 495,
+                "trademark": Object {
+                  "name": "Торговая марка \\"Сима-ленд\\"",
+                  "url": "https://www.sima-land.ru/",
+                },
                 "url": "https://www.sima-land.ru/",
               },
             },
@@ -7185,6 +7338,13 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                           href="https://www.sima-land.ru/"
                         >
                           Ткань тюлевая, ширина 300 см, сетка
+                        </a>
+                        <a
+                          class="link trademark-link brand-blue"
+                          data-testid="product-info:trademark-link"
+                          href="https://www.sima-land.ru/"
+                        >
+                          Торговая марка "Сима-ленд"
                         </a>
                       </div>
                       <div
@@ -7646,6 +7806,10 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         "name": "Ткань тюлевая, ширина 300 см, сетка",
                         "oldPrice": undefined,
                         "price": 495,
+                        "trademark": Object {
+                          "name": "Торговая марка \\"Сима-ленд\\"",
+                          "url": "https://www.sima-land.ru/",
+                        },
                         "url": "https://www.sima-land.ru/",
                       }
                     }
@@ -7696,6 +7860,20 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         href="https://www.sima-land.ru/"
                       >
                         Ткань тюлевая, ширина 300 см, сетка
+                      </a>
+                    </ForwardRef(Link)>
+                    <ForwardRef(Link)
+                      className="trademark-link"
+                      color="brand-blue"
+                      data-testid="product-info:trademark-link"
+                      href="https://www.sima-land.ru/"
+                    >
+                      <a
+                        className="link trademark-link brand-blue"
+                        data-testid="product-info:trademark-link"
+                        href="https://www.sima-land.ru/"
+                      >
+                        Торговая марка "Сима-ленд"
                       </a>
                     </ForwardRef(Link)>
                   </ProductInfo>

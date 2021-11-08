@@ -32,10 +32,30 @@ const exampleData: ProductInfoProps['data'] = {
 
 export const Primary = () => (
   <div style={{ width: '240px', border: '20px solid #ddd' }}>
+    <ProductInfo data={exampleData} />
+  </div>
+);
+
+export const OnImageContent = () => (
+  <div style={{ width: '240px', border: '20px solid #ddd' }}>
     <ProductInfo data={exampleData}>
       <ProductInfo.OnImage>
         <WishButton style={{ position: 'absolute', top: 8, right: 8 }} />
       </ProductInfo.OnImage>
     </ProductInfo>
+  </div>
+);
+
+export const WithTrademark = () => (
+  <div style={{ width: '240px', border: '20px solid #ddd' }}>
+    <ProductInfo
+      data={{
+        ...exampleData,
+        trademark: {
+          name: 'ART UZOR Predictable trademark name here!',
+          url: 'https://sima-land.ru',
+        },
+      }}
+    ></ProductInfo>
   </div>
 );
