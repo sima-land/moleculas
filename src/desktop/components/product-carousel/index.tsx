@@ -81,7 +81,7 @@ export const ProductCarousel = ({
   }, []);
 
   // вычисляем ширину элемента карусели для позиционирования стрелок
-  const itemWidth = useChildWidth(sectionRef, `.${cx('item')}`, []);
+  const itemWidth = useChildWidth(sectionRef, `.${cx('item')}`, [items.length]);
 
   // инициируем загрузку данных, когда компонент почти попал в зону видимости
   useViewport(stubRef, onNeedRequest, {
