@@ -2,15 +2,15 @@ const path = require('path');
 const svgrOptions = require('../svgr.config');
 
 module.exports = ({ config }) => {
-  const baseRules = config.module.rules.map(
-    rule => (Array.isArray(rule.test) ? rule.test.some(item => item.test('.svg')) : rule.test.test('.svg'))
+  const baseRules = config.module.rules.map(rule =>
+    (Array.isArray(rule.test) ? rule.test.some(item => item.test('.svg')) : rule.test.test('.svg'))
       ? {
-        ...rule,
+          ...rule,
 
-        // исключаем svg так как он будет обрабатываться другим загрузчиком (ниже)
-        exclude: /\.svg$/
-      }
-      : rule
+          // исключаем svg так как он будет обрабатываться другим загрузчиком (ниже)
+          exclude: /\.svg$/,
+        }
+      : rule,
   );
 
   return {
@@ -24,11 +24,7 @@ module.exports = ({ config }) => {
         {
           test: /\.scss$/,
           exclude: /\.module\.scss$/,
-          use: [
-            'style-loader',
-            'css-loader',
-            'sass-loader',
-          ],
+          use: ['style-loader', 'css-loader', 'sass-loader'],
         },
 
         // css-modules
@@ -66,10 +62,10 @@ module.exports = ({ config }) => {
           use: [
             {
               loader: 'file-loader',
-              query: {
-                name: '[name].[ext]'
-              }
-            }
+              options: {
+                name: '[name].[ext]',
+              },
+            },
           ],
           include: path.resolve(__dirname, '../'),
         },
