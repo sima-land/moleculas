@@ -9,11 +9,11 @@
 # testing
 /coverage
 
-# production
-/build
+# library build
+build
 
-# build storybook
-.build-storybook/storybook
+# storybook build
+build-storybook
 
 # misc
 .DS_Store

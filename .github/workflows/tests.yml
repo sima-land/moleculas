@@ -19,13 +19,13 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Install dependencies
-        run: yarn
+        run: npm ci
 
       - name: Lint
         run: |
-          yarn lint:styles
-          yarn lint:scripts
-          yarn prettier:check
+          npm run lint:styles
+          npm run lint:scripts
+          npm run prettier:check
 
       - name: Test
-        run: yarn coverage
+        run: npm run coverage

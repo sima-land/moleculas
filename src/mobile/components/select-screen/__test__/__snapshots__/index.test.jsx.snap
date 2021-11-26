@@ -58,7 +58,6 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                   >
                     <button
                       aria-hidden="true"
-                      aria-label="Закрыть Валюта"
                       class="button icon stub"
                       type="button"
                     />
@@ -83,6 +82,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                       aria-hidden="false"
                       aria-label="Закрыть Валюта"
                       class="button icon"
+                      data-testid="screen:close"
                       type="button"
                     >
                       <svg
@@ -233,6 +233,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                 Object {
                   "end": Object {
                     "aria-label": "Закрыть Валюта",
+                    "data-testid": "screen:close",
                     "icon": Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "render": [Function],
@@ -260,6 +261,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть Валюта"
+                      data-testid="screen:close"
                       icon={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -271,9 +273,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                     >
                       <button
                         aria-hidden={true}
-                        aria-label="Закрыть Валюта"
                         className="button icon stub"
-                        onClick={[Function]}
                         type="button"
                       />
                     </NavButton>
@@ -296,6 +296,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть Валюта"
+                      data-testid="screen:close"
                       icon={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -308,6 +309,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                         aria-hidden={false}
                         aria-label="Закрыть Валюта"
                         className="button icon"
+                        data-testid="screen:close"
                         onClick={[Function]}
                         type="button"
                       >
@@ -521,7 +523,6 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                   >
                     <button
                       aria-hidden="true"
-                      aria-label="Закрыть Валюта"
                       class="button icon stub"
                       type="button"
                     />
@@ -546,6 +547,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       aria-hidden="false"
                       aria-label="Закрыть Валюта"
                       class="button icon"
+                      data-testid="screen:close"
                       type="button"
                     >
                       <svg
@@ -666,6 +668,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                 Object {
                   "end": Object {
                     "aria-label": "Закрыть Валюта",
+                    "data-testid": "screen:close",
                     "icon": Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "render": [Function],
@@ -693,6 +696,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть Валюта"
+                      data-testid="screen:close"
                       icon={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -704,9 +708,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                     >
                       <button
                         aria-hidden={true}
-                        aria-label="Закрыть Валюта"
                         className="button icon stub"
-                        onClick={[Function]}
                         type="button"
                       />
                     </NavButton>
@@ -729,6 +731,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть Валюта"
+                      data-testid="screen:close"
                       icon={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -741,6 +744,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                         aria-hidden={false}
                         aria-label="Закрыть Валюта"
                         className="button icon"
+                        data-testid="screen:close"
                         onClick={[Function]}
                         type="button"
                       >
@@ -954,7 +958,6 @@ exports[`<SelectScreen /> should handle props 1`] = `
                   >
                     <button
                       aria-hidden="true"
-                      aria-label="Закрыть Районы"
                       class="button icon stub"
                       type="button"
                     />
@@ -979,6 +982,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       aria-hidden="false"
                       aria-label="Закрыть Районы"
                       class="button icon"
+                      data-testid="screen:close"
                       type="button"
                     >
                       <svg
@@ -1120,6 +1124,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                 Object {
                   "end": Object {
                     "aria-label": "Закрыть Районы",
+                    "data-testid": "screen:close",
                     "icon": Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "render": [Function],
@@ -1147,6 +1152,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть Районы"
+                      data-testid="screen:close"
                       icon={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -1158,9 +1164,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                     >
                       <button
                         aria-hidden={true}
-                        aria-label="Закрыть Районы"
                         className="button icon stub"
-                        onClick={[Function]}
                         type="button"
                       />
                     </NavButton>
@@ -1183,6 +1187,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть Районы"
+                      data-testid="screen:close"
                       icon={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -1195,6 +1200,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                         aria-hidden={false}
                         aria-label="Закрыть Районы"
                         className="button icon"
+                        data-testid="screen:close"
                         onClick={[Function]}
                         type="button"
                       >
@@ -1425,7 +1431,6 @@ exports[`<SelectScreen /> should render without props 1`] = `
                   >
                     <button
                       aria-hidden="true"
-                      aria-label="Закрыть"
                       class="button icon stub"
                       type="button"
                     />
@@ -1444,6 +1449,7 @@ exports[`<SelectScreen /> should render without props 1`] = `
                       aria-hidden="false"
                       aria-label="Закрыть"
                       class="button icon"
+                      data-testid="screen:close"
                       type="button"
                     >
                       <svg
@@ -1508,6 +1514,7 @@ exports[`<SelectScreen /> should render without props 1`] = `
                 Object {
                   "end": Object {
                     "aria-label": "Закрыть",
+                    "data-testid": "screen:close",
                     "icon": Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "render": [Function],
@@ -1534,6 +1541,7 @@ exports[`<SelectScreen /> should render without props 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть"
+                      data-testid="screen:close"
                       icon={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -1545,9 +1553,7 @@ exports[`<SelectScreen /> should render without props 1`] = `
                     >
                       <button
                         aria-hidden={true}
-                        aria-label="Закрыть"
                         className="button icon stub"
-                        onClick={[Function]}
                         type="button"
                       />
                     </NavButton>
@@ -1564,6 +1570,7 @@ exports[`<SelectScreen /> should render without props 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть"
+                      data-testid="screen:close"
                       icon={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -1576,6 +1583,7 @@ exports[`<SelectScreen /> should render without props 1`] = `
                         aria-hidden={false}
                         aria-label="Закрыть"
                         className="button icon"
+                        data-testid="screen:close"
                         onClick={[Function]}
                         type="button"
                       >
