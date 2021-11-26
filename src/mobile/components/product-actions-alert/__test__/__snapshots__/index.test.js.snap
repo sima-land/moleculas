@@ -41,6 +41,7 @@ exports[`ProductActionsContent renders properly 1`] = `
           <div>
             <div
               class="overlay"
+              data-testid="alert:overlay"
               style="z-index: 100;"
             >
               <div
@@ -146,6 +147,8 @@ exports[`ProductActionsContent renders properly 1`] = `
         >
           <div
             className="overlay"
+            data-testid="alert:overlay"
+            onClick={[Function]}
             style={
               Object {
                 "zIndex": 100,

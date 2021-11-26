@@ -40,7 +40,6 @@ exports[`<PersonScreen /> should handle props 1`] = `
                   >
                     <button
                       aria-hidden="true"
-                      aria-label="Закрыть"
                       class="button icon stub"
                       type="button"
                     />
@@ -59,6 +58,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                       aria-hidden="false"
                       aria-label="Закрыть"
                       class="button icon"
+                      data-testid="screen:close"
                       type="button"
                     >
                       <svg
@@ -325,6 +325,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                 Object {
                   "end": Object {
                     "aria-label": "Закрыть",
+                    "data-testid": "screen:close",
                     "icon": Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "render": [Function],
@@ -351,6 +352,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть"
+                      data-testid="screen:close"
                       icon={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -362,9 +364,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                     >
                       <button
                         aria-hidden={true}
-                        aria-label="Закрыть"
                         className="button icon stub"
-                        onClick={[Function]}
                         type="button"
                       />
                     </NavButton>
@@ -381,6 +381,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть"
+                      data-testid="screen:close"
                       icon={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -393,6 +394,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                         aria-hidden={false}
                         aria-label="Закрыть"
                         className="button icon"
+                        data-testid="screen:close"
                         onClick={[Function]}
                         type="button"
                       >
@@ -841,7 +843,6 @@ exports[`<PersonScreen /> should render with name 1`] = `
                   >
                     <button
                       aria-hidden="true"
-                      aria-label="Закрыть"
                       class="button icon stub"
                       type="button"
                     />
@@ -860,6 +861,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                       aria-hidden="false"
                       aria-label="Закрыть"
                       class="button icon"
+                      data-testid="screen:close"
                       type="button"
                     >
                       <svg
@@ -1030,6 +1032,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                 Object {
                   "end": Object {
                     "aria-label": "Закрыть",
+                    "data-testid": "screen:close",
                     "icon": Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "render": [Function],
@@ -1056,6 +1059,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть"
+                      data-testid="screen:close"
                       icon={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -1067,9 +1071,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                     >
                       <button
                         aria-hidden={true}
-                        aria-label="Закрыть"
                         className="button icon stub"
-                        onClick={[Function]}
                         type="button"
                       />
                     </NavButton>
@@ -1086,6 +1088,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                   >
                     <NavButton
                       aria-label="Закрыть"
+                      data-testid="screen:close"
                       icon={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -1098,6 +1101,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                         aria-hidden={false}
                         aria-label="Закрыть"
                         className="button icon"
+                        data-testid="screen:close"
                         onClick={[Function]}
                         type="button"
                       >
