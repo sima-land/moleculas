@@ -8,7 +8,7 @@ import cn from 'classnames';
  * @return Элемент.
  */
 export const PromotionCardPlaceholder = (props: React.HTMLAttributes<HTMLDivElement>) => (
-  <div {...props}>
+  <div data-testid='promotion-card:placeholder' {...props}>
     <div className={cn(styles.part, styles.banner)} />
     <div className={cn(styles.part, styles.text)} />
     <div className={cn(styles.part, styles.text)} />

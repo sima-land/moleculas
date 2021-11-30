@@ -11,6 +11,7 @@ exports[`<PromotionCard /> should handle "promotionType" prop 1`] = `
 >
   <div
     className="root"
+    data-testid="promotion-card"
   >
     <a
       className="link"
@@ -33,6 +34,7 @@ exports[`<PromotionCard /> should handle "promotionType" prop 1`] = `
           >
             <div
               className="discount"
+              data-testid="promotion-card:banner-discount"
             >
               скидки до
               <div
@@ -67,6 +69,7 @@ exports[`<PromotionCard /> should handle "promotionType" prop 1`] = `
         >
           <time
             className="timer"
+            data-testid="promotion-card:due-date"
           >
             <ForwardRef(WatchSVG)
               className="timer-svg"
@@ -95,6 +98,7 @@ exports[`<PromotionCard /> should handle "promotionType" prop 1`] = `
           </time>
           <div
             className="postfix"
+            data-testid="promotion-card:postfix"
           >
             Скидка за объём
           </div>
@@ -107,7 +111,9 @@ exports[`<PromotionCard /> should handle "promotionType" prop 1`] = `
 
 exports[`<PromotionCard /> should have placeholder component property 1`] = `
 <PromotionCardPlaceholder>
-  <div>
+  <div
+    data-testid="promotion-card:placeholder"
+  >
     <div
       className="part banner"
     />
@@ -130,6 +136,7 @@ exports[`<PromotionCard /> should renders correctly 1`] = `
 >
   <div
     className="root"
+    data-testid="promotion-card"
   >
     <a
       className="link"
@@ -165,6 +172,7 @@ exports[`<PromotionCard /> should renders correctly 1`] = `
         >
           <time
             className="timer"
+            data-testid="promotion-card:due-date"
           >
             <ForwardRef(WatchSVG)
               className="timer-svg"

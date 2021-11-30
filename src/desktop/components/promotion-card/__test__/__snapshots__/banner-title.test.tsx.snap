@@ -29,6 +29,7 @@ exports[`<BannerTitle /> should renders correctly 3`] = `
     >
       <div
         className="timer"
+        data-testid="promotion-card:banner-timer"
       >
         <TimerPart
           label="дней"
@@ -47,13 +48,13 @@ exports[`<BannerTitle /> should renders correctly 3`] = `
             </div>
           </div>
         </TimerPart>
-        <Divider>
+        <TimerDivider>
           <div
             className="divider"
           >
             :
           </div>
-        </Divider>
+        </TimerDivider>
         <TimerPart
           label="часов"
           value={0}
@@ -71,13 +72,13 @@ exports[`<BannerTitle /> should renders correctly 3`] = `
             </div>
           </div>
         </TimerPart>
-        <Divider>
+        <TimerDivider>
           <div
             className="divider"
           >
             :
           </div>
-        </Divider>
+        </TimerDivider>
         <TimerPart
           label="минут"
           value={0}
@@ -114,6 +115,7 @@ exports[`<BannerTitle /> should renders correctly 5`] = `
 >
   <div
     className="discount"
+    data-testid="promotion-card:banner-discount"
   >
     скидки до
     <div
