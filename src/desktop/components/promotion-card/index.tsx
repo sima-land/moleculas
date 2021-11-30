@@ -31,6 +31,9 @@ export interface PromotionCardProps extends React.HTMLAttributes<HTMLDivElement>
 
   /** Скидка за объем, указывается при соответствующем типе акции. */
   volumeDiscount?: number;
+
+  /** Идентификатор для систем автоматизированного тестирования. */
+  'data-testid'?: string;
 }
 
 const PromotionName: Record<PromotionType, string> = {
@@ -57,6 +60,7 @@ export const PromotionCard = ({
 
   // div props
   className,
+  'data-testid': testId = 'promotion-card',
   ...restProps
 }: PromotionCardProps) => {
   // время нужно выводить только на клиенте - вводим состояние
@@ -67,7 +71,7 @@ export const PromotionCard = ({
   }, []);
 
   return (
-    <div className={classNames(className, styles.root)} {...restProps}>
+    <div className={classNames(className, styles.root)} {...restProps} data-testid={testId}>
       <a href={href} className={styles.link}>
         <div className={styles.banner}>
           <img src={imageSrc} alt={title} className={styles.image} />
@@ -92,13 +96,17 @@ export const PromotionCard = ({
 
           <div className={styles.footer}>
             {mounted && (
-              <time className={styles.timer}>
+              <time className={styles.timer} data-testid='promotion-card:due-date'>
                 <WatchSVG className={styles['timer-svg']} />
                 <Estimate dueDate={dueDate} />
               </time>
             )}
 
-            {postfix && <div className={styles.postfix}>{postfix}</div>}
+            {postfix && (
+              <div data-testid='promotion-card:postfix' className={styles.postfix}>
+                {postfix}
+              </div>
+            )}
           </div>
         </div>
       </a>

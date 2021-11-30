@@ -25,7 +25,7 @@ export const BannerTitle = ({ promotionType, volumeDiscount, dueDate }: BannerTi
     case 'volume-discount':
       if (volumeDiscount) {
         content = (
-          <div className={styles.discount}>
+          <div className={styles.discount} data-testid='promotion-card:banner-discount'>
             скидки до
             <div className={styles.percent}>{volumeDiscount}%</div>
           </div>
@@ -42,11 +42,11 @@ export const CustomTimer = ({ dueDate }: { dueDate: Date }) => (
     date={formatISO(dueDate)}
     timeout={1000 * 60}
     format={({ days, hours, minutes }: any) => (
-      <div className={styles.timer}>
+      <div className={styles.timer} data-testid='promotion-card:banner-timer'>
         <TimerPart label='дней' value={Math.min(99, days)} />
-        <Divider />
+        <TimerDivider />
         <TimerPart label='часов' value={hours % 24} />
-        <Divider />
+        <TimerDivider />
         <TimerPart label='минут' value={minutes % 60} />
       </div>
     )}
@@ -60,4 +60,4 @@ const TimerPart = ({ label, value }: { label: string; value: number }) => (
   </div>
 );
 
-const Divider = () => <div className={styles.divider}>:</div>;
+const TimerDivider = () => <div className={styles.divider}>:</div>;

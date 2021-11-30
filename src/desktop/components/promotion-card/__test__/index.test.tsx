@@ -19,6 +19,7 @@ describe('<PromotionCard />', () => {
     );
 
     expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find('[data-testid="promotion-card"]')).toHaveLength(1);
   });
 
   it('should handle "promotionType" prop', () => {
@@ -34,11 +35,14 @@ describe('<PromotionCard />', () => {
     );
 
     expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find('[data-testid="promotion-card:postfix"]')).toHaveLength(1);
+    expect(wrapper.find('[data-testid="promotion-card:banner-discount"]')).toHaveLength(1);
   });
 
   it('should have placeholder component property', () => {
     const wrapper = mount(<PromotionCard.Placeholder />);
 
     expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find('[data-testid="promotion-card:placeholder"]')).toHaveLength(1);
   });
 });
