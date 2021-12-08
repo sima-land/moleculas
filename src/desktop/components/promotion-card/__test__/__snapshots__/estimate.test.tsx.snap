@@ -1,17 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Estimate /> should renders correctly 1`] = `
-<Estimate
-  dueDate={2026-01-01T09:00:00.000Z}
->
-  До 01.00.2026
-</Estimate>
+exports[`<Estimate /> should renders correctly, variants [0] 1`] = `
+<div>
+  До 08.12.2026
+</div>
 `;
 
-exports[`<Estimate /> should renders correctly 2`] = `
-<Estimate
-  dueDate={2021-01-08T09:00:00.000Z}
->
-  До 8 янв
-</Estimate>
+exports[`<Estimate /> should renders correctly, variants [1] 1`] = `
+<div>
+  До 15 дек
+</div>
 `;
