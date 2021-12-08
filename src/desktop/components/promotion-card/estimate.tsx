@@ -28,7 +28,9 @@ export const Estimate = ({ dueDate }: EstimateProps) => {
   let content: React.ReactNode = null;
 
   if (getYear(dueDate) !== getYear(now)) {
-    const text = [getDate, getMonth, getYear].map(fn => toTimePart(fn(dueDate))).join('.');
+    const text = [getDate, (d: Date) => getMonth(d) + 1, getYear]
+      .map(fn => toTimePart(fn(dueDate)))
+      .join('.');
 
     content = `До ${text}`;
   } else {
