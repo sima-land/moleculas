@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { Estimate, EstimateProps } from '../estimate';
+import { Estimate } from '../estimate';
 import { addDays, addYears } from 'date-fns';
 
 describe('<Estimate />', () => {
@@ -9,24 +9,22 @@ describe('<Estimate />', () => {
     jest.setSystemTime(new Date('2021-01-01T09:00:00'));
   });
 
-  const variants: EstimateProps[] = [
+  it('should always be UTC', () => {
+    expect(new Date().getTimezoneOffset()).toBe(0);
+  });
+
+  it('should renders correctly small time period', () => {
     // целевая дата в текущем году
-    {
-      dueDate: addYears(new Date(), 5),
-    },
+    const { container } = render(<Estimate dueDate={addDays(new Date(), 7)} />);
 
+    expect(container.textContent).toContain('До 8 янв');
+  });
+
+  it('should renders correctly large time period', () => {
     // целевая дата в следующем году или позже
-    {
-      dueDate: addDays(new Date(), 7),
-    },
-  ];
+    const { container } = render(<Estimate dueDate={addYears(new Date(), 5)} />);
 
-  variants.forEach((variant, index) => {
-    it(`should renders correctly, variants [${index}]`, () => {
-      const { container } = render(<Estimate {...variant} />);
-
-      expect(container).toMatchSnapshot();
-    });
+    expect(container.textContent).toContain('До 01.01.2026');
   });
 
   it('should renders month number correctly for large dates', () => {
