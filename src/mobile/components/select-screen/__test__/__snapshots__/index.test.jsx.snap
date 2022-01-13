@@ -34,441 +34,143 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
   }
   title="Валюта"
 >
-  <Screen
-    title="Валюта"
-    withDivideHeader={false}
-  >
-    <Portal>
-      <Portal
-        containerInfo={
-          <div>
-            <div
-              class="screen full-width"
-              style="z-index: 300;"
-            >
-              <div
-                class="nav-bar"
-                style="height: 56px;"
-              >
-                <div
-                  class="button-groups"
-                >
-                  <div
-                    class="group"
-                  >
-                    <button
-                      aria-hidden="true"
-                      class="button icon stub"
-                      type="button"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="main"
-                >
-                  <div
-                    class="title truncate"
-                  >
-                    Валюта
-                  </div>
-                </div>
-                <div
-                  class="button-groups end"
-                >
-                  <div
-                    class="group"
-                  >
-                    <button
-                      aria-hidden="false"
-                      aria-label="Закрыть Валюта"
-                      class="button icon"
-                      data-testid="screen:close"
-                      type="button"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="svg"
-                        fill="#212121"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                      >
-                        <path
-                          clip-rule="evenodd"
-                          d="M20.707 3.293a1 1 0 010 1.414l-16 16a1 1 0 01-1.414-1.414l16-16a1 1 0 011.414 0z"
-                          fill-rule="evenodd"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M3.293 3.293a1 1 0 011.414 0l16 16a1 1 0 01-1.414 1.414l-16-16a1 1 0 010-1.414z"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="content full-width"
-              >
-                <div
-                  class="layout mobile disabled-mxs disabled-ms"
-                >
-                  <div
-                    class="container"
-                  >
-                    <button
-                      class="item"
-                    >
-                      <div
-                        class="item is-selected"
-                      >
-                        Российский рубль
-                         (
-                        RUB
-                        )
-                      </div>
-                      <svg
-                        fill="#212121"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                      >
-                        <path
-                          clip-rule="evenodd"
-                          d="M21.678 5.265a1 1 0 01.057 1.413l-12 13a1 1 0 01-1.36.103l-5-4a1 1 0 011.25-1.562l4.272 3.418L20.265 5.322a1 1 0 011.413-.057z"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </button>
-                    <button
-                      class="item"
-                    >
-                      <div
-                        class="item"
-                      >
-                        Американский доллар
-                         (
-                        USD
-                        )
-                      </div>
-                    </button>
-                    <button
-                      class="item"
-                    >
-                      <div
-                        class="item"
-                      >
-                        Единая европейская валюта
-                         (
-                        EUR
-                        )
-                      </div>
-                    </button>
-                    <button
-                      class="item"
-                    >
-                      <div
-                        class="item"
-                      >
-                        Белорусский рубль
-                         (
-                        BYN
-                        )
-                      </div>
-                    </button>
-                    <button
-                      class="item"
-                    >
-                      <div
-                        class="item"
-                      >
-                        Украинская гривна
-                         (
-                        UAH
-                        )
-                      </div>
-                    </button>
-                    <button
-                      class="item"
-                    >
-                      <div
-                        class="item"
-                      >
-                        Казахстанский тенге
-                         (
-                        KZT
-                        )
-                      </div>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+  <Screen>
+    <div
+      className="root"
+      data-testid="screen"
+      style={
+        Object {
+          "zIndex": 300,
         }
+      }
+    >
+      <ForwardRef(BodySlot)
+        key=".1"
       >
         <div
-          className="screen full-width"
-          style={
-            Object {
-              "zIndex": 300,
-            }
-          }
+          className="body"
+          data-testid="screen:body"
         >
-          <ScreenLayout
-            childrenRef={[Function]}
-            fullScrollThreshold={320}
-            onBack={[Function]}
-            onClose={[Function]}
-            title="Валюта"
-            withBackButton={false}
-            withCloseButton={true}
-            withDivideHeader={false}
-            withHeader={true}
+          <MobileLayout
+            disabledOn={
+              Array [
+                "mxs",
+                "ms",
+              ]
+            }
           >
-            <NavBar
-              bottomBordered={false}
-              buttons={
-                Object {
-                  "end": Object {
-                    "aria-label": "Закрыть Валюта",
-                    "data-testid": "screen:close",
-                    "icon": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "render": [Function],
-                    },
-                    "onClick": [Function],
-                  },
-                  "start": undefined,
-                }
-              }
-              title="Валюта"
+            <div
+              className="layout mobile disabled-mxs disabled-ms"
             >
               <div
-                className="nav-bar"
-                style={
-                  Object {
-                    "height": "56px",
-                  }
-                }
+                className="container"
               >
-                <div
-                  className="button-groups"
+                <button
+                  className="item"
+                  key="0"
+                  onClick={[Function]}
                 >
                   <div
-                    className="group"
+                    className="item is-selected"
                   >
-                    <NavButton
-                      aria-label="Закрыть Валюта"
-                      data-testid="screen:close"
-                      icon={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "render": [Function],
-                        }
-                      }
-                      onClick={[Function]}
-                      stub={true}
+                    Российский рубль
+                     (
+                    RUB
+                    )
+                  </div>
+                  <ForwardRef(CheckSVG)
+                    fill="#212121"
+                  >
+                    <svg
+                      fill="#212121"
+                      height={24}
+                      viewBox="0 0 24 24"
+                      width={24}
                     >
-                      <button
-                        aria-hidden={true}
-                        className="button icon stub"
-                        type="button"
+                      <path
+                        clipRule="evenodd"
+                        d="M21.678 5.265a1 1 0 01.057 1.413l-12 13a1 1 0 01-1.36.103l-5-4a1 1 0 011.25-1.562l4.272 3.418L20.265 5.322a1 1 0 011.413-.057z"
+                        fillRule="evenodd"
                       />
-                    </NavButton>
-                  </div>
-                </div>
-                <div
-                  className="main"
+                    </svg>
+                  </ForwardRef(CheckSVG)>
+                </button>
+                <button
+                  className="item"
+                  key="1"
+                  onClick={[Function]}
                 >
                   <div
-                    className="title truncate"
+                    className="item"
                   >
-                    Валюта
+                    Американский доллар
+                     (
+                    USD
+                    )
                   </div>
-                </div>
-                <div
-                  className="button-groups end"
+                </button>
+                <button
+                  className="item"
+                  key="2"
+                  onClick={[Function]}
                 >
                   <div
-                    className="group"
+                    className="item"
                   >
-                    <NavButton
-                      aria-label="Закрыть Валюта"
-                      data-testid="screen:close"
-                      icon={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "render": [Function],
-                        }
-                      }
-                      onClick={[Function]}
-                    >
-                      <button
-                        aria-hidden={false}
-                        aria-label="Закрыть Валюта"
-                        className="button icon"
-                        data-testid="screen:close"
-                        onClick={[Function]}
-                        type="button"
-                      >
-                        <ForwardRef(CrossSVG)
-                          aria-hidden="true"
-                          className="svg"
-                          fill="#212121"
-                        >
-                          <svg
-                            aria-hidden="true"
-                            className="svg"
-                            fill="#212121"
-                            height={24}
-                            viewBox="0 0 24 24"
-                            width={24}
-                          >
-                            <path
-                              clipRule="evenodd"
-                              d="M20.707 3.293a1 1 0 010 1.414l-16 16a1 1 0 01-1.414-1.414l16-16a1 1 0 011.414 0z"
-                              fillRule="evenodd"
-                            />
-                            <path
-                              clipRule="evenodd"
-                              d="M3.293 3.293a1 1 0 011.414 0l16 16a1 1 0 01-1.414 1.414l-16-16a1 1 0 010-1.414z"
-                              fillRule="evenodd"
-                            />
-                          </svg>
-                        </ForwardRef(CrossSVG)>
-                      </button>
-                    </NavButton>
+                    Единая европейская валюта
+                     (
+                    EUR
+                    )
                   </div>
-                </div>
+                </button>
+                <button
+                  className="item"
+                  key="3"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="item"
+                  >
+                    Белорусский рубль
+                     (
+                    BYN
+                    )
+                  </div>
+                </button>
+                <button
+                  className="item"
+                  key="4"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="item"
+                  >
+                    Украинская гривна
+                     (
+                    UAH
+                    )
+                  </div>
+                </button>
+                <button
+                  className="item"
+                  key="5"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="item"
+                  >
+                    Казахстанский тенге
+                     (
+                    KZT
+                    )
+                  </div>
+                </button>
               </div>
-            </NavBar>
-            <div
-              className="content full-width"
-            >
-              <MobileLayout
-                disabledOn={
-                  Array [
-                    "mxs",
-                    "ms",
-                  ]
-                }
-              >
-                <div
-                  className="layout mobile disabled-mxs disabled-ms"
-                >
-                  <div
-                    className="container"
-                  >
-                    <button
-                      className="item"
-                      key="0"
-                      onClick={[Function]}
-                    >
-                      <div
-                        className="item is-selected"
-                      >
-                        Российский рубль
-                         (
-                        RUB
-                        )
-                      </div>
-                      <ForwardRef(CheckSVG)
-                        fill="#212121"
-                      >
-                        <svg
-                          fill="#212121"
-                          height={24}
-                          viewBox="0 0 24 24"
-                          width={24}
-                        >
-                          <path
-                            clipRule="evenodd"
-                            d="M21.678 5.265a1 1 0 01.057 1.413l-12 13a1 1 0 01-1.36.103l-5-4a1 1 0 011.25-1.562l4.272 3.418L20.265 5.322a1 1 0 011.413-.057z"
-                            fillRule="evenodd"
-                          />
-                        </svg>
-                      </ForwardRef(CheckSVG)>
-                    </button>
-                    <button
-                      className="item"
-                      key="1"
-                      onClick={[Function]}
-                    >
-                      <div
-                        className="item"
-                      >
-                        Американский доллар
-                         (
-                        USD
-                        )
-                      </div>
-                    </button>
-                    <button
-                      className="item"
-                      key="2"
-                      onClick={[Function]}
-                    >
-                      <div
-                        className="item"
-                      >
-                        Единая европейская валюта
-                         (
-                        EUR
-                        )
-                      </div>
-                    </button>
-                    <button
-                      className="item"
-                      key="3"
-                      onClick={[Function]}
-                    >
-                      <div
-                        className="item"
-                      >
-                        Белорусский рубль
-                         (
-                        BYN
-                        )
-                      </div>
-                    </button>
-                    <button
-                      className="item"
-                      key="4"
-                      onClick={[Function]}
-                    >
-                      <div
-                        className="item"
-                      >
-                        Украинская гривна
-                         (
-                        UAH
-                        )
-                      </div>
-                    </button>
-                    <button
-                      className="item"
-                      key="5"
-                      onClick={[Function]}
-                    >
-                      <div
-                        className="item"
-                      >
-                        Казахстанский тенге
-                         (
-                        KZT
-                        )
-                      </div>
-                    </button>
-                  </div>
-                </div>
-              </MobileLayout>
             </div>
-          </ScreenLayout>
+          </MobileLayout>
         </div>
-      </Portal>
-    </Portal>
+      </ForwardRef(BodySlot)>
+    </div>
   </Screen>
 </SelectScreen>
 `;
@@ -499,419 +201,151 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
   }
   title="Валюта"
 >
-  <Screen
-    title="Валюта"
-    withDivideHeader={false}
-  >
-    <Portal>
-      <Portal
-        containerInfo={
-          <div>
-            <div
-              class="screen full-width"
-              style="z-index: 300;"
-            >
-              <div
-                class="nav-bar"
-                style="height: 56px;"
-              >
-                <div
-                  class="button-groups"
-                >
-                  <div
-                    class="group"
-                  >
-                    <button
-                      aria-hidden="true"
-                      class="button icon stub"
-                      type="button"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="main"
-                >
-                  <div
-                    class="title truncate"
-                  >
-                    Валюта
-                  </div>
-                </div>
-                <div
-                  class="button-groups end"
-                >
-                  <div
-                    class="group"
-                  >
-                    <button
-                      aria-hidden="false"
-                      aria-label="Закрыть Валюта"
-                      class="button icon"
-                      data-testid="screen:close"
-                      type="button"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="svg"
-                        fill="#212121"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                      >
-                        <path
-                          clip-rule="evenodd"
-                          d="M20.707 3.293a1 1 0 010 1.414l-16 16a1 1 0 01-1.414-1.414l16-16a1 1 0 011.414 0z"
-                          fill-rule="evenodd"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M3.293 3.293a1 1 0 011.414 0l16 16a1 1 0 01-1.414 1.414l-16-16a1 1 0 010-1.414z"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="content full-width"
-              >
-                <div
-                  class="layout mobile disabled-mxs disabled-ms"
-                >
-                  <div
-                    class="container"
-                  >
-                    <button
-                      class="item"
-                    >
-                      <span
-                        class="size-16 line-height-24 color__gray87"
-                      >
-                        Российский рубль
-                      </span>
-                    </button>
-                    <button
-                      class="item"
-                    >
-                      <span
-                        class="size-16 line-height-24 color__gray87"
-                      >
-                        Американский доллар
-                      </span>
-                    </button>
-                    <button
-                      class="item"
-                    >
-                      <span
-                        class="size-16 line-height-24 color__gray87"
-                      >
-                        Единая европейская валюта
-                      </span>
-                    </button>
-                    <button
-                      class="item"
-                    >
-                      <span
-                        class="size-16 line-height-24 color__gray87"
-                      >
-                        Белорусский рубль
-                      </span>
-                    </button>
-                    <button
-                      class="item"
-                    >
-                      <span
-                        class="size-16 line-height-24 color__gray87"
-                      >
-                        Украинская гривна
-                      </span>
-                    </button>
-                    <button
-                      class="item"
-                    >
-                      <span
-                        class="size-16 line-height-24 color__gray87"
-                      >
-                        Казахстанский тенге
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+  <Screen>
+    <div
+      className="root"
+      data-testid="screen"
+      style={
+        Object {
+          "zIndex": 300,
         }
+      }
+    >
+      <ForwardRef(BodySlot)
+        key=".1"
       >
         <div
-          className="screen full-width"
-          style={
-            Object {
-              "zIndex": 300,
-            }
-          }
+          className="body"
+          data-testid="screen:body"
         >
-          <ScreenLayout
-            childrenRef={[Function]}
-            fullScrollThreshold={320}
-            onBack={[Function]}
-            onClose={[Function]}
-            title="Валюта"
-            withBackButton={false}
-            withCloseButton={true}
-            withDivideHeader={false}
-            withHeader={true}
+          <MobileLayout
+            disabledOn={
+              Array [
+                "mxs",
+                "ms",
+              ]
+            }
           >
-            <NavBar
-              bottomBordered={false}
-              buttons={
-                Object {
-                  "end": Object {
-                    "aria-label": "Закрыть Валюта",
-                    "data-testid": "screen:close",
-                    "icon": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "render": [Function],
-                    },
-                    "onClick": [Function],
-                  },
-                  "start": undefined,
-                }
-              }
-              title="Валюта"
+            <div
+              className="layout mobile disabled-mxs disabled-ms"
             >
               <div
-                className="nav-bar"
-                style={
-                  Object {
-                    "height": "56px",
-                  }
-                }
+                className="container"
               >
-                <div
-                  className="button-groups"
+                <button
+                  className="item"
+                  key="0"
+                  onClick={[Function]}
                 >
-                  <div
-                    className="group"
+                  <ForwardRef(Text)
+                    color="gray87"
+                    lineHeight={24}
+                    size={16}
                   >
-                    <NavButton
-                      aria-label="Закрыть Валюта"
-                      data-testid="screen:close"
-                      icon={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "render": [Function],
-                        }
-                      }
-                      onClick={[Function]}
-                      stub={true}
+                    <span
+                      className="size-16 line-height-24 color__gray87"
+                      style={Object {}}
                     >
-                      <button
-                        aria-hidden={true}
-                        className="button icon stub"
-                        type="button"
-                      />
-                    </NavButton>
-                  </div>
-                </div>
-                <div
-                  className="main"
+                      Российский рубль
+                    </span>
+                  </ForwardRef(Text)>
+                </button>
+                <button
+                  className="item"
+                  key="1"
+                  onClick={[Function]}
                 >
-                  <div
-                    className="title truncate"
+                  <ForwardRef(Text)
+                    color="gray87"
+                    lineHeight={24}
+                    size={16}
                   >
-                    Валюта
-                  </div>
-                </div>
-                <div
-                  className="button-groups end"
-                >
-                  <div
-                    className="group"
-                  >
-                    <NavButton
-                      aria-label="Закрыть Валюта"
-                      data-testid="screen:close"
-                      icon={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "render": [Function],
-                        }
-                      }
-                      onClick={[Function]}
+                    <span
+                      className="size-16 line-height-24 color__gray87"
+                      style={Object {}}
                     >
-                      <button
-                        aria-hidden={false}
-                        aria-label="Закрыть Валюта"
-                        className="button icon"
-                        data-testid="screen:close"
-                        onClick={[Function]}
-                        type="button"
-                      >
-                        <ForwardRef(CrossSVG)
-                          aria-hidden="true"
-                          className="svg"
-                          fill="#212121"
-                        >
-                          <svg
-                            aria-hidden="true"
-                            className="svg"
-                            fill="#212121"
-                            height={24}
-                            viewBox="0 0 24 24"
-                            width={24}
-                          >
-                            <path
-                              clipRule="evenodd"
-                              d="M20.707 3.293a1 1 0 010 1.414l-16 16a1 1 0 01-1.414-1.414l16-16a1 1 0 011.414 0z"
-                              fillRule="evenodd"
-                            />
-                            <path
-                              clipRule="evenodd"
-                              d="M3.293 3.293a1 1 0 011.414 0l16 16a1 1 0 01-1.414 1.414l-16-16a1 1 0 010-1.414z"
-                              fillRule="evenodd"
-                            />
-                          </svg>
-                        </ForwardRef(CrossSVG)>
-                      </button>
-                    </NavButton>
-                  </div>
-                </div>
+                      Американский доллар
+                    </span>
+                  </ForwardRef(Text)>
+                </button>
+                <button
+                  className="item"
+                  key="2"
+                  onClick={[Function]}
+                >
+                  <ForwardRef(Text)
+                    color="gray87"
+                    lineHeight={24}
+                    size={16}
+                  >
+                    <span
+                      className="size-16 line-height-24 color__gray87"
+                      style={Object {}}
+                    >
+                      Единая европейская валюта
+                    </span>
+                  </ForwardRef(Text)>
+                </button>
+                <button
+                  className="item"
+                  key="3"
+                  onClick={[Function]}
+                >
+                  <ForwardRef(Text)
+                    color="gray87"
+                    lineHeight={24}
+                    size={16}
+                  >
+                    <span
+                      className="size-16 line-height-24 color__gray87"
+                      style={Object {}}
+                    >
+                      Белорусский рубль
+                    </span>
+                  </ForwardRef(Text)>
+                </button>
+                <button
+                  className="item"
+                  key="4"
+                  onClick={[Function]}
+                >
+                  <ForwardRef(Text)
+                    color="gray87"
+                    lineHeight={24}
+                    size={16}
+                  >
+                    <span
+                      className="size-16 line-height-24 color__gray87"
+                      style={Object {}}
+                    >
+                      Украинская гривна
+                    </span>
+                  </ForwardRef(Text)>
+                </button>
+                <button
+                  className="item"
+                  key="5"
+                  onClick={[Function]}
+                >
+                  <ForwardRef(Text)
+                    color="gray87"
+                    lineHeight={24}
+                    size={16}
+                  >
+                    <span
+                      className="size-16 line-height-24 color__gray87"
+                      style={Object {}}
+                    >
+                      Казахстанский тенге
+                    </span>
+                  </ForwardRef(Text)>
+                </button>
               </div>
-            </NavBar>
-            <div
-              className="content full-width"
-            >
-              <MobileLayout
-                disabledOn={
-                  Array [
-                    "mxs",
-                    "ms",
-                  ]
-                }
-              >
-                <div
-                  className="layout mobile disabled-mxs disabled-ms"
-                >
-                  <div
-                    className="container"
-                  >
-                    <button
-                      className="item"
-                      key="0"
-                      onClick={[Function]}
-                    >
-                      <ForwardRef(Text)
-                        color="gray87"
-                        lineHeight={24}
-                        size={16}
-                      >
-                        <span
-                          className="size-16 line-height-24 color__gray87"
-                          style={Object {}}
-                        >
-                          Российский рубль
-                        </span>
-                      </ForwardRef(Text)>
-                    </button>
-                    <button
-                      className="item"
-                      key="1"
-                      onClick={[Function]}
-                    >
-                      <ForwardRef(Text)
-                        color="gray87"
-                        lineHeight={24}
-                        size={16}
-                      >
-                        <span
-                          className="size-16 line-height-24 color__gray87"
-                          style={Object {}}
-                        >
-                          Американский доллар
-                        </span>
-                      </ForwardRef(Text)>
-                    </button>
-                    <button
-                      className="item"
-                      key="2"
-                      onClick={[Function]}
-                    >
-                      <ForwardRef(Text)
-                        color="gray87"
-                        lineHeight={24}
-                        size={16}
-                      >
-                        <span
-                          className="size-16 line-height-24 color__gray87"
-                          style={Object {}}
-                        >
-                          Единая европейская валюта
-                        </span>
-                      </ForwardRef(Text)>
-                    </button>
-                    <button
-                      className="item"
-                      key="3"
-                      onClick={[Function]}
-                    >
-                      <ForwardRef(Text)
-                        color="gray87"
-                        lineHeight={24}
-                        size={16}
-                      >
-                        <span
-                          className="size-16 line-height-24 color__gray87"
-                          style={Object {}}
-                        >
-                          Белорусский рубль
-                        </span>
-                      </ForwardRef(Text)>
-                    </button>
-                    <button
-                      className="item"
-                      key="4"
-                      onClick={[Function]}
-                    >
-                      <ForwardRef(Text)
-                        color="gray87"
-                        lineHeight={24}
-                        size={16}
-                      >
-                        <span
-                          className="size-16 line-height-24 color__gray87"
-                          style={Object {}}
-                        >
-                          Украинская гривна
-                        </span>
-                      </ForwardRef(Text)>
-                    </button>
-                    <button
-                      className="item"
-                      key="5"
-                      onClick={[Function]}
-                    >
-                      <ForwardRef(Text)
-                        color="gray87"
-                        lineHeight={24}
-                        size={16}
-                      >
-                        <span
-                          className="size-16 line-height-24 color__gray87"
-                          style={Object {}}
-                        >
-                          Казахстанский тенге
-                        </span>
-                      </ForwardRef(Text)>
-                    </button>
-                  </div>
-                </div>
-              </MobileLayout>
             </div>
-          </ScreenLayout>
+          </MobileLayout>
         </div>
-      </Portal>
-    </Portal>
+      </ForwardRef(BodySlot)>
+    </div>
   </Screen>
 </SelectScreen>
 `;
@@ -934,714 +368,227 @@ exports[`<SelectScreen /> should handle props 1`] = `
   onItemClick={[MockFunction]}
   title="Районы"
 >
-  <Screen
-    title="Районы"
-    withDivideHeader={false}
-  >
-    <Portal>
-      <Portal
-        containerInfo={
-          <div>
-            <div
-              class="screen full-width"
-              style="z-index: 300;"
-            >
-              <div
-                class="nav-bar"
-                style="height: 56px;"
-              >
-                <div
-                  class="button-groups"
-                >
-                  <div
-                    class="group"
-                  >
-                    <button
-                      aria-hidden="true"
-                      class="button icon stub"
-                      type="button"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="main"
-                >
-                  <div
-                    class="title truncate"
-                  >
-                    Районы
-                  </div>
-                </div>
-                <div
-                  class="button-groups end"
-                >
-                  <div
-                    class="group"
-                  >
-                    <button
-                      aria-hidden="false"
-                      aria-label="Закрыть Районы"
-                      class="button icon"
-                      data-testid="screen:close"
-                      type="button"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="svg"
-                        fill="#212121"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                      >
-                        <path
-                          clip-rule="evenodd"
-                          d="M20.707 3.293a1 1 0 010 1.414l-16 16a1 1 0 01-1.414-1.414l16-16a1 1 0 011.414 0z"
-                          fill-rule="evenodd"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M3.293 3.293a1 1 0 011.414 0l16 16a1 1 0 01-1.414 1.414l-16-16a1 1 0 010-1.414z"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="content full-width"
-              >
-                <div
-                  class="layout mobile disabled-mxs disabled-ms"
-                >
-                  <div
-                    class="container"
-                  >
-                    <button
-                      class="item"
-                    >
-                      <span
-                        class="size-16 line-height-24 color__gray87"
-                      >
-                        Верх-Исетский
-                      </span>
-                    </button>
-                    <button
-                      class="item"
-                    >
-                      <span
-                        class="size-16 line-height-24 color__gray87"
-                      >
-                        Чкаловский
-                      </span>
-                    </button>
-                    <button
-                      class="item"
-                    >
-                      <span
-                        class="size-16 line-height-24 color__gray87"
-                      >
-                        Железнодорожный
-                      </span>
-                    </button>
-                    <button
-                      class="item"
-                    >
-                      <span
-                        class="size-16 line-height-24 color__gray87"
-                      >
-                        Кировский
-                      </span>
-                      <svg
-                        fill="#212121"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                      >
-                        <path
-                          clip-rule="evenodd"
-                          d="M21.678 5.265a1 1 0 01.057 1.413l-12 13a1 1 0 01-1.36.103l-5-4a1 1 0 011.25-1.562l4.272 3.418L20.265 5.322a1 1 0 011.413-.057z"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </button>
-                    <button
-                      class="item"
-                    >
-                      <span
-                        class="size-16 line-height-24 color__gray87"
-                      >
-                        Орджоникидзевский
-                      </span>
-                    </button>
-                    <button
-                      class="item"
-                    >
-                      <span
-                        class="size-16 line-height-24 color__gray87"
-                      >
-                        Октябрьский
-                      </span>
-                    </button>
-                    <button
-                      class="item"
-                    >
-                      <span
-                        class="size-16 line-height-24 color__gray87"
-                      >
-                        Ленинский
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+  <Screen>
+    <div
+      className="root"
+      data-testid="screen"
+      style={
+        Object {
+          "zIndex": 300,
         }
+      }
+    >
+      <ForwardRef(BodySlot)
+        key=".1"
       >
         <div
-          className="screen full-width"
-          style={
-            Object {
-              "zIndex": 300,
-            }
-          }
+          className="body"
+          data-testid="screen:body"
         >
-          <ScreenLayout
-            childrenRef={[Function]}
-            fullScrollThreshold={320}
-            onBack={[Function]}
-            onClose={[Function]}
-            title="Районы"
-            withBackButton={false}
-            withCloseButton={true}
-            withDivideHeader={false}
-            withHeader={true}
+          <MobileLayout
+            disabledOn={
+              Array [
+                "mxs",
+                "ms",
+              ]
+            }
           >
-            <NavBar
-              bottomBordered={false}
-              buttons={
-                Object {
-                  "end": Object {
-                    "aria-label": "Закрыть Районы",
-                    "data-testid": "screen:close",
-                    "icon": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "render": [Function],
-                    },
-                    "onClick": [Function],
-                  },
-                  "start": undefined,
-                }
-              }
-              title="Районы"
+            <div
+              className="layout mobile disabled-mxs disabled-ms"
             >
               <div
-                className="nav-bar"
-                style={
-                  Object {
-                    "height": "56px",
-                  }
-                }
+                className="container"
               >
-                <div
-                  className="button-groups"
+                <button
+                  className="item"
+                  key="0"
+                  onClick={[Function]}
                 >
-                  <div
-                    className="group"
+                  <ForwardRef(Text)
+                    color="gray87"
+                    lineHeight={24}
+                    size={16}
                   >
-                    <NavButton
-                      aria-label="Закрыть Районы"
-                      data-testid="screen:close"
-                      icon={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "render": [Function],
-                        }
-                      }
-                      onClick={[Function]}
-                      stub={true}
+                    <span
+                      className="size-16 line-height-24 color__gray87"
+                      style={Object {}}
                     >
-                      <button
-                        aria-hidden={true}
-                        className="button icon stub"
-                        type="button"
+                      Верх-Исетский
+                    </span>
+                  </ForwardRef(Text)>
+                </button>
+                <button
+                  className="item"
+                  key="1"
+                  onClick={[Function]}
+                >
+                  <ForwardRef(Text)
+                    color="gray87"
+                    lineHeight={24}
+                    size={16}
+                  >
+                    <span
+                      className="size-16 line-height-24 color__gray87"
+                      style={Object {}}
+                    >
+                      Чкаловский
+                    </span>
+                  </ForwardRef(Text)>
+                </button>
+                <button
+                  className="item"
+                  key="2"
+                  onClick={[Function]}
+                >
+                  <ForwardRef(Text)
+                    color="gray87"
+                    lineHeight={24}
+                    size={16}
+                  >
+                    <span
+                      className="size-16 line-height-24 color__gray87"
+                      style={Object {}}
+                    >
+                      Железнодорожный
+                    </span>
+                  </ForwardRef(Text)>
+                </button>
+                <button
+                  className="item"
+                  key="3"
+                  onClick={[Function]}
+                >
+                  <ForwardRef(Text)
+                    color="gray87"
+                    lineHeight={24}
+                    size={16}
+                  >
+                    <span
+                      className="size-16 line-height-24 color__gray87"
+                      style={Object {}}
+                    >
+                      Кировский
+                    </span>
+                  </ForwardRef(Text)>
+                  <ForwardRef(CheckSVG)
+                    fill="#212121"
+                  >
+                    <svg
+                      fill="#212121"
+                      height={24}
+                      viewBox="0 0 24 24"
+                      width={24}
+                    >
+                      <path
+                        clipRule="evenodd"
+                        d="M21.678 5.265a1 1 0 01.057 1.413l-12 13a1 1 0 01-1.36.103l-5-4a1 1 0 011.25-1.562l4.272 3.418L20.265 5.322a1 1 0 011.413-.057z"
+                        fillRule="evenodd"
                       />
-                    </NavButton>
-                  </div>
-                </div>
-                <div
-                  className="main"
+                    </svg>
+                  </ForwardRef(CheckSVG)>
+                </button>
+                <button
+                  className="item"
+                  key="4"
+                  onClick={[Function]}
                 >
-                  <div
-                    className="title truncate"
+                  <ForwardRef(Text)
+                    color="gray87"
+                    lineHeight={24}
+                    size={16}
                   >
-                    Районы
-                  </div>
-                </div>
-                <div
-                  className="button-groups end"
-                >
-                  <div
-                    className="group"
-                  >
-                    <NavButton
-                      aria-label="Закрыть Районы"
-                      data-testid="screen:close"
-                      icon={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "render": [Function],
-                        }
-                      }
-                      onClick={[Function]}
+                    <span
+                      className="size-16 line-height-24 color__gray87"
+                      style={Object {}}
                     >
-                      <button
-                        aria-hidden={false}
-                        aria-label="Закрыть Районы"
-                        className="button icon"
-                        data-testid="screen:close"
-                        onClick={[Function]}
-                        type="button"
-                      >
-                        <ForwardRef(CrossSVG)
-                          aria-hidden="true"
-                          className="svg"
-                          fill="#212121"
-                        >
-                          <svg
-                            aria-hidden="true"
-                            className="svg"
-                            fill="#212121"
-                            height={24}
-                            viewBox="0 0 24 24"
-                            width={24}
-                          >
-                            <path
-                              clipRule="evenodd"
-                              d="M20.707 3.293a1 1 0 010 1.414l-16 16a1 1 0 01-1.414-1.414l16-16a1 1 0 011.414 0z"
-                              fillRule="evenodd"
-                            />
-                            <path
-                              clipRule="evenodd"
-                              d="M3.293 3.293a1 1 0 011.414 0l16 16a1 1 0 01-1.414 1.414l-16-16a1 1 0 010-1.414z"
-                              fillRule="evenodd"
-                            />
-                          </svg>
-                        </ForwardRef(CrossSVG)>
-                      </button>
-                    </NavButton>
-                  </div>
-                </div>
+                      Орджоникидзевский
+                    </span>
+                  </ForwardRef(Text)>
+                </button>
+                <button
+                  className="item"
+                  key="5"
+                  onClick={[Function]}
+                >
+                  <ForwardRef(Text)
+                    color="gray87"
+                    lineHeight={24}
+                    size={16}
+                  >
+                    <span
+                      className="size-16 line-height-24 color__gray87"
+                      style={Object {}}
+                    >
+                      Октябрьский
+                    </span>
+                  </ForwardRef(Text)>
+                </button>
+                <button
+                  className="item"
+                  key="6"
+                  onClick={[Function]}
+                >
+                  <ForwardRef(Text)
+                    color="gray87"
+                    lineHeight={24}
+                    size={16}
+                  >
+                    <span
+                      className="size-16 line-height-24 color__gray87"
+                      style={Object {}}
+                    >
+                      Ленинский
+                    </span>
+                  </ForwardRef(Text)>
+                </button>
               </div>
-            </NavBar>
-            <div
-              className="content full-width"
-            >
-              <MobileLayout
-                disabledOn={
-                  Array [
-                    "mxs",
-                    "ms",
-                  ]
-                }
-              >
-                <div
-                  className="layout mobile disabled-mxs disabled-ms"
-                >
-                  <div
-                    className="container"
-                  >
-                    <button
-                      className="item"
-                      key="0"
-                      onClick={[Function]}
-                    >
-                      <ForwardRef(Text)
-                        color="gray87"
-                        lineHeight={24}
-                        size={16}
-                      >
-                        <span
-                          className="size-16 line-height-24 color__gray87"
-                          style={Object {}}
-                        >
-                          Верх-Исетский
-                        </span>
-                      </ForwardRef(Text)>
-                    </button>
-                    <button
-                      className="item"
-                      key="1"
-                      onClick={[Function]}
-                    >
-                      <ForwardRef(Text)
-                        color="gray87"
-                        lineHeight={24}
-                        size={16}
-                      >
-                        <span
-                          className="size-16 line-height-24 color__gray87"
-                          style={Object {}}
-                        >
-                          Чкаловский
-                        </span>
-                      </ForwardRef(Text)>
-                    </button>
-                    <button
-                      className="item"
-                      key="2"
-                      onClick={[Function]}
-                    >
-                      <ForwardRef(Text)
-                        color="gray87"
-                        lineHeight={24}
-                        size={16}
-                      >
-                        <span
-                          className="size-16 line-height-24 color__gray87"
-                          style={Object {}}
-                        >
-                          Железнодорожный
-                        </span>
-                      </ForwardRef(Text)>
-                    </button>
-                    <button
-                      className="item"
-                      key="3"
-                      onClick={[Function]}
-                    >
-                      <ForwardRef(Text)
-                        color="gray87"
-                        lineHeight={24}
-                        size={16}
-                      >
-                        <span
-                          className="size-16 line-height-24 color__gray87"
-                          style={Object {}}
-                        >
-                          Кировский
-                        </span>
-                      </ForwardRef(Text)>
-                      <ForwardRef(CheckSVG)
-                        fill="#212121"
-                      >
-                        <svg
-                          fill="#212121"
-                          height={24}
-                          viewBox="0 0 24 24"
-                          width={24}
-                        >
-                          <path
-                            clipRule="evenodd"
-                            d="M21.678 5.265a1 1 0 01.057 1.413l-12 13a1 1 0 01-1.36.103l-5-4a1 1 0 011.25-1.562l4.272 3.418L20.265 5.322a1 1 0 011.413-.057z"
-                            fillRule="evenodd"
-                          />
-                        </svg>
-                      </ForwardRef(CheckSVG)>
-                    </button>
-                    <button
-                      className="item"
-                      key="4"
-                      onClick={[Function]}
-                    >
-                      <ForwardRef(Text)
-                        color="gray87"
-                        lineHeight={24}
-                        size={16}
-                      >
-                        <span
-                          className="size-16 line-height-24 color__gray87"
-                          style={Object {}}
-                        >
-                          Орджоникидзевский
-                        </span>
-                      </ForwardRef(Text)>
-                    </button>
-                    <button
-                      className="item"
-                      key="5"
-                      onClick={[Function]}
-                    >
-                      <ForwardRef(Text)
-                        color="gray87"
-                        lineHeight={24}
-                        size={16}
-                      >
-                        <span
-                          className="size-16 line-height-24 color__gray87"
-                          style={Object {}}
-                        >
-                          Октябрьский
-                        </span>
-                      </ForwardRef(Text)>
-                    </button>
-                    <button
-                      className="item"
-                      key="6"
-                      onClick={[Function]}
-                    >
-                      <ForwardRef(Text)
-                        color="gray87"
-                        lineHeight={24}
-                        size={16}
-                      >
-                        <span
-                          className="size-16 line-height-24 color__gray87"
-                          style={Object {}}
-                        >
-                          Ленинский
-                        </span>
-                      </ForwardRef(Text)>
-                    </button>
-                  </div>
-                </div>
-              </MobileLayout>
             </div>
-          </ScreenLayout>
+          </MobileLayout>
         </div>
-      </Portal>
-    </Portal>
+      </ForwardRef(BodySlot)>
+    </div>
   </Screen>
 </SelectScreen>
 `;
 
 exports[`<SelectScreen /> should render without props 1`] = `
 <SelectScreen>
-  <Screen
-    withDivideHeader={false}
-  >
-    <Portal>
-      <Portal
-        containerInfo={
-          <div>
-            <div
-              class="screen full-width"
-              style="z-index: 300;"
-            >
-              <div
-                class="nav-bar"
-                style="height: 56px;"
-              >
-                <div
-                  class="button-groups"
-                >
-                  <div
-                    class="group"
-                  >
-                    <button
-                      aria-hidden="true"
-                      class="button icon stub"
-                      type="button"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="main"
-                />
-                <div
-                  class="button-groups end"
-                >
-                  <div
-                    class="group"
-                  >
-                    <button
-                      aria-hidden="false"
-                      aria-label="Закрыть"
-                      class="button icon"
-                      data-testid="screen:close"
-                      type="button"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="svg"
-                        fill="#212121"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                      >
-                        <path
-                          clip-rule="evenodd"
-                          d="M20.707 3.293a1 1 0 010 1.414l-16 16a1 1 0 01-1.414-1.414l16-16a1 1 0 011.414 0z"
-                          fill-rule="evenodd"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M3.293 3.293a1 1 0 011.414 0l16 16a1 1 0 01-1.414 1.414l-16-16a1 1 0 010-1.414z"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="content full-width"
-              >
-                <div
-                  class="layout mobile disabled-mxs disabled-ms"
-                >
-                  <div
-                    class="container"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+  <Screen>
+    <div
+      className="root"
+      data-testid="screen"
+      style={
+        Object {
+          "zIndex": 300,
         }
+      }
+    >
+      <ForwardRef(BodySlot)
+        key=".1"
       >
         <div
-          className="screen full-width"
-          style={
-            Object {
-              "zIndex": 300,
-            }
-          }
+          className="body"
+          data-testid="screen:body"
         >
-          <ScreenLayout
-            childrenRef={[Function]}
-            fullScrollThreshold={320}
-            onBack={[Function]}
-            onClose={[Function]}
-            withBackButton={false}
-            withCloseButton={true}
-            withDivideHeader={false}
-            withHeader={true}
+          <MobileLayout
+            disabledOn={
+              Array [
+                "mxs",
+                "ms",
+              ]
+            }
           >
-            <NavBar
-              bottomBordered={false}
-              buttons={
-                Object {
-                  "end": Object {
-                    "aria-label": "Закрыть",
-                    "data-testid": "screen:close",
-                    "icon": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "render": [Function],
-                    },
-                    "onClick": [Function],
-                  },
-                  "start": undefined,
-                }
-              }
+            <div
+              className="layout mobile disabled-mxs disabled-ms"
             >
               <div
-                className="nav-bar"
-                style={
-                  Object {
-                    "height": "56px",
-                  }
-                }
-              >
-                <div
-                  className="button-groups"
-                >
-                  <div
-                    className="group"
-                  >
-                    <NavButton
-                      aria-label="Закрыть"
-                      data-testid="screen:close"
-                      icon={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "render": [Function],
-                        }
-                      }
-                      onClick={[Function]}
-                      stub={true}
-                    >
-                      <button
-                        aria-hidden={true}
-                        className="button icon stub"
-                        type="button"
-                      />
-                    </NavButton>
-                  </div>
-                </div>
-                <div
-                  className="main"
-                />
-                <div
-                  className="button-groups end"
-                >
-                  <div
-                    className="group"
-                  >
-                    <NavButton
-                      aria-label="Закрыть"
-                      data-testid="screen:close"
-                      icon={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "render": [Function],
-                        }
-                      }
-                      onClick={[Function]}
-                    >
-                      <button
-                        aria-hidden={false}
-                        aria-label="Закрыть"
-                        className="button icon"
-                        data-testid="screen:close"
-                        onClick={[Function]}
-                        type="button"
-                      >
-                        <ForwardRef(CrossSVG)
-                          aria-hidden="true"
-                          className="svg"
-                          fill="#212121"
-                        >
-                          <svg
-                            aria-hidden="true"
-                            className="svg"
-                            fill="#212121"
-                            height={24}
-                            viewBox="0 0 24 24"
-                            width={24}
-                          >
-                            <path
-                              clipRule="evenodd"
-                              d="M20.707 3.293a1 1 0 010 1.414l-16 16a1 1 0 01-1.414-1.414l16-16a1 1 0 011.414 0z"
-                              fillRule="evenodd"
-                            />
-                            <path
-                              clipRule="evenodd"
-                              d="M3.293 3.293a1 1 0 011.414 0l16 16a1 1 0 01-1.414 1.414l-16-16a1 1 0 010-1.414z"
-                              fillRule="evenodd"
-                            />
-                          </svg>
-                        </ForwardRef(CrossSVG)>
-                      </button>
-                    </NavButton>
-                  </div>
-                </div>
-              </div>
-            </NavBar>
-            <div
-              className="content full-width"
-            >
-              <MobileLayout
-                disabledOn={
-                  Array [
-                    "mxs",
-                    "ms",
-                  ]
-                }
-              >
-                <div
-                  className="layout mobile disabled-mxs disabled-ms"
-                >
-                  <div
-                    className="container"
-                  />
-                </div>
-              </MobileLayout>
+                className="container"
+              />
             </div>
-          </ScreenLayout>
+          </MobileLayout>
         </div>
-      </Portal>
-    </Portal>
+      </ForwardRef(BodySlot)>
+    </div>
   </Screen>
 </SelectScreen>
 `;

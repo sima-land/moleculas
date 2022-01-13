@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
-import SelectScreen from '../index';
+import { SelectScreen } from '..';
 
 describe('<SelectScreen />', () => {
   it('should render without props', () => {
