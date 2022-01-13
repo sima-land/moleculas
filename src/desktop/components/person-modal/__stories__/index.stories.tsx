@@ -1,5 +1,5 @@
 import React from 'react';
-import PersonModal from '..';
+import { PersonModal } from '..';
 import { action } from '@storybook/addon-actions';
 
 export default {

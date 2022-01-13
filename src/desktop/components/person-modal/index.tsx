@@ -157,5 +157,3 @@ export const PersonModal = ({
     </Modal>
   );
 };
-
-export default PersonModal;
