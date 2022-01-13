@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AdultBlock /> should render with props 1`] = `
+<div>
+  <div
+    class="display-flex flex-grow direction-column M-t__0"
+  >
+    <div
+      class="M-b__1"
+    >
+      <span
+        class="size-16 line-height-24 weight-600"
+      >
+        Товар для взрослых
+      </span>
+    </div>
+    <span
+      class="size-12 line-height-20"
+    >
+      Подтвердите, что вы старше 18 лет, чтобы посмотреть товар.
+    </span>
+    <div
+      class="M-t__6"
+    >
+      <a
+        class="link brand-blue"
+        data-testid="anchor"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="size-16 line-height-32 weight-600"
+        >
+          Подтвердить
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<AdultBlock /> should render without props 1`] = `
+<div>
+  <div
+    class="display-flex flex-grow direction-column M-t__0"
+  >
+    <div
+      class="M-b__1"
+    >
+      <span
+        class="size-16 line-height-24 weight-600"
+      >
+        Товар для взрослых
+      </span>
+    </div>
+    <span
+      class="size-12 line-height-20"
+    >
+      Если вам уже есть 18 лет, авторизуйтесь, чтобы перейти к товару.
+    </span>
+    <div
+      class="M-t__6"
+    >
+      <a
+        class="link brand-blue"
+        data-testid="anchor"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="size-16 line-height-32 weight-600"
+        >
+          Авторизоваться
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+`;
