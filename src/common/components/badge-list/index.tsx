@@ -1,11 +1,11 @@
-import React from 'react';
-import { Badge, BadgeProps } from '../badge';
+import React, { Children, cloneElement, isValidElement } from 'react';
+import { Badge } from '../badge';
 import classnames from 'classnames/bind';
 import styles from './badge-list.module.scss';
 
 export interface BadgeListProps {
   /** Список данных для шильдиков. */
-  items?: BadgeProps[];
+  children?: React.ReactNode;
 
   /** CSS-класс корневого элемента. */
   className?: string;
@@ -24,15 +24,16 @@ const cx = classnames.bind(styles);
  * @param props Свойства компонента.
  * @return Элемент.
  */
-export const BadgeList = ({ items, className, lineLimit, style }: BadgeListProps) => (
+export const BadgeList = ({ children, className, lineLimit, style }: BadgeListProps) => (
   <div
     className={cx('root', className, lineLimit && 'line-limit')}
     style={lineLimit ? ({ ...style, '--line-limit': lineLimit } as React.CSSProperties) : style}
   >
-    {Array.isArray(items) &&
-      items.length > 0 &&
-      items.map((itemProps, index) => <Badge key={index} className={cx('item')} {...itemProps} />)}
+    {Children.toArray(children).reduce<React.ReactElement[]>((list, item) => {
+      isValidElement(item) &&
+        item.type === Badge &&
+        list.push(cloneElement(item, { className: cx('item', item.props.className) }));
+      return list;
+    }, [])}
   </div>
 );
-
-BadgeList.Item = Badge;

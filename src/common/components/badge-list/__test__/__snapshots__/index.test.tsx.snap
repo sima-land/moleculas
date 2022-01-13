@@ -1,5 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<BadgeList /> renders correctly 1`] = `
+<div>
+  <div
+    class="root test"
+  >
+    <span
+      class="root item"
+      data-testid="badge"
+      style="--badge-color: #b52ea8;"
+    >
+      <span
+        class="content"
+      >
+        -56%
+      </span>
+    </span>
+    <span
+      class="root item"
+      data-testid="badge"
+      style="--badge-color: #ff7200;"
+    >
+      <span
+        class="content"
+      >
+        3 по цене 2
+      </span>
+    </span>
+    <span
+      class="root item"
+      data-testid="badge"
+      style="--badge-color: #2962ff;"
+    >
+      <span
+        class="content"
+      >
+        Товар месяца
+      </span>
+    </span>
+    <span
+      class="root item"
+      data-testid="badge"
+      style="--badge-color: #00b8d4;"
+    >
+      <span
+        class="content"
+      >
+        Акция
+      </span>
+    </span>
+  </div>
+</div>
+`;
+
 exports[`<BadgeList /> with props renders correctly 1`] = `
 <BadgeList
   className="test"
