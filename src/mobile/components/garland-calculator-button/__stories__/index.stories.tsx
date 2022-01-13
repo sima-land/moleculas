@@ -1,5 +1,5 @@
 import React from 'react';
-import GarlandCalculatorButton from '..';
+import { GarlandCalculatorButton } from '..';
 
 export default {
   title: 'mobile/GarlandCalculatorButton',
