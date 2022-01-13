@@ -2,29 +2,22 @@ import React from 'react';
 import classnames from 'classnames/bind';
 import SearchSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/search';
 import styles from './pseudo-input.module.scss';
-import { COLORS } from '@sima-land/ui-nucleons/colors';
 
-export interface Props {
+export interface PseudoInputProps extends React.HTMLAttributes<HTMLDivElement> {
+  /** Текст, введенный в поле. */
   text?: string;
-  onClick?: React.MouseEventHandler<HTMLDivElement>;
 }
 
 const cx = classnames.bind(styles);
 
 /**
- * Компонент псевдо-инпута поиска.
- * @param props Пропсы.
- * @param props.text Текст подсказки.
- * @param props.onClick Обработчик клика.
+ * Псевдо-поле поиска.
+ * @param props Свойства.
  * @return Элемент.
  */
-const PseudoInput = ({ text, onClick }: Props) => (
-  <div onClick={onClick} className={cx('input')} role='button'>
-    <span className={cx('icon')}>
-      <SearchSVG fill={COLORS.get('gray38')} aria-hidden='true' />
-    </span>
+export const PseudoInput = ({ text, className, ...rest }: PseudoInputProps) => (
+  <div {...rest} role='button' className={cx('input', className)}>
+    <SearchSVG className={cx('icon')} aria-hidden='true' />
     <span className={cx('text')}>{text}</span>
   </div>
 );
-
-export default PseudoInput;
