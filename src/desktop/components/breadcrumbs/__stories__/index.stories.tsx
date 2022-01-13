@@ -1,7 +1,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { Breadcrumbs } from '..';
-import items from '../items';
+import items from '../__test__/test-items';
 
 export default {
   title: 'desktop/Breadcrumbs',
