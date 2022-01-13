@@ -19,11 +19,8 @@ export interface ProductActionsAlertProps {
 }
 
 /**
- * Компонент действий.
- * @param props Свойства компонента.
- * @param props.buttons Конфигурация кнопок.
- * @param props.alertProps Свойства компонента Alert.
- * @param props.onClose Обработчик закрытия.
+ * Alert действий с товаром.
+ * @param props Свойства.
  * @return Элемент.
  */
 export const ProductActionsAlert = ({ buttons, alertProps, onClose }: ProductActionsAlertProps) => (
