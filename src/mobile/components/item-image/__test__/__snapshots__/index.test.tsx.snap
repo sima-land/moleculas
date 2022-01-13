@@ -5,17 +5,15 @@ exports[`<ItemImage /> should render badges 1`] = `
   badges={
     Array [
       Object {
-        "bgColor": "#b52ea8",
+        "color": "#b52ea8",
         "fields": Array [
           Object {
             "type": "text",
             "value": "-36%",
           },
         ],
-        "link": "/percent/",
-        "strokeColor": null,
-        "textColor": "#f2f2f2",
-        "title": null,
+        "href": "/percent/",
+        "title": undefined,
       },
     ]
   }
@@ -40,31 +38,13 @@ exports[`<ItemImage /> should render badges 1`] = `
     <div
       className="badges"
     >
-      <BadgeList
-        items={
-          Array [
-            Object {
-              "bgColor": "#b52ea8",
-              "fields": Array [
-                Object {
-                  "type": "text",
-                  "value": "-36%",
-                },
-              ],
-              "link": "/percent/",
-              "strokeColor": null,
-              "textColor": "#f2f2f2",
-              "title": null,
-            },
-          ]
-        }
-      >
+      <BadgeList>
         <div
           className="root"
         >
           <Badge
-            bgColor="#b52ea8"
             className="item"
+            color="#b52ea8"
             fields={
               Array [
                 Object {
@@ -73,32 +53,25 @@ exports[`<ItemImage /> should render badges 1`] = `
                 },
               ]
             }
-            key="0"
-            link="/percent/"
-            strokeColor={null}
-            textColor="#f2f2f2"
-            title={null}
+            href="/percent/"
+            key=".$0"
           >
-            <span
-              bgColor="#b52ea8"
-              className="root item"
+            <a
+              className="root interactive item"
               data-testid="badge"
-              link="/percent/"
-              strokeColor={null}
+              href="/percent/"
               style={
                 Object {
-                  "--badge-color": undefined,
+                  "--badge-color": "#b52ea8",
                 }
               }
-              textColor="#f2f2f2"
-              title={null}
             >
               <span
                 className="content"
               >
                 -36%
               </span>
-            </span>
+            </a>
           </Badge>
         </div>
       </BadgeList>
@@ -220,10 +193,12 @@ exports[`<ItemImage /> should render with withBlur prop 1`] = `
     >
       <ForwardRef(SvgEighteenPlus)
         height={124}
+        opacity="0.3"
         width={124}
       >
         <svg
           height={124}
+          opacity="0.3"
           viewBox="0 0 36 36"
           width={124}
           xmlns="http://www.w3.org/2000/svg"
@@ -231,7 +206,6 @@ exports[`<ItemImage /> should render with withBlur prop 1`] = `
           <path
             d="M30.822 10.819h-1.438V6.746h-4.072V5.31h4.072V1.236h1.438V5.31h4.072v1.437h-4.072v4.073zm-10.418 4.505c.368.418 1.047.834 2.04 1.252.892-.38 1.523-.787 1.894-1.223.371-.437.557-.946.557-1.528 0-.638-.226-1.145-.678-1.522-.452-.376-1.075-.564-1.867-.564-.78 0-1.391.19-1.834.569-.443.38-.664.885-.664 1.517 0 .582.183 1.082.552 1.499zm-.365 3.941c-.418.49-.627 1.076-.627 1.76 0 .758.26 1.35.78 1.773.522.424 1.253.635 2.195.635.93 0 1.653-.22 2.17-.663.519-.443.778-1.05.778-1.822 0-.613-.243-1.158-.73-1.635-.487-.478-1.335-.94-2.545-1.39-.93.404-1.603.852-2.021 1.342zm-1.151-3.585a3.433 3.433 0 01-.562-1.921c0-1.005.367-1.807 1.1-2.404.733-.598 1.714-.897 2.943-.897 1.248 0 2.236.294 2.966.883.73.588 1.095 1.4 1.095 2.437a3.06 3.06 0 01-.627 1.869c-.418.562-1.085 1.075-2.003 1.536 1.11.537 1.9 1.102 2.368 1.693.468.592.702 1.276.702 2.054 0 1.15-.397 2.069-1.188 2.755-.793.686-1.879 1.03-3.257 1.03-1.46 0-2.583-.325-3.369-.973-.786-.648-1.179-1.566-1.179-2.755 0-1.587.955-2.824 2.864-3.71-.861-.492-1.479-1.025-1.853-1.597zm-.883 20.292C8.083 35.972.04 27.928.04 18.005.039 8.083 8.083.04 18.005.04c2.095 0 4.106.358 5.975 1.017.014.319.014 1.503.014 1.498-1.863-.728-3.867-1.078-5.989-1.078-9.129 0-16.529 7.4-16.529 16.53 0 9.128 7.4 16.528 16.53 16.528 9.128 0 16.529-7.4 16.529-16.529 0-2.116-.398-4.139-1.123-5.999.793.01 1.398.01 1.537.009a17.936 17.936 0 011.023 5.99c0 9.923-8.044 17.967-17.967 17.967zM9.487 14.575l-.823-1.081 3.621-2.836h1.31v13.866h-1.516v-9.883c0-.822.025-1.6.075-2.333a10.18 10.18 0 01-.44.418c-.162.145-.904.762-2.227 1.849z"
             fillRule="evenodd"
-            opacity={0.3}
           />
         </svg>
       </ForwardRef(SvgEighteenPlus)>

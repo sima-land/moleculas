@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { mount } from 'enzyme';
-import ItemImage from '../index';
+import { ItemImage } from '..';
 import { act } from 'react-dom/test-utils';
 
 describe('<ItemImage />', () => {
@@ -25,17 +25,15 @@ describe('<ItemImage />', () => {
       <ItemImage
         badges={[
           {
-            bgColor: '#b52ea8',
+            color: '#b52ea8',
             fields: [
               {
                 type: 'text',
                 value: '-36%',
               },
             ],
-            link: '/percent/',
-            strokeColor: null,
-            textColor: '#f2f2f2',
-            title: null,
+            href: '/percent/',
+            title: undefined,
           },
         ]}
       />,
@@ -62,7 +60,7 @@ describe('<ItemImage />', () => {
       </Wrp>,
     );
     act(() => {
-      document.querySelector('.image')?.load();
+      (document.querySelector('.image') as any)?.load();
       wrapper.mount();
     });
     expect(spy).toHaveBeenCalled();

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { act } from 'react-dom/test-utils';
 import { mount, shallow } from 'enzyme';
-import ItemImage from '..';
+import { ItemImage } from '..';
 import { WishButton } from '../../../../common/components/wish-button';
 import { QuickViewButton } from '../../../../common/components/quick-view-button';
 
@@ -36,7 +36,7 @@ describe('<ItemImage />', () => {
       <ItemImage
         badges={[
           {
-            bgColor: '#b52ea8',
+            color: '#b52ea8',
             definitions: {
               label: {
                 type: 'text',
@@ -45,8 +45,6 @@ describe('<ItemImage />', () => {
             },
             fields: ['label'],
             link: '/percent/',
-            strokeColor: null,
-            textColor: '#f2f2f2',
             title: null,
           },
         ]}
@@ -74,7 +72,7 @@ describe('<ItemImage />', () => {
       </Wrp>,
     );
     act(() => {
-      document.querySelector('.image')?.load();
+      (document.querySelector('.image') as any)?.load();
       wrapper.mount();
     });
     expect(spy).toHaveBeenCalled();
