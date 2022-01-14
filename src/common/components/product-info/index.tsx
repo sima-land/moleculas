@@ -1,136 +1,37 @@
 import React from 'react';
-import { Link } from '@sima-land/ui-nucleons/link';
-import { Price } from '@sima-land/ui-nucleons/price';
 import { defineSlots } from '@sima-land/ui-nucleons/helpers/define-slots';
-import { ImageOverlay } from '../../../desktop/components/gallery-modal/components/image-overlay';
-import { BadgeList } from '../badge-list';
-import { BadgeProps } from '../badge';
-import classnames from 'classnames/bind';
-import styles from './product-info.module.scss';
+import { ProductInfoProps } from './types';
+import { ProductInfoContext } from './utils';
+import { Parts } from './parts';
 
-export interface ProductData {
-  /** Ссылка на товар. */
-  url: string;
+export type { ProductInfoProps };
 
-  /** Название товара. */
-  name?: string;
+export const UNAVAILABLE_REASON = {
+  notEnough: 'Нет в наличии',
+  unavailableInRegion: 'Товар недоступен в вашем регионе',
+  onlyForLegalEntities: 'Товар доступен только для юридических лиц',
+} as const;
 
-  /** Ссылка на картинку. */
-  imageSrc?: string;
-
-  /** Альтернативный текст картинки. */
-  imageAlt?: string;
-
-  /** Цена товара. */
-  price: number;
-
-  /** Старая цена товара. */
-  oldPrice?: number;
-
-  /** Графема валюты. */
-  currencyGrapheme?: string;
-
-  /** Список шильдиков. */
-  badges?: BadgeProps[];
-
-  /** Торговая марка. */
-  trademark?: { name: string; url: string };
-}
-
-export interface ProductInfoProps {
-  /** Данные товара. */
-  data: ProductData;
-
-  /** Содержимое. */
-  children?: React.ReactNode;
-
-  /** Обработчик клика по ссылке на товар. */
-  onLinkClick?: React.MouseEventHandler<HTMLAnchorElement>;
-}
-
-export interface ProductInfoComponent {
-  (props: ProductInfoProps): JSX.Element;
-  OnImage: typeof OnImage;
-}
-
-const cx = classnames.bind(styles);
-
-/**
- * Компонент-слот для вывода контента над изображением.
- * @param props Свойства.
- * @return Элемент.
- */
-export const OnImage: React.FC = ({ children }) => <>{children}</>;
-
-/**
- * Компонент элемента карусели рекомендаций.
- * @param props Свойства компонента.
- * @return Элемент.
- */
-export const ProductInfo: ProductInfoComponent = ({ data, onLinkClick, children }) => {
-  const { onImage } = defineSlots(children, {
-    onImage: OnImage,
+export const ProductInfo = ({ restriction, children }: ProductInfoProps) => {
+  const { image, badges, prices, title, trademark, footer } = defineSlots(children, {
+    image: Parts.Image,
+    badges: Parts.Badges,
+    prices: Parts.Prices,
+    title: Parts.Title,
+    trademark: Parts.TrademarkLink,
+    footer: Parts.Footer,
   });
 
   return (
-    <>
-      {Boolean(data.imageSrc) && (
-        <ImageOverlay className={cx('image-overlay')}>
-          <a
-            href={data.url}
-            className={cx('image-link')}
-            onClick={onLinkClick}
-            data-testid='product-info:image-link'
-          >
-            <img className={cx('image')} alt={data.imageAlt} src={data.imageSrc} />
-          </a>
-
-          {onImage && <div className={cx('on-image')}>{onImage}</div>}
-        </ImageOverlay>
-      )}
-
-      {data.badges && data.badges.length > 0 && (
-        <BadgeList items={data.badges} lineLimit={1} className={cx('badges')} />
-      )}
-
-      {Boolean(data.price) && (
-        <div className={cx('prices')}>
-          <Price
-            value={data.price}
-            currencyGrapheme={data.currencyGrapheme}
-            className={cx('price')}
-          />
-          {data.oldPrice && (
-            <Price
-              value={data.oldPrice}
-              currencyGrapheme={data.currencyGrapheme}
-              className={cx('old-price')}
-              crossedOut
-            />
-          )}
-        </div>
-      )}
-
-      <Link
-        onClick={onLinkClick}
-        className={cx('link')}
-        href={data.url}
-        children={data.name}
-        color='gray87'
-        data-testid='product-info:name-link'
-      />
-
-      {data.trademark && (
-        <Link
-          className={cx('trademark-link')}
-          href={data.trademark.url}
-          children={data.trademark.name}
-          color='brand-blue'
-          data-testid='product-info:trademark-link'
-        />
-      )}
-    </>
+    <ProductInfoContext.Provider value={{ restriction }}>
+      {image}
+      {restriction !== 'adult' && badges}
+      {prices}
+      {title}
+      {!restriction && trademark}
+      {footer}
+    </ProductInfoContext.Provider>
   );
 };
 
-ProductInfo.OnImage = OnImage;
+export { Parts };

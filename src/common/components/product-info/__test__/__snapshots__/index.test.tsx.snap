@@ -1,108 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProductInfo should renders correctly 1`] = `
-<body>
-  <div>
-    <div
-      class="root image-overlay"
+exports[`ProductInfo adult content should match snapshot 1`] = `
+<div>
+  <div
+    class="root image-overlay"
+  >
+    <img
+      class="image adult"
+      data-testid="product-info:adult-image"
+      src="https://www.images.com/some-product/1"
+    />
+    <svg
+      class="adult-icon"
+      height="36"
+      viewBox="0 0 36 36"
+      width="36"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <a
-        class="image-link"
-        data-testid="product-info:image-link"
-        href="https://www.products.com/some-product"
-      >
-        <img
-          class="image"
-          src="https://www.images.com/some-product/1"
-        />
-      </a>
-      <div
-        class="on-image"
-      >
-        <div
-          class="image-button"
-        >
-          Do something
-        </div>
-      </div>
-    </div>
-    <div
-      class="root badges line-limit"
-      style="--line-limit: 1;"
+      <path
+        d="M30.822 10.819h-1.438V6.746h-4.072V5.31h4.072V1.236h1.438V5.31h4.072v1.437h-4.072v4.073zm-10.418 4.505c.368.418 1.047.834 2.04 1.252.892-.38 1.523-.787 1.894-1.223.371-.437.557-.946.557-1.528 0-.638-.226-1.145-.678-1.522-.452-.376-1.075-.564-1.867-.564-.78 0-1.391.19-1.834.569-.443.38-.664.885-.664 1.517 0 .582.183 1.082.552 1.499zm-.365 3.941c-.418.49-.627 1.076-.627 1.76 0 .758.26 1.35.78 1.773.522.424 1.253.635 2.195.635.93 0 1.653-.22 2.17-.663.519-.443.778-1.05.778-1.822 0-.613-.243-1.158-.73-1.635-.487-.478-1.335-.94-2.545-1.39-.93.404-1.603.852-2.021 1.342zm-1.151-3.585a3.433 3.433 0 01-.562-1.921c0-1.005.367-1.807 1.1-2.404.733-.598 1.714-.897 2.943-.897 1.248 0 2.236.294 2.966.883.73.588 1.095 1.4 1.095 2.437a3.06 3.06 0 01-.627 1.869c-.418.562-1.085 1.075-2.003 1.536 1.11.537 1.9 1.102 2.368 1.693.468.592.702 1.276.702 2.054 0 1.15-.397 2.069-1.188 2.755-.793.686-1.879 1.03-3.257 1.03-1.46 0-2.583-.325-3.369-.973-.786-.648-1.179-1.566-1.179-2.755 0-1.587.955-2.824 2.864-3.71-.861-.492-1.479-1.025-1.853-1.597zm-.883 20.292C8.083 35.972.04 27.928.04 18.005.039 8.083 8.083.04 18.005.04c2.095 0 4.106.358 5.975 1.017.014.319.014 1.503.014 1.498-1.863-.728-3.867-1.078-5.989-1.078-9.129 0-16.529 7.4-16.529 16.53 0 9.128 7.4 16.528 16.53 16.528 9.128 0 16.529-7.4 16.529-16.529 0-2.116-.398-4.139-1.123-5.999.793.01 1.398.01 1.537.009a17.936 17.936 0 011.023 5.99c0 9.923-8.044 17.967-17.967 17.967zM9.487 14.575l-.823-1.081 3.621-2.836h1.31v13.866h-1.516v-9.883c0-.822.025-1.6.075-2.333a10.18 10.18 0 01-.44.418c-.162.145-.904.762-2.227 1.849z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+  <div
+    class="prices height-limit"
+    data-testid="product-info:prices"
+  >
+    <span
+      class="root price"
+      data-testid="product-info:price"
     >
-      <span
-        class="root item"
-        data-testid="badge"
-        style="--badge-color: #b52ea8;"
-      >
-        <span
-          class="content"
-        >
-          -56%
-        </span>
-      </span>
-      <span
-        class="root item"
-        data-testid="badge"
-        style="--badge-color: #ff7200;"
-      >
-        <span
-          class="content"
-        >
-          3 по цене 2
-        </span>
-      </span>
-      <span
-        class="root item"
-        data-testid="badge"
-        style="--badge-color: #2962ff;"
-      >
-        <span
-          class="content"
-        >
-          Товар месяца
-        </span>
-      </span>
-      <span
-        class="root item"
-        data-testid="badge"
-        style="--badge-color: #00b8d4;"
-      >
-        <span
-          class="content"
-        >
-          Акция
-        </span>
-      </span>
-    </div>
-    <div
-      class="prices"
-    >
-      <span
-        class="root price"
-        data-testid="price"
-      >
-        23 476,23 $
-      </span>
-      <span
-        class="root old-price crossed-out"
-        data-testid="price"
-      >
-        25 000 $
-      </span>
-    </div>
+      23 476,23 $
+    </span>
+  </div>
+  <span
+    class="adult-info"
+    data-testid="product-info:adult-warning"
+  >
+    Подтвердите, что вы старше 18 лет, чтобы посмотреть товар.
+  </span>
+  <div
+    class="footer"
+    data-testid="product-info:footer"
+  >
     <a
-      class="link link gray87"
-      data-testid="product-info:name-link"
-      href="https://www.products.com/some-product"
+      class="link text-button brand-blue"
+      data-testid="product-info:adult-confirm-button"
+      role="button"
+      tabindex="0"
     >
-      Some product
+      Подтвердить
     </a>
   </div>
-</body>
+</div>
 `;
 
-exports[`ProductInfo should renders correctly with trademark 1`] = `
+exports[`ProductInfo regular content should match snapshot 1`] = `
 <div>
   <div
     class="root image-overlay"
@@ -114,13 +68,125 @@ exports[`ProductInfo should renders correctly with trademark 1`] = `
     >
       <img
         class="image"
+        data-testid="product-info:image"
         src="https://www.images.com/some-product/1"
       />
     </a>
+    <div
+      class="image-buttons"
+    >
+      <div
+        class="root image-button"
+        data-testid="test-favorite-button"
+        role="banner"
+      >
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+            fill-rule="evenodd"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+            fill-rule="evenodd"
+          />
+          <path
+            d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+          />
+          <path
+            d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+            fill-rule="evenodd"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+            fill-rule="evenodd"
+          />
+          <path
+            d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+          />
+          <path
+            d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+          />
+        </svg>
+      </div>
+      <div
+        class="root image-button"
+        data-testid="quick-view-button"
+        role="banner"
+      >
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+            fill-rule="evenodd"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+            fill-rule="evenodd"
+          />
+          <path
+            d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+          />
+          <path
+            d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+            fill-rule="evenodd"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+            fill-rule="evenodd"
+          />
+          <path
+            d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+          />
+          <path
+            d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+          />
+        </svg>
+      </div>
+    </div>
   </div>
   <div
-    class="root badges line-limit"
-    style="--line-limit: 1;"
+    class="root badges"
   >
     <span
       class="root item"
@@ -168,23 +234,24 @@ exports[`ProductInfo should renders correctly with trademark 1`] = `
     </span>
   </div>
   <div
-    class="prices"
+    class="prices height-limit"
+    data-testid="product-info:prices"
   >
     <span
       class="root price"
-      data-testid="price"
+      data-testid="product-info:price"
     >
       23 476,23 $
     </span>
     <span
       class="root old-price crossed-out"
-      data-testid="price"
+      data-testid="product-info:old-price"
     >
       25 000 $
     </span>
   </div>
   <a
-    class="link link gray87"
+    class="link link line-clamp gray87"
     data-testid="product-info:name-link"
     href="https://www.products.com/some-product"
   >
@@ -193,9 +260,40 @@ exports[`ProductInfo should renders correctly with trademark 1`] = `
   <a
     class="link trademark-link brand-blue"
     data-testid="product-info:trademark-link"
-    href="www.hello.com"
+    href="https://www.test-trademark.ru/"
   >
-    Hello
+    Test Trademark
   </a>
+  <div
+    class="footer"
+    data-testid="product-info:footer"
+  >
+    <div
+      class="control-wrapper"
+    >
+      <div
+        class="control"
+      >
+        <button
+          class="button-base button-primary button-s text-button-s"
+          data-testid="test-add-to-cart-button"
+        >
+          В корзину
+        </button>
+      </div>
+      <div
+        class="unit-text"
+        data-testid="product-info:cart-step"
+      >
+        По 7 шт
+      </div>
+      <div
+        class="bottom-text"
+        data-testid="product-info:cart-info"
+      >
+        Комплектация + 50 ₽ при покупке до 20 шт
+      </div>
+    </div>
+  </div>
 </div>
 `;
