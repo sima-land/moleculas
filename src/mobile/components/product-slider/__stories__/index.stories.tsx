@@ -1,10 +1,14 @@
-import React from 'react';
-import { ProductSlider } from '..';
-import { items } from '../__test__/test-items';
+import React, { useState } from 'react';
 import { action } from '@storybook/addon-actions';
+import { ProductSlider } from '..';
+import { ProductInfo, Parts } from '../../../../common/components/product-info';
+import { Badge } from '../../../../common/components/badge';
 import { MobileLayout } from '@sima-land/ui-nucleons/layout';
 import { Button } from '@sima-land/ui-nucleons/button';
-import { omit } from 'lodash';
+import { COLORS } from '@sima-land/ui-nucleons/colors';
+import { items } from '../__test__/test-items';
+import FavSVG from '@sima-land/ui-quarks/icons/24x24/Filled/favorite';
+import NotFavSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/favorite';
 
 export default {
   title: 'mobile/ProductSlider',
@@ -31,59 +35,164 @@ const Placeholder = () => (
   />
 );
 
-export const Primary = () => (
+const Bootstrap: React.FC = ({ children }) => (
   <>
     <MobileLayout>
       <Placeholder />
     </MobileLayout>
-
-    <ProductSlider>
-      {items.map((item, index) => (
-        <ProductSlider.Item
-          key={index}
-          data={item}
-          onLinkClick={event => {
-            event.preventDefault();
-            action('item:link-click')(item.name);
-          }}
-          onFavoriteClick={() => {
-            action('item:favorite-click')(item.name);
-          }}
-        />
-      ))}
-    </ProductSlider>
-
+    {children}
     <MobileLayout>
       <Placeholder />
     </MobileLayout>
   </>
 );
 
-export const ItemFooter = () => (
-  <>
-    <MobileLayout>
-      <Placeholder />
-    </MobileLayout>
+export const Primary = () => {
+  const [wished, toggleWish] = useState<Record<number, boolean>>({});
 
+  return (
+    <Bootstrap>
+      <ProductSlider>
+        {items.map((item, index) => (
+          <ProductInfo key={index}>
+            <Parts.Image
+              src={item.imageSrc}
+              href={item.url}
+              onClick={e => {
+                e.preventDefault();
+                action('Клик: ссылка на товар (изображение)')();
+              }}
+            >
+              <Parts.ImageButton
+                icon={wished[index] ? FavSVG : NotFavSVG}
+                fill={wished[index] ? COLORS.get('additional-red') : undefined}
+                onClick={() => {
+                  toggleWish(s => ({ ...s, [index]: !s[index] }));
+                  action('Клик: добавить в избранное')();
+                }}
+                data-testid='favorite-button'
+              />
+            </Parts.Image>
+
+            {item.badges && (
+              <Parts.Badges lineLimit={1}>
+                {item.badges.map((badge, badgeIndex) => (
+                  <Badge key={badgeIndex} {...badge} onClick={action('Клик: шильдик')} />
+                ))}
+              </Parts.Badges>
+            )}
+
+            <Parts.Prices
+              price={item.price}
+              oldPrice={item.oldPrice}
+              currencyGrapheme={item.currencyGrapheme}
+            />
+
+            <Parts.Title
+              href={item.url}
+              onClick={e => {
+                e.preventDefault();
+                action('Клик: ссылка на товар')();
+              }}
+            >
+              {item.name}
+            </Parts.Title>
+
+            <Parts.Footer>
+              <Button size='s' onClick={action('Клик: добавление в коризну')}>
+                В корзину
+              </Button>
+            </Parts.Footer>
+          </ProductInfo>
+        ))}
+      </ProductSlider>
+    </Bootstrap>
+  );
+};
+
+export const Unavailable = () => (
+  <Bootstrap>
     <ProductSlider>
       {items.map((item, index) => (
-        <ProductSlider.Item
-          key={index}
-          data={omit(item, 'badges')}
-          onLinkClick={event => {
-            event.preventDefault();
-            action('item:link-click')(item.name);
-          }}
-          onFavoriteClick={() => {
-            action('item:favorite-click')(item.name);
-          }}
-          footer={<Button size='s'>В корзину</Button>}
-        />
+        <ProductInfo key={index} restriction='unavailable'>
+          <Parts.Image
+            src={item.imageSrc}
+            href={item.url}
+            onClick={e => {
+              e.preventDefault();
+              action('Клик: ссылка на товар (изображение)')();
+            }}
+          />
+
+          {item.badges && (
+            <Parts.Badges lineLimit={1}>
+              {item.badges.map((badge, badgeIndex) => (
+                <Badge key={badgeIndex} {...badge} onClick={action('Клик: шильдик')} />
+              ))}
+            </Parts.Badges>
+          )}
+
+          <Parts.Prices
+            price={item.price}
+            oldPrice={item.oldPrice}
+            currencyGrapheme={item.currencyGrapheme}
+            unavailableReason='Товара нет в наличии'
+          />
+
+          <Parts.Title
+            href={item.url}
+            onClick={e => {
+              e.preventDefault();
+              action('Клик: ссылка на товар')();
+            }}
+          >
+            {item.name}
+          </Parts.Title>
+
+          <Parts.Footer>
+            <Parts.WaitListAddButton onClick={action('Клик: добавление в лист ожидания')} />
+          </Parts.Footer>
+        </ProductInfo>
       ))}
     </ProductSlider>
+  </Bootstrap>
+);
 
-    <MobileLayout>
-      <Placeholder />
-    </MobileLayout>
-  </>
+export const Adult = () => (
+  <Bootstrap>
+    <ProductSlider>
+      {items.map((item, index) => (
+        <ProductInfo key={index} restriction='adult'>
+          <Parts.Image
+            src={item.imageSrc}
+            href={item.url}
+            onClick={e => {
+              e.preventDefault();
+              action('Клик: ссылка на товар (изображение)')();
+            }}
+          />
+
+          <Parts.Prices
+            price={item.price}
+            oldPrice={item.oldPrice}
+            currencyGrapheme={item.currencyGrapheme}
+          />
+
+          <Parts.Title
+            href={item.url}
+            onClick={e => {
+              e.preventDefault();
+              action('Клик: ссылка на товар')();
+            }}
+          >
+            {item.name}
+          </Parts.Title>
+
+          <Parts.Footer>
+            <Parts.AdultConfirmButton onClick={action('Клик: подтверждение возраста')} />
+          </Parts.Footer>
+        </ProductInfo>
+      ))}
+    </ProductSlider>
+  </Bootstrap>
 );

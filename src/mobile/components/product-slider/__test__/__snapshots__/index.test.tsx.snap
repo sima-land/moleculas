@@ -1,1466 +1,1953 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ProductSlider /> should renders correctly 1`] = `
-<ProductSlider>
+<div>
   <div>
-    <TouchSlider>
-      <MobileLayout>
+    <div
+      class="layout mobile "
+    >
+      <div
+        class="outer invisible-scroll"
+        data-bsl-ignore="true"
+      >
         <div
-          className="layout mobile "
+          class="inner"
         >
           <div
-            className="outer invisible-scroll"
+            class="item"
           >
             <div
-              className="inner"
+              class="root image-overlay"
             >
-              <ProductSliderItem
-                data={
-                  Object {
-                    "currencyGrapheme": "₽",
-                    "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
-                    "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
-                    "name": "Ножницы портновские, 19 см, цвет чёрный",
-                    "oldPrice": undefined,
-                    "price": 261,
-                    "url": "",
-                  }
-                }
-                key=".$0"
+              <a
+                class="image-link"
+                data-testid="product-info:image-link"
+                href=""
+              >
+                <img
+                  class="image"
+                  data-testid="product-info:image"
+                  src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
+                />
+              </a>
+              <div
+                class="image-buttons"
               >
                 <div
-                  className="root"
+                  class="root image-button"
+                  data-testid="favorite-button"
+                  role="banner"
                 >
-                  <ProductInfo
-                    data={
-                      Object {
-                        "currencyGrapheme": "₽",
-                        "imageAlt": "Ножницы портновские, 19 см, цвет чёрный, Ножницы",
-                        "imageSrc": "https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833",
-                        "name": "Ножницы портновские, 19 см, цвет чёрный",
-                        "oldPrice": undefined,
-                        "price": 261,
-                        "url": "",
-                      }
-                    }
+                  <svg
+                    class="stroke"
+                    height="24"
+                    stroke="#f5f5f5"
+                    stroke-width="3px"
+                    viewBox="0 0 24 24"
+                    width="24"
                   >
-                    <ImageOverlay
-                      className="image-overlay"
-                    >
-                      <div
-                        className="root image-overlay"
-                      >
-                        <a
-                          className="image-link"
-                          data-testid="product-info:image-link"
-                          href=""
-                        >
-                          <img
-                            alt="Ножницы портновские, 19 см, цвет чёрный, Ножницы"
-                            className="image"
-                            src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
-                          />
-                        </a>
-                        <div
-                          className="on-image"
-                        >
-                          <OnImage
-                            key=".0"
-                          >
-                            <ForwardRef
-                              className="favorite-button"
-                            >
-                              <ForwardRef(SvgHeart)
-                                aria-label="Добавить в избранное"
-                                className="button favorite-button"
-                                data-testid="favorite-button"
-                                height={24}
-                                role="button"
-                                width={24}
-                              >
-                                <svg
-                                  aria-label="Добавить в избранное"
-                                  className="button favorite-button"
-                                  data-testid="favorite-button"
-                                  height={24}
-                                  role="button"
-                                  viewBox="0 0 24 24"
-                                  width={24}
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 003.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
-                                  />
-                                </svg>
-                              </ForwardRef(SvgHeart)>
-                            </ForwardRef>
-                          </OnImage>
-                        </div>
-                      </div>
-                    </ImageOverlay>
-                    <div
-                      className="prices"
-                    >
-                      <Price
-                        className="price"
-                        currencyGrapheme="₽"
-                        value={261}
-                      >
-                        <span
-                          className="root price"
-                          data-testid="price"
-                        >
-                          261 ₽
-                        </span>
-                      </Price>
-                    </div>
-                    <ForwardRef(Link)
-                      className="link"
-                      color="gray87"
-                      data-testid="product-info:name-link"
-                      href=""
-                    >
-                      <a
-                        className="link link gray87"
-                        data-testid="product-info:name-link"
-                        href=""
-                      >
-                        Ножницы портновские, 19 см, цвет чёрный
-                      </a>
-                    </ForwardRef(Link)>
-                  </ProductInfo>
+                    <path
+                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+                    />
+                  </svg>
+                  <svg
+                    class="svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+                    />
+                  </svg>
                 </div>
-              </ProductSliderItem>
-              <ProductSliderItem
-                data={
-                  Object {
-                    "currencyGrapheme": "₽",
-                    "imageAlt": "Ножницы портновские, 31 см, цвет чёрный/голубой, Ножницы",
-                    "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
-                    "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
-                    "oldPrice": undefined,
-                    "price": 322,
-                    "url": "",
-                  }
-                }
-                key=".$1"
+                <div
+                  class="root image-button"
+                  data-testid="quick-view-button"
+                  role="banner"
+                >
+                  <svg
+                    class="stroke"
+                    height="24"
+                    stroke="#f5f5f5"
+                    stroke-width="3px"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+                    />
+                    <path
+                      d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+                    />
+                  </svg>
+                  <svg
+                    class="svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+                    />
+                    <path
+                      d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="prices height-limit"
+              data-testid="product-info:prices"
+            >
+              <span
+                class="root price"
+                data-testid="product-info:price"
+              >
+                261 ₽
+              </span>
+            </div>
+            <a
+              class="link link line-clamp gray87"
+              data-testid="product-info:name-link"
+              href=""
+            >
+              Ножницы портновские, 19 см, цвет чёрный
+            </a>
+            <a
+              class="link trademark-link brand-blue"
+              data-testid="product-info:trademark-link"
+              href="https://sima-land.ru"
+            >
+              Торговая марка Сима-ленд
+            </a>
+            <div
+              class="footer"
+              data-testid="product-info:footer"
+            >
+              <div
+                class="control-wrapper"
               >
                 <div
-                  className="root"
+                  class="control"
                 >
-                  <ProductInfo
-                    data={
-                      Object {
-                        "currencyGrapheme": "₽",
-                        "imageAlt": "Ножницы портновские, 31 см, цвет чёрный/голубой, Ножницы",
-                        "imageSrc": "https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798",
-                        "name": "Ножницы портновские, 31 см, цвет чёрный/голубой",
-                        "oldPrice": undefined,
-                        "price": 322,
-                        "url": "",
-                      }
-                    }
+                  <div
+                    class="root size-s"
+                    data-testid="stepper"
+                    style="width: 122px;"
                   >
-                    <ImageOverlay
-                      className="image-overlay"
+                    <svg
+                      class="button"
+                      data-testid="stepper:minus"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
                     >
-                      <div
-                        className="root image-overlay"
-                      >
-                        <a
-                          className="image-link"
-                          data-testid="product-info:image-link"
-                          href=""
-                        >
-                          <img
-                            alt="Ножницы портновские, 31 см, цвет чёрный/голубой, Ножницы"
-                            className="image"
-                            src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
-                          />
-                        </a>
-                        <div
-                          className="on-image"
-                        >
-                          <OnImage
-                            key=".0"
-                          >
-                            <ForwardRef
-                              className="favorite-button"
-                            >
-                              <ForwardRef(SvgHeart)
-                                aria-label="Добавить в избранное"
-                                className="button favorite-button"
-                                data-testid="favorite-button"
-                                height={24}
-                                role="button"
-                                width={24}
-                              >
-                                <svg
-                                  aria-label="Добавить в избранное"
-                                  className="button favorite-button"
-                                  data-testid="favorite-button"
-                                  height={24}
-                                  role="button"
-                                  viewBox="0 0 24 24"
-                                  width={24}
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 003.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
-                                  />
-                                </svg>
-                              </ForwardRef(SvgHeart)>
-                            </ForwardRef>
-                          </OnImage>
-                        </div>
-                      </div>
-                    </ImageOverlay>
-                    <div
-                      className="prices"
+                      <path
+                        clip-rule="evenodd"
+                        d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                    <input
+                      class="input"
+                      data-testid="stepper:input"
+                      value="3"
+                    />
+                    <svg
+                      class="button"
+                      data-testid="stepper:plus"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
                     >
-                      <Price
-                        className="price"
-                        currencyGrapheme="₽"
-                        value={322}
-                      >
-                        <span
-                          className="root price"
-                          data-testid="price"
-                        >
-                          322 ₽
-                        </span>
-                      </Price>
-                    </div>
-                    <ForwardRef(Link)
-                      className="link"
-                      color="gray87"
-                      data-testid="product-info:name-link"
-                      href=""
-                    >
-                      <a
-                        className="link link gray87"
-                        data-testid="product-info:name-link"
-                        href=""
-                      >
-                        Ножницы портновские, 31 см, цвет чёрный/голубой
-                      </a>
-                    </ForwardRef(Link)>
-                  </ProductInfo>
+                      <path
+                        d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </ProductSliderItem>
-              <ProductSliderItem
-                data={
-                  Object {
-                    "badges": Array [
-                      Object {
-                        "color": "#b52ea8",
-                        "fields": Array [
-                          Object {
-                            "type": "text",
-                            "value": "-56%",
-                          },
-                        ],
-                      },
-                      Object {
-                        "color": "#ff7200",
-                        "fields": Array [
-                          Object {
-                            "type": "text",
-                            "value": "3 по цене 2",
-                          },
-                        ],
-                      },
-                      Object {
-                        "color": "#2962ff",
-                        "fields": Array [
-                          Object {
-                            "type": "text",
-                            "value": "Товар месяца",
-                          },
-                        ],
-                      },
-                      Object {
-                        "color": "#00b8d4",
-                        "fields": Array [
-                          Object {
-                            "type": "text",
-                            "value": "Акция",
-                          },
-                        ],
-                      },
-                    ],
-                    "currencyGrapheme": "₽",
-                    "imageAlt": "Ножницы портновские, 21,5 см, цвет чёрный/голубой, Ножницы",
-                    "imageSrc": "https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773",
-                    "name": "Ножницы портновские, 21,5 см, цвет чёрный/голубой",
-                    "oldPrice": undefined,
-                    "price": 238,
-                    "url": "",
-                  }
-                }
-                key=".$2"
+                <div
+                  class="unit-text"
+                  data-testid="product-info:cart-step"
+                >
+                  По 5 шт
+                </div>
+                <div
+                  class="bottom-text"
+                  data-testid="product-info:cart-info"
+                >
+                  Комплектация + 50 ₽ при покупке до 20 шт
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="item"
+          >
+            <div
+              class="root image-overlay"
+            >
+              <a
+                class="image-link"
+                data-testid="product-info:image-link"
+                href=""
+              >
+                <img
+                  class="image"
+                  data-testid="product-info:image"
+                  src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                />
+              </a>
+              <div
+                class="image-buttons"
               >
                 <div
-                  className="root"
+                  class="root image-button"
+                  data-testid="favorite-button"
+                  role="banner"
                 >
-                  <ProductInfo
-                    data={
-                      Object {
-                        "badges": Array [
-                          Object {
-                            "color": "#b52ea8",
-                            "fields": Array [
-                              Object {
-                                "type": "text",
-                                "value": "-56%",
-                              },
-                            ],
-                          },
-                          Object {
-                            "color": "#ff7200",
-                            "fields": Array [
-                              Object {
-                                "type": "text",
-                                "value": "3 по цене 2",
-                              },
-                            ],
-                          },
-                          Object {
-                            "color": "#2962ff",
-                            "fields": Array [
-                              Object {
-                                "type": "text",
-                                "value": "Товар месяца",
-                              },
-                            ],
-                          },
-                          Object {
-                            "color": "#00b8d4",
-                            "fields": Array [
-                              Object {
-                                "type": "text",
-                                "value": "Акция",
-                              },
-                            ],
-                          },
-                        ],
-                        "currencyGrapheme": "₽",
-                        "imageAlt": "Ножницы портновские, 21,5 см, цвет чёрный/голубой, Ножницы",
-                        "imageSrc": "https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773",
-                        "name": "Ножницы портновские, 21,5 см, цвет чёрный/голубой",
-                        "oldPrice": undefined,
-                        "price": 238,
-                        "url": "",
-                      }
-                    }
+                  <svg
+                    class="stroke"
+                    height="24"
+                    stroke="#f5f5f5"
+                    stroke-width="3px"
+                    viewBox="0 0 24 24"
+                    width="24"
                   >
-                    <ImageOverlay
-                      className="image-overlay"
-                    >
-                      <div
-                        className="root image-overlay"
-                      >
-                        <a
-                          className="image-link"
-                          data-testid="product-info:image-link"
-                          href=""
-                        >
-                          <img
-                            alt="Ножницы портновские, 21,5 см, цвет чёрный/голубой, Ножницы"
-                            className="image"
-                            src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
-                          />
-                        </a>
-                        <div
-                          className="on-image"
-                        >
-                          <OnImage
-                            key=".0"
-                          >
-                            <ForwardRef
-                              className="favorite-button"
-                            >
-                              <ForwardRef(SvgHeart)
-                                aria-label="Добавить в избранное"
-                                className="button favorite-button"
-                                data-testid="favorite-button"
-                                height={24}
-                                role="button"
-                                width={24}
-                              >
-                                <svg
-                                  aria-label="Добавить в избранное"
-                                  className="button favorite-button"
-                                  data-testid="favorite-button"
-                                  height={24}
-                                  role="button"
-                                  viewBox="0 0 24 24"
-                                  width={24}
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 003.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
-                                  />
-                                </svg>
-                              </ForwardRef(SvgHeart)>
-                            </ForwardRef>
-                          </OnImage>
-                        </div>
-                      </div>
-                    </ImageOverlay>
-                    <BadgeList
-                      className="badges"
-                      items={
-                        Array [
-                          Object {
-                            "color": "#b52ea8",
-                            "fields": Array [
-                              Object {
-                                "type": "text",
-                                "value": "-56%",
-                              },
-                            ],
-                          },
-                          Object {
-                            "color": "#ff7200",
-                            "fields": Array [
-                              Object {
-                                "type": "text",
-                                "value": "3 по цене 2",
-                              },
-                            ],
-                          },
-                          Object {
-                            "color": "#2962ff",
-                            "fields": Array [
-                              Object {
-                                "type": "text",
-                                "value": "Товар месяца",
-                              },
-                            ],
-                          },
-                          Object {
-                            "color": "#00b8d4",
-                            "fields": Array [
-                              Object {
-                                "type": "text",
-                                "value": "Акция",
-                              },
-                            ],
-                          },
-                        ]
-                      }
-                      lineLimit={1}
-                    >
-                      <div
-                        className="root badges line-limit"
-                        style={
-                          Object {
-                            "--line-limit": 1,
-                          }
-                        }
-                      >
-                        <Badge
-                          className="item"
-                          color="#b52ea8"
-                          fields={
-                            Array [
-                              Object {
-                                "type": "text",
-                                "value": "-56%",
-                              },
-                            ]
-                          }
-                          key="0"
-                        >
-                          <span
-                            className="root item"
-                            data-testid="badge"
-                            style={
-                              Object {
-                                "--badge-color": "#b52ea8",
-                              }
-                            }
-                          >
-                            <span
-                              className="content"
-                            >
-                              -56%
-                            </span>
-                          </span>
-                        </Badge>
-                        <Badge
-                          className="item"
-                          color="#ff7200"
-                          fields={
-                            Array [
-                              Object {
-                                "type": "text",
-                                "value": "3 по цене 2",
-                              },
-                            ]
-                          }
-                          key="1"
-                        >
-                          <span
-                            className="root item"
-                            data-testid="badge"
-                            style={
-                              Object {
-                                "--badge-color": "#ff7200",
-                              }
-                            }
-                          >
-                            <span
-                              className="content"
-                            >
-                              3 по цене 2
-                            </span>
-                          </span>
-                        </Badge>
-                        <Badge
-                          className="item"
-                          color="#2962ff"
-                          fields={
-                            Array [
-                              Object {
-                                "type": "text",
-                                "value": "Товар месяца",
-                              },
-                            ]
-                          }
-                          key="2"
-                        >
-                          <span
-                            className="root item"
-                            data-testid="badge"
-                            style={
-                              Object {
-                                "--badge-color": "#2962ff",
-                              }
-                            }
-                          >
-                            <span
-                              className="content"
-                            >
-                              Товар месяца
-                            </span>
-                          </span>
-                        </Badge>
-                        <Badge
-                          className="item"
-                          color="#00b8d4"
-                          fields={
-                            Array [
-                              Object {
-                                "type": "text",
-                                "value": "Акция",
-                              },
-                            ]
-                          }
-                          key="3"
-                        >
-                          <span
-                            className="root item"
-                            data-testid="badge"
-                            style={
-                              Object {
-                                "--badge-color": "#00b8d4",
-                              }
-                            }
-                          >
-                            <span
-                              className="content"
-                            >
-                              Акция
-                            </span>
-                          </span>
-                        </Badge>
-                      </div>
-                    </BadgeList>
-                    <div
-                      className="prices"
-                    >
-                      <Price
-                        className="price"
-                        currencyGrapheme="₽"
-                        value={238}
-                      >
-                        <span
-                          className="root price"
-                          data-testid="price"
-                        >
-                          238 ₽
-                        </span>
-                      </Price>
-                    </div>
-                    <ForwardRef(Link)
-                      className="link"
-                      color="gray87"
-                      data-testid="product-info:name-link"
-                      href=""
-                    >
-                      <a
-                        className="link link gray87"
-                        data-testid="product-info:name-link"
-                        href=""
-                      >
-                        Ножницы портновские, 21,5 см, цвет чёрный/голубой
-                      </a>
-                    </ForwardRef(Link)>
-                  </ProductInfo>
+                    <path
+                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+                    />
+                  </svg>
+                  <svg
+                    class="svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+                    />
+                  </svg>
                 </div>
-              </ProductSliderItem>
-              <ProductSliderItem
-                data={
-                  Object {
-                    "currencyGrapheme": "₽",
-                    "imageAlt": "Ножницы портновские, 23 см, цвет МИКС, Ножницы",
-                    "imageSrc": "https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085",
-                    "name": "Ножницы портновские, 23 см, цвет МИКС",
-                    "oldPrice": undefined,
-                    "price": 171,
-                    "url": "",
-                  }
-                }
-                key=".$3"
+                <div
+                  class="root image-button"
+                  data-testid="quick-view-button"
+                  role="banner"
+                >
+                  <svg
+                    class="stroke"
+                    height="24"
+                    stroke="#f5f5f5"
+                    stroke-width="3px"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+                    />
+                    <path
+                      d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+                    />
+                  </svg>
+                  <svg
+                    class="svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+                    />
+                    <path
+                      d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="prices height-limit"
+              data-testid="product-info:prices"
+            >
+              <span
+                class="root price"
+                data-testid="product-info:price"
+              >
+                322 ₽
+              </span>
+            </div>
+            <a
+              class="link link line-clamp gray87"
+              data-testid="product-info:name-link"
+              href=""
+            >
+              Ножницы портновские, 31 см, цвет чёрный/голубой
+            </a>
+            <div
+              class="footer"
+              data-testid="product-info:footer"
+            >
+              <div
+                class="control-wrapper"
               >
                 <div
-                  className="root"
+                  class="control"
                 >
-                  <ProductInfo
-                    data={
-                      Object {
-                        "currencyGrapheme": "₽",
-                        "imageAlt": "Ножницы портновские, 23 см, цвет МИКС, Ножницы",
-                        "imageSrc": "https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085",
-                        "name": "Ножницы портновские, 23 см, цвет МИКС",
-                        "oldPrice": undefined,
-                        "price": 171,
-                        "url": "",
-                      }
-                    }
+                  <div
+                    class="root size-s"
+                    data-testid="stepper"
+                    style="width: 122px;"
                   >
-                    <ImageOverlay
-                      className="image-overlay"
+                    <svg
+                      class="button"
+                      data-testid="stepper:minus"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
                     >
-                      <div
-                        className="root image-overlay"
-                      >
-                        <a
-                          className="image-link"
-                          data-testid="product-info:image-link"
-                          href=""
-                        >
-                          <img
-                            alt="Ножницы портновские, 23 см, цвет МИКС, Ножницы"
-                            className="image"
-                            src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
-                          />
-                        </a>
-                        <div
-                          className="on-image"
-                        >
-                          <OnImage
-                            key=".0"
-                          >
-                            <ForwardRef
-                              className="favorite-button"
-                            >
-                              <ForwardRef(SvgHeart)
-                                aria-label="Добавить в избранное"
-                                className="button favorite-button"
-                                data-testid="favorite-button"
-                                height={24}
-                                role="button"
-                                width={24}
-                              >
-                                <svg
-                                  aria-label="Добавить в избранное"
-                                  className="button favorite-button"
-                                  data-testid="favorite-button"
-                                  height={24}
-                                  role="button"
-                                  viewBox="0 0 24 24"
-                                  width={24}
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 003.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
-                                  />
-                                </svg>
-                              </ForwardRef(SvgHeart)>
-                            </ForwardRef>
-                          </OnImage>
-                        </div>
-                      </div>
-                    </ImageOverlay>
-                    <div
-                      className="prices"
+                      <path
+                        clip-rule="evenodd"
+                        d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                    <input
+                      class="input"
+                      data-testid="stepper:input"
+                      value="3"
+                    />
+                    <svg
+                      class="button"
+                      data-testid="stepper:plus"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
                     >
-                      <Price
-                        className="price"
-                        currencyGrapheme="₽"
-                        value={171}
-                      >
-                        <span
-                          className="root price"
-                          data-testid="price"
-                        >
-                          171 ₽
-                        </span>
-                      </Price>
-                    </div>
-                    <ForwardRef(Link)
-                      className="link"
-                      color="gray87"
-                      data-testid="product-info:name-link"
-                      href=""
-                    >
-                      <a
-                        className="link link gray87"
-                        data-testid="product-info:name-link"
-                        href=""
-                      >
-                        Ножницы портновские, 23 см, цвет МИКС
-                      </a>
-                    </ForwardRef(Link)>
-                  </ProductInfo>
+                      <path
+                        d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </ProductSliderItem>
-              <ProductSliderItem
-                data={
-                  Object {
-                    "currencyGrapheme": "₽",
-                    "imageAlt": "Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный, Ножницы",
-                    "imageSrc": "https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894",
-                    "name": "Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный",
-                    "oldPrice": undefined,
-                    "price": 483,
-                    "url": "",
-                  }
-                }
-                key=".$4"
+                <div
+                  class="unit-text"
+                  data-testid="product-info:cart-step"
+                >
+                  По 5 шт
+                </div>
+                <div
+                  class="bottom-text"
+                  data-testid="product-info:cart-info"
+                >
+                  Комплектация + 50 ₽ при покупке до 20 шт
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="item"
+          >
+            <div
+              class="root image-overlay"
+            >
+              <a
+                class="image-link"
+                data-testid="product-info:image-link"
+                href=""
+              >
+                <img
+                  class="image"
+                  data-testid="product-info:image"
+                  src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
+                />
+              </a>
+              <div
+                class="image-buttons"
               >
                 <div
-                  className="root"
+                  class="root image-button"
+                  data-testid="favorite-button"
+                  role="banner"
                 >
-                  <ProductInfo
-                    data={
-                      Object {
-                        "currencyGrapheme": "₽",
-                        "imageAlt": "Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный, Ножницы",
-                        "imageSrc": "https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894",
-                        "name": "Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный",
-                        "oldPrice": undefined,
-                        "price": 483,
-                        "url": "",
-                      }
-                    }
+                  <svg
+                    class="stroke"
+                    height="24"
+                    stroke="#f5f5f5"
+                    stroke-width="3px"
+                    viewBox="0 0 24 24"
+                    width="24"
                   >
-                    <ImageOverlay
-                      className="image-overlay"
-                    >
-                      <div
-                        className="root image-overlay"
-                      >
-                        <a
-                          className="image-link"
-                          data-testid="product-info:image-link"
-                          href=""
-                        >
-                          <img
-                            alt="Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный, Ножницы"
-                            className="image"
-                            src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
-                          />
-                        </a>
-                        <div
-                          className="on-image"
-                        >
-                          <OnImage
-                            key=".0"
-                          >
-                            <ForwardRef
-                              className="favorite-button"
-                            >
-                              <ForwardRef(SvgHeart)
-                                aria-label="Добавить в избранное"
-                                className="button favorite-button"
-                                data-testid="favorite-button"
-                                height={24}
-                                role="button"
-                                width={24}
-                              >
-                                <svg
-                                  aria-label="Добавить в избранное"
-                                  className="button favorite-button"
-                                  data-testid="favorite-button"
-                                  height={24}
-                                  role="button"
-                                  viewBox="0 0 24 24"
-                                  width={24}
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 003.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
-                                  />
-                                </svg>
-                              </ForwardRef(SvgHeart)>
-                            </ForwardRef>
-                          </OnImage>
-                        </div>
-                      </div>
-                    </ImageOverlay>
-                    <div
-                      className="prices"
-                    >
-                      <Price
-                        className="price"
-                        currencyGrapheme="₽"
-                        value={483}
-                      >
-                        <span
-                          className="root price"
-                          data-testid="price"
-                        >
-                          483 ₽
-                        </span>
-                      </Price>
-                    </div>
-                    <ForwardRef(Link)
-                      className="link"
-                      color="gray87"
-                      data-testid="product-info:name-link"
-                      href=""
-                    >
-                      <a
-                        className="link link gray87"
-                        data-testid="product-info:name-link"
-                        href=""
-                      >
-                        Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный
-                      </a>
-                    </ForwardRef(Link)>
-                  </ProductInfo>
+                    <path
+                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+                    />
+                  </svg>
+                  <svg
+                    class="svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+                    />
+                  </svg>
                 </div>
-              </ProductSliderItem>
-              <ProductSliderItem
-                data={
-                  Object {
-                    "currencyGrapheme": "₽",
-                    "imageAlt": "Ножницы портновские, 22,5 см, цвет чёрный, Ножницы",
-                    "imageSrc": "https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898",
-                    "name": "Ножницы портновские, 22,5 см, цвет чёрный",
-                    "oldPrice": undefined,
-                    "price": 988,
-                    "url": "",
-                  }
-                }
-                key=".$5"
+                <div
+                  class="root image-button"
+                  data-testid="quick-view-button"
+                  role="banner"
+                >
+                  <svg
+                    class="stroke"
+                    height="24"
+                    stroke="#f5f5f5"
+                    stroke-width="3px"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+                    />
+                    <path
+                      d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+                    />
+                  </svg>
+                  <svg
+                    class="svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+                    />
+                    <path
+                      d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="root badges line-limit"
+              style="--line-limit: 1;"
+            >
+              <span
+                class="root item"
+                data-testid="badge"
+                style="--badge-color: #b52ea8;"
+              >
+                <span
+                  class="content"
+                >
+                  -56%
+                </span>
+              </span>
+              <span
+                class="root item"
+                data-testid="badge"
+                style="--badge-color: #ff7200;"
+              >
+                <span
+                  class="content"
+                >
+                  3 по цене 2
+                </span>
+              </span>
+              <span
+                class="root item"
+                data-testid="badge"
+                style="--badge-color: #2962ff;"
+              >
+                <span
+                  class="content"
+                >
+                  Товар месяца
+                </span>
+              </span>
+              <span
+                class="root item"
+                data-testid="badge"
+                style="--badge-color: #00b8d4;"
+              >
+                <span
+                  class="content"
+                >
+                  Акция
+                </span>
+              </span>
+            </div>
+            <div
+              class="prices height-limit"
+              data-testid="product-info:prices"
+            >
+              <span
+                class="root price"
+                data-testid="product-info:price"
+              >
+                238 ₽
+              </span>
+            </div>
+            <a
+              class="link link line-clamp gray87"
+              data-testid="product-info:name-link"
+              href=""
+            >
+              Ножницы портновские, 21,5 см, цвет чёрный/голубой
+            </a>
+            <a
+              class="link trademark-link brand-blue"
+              data-testid="product-info:trademark-link"
+              href="https://sima-land.ru"
+            >
+              Торговая марка Привет
+            </a>
+            <div
+              class="footer"
+              data-testid="product-info:footer"
+            >
+              <div
+                class="control-wrapper"
               >
                 <div
-                  className="root"
+                  class="control"
                 >
-                  <ProductInfo
-                    data={
-                      Object {
-                        "currencyGrapheme": "₽",
-                        "imageAlt": "Ножницы портновские, 22,5 см, цвет чёрный, Ножницы",
-                        "imageSrc": "https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898",
-                        "name": "Ножницы портновские, 22,5 см, цвет чёрный",
-                        "oldPrice": undefined,
-                        "price": 988,
-                        "url": "",
-                      }
-                    }
+                  <div
+                    class="root size-s"
+                    data-testid="stepper"
+                    style="width: 122px;"
                   >
-                    <ImageOverlay
-                      className="image-overlay"
+                    <svg
+                      class="button"
+                      data-testid="stepper:minus"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
                     >
-                      <div
-                        className="root image-overlay"
-                      >
-                        <a
-                          className="image-link"
-                          data-testid="product-info:image-link"
-                          href=""
-                        >
-                          <img
-                            alt="Ножницы портновские, 22,5 см, цвет чёрный, Ножницы"
-                            className="image"
-                            src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
-                          />
-                        </a>
-                        <div
-                          className="on-image"
-                        >
-                          <OnImage
-                            key=".0"
-                          >
-                            <ForwardRef
-                              className="favorite-button"
-                            >
-                              <ForwardRef(SvgHeart)
-                                aria-label="Добавить в избранное"
-                                className="button favorite-button"
-                                data-testid="favorite-button"
-                                height={24}
-                                role="button"
-                                width={24}
-                              >
-                                <svg
-                                  aria-label="Добавить в избранное"
-                                  className="button favorite-button"
-                                  data-testid="favorite-button"
-                                  height={24}
-                                  role="button"
-                                  viewBox="0 0 24 24"
-                                  width={24}
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 003.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
-                                  />
-                                </svg>
-                              </ForwardRef(SvgHeart)>
-                            </ForwardRef>
-                          </OnImage>
-                        </div>
-                      </div>
-                    </ImageOverlay>
-                    <div
-                      className="prices"
+                      <path
+                        clip-rule="evenodd"
+                        d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                    <input
+                      class="input"
+                      data-testid="stepper:input"
+                      value="3"
+                    />
+                    <svg
+                      class="button"
+                      data-testid="stepper:plus"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
                     >
-                      <Price
-                        className="price"
-                        currencyGrapheme="₽"
-                        value={988}
-                      >
-                        <span
-                          className="root price"
-                          data-testid="price"
-                        >
-                          988 ₽
-                        </span>
-                      </Price>
-                    </div>
-                    <ForwardRef(Link)
-                      className="link"
-                      color="gray87"
-                      data-testid="product-info:name-link"
-                      href=""
-                    >
-                      <a
-                        className="link link gray87"
-                        data-testid="product-info:name-link"
-                        href=""
-                      >
-                        Ножницы портновские, 22,5 см, цвет чёрный
-                      </a>
-                    </ForwardRef(Link)>
-                  </ProductInfo>
+                      <path
+                        d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </ProductSliderItem>
-              <ProductSliderItem
-                data={
-                  Object {
-                    "currencyGrapheme": "₽",
-                    "imageAlt": "Ножницы портновские, 22 см, цвет серебряный, Ножницы",
-                    "imageSrc": "https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830",
-                    "name": "Ножницы портновские, 22 см, цвет серебряный",
-                    "oldPrice": undefined,
-                    "price": 619,
-                    "url": "",
-                  }
-                }
-                key=".$6"
+                <div
+                  class="unit-text"
+                  data-testid="product-info:cart-step"
+                >
+                  По 5 шт
+                </div>
+                <div
+                  class="bottom-text"
+                  data-testid="product-info:cart-info"
+                >
+                  Комплектация + 50 ₽ при покупке до 20 шт
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="item"
+          >
+            <div
+              class="root image-overlay"
+            >
+              <a
+                class="image-link"
+                data-testid="product-info:image-link"
+                href=""
+              >
+                <img
+                  class="image"
+                  data-testid="product-info:image"
+                  src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+                />
+              </a>
+              <div
+                class="image-buttons"
               >
                 <div
-                  className="root"
+                  class="root image-button"
+                  data-testid="favorite-button"
+                  role="banner"
                 >
-                  <ProductInfo
-                    data={
-                      Object {
-                        "currencyGrapheme": "₽",
-                        "imageAlt": "Ножницы портновские, 22 см, цвет серебряный, Ножницы",
-                        "imageSrc": "https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830",
-                        "name": "Ножницы портновские, 22 см, цвет серебряный",
-                        "oldPrice": undefined,
-                        "price": 619,
-                        "url": "",
-                      }
-                    }
+                  <svg
+                    class="stroke"
+                    height="24"
+                    stroke="#f5f5f5"
+                    stroke-width="3px"
+                    viewBox="0 0 24 24"
+                    width="24"
                   >
-                    <ImageOverlay
-                      className="image-overlay"
-                    >
-                      <div
-                        className="root image-overlay"
-                      >
-                        <a
-                          className="image-link"
-                          data-testid="product-info:image-link"
-                          href=""
-                        >
-                          <img
-                            alt="Ножницы портновские, 22 см, цвет серебряный, Ножницы"
-                            className="image"
-                            src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
-                          />
-                        </a>
-                        <div
-                          className="on-image"
-                        >
-                          <OnImage
-                            key=".0"
-                          >
-                            <ForwardRef
-                              className="favorite-button"
-                            >
-                              <ForwardRef(SvgHeart)
-                                aria-label="Добавить в избранное"
-                                className="button favorite-button"
-                                data-testid="favorite-button"
-                                height={24}
-                                role="button"
-                                width={24}
-                              >
-                                <svg
-                                  aria-label="Добавить в избранное"
-                                  className="button favorite-button"
-                                  data-testid="favorite-button"
-                                  height={24}
-                                  role="button"
-                                  viewBox="0 0 24 24"
-                                  width={24}
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 003.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
-                                  />
-                                </svg>
-                              </ForwardRef(SvgHeart)>
-                            </ForwardRef>
-                          </OnImage>
-                        </div>
-                      </div>
-                    </ImageOverlay>
-                    <div
-                      className="prices"
-                    >
-                      <Price
-                        className="price"
-                        currencyGrapheme="₽"
-                        value={619}
-                      >
-                        <span
-                          className="root price"
-                          data-testid="price"
-                        >
-                          619 ₽
-                        </span>
-                      </Price>
-                    </div>
-                    <ForwardRef(Link)
-                      className="link"
-                      color="gray87"
-                      data-testid="product-info:name-link"
-                      href=""
-                    >
-                      <a
-                        className="link link gray87"
-                        data-testid="product-info:name-link"
-                        href=""
-                      >
-                        Ножницы портновские, 22 см, цвет серебряный
-                      </a>
-                    </ForwardRef(Link)>
-                  </ProductInfo>
+                    <path
+                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+                    />
+                  </svg>
+                  <svg
+                    class="svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+                    />
+                  </svg>
                 </div>
-              </ProductSliderItem>
-              <ProductSliderItem
-                data={
-                  Object {
-                    "currencyGrapheme": "₽",
-                    "imageAlt": "Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный, Ножницы",
-                    "imageSrc": "https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766",
-                    "name": "Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный",
-                    "oldPrice": 595,
-                    "price": 539,
-                    "url": "",
-                  }
-                }
-                key=".$7"
+                <div
+                  class="root image-button"
+                  data-testid="quick-view-button"
+                  role="banner"
+                >
+                  <svg
+                    class="stroke"
+                    height="24"
+                    stroke="#f5f5f5"
+                    stroke-width="3px"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+                    />
+                    <path
+                      d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+                    />
+                  </svg>
+                  <svg
+                    class="svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+                    />
+                    <path
+                      d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="prices height-limit"
+              data-testid="product-info:prices"
+            >
+              <span
+                class="root price"
+                data-testid="product-info:price"
+              >
+                171 ₽
+              </span>
+            </div>
+            <a
+              class="link link line-clamp gray87"
+              data-testid="product-info:name-link"
+              href=""
+            >
+              Ножницы портновские, 23 см, цвет МИКС
+            </a>
+            <div
+              class="footer"
+              data-testid="product-info:footer"
+            >
+              <div
+                class="control-wrapper"
               >
                 <div
-                  className="root"
+                  class="control"
                 >
-                  <ProductInfo
-                    data={
-                      Object {
-                        "currencyGrapheme": "₽",
-                        "imageAlt": "Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный, Ножницы",
-                        "imageSrc": "https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766",
-                        "name": "Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный",
-                        "oldPrice": 595,
-                        "price": 539,
-                        "url": "",
-                      }
-                    }
+                  <div
+                    class="root size-s"
+                    data-testid="stepper"
+                    style="width: 122px;"
                   >
-                    <ImageOverlay
-                      className="image-overlay"
+                    <svg
+                      class="button"
+                      data-testid="stepper:minus"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
                     >
-                      <div
-                        className="root image-overlay"
-                      >
-                        <a
-                          className="image-link"
-                          data-testid="product-info:image-link"
-                          href=""
-                        >
-                          <img
-                            alt="Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный, Ножницы"
-                            className="image"
-                            src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
-                          />
-                        </a>
-                        <div
-                          className="on-image"
-                        >
-                          <OnImage
-                            key=".0"
-                          >
-                            <ForwardRef
-                              className="favorite-button"
-                            >
-                              <ForwardRef(SvgHeart)
-                                aria-label="Добавить в избранное"
-                                className="button favorite-button"
-                                data-testid="favorite-button"
-                                height={24}
-                                role="button"
-                                width={24}
-                              >
-                                <svg
-                                  aria-label="Добавить в избранное"
-                                  className="button favorite-button"
-                                  data-testid="favorite-button"
-                                  height={24}
-                                  role="button"
-                                  viewBox="0 0 24 24"
-                                  width={24}
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 003.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
-                                  />
-                                </svg>
-                              </ForwardRef(SvgHeart)>
-                            </ForwardRef>
-                          </OnImage>
-                        </div>
-                      </div>
-                    </ImageOverlay>
-                    <div
-                      className="prices"
+                      <path
+                        clip-rule="evenodd"
+                        d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                    <input
+                      class="input"
+                      data-testid="stepper:input"
+                      value="3"
+                    />
+                    <svg
+                      class="button"
+                      data-testid="stepper:plus"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
                     >
-                      <Price
-                        className="price"
-                        currencyGrapheme="₽"
-                        value={539}
-                      >
-                        <span
-                          className="root price"
-                          data-testid="price"
-                        >
-                          539 ₽
-                        </span>
-                      </Price>
-                      <Price
-                        className="old-price"
-                        crossedOut={true}
-                        currencyGrapheme="₽"
-                        value={595}
-                      >
-                        <span
-                          className="root old-price crossed-out"
-                          data-testid="price"
-                        >
-                          595 ₽
-                        </span>
-                      </Price>
-                    </div>
-                    <ForwardRef(Link)
-                      className="link"
-                      color="gray87"
-                      data-testid="product-info:name-link"
-                      href=""
-                    >
-                      <a
-                        className="link link gray87"
-                        data-testid="product-info:name-link"
-                        href=""
-                      >
-                        Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный
-                      </a>
-                    </ForwardRef(Link)>
-                  </ProductInfo>
+                      <path
+                        d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </ProductSliderItem>
-              <ProductSliderItem
-                data={
-                  Object {
-                    "currencyGrapheme": "₽",
-                    "imageAlt": "Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый, Ножницы",
-                    "imageSrc": "https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956",
-                    "name": "Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый",
-                    "oldPrice": 71721323,
-                    "price": 59922332,
-                    "url": "",
-                  }
-                }
-                key=".$8"
+                <div
+                  class="unit-text"
+                  data-testid="product-info:cart-step"
+                >
+                  По 5 шт
+                </div>
+                <div
+                  class="bottom-text"
+                  data-testid="product-info:cart-info"
+                >
+                  Комплектация + 50 ₽ при покупке до 20 шт
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="item"
+          >
+            <div
+              class="root image-overlay"
+            >
+              <a
+                class="image-link"
+                data-testid="product-info:image-link"
+                href=""
+              >
+                <img
+                  class="image"
+                  data-testid="product-info:image"
+                  src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
+                />
+              </a>
+              <div
+                class="image-buttons"
               >
                 <div
-                  className="root"
+                  class="root image-button"
+                  data-testid="favorite-button"
+                  role="banner"
                 >
-                  <ProductInfo
-                    data={
-                      Object {
-                        "currencyGrapheme": "₽",
-                        "imageAlt": "Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый, Ножницы",
-                        "imageSrc": "https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956",
-                        "name": "Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый",
-                        "oldPrice": 71721323,
-                        "price": 59922332,
-                        "url": "",
-                      }
-                    }
+                  <svg
+                    class="stroke"
+                    height="24"
+                    stroke="#f5f5f5"
+                    stroke-width="3px"
+                    viewBox="0 0 24 24"
+                    width="24"
                   >
-                    <ImageOverlay
-                      className="image-overlay"
-                    >
-                      <div
-                        className="root image-overlay"
-                      >
-                        <a
-                          className="image-link"
-                          data-testid="product-info:image-link"
-                          href=""
-                        >
-                          <img
-                            alt="Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый, Ножницы"
-                            className="image"
-                            src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
-                          />
-                        </a>
-                        <div
-                          className="on-image"
-                        >
-                          <OnImage
-                            key=".0"
-                          >
-                            <ForwardRef
-                              className="favorite-button"
-                            >
-                              <ForwardRef(SvgHeart)
-                                aria-label="Добавить в избранное"
-                                className="button favorite-button"
-                                data-testid="favorite-button"
-                                height={24}
-                                role="button"
-                                width={24}
-                              >
-                                <svg
-                                  aria-label="Добавить в избранное"
-                                  className="button favorite-button"
-                                  data-testid="favorite-button"
-                                  height={24}
-                                  role="button"
-                                  viewBox="0 0 24 24"
-                                  width={24}
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 003.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
-                                  />
-                                </svg>
-                              </ForwardRef(SvgHeart)>
-                            </ForwardRef>
-                          </OnImage>
-                        </div>
-                      </div>
-                    </ImageOverlay>
-                    <div
-                      className="prices"
-                    >
-                      <Price
-                        className="price"
-                        currencyGrapheme="₽"
-                        value={59922332}
-                      >
-                        <span
-                          className="root price"
-                          data-testid="price"
-                        >
-                          59 922 332 ₽
-                        </span>
-                      </Price>
-                      <Price
-                        className="old-price"
-                        crossedOut={true}
-                        currencyGrapheme="₽"
-                        value={71721323}
-                      >
-                        <span
-                          className="root old-price crossed-out"
-                          data-testid="price"
-                        >
-                          71 721 323 ₽
-                        </span>
-                      </Price>
-                    </div>
-                    <ForwardRef(Link)
-                      className="link"
-                      color="gray87"
-                      data-testid="product-info:name-link"
-                      href=""
-                    >
-                      <a
-                        className="link link gray87"
-                        data-testid="product-info:name-link"
-                        href=""
-                      >
-                        Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый
-                      </a>
-                    </ForwardRef(Link)>
-                  </ProductInfo>
+                    <path
+                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+                    />
+                  </svg>
+                  <svg
+                    class="svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+                    />
+                  </svg>
                 </div>
-              </ProductSliderItem>
-              <ProductSliderItem
-                data={
-                  Object {
-                    "currencyGrapheme": "₽",
-                    "imageAlt": "Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный, Ножницы",
-                    "imageSrc": "https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932",
-                    "name": "Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный",
-                    "oldPrice": undefined,
-                    "price": 253,
-                    "url": "",
-                  }
-                }
-                key=".$9"
+                <div
+                  class="root image-button"
+                  data-testid="quick-view-button"
+                  role="banner"
+                >
+                  <svg
+                    class="stroke"
+                    height="24"
+                    stroke="#f5f5f5"
+                    stroke-width="3px"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+                    />
+                    <path
+                      d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+                    />
+                  </svg>
+                  <svg
+                    class="svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+                    />
+                    <path
+                      d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="prices height-limit"
+              data-testid="product-info:prices"
+            >
+              <span
+                class="root price"
+                data-testid="product-info:price"
+              >
+                483 ₽
+              </span>
+            </div>
+            <a
+              class="link link line-clamp gray87"
+              data-testid="product-info:name-link"
+              href=""
+            >
+              Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный
+            </a>
+            <div
+              class="footer"
+              data-testid="product-info:footer"
+            >
+              <div
+                class="control-wrapper"
               >
                 <div
-                  className="root"
+                  class="control"
                 >
-                  <ProductInfo
-                    data={
-                      Object {
-                        "currencyGrapheme": "₽",
-                        "imageAlt": "Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный, Ножницы",
-                        "imageSrc": "https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932",
-                        "name": "Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный",
-                        "oldPrice": undefined,
-                        "price": 253,
-                        "url": "",
-                      }
-                    }
+                  <div
+                    class="root size-s"
+                    data-testid="stepper"
+                    style="width: 122px;"
                   >
-                    <ImageOverlay
-                      className="image-overlay"
+                    <svg
+                      class="button"
+                      data-testid="stepper:minus"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
                     >
-                      <div
-                        className="root image-overlay"
-                      >
-                        <a
-                          className="image-link"
-                          data-testid="product-info:image-link"
-                          href=""
-                        >
-                          <img
-                            alt="Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный, Ножницы"
-                            className="image"
-                            src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
-                          />
-                        </a>
-                        <div
-                          className="on-image"
-                        >
-                          <OnImage
-                            key=".0"
-                          >
-                            <ForwardRef
-                              className="favorite-button"
-                            >
-                              <ForwardRef(SvgHeart)
-                                aria-label="Добавить в избранное"
-                                className="button favorite-button"
-                                data-testid="favorite-button"
-                                height={24}
-                                role="button"
-                                width={24}
-                              >
-                                <svg
-                                  aria-label="Добавить в избранное"
-                                  className="button favorite-button"
-                                  data-testid="favorite-button"
-                                  height={24}
-                                  role="button"
-                                  viewBox="0 0 24 24"
-                                  width={24}
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M19.944 3.6h-.001c-2.7-1.879-5.978-1.165-7.943.793-1.964-1.958-5.241-2.683-7.943-.792C2.524 4.673 1.57 6.473 1.504 8.369c-.075 2.145.826 4.042 2.36 5.985 1.512 1.912 3.685 3.927 6.261 6.315l.086.08h.002l.098.091a2.466 2.466 0 003.371-.012l.107-.1.027-.025c2.602-2.407 4.795-4.436 6.316-6.361 1.534-1.941 2.435-3.838 2.364-5.982v-.001c-.065-1.886-1.02-3.686-2.552-4.758zM12 18.274c-2.278-2.105-4.14-3.84-5.45-5.401-1.358-1.62-2.047-2.968-2.047-4.261 0-1.774 1.285-3.07 2.999-3.07 1.055 0 2.103.553 2.72 1.39.38.516.996 1.017 1.78 1.017.789 0 1.406-.507 1.787-1.025.612-.831 1.657-1.382 2.71-1.382 1.713 0 2.998 1.296 2.998 3.07 0 1.293-.689 2.641-2.047 4.26-1.309 1.561-3.171 3.296-5.45 5.402z"
-                                  />
-                                </svg>
-                              </ForwardRef(SvgHeart)>
-                            </ForwardRef>
-                          </OnImage>
-                        </div>
-                      </div>
-                    </ImageOverlay>
-                    <div
-                      className="prices"
+                      <path
+                        clip-rule="evenodd"
+                        d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                    <input
+                      class="input"
+                      data-testid="stepper:input"
+                      value="3"
+                    />
+                    <svg
+                      class="button"
+                      data-testid="stepper:plus"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
                     >
-                      <Price
-                        className="price"
-                        currencyGrapheme="₽"
-                        value={253}
-                      >
-                        <span
-                          className="root price"
-                          data-testid="price"
-                        >
-                          253 ₽
-                        </span>
-                      </Price>
-                    </div>
-                    <ForwardRef(Link)
-                      className="link"
-                      color="gray87"
-                      data-testid="product-info:name-link"
-                      href=""
-                    >
-                      <a
-                        className="link link gray87"
-                        data-testid="product-info:name-link"
-                        href=""
-                      >
-                        Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный
-                      </a>
-                    </ForwardRef(Link)>
-                  </ProductInfo>
+                      <path
+                        d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </ProductSliderItem>
+                <div
+                  class="unit-text"
+                  data-testid="product-info:cart-step"
+                >
+                  По 5 шт
+                </div>
+                <div
+                  class="bottom-text"
+                  data-testid="product-info:cart-info"
+                >
+                  Комплектация + 50 ₽ при покупке до 20 шт
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="item"
+          >
+            <div
+              class="root image-overlay"
+            >
+              <a
+                class="image-link"
+                data-testid="product-info:image-link"
+                href=""
+              >
+                <img
+                  class="image"
+                  data-testid="product-info:image"
+                  src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
+                />
+              </a>
+              <div
+                class="image-buttons"
+              >
+                <div
+                  class="root image-button"
+                  data-testid="favorite-button"
+                  role="banner"
+                >
+                  <svg
+                    class="stroke"
+                    height="24"
+                    stroke="#f5f5f5"
+                    stroke-width="3px"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+                    />
+                  </svg>
+                  <svg
+                    class="svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="root image-button"
+                  data-testid="quick-view-button"
+                  role="banner"
+                >
+                  <svg
+                    class="stroke"
+                    height="24"
+                    stroke="#f5f5f5"
+                    stroke-width="3px"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+                    />
+                    <path
+                      d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+                    />
+                  </svg>
+                  <svg
+                    class="svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+                    />
+                    <path
+                      d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="root badges line-limit"
+              style="--line-limit: 1;"
+            >
+              <span
+                class="root item"
+                data-testid="badge"
+                style="--badge-color: #2962ff;"
+              >
+                <span
+                  class="content"
+                >
+                  Товар месяца
+                </span>
+              </span>
+              <span
+                class="root item"
+                data-testid="badge"
+                style="--badge-color: #00b8d4;"
+              >
+                <span
+                  class="content"
+                >
+                  Акция
+                </span>
+              </span>
+            </div>
+            <div
+              class="prices height-limit"
+              data-testid="product-info:prices"
+            >
+              <span
+                class="root price"
+                data-testid="product-info:price"
+              >
+                988 ₽
+              </span>
+            </div>
+            <a
+              class="link link line-clamp gray87"
+              data-testid="product-info:name-link"
+              href=""
+            >
+              Ножницы портновские, 22,5 см, цвет чёрный
+            </a>
+            <div
+              class="footer"
+              data-testid="product-info:footer"
+            >
+              <div
+                class="control-wrapper"
+              >
+                <div
+                  class="control"
+                >
+                  <div
+                    class="root size-s"
+                    data-testid="stepper"
+                    style="width: 122px;"
+                  >
+                    <svg
+                      class="button"
+                      data-testid="stepper:minus"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                    <input
+                      class="input"
+                      data-testid="stepper:input"
+                      value="3"
+                    />
+                    <svg
+                      class="button"
+                      data-testid="stepper:plus"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="unit-text"
+                  data-testid="product-info:cart-step"
+                >
+                  По 5 шт
+                </div>
+                <div
+                  class="bottom-text"
+                  data-testid="product-info:cart-info"
+                >
+                  Комплектация + 50 ₽ при покупке до 20 шт
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="item"
+          >
+            <div
+              class="root image-overlay"
+            >
+              <a
+                class="image-link"
+                data-testid="product-info:image-link"
+                href=""
+              >
+                <img
+                  class="image"
+                  data-testid="product-info:image"
+                  src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
+                />
+              </a>
+              <div
+                class="image-buttons"
+              >
+                <div
+                  class="root image-button"
+                  data-testid="favorite-button"
+                  role="banner"
+                >
+                  <svg
+                    class="stroke"
+                    height="24"
+                    stroke="#f5f5f5"
+                    stroke-width="3px"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+                    />
+                  </svg>
+                  <svg
+                    class="svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="root image-button"
+                  data-testid="quick-view-button"
+                  role="banner"
+                >
+                  <svg
+                    class="stroke"
+                    height="24"
+                    stroke="#f5f5f5"
+                    stroke-width="3px"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+                    />
+                    <path
+                      d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+                    />
+                  </svg>
+                  <svg
+                    class="svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+                    />
+                    <path
+                      d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="prices height-limit"
+              data-testid="product-info:prices"
+            >
+              <span
+                class="root price"
+                data-testid="product-info:price"
+              >
+                619 ₽
+              </span>
+            </div>
+            <a
+              class="link link line-clamp gray87"
+              data-testid="product-info:name-link"
+              href=""
+            >
+              Ножницы портновские, 22 см, цвет серебряный
+            </a>
+            <div
+              class="footer"
+              data-testid="product-info:footer"
+            >
+              <div
+                class="control-wrapper"
+              >
+                <div
+                  class="control"
+                >
+                  <div
+                    class="root size-s"
+                    data-testid="stepper"
+                    style="width: 122px;"
+                  >
+                    <svg
+                      class="button"
+                      data-testid="stepper:minus"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                    <input
+                      class="input"
+                      data-testid="stepper:input"
+                      value="3"
+                    />
+                    <svg
+                      class="button"
+                      data-testid="stepper:plus"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="unit-text"
+                  data-testid="product-info:cart-step"
+                >
+                  По 5 шт
+                </div>
+                <div
+                  class="bottom-text"
+                  data-testid="product-info:cart-info"
+                >
+                  Комплектация + 50 ₽ при покупке до 20 шт
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="item"
+          >
+            <div
+              class="root image-overlay"
+            >
+              <a
+                class="image-link"
+                data-testid="product-info:image-link"
+                href=""
+              >
+                <img
+                  class="image"
+                  data-testid="product-info:image"
+                  src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
+                />
+              </a>
+              <div
+                class="image-buttons"
+              >
+                <div
+                  class="root image-button"
+                  data-testid="favorite-button"
+                  role="banner"
+                >
+                  <svg
+                    class="stroke"
+                    height="24"
+                    stroke="#f5f5f5"
+                    stroke-width="3px"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+                    />
+                  </svg>
+                  <svg
+                    class="svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="root image-button"
+                  data-testid="quick-view-button"
+                  role="banner"
+                >
+                  <svg
+                    class="stroke"
+                    height="24"
+                    stroke="#f5f5f5"
+                    stroke-width="3px"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+                    />
+                    <path
+                      d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+                    />
+                  </svg>
+                  <svg
+                    class="svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+                    />
+                    <path
+                      d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="prices height-limit"
+              data-testid="product-info:prices"
+            >
+              <span
+                class="root price"
+                data-testid="product-info:price"
+              >
+                539 ₽
+              </span>
+              <span
+                class="root old-price crossed-out"
+                data-testid="product-info:old-price"
+              >
+                595 ₽
+              </span>
+            </div>
+            <a
+              class="link link line-clamp gray87"
+              data-testid="product-info:name-link"
+              href=""
+            >
+              Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный
+            </a>
+            <div
+              class="footer"
+              data-testid="product-info:footer"
+            >
+              <div
+                class="control-wrapper"
+              >
+                <div
+                  class="control"
+                >
+                  <div
+                    class="root size-s"
+                    data-testid="stepper"
+                    style="width: 122px;"
+                  >
+                    <svg
+                      class="button"
+                      data-testid="stepper:minus"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                    <input
+                      class="input"
+                      data-testid="stepper:input"
+                      value="3"
+                    />
+                    <svg
+                      class="button"
+                      data-testid="stepper:plus"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="unit-text"
+                  data-testid="product-info:cart-step"
+                >
+                  По 5 шт
+                </div>
+                <div
+                  class="bottom-text"
+                  data-testid="product-info:cart-info"
+                >
+                  Комплектация + 50 ₽ при покупке до 20 шт
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="item"
+          >
+            <div
+              class="root image-overlay"
+            >
+              <a
+                class="image-link"
+                data-testid="product-info:image-link"
+                href=""
+              >
+                <img
+                  class="image"
+                  data-testid="product-info:image"
+                  src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
+                />
+              </a>
+              <div
+                class="image-buttons"
+              >
+                <div
+                  class="root image-button"
+                  data-testid="favorite-button"
+                  role="banner"
+                >
+                  <svg
+                    class="stroke"
+                    height="24"
+                    stroke="#f5f5f5"
+                    stroke-width="3px"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+                    />
+                  </svg>
+                  <svg
+                    class="svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="root image-button"
+                  data-testid="quick-view-button"
+                  role="banner"
+                >
+                  <svg
+                    class="stroke"
+                    height="24"
+                    stroke="#f5f5f5"
+                    stroke-width="3px"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+                    />
+                    <path
+                      d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+                    />
+                  </svg>
+                  <svg
+                    class="svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+                    />
+                    <path
+                      d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="prices height-limit"
+              data-testid="product-info:prices"
+            >
+              <span
+                class="root price"
+                data-testid="product-info:price"
+              >
+                59 922 332 ₽
+              </span>
+              <span
+                class="root old-price crossed-out"
+                data-testid="product-info:old-price"
+              >
+                71 721 323 ₽
+              </span>
+            </div>
+            <a
+              class="link link line-clamp gray87"
+              data-testid="product-info:name-link"
+              href=""
+            >
+              Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый
+            </a>
+            <div
+              class="footer"
+              data-testid="product-info:footer"
+            >
+              <div
+                class="control-wrapper"
+              >
+                <div
+                  class="control"
+                >
+                  <div
+                    class="root size-s"
+                    data-testid="stepper"
+                    style="width: 122px;"
+                  >
+                    <svg
+                      class="button"
+                      data-testid="stepper:minus"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                    <input
+                      class="input"
+                      data-testid="stepper:input"
+                      value="3"
+                    />
+                    <svg
+                      class="button"
+                      data-testid="stepper:plus"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="unit-text"
+                  data-testid="product-info:cart-step"
+                >
+                  По 5 шт
+                </div>
+                <div
+                  class="bottom-text"
+                  data-testid="product-info:cart-info"
+                >
+                  Комплектация + 50 ₽ при покупке до 20 шт
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="item"
+          >
+            <div
+              class="root image-overlay"
+            >
+              <a
+                class="image-link"
+                data-testid="product-info:image-link"
+                href=""
+              >
+                <img
+                  class="image"
+                  data-testid="product-info:image"
+                  src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
+                />
+              </a>
+              <div
+                class="image-buttons"
+              >
+                <div
+                  class="root image-button"
+                  data-testid="favorite-button"
+                  role="banner"
+                >
+                  <svg
+                    class="stroke"
+                    height="24"
+                    stroke="#f5f5f5"
+                    stroke-width="3px"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+                    />
+                  </svg>
+                  <svg
+                    class="svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="root image-button"
+                  data-testid="quick-view-button"
+                  role="banner"
+                >
+                  <svg
+                    class="stroke"
+                    height="24"
+                    stroke="#f5f5f5"
+                    stroke-width="3px"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+                    />
+                    <path
+                      d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+                    />
+                  </svg>
+                  <svg
+                    class="svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+                    />
+                    <path
+                      d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="prices height-limit"
+              data-testid="product-info:prices"
+            >
+              <span
+                class="root price"
+                data-testid="product-info:price"
+              >
+                253 ₽
+              </span>
+            </div>
+            <a
+              class="link link line-clamp gray87"
+              data-testid="product-info:name-link"
+              href=""
+            >
+              Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный
+            </a>
+            <div
+              class="footer"
+              data-testid="product-info:footer"
+            >
+              <div
+                class="control-wrapper"
+              >
+                <div
+                  class="control"
+                >
+                  <div
+                    class="root size-s"
+                    data-testid="stepper"
+                    style="width: 122px;"
+                  >
+                    <svg
+                      class="button"
+                      data-testid="stepper:minus"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                    <input
+                      class="input"
+                      data-testid="stepper:input"
+                      value="3"
+                    />
+                    <svg
+                      class="button"
+                      data-testid="stepper:plus"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="unit-text"
+                  data-testid="product-info:cart-step"
+                >
+                  По 5 шт
+                </div>
+                <div
+                  class="bottom-text"
+                  data-testid="product-info:cart-info"
+                >
+                  Комплектация + 50 ₽ при покупке до 20 шт
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </MobileLayout>
-    </TouchSlider>
+      </div>
+    </div>
   </div>
-</ProductSlider>
+</div>
 `;

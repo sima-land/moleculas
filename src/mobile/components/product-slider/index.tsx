@@ -1,12 +1,14 @@
-import React, { Children, isValidElement, useEffect, useRef, useState } from 'react';
+import React, { Children, isValidElement, useRef } from 'react';
 import { useViewport } from '../../../desktop/components/product-carousel/utils';
-import { ProductSliderItem } from './item';
 import { TouchSlider } from '@sima-land/ui-nucleons/touch-slider';
-import { SliderContext } from './utils';
+import { ProductInfo, ProductInfoProps } from '../../../common/components/product-info';
+import styles from './product-slider.module.scss';
+
+export type ItemElement = React.ReactElement<ProductInfoProps, typeof ProductInfo>;
 
 export interface ProductSliderProps {
   /** Товары. */
-  children?: React.ReactNode;
+  children?: ItemElement | ItemElement[];
 
   /** Функция, вызываемая при попадании компонента в поле видимости. */
   onInViewport?: () => void;
@@ -15,23 +17,13 @@ export interface ProductSliderProps {
   onNeedRequest?: () => void;
 }
 
-export interface ProductSliderComponent {
-  (props: ProductSliderProps): JSX.Element;
-  Item: typeof ProductSliderItem;
-}
-
 /**
- * Компонент мобильного слайдера рекомендованных товаров.
- * @param props Свойства компонента.
+ * Слайдер товаров.
+ * @param props Свойства.
  * @return Элемент.
  */
-export const ProductSlider: ProductSliderComponent = ({
-  children,
-  onInViewport,
-  onNeedRequest,
-}) => {
+export const ProductSlider = ({ children, onInViewport, onNeedRequest }: ProductSliderProps) => {
   const rootRef = useRef<HTMLDivElement>(null);
-  const [mounted, setMounted] = useState<boolean>(false);
 
   // инициируем загрузку данных, когда компонент почти попал в зону видимости
   useViewport(rootRef, onNeedRequest, {
@@ -41,20 +33,21 @@ export const ProductSlider: ProductSliderComponent = ({
   // сообщаем, когда компонент попадет в зону видимости
   useViewport(rootRef, onInViewport);
 
-  // разрешаем загружать картинки только после монтирования
-  useEffect(() => setMounted(true), []);
-
   return (
     <div ref={rootRef}>
       <TouchSlider>
-        <SliderContext.Provider value={{ needLoadImages: mounted }}>
-          {Children.toArray(children).filter(
-            x => isValidElement(x) && x.type === ProductSliderItem,
-          )}
-        </SliderContext.Provider>
+        {Children.toArray(children).reduce<React.ReactElement[]>((list, item) => {
+          isValidElement(item) &&
+            item.type === ProductInfo &&
+            list.push(
+              <div key={item.key} className={styles.item}>
+                {item}
+              </div>,
+            );
+
+          return list;
+        }, [])}
       </TouchSlider>
     </div>
   );
 };
-
-ProductSlider.Item = ProductSliderItem;
