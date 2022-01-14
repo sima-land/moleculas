@@ -29,8 +29,8 @@ export interface SearchBarProps {
   onClear?: React.MouseEventHandler;
   buttonText?: string;
   onButtonClick?: (...args: any[]) => any;
-  endButtons?: any[]; // TODO: PropTypes.shape(ButtonTypes)
-  startButtons?: any[]; // TODO: PropTypes.shape(ButtonTypes)
+  endButtons?: any[]; // @todo: избавиться от any
+  startButtons?: any[]; // @todo: избавиться от any
   withSearchIcon?: boolean;
   autoFocus?: boolean;
   description?: string;
