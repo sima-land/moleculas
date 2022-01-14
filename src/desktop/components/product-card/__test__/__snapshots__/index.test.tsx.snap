@@ -1,144 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProductCard should handle slots in children 1`] = `
+exports[`ProductCard should render base info correctly 1`] = `
 <div>
   <div
-    class="root rounds-sm__all shadow-z4"
+    class="root"
+    data-testid="product-card"
   >
     <div
-      class="root image-overlay"
-    >
-      <a
-        class="image-link"
-        data-testid="product-info:image-link"
-        href="https://sima-land.ru"
-      >
-        <img
-          class="image"
-          src="https://picsum.photos/240"
-        />
-      </a>
-      <div
-        class="on-image"
-      >
-        <svg
-          aria-label="Быстрый просмотр"
-          class="root quick-view-button"
-          data-testid="quick-view-button"
-          height="24"
-          role="button"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0111.5 20.5a9 9 0 119-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 01-2.122 2.122zM9 10h1V9a1.5 1.5 0 113 0v1h1a1.5 1.5 0 110 3h-1v1a1.5 1.5 0 11-3 0v-1H9a1.5 1.5 0 110-3zm2.5-4.5a6 6 0 100 12 6 6 0 000-12z"
-          />
-        </svg>
-      </div>
-    </div>
-    <div
-      class="root badges line-limit"
-      style="--line-limit: 1;"
-    >
-      <span
-        class="root item"
-        data-testid="badge"
-        style="--badge-color: #b52ea8;"
-      >
-        <span
-          class="content"
-        >
-          -56%
-        </span>
-      </span>
-      <span
-        class="root item"
-        data-testid="badge"
-        style="--badge-color: #ff7200;"
-      >
-        <span
-          class="content"
-        >
-          3 по цене 2
-        </span>
-      </span>
-      <span
-        class="root item"
-        data-testid="badge"
-        style="--badge-color: #2962ff;"
-      >
-        <span
-          class="content"
-        >
-          Товар месяца
-        </span>
-      </span>
-      <span
-        class="root item"
-        data-testid="badge"
-        style="--badge-color: #00b8d4;"
-      >
-        <span
-          class="content"
-        >
-          Акция
-        </span>
-      </span>
-    </div>
-    <div
-      class="prices"
-    >
-      <span
-        class="root price"
-        data-testid="price"
-      >
-        1 200 ₽
-      </span>
-      <span
-        class="root old-price crossed-out"
-        data-testid="price"
-      >
-        1 450 ₽
-      </span>
-    </div>
-    <a
-      class="link link gray87"
-      data-testid="product-info:name-link"
-      href="https://sima-land.ru"
-    >
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, nulla.
-    </a>
-    <div
-      class="control-wrapper"
-    >
-      <div
-        class="control"
-      >
-        <button>
-          Add to cart
-        </button>
-      </div>
-      <div
-        class="unit-text"
-      >
-        hello
-      </div>
-      <div
-        class="bottom-text"
-      >
-        world
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ProductCard should render cart control loading state 1`] = `
-<body>
-  <div>
-    <div
-      class="root rounds-sm__all shadow-z4"
+      data-testid="product-card:info"
     >
       <div
         class="root image-overlay"
@@ -146,229 +15,157 @@ exports[`ProductCard should render cart control loading state 1`] = `
         <a
           class="image-link"
           data-testid="product-info:image-link"
-          href="https://sima-land.ru"
+          href="https://www.products.com/some-product"
         >
           <img
             class="image"
-            src="https://picsum.photos/240"
+            data-testid="product-info:image"
+            src="https://www.images.com/some-product/1"
           />
         </a>
-        <div
-          class="on-image"
-        >
-          <svg
-            aria-label="Быстрый просмотр"
-            class="root quick-view-button"
-            data-testid="quick-view-button"
-            height="24"
-            role="button"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0111.5 20.5a9 9 0 119-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 01-2.122 2.122zM9 10h1V9a1.5 1.5 0 113 0v1h1a1.5 1.5 0 110 3h-1v1a1.5 1.5 0 11-3 0v-1H9a1.5 1.5 0 110-3zm2.5-4.5a6 6 0 100 12 6 6 0 000-12z"
-            />
-          </svg>
-        </div>
       </div>
       <div
-        class="root badges line-limit"
-        style="--line-limit: 1;"
-      >
-        <span
-          class="root item"
-          data-testid="badge"
-          style="--badge-color: #b52ea8;"
-        >
-          <span
-            class="content"
-          >
-            -56%
-          </span>
-        </span>
-        <span
-          class="root item"
-          data-testid="badge"
-          style="--badge-color: #ff7200;"
-        >
-          <span
-            class="content"
-          >
-            3 по цене 2
-          </span>
-        </span>
-        <span
-          class="root item"
-          data-testid="badge"
-          style="--badge-color: #2962ff;"
-        >
-          <span
-            class="content"
-          >
-            Товар месяца
-          </span>
-        </span>
-        <span
-          class="root item"
-          data-testid="badge"
-          style="--badge-color: #00b8d4;"
-        >
-          <span
-            class="content"
-          >
-            Акция
-          </span>
-        </span>
-      </div>
-      <div
-        class="prices"
+        class="prices height-limit"
+        data-testid="product-info:prices"
       >
         <span
           class="root price"
-          data-testid="price"
+          data-testid="product-info:price"
         >
-          1 200 ₽
+          23 476,23 $
         </span>
         <span
           class="root old-price crossed-out"
-          data-testid="price"
+          data-testid="product-info:old-price"
         >
-          1 450 ₽
+          25 000 $
         </span>
       </div>
       <a
-        class="link link gray87"
+        class="link link line-clamp gray87"
         data-testid="product-info:name-link"
-        href="https://sima-land.ru"
+        href="https://www.products.com/some-product"
       >
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, nulla.
+        Some product
       </a>
-      <div
-        class="control-wrapper loading"
-      >
-        <div
-          class="control"
-        />
-        <div
-          class="unit-text"
-        />
-      </div>
     </div>
   </div>
-</body>
+</div>
 `;
 
-exports[`ProductCard should renders correctly 1`] = `
+exports[`ProductCard should render hover card correctly 1`] = `
 <div>
   <div
-    class="root rounds-sm__all shadow-z4 test-class"
-    style="width: 240px;"
+    class="root"
+    data-testid="product-card"
   >
     <div
-      class="root image-overlay"
+      data-testid="product-card:info"
     >
-      <a
-        class="image-link"
-        data-testid="product-info:image-link"
-        href="https://sima-land.ru"
+      <div
+        class="root image-overlay"
       >
-        <img
-          class="image"
-          src="https://picsum.photos/240"
-        />
+        <a
+          class="image-link"
+          data-testid="product-info:image-link"
+          href="https://www.products.com/some-product"
+        >
+          <img
+            class="image"
+            data-testid="product-info:image"
+            src="https://www.images.com/some-product/1"
+          />
+        </a>
+      </div>
+      <div
+        class="prices height-limit"
+        data-testid="product-info:prices"
+      >
+        <span
+          class="root price"
+          data-testid="product-info:price"
+        >
+          23 476,23 $
+        </span>
+        <span
+          class="root old-price crossed-out"
+          data-testid="product-info:old-price"
+        >
+          25 000 $
+        </span>
+      </div>
+      <a
+        class="link link line-clamp gray87"
+        data-testid="product-info:name-link"
+        href="https://www.products.com/some-product"
+      >
+        Some product
+      </a>
+    </div>
+    <div
+      class="bg-color__white card shadow-z4 rounds-md__all"
+      data-testid="product-card:hover-card"
+    >
+      <div
+        class="root image-overlay"
+      >
+        <a
+          class="image-link"
+          data-testid="product-info:image-link"
+          href="https://www.products.com/some-product"
+        >
+          <img
+            class="image"
+            data-testid="product-info:image"
+            src="https://www.images.com/some-product/1"
+            style="opacity: 1;"
+          />
+        </a>
+      </div>
+      <div
+        class="prices height-limit"
+        data-testid="product-info:prices"
+      >
+        <span
+          class="root price"
+          data-testid="product-info:price"
+        >
+          23 476,23 $
+        </span>
+        <span
+          class="root old-price crossed-out"
+          data-testid="product-info:old-price"
+        >
+          25 000 $
+        </span>
+      </div>
+      <a
+        class="link link line-clamp gray87"
+        data-testid="product-info:name-link"
+        href="https://www.products.com/some-product"
+      >
+        Some product
       </a>
       <div
-        class="on-image"
+        class="footer"
+        data-testid="product-info:footer"
       >
-        <svg
-          aria-label="Быстрый просмотр"
-          class="root quick-view-button"
-          data-testid="quick-view-button"
-          height="24"
-          role="button"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          class="control-wrapper"
         >
-          <path
-            d="M19.94 22.06l-3.219-3.217-.339.22A8.956 8.956 0 0111.5 20.5a9 9 0 119-9c0 1.8-.528 3.476-1.438 4.882l-.22.34 3.219 3.217a1.5 1.5 0 01-2.122 2.122zM9 10h1V9a1.5 1.5 0 113 0v1h1a1.5 1.5 0 110 3h-1v1a1.5 1.5 0 11-3 0v-1H9a1.5 1.5 0 110-3zm2.5-4.5a6 6 0 100 12 6 6 0 000-12z"
-          />
-        </svg>
+          <div
+            class="control"
+          >
+            <button
+              class="button-base button-primary button-m text-button-m"
+              data-testid="button"
+            >
+              В корзину
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-    <div
-      class="root badges line-limit"
-      style="--line-limit: 1;"
-    >
-      <span
-        class="root item"
-        data-testid="badge"
-        style="--badge-color: #b52ea8;"
-      >
-        <span
-          class="content"
-        >
-          -56%
-        </span>
-      </span>
-      <span
-        class="root item"
-        data-testid="badge"
-        style="--badge-color: #ff7200;"
-      >
-        <span
-          class="content"
-        >
-          3 по цене 2
-        </span>
-      </span>
-      <span
-        class="root item"
-        data-testid="badge"
-        style="--badge-color: #2962ff;"
-      >
-        <span
-          class="content"
-        >
-          Товар месяца
-        </span>
-      </span>
-      <span
-        class="root item"
-        data-testid="badge"
-        style="--badge-color: #00b8d4;"
-      >
-        <span
-          class="content"
-        >
-          Акция
-        </span>
-      </span>
-    </div>
-    <div
-      class="prices"
-    >
-      <span
-        class="root price"
-        data-testid="price"
-      >
-        1 200 ₽
-      </span>
-      <span
-        class="root old-price crossed-out"
-        data-testid="price"
-      >
-        1 450 ₽
-      </span>
-    </div>
-    <a
-      class="link link gray87"
-      data-testid="product-info:name-link"
-      href="https://sima-land.ru"
-    >
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, nulla.
-    </a>
   </div>
 </div>
 `;

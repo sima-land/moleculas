@@ -1,5 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import { act } from 'react-dom/test-utils';
 import { PersonScreen } from '..';
 import { colorKey } from '@sima-land/ui-nucleons/avatar/user';
 
@@ -25,8 +26,11 @@ describe('<PersonScreen />', () => {
   });
 
   it('should handle props', () => {
+    const spy = jest.fn();
+
     const wrapper = mount(
       <PersonScreen
+        onClose={spy}
         name='Марина Михайловская'
         appointment='Менеджер по игрушке'
         email='example@email.com'
@@ -43,5 +47,13 @@ describe('<PersonScreen />', () => {
     );
 
     expect(wrapper).toMatchSnapshot();
+
+    expect(spy).toBeCalledTimes(0);
+
+    act(() => {
+      wrapper.find('button[data-testid="screen:close"]').simulate('click');
+    });
+
+    expect(spy).toBeCalledTimes(1);
   });
 });

@@ -1,103 +1,81 @@
-import React, { forwardRef } from 'react';
-import { ProductInfo, ProductInfoProps } from '../../../common/components/product-info';
-import { WithHint } from '@sima-land/ui-nucleons/with-hint';
-import { QuickViewButton } from '../../../common/components/quick-view-button';
-import { SmallRounds } from '@sima-land/ui-nucleons/styling/shapes';
-import { BoxShadow } from '@sima-land/ui-nucleons/styling/shadows';
-import { defineSlots } from '@sima-land/ui-nucleons/helpers/define-slots';
-import withPrevent from '@sima-land/ui-nucleons/helpers/with-prevent';
-import classnames from 'classnames/bind';
+import React, { Children, forwardRef, isValidElement, cloneElement, useState } from 'react';
+import { ProductInfo, ProductInfoProps, Parts } from '../../../common/components/product-info';
+import { Plate, PlateProps } from '@sima-land/ui-nucleons/plate';
+import cn from 'classnames';
 import styles from './product-card.module.scss';
 
-export interface ProductCardProps extends ProductInfoProps, React.HTMLAttributes<HTMLDivElement> {
-  /** Будет вызвана при уходе курсора с элемента. */
-  onMouseLeave?: () => void;
+export type ProductCardChildren = React.ReactElement<ProductInfoProps, typeof ProductInfo>;
 
-  /** Будет вызвана при нажатии на кнопку-иконку быстрого просмотра. */
-  onQuickViewClick?: () => void;
+export interface ProductCardProps extends React.HTMLAttributes<HTMLDivElement> {
+  children: ProductCardChildren;
 }
 
-const cx = classnames.bind(styles);
+export const HoverCard = forwardRef<HTMLDivElement | null, PlateProps>((props, ref) => (
+  <Plate
+    {...props}
+    ref={ref}
+    rounds='m'
+    shadow='z4'
+    className={cn(styles.card, props.className)}
+    data-testid='product-card:hover-card'
+  />
+));
 
-/**
- * Компонент-слот для вывода контрола товара в корзине.
- * @param props Свойства.
- * @return Элемент.
- */
-const CartControlSlot = ({
-  children,
-  stepText,
-  markupText,
-  loading,
-}: {
-  children?: React.ReactNode;
-  stepText?: string;
-  markupText?: string;
-  loading?: boolean;
-}) => (
-  <div className={cx('control-wrapper', { loading })}>
-    <div className={cx('control')}>{!loading && children}</div>
+export const ProductCard = ({ children, className, ...props }: ProductCardProps) => {
+  const [hovered, toggle] = useState<boolean>(false);
 
-    {(loading || stepText) && <div className={cx('unit-text')}>{!loading && stepText}</div>}
-
-    {!loading && markupText && <div className={cx('bottom-text')}>{markupText}</div>}
-  </div>
-);
-
-export interface ProductCardComponent
-  extends React.ForwardRefExoticComponent<
-    React.PropsWithoutRef<ProductCardProps> & React.RefAttributes<HTMLDivElement>
-  > {
-  CartControl: typeof CartControlSlot;
-}
-
-/**
- * Карточка товара, появляющаяся над элементом карусели.
- * @param props Свойства компонента.
- * @return Элемент.
- */
-export const ProductCard: ProductCardComponent = forwardRef<HTMLDivElement, ProductCardProps>(
-  (
-    {
-      data,
-      onLinkClick,
-      onQuickViewClick,
-      children,
-
-      // div props
-      className,
-      ...rootProps
-    },
-    rootRef,
-  ) => {
-    const { cartControl } = defineSlots(children, { cartControl: CartControlSlot });
-
-    return (
-      <div
-        ref={rootRef}
-        className={cx('root', SmallRounds.all, BoxShadow.z4, className)}
-        {...rootProps}
-      >
-        <ProductInfo data={data} onLinkClick={onLinkClick}>
-          <ProductInfo.OnImage>
-            <WithHint hint='Быстрый просмотр' direction='left'>
-              {(ref, toggle) => (
-                <QuickViewButton
-                  ref={ref as any}
-                  onMouseEnter={() => toggle(true)}
-                  onMouseLeave={() => toggle(false)}
-                  className={cx('quick-view-button')}
-                  onClick={withPrevent(onQuickViewClick)}
-                />
-              )}
-            </WithHint>
-          </ProductInfo.OnImage>
-        </ProductInfo>
-
-        {cartControl}
+  return (
+    <div {...props} data-testid='product-card' className={cn(styles.root, className)}>
+      <div data-testid='product-card:info' onMouseEnter={() => toggle(true)}>
+        {reduceBaseInfo(children)}
       </div>
-    );
-  },
-) as ProductCardComponent;
 
-ProductCard.CartControl = CartControlSlot;
+      {hovered && (
+        <HoverCard onMouseLeave={() => toggle(false)}>{reduceHoverInfo(children)}</HoverCard>
+      )}
+    </div>
+  );
+};
+
+/**
+ * Фильтрует содержимое карточки для вывода состояния без наведения.
+ * @param el Элемент.
+ * @return Элемент.
+ */
+export const reduceBaseInfo = (el: ProductCardChildren) =>
+  cloneElement(el, {
+    children: Children.map(el.props.children, child => {
+      let result;
+
+      if (isValidElement(child)) {
+        switch (child.type) {
+          // игнорируем кнопки-иконки на изображении
+          case Parts.Image:
+            result = cloneElement<any>(child, { children: undefined });
+            break;
+
+          // игнорируем футер
+          case Parts.Footer:
+            result = null;
+            break;
+
+          // остальное оставляем без изменений
+          default:
+            result = child;
+            break;
+        }
+      }
+
+      return result;
+    }),
+  });
+
+export const reduceHoverInfo = (el: ProductCardChildren) =>
+  cloneElement(el, {
+    // при наведении у изображения строго непрозрачность = 1
+    children: Children.map(el.props.children, child =>
+      isValidElement(child) && child.type === Parts.Image
+        ? cloneElement(child, { opacity: 1 })
+        : child,
+    ),
+  });

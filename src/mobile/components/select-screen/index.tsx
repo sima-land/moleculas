@@ -17,6 +17,7 @@ export interface SelectScreenProps {
   ) => React.ReactNode;
   isItemSelected?: (item: any) => boolean | void;
   onItemClick?: (item: any) => void;
+  onClose?: () => void;
 }
 
 /**
@@ -29,33 +30,36 @@ export interface SelectScreenProps {
  * @param props.onItemClick Сработает при клике на опцию.
  * @return Экран выбора опции.
  */
-const SelectScreen = ({
+export const SelectScreen = ({
   items,
   getItemName = prop('name'),
   displayItem = displayOption,
   isItemSelected = noop,
   onItemClick,
-  ...screenProps
+  onClose,
 }: SelectScreenProps) => (
-  <Screen withDivideHeader={false} {...screenProps}>
-    <MobileLayout disabledOn={['mxs', 'ms']}>
-      <div className={styles.container}>
-        {map(items, (item, index) => {
-          const isSelected = Boolean(isItemSelected(item));
+  <Screen>
+    {onClose && <Screen.Header onClose={onClose} />}
+    <Screen.Body>
+      <MobileLayout disabledOn={['mxs', 'ms']}>
+        <div className={styles.container}>
+          {map(items, (item, index) => {
+            const isSelected = Boolean(isItemSelected(item));
 
-          return (
-            <button
-              key={index}
-              className={styles.item}
-              onClick={() => onItemClick && onItemClick(item)}
-            >
-              {displayItem(item, { getItemName, isSelected })}
-              {isSelected && <CheckSVG fill={COLORS.get('gray87')} />}
-            </button>
-          );
-        })}
-      </div>
-    </MobileLayout>
+            return (
+              <button
+                key={index}
+                className={styles.item}
+                onClick={() => onItemClick && onItemClick(item)}
+              >
+                {displayItem(item, { getItemName, isSelected })}
+                {isSelected && <CheckSVG fill={COLORS.get('gray87')} />}
+              </button>
+            );
+          })}
+        </div>
+      </MobileLayout>
+    </Screen.Body>
   </Screen>
 );
 
@@ -69,5 +73,3 @@ const SelectScreen = ({
 const displayOption = (item: any, { getItemName }: any) => (
   <Text size={16} lineHeight={24} color='gray87' children={getItemName(item)} />
 );
-
-export default SelectScreen;

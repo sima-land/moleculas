@@ -1,16 +1,13 @@
 import React from 'react';
-import { Box } from '@sima-land/ui-nucleons/box';
-import { Text } from '@sima-land/ui-nucleons/text';
 import { Link } from '@sima-land/ui-nucleons/link';
-import TreeSVG from './tree-in-circle.svg';
-import classnames from 'classnames/bind';
+import { Plate } from '@sima-land/ui-nucleons/plate';
+import SpruceSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/spruce';
+import cn from 'classnames';
 import styles from './garland-calculator-button.module.scss';
 
-const cx = classnames.bind(styles);
-
 export interface GarlandCalculatorButtonProps {
-  /** Обработчик нажатия на кнопку рассчитать. */
-  onClick?: React.MouseEventHandler;
+  /** Обработчик клика. */
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 
   /** CSS-класс. */
   className?: string;
@@ -22,21 +19,17 @@ export interface GarlandCalculatorButtonProps {
  * @return Элемент.
  */
 export const GarlandCalculatorButton = ({ className, onClick }: GarlandCalculatorButtonProps) => (
-  <div className={cx('wrapper', className)}>
-    <Box padding={6} display='flex' justifyContent='between'>
-      <Box paddingRight={5}>
-        <Text size={14} lineHeight={20} weight={400}>
-          Сколько метров гирлянды покупать? Поможем рассчитать оптимальную длину
-        </Text>
-        <Box marginTop={3}>
-          <Link onClick={onClick}>Рассчитать</Link>
-        </Box>
-      </Box>
-      <Box flex='none'>
-        <TreeSVG width={48} height={48} />
-      </Box>
-    </Box>
-  </div>
+  <Plate rounds='m' shadow='z3' className={cn(styles.root, className)}>
+    <div className={styles.main}>
+      <div className={styles.text}>
+        Сколько метров гирлянды покупать? Поможем рассчитать оптимальную длину
+      </div>
+      <Link pseudo onClick={onClick}>
+        Рассчитать
+      </Link>
+    </div>
+    <div className={styles.icon}>
+      <SpruceSVG className={styles.svg} />
+    </div>
+  </Plate>
 );
-
-export default GarlandCalculatorButton;

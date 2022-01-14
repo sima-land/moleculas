@@ -1,12 +1,11 @@
 import React, { Component, createRef } from 'react';
 import { Link } from '@sima-land/ui-nucleons/link';
-import { isFunction } from 'lodash';
-import styles from './item-image.module.scss';
-import classnames from 'classnames/bind';
 import { BadgeList } from '../../../common/components/badge-list';
-import EighteenPlusSVG from '../../../common/icons/eighteen-plus.svg';
+import { Badge, BadgeProps } from '../../../common/components/badge';
 import { WishButton } from '../../../common/components/wish-button';
-import { BadgeProps } from '../../../common/components/badge';
+import AdultSVG from '../../../common/icons/eighteen-plus.svg';
+import classnames from 'classnames/bind';
+import styles from './item-image.module.scss';
 
 export interface ItemImageProps {
   src?: string;
@@ -18,12 +17,12 @@ export interface ItemImageProps {
     onClick?: React.MouseEventHandler;
   };
   className?: string;
-  onClick: React.MouseEventHandler;
-  badges: BadgeProps[];
+  onClick?: React.MouseEventHandler;
+  badges?: BadgeProps[];
   withBlur?: boolean;
   itemUrl?: string;
   isFetchingWishItems?: boolean;
-  onLoadImage: (duration: number) => void;
+  onLoadImage?: (duration: number) => void;
 }
 
 const cx = classnames.bind(styles);
@@ -40,7 +39,7 @@ const cx = classnames.bind(styles);
  * @param props.withBlur Добавление блюра.
  * @param props.isFetchingWishItems Признак загрузки добавления товара в список избранного.
  */
-export default class ItemImage extends Component<ItemImageProps> {
+export class ItemImage extends Component<ItemImageProps> {
   bootStartTime: number;
   image: any;
 
@@ -60,9 +59,7 @@ export default class ItemImage extends Component<ItemImageProps> {
     const img = this.image.current;
     const { onLoadImage } = this.props;
 
-    if (img && img.complete && isFunction(onLoadImage)) {
-      onLoadImage(Date.now() - this.bootStartTime);
-    }
+    img && img.complete && onLoadImage?.(Date.now() - this.bootStartTime);
   }
 
   /**
@@ -97,7 +94,7 @@ export default class ItemImage extends Component<ItemImageProps> {
       <div className={cx('wrapper', className)}>
         {withBlur && (
           <div className={cx('with-blur')}>
-            <EighteenPlusSVG width={124} height={124} />
+            <AdultSVG width={124} height={124} opacity='0.3' />
           </div>
         )}
         <div className={cx('image-wrapper')}>
@@ -114,7 +111,11 @@ export default class ItemImage extends Component<ItemImageProps> {
         </div>
         {Array.isArray(badges) && Boolean(badges.length) && !withBlur && (
           <div className={cx('badges')}>
-            <BadgeList items={badges} />
+            <BadgeList>
+              {badges.map((badge, index) => (
+                <Badge key={index} {...badge} />
+              ))}
+            </BadgeList>
           </div>
         )}
         {hasWishButton && (

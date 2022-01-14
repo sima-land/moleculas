@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
-import SelectScreen from '../index';
+import { SelectScreen } from '..';
 
 describe('<SelectScreen />', () => {
   it('should render without props', () => {
@@ -83,5 +83,31 @@ describe('<SelectScreen />', () => {
     );
 
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should handle "onClose" prop', () => {
+    const spy = jest.fn();
+
+    const wrapper = mount(
+      <SelectScreen
+        title='Валюта'
+        items={[
+          { name: 'Российский рубль' },
+          { name: 'Американский доллар' },
+          { name: 'Единая европейская валюта' },
+          { name: 'Белорусский рубль' },
+          { name: 'Украинская гривна' },
+          { name: 'Казахстанский тенге' },
+        ]}
+        onClose={spy}
+      />,
+    );
+
+    expect(spy).toBeCalledTimes(0);
+    act(() => {
+      wrapper.find('button[data-testid="screen:close"]').simulate('click');
+    });
+    wrapper.update();
+    expect(spy).toBeCalledTimes(1);
   });
 });

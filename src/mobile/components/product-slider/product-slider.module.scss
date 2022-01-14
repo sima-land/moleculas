@@ -1,7 +1,6 @@
-@use 'sass:math';
 @use 'node_modules/@sima-land/ui-nucleons/breakpoints';
 
-.root {
+.item {
   position: relative;
   flex-shrink: 0;
   width: 160px;
@@ -11,14 +10,4 @@
   &:not(:last-child) {
     margin-right: 16px;
   }
-}
-
-.favorite-button {
-  position: absolute;
-  top: 4px;
-  right: 4px;
-}
-
-.footer {
-  margin-top: 12px;
 }

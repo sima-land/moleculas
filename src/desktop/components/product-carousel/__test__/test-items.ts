@@ -1,6 +1,6 @@
-import { ProductData } from '../../../../common/components/product-info';
+import { TestItem } from '../../../../mobile/components/product-slider/__test__/test-items';
 
-export const items: ProductData[] = [
+export const items: TestItem[] = [
   {
     name: 'Ножницы портновские, 19 см, цвет чёрный',
     imageSrc: 'https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833',

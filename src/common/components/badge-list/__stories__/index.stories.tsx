@@ -1,7 +1,7 @@
-import { addMonths } from 'date-fns';
 import React from 'react';
 import { BadgeList } from '..';
-import { BadgeProps } from '../../badge';
+import { Badge, BadgeProps } from '../../badge';
+import { addMonths } from 'date-fns';
 
 const items: BadgeProps[] = [
   {
@@ -48,15 +48,27 @@ const DemoBlock = ({ children }: { children: React.ReactNode }) => (
 export const Primary = () => (
   <>
     <DemoBlock>
-      <BadgeList lineLimit={3} items={items} />
+      <BadgeList lineLimit={3}>
+        {items.map((item, index) => (
+          <Badge key={index} {...item} />
+        ))}
+      </BadgeList>
     </DemoBlock>
 
     <DemoBlock>
-      <BadgeList lineLimit={2} items={items} />
+      <BadgeList lineLimit={2}>
+        {items.map((item, index) => (
+          <Badge key={index} {...item} />
+        ))}
+      </BadgeList>
     </DemoBlock>
 
     <DemoBlock>
-      <BadgeList lineLimit={1} items={items} />
+      <BadgeList lineLimit={1}>
+        {items.map((item, index) => (
+          <Badge key={index} {...item} />
+        ))}
+      </BadgeList>
     </DemoBlock>
   </>
 );

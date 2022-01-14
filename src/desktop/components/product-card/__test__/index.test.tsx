@@ -1,96 +1,87 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { Simulate } from 'react-dom/test-utils';
+import { fireEvent, render } from '@testing-library/react';
 import { ProductCard } from '..';
-import { ProductData } from '../../../../common/components/product-info';
+import { ProductInfo, Parts } from '../../../../common/components/product-info';
+import { Button } from '@sima-land/ui-nucleons/button';
+
+const data = {
+  name: 'Some product',
+  url: 'https://www.products.com/some-product',
+  imageSrc: 'https://www.images.com/some-product/1',
+  price: 23476.23,
+  oldPrice: 25000,
+  currencyGrapheme: '$',
+  trademark: { name: 'Test Trademark', url: 'https://www.test-trademark.ru/' },
+  cart: {
+    stepInfo: 'По 7 шт',
+    markupInfo: 'Комплектация + 50 ₽ при покупке до 20 шт',
+  },
+} as const;
 
 describe('ProductCard', () => {
-  const product: ProductData = {
-    name: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, nulla.',
-    url: 'https://sima-land.ru',
-    price: 1200,
-    oldPrice: 1450,
-    currencyGrapheme: '₽',
-    imageSrc: 'https://picsum.photos/240',
-    badges: [
-      { color: '#b52ea8', fields: [{ type: 'text', value: '-56%' }] },
-      { color: '#ff7200', fields: [{ type: 'text', value: '3 по цене 2' }] },
-      { color: '#2962ff', fields: [{ type: 'text', value: 'Товар месяца' }] },
-      { color: '#00b8d4', fields: [{ type: 'text', value: 'Акция' }] },
-    ],
-  };
+  it('should render base info correctly', () => {
+    const { container, queryByTestId } = render(
+      <ProductCard>
+        <ProductInfo>
+          <Parts.Image src={data.imageSrc} href={data.url} />
 
-  it('should renders correctly', () => {
-    const { container } = render(
-      <ProductCard style={{ width: '240px' }} data={product} className='test-class' />,
-    );
+          <Parts.Prices
+            price={data.price}
+            oldPrice={data.oldPrice}
+            currencyGrapheme={data.currencyGrapheme}
+          />
 
-    expect(container).toMatchSnapshot();
-  });
+          <Parts.Title href={data.url}>{data.name}</Parts.Title>
 
-  it('should handle slots in children', () => {
-    const { container } = render(
-      <ProductCard data={product}>
-        <ProductCard.CartControl stepText='hello' markupText='world'>
-          <button>Add to cart</button>
-        </ProductCard.CartControl>
+          <Parts.Footer>
+            <Parts.CartControl>
+              <Button>В корзину</Button>
+            </Parts.CartControl>
+          </Parts.Footer>
+        </ProductInfo>
       </ProductCard>,
     );
 
     expect(container).toMatchSnapshot();
+
+    expect(queryByTestId('product-info:footer')).toBe(null);
   });
 
-  it('should render cart control loading state', async () => {
-    const { baseElement } = render(
-      <ProductCard data={product}>
-        <ProductCard.CartControl loading stepText='hello' markupText='world'>
-          <button>Add to cart</button>
-        </ProductCard.CartControl>
+  it('should render hover card correctly', () => {
+    const { container, getByTestId, queryByTestId } = render(
+      <ProductCard>
+        <ProductInfo>
+          <Parts.Image src={data.imageSrc} href={data.url} />
+
+          <Parts.Prices
+            price={data.price}
+            oldPrice={data.oldPrice}
+            currencyGrapheme={data.currencyGrapheme}
+          />
+
+          <Parts.Title href={data.url}>{data.name}</Parts.Title>
+
+          <Parts.Footer>
+            <Parts.CartControl>
+              <Button>В корзину</Button>
+            </Parts.CartControl>
+          </Parts.Footer>
+        </ProductInfo>
       </ProductCard>,
     );
 
-    expect(baseElement).toMatchSnapshot();
-  });
+    expect(queryByTestId('product-card:hover-card')).toBe(null);
+    expect(queryByTestId('product-info:footer')).toBe(null);
 
-  it('should handle "onLinkClick" prop', async () => {
-    const spy = jest.fn();
+    fireEvent.mouseEnter(getByTestId('product-card:info'));
 
-    const { findByTestId } = render(<ProductCard data={product} onLinkClick={spy} />);
+    expect(container).toMatchSnapshot();
+    expect(queryByTestId('product-card:hover-card')).not.toBe(null);
+    expect(queryByTestId('product-info:footer')).not.toBe(null);
 
-    expect(spy).toBeCalledTimes(0);
+    fireEvent.mouseLeave(getByTestId('product-card:hover-card'));
 
-    Simulate.click(await findByTestId('product-info:image-link'));
-
-    expect(spy).toBeCalledTimes(1);
-
-    Simulate.click(await findByTestId('product-info:name-link'));
-
-    expect(spy).toBeCalledTimes(2);
-  });
-
-  it('should handle image button click callbacks', () => {
-    const spy = jest.fn();
-
-    const { container } = render(<ProductCard data={product} onQuickViewClick={spy} />);
-
-    expect(spy).toBeCalledTimes(0);
-
-    Simulate.click(container.querySelector('[data-testid="quick-view-button"]') as any);
-
-    expect(spy).toBeCalledTimes(1);
-  });
-
-  it('should show/hide hint for quick view button', async () => {
-    const { baseElement, findByTestId } = render(<ProductCard data={product} />);
-
-    expect(baseElement.querySelectorAll('[data-testid="hint"]')).toHaveLength(0);
-
-    Simulate.mouseEnter(await findByTestId('quick-view-button'));
-
-    expect(baseElement.querySelectorAll('[data-testid="hint"]')).toHaveLength(1);
-
-    Simulate.mouseLeave(await findByTestId('quick-view-button'));
-
-    expect(baseElement.querySelectorAll('[data-testid="hint"]')).toHaveLength(0);
+    expect(queryByTestId('product-card:hover-card')).toBe(null);
+    expect(queryByTestId('product-info:footer')).toBe(null);
   });
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import PseudoInput from '..';
+import { PseudoInput } from '..';
 
 export default {
   title: 'mobile/PseudoInput',
@@ -14,8 +14,4 @@ export default {
   },
 };
 
-export const Primary = () => (
-  <div style={{ width: '20%' }}>
-    <PseudoInput text='Example' />
-  </div>
-);
+export const Primary = () => <PseudoInput text='Искать туфли' />;

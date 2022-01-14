@@ -1,65 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<BadgeList /> with props renders correctly 1`] = `
-<BadgeList
-  className="test"
-  items={
-    Array [
-      Object {
-        "color": "#64a0eb",
-        "fields": Array [
-          Object {
-            "type": "text",
-            "value": "-10%",
-          },
-        ],
-        "href": "/sale/?is_label=1",
-      },
-    ]
-  }
->
+exports[`<BadgeList /> renders correctly 1`] = `
+<div>
   <div
-    className="root test"
+    class="root test"
   >
-    <Badge
-      className="item"
-      color="#64a0eb"
-      fields={
-        Array [
-          Object {
-            "type": "text",
-            "value": "-10%",
-          },
-        ]
-      }
-      href="/sale/?is_label=1"
-      key="0"
+    <span
+      class="root item"
+      data-testid="badge"
+      style="--badge-color: #b52ea8;"
     >
-      <a
-        className="root interactive item"
-        data-testid="badge"
-        href="/sale/?is_label=1"
-        style={
-          Object {
-            "--badge-color": "#64a0eb",
-          }
-        }
+      <span
+        class="content"
       >
-        <span
-          className="content"
-        >
-          -10%
-        </span>
-      </a>
-    </Badge>
+        -56%
+      </span>
+    </span>
+    <span
+      class="root item"
+      data-testid="badge"
+      style="--badge-color: #ff7200;"
+    >
+      <span
+        class="content"
+      >
+        3 по цене 2
+      </span>
+    </span>
+    <span
+      class="root item"
+      data-testid="badge"
+      style="--badge-color: #2962ff;"
+    >
+      <span
+        class="content"
+      >
+        Товар месяца
+      </span>
+    </span>
+    <span
+      class="root item"
+      data-testid="badge"
+      style="--badge-color: #00b8d4;"
+    >
+      <span
+        class="content"
+      >
+        Акция
+      </span>
+    </span>
   </div>
-</BadgeList>
-`;
-
-exports[`<BadgeList /> without props renders correctly 1`] = `
-<BadgeList>
-  <div
-    className="root"
-  />
-</BadgeList>
+</div>
 `;

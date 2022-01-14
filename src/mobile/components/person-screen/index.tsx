@@ -3,7 +3,7 @@ import classnames from 'classnames/bind';
 import { UserAvatar } from '@sima-land/ui-nucleons/avatar/user';
 import { Box } from '@sima-land/ui-nucleons/box';
 import { Text } from '@sima-land/ui-nucleons/text';
-import { Screen, ScreenProps } from '@sima-land/ui-nucleons/screen';
+import { Screen } from '@sima-land/ui-nucleons/screen';
 import { InnerBorder } from '@sima-land/ui-nucleons/styling/borders';
 import MailSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/mail';
 import SkypeSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/skype';
@@ -11,7 +11,7 @@ import PhoneSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/phone';
 import MobileSVG from '@sima-land/ui-quarks/icons/24x24/Filled/mobile';
 import classes from './person-screen.module.scss';
 
-export interface PersonScreenProps extends ScreenProps {
+export interface PersonScreenProps {
   name?: string;
   appointment?: string;
   photoUrl?: string;
@@ -22,6 +22,7 @@ export interface PersonScreenProps extends ScreenProps {
   secondPhoneHref?: string;
   secondPhoneText?: string;
   arbitraryLinkProps?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
+  onClose?: () => void;
 }
 
 const cx = classnames.bind(classes);
@@ -52,57 +53,61 @@ export const PersonScreen = ({
   secondPhoneHref,
   secondPhoneText,
   arbitraryLinkProps,
+  onClose,
   ...screenProps
 }: PersonScreenProps) => (
-  <Screen {...screenProps} withDivideHeader={false}>
-    <div className={cx('avatar', 'small')}>
-      <UserAvatar size={64} title={name} imageUrl={photoUrl} />
-    </div>
-    <div className={cx('avatar', 'big')}>
-      <UserAvatar size={104} title={name} imageUrl={photoUrl} />
-    </div>
-    <span className={cx('name')}>{name}</span>
-    {Boolean(appointment) && <span className={cx('appointment')}>{appointment}</span>}
-    {arbitraryLinkProps && (
-      <div
-        className={cx('profile-url')}
-        children={<a className={cx('link')} {...arbitraryLinkProps} />}
-      />
-    )}
-    <div className={cx('items', InnerBorder.bottom)}>
-      {Boolean(email) && (
-        <CommunicateLink
-          href={`mailto:${email}`}
-          primaryText={email}
-          secondaryText='Электронная почта'
-          icon={<MailSVG />}
+  <Screen {...screenProps}>
+    <Screen.Header onClose={onClose} />
+    <Screen.Body>
+      <div className={cx('avatar', 'small')}>
+        <UserAvatar size={64} title={name} imageUrl={photoUrl} />
+      </div>
+      <div className={cx('avatar', 'big')}>
+        <UserAvatar size={104} title={name} imageUrl={photoUrl} />
+      </div>
+      <span className={cx('name')}>{name}</span>
+      {Boolean(appointment) && <span className={cx('appointment')}>{appointment}</span>}
+      {arbitraryLinkProps && (
+        <div
+          className={cx('profile-url')}
+          children={<a className={cx('link')} {...arbitraryLinkProps} />}
         />
       )}
-      {Boolean(skype) && (
-        <CommunicateLink
-          href={`skype:${skype}?chat`}
-          primaryText={skype}
-          secondaryText='Skype'
-          icon={<SkypeSVG />}
-        />
-      )}
-      {Boolean(phoneText) && (
-        <CommunicateLink
-          href={phoneHref || undefined}
-          primaryText={phoneText}
-          secondaryText='Рабочий'
-          icon={<PhoneSVG />}
-        />
-      )}
-      {Boolean(secondPhoneText) && (
-        <CommunicateLink
-          href={secondPhoneHref || undefined}
-          primaryText={secondPhoneText}
-          secondaryText='Сотовый'
-          icon={<MobileSVG />}
-        />
-      )}
-    </div>
+      <div className={cx('items', InnerBorder.bottom)}>
+        {Boolean(email) && (
+          <CommunicateLink
+            href={`mailto:${email}`}
+            primaryText={email}
+            secondaryText='Электронная почта'
+            icon={<MailSVG />}
+          />
+        )}
+        {Boolean(skype) && (
+          <CommunicateLink
+            href={`skype:${skype}?chat`}
+            primaryText={skype}
+            secondaryText='Skype'
+            icon={<SkypeSVG />}
+          />
+        )}
+        {Boolean(phoneText) && (
+          <CommunicateLink
+            href={phoneHref || undefined}
+            primaryText={phoneText}
+            secondaryText='Рабочий'
+            icon={<PhoneSVG />}
+          />
+        )}
+        {Boolean(secondPhoneText) && (
+          <CommunicateLink
+            href={secondPhoneHref || undefined}
+            primaryText={secondPhoneText}
+            secondaryText='Сотовый'
+            icon={<MobileSVG />}
+          />
+        )}
+      </div>
+    </Screen.Body>
   </Screen>
 );
 

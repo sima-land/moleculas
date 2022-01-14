@@ -4,7 +4,8 @@ import classnames from 'classnames/bind';
 import { isFunction } from 'lodash';
 import style from './item-image.module.scss';
 import { BadgeList } from '../../../common/components/badge-list';
-import EighteenPlusSVG from '../../../common/icons/eighteen-plus.svg';
+import { Badge } from '../../../common/components/badge';
+import AdultSVG from '../../../common/icons/eighteen-plus.svg';
 import SelectedSVG from '../../../common/icons/selected.svg';
 import { WishButton } from '../../../common/components/wish-button';
 import { QuickViewButton } from '../../../common/components/quick-view-button';
@@ -74,7 +75,7 @@ const cx = classnames.bind(style);
  * @param {boolean} props.hasSelectionButton Признак наличия кнопки выделения товара.
  * @return {ReactElement} Компонент изображения.
  */
-export default class ItemImage extends Component<ItemImageProps, any> {
+export class ItemImage extends Component<ItemImageProps, any> {
   bootStartTime: any;
   image: any;
   imageWrapper: any;
@@ -152,7 +153,7 @@ export default class ItemImage extends Component<ItemImageProps, any> {
       >
         {withBlur && (
           <div className={cx('with-blur')}>
-            <EighteenPlusSVG width={124} height={124} />
+            <AdultSVG width={124} height={124} opacity='0.3' />
           </div>
         )}
         <div className={cx('image-wrapper')}>
@@ -198,7 +199,11 @@ export default class ItemImage extends Component<ItemImageProps, any> {
 
         {Array.isArray(badges) && Boolean(badges.length) && (
           <div className={cx('badges')}>
-            <BadgeList items={badges} />
+            <BadgeList>
+              {badges.map((badge, index) => (
+                <Badge key={index} {...badge} />
+              ))}
+            </BadgeList>
           </div>
         )}
 

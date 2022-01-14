@@ -1,53 +1,12 @@
-@use 'node_modules/@sima-land/ui-nucleons/colors';
-
 .root {
-  padding: 16px 16px 24px;
-  background: #fff;
+  position: relative;
+  max-width: 400px;
 }
 
-.quick-view-button {
+.card {
   position: absolute;
-  top: 8px;
-  right: 8px;
-  cursor: pointer;
-}
-
-.control-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 16px;
-  &.loading {
-    .control {
-      background: colors.$gray4;
-      border-radius: 4px;
-    }
-    .unit-text::before {
-      content: '';
-      display: block;
-      background: colors.$gray4;
-      border-radius: 4px;
-      width: 48px;
-      height: 16px;
-    }
-  }
-}
-
-.control {
-  width: 122px;
-  height: 40px;
-  margin-right: 16px;
-}
-
-.unit-text {
-  padding-top: 12px; // чтобы при переносе на следующую строку правильно отступил от кнопки
-  font-size: 12px;
-  line-height: 16px;
-  color: colors.$gray38;
-}
-
-.bottom-text {
-  margin-top: 12px;
-  font-size: 12px;
-  line-height: 16px;
-  color: colors.$gray38;
+  top: -16px;
+  left: -16px;
+  padding: 16px 16px 24px;
+  width: calc(100% + 32px);
 }

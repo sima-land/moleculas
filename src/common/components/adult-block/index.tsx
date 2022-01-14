@@ -29,8 +29,9 @@ const textBlocks = {
  * @param props.marginTop Отступ сверху.
  * @return Элемент.
  */
-const AdultBlock = ({ isAuthUser, onClick, marginTop = 0 }: AdultBlockProps) => {
+export const AdultBlock = ({ isAuthUser, onClick, marginTop = 0 }: AdultBlockProps) => {
   const actualTextBlocks = isAuthUser ? textBlocks.forAuthorized : textBlocks.forGuest;
+
   return (
     <Box display='flex' direction='column' flex='grow' marginTop={marginTop}>
       <Box marginBottom={1}>
@@ -51,5 +52,3 @@ const AdultBlock = ({ isAuthUser, onClick, marginTop = 0 }: AdultBlockProps) => 
     </Box>
   );
 };
-
-export default AdultBlock;

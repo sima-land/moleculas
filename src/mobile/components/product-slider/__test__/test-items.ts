@@ -1,6 +1,35 @@
-import { ProductData } from '../../../../common/components/product-info';
+import { BadgeProps } from '../../../../common/components/badge';
 
-export const items: ProductData[] = [
+export interface TestItem {
+  /** Ссылка на товар. */
+  url: string;
+
+  /** Название товара. */
+  name?: string;
+
+  /** Ссылка на картинку. */
+  imageSrc?: string;
+
+  /** Альтернативный текст картинки. */
+  imageAlt?: string;
+
+  /** Цена товара. */
+  price: number;
+
+  /** Старая цена товара. */
+  oldPrice?: number;
+
+  /** Графема валюты. */
+  currencyGrapheme?: string;
+
+  /** Список шильдиков. */
+  badges?: BadgeProps[];
+
+  /** Торговая марка. */
+  trademark?: { name: string; url: string };
+}
+
+export const items: TestItem[] = [
   {
     name: 'Ножницы портновские, 19 см, цвет чёрный',
     imageSrc: 'https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833',
@@ -9,6 +38,7 @@ export const items: ProductData[] = [
     price: 261,
     currencyGrapheme: '₽',
     oldPrice: undefined,
+    trademark: { name: 'Торговая марка Сима-ленд', url: 'https://sima-land.ru' },
   },
   {
     name: 'Ножницы портновские, 31 см, цвет чёрный/голубой',
@@ -33,6 +63,7 @@ export const items: ProductData[] = [
       { color: '#2962ff', fields: [{ type: 'text', value: 'Товар месяца' }] },
       { color: '#00b8d4', fields: [{ type: 'text', value: 'Акция' }] },
     ],
+    trademark: { name: 'Торговая марка Привет', url: 'https://sima-land.ru' },
   },
   {
     name: 'Ножницы портновские, 23 см, цвет МИКС',
@@ -60,6 +91,10 @@ export const items: ProductData[] = [
     price: 988,
     currencyGrapheme: '₽',
     oldPrice: undefined,
+    badges: [
+      { color: '#2962ff', fields: [{ type: 'text', value: 'Товар месяца' }] },
+      { color: '#00b8d4', fields: [{ type: 'text', value: 'Акция' }] },
+    ],
   },
   {
     name: 'Ножницы портновские, 22 см, цвет серебряный',

@@ -2,7 +2,7 @@ import React from 'react';
 import { act, Simulate } from 'react-dom/test-utils';
 import { mount } from 'enzyme';
 import { Breadcrumbs } from '..';
-import items from '../items';
+import items from './test-items';
 import { render } from 'react-dom';
 
 describe('<Breadcrumbs />', () => {

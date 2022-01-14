@@ -1,5 +1,5 @@
 import React from 'react';
-import SelectScreen from '..';
+import { SelectScreen } from '..';
 
 export default {
   title: 'mobile/SelectScreen',
