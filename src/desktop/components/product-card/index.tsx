@@ -1,6 +1,7 @@
 import React, { Children, forwardRef, isValidElement, cloneElement, useState } from 'react';
 import { ProductInfo, ProductInfoProps, Parts } from '../../../common/components/product-info';
 import { Plate, PlateProps } from '@sima-land/ui-nucleons/plate';
+import { useLayer } from '@sima-land/ui-nucleons/helpers/layer';
 import cn from 'classnames';
 import styles from './product-card.module.scss';
 
@@ -10,16 +11,21 @@ export interface ProductCardProps extends React.HTMLAttributes<HTMLDivElement> {
   children: ProductCardChildren;
 }
 
-export const HoverCard = forwardRef<HTMLDivElement | null, PlateProps>((props, ref) => (
-  <Plate
-    {...props}
-    ref={ref}
-    rounds='m'
-    shadow='z4'
-    className={cn(styles.card, props.className)}
-    data-testid='product-card:hover-card'
-  />
-));
+export const HoverCard = forwardRef<HTMLDivElement | null, PlateProps>((props, ref) => {
+  const layer = useLayer() + 1;
+
+  return (
+    <Plate
+      {...props}
+      style={{ ...props.style, zIndex: layer }}
+      ref={ref}
+      rounds='m'
+      shadow='z4'
+      className={cn(styles.card, props.className)}
+      data-testid='product-card:hover-card'
+    />
+  );
+});
 
 export const ProductCard = ({ children, className, ...props }: ProductCardProps) => {
   const [hovered, toggle] = useState<boolean>(false);
