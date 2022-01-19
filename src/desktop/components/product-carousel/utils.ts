@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import on from '@sima-land/ui-nucleons/helpers/on';
+import { useIdentityRef } from '@sima-land/ui-nucleons/hooks/identity';
 
 /**
  * Вызывает callback когда заданный в ref элемент попал во viewport.
@@ -12,13 +13,17 @@ export const useViewport = (
   callback?: () => void,
   options?: IntersectionObserverInit,
 ) => {
+  const callbackRef = useIdentityRef(callback);
+
   useEffect(() => {
     const element = ref.current;
 
     if (element) {
       const observer = new IntersectionObserver(entries => {
+        const fn = callbackRef.current;
+
         for (const entry of entries) {
-          entry.target === element && entry.isIntersecting && callback && callback();
+          entry.target === element && entry.isIntersecting && fn && fn();
           break;
         }
       }, options);

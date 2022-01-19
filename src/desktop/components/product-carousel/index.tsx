@@ -6,6 +6,7 @@ import { useMedia } from '@sima-land/ui-nucleons/hooks/media';
 import { ProductInfo, ProductInfoProps, Parts } from '../../../common/components/product-info';
 import classnames from 'classnames/bind';
 import styles from './product-carousel.module.scss';
+import { useLayer } from '@sima-land/ui-nucleons/helpers/layer';
 
 interface ItemSize {
   xs?: 2 | 3 | 4;
@@ -60,6 +61,7 @@ export const ProductCarousel = ({
   withHoverCard,
   children,
 }: ProductCarouselProps) => {
+  const layer = useLayer();
   const [activeItemIndex, setActiveItemIndex] = useState<number | null>(null);
   const cardShow = useAllowFlag();
   const needBigArrows = useMedia('(min-width: 1600px)');
@@ -98,7 +100,7 @@ export const ProductCarousel = ({
             controlProps: {
               size: needBigArrows ? 'l' : 's',
               style: {
-                zIndex: 1,
+                zIndex: layer + 2, // чтобы кнопки были над HoverCard
                 top: `${itemWidth / 2}px`,
               },
             },

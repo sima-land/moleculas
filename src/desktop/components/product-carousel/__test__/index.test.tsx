@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import { mount, ReactWrapper } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 import { ProductCarousel } from '..';
@@ -8,6 +8,7 @@ import { useMedia } from '@sima-land/ui-nucleons/hooks/media';
 import { HoverCard } from '../hover-card';
 import { Carousel } from '@sima-land/ui-nucleons/carousel';
 import { Parts, ProductInfo } from '../../../../common/components/product-info';
+import { LayerProvider } from '@sima-land/ui-nucleons/helpers/layer';
 
 jest.mock('@sima-land/ui-nucleons/hooks/media', () => {
   const original = jest.requireActual('@sima-land/ui-nucleons/hooks/media');
@@ -238,5 +239,34 @@ describe('<ProductCarousel />', () => {
     wrapper.update();
 
     expect(Find.hoverCardItemName(wrapper)).toBe(items[0].name);
+  });
+
+  it('should handle layer', () => {
+    const { getByTestId, getAllByTestId } = render(
+      <LayerProvider value={20}>
+        <ProductCarousel itemSize={{ xs: 3 }} withHoverCard>
+          {items.map((item, index) => (
+            <ProductInfo key={index}>
+              <Parts.Image src={item.imageSrc} href={item.url} />
+
+              <Parts.Prices
+                price={item.price}
+                oldPrice={item.oldPrice}
+                currencyGrapheme={item.currencyGrapheme}
+              />
+
+              <Parts.Title href={item.url}>{item.name}</Parts.Title>
+            </ProductInfo>
+          ))}
+        </ProductCarousel>
+      </LayerProvider>,
+    );
+
+    fireEvent.mouseEnter(getAllByTestId('product-carousel:item')[0]);
+
+    expect(getByTestId('product-card:hover-card').style.zIndex).toBe('21');
+    getAllByTestId('arrow-button').forEach(button => {
+      expect(button.style.zIndex).toBe('22');
+    });
   });
 });
