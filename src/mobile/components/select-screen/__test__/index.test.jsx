@@ -1,7 +1,9 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
-import { SelectScreen } from '..';
+import { SelectScreen, SelectScreenLayout, SelectScreenOption } from '..';
+import { Screen } from '@sima-land/ui-nucleons/screen';
+import { fireEvent, render } from '@testing-library/react';
 
 describe('<SelectScreen />', () => {
   it('should render without props', () => {
@@ -108,6 +110,34 @@ describe('<SelectScreen />', () => {
       wrapper.find('button[data-testid="screen:close"]').simulate('click');
     });
     wrapper.update();
+    expect(spy).toBeCalledTimes(1);
+  });
+});
+
+describe('select screen parts', () => {
+  it('should works properly', () => {
+    const items = ['Foo', 'Bar', 'Baz'];
+    const spy = jest.fn();
+
+    const { container, getAllByTestId } = render(
+      <Screen>
+        <Screen.Body>
+          <SelectScreenLayout style={{ padding: '16px 0' }}>
+            {items.map((item, id) => (
+              <SelectScreenOption key={id} selected={item === 'Bar'} onClick={spy}>
+                {item}
+              </SelectScreenOption>
+            ))}
+          </SelectScreenLayout>
+        </Screen.Body>
+      </Screen>,
+    );
+
+    expect(container).toMatchSnapshot();
+    expect(getAllByTestId('select-screen:option')).toHaveLength(3);
+
+    expect(spy).toBeCalledTimes(0);
+    fireEvent.click(getAllByTestId('select-screen:option')[0]);
     expect(spy).toBeCalledTimes(1);
   });
 });

@@ -3,7 +3,6 @@
 
 .container {
   --gutter: 24px;
-  padding: 16px 0;
   margin: 0 auto;
   max-width: calc((var(--gutter) * 5) + ((var(--layoutWidth) - (var(--gutter) * 7)) * 6 / 8));
 
@@ -22,6 +21,9 @@
   justify-content: space-between;
   width: 100%;
   padding: 16px;
+  font-size: 16px;
+  line-height: 24px;
+  height: 48px;
   margin: 0;
   border: 0;
   outline: 0;
