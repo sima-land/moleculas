@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { Children, isValidElement } from 'react';
 import { map, noop } from 'lodash';
 import prop from 'lodash/fp/prop';
 import { Screen } from '@sima-land/ui-nucleons/screen';
 import { Text } from '@sima-land/ui-nucleons/text';
 import { COLORS } from '@sima-land/ui-nucleons/colors';
-import { MobileLayout } from '@sima-land/ui-nucleons/layout';
+import { LayoutProps, MobileLayout } from '@sima-land/ui-nucleons/layout';
 import CheckSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/check';
+import cn from 'classnames';
 import styles from './select-screen.module.scss';
 
 export interface SelectScreenProps {
@@ -17,11 +18,15 @@ export interface SelectScreenProps {
   ) => React.ReactNode;
   isItemSelected?: (item: any) => boolean | void;
   onItemClick?: (item: any) => void;
+  title?: string;
+  subtitle?: string;
+  onBack?: () => void;
   onClose?: () => void;
 }
 
 /**
  * Экран выбора опции.
+ * @deprecated Вместо SelectScreen используйте SelectScreenLayout и SelectScreenOption вместе с Screen.
  * @param props Свойства. Поддерживаются свойства Screen.
  * @param props.items Список опций.
  * @param props.getItemName Вернет имя опции.
@@ -36,35 +41,59 @@ export const SelectScreen = ({
   displayItem = displayOption,
   isItemSelected = noop,
   onItemClick,
+  title,
+  subtitle,
+  onBack,
   onClose,
 }: SelectScreenProps) => (
   <Screen>
-    {onClose && <Screen.Header onClose={onClose} />}
-    <Screen.Body>
-      <MobileLayout disabledOn={['mxs', 'ms']}>
-        <div className={styles.container}>
-          {map(items, (item, index) => {
-            const isSelected = Boolean(isItemSelected(item));
+    <Screen.Header title={title} subtitle={subtitle} onBack={onBack} onClose={onClose} />
 
-            return (
-              <button
-                key={index}
-                className={styles.item}
-                onClick={() => onItemClick && onItemClick(item)}
-              >
-                {displayItem(item, { getItemName, isSelected })}
-                {isSelected && <CheckSVG fill={COLORS.get('gray87')} />}
-              </button>
-            );
-          })}
-        </div>
-      </MobileLayout>
+    <Screen.Body>
+      <SelectScreenLayout style={{ padding: '16px 0' }}>
+        {map(items, (item, index) => {
+          const isSelected = Boolean(isItemSelected(item));
+
+          return (
+            <SelectScreenOption key={index} onClick={() => onItemClick && onItemClick(item)}>
+              {displayItem(item, { getItemName, isSelected })}
+              {isSelected && <CheckSVG fill={COLORS.get('gray87')} />}
+            </SelectScreenOption>
+          );
+        })}
+      </SelectScreenLayout>
     </Screen.Body>
   </Screen>
 );
 
+export const SelectScreenLayout = ({ children, ...props }: LayoutProps) => (
+  <MobileLayout {...props} disabledOn={['mxs', 'ms']}>
+    <div className={styles.container}>
+      {Children.toArray(children).filter(x => isValidElement(x) && x.type === SelectScreenOption)}
+    </div>
+  </MobileLayout>
+);
+
+export const SelectScreenOption = ({
+  children,
+  className,
+  selected,
+  ...props
+}: React.ButtonHTMLAttributes<HTMLButtonElement> & { selected?: boolean }) => (
+  <button
+    {...props}
+    type='button'
+    className={cn(styles.item, className)}
+    data-testid='select-screen:option'
+  >
+    {children}
+    {selected && <CheckSVG fill={COLORS.get('gray87')} />}
+  </button>
+);
+
 /**
  * Выводит опцию в текстовом виде.
+ * @deprecated
  * @param item Элемент списка.
  * @param options Опции вывода.
  * @param options.getItemName Вернет имя опции.

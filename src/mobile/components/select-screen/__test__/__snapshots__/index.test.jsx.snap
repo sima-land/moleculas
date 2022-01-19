@@ -44,6 +44,39 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
         }
       }
     >
+      <HeaderSlot
+        key=".0"
+        title="Валюта"
+      >
+        <NavBar
+          buttons={
+            Object {
+              "end": undefined,
+              "start": undefined,
+            }
+          }
+          title="Валюта"
+        >
+          <div
+            className="nav-bar"
+            style={
+              Object {
+                "height": "56px",
+              }
+            }
+          >
+            <div
+              className="main"
+            >
+              <div
+                className="title truncate"
+              >
+                Валюта
+              </div>
+            </div>
+          </div>
+        </NavBar>
+      </HeaderSlot>
       <ForwardRef(BodySlot)
         key=".1"
       >
@@ -51,123 +84,177 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
           className="body"
           data-testid="screen:body"
         >
-          <MobileLayout
-            disabledOn={
-              Array [
-                "mxs",
-                "ms",
-              ]
+          <SelectScreenLayout
+            style={
+              Object {
+                "padding": "16px 0",
+              }
             }
           >
-            <div
-              className="layout mobile disabled-mxs disabled-ms"
+            <MobileLayout
+              disabledOn={
+                Array [
+                  "mxs",
+                  "ms",
+                ]
+              }
+              style={
+                Object {
+                  "padding": "16px 0",
+                }
+              }
             >
               <div
-                className="container"
+                className="layout mobile disabled-mxs disabled-ms"
+                style={
+                  Object {
+                    "padding": "16px 0",
+                  }
+                }
               >
-                <button
-                  className="item"
-                  key="0"
-                  onClick={[Function]}
+                <div
+                  className="container"
                 >
-                  <div
-                    className="item is-selected"
+                  <SelectScreenOption
+                    key=".$0"
+                    onClick={[Function]}
                   >
-                    Российский рубль
-                     (
-                    RUB
-                    )
-                  </div>
-                  <ForwardRef(CheckSVG)
-                    fill="#212121"
-                  >
-                    <svg
-                      fill="#212121"
-                      height={24}
-                      viewBox="0 0 24 24"
-                      width={24}
+                    <button
+                      className="item"
+                      data-testid="select-screen:option"
+                      onClick={[Function]}
+                      type="button"
                     >
-                      <path
-                        clipRule="evenodd"
-                        d="M21.678 5.265a1 1 0 01.057 1.413l-12 13a1 1 0 01-1.36.103l-5-4a1 1 0 011.25-1.562l4.272 3.418L20.265 5.322a1 1 0 011.413-.057z"
-                        fillRule="evenodd"
-                      />
-                    </svg>
-                  </ForwardRef(CheckSVG)>
-                </button>
-                <button
-                  className="item"
-                  key="1"
-                  onClick={[Function]}
-                >
-                  <div
-                    className="item"
+                      <div
+                        className="item is-selected"
+                      >
+                        Российский рубль
+                         (
+                        RUB
+                        )
+                      </div>
+                      <ForwardRef(CheckSVG)
+                        fill="#212121"
+                      >
+                        <svg
+                          fill="#212121"
+                          height={24}
+                          viewBox="0 0 24 24"
+                          width={24}
+                        >
+                          <path
+                            clipRule="evenodd"
+                            d="M21.678 5.265a1 1 0 01.057 1.413l-12 13a1 1 0 01-1.36.103l-5-4a1 1 0 011.25-1.562l4.272 3.418L20.265 5.322a1 1 0 011.413-.057z"
+                            fillRule="evenodd"
+                          />
+                        </svg>
+                      </ForwardRef(CheckSVG)>
+                    </button>
+                  </SelectScreenOption>
+                  <SelectScreenOption
+                    key=".$1"
+                    onClick={[Function]}
                   >
-                    Американский доллар
-                     (
-                    USD
-                    )
-                  </div>
-                </button>
-                <button
-                  className="item"
-                  key="2"
-                  onClick={[Function]}
-                >
-                  <div
-                    className="item"
+                    <button
+                      className="item"
+                      data-testid="select-screen:option"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <div
+                        className="item"
+                      >
+                        Американский доллар
+                         (
+                        USD
+                        )
+                      </div>
+                    </button>
+                  </SelectScreenOption>
+                  <SelectScreenOption
+                    key=".$2"
+                    onClick={[Function]}
                   >
-                    Единая европейская валюта
-                     (
-                    EUR
-                    )
-                  </div>
-                </button>
-                <button
-                  className="item"
-                  key="3"
-                  onClick={[Function]}
-                >
-                  <div
-                    className="item"
+                    <button
+                      className="item"
+                      data-testid="select-screen:option"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <div
+                        className="item"
+                      >
+                        Единая европейская валюта
+                         (
+                        EUR
+                        )
+                      </div>
+                    </button>
+                  </SelectScreenOption>
+                  <SelectScreenOption
+                    key=".$3"
+                    onClick={[Function]}
                   >
-                    Белорусский рубль
-                     (
-                    BYN
-                    )
-                  </div>
-                </button>
-                <button
-                  className="item"
-                  key="4"
-                  onClick={[Function]}
-                >
-                  <div
-                    className="item"
+                    <button
+                      className="item"
+                      data-testid="select-screen:option"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <div
+                        className="item"
+                      >
+                        Белорусский рубль
+                         (
+                        BYN
+                        )
+                      </div>
+                    </button>
+                  </SelectScreenOption>
+                  <SelectScreenOption
+                    key=".$4"
+                    onClick={[Function]}
                   >
-                    Украинская гривна
-                     (
-                    UAH
-                    )
-                  </div>
-                </button>
-                <button
-                  className="item"
-                  key="5"
-                  onClick={[Function]}
-                >
-                  <div
-                    className="item"
+                    <button
+                      className="item"
+                      data-testid="select-screen:option"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <div
+                        className="item"
+                      >
+                        Украинская гривна
+                         (
+                        UAH
+                        )
+                      </div>
+                    </button>
+                  </SelectScreenOption>
+                  <SelectScreenOption
+                    key=".$5"
+                    onClick={[Function]}
                   >
-                    Казахстанский тенге
-                     (
-                    KZT
-                    )
-                  </div>
-                </button>
+                    <button
+                      className="item"
+                      data-testid="select-screen:option"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <div
+                        className="item"
+                      >
+                        Казахстанский тенге
+                         (
+                        KZT
+                        )
+                      </div>
+                    </button>
+                  </SelectScreenOption>
+                </div>
               </div>
-            </div>
-          </MobileLayout>
+            </MobileLayout>
+          </SelectScreenLayout>
         </div>
       </ForwardRef(BodySlot)>
     </div>
@@ -211,6 +298,39 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
         }
       }
     >
+      <HeaderSlot
+        key=".0"
+        title="Валюта"
+      >
+        <NavBar
+          buttons={
+            Object {
+              "end": undefined,
+              "start": undefined,
+            }
+          }
+          title="Валюта"
+        >
+          <div
+            className="nav-bar"
+            style={
+              Object {
+                "height": "56px",
+              }
+            }
+          >
+            <div
+              className="main"
+            >
+              <div
+                className="title truncate"
+              >
+                Валюта
+              </div>
+            </div>
+          </div>
+        </NavBar>
+      </HeaderSlot>
       <ForwardRef(BodySlot)
         key=".1"
       >
@@ -218,131 +338,185 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
           className="body"
           data-testid="screen:body"
         >
-          <MobileLayout
-            disabledOn={
-              Array [
-                "mxs",
-                "ms",
-              ]
+          <SelectScreenLayout
+            style={
+              Object {
+                "padding": "16px 0",
+              }
             }
           >
-            <div
-              className="layout mobile disabled-mxs disabled-ms"
+            <MobileLayout
+              disabledOn={
+                Array [
+                  "mxs",
+                  "ms",
+                ]
+              }
+              style={
+                Object {
+                  "padding": "16px 0",
+                }
+              }
             >
               <div
-                className="container"
+                className="layout mobile disabled-mxs disabled-ms"
+                style={
+                  Object {
+                    "padding": "16px 0",
+                  }
+                }
               >
-                <button
-                  className="item"
-                  key="0"
-                  onClick={[Function]}
+                <div
+                  className="container"
                 >
-                  <ForwardRef(Text)
-                    color="gray87"
-                    lineHeight={24}
-                    size={16}
+                  <SelectScreenOption
+                    key=".$0"
+                    onClick={[Function]}
                   >
-                    <span
-                      className="size-16 line-height-24 color__gray87"
-                      style={Object {}}
+                    <button
+                      className="item"
+                      data-testid="select-screen:option"
+                      onClick={[Function]}
+                      type="button"
                     >
-                      Российский рубль
-                    </span>
-                  </ForwardRef(Text)>
-                </button>
-                <button
-                  className="item"
-                  key="1"
-                  onClick={[Function]}
-                >
-                  <ForwardRef(Text)
-                    color="gray87"
-                    lineHeight={24}
-                    size={16}
+                      <ForwardRef(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
+                        >
+                          Российский рубль
+                        </span>
+                      </ForwardRef(Text)>
+                    </button>
+                  </SelectScreenOption>
+                  <SelectScreenOption
+                    key=".$1"
+                    onClick={[Function]}
                   >
-                    <span
-                      className="size-16 line-height-24 color__gray87"
-                      style={Object {}}
+                    <button
+                      className="item"
+                      data-testid="select-screen:option"
+                      onClick={[Function]}
+                      type="button"
                     >
-                      Американский доллар
-                    </span>
-                  </ForwardRef(Text)>
-                </button>
-                <button
-                  className="item"
-                  key="2"
-                  onClick={[Function]}
-                >
-                  <ForwardRef(Text)
-                    color="gray87"
-                    lineHeight={24}
-                    size={16}
+                      <ForwardRef(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
+                        >
+                          Американский доллар
+                        </span>
+                      </ForwardRef(Text)>
+                    </button>
+                  </SelectScreenOption>
+                  <SelectScreenOption
+                    key=".$2"
+                    onClick={[Function]}
                   >
-                    <span
-                      className="size-16 line-height-24 color__gray87"
-                      style={Object {}}
+                    <button
+                      className="item"
+                      data-testid="select-screen:option"
+                      onClick={[Function]}
+                      type="button"
                     >
-                      Единая европейская валюта
-                    </span>
-                  </ForwardRef(Text)>
-                </button>
-                <button
-                  className="item"
-                  key="3"
-                  onClick={[Function]}
-                >
-                  <ForwardRef(Text)
-                    color="gray87"
-                    lineHeight={24}
-                    size={16}
+                      <ForwardRef(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
+                        >
+                          Единая европейская валюта
+                        </span>
+                      </ForwardRef(Text)>
+                    </button>
+                  </SelectScreenOption>
+                  <SelectScreenOption
+                    key=".$3"
+                    onClick={[Function]}
                   >
-                    <span
-                      className="size-16 line-height-24 color__gray87"
-                      style={Object {}}
+                    <button
+                      className="item"
+                      data-testid="select-screen:option"
+                      onClick={[Function]}
+                      type="button"
                     >
-                      Белорусский рубль
-                    </span>
-                  </ForwardRef(Text)>
-                </button>
-                <button
-                  className="item"
-                  key="4"
-                  onClick={[Function]}
-                >
-                  <ForwardRef(Text)
-                    color="gray87"
-                    lineHeight={24}
-                    size={16}
+                      <ForwardRef(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
+                        >
+                          Белорусский рубль
+                        </span>
+                      </ForwardRef(Text)>
+                    </button>
+                  </SelectScreenOption>
+                  <SelectScreenOption
+                    key=".$4"
+                    onClick={[Function]}
                   >
-                    <span
-                      className="size-16 line-height-24 color__gray87"
-                      style={Object {}}
+                    <button
+                      className="item"
+                      data-testid="select-screen:option"
+                      onClick={[Function]}
+                      type="button"
                     >
-                      Украинская гривна
-                    </span>
-                  </ForwardRef(Text)>
-                </button>
-                <button
-                  className="item"
-                  key="5"
-                  onClick={[Function]}
-                >
-                  <ForwardRef(Text)
-                    color="gray87"
-                    lineHeight={24}
-                    size={16}
+                      <ForwardRef(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
+                        >
+                          Украинская гривна
+                        </span>
+                      </ForwardRef(Text)>
+                    </button>
+                  </SelectScreenOption>
+                  <SelectScreenOption
+                    key=".$5"
+                    onClick={[Function]}
                   >
-                    <span
-                      className="size-16 line-height-24 color__gray87"
-                      style={Object {}}
+                    <button
+                      className="item"
+                      data-testid="select-screen:option"
+                      onClick={[Function]}
+                      type="button"
                     >
-                      Казахстанский тенге
-                    </span>
-                  </ForwardRef(Text)>
-                </button>
+                      <ForwardRef(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
+                        >
+                          Казахстанский тенге
+                        </span>
+                      </ForwardRef(Text)>
+                    </button>
+                  </SelectScreenOption>
+                </div>
               </div>
-            </div>
-          </MobileLayout>
+            </MobileLayout>
+          </SelectScreenLayout>
         </div>
       </ForwardRef(BodySlot)>
     </div>
@@ -378,6 +552,39 @@ exports[`<SelectScreen /> should handle props 1`] = `
         }
       }
     >
+      <HeaderSlot
+        key=".0"
+        title="Районы"
+      >
+        <NavBar
+          buttons={
+            Object {
+              "end": undefined,
+              "start": undefined,
+            }
+          }
+          title="Районы"
+        >
+          <div
+            className="nav-bar"
+            style={
+              Object {
+                "height": "56px",
+              }
+            }
+          >
+            <div
+              className="main"
+            >
+              <div
+                className="title truncate"
+              >
+                Районы
+              </div>
+            </div>
+          </div>
+        </NavBar>
+      </HeaderSlot>
       <ForwardRef(BodySlot)
         key=".1"
       >
@@ -385,165 +592,225 @@ exports[`<SelectScreen /> should handle props 1`] = `
           className="body"
           data-testid="screen:body"
         >
-          <MobileLayout
-            disabledOn={
-              Array [
-                "mxs",
-                "ms",
-              ]
+          <SelectScreenLayout
+            style={
+              Object {
+                "padding": "16px 0",
+              }
             }
           >
-            <div
-              className="layout mobile disabled-mxs disabled-ms"
+            <MobileLayout
+              disabledOn={
+                Array [
+                  "mxs",
+                  "ms",
+                ]
+              }
+              style={
+                Object {
+                  "padding": "16px 0",
+                }
+              }
             >
               <div
-                className="container"
+                className="layout mobile disabled-mxs disabled-ms"
+                style={
+                  Object {
+                    "padding": "16px 0",
+                  }
+                }
               >
-                <button
-                  className="item"
-                  key="0"
-                  onClick={[Function]}
+                <div
+                  className="container"
                 >
-                  <ForwardRef(Text)
-                    color="gray87"
-                    lineHeight={24}
-                    size={16}
+                  <SelectScreenOption
+                    key=".$0"
+                    onClick={[Function]}
                   >
-                    <span
-                      className="size-16 line-height-24 color__gray87"
-                      style={Object {}}
+                    <button
+                      className="item"
+                      data-testid="select-screen:option"
+                      onClick={[Function]}
+                      type="button"
                     >
-                      Верх-Исетский
-                    </span>
-                  </ForwardRef(Text)>
-                </button>
-                <button
-                  className="item"
-                  key="1"
-                  onClick={[Function]}
-                >
-                  <ForwardRef(Text)
-                    color="gray87"
-                    lineHeight={24}
-                    size={16}
+                      <ForwardRef(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
+                        >
+                          Верх-Исетский
+                        </span>
+                      </ForwardRef(Text)>
+                    </button>
+                  </SelectScreenOption>
+                  <SelectScreenOption
+                    key=".$1"
+                    onClick={[Function]}
                   >
-                    <span
-                      className="size-16 line-height-24 color__gray87"
-                      style={Object {}}
+                    <button
+                      className="item"
+                      data-testid="select-screen:option"
+                      onClick={[Function]}
+                      type="button"
                     >
-                      Чкаловский
-                    </span>
-                  </ForwardRef(Text)>
-                </button>
-                <button
-                  className="item"
-                  key="2"
-                  onClick={[Function]}
-                >
-                  <ForwardRef(Text)
-                    color="gray87"
-                    lineHeight={24}
-                    size={16}
+                      <ForwardRef(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
+                        >
+                          Чкаловский
+                        </span>
+                      </ForwardRef(Text)>
+                    </button>
+                  </SelectScreenOption>
+                  <SelectScreenOption
+                    key=".$2"
+                    onClick={[Function]}
                   >
-                    <span
-                      className="size-16 line-height-24 color__gray87"
-                      style={Object {}}
+                    <button
+                      className="item"
+                      data-testid="select-screen:option"
+                      onClick={[Function]}
+                      type="button"
                     >
-                      Железнодорожный
-                    </span>
-                  </ForwardRef(Text)>
-                </button>
-                <button
-                  className="item"
-                  key="3"
-                  onClick={[Function]}
-                >
-                  <ForwardRef(Text)
-                    color="gray87"
-                    lineHeight={24}
-                    size={16}
+                      <ForwardRef(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
+                        >
+                          Железнодорожный
+                        </span>
+                      </ForwardRef(Text)>
+                    </button>
+                  </SelectScreenOption>
+                  <SelectScreenOption
+                    key=".$3"
+                    onClick={[Function]}
                   >
-                    <span
-                      className="size-16 line-height-24 color__gray87"
-                      style={Object {}}
+                    <button
+                      className="item"
+                      data-testid="select-screen:option"
+                      onClick={[Function]}
+                      type="button"
                     >
-                      Кировский
-                    </span>
-                  </ForwardRef(Text)>
-                  <ForwardRef(CheckSVG)
-                    fill="#212121"
+                      <ForwardRef(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
+                        >
+                          Кировский
+                        </span>
+                      </ForwardRef(Text)>
+                      <ForwardRef(CheckSVG)
+                        fill="#212121"
+                      >
+                        <svg
+                          fill="#212121"
+                          height={24}
+                          viewBox="0 0 24 24"
+                          width={24}
+                        >
+                          <path
+                            clipRule="evenodd"
+                            d="M21.678 5.265a1 1 0 01.057 1.413l-12 13a1 1 0 01-1.36.103l-5-4a1 1 0 011.25-1.562l4.272 3.418L20.265 5.322a1 1 0 011.413-.057z"
+                            fillRule="evenodd"
+                          />
+                        </svg>
+                      </ForwardRef(CheckSVG)>
+                    </button>
+                  </SelectScreenOption>
+                  <SelectScreenOption
+                    key=".$4"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="#212121"
-                      height={24}
-                      viewBox="0 0 24 24"
-                      width={24}
+                    <button
+                      className="item"
+                      data-testid="select-screen:option"
+                      onClick={[Function]}
+                      type="button"
                     >
-                      <path
-                        clipRule="evenodd"
-                        d="M21.678 5.265a1 1 0 01.057 1.413l-12 13a1 1 0 01-1.36.103l-5-4a1 1 0 011.25-1.562l4.272 3.418L20.265 5.322a1 1 0 011.413-.057z"
-                        fillRule="evenodd"
-                      />
-                    </svg>
-                  </ForwardRef(CheckSVG)>
-                </button>
-                <button
-                  className="item"
-                  key="4"
-                  onClick={[Function]}
-                >
-                  <ForwardRef(Text)
-                    color="gray87"
-                    lineHeight={24}
-                    size={16}
+                      <ForwardRef(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
+                        >
+                          Орджоникидзевский
+                        </span>
+                      </ForwardRef(Text)>
+                    </button>
+                  </SelectScreenOption>
+                  <SelectScreenOption
+                    key=".$5"
+                    onClick={[Function]}
                   >
-                    <span
-                      className="size-16 line-height-24 color__gray87"
-                      style={Object {}}
+                    <button
+                      className="item"
+                      data-testid="select-screen:option"
+                      onClick={[Function]}
+                      type="button"
                     >
-                      Орджоникидзевский
-                    </span>
-                  </ForwardRef(Text)>
-                </button>
-                <button
-                  className="item"
-                  key="5"
-                  onClick={[Function]}
-                >
-                  <ForwardRef(Text)
-                    color="gray87"
-                    lineHeight={24}
-                    size={16}
+                      <ForwardRef(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
+                        >
+                          Октябрьский
+                        </span>
+                      </ForwardRef(Text)>
+                    </button>
+                  </SelectScreenOption>
+                  <SelectScreenOption
+                    key=".$6"
+                    onClick={[Function]}
                   >
-                    <span
-                      className="size-16 line-height-24 color__gray87"
-                      style={Object {}}
+                    <button
+                      className="item"
+                      data-testid="select-screen:option"
+                      onClick={[Function]}
+                      type="button"
                     >
-                      Октябрьский
-                    </span>
-                  </ForwardRef(Text)>
-                </button>
-                <button
-                  className="item"
-                  key="6"
-                  onClick={[Function]}
-                >
-                  <ForwardRef(Text)
-                    color="gray87"
-                    lineHeight={24}
-                    size={16}
-                  >
-                    <span
-                      className="size-16 line-height-24 color__gray87"
-                      style={Object {}}
-                    >
-                      Ленинский
-                    </span>
-                  </ForwardRef(Text)>
-                </button>
+                      <ForwardRef(Text)
+                        color="gray87"
+                        lineHeight={24}
+                        size={16}
+                      >
+                        <span
+                          className="size-16 line-height-24 color__gray87"
+                          style={Object {}}
+                        >
+                          Ленинский
+                        </span>
+                      </ForwardRef(Text)>
+                    </button>
+                  </SelectScreenOption>
+                </div>
               </div>
-            </div>
-          </MobileLayout>
+            </MobileLayout>
+          </SelectScreenLayout>
         </div>
       </ForwardRef(BodySlot)>
     </div>
@@ -563,6 +830,31 @@ exports[`<SelectScreen /> should render without props 1`] = `
         }
       }
     >
+      <HeaderSlot
+        key=".0"
+      >
+        <NavBar
+          buttons={
+            Object {
+              "end": undefined,
+              "start": undefined,
+            }
+          }
+        >
+          <div
+            className="nav-bar"
+            style={
+              Object {
+                "height": "56px",
+              }
+            }
+          >
+            <div
+              className="main"
+            />
+          </div>
+        </NavBar>
+      </HeaderSlot>
       <ForwardRef(BodySlot)
         key=".1"
       >
@@ -570,25 +862,101 @@ exports[`<SelectScreen /> should render without props 1`] = `
           className="body"
           data-testid="screen:body"
         >
-          <MobileLayout
-            disabledOn={
-              Array [
-                "mxs",
-                "ms",
-              ]
+          <SelectScreenLayout
+            style={
+              Object {
+                "padding": "16px 0",
+              }
             }
           >
-            <div
-              className="layout mobile disabled-mxs disabled-ms"
+            <MobileLayout
+              disabledOn={
+                Array [
+                  "mxs",
+                  "ms",
+                ]
+              }
+              style={
+                Object {
+                  "padding": "16px 0",
+                }
+              }
             >
               <div
-                className="container"
-              />
-            </div>
-          </MobileLayout>
+                className="layout mobile disabled-mxs disabled-ms"
+                style={
+                  Object {
+                    "padding": "16px 0",
+                  }
+                }
+              >
+                <div
+                  className="container"
+                />
+              </div>
+            </MobileLayout>
+          </SelectScreenLayout>
         </div>
       </ForwardRef(BodySlot)>
     </div>
   </Screen>
 </SelectScreen>
+`;
+
+exports[`select screen parts should works properly 1`] = `
+<div>
+  <div
+    class="root"
+    data-testid="screen"
+    style="z-index: 300;"
+  >
+    <div
+      class="body"
+      data-testid="screen:body"
+    >
+      <div
+        class="layout mobile disabled-mxs disabled-ms"
+        style="padding: 16px 0px;"
+      >
+        <div
+          class="container"
+        >
+          <button
+            class="item"
+            data-testid="select-screen:option"
+            type="button"
+          >
+            Foo
+          </button>
+          <button
+            class="item"
+            data-testid="select-screen:option"
+            type="button"
+          >
+            Bar
+            <svg
+              fill="#212121"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M21.678 5.265a1 1 0 01.057 1.413l-12 13a1 1 0 01-1.36.103l-5-4a1 1 0 011.25-1.562l4.272 3.418L20.265 5.322a1 1 0 011.413-.057z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <button
+            class="item"
+            data-testid="select-screen:option"
+            type="button"
+          >
+            Baz
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
