@@ -105,6 +105,7 @@ exports[`ProductCard should render hover card correctly 1`] = `
     <div
       class="bg-color__white card shadow-z4 rounds-md__all"
       data-testid="product-card:hover-card"
+      style="z-index: 1;"
     >
       <div
         class="root image-overlay"

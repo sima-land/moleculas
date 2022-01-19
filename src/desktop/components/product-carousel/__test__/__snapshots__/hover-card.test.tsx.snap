@@ -26,6 +26,7 @@ exports[`<HoverCard /> should renders hidden 1`] = `
       style={
         Object {
           "padding": "16px 16px 24px 16px",
+          "zIndex": 1,
         }
       }
     >
@@ -36,6 +37,7 @@ exports[`<HoverCard /> should renders hidden 1`] = `
         style={
           Object {
             "padding": "16px 16px 24px 16px",
+            "zIndex": 1,
           }
         }
       >
@@ -78,6 +80,7 @@ Array [
         style={
           Object {
             "padding": "16px 16px 24px 16px",
+            "zIndex": 1,
           }
         }
       >
@@ -88,6 +91,7 @@ Array [
           style={
             Object {
               "padding": "16px 16px 24px 16px",
+              "zIndex": 1,
             }
           }
         >

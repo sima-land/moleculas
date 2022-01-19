@@ -3,6 +3,7 @@ import { fireEvent, render } from '@testing-library/react';
 import { ProductCard } from '..';
 import { ProductInfo, Parts } from '../../../../common/components/product-info';
 import { Button } from '@sima-land/ui-nucleons/button';
+import { LayerProvider } from '@sima-land/ui-nucleons/helpers/layer';
 
 const data = {
   name: 'Some product',
@@ -83,5 +84,34 @@ describe('ProductCard', () => {
 
     expect(queryByTestId('product-card:hover-card')).toBe(null);
     expect(queryByTestId('product-info:footer')).toBe(null);
+  });
+
+  it('should handle layer', () => {
+    const { getByTestId } = render(
+      <LayerProvider value={10}>
+        <ProductCard>
+          <ProductInfo>
+            <Parts.Image src={data.imageSrc} href={data.url} />
+
+            <Parts.Prices
+              price={data.price}
+              oldPrice={data.oldPrice}
+              currencyGrapheme={data.currencyGrapheme}
+            />
+
+            <Parts.Title href={data.url}>{data.name}</Parts.Title>
+
+            <Parts.Footer>
+              <Parts.CartControl>
+                <Button>В корзину</Button>
+              </Parts.CartControl>
+            </Parts.Footer>
+          </ProductInfo>
+        </ProductCard>
+      </LayerProvider>,
+    );
+
+    fireEvent.mouseEnter(getByTestId('product-card:info'));
+    expect(getByTestId('product-card:hover-card').style.zIndex).toBe('11');
   });
 });

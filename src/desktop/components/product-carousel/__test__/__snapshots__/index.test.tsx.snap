@@ -416,7 +416,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
       <button
         class="arrow-button size-s control backward"
         data-testid="arrow-button"
-        style="z-index: 1; top: 0px;"
+        style="z-index: 2; top: 0px;"
         type="button"
       >
         <svg
@@ -434,7 +434,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
       <button
         class="arrow-button size-s control forward"
         data-testid="arrow-button"
-        style="z-index: 1; top: 0px;"
+        style="z-index: 2; top: 0px;"
         type="button"
       >
         <svg
@@ -516,7 +516,7 @@ exports[`<ProductCarousel /> should renders correctly with only one item 1`] = `
       <button
         class="arrow-button size-s control backward"
         data-testid="arrow-button"
-        style="z-index: 1; top: 0px;"
+        style="z-index: 2; top: 0px;"
         type="button"
       >
         <svg
@@ -534,7 +534,7 @@ exports[`<ProductCarousel /> should renders correctly with only one item 1`] = `
       <button
         class="arrow-button size-s control forward"
         data-testid="arrow-button"
-        style="z-index: 1; top: 0px;"
+        style="z-index: 2; top: 0px;"
         type="button"
       >
         <svg
@@ -573,7 +573,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
           "size": "s",
           "style": Object {
             "top": "0px",
-            "zIndex": 1,
+            "zIndex": 2,
           },
         }
       }
@@ -2086,7 +2086,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
           style={
             Object {
               "top": "0px",
-              "zIndex": 1,
+              "zIndex": 2,
             }
           }
         >
@@ -2098,7 +2098,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
             style={
               Object {
                 "top": "0px",
-                "zIndex": 1,
+                "zIndex": 2,
               }
             }
             type="button"
@@ -2130,7 +2130,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
           style={
             Object {
               "top": "0px",
-              "zIndex": 1,
+              "zIndex": 2,
             }
           }
         >
@@ -2142,7 +2142,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
             style={
               Object {
                 "top": "0px",
-                "zIndex": 1,
+                "zIndex": 2,
               }
             }
             type="button"
@@ -2184,7 +2184,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
           "size": "l",
           "style": Object {
             "top": "0px",
-            "zIndex": 1,
+            "zIndex": 2,
           },
         }
       }
@@ -3697,7 +3697,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
           style={
             Object {
               "top": "0px",
-              "zIndex": 1,
+              "zIndex": 2,
             }
           }
         >
@@ -3709,7 +3709,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
             style={
               Object {
                 "top": "0px",
-                "zIndex": 1,
+                "zIndex": 2,
               }
             }
             type="button"
@@ -3748,7 +3748,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
           style={
             Object {
               "top": "0px",
-              "zIndex": 1,
+              "zIndex": 2,
             }
           }
         >
@@ -3760,7 +3760,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
             style={
               Object {
                 "top": "0px",
-                "zIndex": 1,
+                "zIndex": 2,
               }
             }
             type="button"
