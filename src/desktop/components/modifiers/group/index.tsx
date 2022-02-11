@@ -8,23 +8,47 @@ import classnames from 'classnames/bind';
 
 type ModifierPredicate<T> = (item: Modifier) => T;
 
-interface State {
+interface ModifiersGroupState {
   needShowAll: boolean;
   hasHiddenNodes: boolean;
   lastVisibleChildIndex: number | null;
 }
 
 export interface ModifiersGroupProps {
+  /** Список модификаторов. */
   items?: Modifier[];
+
+  /** Флаг необходимости отображения всех модификаторов. */
+  needShowAll?: boolean;
+
+  /** Будет вызвана при выборе модификатора, получит сам модификатор. */
   onSelectItem?: (item: Modifier, selected: boolean) => void;
+
+  /** Возвращает тип модификатора ("text" или "image", по умолчанию "text"). */
   getItemType?: ModifierPredicate<ModifierButtonProps['type']>;
+
+  /** Возвращает число с количеством модификатора (по умолчанию свойство "count"). */
   getItemCount?: ModifierPredicate<number>;
+
+  /** Возвращает цвет модификатора (по умолчанию свойство "color"). */
   getItemColor?: ModifierPredicate<string>;
+
+  /** Возвращает содержимое модификатора (по умолчанию свойство "content"). */
   getItemContent?: ModifierPredicate<string>;
+
+  /** Показывает, выбран ли модификатор (по умолчанию свойство "selected"). */
   isSelectedItem?: ModifierPredicate<boolean>;
+
+  /** Возвращает URL изображения модификатора (по умолчанию свойство "image"). */
   getItemImage?: ModifierPredicate<string>;
+
+  /** Имеет ли товар уценку. */
   isMarkdown?: ModifierPredicate<boolean>;
+
+  /** Сработает при нажатии на кнопку отображения всех модификаторов. */
   onClickShowAll?: () => void;
+
+  /** Идентификатор для систем автоматизированного тестирования. */
   'data-testid'?: string;
 }
 
@@ -59,26 +83,14 @@ const defaultGetItemImage = prop('image');
 const defaultGetIsMarkdown = prop('isMarkdown');
 
 /**
- * Возвращает компонент списка модификаторов.
- * @param {Object} props Свойства компонента.
- * @param {Array} props.items Список модификаторов.
- * @param {Function} [props.getItemType] Возвращает тип модификатора ("text" или "image", по умолчанию "text").
- * @param {Function} [props.getItemCount] Возвращает число с количеством модификатора (по умолчанию свойство "count").
- * @param {Function} [props.getItemColor] Возвращает цвет модификатора (по умолчанию свойство "color").
- * @param {Function} [props.getItemContent] Возвращает содержимое модификатора (по умолчанию свойство "content").
- * @param {Function} [props.isSelectedItem] Показывает, выбран ли модификатор (по умолчанию свойство "selected").
- * @param {Function} [props.onSelectItem] Будет вызвана при выборе модификатора, получит сам модификатор.
- * @param {Function} [props.getItemImage] Возвращает URL изображения модификатора (по умолчанию свойство "image").
- * @param {boolean} [props.needShowAll] Флаг необходимости отображения всех модификаторов.
- * @param {Function} [props.onClickShowAll] Сработает при нажатии на кнопку отображения всех модификаторов.
- * @param {Function} [props.isMarkdown] Имеет ли товар уценку.
+ * Компонент списка модификаторов.
  */
-export class ModifiersGroup extends Component<ModifiersGroupProps, State> {
+export class ModifiersGroup extends Component<ModifiersGroupProps, ModifiersGroupState> {
   removeGlobalListener: any;
 
   state = {
     // нажата ли кнопка показа всех модификаторов
-    needShowAll: (this.props as any).needShowAll || false,
+    needShowAll: this.props.needShowAll || false,
 
     // есть ли дочерние узлы контейнера, которые скрыты из за ограничения его высоты
     hasHiddenNodes: true,
