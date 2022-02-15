@@ -141,3 +141,33 @@ describe('select screen parts', () => {
     expect(spy).toBeCalledTimes(1);
   });
 });
+
+describe('SelectScreenOption', () => {
+  it('should handle size prop', () => {
+    const { container } = render(<SelectScreenOption size='xl'>Test option</SelectScreenOption>);
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should handle selected prop', () => {
+    const { container, rerender } = render(
+      <SelectScreenOption selected>Test option</SelectScreenOption>,
+    );
+
+    expect(container.querySelectorAll('svg')).toHaveLength(1);
+
+    rerender(<SelectScreenOption selected={false}>Test option</SelectScreenOption>);
+
+    expect(container.querySelectorAll('svg')).toHaveLength(0);
+  });
+
+  it('should handle withSelectedIcon prop', () => {
+    const { container } = render(
+      <SelectScreenOption selected withSelectedIcon={false}>
+        Test option
+      </SelectScreenOption>,
+    );
+
+    expect(container.querySelectorAll('svg')).toHaveLength(0);
+  });
+});

@@ -9,6 +9,14 @@ import CheckSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/check';
 import cn from 'classnames';
 import styles from './select-screen.module.scss';
 
+export type OptionSize = 's' | 'm' | 'l' | 'xl';
+
+export interface SelectScreenOptionProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  size?: OptionSize;
+  selected?: boolean;
+  withSelectedIcon?: boolean;
+}
+
 export interface SelectScreenProps {
   items?: any[];
   getItemName?: (item: any) => string;
@@ -78,16 +86,18 @@ export const SelectScreenOption = ({
   children,
   className,
   selected,
+  withSelectedIcon = selected,
+  size = 'm',
   ...props
-}: React.ButtonHTMLAttributes<HTMLButtonElement> & { selected?: boolean }) => (
+}: SelectScreenOptionProps) => (
   <button
     {...props}
     type='button'
-    className={cn(styles.item, className)}
+    className={cn(styles.item, className, styles[`size-${size}`])}
     data-testid='select-screen:option'
   >
     {children}
-    {selected && <CheckSVG fill={COLORS.get('gray87')} />}
+    {selected && withSelectedIcon && <CheckSVG role='presentation' className={styles.icon} />}
   </button>
 );
 

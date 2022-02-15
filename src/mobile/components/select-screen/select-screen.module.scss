@@ -1,5 +1,5 @@
 @use 'node_modules/@sima-land/ui-nucleons/breakpoints';
-@import 'node_modules/@sima-land/ui-nucleons/colors';
+@use 'node_modules/@sima-land/ui-nucleons/colors';
 
 .container {
   --gutter: 24px;
@@ -20,7 +20,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 16px;
+  padding: 8px 16px;
   font-size: 16px;
   line-height: 24px;
   height: 48px;
@@ -29,7 +29,36 @@
   outline: 0;
   font: inherit;
   background-color: transparent;
+  text-align: left;
   &:active {
-    background-color: $gray4;
+    background-color: colors.$gray4;
   }
+  &:disabled {
+    color: colors.$gray24;
+    .icon {
+      fill: colors.$gray24;
+    }
+  }
+}
+
+.size-s {
+  height: 40px;
+}
+
+.size-m {
+  height: 48px;
+}
+
+.size-l {
+  height: 56px;
+}
+
+.size-xl {
+  height: 72px;
+}
+
+.icon {
+  display: block;
+  margin-left: 8px;
+  fill: colors.$gray87;
 }
