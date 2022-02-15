@@ -120,7 +120,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                     onClick={[Function]}
                   >
                     <button
-                      className="item"
+                      className="item size-m"
                       data-testid="select-screen:option"
                       onClick={[Function]}
                       type="button"
@@ -156,7 +156,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                     onClick={[Function]}
                   >
                     <button
-                      className="item"
+                      className="item size-m"
                       data-testid="select-screen:option"
                       onClick={[Function]}
                       type="button"
@@ -176,7 +176,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                     onClick={[Function]}
                   >
                     <button
-                      className="item"
+                      className="item size-m"
                       data-testid="select-screen:option"
                       onClick={[Function]}
                       type="button"
@@ -196,7 +196,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                     onClick={[Function]}
                   >
                     <button
-                      className="item"
+                      className="item size-m"
                       data-testid="select-screen:option"
                       onClick={[Function]}
                       type="button"
@@ -216,7 +216,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                     onClick={[Function]}
                   >
                     <button
-                      className="item"
+                      className="item size-m"
                       data-testid="select-screen:option"
                       onClick={[Function]}
                       type="button"
@@ -236,7 +236,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
                     onClick={[Function]}
                   >
                     <button
-                      className="item"
+                      className="item size-m"
                       data-testid="select-screen:option"
                       onClick={[Function]}
                       type="button"
@@ -374,7 +374,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                     onClick={[Function]}
                   >
                     <button
-                      className="item"
+                      className="item size-m"
                       data-testid="select-screen:option"
                       onClick={[Function]}
                       type="button"
@@ -398,7 +398,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                     onClick={[Function]}
                   >
                     <button
-                      className="item"
+                      className="item size-m"
                       data-testid="select-screen:option"
                       onClick={[Function]}
                       type="button"
@@ -422,7 +422,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                     onClick={[Function]}
                   >
                     <button
-                      className="item"
+                      className="item size-m"
                       data-testid="select-screen:option"
                       onClick={[Function]}
                       type="button"
@@ -446,7 +446,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                     onClick={[Function]}
                   >
                     <button
-                      className="item"
+                      className="item size-m"
                       data-testid="select-screen:option"
                       onClick={[Function]}
                       type="button"
@@ -470,7 +470,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                     onClick={[Function]}
                   >
                     <button
-                      className="item"
+                      className="item size-m"
                       data-testid="select-screen:option"
                       onClick={[Function]}
                       type="button"
@@ -494,7 +494,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                     onClick={[Function]}
                   >
                     <button
-                      className="item"
+                      className="item size-m"
                       data-testid="select-screen:option"
                       onClick={[Function]}
                       type="button"
@@ -628,7 +628,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                     onClick={[Function]}
                   >
                     <button
-                      className="item"
+                      className="item size-m"
                       data-testid="select-screen:option"
                       onClick={[Function]}
                       type="button"
@@ -652,7 +652,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                     onClick={[Function]}
                   >
                     <button
-                      className="item"
+                      className="item size-m"
                       data-testid="select-screen:option"
                       onClick={[Function]}
                       type="button"
@@ -676,7 +676,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                     onClick={[Function]}
                   >
                     <button
-                      className="item"
+                      className="item size-m"
                       data-testid="select-screen:option"
                       onClick={[Function]}
                       type="button"
@@ -700,7 +700,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                     onClick={[Function]}
                   >
                     <button
-                      className="item"
+                      className="item size-m"
                       data-testid="select-screen:option"
                       onClick={[Function]}
                       type="button"
@@ -740,7 +740,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                     onClick={[Function]}
                   >
                     <button
-                      className="item"
+                      className="item size-m"
                       data-testid="select-screen:option"
                       onClick={[Function]}
                       type="button"
@@ -764,7 +764,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                     onClick={[Function]}
                   >
                     <button
-                      className="item"
+                      className="item size-m"
                       data-testid="select-screen:option"
                       onClick={[Function]}
                       type="button"
@@ -788,7 +788,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                     onClick={[Function]}
                   >
                     <button
-                      className="item"
+                      className="item size-m"
                       data-testid="select-screen:option"
                       onClick={[Function]}
                       type="button"
@@ -903,6 +903,18 @@ exports[`<SelectScreen /> should render without props 1`] = `
 </SelectScreen>
 `;
 
+exports[`SelectScreenOption should handle size prop 1`] = `
+<div>
+  <button
+    class="item size-xl"
+    data-testid="select-screen:option"
+    type="button"
+  >
+    Test option
+  </button>
+</div>
+`;
+
 exports[`select screen parts should works properly 1`] = `
 <div>
   <div
@@ -922,21 +934,22 @@ exports[`select screen parts should works properly 1`] = `
           class="container"
         >
           <button
-            class="item"
+            class="item size-m"
             data-testid="select-screen:option"
             type="button"
           >
             Foo
           </button>
           <button
-            class="item"
+            class="item size-m"
             data-testid="select-screen:option"
             type="button"
           >
             Bar
             <svg
-              fill="#212121"
+              class="icon"
               height="24"
+              role="presentation"
               viewBox="0 0 24 24"
               width="24"
             >
@@ -948,7 +961,7 @@ exports[`select screen parts should works properly 1`] = `
             </svg>
           </button>
           <button
-            class="item"
+            class="item size-m"
             data-testid="select-screen:option"
             type="button"
           >
