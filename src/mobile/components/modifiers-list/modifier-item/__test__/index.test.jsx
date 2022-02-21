@@ -51,7 +51,7 @@ describe('<ModifierItem />', () => {
     );
     expect(wrapper.find(Text).props()).toEqual({
       children: 'В корзине 5 шт',
-      color: 'gray38',
+      color: 'basic-gray38',
       size: 12,
       lineHeight: 16,
     });

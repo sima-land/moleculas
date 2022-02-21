@@ -31,7 +31,7 @@ exports[`<HoverCard /> should renders hidden 1`] = `
       }
     >
       <div
-        className="bg-color__white card root hidden rounds-sm__all shadow-z4 shadow-z4 rounds-md__all"
+        className="bg-color__basic-white card root hidden rounds-sm__all shadow-z4 shadow-z4 rounds-md__all"
         data-testid="product-card:hover-card"
         onMouseLeave={[Function]}
         style={
@@ -85,7 +85,7 @@ Array [
         }
       >
         <div
-          className="bg-color__white card root rounds-sm__all shadow-z4 shadow-z4 rounds-md__all"
+          className="bg-color__basic-white card root rounds-sm__all shadow-z4 shadow-z4 rounds-md__all"
           data-testid="product-card:hover-card"
           onMouseLeave={[Function]}
           style={
@@ -102,12 +102,12 @@ Array [
             >
               <ForwardRef(Link)
                 className="link line-clamp"
-                color="gray87"
+                color="basic-gray87"
                 data-testid="product-info:name-link"
                 href="https://foo.bar"
               >
                 <a
-                  className="link link line-clamp gray87"
+                  className="link link line-clamp basic-gray87"
                   data-testid="product-info:name-link"
                   href="https://foo.bar"
                 >

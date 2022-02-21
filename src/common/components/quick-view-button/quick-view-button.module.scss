@@ -4,9 +4,9 @@
   display: block;
   overflow: visible;
   stroke-width: 1;
-  stroke: colors.$gray4;
-  fill: colors.$gray87;
+  stroke: colors.$basic-gray4;
+  fill: colors.$basic-gray87;
   &:hover {
-    fill: colors.$gray54;
+    fill: colors.$basic-gray54;
   }
 }

@@ -183,7 +183,7 @@ const Title = ({ children, href, onClick }: Pick<LinkProps, 'children' | 'href' 
       onClick={onClick}
       className={cx('link', 'line-clamp')}
       href={href}
-      color='gray87'
+      color='basic-gray87'
       data-testid='product-info:name-link'
     >
       {children}
@@ -205,7 +205,7 @@ const TrademarkLink = ({
     href={href}
     children={children}
     onClick={onClick}
-    color='brand-blue'
+    color='basic-blue'
     data-testid='product-info:trademark-link'
   />
 );
@@ -263,7 +263,7 @@ const AdultConfirmButton = ({ className, ...props }: LinkProps) => (
   <Link
     {...props}
     pseudo
-    color='brand-blue'
+    color='basic-blue'
     className={cx('text-button', className)}
     data-testid='product-info:adult-confirm-button'
   >
@@ -280,7 +280,7 @@ const WaitListAddButton = ({ className, ...props }: LinkProps) => (
   <Link
     {...props}
     pseudo
-    color='brand-blue'
+    color='basic-blue'
     className={cx('text-button', className)}
     data-testid='product-info:wait-list-add-button'
   >
@@ -298,7 +298,7 @@ const WaitListAddedLink = ({ className, ...props }: LinkProps) => (
     Товар добавлен в{' '}
     <Link
       {...props}
-      color='brand-blue'
+      color='basic-blue'
       className={cx('text-button', className)}
       data-testid='product-info:wait-list-added-link'
     >

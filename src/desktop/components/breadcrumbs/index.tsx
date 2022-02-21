@@ -86,7 +86,7 @@ const Breadcrumb = ({
   }, [withPopup]);
 
   const selfName = (
-    <Link color='gray87' href={data.url}>
+    <Link color='basic-gray87' href={data.url}>
       {data.name}
     </Link>
   );
@@ -144,7 +144,7 @@ const Breadcrumb = ({
                           <span className={cx('active')}>{sibling.name}</span>
                         ) : (
                           <Link
-                            color='gray87'
+                            color='basic-gray87'
                             className={cx('link')}
                             href={sibling.url}
                             children={sibling.name}

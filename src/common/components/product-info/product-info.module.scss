@@ -46,7 +46,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  fill: colors.$gray38;
+  fill: colors.$basic-gray38;
 }
 
 .image-buttons {
@@ -80,7 +80,7 @@
     display: none;
   }
   &:hover {
-    fill: colors.$gray54;
+    fill: colors.$basic-gray54;
   }
   @include breakpoints.down('ml') {
     --gutter: 4px;
@@ -139,7 +139,7 @@
   max-width: 100%;
   font-size: 14px;
   line-height: 20px;
-  color: colors.$gray87;
+  color: colors.$basic-gray87;
 }
 
 .trademark-link {
@@ -175,7 +175,7 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
-  color: colors.$gray24;
+  color: colors.$basic-gray24;
   @include breakpoints.down('ml') {
     font-size: 14px;
     line-height: 20px;
@@ -189,13 +189,13 @@
   margin-top: 16px;
   &.loading {
     .control {
-      background: colors.$gray4;
+      background: colors.$basic-gray4;
       border-radius: 4px;
     }
     .unit-text::before {
       content: '';
       display: block;
-      background: colors.$gray4;
+      background: colors.$basic-gray4;
       border-radius: 4px;
       width: 48px;
       height: 16px;
@@ -213,12 +213,12 @@
   padding-top: 12px; // чтобы при переносе на следующую строку правильно отступил от кнопки
   font-size: 12px;
   line-height: 16px;
-  color: colors.$gray38;
+  color: colors.$basic-gray38;
 }
 
 .bottom-text {
   margin-top: 12px;
   font-size: 12px;
   line-height: 16px;
-  color: colors.$gray38;
+  color: colors.$basic-gray38;
 }

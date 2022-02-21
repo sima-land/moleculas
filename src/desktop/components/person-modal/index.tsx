@@ -92,7 +92,7 @@ export const PersonModal = ({
           </Box>
 
           <Box marginBottom={1}>
-            <Text color='gray38' size={14} weight={400}>
+            <Text color='basic-gray38' size={14} weight={400}>
               {appointment}
             </Text>
           </Box>
@@ -111,7 +111,7 @@ export const PersonModal = ({
             {email && (
               <span className={cx('contacts-item')}>
                 {'Email: '}
-                <Link color='gray87' href={`mailto:${email}`} children={email} />
+                <Link color='basic-gray87' href={`mailto:${email}`} children={email} />
               </span>
             )}
             {Array.isArray(social) && social.length > 0 && (
@@ -121,7 +121,7 @@ export const PersonModal = ({
                   <Link
                     className={cx('inline')}
                     key={key}
-                    color='gray87'
+                    color='basic-gray87'
                     target='_blank'
                     rel='nofollow'
                     {...props}
@@ -132,17 +132,17 @@ export const PersonModal = ({
             {skype && (
               <span className={cx('contacts-item')}>
                 {'Skype: '}
-                <Link color='gray87' href={`skype:${skype}`} children={skype} />
+                <Link color='basic-gray87' href={`skype:${skype}`} children={skype} />
               </span>
             )}
             {phoneText && (
               <span className={cx('contacts-item')}>
-                <Link color='gray87' href={phoneHref} children={phoneText} />
+                <Link color='basic-gray87' href={phoneHref} children={phoneText} />
               </span>
             )}
             {secondPhoneText && (
               <span className={cx('contacts-item')}>
-                <Link color='gray87' href={secondPhoneHref} children={secondPhoneText} />
+                <Link color='basic-gray87' href={secondPhoneHref} children={secondPhoneText} />
               </span>
             )}
           </div>

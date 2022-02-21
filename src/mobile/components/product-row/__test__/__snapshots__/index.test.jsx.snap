@@ -79,11 +79,11 @@ exports[`ProductRow renders properly 1`] = `
     >
       <ForwardRef(Link)
         className="link"
-        color="gray87"
+        color="basic-gray87"
         href="test"
       >
         <a
-          className="link link gray87"
+          className="link link basic-gray87"
           data-testid="anchor"
           href="test"
         >
@@ -106,10 +106,10 @@ exports[`ProductRow renders properly 1`] = `
           className="M-t__2"
         >
           <ForwardRef(Text)
-            color="gray38"
+            color="basic-gray38"
           >
             <span
-              className="color__gray38"
+              className="color__basic-gray38"
               style={Object {}}
             >
               Арт.: 
@@ -209,11 +209,11 @@ exports[`ProductRow renders properly 1`] = `
           className="M-t__2"
         >
           <ForwardRef(Text)
-            color="gray38"
+            color="basic-gray38"
             element="div"
           >
             <div
-              className="color__gray38"
+              className="color__basic-gray38"
               style={Object {}}
             >
               Перемещен в заказ
@@ -237,11 +237,11 @@ exports[`ProductRow renders properly 1`] = `
           className="M-t__2"
         >
           <ForwardRef(Text)
-            color="gray38"
+            color="basic-gray38"
             element="div"
           >
             <div
-              className="color__gray38"
+              className="color__basic-gray38"
               style={Object {}}
             >
               Нет на складе
@@ -321,11 +321,11 @@ exports[`ProductRow renders properly without heart 1`] = `
     >
       <ForwardRef(Link)
         className="link"
-        color="gray87"
+        color="basic-gray87"
         href="test"
       >
         <a
-          className="link link gray87"
+          className="link link basic-gray87"
           data-testid="anchor"
           href="test"
         >
@@ -348,10 +348,10 @@ exports[`ProductRow renders properly without heart 1`] = `
           className="M-t__2"
         >
           <ForwardRef(Text)
-            color="gray38"
+            color="basic-gray38"
           >
             <span
-              className="color__gray38"
+              className="color__basic-gray38"
               style={Object {}}
             >
               Арт.: 
@@ -451,11 +451,11 @@ exports[`ProductRow renders properly without heart 1`] = `
           className="M-t__2"
         >
           <ForwardRef(Text)
-            color="gray38"
+            color="basic-gray38"
             element="div"
           >
             <div
-              className="color__gray38"
+              className="color__basic-gray38"
               style={Object {}}
             >
               Перемещен в заказ
@@ -479,11 +479,11 @@ exports[`ProductRow renders properly without heart 1`] = `
           className="M-t__2"
         >
           <ForwardRef(Text)
-            color="gray38"
+            color="basic-gray38"
             element="div"
           >
             <div
-              className="color__gray38"
+              className="color__basic-gray38"
               style={Object {}}
             >
               Нет на складе

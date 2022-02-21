@@ -49,7 +49,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                 </span>
               </div>
               <a
-                class="link link line-clamp gray87"
+                class="link link line-clamp basic-gray87"
                 data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
@@ -87,7 +87,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                 </span>
               </div>
               <a
-                class="link link line-clamp gray87"
+                class="link link line-clamp basic-gray87"
                 data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
@@ -125,7 +125,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                 </span>
               </div>
               <a
-                class="link link line-clamp gray87"
+                class="link link line-clamp basic-gray87"
                 data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
@@ -163,7 +163,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                 </span>
               </div>
               <a
-                class="link link line-clamp gray87"
+                class="link link line-clamp basic-gray87"
                 data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
@@ -201,7 +201,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                 </span>
               </div>
               <a
-                class="link link line-clamp gray87"
+                class="link link line-clamp basic-gray87"
                 data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
@@ -239,7 +239,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                 </span>
               </div>
               <a
-                class="link link line-clamp gray87"
+                class="link link line-clamp basic-gray87"
                 data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
@@ -277,7 +277,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                 </span>
               </div>
               <a
-                class="link link line-clamp gray87"
+                class="link link line-clamp basic-gray87"
                 data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
@@ -321,7 +321,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                 </span>
               </div>
               <a
-                class="link link line-clamp gray87"
+                class="link link line-clamp basic-gray87"
                 data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
@@ -365,7 +365,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                 </span>
               </div>
               <a
-                class="link link line-clamp gray87"
+                class="link link line-clamp basic-gray87"
                 data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
@@ -403,7 +403,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                 </span>
               </div>
               <a
-                class="link link line-clamp gray87"
+                class="link link line-clamp basic-gray87"
                 data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
@@ -503,7 +503,7 @@ exports[`<ProductCarousel /> should renders correctly with only one item 1`] = `
                 </span>
               </div>
               <a
-                class="link link line-clamp gray87"
+                class="link link line-clamp basic-gray87"
                 data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
@@ -822,7 +822,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                           </span>
                         </div>
                         <a
-                          class="link link line-clamp gray87"
+                          class="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -860,7 +860,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                           </span>
                         </div>
                         <a
-                          class="link link line-clamp gray87"
+                          class="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -898,7 +898,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                           </span>
                         </div>
                         <a
-                          class="link link line-clamp gray87"
+                          class="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -936,7 +936,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                           </span>
                         </div>
                         <a
-                          class="link link line-clamp gray87"
+                          class="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -974,7 +974,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                           </span>
                         </div>
                         <a
-                          class="link link line-clamp gray87"
+                          class="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -1012,7 +1012,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                           </span>
                         </div>
                         <a
-                          class="link link line-clamp gray87"
+                          class="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -1050,7 +1050,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                           </span>
                         </div>
                         <a
-                          class="link link line-clamp gray87"
+                          class="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -1094,7 +1094,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                           </span>
                         </div>
                         <a
-                          class="link link line-clamp gray87"
+                          class="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -1138,7 +1138,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                           </span>
                         </div>
                         <a
-                          class="link link line-clamp gray87"
+                          class="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -1176,7 +1176,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                           </span>
                         </div>
                         <a
-                          class="link link line-clamp gray87"
+                          class="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -1197,7 +1197,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
         >
           <div
             className="draggable-container full-size"
-            onClick={[Function]}
+            onClickCapture={[Function]}
             onMouseDown={[Function]}
             onTouchStart={[Function]}
           >
@@ -1281,12 +1281,12 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                     >
                       <ForwardRef(Link)
                         className="link line-clamp"
-                        color="gray87"
+                        color="basic-gray87"
                         data-testid="product-info:name-link"
                         href="https://www.sima-land.ru/"
                       >
                         <a
-                          className="link link line-clamp gray87"
+                          className="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -1364,12 +1364,12 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                     >
                       <ForwardRef(Link)
                         className="link line-clamp"
-                        color="gray87"
+                        color="basic-gray87"
                         data-testid="product-info:name-link"
                         href="https://www.sima-land.ru/"
                       >
                         <a
-                          className="link link line-clamp gray87"
+                          className="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -1447,12 +1447,12 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                     >
                       <ForwardRef(Link)
                         className="link line-clamp"
-                        color="gray87"
+                        color="basic-gray87"
                         data-testid="product-info:name-link"
                         href="https://www.sima-land.ru/"
                       >
                         <a
-                          className="link link line-clamp gray87"
+                          className="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -1530,12 +1530,12 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                     >
                       <ForwardRef(Link)
                         className="link line-clamp"
-                        color="gray87"
+                        color="basic-gray87"
                         data-testid="product-info:name-link"
                         href="https://www.sima-land.ru/"
                       >
                         <a
-                          className="link link line-clamp gray87"
+                          className="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -1613,12 +1613,12 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                     >
                       <ForwardRef(Link)
                         className="link line-clamp"
-                        color="gray87"
+                        color="basic-gray87"
                         data-testid="product-info:name-link"
                         href="https://www.sima-land.ru/"
                       >
                         <a
-                          className="link link line-clamp gray87"
+                          className="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -1696,12 +1696,12 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                     >
                       <ForwardRef(Link)
                         className="link line-clamp"
-                        color="gray87"
+                        color="basic-gray87"
                         data-testid="product-info:name-link"
                         href="https://www.sima-land.ru/"
                       >
                         <a
-                          className="link link line-clamp gray87"
+                          className="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -1779,12 +1779,12 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                     >
                       <ForwardRef(Link)
                         className="link line-clamp"
-                        color="gray87"
+                        color="basic-gray87"
                         data-testid="product-info:name-link"
                         href="https://www.sima-land.ru/"
                       >
                         <a
-                          className="link link line-clamp gray87"
+                          className="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -1877,12 +1877,12 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                     >
                       <ForwardRef(Link)
                         className="link line-clamp"
-                        color="gray87"
+                        color="basic-gray87"
                         data-testid="product-info:name-link"
                         href="https://www.sima-land.ru/"
                       >
                         <a
-                          className="link link line-clamp gray87"
+                          className="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -1975,12 +1975,12 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                     >
                       <ForwardRef(Link)
                         className="link line-clamp"
-                        color="gray87"
+                        color="basic-gray87"
                         data-testid="product-info:name-link"
                         href="https://www.sima-land.ru/"
                       >
                         <a
-                          className="link link line-clamp gray87"
+                          className="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -2058,12 +2058,12 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                     >
                       <ForwardRef(Link)
                         className="link line-clamp"
-                        color="gray87"
+                        color="basic-gray87"
                         data-testid="product-info:name-link"
                         href="https://www.sima-land.ru/"
                       >
                         <a
-                          className="link link line-clamp gray87"
+                          className="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -2433,7 +2433,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                           </span>
                         </div>
                         <a
-                          class="link link line-clamp gray87"
+                          class="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -2471,7 +2471,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                           </span>
                         </div>
                         <a
-                          class="link link line-clamp gray87"
+                          class="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -2509,7 +2509,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                           </span>
                         </div>
                         <a
-                          class="link link line-clamp gray87"
+                          class="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -2547,7 +2547,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                           </span>
                         </div>
                         <a
-                          class="link link line-clamp gray87"
+                          class="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -2585,7 +2585,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                           </span>
                         </div>
                         <a
-                          class="link link line-clamp gray87"
+                          class="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -2623,7 +2623,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                           </span>
                         </div>
                         <a
-                          class="link link line-clamp gray87"
+                          class="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -2661,7 +2661,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                           </span>
                         </div>
                         <a
-                          class="link link line-clamp gray87"
+                          class="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -2705,7 +2705,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                           </span>
                         </div>
                         <a
-                          class="link link line-clamp gray87"
+                          class="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -2749,7 +2749,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                           </span>
                         </div>
                         <a
-                          class="link link line-clamp gray87"
+                          class="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -2787,7 +2787,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                           </span>
                         </div>
                         <a
-                          class="link link line-clamp gray87"
+                          class="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -2808,7 +2808,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
         >
           <div
             className="draggable-container full-size"
-            onClick={[Function]}
+            onClickCapture={[Function]}
             onMouseDown={[Function]}
             onTouchStart={[Function]}
           >
@@ -2892,12 +2892,12 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                     >
                       <ForwardRef(Link)
                         className="link line-clamp"
-                        color="gray87"
+                        color="basic-gray87"
                         data-testid="product-info:name-link"
                         href="https://www.sima-land.ru/"
                       >
                         <a
-                          className="link link line-clamp gray87"
+                          className="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -2975,12 +2975,12 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                     >
                       <ForwardRef(Link)
                         className="link line-clamp"
-                        color="gray87"
+                        color="basic-gray87"
                         data-testid="product-info:name-link"
                         href="https://www.sima-land.ru/"
                       >
                         <a
-                          className="link link line-clamp gray87"
+                          className="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -3058,12 +3058,12 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                     >
                       <ForwardRef(Link)
                         className="link line-clamp"
-                        color="gray87"
+                        color="basic-gray87"
                         data-testid="product-info:name-link"
                         href="https://www.sima-land.ru/"
                       >
                         <a
-                          className="link link line-clamp gray87"
+                          className="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -3141,12 +3141,12 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                     >
                       <ForwardRef(Link)
                         className="link line-clamp"
-                        color="gray87"
+                        color="basic-gray87"
                         data-testid="product-info:name-link"
                         href="https://www.sima-land.ru/"
                       >
                         <a
-                          className="link link line-clamp gray87"
+                          className="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -3224,12 +3224,12 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                     >
                       <ForwardRef(Link)
                         className="link line-clamp"
-                        color="gray87"
+                        color="basic-gray87"
                         data-testid="product-info:name-link"
                         href="https://www.sima-land.ru/"
                       >
                         <a
-                          className="link link line-clamp gray87"
+                          className="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -3307,12 +3307,12 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                     >
                       <ForwardRef(Link)
                         className="link line-clamp"
-                        color="gray87"
+                        color="basic-gray87"
                         data-testid="product-info:name-link"
                         href="https://www.sima-land.ru/"
                       >
                         <a
-                          className="link link line-clamp gray87"
+                          className="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -3390,12 +3390,12 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                     >
                       <ForwardRef(Link)
                         className="link line-clamp"
-                        color="gray87"
+                        color="basic-gray87"
                         data-testid="product-info:name-link"
                         href="https://www.sima-land.ru/"
                       >
                         <a
-                          className="link link line-clamp gray87"
+                          className="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -3488,12 +3488,12 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                     >
                       <ForwardRef(Link)
                         className="link line-clamp"
-                        color="gray87"
+                        color="basic-gray87"
                         data-testid="product-info:name-link"
                         href="https://www.sima-land.ru/"
                       >
                         <a
-                          className="link link line-clamp gray87"
+                          className="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -3586,12 +3586,12 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                     >
                       <ForwardRef(Link)
                         className="link line-clamp"
-                        color="gray87"
+                        color="basic-gray87"
                         data-testid="product-info:name-link"
                         href="https://www.sima-land.ru/"
                       >
                         <a
-                          className="link link line-clamp gray87"
+                          className="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >
@@ -3669,12 +3669,12 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                     >
                       <ForwardRef(Link)
                         className="link line-clamp"
-                        color="gray87"
+                        color="basic-gray87"
                         data-testid="product-info:name-link"
                         href="https://www.sima-land.ru/"
                       >
                         <a
-                          className="link link line-clamp gray87"
+                          className="link link line-clamp basic-gray87"
                           data-testid="product-info:name-link"
                           href="https://www.sima-land.ru/"
                         >

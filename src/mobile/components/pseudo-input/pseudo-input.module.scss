@@ -6,13 +6,13 @@
   height: 40px;
   padding: 0 16px 0 12px;
   border-radius: 8px;
-  background-color: colors.$gray4;
+  background-color: colors.$basic-gray4;
 }
 
 .icon {
   display: block;
   flex-shrink: 0;
-  fill: colors.$gray38;
+  fill: colors.$basic-gray38;
 }
 
 .text {
@@ -20,5 +20,5 @@
   margin-left: 12px;
   font-size: 16px;
   line-height: 24px;
-  color: colors.$gray38;
+  color: colors.$basic-gray38;
 }

@@ -380,12 +380,12 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       type="button"
                     >
                       <ForwardRef(Text)
-                        color="gray87"
+                        color="basic-gray87"
                         lineHeight={24}
                         size={16}
                       >
                         <span
-                          className="size-16 line-height-24 color__gray87"
+                          className="size-16 line-height-24 color__basic-gray87"
                           style={Object {}}
                         >
                           Российский рубль
@@ -404,12 +404,12 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       type="button"
                     >
                       <ForwardRef(Text)
-                        color="gray87"
+                        color="basic-gray87"
                         lineHeight={24}
                         size={16}
                       >
                         <span
-                          className="size-16 line-height-24 color__gray87"
+                          className="size-16 line-height-24 color__basic-gray87"
                           style={Object {}}
                         >
                           Американский доллар
@@ -428,12 +428,12 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       type="button"
                     >
                       <ForwardRef(Text)
-                        color="gray87"
+                        color="basic-gray87"
                         lineHeight={24}
                         size={16}
                       >
                         <span
-                          className="size-16 line-height-24 color__gray87"
+                          className="size-16 line-height-24 color__basic-gray87"
                           style={Object {}}
                         >
                           Единая европейская валюта
@@ -452,12 +452,12 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       type="button"
                     >
                       <ForwardRef(Text)
-                        color="gray87"
+                        color="basic-gray87"
                         lineHeight={24}
                         size={16}
                       >
                         <span
-                          className="size-16 line-height-24 color__gray87"
+                          className="size-16 line-height-24 color__basic-gray87"
                           style={Object {}}
                         >
                           Белорусский рубль
@@ -476,12 +476,12 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       type="button"
                     >
                       <ForwardRef(Text)
-                        color="gray87"
+                        color="basic-gray87"
                         lineHeight={24}
                         size={16}
                       >
                         <span
-                          className="size-16 line-height-24 color__gray87"
+                          className="size-16 line-height-24 color__basic-gray87"
                           style={Object {}}
                         >
                           Украинская гривна
@@ -500,12 +500,12 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       type="button"
                     >
                       <ForwardRef(Text)
-                        color="gray87"
+                        color="basic-gray87"
                         lineHeight={24}
                         size={16}
                       >
                         <span
-                          className="size-16 line-height-24 color__gray87"
+                          className="size-16 line-height-24 color__basic-gray87"
                           style={Object {}}
                         >
                           Казахстанский тенге
@@ -634,12 +634,12 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       type="button"
                     >
                       <ForwardRef(Text)
-                        color="gray87"
+                        color="basic-gray87"
                         lineHeight={24}
                         size={16}
                       >
                         <span
-                          className="size-16 line-height-24 color__gray87"
+                          className="size-16 line-height-24 color__basic-gray87"
                           style={Object {}}
                         >
                           Верх-Исетский
@@ -658,12 +658,12 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       type="button"
                     >
                       <ForwardRef(Text)
-                        color="gray87"
+                        color="basic-gray87"
                         lineHeight={24}
                         size={16}
                       >
                         <span
-                          className="size-16 line-height-24 color__gray87"
+                          className="size-16 line-height-24 color__basic-gray87"
                           style={Object {}}
                         >
                           Чкаловский
@@ -682,12 +682,12 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       type="button"
                     >
                       <ForwardRef(Text)
-                        color="gray87"
+                        color="basic-gray87"
                         lineHeight={24}
                         size={16}
                       >
                         <span
-                          className="size-16 line-height-24 color__gray87"
+                          className="size-16 line-height-24 color__basic-gray87"
                           style={Object {}}
                         >
                           Железнодорожный
@@ -706,12 +706,12 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       type="button"
                     >
                       <ForwardRef(Text)
-                        color="gray87"
+                        color="basic-gray87"
                         lineHeight={24}
                         size={16}
                       >
                         <span
-                          className="size-16 line-height-24 color__gray87"
+                          className="size-16 line-height-24 color__basic-gray87"
                           style={Object {}}
                         >
                           Кировский
@@ -746,12 +746,12 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       type="button"
                     >
                       <ForwardRef(Text)
-                        color="gray87"
+                        color="basic-gray87"
                         lineHeight={24}
                         size={16}
                       >
                         <span
-                          className="size-16 line-height-24 color__gray87"
+                          className="size-16 line-height-24 color__basic-gray87"
                           style={Object {}}
                         >
                           Орджоникидзевский
@@ -770,12 +770,12 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       type="button"
                     >
                       <ForwardRef(Text)
-                        color="gray87"
+                        color="basic-gray87"
                         lineHeight={24}
                         size={16}
                       >
                         <span
-                          className="size-16 line-height-24 color__gray87"
+                          className="size-16 line-height-24 color__basic-gray87"
                           style={Object {}}
                         >
                           Октябрьский
@@ -794,12 +794,12 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       type="button"
                     >
                       <ForwardRef(Text)
-                        color="gray87"
+                        color="basic-gray87"
                         lineHeight={24}
                         size={16}
                       >
                         <span
-                          className="size-16 line-height-24 color__gray87"
+                          className="size-16 line-height-24 color__basic-gray87"
                           style={Object {}}
                         >
                           Ленинский

@@ -14,7 +14,7 @@
   flex-grow: 1;
   margin: 8px 0;
   width: 100%;
-  background-color: $gray4;
+  background-color: $basic-gray4;
   border-radius: 8px;
   padding: 0 0 0 12px;
   &:focus-within {
@@ -55,7 +55,7 @@
   box-sizing: border-box;
   width: 100%;
   height: 40px;
-  color: $black;
+  color: #000;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -64,14 +64,14 @@
     display: none;
   }
   &::placeholder {
-    color: $gray38;
+    color: $basic-gray38;
   }
 }
 
 .description-container {
   line-height: 24px;
   font-size: 16px;
-  color: $gray38;
+  color: $basic-gray38;
   width: 100%;
   max-width: 50%;
   display: flex;
@@ -125,7 +125,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  color: $brand-blue;
+  color: $basic-blue;
   cursor: pointer;
   display: flex;
   align-items: center;

@@ -129,14 +129,14 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
               </span>
             </div>
             <a
-              class="link link line-clamp gray87"
+              class="link link line-clamp basic-gray87"
               data-testid="product-info:name-link"
               href=""
             >
               Ножницы портновские, 19 см, цвет чёрный
             </a>
             <a
-              class="link trademark-link brand-blue"
+              class="link trademark-link basic-blue"
               data-testid="product-info:trademark-link"
               href="https://sima-land.ru"
             >
@@ -319,7 +319,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
               </span>
             </div>
             <a
-              class="link link line-clamp gray87"
+              class="link link line-clamp basic-gray87"
               data-testid="product-info:name-link"
               href=""
             >
@@ -551,14 +551,14 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
               </span>
             </div>
             <a
-              class="link link line-clamp gray87"
+              class="link link line-clamp basic-gray87"
               data-testid="product-info:name-link"
               href=""
             >
               Ножницы портновские, 21,5 см, цвет чёрный/голубой
             </a>
             <a
-              class="link trademark-link brand-blue"
+              class="link trademark-link basic-blue"
               data-testid="product-info:trademark-link"
               href="https://sima-land.ru"
             >
@@ -741,7 +741,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
               </span>
             </div>
             <a
-              class="link link line-clamp gray87"
+              class="link link line-clamp basic-gray87"
               data-testid="product-info:name-link"
               href=""
             >
@@ -924,7 +924,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
               </span>
             </div>
             <a
-              class="link link line-clamp gray87"
+              class="link link line-clamp basic-gray87"
               data-testid="product-info:name-link"
               href=""
             >
@@ -1134,7 +1134,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
               </span>
             </div>
             <a
-              class="link link line-clamp gray87"
+              class="link link line-clamp basic-gray87"
               data-testid="product-info:name-link"
               href=""
             >
@@ -1317,7 +1317,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
               </span>
             </div>
             <a
-              class="link link line-clamp gray87"
+              class="link link line-clamp basic-gray87"
               data-testid="product-info:name-link"
               href=""
             >
@@ -1506,7 +1506,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
               </span>
             </div>
             <a
-              class="link link line-clamp gray87"
+              class="link link line-clamp basic-gray87"
               data-testid="product-info:name-link"
               href=""
             >
@@ -1695,7 +1695,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
               </span>
             </div>
             <a
-              class="link link line-clamp gray87"
+              class="link link line-clamp basic-gray87"
               data-testid="product-info:name-link"
               href=""
             >
@@ -1878,7 +1878,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
               </span>
             </div>
             <a
-              class="link link line-clamp gray87"
+              class="link link line-clamp basic-gray87"
               data-testid="product-info:name-link"
               href=""
             >

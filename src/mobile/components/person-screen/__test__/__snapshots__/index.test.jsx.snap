@@ -160,11 +160,11 @@ exports[`<PersonScreen /> should handle props 1`] = `
                 bgColor="additional-deep-red"
                 bgOpacity={0.48}
                 size={64}
-                textColor="white"
+                textColor="basic-white"
                 title="Марина Михайловская"
               >
                 <div
-                  className="root size-64 color__white"
+                  className="root size-64 color__basic-white"
                   data-testid="avatar"
                   style={
                     Object {
@@ -193,11 +193,11 @@ exports[`<PersonScreen /> should handle props 1`] = `
                 bgColor="additional-deep-red"
                 bgOpacity={0.48}
                 size={104}
-                textColor="white"
+                textColor="basic-white"
                 title="Марина Михайловская"
               >
                 <div
-                  className="root size-104 color__white"
+                  className="root size-104 color__basic-white"
                   data-testid="avatar"
                   style={
                     Object {
@@ -255,13 +255,13 @@ exports[`<PersonScreen /> should handle props 1`] = `
                     className="flex-grow"
                   >
                     <ForwardRef(Text)
-                      color="gray87"
+                      color="basic-gray87"
                       lineHeight={24}
                       size={16}
                       weight={600}
                     >
                       <span
-                        className="size-16 line-height-24 color__gray87 weight-600"
+                        className="size-16 line-height-24 color__basic-gray87 weight-600"
                         style={Object {}}
                       >
                         example@email.com
@@ -274,12 +274,12 @@ exports[`<PersonScreen /> should handle props 1`] = `
                         className="M-t__1"
                       >
                         <ForwardRef(Text)
-                          color="gray38"
+                          color="basic-gray38"
                           lineHeight={20}
                           size={14}
                         >
                           <span
-                            className="size-14 line-height-20 color__gray38"
+                            className="size-14 line-height-20 color__basic-gray38"
                             style={Object {}}
                           >
                             Электронная почта
@@ -325,13 +325,13 @@ exports[`<PersonScreen /> should handle props 1`] = `
                     className="flex-grow"
                   >
                     <ForwardRef(Text)
-                      color="gray87"
+                      color="basic-gray87"
                       lineHeight={24}
                       size={16}
                       weight={600}
                     >
                       <span
-                        className="size-16 line-height-24 color__gray87 weight-600"
+                        className="size-16 line-height-24 color__basic-gray87 weight-600"
                         style={Object {}}
                       >
                         example@skype.com
@@ -344,12 +344,12 @@ exports[`<PersonScreen /> should handle props 1`] = `
                         className="M-t__1"
                       >
                         <ForwardRef(Text)
-                          color="gray38"
+                          color="basic-gray38"
                           lineHeight={20}
                           size={14}
                         >
                           <span
-                            className="size-14 line-height-20 color__gray38"
+                            className="size-14 line-height-20 color__basic-gray38"
                             style={Object {}}
                           >
                             Skype
@@ -398,13 +398,13 @@ exports[`<PersonScreen /> should handle props 1`] = `
                     className="flex-grow"
                   >
                     <ForwardRef(Text)
-                      color="gray87"
+                      color="basic-gray87"
                       lineHeight={24}
                       size={16}
                       weight={600}
                     >
                       <span
-                        className="size-16 line-height-24 color__gray87 weight-600"
+                        className="size-16 line-height-24 color__basic-gray87 weight-600"
                         style={Object {}}
                       >
                         88000000000 доб. 8823
@@ -417,12 +417,12 @@ exports[`<PersonScreen /> should handle props 1`] = `
                         className="M-t__1"
                       >
                         <ForwardRef(Text)
-                          color="gray38"
+                          color="basic-gray38"
                           lineHeight={20}
                           size={14}
                         >
                           <span
-                            className="size-14 line-height-20 color__gray38"
+                            className="size-14 line-height-20 color__basic-gray38"
                             style={Object {}}
                           >
                             Рабочий
@@ -468,13 +468,13 @@ exports[`<PersonScreen /> should handle props 1`] = `
                     className="flex-grow"
                   >
                     <ForwardRef(Text)
-                      color="gray87"
+                      color="basic-gray87"
                       lineHeight={24}
                       size={16}
                       weight={600}
                     >
                       <span
-                        className="size-16 line-height-24 color__gray87 weight-600"
+                        className="size-16 line-height-24 color__basic-gray87 weight-600"
                         style={Object {}}
                       >
                         +7 (900) 000 000
@@ -487,12 +487,12 @@ exports[`<PersonScreen /> should handle props 1`] = `
                         className="M-t__1"
                       >
                         <ForwardRef(Text)
-                          color="gray38"
+                          color="basic-gray38"
                           lineHeight={20}
                           size={14}
                         >
                           <span
-                            className="size-14 line-height-20 color__gray38"
+                            className="size-14 line-height-20 color__basic-gray38"
                             style={Object {}}
                           >
                             Сотовый
@@ -588,11 +588,11 @@ exports[`<PersonScreen /> should render with name 1`] = `
                 bgColor="additional-deep-red"
                 bgOpacity={0.48}
                 size={64}
-                textColor="white"
+                textColor="basic-white"
                 title="Марина Михайловская"
               >
                 <div
-                  className="root size-64 color__white"
+                  className="root size-64 color__basic-white"
                   data-testid="avatar"
                   style={
                     Object {
@@ -621,11 +621,11 @@ exports[`<PersonScreen /> should render with name 1`] = `
                 bgColor="additional-deep-red"
                 bgOpacity={0.48}
                 size={104}
-                textColor="white"
+                textColor="basic-white"
                 title="Марина Михайловская"
               >
                 <div
-                  className="root size-104 color__white"
+                  className="root size-104 color__basic-white"
                   data-testid="avatar"
                   style={
                     Object {
@@ -666,13 +666,13 @@ exports[`<PersonScreen /> should render with name 1`] = `
                     className="flex-grow"
                   >
                     <ForwardRef(Text)
-                      color="gray87"
+                      color="basic-gray87"
                       lineHeight={24}
                       size={16}
                       weight={600}
                     >
                       <span
-                        className="size-16 line-height-24 color__gray87 weight-600"
+                        className="size-16 line-height-24 color__basic-gray87 weight-600"
                         style={Object {}}
                       >
                         88000000000 доб. 8823
@@ -685,12 +685,12 @@ exports[`<PersonScreen /> should render with name 1`] = `
                         className="M-t__1"
                       >
                         <ForwardRef(Text)
-                          color="gray38"
+                          color="basic-gray38"
                           lineHeight={20}
                           size={14}
                         >
                           <span
-                            className="size-14 line-height-20 color__gray38"
+                            className="size-14 line-height-20 color__basic-gray38"
                             style={Object {}}
                           >
                             Рабочий
@@ -734,13 +734,13 @@ exports[`<PersonScreen /> should render with name 1`] = `
                     className="flex-grow"
                   >
                     <ForwardRef(Text)
-                      color="gray87"
+                      color="basic-gray87"
                       lineHeight={24}
                       size={16}
                       weight={600}
                     >
                       <span
-                        className="size-16 line-height-24 color__gray87 weight-600"
+                        className="size-16 line-height-24 color__basic-gray87 weight-600"
                         style={Object {}}
                       >
                         +7 (900) 000 000
@@ -753,12 +753,12 @@ exports[`<PersonScreen /> should render with name 1`] = `
                         className="M-t__1"
                       >
                         <ForwardRef(Text)
-                          color="gray38"
+                          color="basic-gray38"
                           lineHeight={20}
                           size={14}
                         >
                           <span
-                            className="size-14 line-height-20 color__gray38"
+                            className="size-14 line-height-20 color__basic-gray38"
                             style={Object {}}
                           >
                             Сотовый

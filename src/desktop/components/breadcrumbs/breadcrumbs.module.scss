@@ -63,12 +63,12 @@ $line-gutter: 12px;
     margin-top: 8px;
   }
   .active {
-    color: colors.$gray24;
+    color: colors.$basic-gray24;
   }
 }
 
 .sibling-placeholder {
-  background: colors.$gray4;
+  background: colors.$basic-gray4;
   border-radius: 4px;
   height: 12px;
   & + & {

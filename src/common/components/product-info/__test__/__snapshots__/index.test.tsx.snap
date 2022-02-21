@@ -45,7 +45,7 @@ exports[`ProductInfo adult content should match snapshot 1`] = `
     data-testid="product-info:footer"
   >
     <a
-      class="link text-button brand-blue"
+      class="link text-button basic-blue"
       data-testid="product-info:adult-confirm-button"
       role="button"
       tabindex="0"
@@ -251,14 +251,14 @@ exports[`ProductInfo regular content should match snapshot 1`] = `
     </span>
   </div>
   <a
-    class="link link line-clamp gray87"
+    class="link link line-clamp basic-gray87"
     data-testid="product-info:name-link"
     href="https://www.products.com/some-product"
   >
     Some product
   </a>
   <a
-    class="link trademark-link brand-blue"
+    class="link trademark-link basic-blue"
     data-testid="product-info:trademark-link"
     href="https://www.test-trademark.ru/"
   >
