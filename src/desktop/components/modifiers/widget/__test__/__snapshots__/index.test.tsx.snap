@@ -148,7 +148,7 @@ exports[`<ModifiersWidget /> should renders correctly with prop 1`] = `
       href="sima-land.ru"
     >
       <a
-        className="link modifiers-link brand-blue"
+        className="link modifiers-link basic-blue"
         data-testid="anchor"
         href="sima-land.ru"
       >

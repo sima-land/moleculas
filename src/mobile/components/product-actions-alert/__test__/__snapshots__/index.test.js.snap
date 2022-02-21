@@ -165,7 +165,7 @@ exports[`ProductActionsContent renders properly 1`] = `
                   pseudo={false}
                 >
                   <a
-                    className="link clean-button brand-blue"
+                    className="link clean-button basic-blue"
                     data-testid="anchor"
                   >
                     Закрыть

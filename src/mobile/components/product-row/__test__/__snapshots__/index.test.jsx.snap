@@ -31,7 +31,7 @@ exports[`ProductRow renders properly 1`] = `
         href="test"
       >
         <a
-          className="link brand-blue"
+          className="link basic-blue"
           data-testid="anchor"
           href="test"
         >
@@ -221,7 +221,7 @@ exports[`ProductRow renders properly 1`] = `
           </ForwardRef(Text)>
           <ForwardRef(Link)>
             <a
-              className="link brand-blue"
+              className="link basic-blue"
               data-testid="anchor"
             >
               №
@@ -305,7 +305,7 @@ exports[`ProductRow renders properly without heart 1`] = `
         href="test"
       >
         <a
-          className="link brand-blue"
+          className="link basic-blue"
           data-testid="anchor"
           href="test"
         >
@@ -463,7 +463,7 @@ exports[`ProductRow renders properly without heart 1`] = `
           </ForwardRef(Text)>
           <ForwardRef(Link)>
             <a
-              className="link brand-blue"
+              className="link basic-blue"
               data-testid="anchor"
             >
               №

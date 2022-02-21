@@ -30,7 +30,7 @@ exports[`<ItemImage /> should render badges 1`] = `
     >
       <ForwardRef(Link)>
         <a
-          className="link brand-blue"
+          className="link basic-blue"
           data-testid="anchor"
         >
           <img
@@ -117,7 +117,7 @@ exports[`<ItemImage /> should render fake divs 1`] = `
     >
       <ForwardRef(Link)>
         <a
-          className="link brand-blue"
+          className="link basic-blue"
           data-testid="anchor"
         >
           <div
@@ -178,7 +178,7 @@ exports[`<ItemImage /> should render wish 1`] = `
     >
       <ForwardRef(Link)>
         <a
-          className="link brand-blue"
+          className="link basic-blue"
           data-testid="anchor"
         >
           <img
@@ -208,7 +208,7 @@ exports[`<ItemImage /> should render wish 2`] = `
     >
       <ForwardRef(Link)>
         <a
-          className="link brand-blue"
+          className="link basic-blue"
           data-testid="anchor"
         >
           <img
@@ -353,7 +353,7 @@ exports[`<ItemImage /> should render with withBlur prop 1`] = `
     >
       <ForwardRef(Link)>
         <a
-          className="link brand-blue"
+          className="link basic-blue"
           data-testid="anchor"
         >
           <div
@@ -381,7 +381,7 @@ exports[`<ItemImage /> should render without props 1`] = `
     >
       <ForwardRef(Link)>
         <a
-          className="link brand-blue"
+          className="link basic-blue"
           data-testid="anchor"
         >
           <img
