@@ -125,7 +125,7 @@ exports[`SearchBar should renders properly with all props 1`] = `
       >
         <a
           aria-label="Очистить"
-          className="link clear-icon brand-blue"
+          className="link clear-icon basic-blue"
           data-testid="search-bar:clear-icon"
           onClick={[Function]}
           role="button"

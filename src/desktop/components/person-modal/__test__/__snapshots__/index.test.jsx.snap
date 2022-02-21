@@ -186,7 +186,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
                                     href="/test"
                                   >
                                     <a
-                                      className="link brand-blue"
+                                      className="link basic-blue"
                                       data-testid="anchor"
                                       href="/test"
                                     >
@@ -391,7 +391,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
                       pseudo={false}
                     >
                       <a
-                        className="link clean-button brand-blue"
+                        className="link clean-button basic-blue"
                         data-testid="anchor"
                         onClick={[MockFunction]}
                       >
@@ -614,7 +614,7 @@ exports[`<PersonModal /> should renders properly with minimal props 1`] = `
                       pseudo={false}
                     >
                       <a
-                        className="link clean-button brand-blue"
+                        className="link clean-button basic-blue"
                         data-testid="anchor"
                       >
                         Закрыть

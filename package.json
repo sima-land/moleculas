@@ -25,7 +25,7 @@
     "prettier:check": "prettier --check \"./src/**/*.{js,jsx,ts,tsx,css,scss}\" --loglevel error"
   },
   "dependencies": {
-    "@sima-land/ui-nucleons": "^43.0.0",
+    "@sima-land/ui-nucleons": "^43.0.1",
     "@sima-land/ui-quarks": "^2.2.0",
     "classnames": "^2.3.1",
     "date-fns": "^2.26.0",

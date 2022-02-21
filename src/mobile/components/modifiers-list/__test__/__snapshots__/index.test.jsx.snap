@@ -53,7 +53,7 @@ exports[`<ModifiersList /> should render correct with sizesTableUrl 1`] = `
         href="test.ru/123"
       >
         <a
-          className="link sizes-table-link brand-blue"
+          className="link sizes-table-link basic-blue"
           data-testid="anchor"
           href="test.ru/123"
         >

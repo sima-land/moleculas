@@ -15,7 +15,7 @@ exports[`GarlandCalculatorButton should render component 1`] = `
         Сколько метров гирлянды покупать? Поможем рассчитать оптимальную длину
       </div>
       <a
-        class="link brand-blue"
+        class="link basic-blue"
         data-testid="anchor"
         role="button"
         tabindex="0"
