@@ -62,7 +62,7 @@ export const ModifierItem = ({
         />
       )}
       {Boolean(additionalText) && (
-        <Text color='gray38' children={additionalText} size={12} lineHeight={16} />
+        <Text color='basic-gray38' children={additionalText} size={12} lineHeight={16} />
       )}
     </div>
     <div className={cx('icon-wrapper')}>

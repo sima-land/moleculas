@@ -37,16 +37,16 @@
     border: 0;
     padding: 0;
     color: #fff;
-    background: colors.$brand-blue;
+    background: colors.$basic-blue;
   }
   .pause:not(:hover) {
-    background: rgba(colors.$brand-blue, 0.4);
+    background: rgba(colors.$basic-blue, 0.4);
   }
   .turn {
     width: 32px;
     height: 32px;
-    border: 2px solid colors.$gray24;
-    color: colors.$gray24;
+    border: 2px solid colors.$basic-gray24;
+    color: colors.$basic-gray24;
     background: transparent;
     &:disabled {
       opacity: 0;

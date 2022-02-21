@@ -133,11 +133,11 @@ export const CommunicateLink = ({
 }) => (
   <a href={href} className={cx('item', InnerBorder.top)}>
     <Box flex='grow'>
-      <Text size={16} lineHeight={24} color='gray87' weight={600}>
+      <Text size={16} lineHeight={24} color='basic-gray87' weight={600}>
         {primaryText}
       </Text>
       <Box marginTop={1}>
-        <Text size={14} lineHeight={20} color='gray38'>
+        <Text size={14} lineHeight={20} color='basic-gray38'>
           {secondaryText}
         </Text>
       </Box>

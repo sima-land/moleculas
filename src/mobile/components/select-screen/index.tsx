@@ -65,7 +65,7 @@ export const SelectScreen = ({
           return (
             <SelectScreenOption key={index} onClick={() => onItemClick && onItemClick(item)}>
               {displayItem(item, { getItemName, isSelected })}
-              {isSelected && <CheckSVG fill={COLORS.get('gray87')} />}
+              {isSelected && <CheckSVG fill={COLORS.get('basic-gray87')} />}
             </SelectScreenOption>
           );
         })}
@@ -110,5 +110,5 @@ export const SelectScreenOption = ({
  * @return Опция в текстовом виде.
  */
 const displayOption = (item: any, { getItemName }: any) => (
-  <Text size={16} lineHeight={24} color='gray87' children={getItemName(item)} />
+  <Text size={16} lineHeight={24} color='basic-gray87' children={getItemName(item)} />
 );

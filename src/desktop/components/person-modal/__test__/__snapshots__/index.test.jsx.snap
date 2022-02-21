@@ -38,379 +38,374 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
     onClose={[MockFunction]}
     size="s"
   >
-    <ModalInner
-      onClose={[MockFunction]}
-      size="s"
+    <div
+      className="overlay"
+      data-testid="modal:overlay"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+      style={
+        Object {
+          "zIndex": 100,
+        }
+      }
     >
       <div
-        className="overlay"
-        data-testid="modal:overlay"
-        onMouseDown={[Function]}
-        onMouseUp={[Function]}
+        className="modal size-s shadow-z4"
+        data-testid="modal"
         style={
           Object {
-            "zIndex": 100,
+            "--footer-height": "72px",
+            "--header-height": "0px",
+            "--modal-height": undefined,
           }
         }
       >
-        <div
-          className="modal size-s shadow-z4"
-          data-testid="modal"
-          style={
-            Object {
-              "--footer-height": "72px",
-              "--header-height": "0px",
-              "--modal-height": undefined,
-            }
-          }
+        <ModalBody
+          key=".0"
         >
-          <ModalBody
-            key=".0"
+          <CustomScrollbar
+            className="body"
+            inFlexBox={true}
+            overflow={
+              Object {
+                "x": "h",
+                "y": "s",
+              }
+            }
           >
-            <CustomScrollbar
-              className="body"
-              inFlexBox={true}
-              overflow={
+            <OverlayScrollbarsComponent
+              className="custom-scrollbar body os-host-flexbox"
+              options={
                 Object {
-                  "x": "h",
-                  "y": "s",
+                  "callbacks": undefined,
+                  "overflowBehavior": Object {
+                    "x": "h",
+                    "y": "s",
+                  },
                 }
               }
             >
-              <OverlayScrollbarsComponent
-                className="custom-scrollbar body os-host-flexbox"
-                options={
-                  Object {
-                    "callbacks": undefined,
-                    "overflowBehavior": Object {
-                      "x": "h",
-                      "y": "s",
-                    },
-                  }
-                }
+              <div
+                className="os-host"
               >
                 <div
-                  className="os-host"
+                  className="os-resize-observer-host"
+                />
+                <div
+                  className="os-padding"
                 >
                   <div
-                    className="os-resize-observer-host"
-                  />
-                  <div
-                    className="os-padding"
+                    className="os-viewport"
                   >
                     <div
-                      className="os-viewport"
+                      className="os-content"
                     >
                       <div
-                        className="os-content"
+                        className="main"
                       >
                         <div
                           className="main"
                         >
-                          <div
-                            className="main"
+                          <Box
+                            marginBottom={6}
                           >
-                            <Box
-                              marginBottom={6}
+                            <div
+                              className="M-b__6"
                             >
-                              <div
-                                className="M-b__6"
+                              <UserAvatar
+                                size={104}
+                                title="Марина Михайловская"
                               >
-                                <UserAvatar
+                                <Avatar
+                                  bgColor="additional-deep-red"
+                                  bgOpacity={0.48}
                                   size={104}
+                                  textColor="basic-white"
                                   title="Марина Михайловская"
                                 >
-                                  <Avatar
-                                    bgColor="additional-deep-red"
-                                    bgOpacity={0.48}
-                                    size={104}
-                                    textColor="white"
-                                    title="Марина Михайловская"
-                                  >
-                                    <div
-                                      className="root size-104 color__white"
-                                      data-testid="avatar"
-                                      style={
-                                        Object {
-                                          "--avatar-color": "#d50000",
-                                          "--avatar-color-opacity": 0.48,
-                                        }
+                                  <div
+                                    className="root size-104 color__basic-white"
+                                    data-testid="avatar"
+                                    style={
+                                      Object {
+                                        "--avatar-color": "#d50000",
+                                        "--avatar-color-opacity": 0.48,
                                       }
+                                    }
+                                  >
+                                    <span
+                                      className="monogram"
                                     >
-                                      <span
-                                        className="monogram"
-                                      >
-                                        ММ
-                                      </span>
-                                    </div>
-                                  </Avatar>
-                                </UserAvatar>
-                              </div>
-                            </Box>
-                            <Box
-                              marginBottom={1}
-                            >
-                              <div
-                                className="M-b__1"
-                              >
-                                <ForwardRef(Text)
-                                  color="gray38"
-                                  size={14}
-                                  weight={400}
-                                >
-                                  <span
-                                    className="size-14 line-height-20 color__gray38 weight-400"
-                                    style={Object {}}
-                                  >
-                                    Менеджер по игрушке
-                                  </span>
-                                </ForwardRef(Text)>
-                              </div>
-                            </Box>
-                            <div
-                              className="name"
-                            >
-                              Марина Михайловская
+                                      ММ
+                                    </span>
+                                  </div>
+                                </Avatar>
+                              </UserAvatar>
                             </div>
-                            <Box
-                              marginTop={2}
+                          </Box>
+                          <Box
+                            marginBottom={1}
+                          >
+                            <div
+                              className="M-b__1"
                             >
-                              <div
-                                className="M-t__2"
+                              <ForwardRef(Text)
+                                color="basic-gray38"
+                                size={14}
+                                weight={400}
                               >
-                                <ForwardRef(Text)
-                                  size={12}
-                                  weight={600}
+                                <span
+                                  className="size-14 line-height-20 color__basic-gray38 weight-400"
+                                  style={Object {}}
                                 >
-                                  <span
-                                    className="size-12 line-height-16 weight-600"
-                                    style={Object {}}
+                                  Менеджер по игрушке
+                                </span>
+                              </ForwardRef(Text)>
+                            </div>
+                          </Box>
+                          <div
+                            className="name"
+                          >
+                            Марина Михайловская
+                          </div>
+                          <Box
+                            marginTop={2}
+                          >
+                            <div
+                              className="M-t__2"
+                            >
+                              <ForwardRef(Text)
+                                size={12}
+                                weight={600}
+                              >
+                                <span
+                                  className="size-12 line-height-16 weight-600"
+                                  style={Object {}}
+                                >
+                                  <ForwardRef(Link)
+                                    href="/test"
                                   >
-                                    <ForwardRef(Link)
+                                    <a
+                                      className="link brand-blue"
+                                      data-testid="anchor"
                                       href="/test"
                                     >
-                                      <a
-                                        className="link brand-blue"
-                                        data-testid="anchor"
-                                        href="/test"
-                                      >
-                                        test
-                                      </a>
-                                    </ForwardRef(Link)>
-                                  </span>
-                                </ForwardRef(Text)>
-                              </div>
-                            </Box>
-                            <div
-                              className="contacts"
+                                      test
+                                    </a>
+                                  </ForwardRef(Link)>
+                                </span>
+                              </ForwardRef(Text)>
+                            </div>
+                          </Box>
+                          <div
+                            className="contacts"
+                          >
+                            <span
+                              className="contacts-item"
                             >
-                              <span
-                                className="contacts-item"
+                              Email: 
+                              <ForwardRef(Link)
+                                color="basic-gray87"
+                                href="mailto:example@email.com"
                               >
-                                Email: 
-                                <ForwardRef(Link)
-                                  color="gray87"
+                                <a
+                                  className="link basic-gray87"
+                                  data-testid="anchor"
                                   href="mailto:example@email.com"
                                 >
-                                  <a
-                                    className="link gray87"
-                                    data-testid="anchor"
-                                    href="mailto:example@email.com"
-                                  >
-                                    example@email.com
-                                  </a>
-                                </ForwardRef(Link)>
-                              </span>
-                              <span
-                                className="contacts-item"
+                                  example@email.com
+                                </a>
+                              </ForwardRef(Link)>
+                            </span>
+                            <span
+                              className="contacts-item"
+                            >
+                              Соц. сети:
+                               
+                              <ForwardRef(Link)
+                                className="inline"
+                                color="basic-gray87"
+                                href="https://example.com"
+                                key="0"
+                                rel="nofollow"
+                                target="_blank"
                               >
-                                Соц. сети:
-                                 
-                                <ForwardRef(Link)
-                                  className="inline"
-                                  color="gray87"
+                                <a
+                                  className="link inline basic-gray87"
+                                  data-testid="anchor"
                                   href="https://example.com"
-                                  key="0"
                                   rel="nofollow"
                                   target="_blank"
                                 >
-                                  <a
-                                    className="link inline gray87"
-                                    data-testid="anchor"
-                                    href="https://example.com"
-                                    rel="nofollow"
-                                    target="_blank"
-                                  >
-                                    vk.com/oks2art
-                                  </a>
-                                </ForwardRef(Link)>
-                                <ForwardRef(Link)
-                                  className="inline"
-                                  color="gray87"
-                                  href="https://example.com"
-                                  key="1"
-                                  rel="nofollow"
-                                  target="_blank"
-                                >
-                                  <a
-                                    className="link inline gray87"
-                                    data-testid="anchor"
-                                    href="https://example.com"
-                                    rel="nofollow"
-                                    target="_blank"
-                                  >
-                                    twitter.com/oks2art
-                                  </a>
-                                </ForwardRef(Link)>
-                                <ForwardRef(Link)
-                                  className="inline"
-                                  color="gray87"
-                                  href="https://example.com"
-                                  key="2"
-                                  rel="nofollow"
-                                  target="_blank"
-                                >
-                                  <a
-                                    className="link inline gray87"
-                                    data-testid="anchor"
-                                    href="https://example.com"
-                                    rel="nofollow"
-                                    target="_blank"
-                                  >
-                                    odnoklassniki.ru/oks2art
-                                  </a>
-                                </ForwardRef(Link)>
-                              </span>
-                              <span
-                                className="contacts-item"
+                                  vk.com/oks2art
+                                </a>
+                              </ForwardRef(Link)>
+                              <ForwardRef(Link)
+                                className="inline"
+                                color="basic-gray87"
+                                href="https://example.com"
+                                key="1"
+                                rel="nofollow"
+                                target="_blank"
                               >
-                                Skype: 
-                                <ForwardRef(Link)
-                                  color="gray87"
+                                <a
+                                  className="link inline basic-gray87"
+                                  data-testid="anchor"
+                                  href="https://example.com"
+                                  rel="nofollow"
+                                  target="_blank"
+                                >
+                                  twitter.com/oks2art
+                                </a>
+                              </ForwardRef(Link)>
+                              <ForwardRef(Link)
+                                className="inline"
+                                color="basic-gray87"
+                                href="https://example.com"
+                                key="2"
+                                rel="nofollow"
+                                target="_blank"
+                              >
+                                <a
+                                  className="link inline basic-gray87"
+                                  data-testid="anchor"
+                                  href="https://example.com"
+                                  rel="nofollow"
+                                  target="_blank"
+                                >
+                                  odnoklassniki.ru/oks2art
+                                </a>
+                              </ForwardRef(Link)>
+                            </span>
+                            <span
+                              className="contacts-item"
+                            >
+                              Skype: 
+                              <ForwardRef(Link)
+                                color="basic-gray87"
+                                href="skype:example@skype.com"
+                              >
+                                <a
+                                  className="link basic-gray87"
+                                  data-testid="anchor"
                                   href="skype:example@skype.com"
                                 >
-                                  <a
-                                    className="link gray87"
-                                    data-testid="anchor"
-                                    href="skype:example@skype.com"
-                                  >
-                                    example@skype.com
-                                  </a>
-                                </ForwardRef(Link)>
-                              </span>
-                              <span
-                                className="contacts-item"
+                                  example@skype.com
+                                </a>
+                              </ForwardRef(Link)>
+                            </span>
+                            <span
+                              className="contacts-item"
+                            >
+                              <ForwardRef(Link)
+                                color="basic-gray87"
+                                href="tel:88000000000;postd=8823"
                               >
-                                <ForwardRef(Link)
-                                  color="gray87"
+                                <a
+                                  className="link basic-gray87"
+                                  data-testid="anchor"
                                   href="tel:88000000000;postd=8823"
                                 >
-                                  <a
-                                    className="link gray87"
-                                    data-testid="anchor"
-                                    href="tel:88000000000;postd=8823"
-                                  >
-                                    88000000000 доб. 8823
-                                  </a>
-                                </ForwardRef(Link)>
-                              </span>
-                              <span
-                                className="contacts-item"
+                                  88000000000 доб. 8823
+                                </a>
+                              </ForwardRef(Link)>
+                            </span>
+                            <span
+                              className="contacts-item"
+                            >
+                              <ForwardRef(Link)
+                                color="basic-gray87"
+                                href="tel:+7900000000"
                               >
-                                <ForwardRef(Link)
-                                  color="gray87"
+                                <a
+                                  className="link basic-gray87"
+                                  data-testid="anchor"
                                   href="tel:+7900000000"
                                 >
-                                  <a
-                                    className="link gray87"
-                                    data-testid="anchor"
-                                    href="tel:+7900000000"
-                                  >
-                                    +7 (900) 000 000
-                                  </a>
-                                </ForwardRef(Link)>
-                              </span>
-                            </div>
+                                  +7 (900) 000 000
+                                </a>
+                              </ForwardRef(Link)>
+                            </span>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div
-                    className="os-scrollbar os-scrollbar-horizontal "
-                  >
-                    <div
-                      className="os-scrollbar-track"
-                    >
-                      <div
-                        className="os-scrollbar-handle"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="os-scrollbar os-scrollbar-vertical"
-                  >
-                    <div
-                      className="os-scrollbar-track"
-                    >
-                      <div
-                        className="os-scrollbar-handle"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="os-scrollbar-corner"
-                  />
                 </div>
-              </OverlayScrollbarsComponent>
-            </CustomScrollbar>
-          </ModalBody>
-          <ModalFooter
-            divided={true}
-            key=".1"
-          >
-            <BottomBar
-              divided={true}
-            >
-              <div
-                className="root divided rounds-md__b"
-                data-testid="bottom-bar"
-                style={
-                  Object {
-                    "height": "72px",
-                  }
-                }
-              >
-                <CleanGroup>
+                <div
+                  className="os-scrollbar os-scrollbar-horizontal "
+                >
                   <div
-                    className="clean-group"
+                    className="os-scrollbar-track"
                   >
-                    <CleanButton
-                      key=".0"
-                      onClick={[MockFunction]}
-                    >
-                      <ForwardRef(Link)
-                        className="clean-button"
-                        onClick={[MockFunction]}
-                        pseudo={false}
-                      >
-                        <a
-                          className="link clean-button brand-blue"
-                          data-testid="anchor"
-                          onClick={[MockFunction]}
-                        >
-                          Закрыть
-                        </a>
-                      </ForwardRef(Link)>
-                    </CleanButton>
+                    <div
+                      className="os-scrollbar-handle"
+                    />
                   </div>
-                </CleanGroup>
+                </div>
+                <div
+                  className="os-scrollbar os-scrollbar-vertical"
+                >
+                  <div
+                    className="os-scrollbar-track"
+                  >
+                    <div
+                      className="os-scrollbar-handle"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="os-scrollbar-corner"
+                />
               </div>
-            </BottomBar>
-          </ModalFooter>
-        </div>
+            </OverlayScrollbarsComponent>
+          </CustomScrollbar>
+        </ModalBody>
+        <ModalFooter
+          divided={true}
+          key=".1"
+        >
+          <BottomBar
+            divided={true}
+          >
+            <div
+              className="root divided rounds-md__b"
+              data-testid="bottom-bar"
+              style={
+                Object {
+                  "height": "72px",
+                }
+              }
+            >
+              <CleanGroup>
+                <div
+                  className="clean-group"
+                >
+                  <CleanButton
+                    key=".0"
+                    onClick={[MockFunction]}
+                  >
+                    <ForwardRef(Link)
+                      className="clean-button"
+                      onClick={[MockFunction]}
+                      pseudo={false}
+                    >
+                      <a
+                        className="link clean-button brand-blue"
+                        data-testid="anchor"
+                        onClick={[MockFunction]}
+                      >
+                        Закрыть
+                      </a>
+                    </ForwardRef(Link)>
+                  </CleanButton>
+                </div>
+              </CleanGroup>
+            </div>
+          </BottomBar>
+        </ModalFooter>
       </div>
-    </ModalInner>
+    </div>
   </Modal>
 </PersonModal>
 `;
@@ -424,219 +419,215 @@ exports[`<PersonModal /> should renders properly with minimal props 1`] = `
   <Modal
     size="s"
   >
-    <ModalInner
-      size="s"
+    <div
+      className="overlay"
+      data-testid="modal:overlay"
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+      style={
+        Object {
+          "zIndex": 100,
+        }
+      }
     >
       <div
-        className="overlay"
-        data-testid="modal:overlay"
-        onMouseDown={[Function]}
-        onMouseUp={[Function]}
+        className="modal size-s shadow-z4"
+        data-testid="modal"
         style={
           Object {
-            "zIndex": 100,
+            "--footer-height": "72px",
+            "--header-height": "0px",
+            "--modal-height": undefined,
           }
         }
       >
-        <div
-          className="modal size-s shadow-z4"
-          data-testid="modal"
-          style={
-            Object {
-              "--footer-height": "72px",
-              "--header-height": "0px",
-              "--modal-height": undefined,
-            }
-          }
+        <ModalBody
+          key=".0"
         >
-          <ModalBody
-            key=".0"
+          <CustomScrollbar
+            className="body"
+            inFlexBox={true}
+            overflow={
+              Object {
+                "x": "h",
+                "y": "s",
+              }
+            }
           >
-            <CustomScrollbar
-              className="body"
-              inFlexBox={true}
-              overflow={
+            <OverlayScrollbarsComponent
+              className="custom-scrollbar body os-host-flexbox"
+              options={
                 Object {
-                  "x": "h",
-                  "y": "s",
+                  "callbacks": undefined,
+                  "overflowBehavior": Object {
+                    "x": "h",
+                    "y": "s",
+                  },
                 }
               }
             >
-              <OverlayScrollbarsComponent
-                className="custom-scrollbar body os-host-flexbox"
-                options={
-                  Object {
-                    "callbacks": undefined,
-                    "overflowBehavior": Object {
-                      "x": "h",
-                      "y": "s",
-                    },
-                  }
-                }
+              <div
+                className="os-host"
               >
                 <div
-                  className="os-host"
+                  className="os-resize-observer-host"
+                />
+                <div
+                  className="os-padding"
                 >
                   <div
-                    className="os-resize-observer-host"
-                  />
-                  <div
-                    className="os-padding"
+                    className="os-viewport"
                   >
                     <div
-                      className="os-viewport"
+                      className="os-content"
                     >
                       <div
-                        className="os-content"
+                        className="main"
                       >
                         <div
                           className="main"
                         >
-                          <div
-                            className="main"
+                          <Box
+                            marginBottom={6}
                           >
-                            <Box
-                              marginBottom={6}
+                            <div
+                              className="M-b__6"
                             >
-                              <div
-                                className="M-b__6"
+                              <UserAvatar
+                                size={104}
+                                title="Марина Михайловская"
                               >
-                                <UserAvatar
+                                <Avatar
+                                  bgColor="additional-deep-red"
+                                  bgOpacity={0.48}
                                   size={104}
+                                  textColor="basic-white"
                                   title="Марина Михайловская"
                                 >
-                                  <Avatar
-                                    bgColor="additional-deep-red"
-                                    bgOpacity={0.48}
-                                    size={104}
-                                    textColor="white"
-                                    title="Марина Михайловская"
-                                  >
-                                    <div
-                                      className="root size-104 color__white"
-                                      data-testid="avatar"
-                                      style={
-                                        Object {
-                                          "--avatar-color": "#d50000",
-                                          "--avatar-color-opacity": 0.48,
-                                        }
+                                  <div
+                                    className="root size-104 color__basic-white"
+                                    data-testid="avatar"
+                                    style={
+                                      Object {
+                                        "--avatar-color": "#d50000",
+                                        "--avatar-color-opacity": 0.48,
                                       }
-                                    >
-                                      <span
-                                        className="monogram"
-                                      >
-                                        ММ
-                                      </span>
-                                    </div>
-                                  </Avatar>
-                                </UserAvatar>
-                              </div>
-                            </Box>
-                            <Box
-                              marginBottom={1}
-                            >
-                              <div
-                                className="M-b__1"
-                              >
-                                <ForwardRef(Text)
-                                  color="gray38"
-                                  size={14}
-                                  weight={400}
-                                >
-                                  <span
-                                    className="size-14 line-height-20 color__gray38 weight-400"
-                                    style={Object {}}
+                                    }
                                   >
-                                    Дворник
-                                  </span>
-                                </ForwardRef(Text)>
-                              </div>
-                            </Box>
-                            <div
-                              className="name"
-                            >
-                              Марина Михайловская
+                                    <span
+                                      className="monogram"
+                                    >
+                                      ММ
+                                    </span>
+                                  </div>
+                                </Avatar>
+                              </UserAvatar>
                             </div>
+                          </Box>
+                          <Box
+                            marginBottom={1}
+                          >
                             <div
-                              className="contacts"
-                            />
+                              className="M-b__1"
+                            >
+                              <ForwardRef(Text)
+                                color="basic-gray38"
+                                size={14}
+                                weight={400}
+                              >
+                                <span
+                                  className="size-14 line-height-20 color__basic-gray38 weight-400"
+                                  style={Object {}}
+                                >
+                                  Дворник
+                                </span>
+                              </ForwardRef(Text)>
+                            </div>
+                          </Box>
+                          <div
+                            className="name"
+                          >
+                            Марина Михайловская
                           </div>
+                          <div
+                            className="contacts"
+                          />
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div
-                    className="os-scrollbar os-scrollbar-horizontal "
-                  >
-                    <div
-                      className="os-scrollbar-track"
-                    >
-                      <div
-                        className="os-scrollbar-handle"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="os-scrollbar os-scrollbar-vertical"
-                  >
-                    <div
-                      className="os-scrollbar-track"
-                    >
-                      <div
-                        className="os-scrollbar-handle"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="os-scrollbar-corner"
-                  />
                 </div>
-              </OverlayScrollbarsComponent>
-            </CustomScrollbar>
-          </ModalBody>
-          <ModalFooter
-            divided={true}
-            key=".1"
-          >
-            <BottomBar
-              divided={true}
-            >
-              <div
-                className="root divided rounds-md__b"
-                data-testid="bottom-bar"
-                style={
-                  Object {
-                    "height": "72px",
-                  }
-                }
-              >
-                <CleanGroup>
+                <div
+                  className="os-scrollbar os-scrollbar-horizontal "
+                >
                   <div
-                    className="clean-group"
+                    className="os-scrollbar-track"
                   >
-                    <CleanButton
-                      key=".0"
-                    >
-                      <ForwardRef(Link)
-                        className="clean-button"
-                        pseudo={false}
-                      >
-                        <a
-                          className="link clean-button brand-blue"
-                          data-testid="anchor"
-                        >
-                          Закрыть
-                        </a>
-                      </ForwardRef(Link)>
-                    </CleanButton>
+                    <div
+                      className="os-scrollbar-handle"
+                    />
                   </div>
-                </CleanGroup>
+                </div>
+                <div
+                  className="os-scrollbar os-scrollbar-vertical"
+                >
+                  <div
+                    className="os-scrollbar-track"
+                  >
+                    <div
+                      className="os-scrollbar-handle"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="os-scrollbar-corner"
+                />
               </div>
-            </BottomBar>
-          </ModalFooter>
-        </div>
+            </OverlayScrollbarsComponent>
+          </CustomScrollbar>
+        </ModalBody>
+        <ModalFooter
+          divided={true}
+          key=".1"
+        >
+          <BottomBar
+            divided={true}
+          >
+            <div
+              className="root divided rounds-md__b"
+              data-testid="bottom-bar"
+              style={
+                Object {
+                  "height": "72px",
+                }
+              }
+            >
+              <CleanGroup>
+                <div
+                  className="clean-group"
+                >
+                  <CleanButton
+                    key=".0"
+                  >
+                    <ForwardRef(Link)
+                      className="clean-button"
+                      pseudo={false}
+                    >
+                      <a
+                        className="link clean-button brand-blue"
+                        data-testid="anchor"
+                      >
+                        Закрыть
+                      </a>
+                    </ForwardRef(Link)>
+                  </CleanButton>
+                </div>
+              </CleanGroup>
+            </div>
+          </BottomBar>
+        </ModalFooter>
       </div>
-    </ModalInner>
+    </div>
   </Modal>
 </PersonModal>
 `;

@@ -103,7 +103,7 @@ export const SearchBar = ({
       <label className={cx('input-wrapper')}>
         {withSearchIcon && (
           <span className={cx('search-icon')}>
-            <SearchSVG fill={COLORS.get('gray38')} aria-hidden />
+            <SearchSVG fill={COLORS.get('basic-gray38')} aria-hidden />
           </span>
         )}
         <div className={cx('input-container')}>
@@ -135,7 +135,7 @@ export const SearchBar = ({
             aria-label='Очистить'
             data-testid='search-bar:clear-icon'
             className={cx('clear-icon')}
-            children={<CrossSVG fill={COLORS.get('gray38')} aria-hidden />}
+            children={<CrossSVG fill={COLORS.get('basic-gray38')} aria-hidden />}
           />
         )}
       </label>
@@ -193,7 +193,7 @@ export const SearchBar = ({
  * @return Элемент.
  */
 const Button = forwardRef<HTMLDivElement | null, ButtonProps>(function Button(
-  { text, icon: Icon, iconColor = 'gray87', onClick },
+  { text, icon: Icon, iconColor = 'basic-gray87', onClick },
   ref,
 ) {
   return (

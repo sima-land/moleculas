@@ -103,7 +103,7 @@ exports[`<ModifierItem /> should render correctly with additionalText and select
       value={745}
     />
     <Memo(ForwardRef(Text))
-      color="gray38"
+      color="basic-gray38"
       lineHeight={16}
       size={12}
     >

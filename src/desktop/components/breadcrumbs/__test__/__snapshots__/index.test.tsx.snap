@@ -179,11 +179,11 @@ exports[`<Breadcrumbs /> should renders correctly 1`] = `
         data-testid="breadcrumb"
       >
         <ForwardRef(Link)
-          color="gray87"
+          color="basic-gray87"
           href="/root_path"
         >
           <a
-            className="link gray87"
+            className="link basic-gray87"
             data-testid="anchor"
             href="/root_path"
           >
@@ -242,11 +242,11 @@ exports[`<Breadcrumbs /> should renders correctly 1`] = `
         data-testid="breadcrumb"
       >
         <ForwardRef(Link)
-          color="gray87"
+          color="basic-gray87"
           href="/first_level_path"
         >
           <a
-            className="link gray87"
+            className="link basic-gray87"
             data-testid="anchor"
             href="/first_level_path"
           >
@@ -350,11 +350,11 @@ exports[`<Breadcrumbs /> should renders correctly 1`] = `
         data-testid="breadcrumb"
       >
         <ForwardRef(Link)
-          color="gray87"
+          color="basic-gray87"
           href="/second_level_path"
         >
           <a
-            className="link gray87"
+            className="link basic-gray87"
             data-testid="anchor"
             href="/second_level_path"
           >
@@ -458,11 +458,11 @@ exports[`<Breadcrumbs /> should renders correctly 1`] = `
         data-testid="breadcrumb"
       >
         <ForwardRef(Link)
-          color="gray87"
+          color="basic-gray87"
           href="/third_level_path"
         >
           <a
-            className="link gray87"
+            className="link basic-gray87"
             data-testid="anchor"
             href="/third_level_path"
           >
@@ -586,11 +586,11 @@ exports[`<Breadcrumbs /> should renders correctly 1`] = `
         data-testid="breadcrumb"
       >
         <ForwardRef(Link)
-          color="gray87"
+          color="basic-gray87"
           href="/first_level_path"
         >
           <a
-            className="link gray87"
+            className="link basic-gray87"
             data-testid="anchor"
             href="/first_level_path"
           >
@@ -694,11 +694,11 @@ exports[`<Breadcrumbs /> should renders correctly 1`] = `
         data-testid="breadcrumb"
       >
         <ForwardRef(Link)
-          color="gray87"
+          color="basic-gray87"
           href="/fifth_level_path"
         >
           <a
-            className="link gray87"
+            className="link basic-gray87"
             data-testid="anchor"
             href="/fifth_level_path"
           >
@@ -802,11 +802,11 @@ exports[`<Breadcrumbs /> should renders correctly 1`] = `
         data-testid="breadcrumb"
       >
         <ForwardRef(Link)
-          color="gray87"
+          color="basic-gray87"
           href="/sixth_level_path"
         >
           <a
-            className="link gray87"
+            className="link basic-gray87"
             data-testid="anchor"
             href="/sixth_level_path"
           >

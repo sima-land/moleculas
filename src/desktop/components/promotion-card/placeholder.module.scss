@@ -2,7 +2,7 @@
 @use './variables';
 
 .part {
-  background: colors.$gray4;
+  background: colors.$basic-gray4;
   border-radius: 4px;
   & + & {
     margin-top: 12px;

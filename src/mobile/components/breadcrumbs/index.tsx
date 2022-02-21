@@ -12,7 +12,7 @@ export interface BreadcrumbsProps {
 export const Breadcrumbs = ({ items }: BreadcrumbsProps) => (
   <nav className={styles.root}>
     {items.map((item, index) => (
-      <Link key={index} href={item.url} color='gray87' className={styles.item}>
+      <Link key={index} href={item.url} color='basic-gray87' className={styles.item}>
         {item.name}
       </Link>
     ))}

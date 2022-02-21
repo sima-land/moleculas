@@ -44,12 +44,12 @@ exports[`Breadcrumbs should renders correctly 1`] = `
   >
     <ForwardRef(Link)
       className="item"
-      color="gray87"
+      color="basic-gray87"
       href="#"
       key="0"
     >
       <a
-        className="link item gray87"
+        className="link item basic-gray87"
         data-testid="anchor"
         href="#"
       >
@@ -58,12 +58,12 @@ exports[`Breadcrumbs should renders correctly 1`] = `
     </ForwardRef(Link)>
     <ForwardRef(Link)
       className="item"
-      color="gray87"
+      color="basic-gray87"
       href="#"
       key="1"
     >
       <a
-        className="link item gray87"
+        className="link item basic-gray87"
         data-testid="anchor"
         href="#"
       >
@@ -72,12 +72,12 @@ exports[`Breadcrumbs should renders correctly 1`] = `
     </ForwardRef(Link)>
     <ForwardRef(Link)
       className="item"
-      color="gray87"
+      color="basic-gray87"
       href="#"
       key="2"
     >
       <a
-        className="link item gray87"
+        className="link item basic-gray87"
         data-testid="anchor"
         href="#"
       >
@@ -86,12 +86,12 @@ exports[`Breadcrumbs should renders correctly 1`] = `
     </ForwardRef(Link)>
     <ForwardRef(Link)
       className="item"
-      color="gray87"
+      color="basic-gray87"
       href="#"
       key="3"
     >
       <a
-        className="link item gray87"
+        className="link item basic-gray87"
         data-testid="anchor"
         href="#"
       >
@@ -100,12 +100,12 @@ exports[`Breadcrumbs should renders correctly 1`] = `
     </ForwardRef(Link)>
     <ForwardRef(Link)
       className="item"
-      color="gray87"
+      color="basic-gray87"
       href="#"
       key="4"
     >
       <a
-        className="link item gray87"
+        className="link item basic-gray87"
         data-testid="anchor"
         href="#"
       >
@@ -114,12 +114,12 @@ exports[`Breadcrumbs should renders correctly 1`] = `
     </ForwardRef(Link)>
     <ForwardRef(Link)
       className="item"
-      color="gray87"
+      color="basic-gray87"
       href="#"
       key="5"
     >
       <a
-        className="link item gray87"
+        className="link item basic-gray87"
         data-testid="anchor"
         href="#"
       >
@@ -128,12 +128,12 @@ exports[`Breadcrumbs should renders correctly 1`] = `
     </ForwardRef(Link)>
     <ForwardRef(Link)
       className="item"
-      color="gray87"
+      color="basic-gray87"
       href="#"
       key="6"
     >
       <a
-        className="link item gray87"
+        className="link item basic-gray87"
         data-testid="anchor"
         href="#"
       >
@@ -142,12 +142,12 @@ exports[`Breadcrumbs should renders correctly 1`] = `
     </ForwardRef(Link)>
     <ForwardRef(Link)
       className="item"
-      color="gray87"
+      color="basic-gray87"
       href="#"
       key="7"
     >
       <a
-        className="link item gray87"
+        className="link item basic-gray87"
         data-testid="anchor"
         href="#"
       >

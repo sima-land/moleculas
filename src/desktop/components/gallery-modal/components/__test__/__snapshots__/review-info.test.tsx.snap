@@ -19,6 +19,7 @@ exports[`ReviewInfo should renders correctly 1`] = `
       >
         <Star
           key="0"
+          size="s"
           type="full"
         >
           <div
@@ -43,6 +44,7 @@ exports[`ReviewInfo should renders correctly 1`] = `
         </Star>
         <Star
           key="1"
+          size="s"
           type="full"
         >
           <div
@@ -67,6 +69,7 @@ exports[`ReviewInfo should renders correctly 1`] = `
         </Star>
         <Star
           key="2"
+          size="s"
           type="empty"
         >
           <div
@@ -91,6 +94,7 @@ exports[`ReviewInfo should renders correctly 1`] = `
         </Star>
         <Star
           key="3"
+          size="s"
           type="empty"
         >
           <div
@@ -115,6 +119,7 @@ exports[`ReviewInfo should renders correctly 1`] = `
         </Star>
         <Star
           key="4"
+          size="s"
           type="empty"
         >
           <div

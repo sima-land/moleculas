@@ -35,7 +35,13 @@ export const ProductActionsAlert = ({ buttons, alertProps, onClose }: ProductAct
     <div className={cx('buttons')}>
       {buttons &&
         buttons.map(({ text, icon, onClick, href }, key) => (
-          <Link href={href} className={cx('button')} key={key} color='gray87' onClick={onClick}>
+          <Link
+            href={href}
+            className={cx('button')}
+            key={key}
+            color='basic-gray87'
+            onClick={onClick}
+          >
             <div className={cx('icon-wrapper')}>{icon}</div>
             {text}
           </Link>

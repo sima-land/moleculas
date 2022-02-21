@@ -1,7 +1,7 @@
 @use 'node_modules/@sima-land/ui-nucleons/colors';
 
 .root {
-  --thumbnail-color: #{colors.$gray12};
+  --thumbnail-color: #{colors.$basic-gray12};
   background: transparent;
   border-radius: 4px;
   border: 0;
@@ -27,10 +27,10 @@
     width: 100%;
   }
   &.iconic:not(.checked):hover {
-    --thumbnail-color: #{colors.$gray54};
+    --thumbnail-color: #{colors.$basic-gray54};
   }
   &.checked {
-    --thumbnail-color: #{colors.$brand-blue};
+    --thumbnail-color: #{colors.$basic-blue};
   }
   .image-overlay {
     height: 100%;

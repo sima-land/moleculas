@@ -85,11 +85,11 @@ export const ProductRow = ({
       )}
     </div>
     <div className={cx('info-column')}>
-      <Link href={itemUrl} className={cx('link')} color='gray87'>
+      <Link href={itemUrl} className={cx('link')} color='basic-gray87'>
         <Text weight={600}>{name}</Text>
       </Link>
       <Box marginTop={2}>
-        <Text color='gray38'>Арт.: {sid}</Text>
+        <Text color='basic-gray38'>Арт.: {sid}</Text>
       </Box>
       {Boolean(initialCount) && (
         <Box marginTop={2}>
@@ -116,7 +116,7 @@ export const ProductRow = ({
       )}
       {Boolean(movedOrderId) && (
         <Box marginTop={2}>
-          <Text element='div' color='gray38'>
+          <Text element='div' color='basic-gray38'>
             Перемещен в заказ
           </Text>
           <Link>№{movedOrderId}</Link>
@@ -124,7 +124,7 @@ export const ProductRow = ({
       )}
       {notInStock && (
         <Box marginTop={2}>
-          <Text element='div' color='gray38'>
+          <Text element='div' color='basic-gray38'>
             Нет на складе
           </Text>
         </Box>

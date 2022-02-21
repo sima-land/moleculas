@@ -4,9 +4,9 @@
   overflow: visible;
   stroke-width: 1;
   stroke: #f5f5f5;
-  fill: colors.$gray87;
+  fill: colors.$basic-gray87;
   &:hover {
-    fill: colors.$gray54;
+    fill: colors.$basic-gray54;
   }
   &.checked {
     fill: colors.$additional-red;

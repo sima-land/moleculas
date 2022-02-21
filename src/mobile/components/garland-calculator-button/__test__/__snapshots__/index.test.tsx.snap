@@ -3,7 +3,7 @@
 exports[`GarlandCalculatorButton should render component 1`] = `
 <div>
   <div
-    class="bg-color__white root shadow-z3 rounds-md__all"
+    class="bg-color__basic-white root shadow-z3 rounds-md__all"
     data-testid="plate"
   >
     <div

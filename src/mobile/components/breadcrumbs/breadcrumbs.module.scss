@@ -17,6 +17,6 @@
   &:not(:last-child)::after {
     content: '/';
     margin-left: 4px;
-    color: colors.$gray87;
+    color: colors.$basic-gray87;
   }
 }

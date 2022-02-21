@@ -31,12 +31,12 @@
   background-color: transparent;
   text-align: left;
   &:active {
-    background-color: colors.$gray4;
+    background-color: colors.$basic-gray4;
   }
   &:disabled {
-    color: colors.$gray24;
+    color: colors.$basic-gray24;
     .icon {
-      fill: colors.$gray24;
+      fill: colors.$basic-gray24;
     }
   }
 }
@@ -60,5 +60,5 @@
 .icon {
   display: block;
   margin-left: 8px;
-  fill: colors.$gray87;
+  fill: colors.$basic-gray87;
 }
