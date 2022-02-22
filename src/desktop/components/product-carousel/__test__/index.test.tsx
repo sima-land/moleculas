@@ -9,6 +9,7 @@ import { HoverCard } from '../hover-card';
 import { Carousel } from '@sima-land/ui-nucleons/carousel';
 import { Parts, ProductInfo } from '../../../../common/components/product-info';
 import { LayerProvider } from '@sima-land/ui-nucleons/helpers/layer';
+import { Stepper } from '@sima-land/ui-nucleons/stepper';
 
 jest.mock('@sima-land/ui-nucleons/hooks/media', () => {
   const original = jest.requireActual('@sima-land/ui-nucleons/hooks/media');
@@ -268,5 +269,41 @@ describe('<ProductCarousel />', () => {
     getAllByTestId('arrow-button').forEach(button => {
       expect(button.style.zIndex).toBe('22');
     });
+  });
+
+  it('should handle removing content when hover card is shown', () => {
+    const TestComponent = ({ withContent }: { withContent?: boolean }) => (
+      <ProductCarousel withHoverCard>
+        {(withContent ? items : []).map((item, index) => (
+          <ProductInfo key={index}>
+            <Parts.Image src={item.imageSrc} href={item.url} />
+
+            <Parts.Prices
+              price={item.price}
+              oldPrice={item.oldPrice}
+              currencyGrapheme={item.currencyGrapheme}
+            />
+
+            <Parts.Title href={item.url}>{item.name}</Parts.Title>
+
+            <Parts.Footer>
+              <Parts.CartControl stepText='По 5 шт'>
+                <Stepper defaultValue={3} size='s' style={{ width: '122px' }} />
+              </Parts.CartControl>
+            </Parts.Footer>
+          </ProductInfo>
+        ))}
+      </ProductCarousel>
+    );
+
+    const { queryAllByTestId, getAllByTestId, rerender } = render(<TestComponent withContent />);
+
+    expect(queryAllByTestId('product-card:hover-card')).toHaveLength(0);
+    fireEvent.mouseEnter(getAllByTestId('product-carousel:item')[0]);
+    expect(queryAllByTestId('product-card:hover-card')).toHaveLength(1);
+
+    expect(() => {
+      rerender(<TestComponent withContent={false} />);
+    }).not.toThrow();
   });
 });
