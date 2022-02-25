@@ -7,7 +7,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
       class="layout mobile "
     >
       <div
-        class="outer invisible-scroll"
+        class="outer"
         data-bsl-ignore="true"
       >
         <div
