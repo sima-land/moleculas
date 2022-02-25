@@ -124,14 +124,6 @@ export const Unavailable = () => (
             }}
           />
 
-          {item.badges && (
-            <Parts.Badges lineLimit={1}>
-              {item.badges.map((badge, badgeIndex) => (
-                <Badge key={badgeIndex} {...badge} onClick={action('Клик: шильдик')} />
-              ))}
-            </Parts.Badges>
-          )}
-
           <Parts.Prices
             price={item.price}
             oldPrice={item.oldPrice}

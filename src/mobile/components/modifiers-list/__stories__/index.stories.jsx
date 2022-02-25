@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { ModifiersList } from '..';
 import classes from './modifiers-list.module.scss';
@@ -46,7 +46,7 @@ export const WithSizeTableURL = () => (
 );
 
 export const WithCustomProps = () => (
-  <Fragment>
+  <>
     <div className={classes.list}>
       <div className={classes.title}>Обертка</div>
       <ModifiersList
@@ -65,11 +65,11 @@ export const WithCustomProps = () => (
         itemsContainerProps={{ className: classes.scrollable }}
       />
     </div>
-  </Fragment>
+  </>
 );
 
 export const ItemClickHandle = () => (
-  <Fragment>
+  <>
     <div className={classes.list}>
       <div className={classes.title}>onItemClick</div>
       <ModifiersList
@@ -79,5 +79,5 @@ export const ItemClickHandle = () => (
         onItemClick={action('onClick')}
       />
     </div>
-  </Fragment>
+  </>
 );
