@@ -142,6 +142,7 @@ export const ProductCarousel = ({
       {/* ВАЖНО: чтобы размонтировать всплывающую карточку строго каждый раз используем массив и key */}
       {withHoverCard &&
         activeItemIndex !== null &&
+        items[activeItemIndex] &&
         [items[activeItemIndex]].map(item => (
           <HoverCard
             key={activeItemIndex}
