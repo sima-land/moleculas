@@ -23,7 +23,7 @@ export const Primary = () => (
   />
 );
 
-Primary.storyName = 'Использование';
+Primary.storyName = 'Простой пример';
 
 export const TextView = () => (
   <Badge
@@ -34,13 +34,6 @@ export const TextView = () => (
 );
 
 TextView.storyName = 'Текст';
-TextView.parameters = {
-  docs: {
-    description: {
-      story: 'Вариант, содержащий только текст',
-    },
-  },
-};
 
 export const IconView = () => (
   <Badge
@@ -56,13 +49,6 @@ export const IconView = () => (
 );
 
 IconView.storyName = 'Иконка';
-IconView.parameters = {
-  docs: {
-    description: {
-      story: 'Вариант, содержащий только конку',
-    },
-  },
-};
 
 export const TimerView = () => (
   <Badge
@@ -73,13 +59,6 @@ export const TimerView = () => (
 );
 
 TimerView.storyName = 'Таймер';
-TimerView.parameters = {
-  docs: {
-    description: {
-      story: 'Вариант, содержащий только таймер',
-    },
-  },
-};
 
 export const TimerTextView = () => (
   <>
@@ -104,13 +83,6 @@ export const TimerTextView = () => (
 );
 
 TimerTextView.storyName = 'Таймер + текст';
-TimerTextView.parameters = {
-  docs: {
-    description: {
-      story: 'Вариант, содержащий таймер и текст',
-    },
-  },
-};
 
 export const OverflowView = () => (
   <div style={{ maxWidth: 240 }}>
@@ -123,23 +95,9 @@ export const OverflowView = () => (
 );
 
 OverflowView.storyName = 'Переполнение';
-OverflowView.parameters = {
-  docs: {
-    description: {
-      story: 'Вариант с ограничением ширины контейнера',
-    },
-  },
-};
 
 export const NoInteractiveView = () => (
   <Badge color='#607d8b' fields={[{ type: 'text', value: 'Уценённый товар' }]} />
 );
 
 NoInteractiveView.storyName = 'Без ссылки и hover';
-NoInteractiveView.parameters = {
-  docs: {
-    description: {
-      story: 'Вариант без ссылки: отключается эффект при наведении',
-    },
-  },
-};

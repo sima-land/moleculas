@@ -66,7 +66,7 @@ exports[`<ItemImage /> should render badges 1`] = `
             link="/percent/"
             title={null}
           >
-            <span
+            <a
               className="root item"
               data-testid="badge"
               definitions={
@@ -88,7 +88,7 @@ exports[`<ItemImage /> should render badges 1`] = `
               <span
                 className="content"
               />
-            </span>
+            </a>
           </Badge>
         </div>
       </BadgeList>
