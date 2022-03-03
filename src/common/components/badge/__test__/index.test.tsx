@@ -1,6 +1,6 @@
 import React from 'react';
-import { mount } from 'enzyme';
-import { Badge } from '..';
+import { render } from '@testing-library/react';
+import { Badge, BadgeProps } from '..';
 import { addDays, addMonths } from 'date-fns';
 
 describe('<Badge />', () => {
@@ -10,7 +10,7 @@ describe('<Badge />', () => {
   });
 
   it('should renders correctly', () => {
-    const variants = [
+    const variants: BadgeProps[] = [
       // text view
       {
         color: '#00b8d4',
@@ -55,9 +55,22 @@ describe('<Badge />', () => {
     ];
 
     variants.forEach(variant => {
-      const wrapper = mount(<Badge {...variant} />);
+      const { container } = render(<Badge {...variant} />);
 
-      expect(wrapper).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
+  });
+
+  it('should handle "rel" prop', () => {
+    const { getByRole } = render(
+      <Badge
+        href='https://www.ya.ru'
+        rel='nofollow'
+        color='#f00'
+        fields={[{ type: 'text', value: 'Some text' }]}
+      />,
+    );
+
+    expect(getByRole('link').getAttribute('rel')).toBe('nofollow');
   });
 });

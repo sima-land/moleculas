@@ -5,7 +5,7 @@ exports[`<BadgeList /> renders correctly 1`] = `
   <div
     class="root test"
   >
-    <span
+    <a
       class="root item"
       data-testid="badge"
       style="--badge-color: #b52ea8;"
@@ -15,8 +15,8 @@ exports[`<BadgeList /> renders correctly 1`] = `
       >
         -56%
       </span>
-    </span>
-    <span
+    </a>
+    <a
       class="root item"
       data-testid="badge"
       style="--badge-color: #ff7200;"
@@ -26,8 +26,8 @@ exports[`<BadgeList /> renders correctly 1`] = `
       >
         3 по цене 2
       </span>
-    </span>
-    <span
+    </a>
+    <a
       class="root item"
       data-testid="badge"
       style="--badge-color: #2962ff;"
@@ -37,8 +37,8 @@ exports[`<BadgeList /> renders correctly 1`] = `
       >
         Товар месяца
       </span>
-    </span>
-    <span
+    </a>
+    <a
       class="root item"
       data-testid="badge"
       style="--badge-color: #00b8d4;"
@@ -48,7 +48,7 @@ exports[`<BadgeList /> renders correctly 1`] = `
       >
         Акция
       </span>
-    </span>
+    </a>
   </div>
 </div>
 `;

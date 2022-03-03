@@ -8,15 +8,12 @@ export interface BadgeField {
   value: string;
 }
 
-export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
+export interface BadgeProps extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'color'> {
   /** Основной цвет, используется как цвет обводки, иконок и текста. */
   color?: string;
 
   /** Содержимое шильдика. */
   fields: Array<BadgeField>;
-
-  /** Ссылка, переход по которой будет произведён по нажатию на шильдик. */
-  href?: string;
 
   /** Идентификатор для систем автоматизированного тестирования. */
   'data-testid'?: string;
@@ -41,11 +38,10 @@ export const Badge = ({
   'data-testid': testId = 'badge',
   ...restProps
 }: BadgeProps) => {
-  const Element = href ? 'a' : 'span';
   const iconOnly = fields.length === 1 && fields[0].type === 'svg-url';
 
   return (
-    <Element
+    <a
       {...restProps}
       data-testid={testId}
       href={href}

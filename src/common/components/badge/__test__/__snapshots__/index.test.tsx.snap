@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Badge /> should renders correctly 1`] = `
+<div>
+  <a
+    class="root interactive"
+    data-testid="badge"
+    href="https://sima-land.ru"
+    style="--badge-color: #00b8d4;"
+  >
+    <span
+      class="content"
+    >
+      Система скидок
+    </span>
+  </a>
+</div>
+`;
+
+exports[`<Badge /> should renders correctly 2`] = `
+<div>
+  <a
+    class="root icon-only interactive"
+    data-testid="badge"
+    href="https://sima-land.ru"
+    style="--badge-color: #ff7200;"
+  >
+    <img
+      class="icon"
+      src="https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg"
+    />
+  </a>
+</div>
+`;
+
+exports[`<Badge /> should renders correctly 3`] = `
+<div>
+  <a
+    class="root interactive"
+    data-testid="badge"
+    href="https://sima-land.ru"
+    style="--badge-color: #b52ea8;"
+  >
+    <span
+      class="content"
+    >
+      07:00:00
+    </span>
+  </a>
+</div>
+`;
+
+exports[`<Badge /> should renders correctly 4`] = `
+<div>
+  <a
+    class="root interactive"
+    data-testid="badge"
+    href="https://sima-land.ru"
+    style="--badge-color: #b52ea8;"
+  >
+    <span
+      class="content"
+    >
+      90:00:00
+       
+       — Специальные цены на музыкальные инструменты
+    </span>
+  </a>
+</div>
+`;
+
+exports[`<Badge /> should renders correctly 5`] = `
+<div>
+  <a
+    class="root"
+    data-testid="badge"
+    style="--badge-color: #607d8b;"
+  >
+    <span
+      class="content"
+    >
+      Уценённый товар
+    </span>
+  </a>
+</div>
+`;
