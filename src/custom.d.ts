@@ -15,3 +15,12 @@ declare module '*.svg' {
   const content: React.FC<React.SVGProps<SVGSVGElement>>;
   export default content;
 }
+
+// изображения
+declare module '*.jpg' {
+  export default string;
+}
+
+declare module '*.png' {
+  export default string;
+}
