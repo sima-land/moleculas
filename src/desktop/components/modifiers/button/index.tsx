@@ -1,21 +1,23 @@
-import React, { forwardRef } from 'react';
+import React, { CSSProperties, forwardRef } from 'react';
 import { isNumber } from 'lodash';
 import classes from './modifier-button.module.scss';
 import classnames from 'classnames/bind';
-import { MODIFIERS_TYPES as TYPES } from '../../../../common/constants';
+import { ModifierType } from '../../../../common/types';
+import { MODIFIER_TYPE as TYPE } from '../../../../common/constants';
 
 export interface Modifier {
   count?: number;
   content: string;
   color?: string;
   image?: string;
-  type?: 'text' | 'image';
+  type?: ModifierType;
   isMarkdown?: boolean;
   selected?: boolean;
 }
 
 export interface ModifierButtonProps extends Modifier {
   className?: string;
+  style?: CSSProperties;
   onClick?: React.MouseEventHandler<HTMLDivElement>;
   squared?: boolean;
   'data-testid'?: string;
@@ -23,12 +25,10 @@ export interface ModifierButtonProps extends Modifier {
 
 const cx = classnames.bind(classes);
 
-const typesList = Object.values(TYPES);
-
 /**
  * Компонент модификатора.
  */
-export const ModifierButton = forwardRef<HTMLDivElement | null, ModifierButtonProps>(
+export const ModifierButton = forwardRef<HTMLDivElement, ModifierButtonProps>(
   function ModifierButton(
     {
       count = null,
@@ -36,23 +36,23 @@ export const ModifierButton = forwardRef<HTMLDivElement | null, ModifierButtonPr
       selected,
       color,
       image,
-      type: typeProp = 'text',
+      type = 'text',
       className,
+      style,
       onClick,
       isMarkdown: hasMarkdown,
-      squared = [TYPES.color, TYPES.image].includes(typeProp),
+      squared = [TYPE.color, TYPE.image].includes(type),
       'data-testid': testId = 'modifier-button',
     },
     ref,
   ) {
-    const type = typesList.includes(typeProp) ? typeProp : 'text';
     const hasCount = isNumber(count) && count >= 0;
 
     return (
       <div
         ref={ref}
         className={cx('modifier-button', squared && 'squared', selected && 'selected', className)}
-        style={color ? { background: color } : undefined}
+        style={color ? { ...style, background: color } : style}
         onClick={onClick}
         data-testid={testId}
       >
@@ -68,13 +68,13 @@ export const ModifierButton = forwardRef<HTMLDivElement | null, ModifierButtonPr
         )}
 
         {/* content */}
-        {[TYPES.text, TYPES.image].includes(type) && (
+        {[TYPE.text, TYPE.image].includes(type) && (
           <div className={cx('content')}>
-            {type === TYPES.text && (
+            {type === TYPE.text && (
               <span className={cx('text', !squared && 'guttered')}>{String(content || '')}</span>
             )}
 
-            {type === TYPES.image && <img src={image} alt={content} className={cx('image')} />}
+            {type === TYPE.image && <img src={image} alt={content} className={cx('image')} />}
           </div>
         )}
       </div>

@@ -6,6 +6,8 @@
   max-width: 100%;
   position: relative;
   display: inline-block;
+  font-size: 0;
+  line-height: 0;
   border-radius: 4px;
   min-width: $minSize;
   height: $minSize;
@@ -47,6 +49,8 @@
 }
 
 .text {
+  font-size: 14px;
+  line-height: 20px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;

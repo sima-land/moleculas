@@ -1,15 +1,16 @@
 import React from 'react';
 import classes from './modifier-item.module.scss';
 import classnames from 'classnames/bind';
-import { MODIFIERS_TYPES } from '../../../../common/constants';
 import { Price } from '@sima-land/ui-nucleons/price';
 import { Text } from '@sima-land/ui-nucleons/text';
 import CheckSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/check';
+import { MODIFIER_TYPE } from '../../../../common/constants';
+import { ModifierType } from '../../../../common/types';
 
 export interface ModifierItemProps {
   name: string;
   selected?: boolean;
-  type?: 'text' | 'image' | 'color';
+  type?: ModifierType;
   color?: string;
   image?: string;
   price: number;
@@ -46,10 +47,10 @@ export const ModifierItem = ({
   onClick,
 }: ModifierItemProps) => (
   <div onClick={onClick} className={cx('wrapper', selected && 'selected')}>
-    {Boolean(type === MODIFIERS_TYPES.image && image) && (
+    {Boolean(type === MODIFIER_TYPE.image && image) && (
       <img className={cx('adornment')} src={image} alt={name} />
     )}
-    {Boolean(type === MODIFIERS_TYPES.color && color) && (
+    {Boolean(type === MODIFIER_TYPE.color && color) && (
       <div className={cx('adornment', 'color')} style={{ backgroundColor: color }} />
     )}
     <div className={cx('info')}>
