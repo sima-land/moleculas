@@ -5,7 +5,7 @@ import classes from './modifiers-list.module.scss';
 import items from './items';
 
 export default {
-  title: 'mobile/Modifiers/ModifiersList',
+  title: 'mobile/ModifiersList',
   component: ModifiersList,
   parameters: {
     layout: 'padded',
