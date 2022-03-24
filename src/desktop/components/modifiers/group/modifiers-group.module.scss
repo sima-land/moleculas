@@ -1,43 +1,31 @@
 @use 'node_modules/@sima-land/ui-nucleons/colors';
-@import '../modifiers';
+@use '../modifiers';
 
-.modifiers-group {
+.root {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  margin: -$gutter;
+  flex-direction: row;
+  margin: -#{modifiers.$gutter};
+  font-size: 0;
   overflow: hidden;
-  &.height-limited {
-    max-height: $groupMaxHeight;
+  &:not(.opened) {
+    max-height: modifiers.$groupMaxHeight;
   }
 }
 
-.modifiers-title {
-  font-size: 14px;
-  font-weight: normal;
-  margin: 0 0 16px;
+.item {
+  height: modifiers.$minSize;
+  margin: modifiers.$gutter;
+  max-width: 100%;
+  &.hidden {
+    display: none;
+  }
+  &.invisible {
+    opacity: 0;
+  }
 }
 
-.modifiers-link {
-  display: inline-block;
-  margin: 16px 0;
-}
-
-.guttered {
-  margin: $gutter;
-}
-
-.show-all-button {
-  width: $minSize;
+.opener {
   color: colors.$basic-blue;
-}
-
-.not-display {
-  display: none;
-}
-
-.invisible {
-  opacity: 0;
-  height: 0;
-  margin-top: 0;
-  margin-bottom: 0;
 }
