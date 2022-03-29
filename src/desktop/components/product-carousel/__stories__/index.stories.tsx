@@ -103,6 +103,8 @@ export const Primary = () => {
   );
 };
 
+Primary.storyName = 'Простой пример';
+
 export const Unavailable = () => {
   const [wished, toggleWish] = useState<Record<number, boolean>>({});
 
@@ -166,6 +168,8 @@ export const Unavailable = () => {
   );
 };
 
+Unavailable.storyName = 'Нет в наличии';
+
 export const Adult = () => (
   <DemoBlock>
     <ProductCarousel withHoverCard>
@@ -204,6 +208,8 @@ export const Adult = () => (
     </ProductCarousel>
   </DemoBlock>
 );
+
+Adult.storyName = 'Товары для взрослых';
 
 export const DeferredData = () => {
   const [wished, toggleWish] = useState<Record<number, boolean>>({});
@@ -276,3 +282,65 @@ export const DeferredData = () => {
     </DemoBlock>
   );
 };
+
+DeferredData.storyName = 'Тест: загрузка после mount';
+
+export const FewItems = () => (
+  <DemoBlock>
+    <ProductCarousel withHoverCard>
+      {items.slice(0, 4).map((item, index) => (
+        <ProductInfo key={index}>
+          <Parts.Image
+            src={item.imageSrc}
+            href={item.url}
+            onClick={e => {
+              e.preventDefault();
+              action('Клик: ссылка на товар (изображение)')();
+            }}
+          >
+            <Parts.ImageButton
+              icon={NotFavSVG}
+              hint='Добавить в избранное'
+              data-testid='favorite-button'
+            />
+          </Parts.Image>
+
+          {item.badges && (
+            <Parts.Badges lineLimit={1}>
+              {item.badges.map((badge, badgeIndex) => (
+                <Badge key={badgeIndex} {...badge} onClick={action('Клик: шильдик')} />
+              ))}
+            </Parts.Badges>
+          )}
+
+          <Parts.Prices
+            price={item.price}
+            oldPrice={item.oldPrice}
+            currencyGrapheme={item.currencyGrapheme}
+          />
+
+          <Parts.Title
+            href={item.url}
+            onClick={e => {
+              e.preventDefault();
+              action('Клик: ссылка на товар')();
+            }}
+          >
+            {item.name}
+          </Parts.Title>
+
+          <Parts.Footer>
+            <Parts.CartControl
+              stepText='По 5 шт'
+              markupText='Комплектация + 50 ₽ при покупке до 20 шт'
+            >
+              <Stepper defaultValue={3} size='s' style={{ width: '122px' }} />
+            </Parts.CartControl>
+          </Parts.Footer>
+        </ProductInfo>
+      ))}
+    </ProductCarousel>
+  </DemoBlock>
+);
+
+FewItems.storyName = 'Мало товаров для прокрутки';
