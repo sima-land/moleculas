@@ -413,42 +413,6 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
           </div>
         </div>
       </div>
-      <button
-        class="arrow-button size-s control backward"
-        data-testid="arrow-button"
-        style="z-index: 2; top: 0px;"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          fill="currentColor"
-          height="16"
-          viewBox="0 0 16 16"
-          width="16"
-        >
-          <path
-            d="M7.253 4.659a1 1 0 00-1.506-1.317l-3.5 4a1 1 0 000 1.317l3.5 4a1 1 0 101.506-1.318L5.203 9H13a1 1 0 100-2H5.204l2.049-2.341z"
-          />
-        </svg>
-      </button>
-      <button
-        class="arrow-button size-s control forward"
-        data-testid="arrow-button"
-        style="z-index: 2; top: 0px;"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          fill="currentColor"
-          height="16"
-          viewBox="0 0 16 16"
-          width="16"
-        >
-          <path
-            d="M8.747 4.659a1 1 0 111.506-1.317l3.5 4a1 1 0 010 1.317l-3.5 4a1 1 0 11-1.506-1.318L10.797 9H3a1 1 0 110-2h7.796L8.747 4.659z"
-          />
-        </svg>
-      </button>
     </div>
   </div>
 </div>
@@ -513,42 +477,6 @@ exports[`<ProductCarousel /> should renders correctly with only one item 1`] = `
           </div>
         </div>
       </div>
-      <button
-        class="arrow-button size-s control backward"
-        data-testid="arrow-button"
-        style="z-index: 2; top: 0px;"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          fill="currentColor"
-          height="16"
-          viewBox="0 0 16 16"
-          width="16"
-        >
-          <path
-            d="M7.253 4.659a1 1 0 00-1.506-1.317l-3.5 4a1 1 0 000 1.317l3.5 4a1 1 0 101.506-1.318L5.203 9H13a1 1 0 100-2H5.204l2.049-2.341z"
-          />
-        </svg>
-      </button>
-      <button
-        class="arrow-button size-s control forward"
-        data-testid="arrow-button"
-        style="z-index: 2; top: 0px;"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          fill="currentColor"
-          height="16"
-          viewBox="0 0 16 16"
-          width="16"
-        >
-          <path
-            d="M8.747 4.659a1 1 0 111.506-1.317l3.5 4a1 1 0 010 1.317l-3.5 4a1 1 0 11-1.506-1.318L10.797 9H3a1 1 0 110-2h7.796L8.747 4.659z"
-          />
-        </svg>
-      </button>
     </div>
   </div>
 </div>
@@ -767,7 +695,6 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
       onChangeTargetIndex={[Function]}
       renderItem={[Function]}
       step={3}
-      withControls={true}
     >
       <div
         className="carousel-wrapper"
@@ -2077,94 +2004,6 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
             </div>
           </div>
         </Draggable>
-        <ArrowButton
-          className="control backward"
-          direction="left"
-          disabled={false}
-          onClick={[Function]}
-          size="s"
-          style={
-            Object {
-              "top": "0px",
-              "zIndex": 2,
-            }
-          }
-        >
-          <button
-            className="arrow-button size-s control backward"
-            data-testid="arrow-button"
-            disabled={false}
-            onClick={[Function]}
-            style={
-              Object {
-                "top": "0px",
-                "zIndex": 2,
-              }
-            }
-            type="button"
-          >
-            <ForwardRef(ArrowLeftSVG)
-              aria-hidden={true}
-              fill="currentColor"
-            >
-              <svg
-                aria-hidden={true}
-                fill="currentColor"
-                height={16}
-                viewBox="0 0 16 16"
-                width={16}
-              >
-                <path
-                  d="M7.253 4.659a1 1 0 00-1.506-1.317l-3.5 4a1 1 0 000 1.317l3.5 4a1 1 0 101.506-1.318L5.203 9H13a1 1 0 100-2H5.204l2.049-2.341z"
-                />
-              </svg>
-            </ForwardRef(ArrowLeftSVG)>
-          </button>
-        </ArrowButton>
-        <ArrowButton
-          className="control forward"
-          direction="right"
-          disabled={false}
-          onClick={[Function]}
-          size="s"
-          style={
-            Object {
-              "top": "0px",
-              "zIndex": 2,
-            }
-          }
-        >
-          <button
-            className="arrow-button size-s control forward"
-            data-testid="arrow-button"
-            disabled={false}
-            onClick={[Function]}
-            style={
-              Object {
-                "top": "0px",
-                "zIndex": 2,
-              }
-            }
-            type="button"
-          >
-            <ForwardRef(ArrowRightSVG)
-              aria-hidden={true}
-              fill="currentColor"
-            >
-              <svg
-                aria-hidden={true}
-                fill="currentColor"
-                height={16}
-                viewBox="0 0 16 16"
-                width={16}
-              >
-                <path
-                  d="M8.747 4.659a1 1 0 111.506-1.317l3.5 4a1 1 0 010 1.317l-3.5 4a1 1 0 11-1.506-1.318L10.797 9H3a1 1 0 110-2h7.796L8.747 4.659z"
-                />
-              </svg>
-            </ForwardRef(ArrowRightSVG)>
-          </button>
-        </ArrowButton>
       </div>
     </Carousel>
   </div>
@@ -2378,7 +2217,6 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
       onChangeTargetIndex={[Function]}
       renderItem={[Function]}
       step={3}
-      withControls={true}
     >
       <div
         className="carousel-wrapper"
@@ -3688,108 +3526,6 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
             </div>
           </div>
         </Draggable>
-        <ArrowButton
-          className="control backward"
-          direction="left"
-          disabled={false}
-          onClick={[Function]}
-          size="l"
-          style={
-            Object {
-              "top": "0px",
-              "zIndex": 2,
-            }
-          }
-        >
-          <button
-            className="arrow-button size-l control backward"
-            data-testid="arrow-button"
-            disabled={false}
-            onClick={[Function]}
-            style={
-              Object {
-                "top": "0px",
-                "zIndex": 2,
-              }
-            }
-            type="button"
-          >
-            <ForwardRef(ArrowLeftSVG)
-              aria-hidden={true}
-              fill="currentColor"
-            >
-              <svg
-                aria-hidden={true}
-                fill="currentColor"
-                height={24}
-                viewBox="0 0 24 24"
-                width={24}
-              >
-                <path
-                  clipRule="evenodd"
-                  d="M11.707 3.293a1 1 0 010 1.414L4.414 12l7.293 7.293a1 1 0 01-1.414 1.414l-8-8a1 1 0 010-1.414l8-8a1 1 0 011.414 0z"
-                  fillRule="evenodd"
-                />
-                <path
-                  clipRule="evenodd"
-                  d="M3 12a1 1 0 011-1h17a1 1 0 110 2H4a1 1 0 01-1-1z"
-                  fillRule="evenodd"
-                />
-              </svg>
-            </ForwardRef(ArrowLeftSVG)>
-          </button>
-        </ArrowButton>
-        <ArrowButton
-          className="control forward"
-          direction="right"
-          disabled={false}
-          onClick={[Function]}
-          size="l"
-          style={
-            Object {
-              "top": "0px",
-              "zIndex": 2,
-            }
-          }
-        >
-          <button
-            className="arrow-button size-l control forward"
-            data-testid="arrow-button"
-            disabled={false}
-            onClick={[Function]}
-            style={
-              Object {
-                "top": "0px",
-                "zIndex": 2,
-              }
-            }
-            type="button"
-          >
-            <ForwardRef(ArrowRightSVG)
-              aria-hidden={true}
-              fill="currentColor"
-            >
-              <svg
-                aria-hidden={true}
-                fill="currentColor"
-                height={24}
-                viewBox="0 0 24 24"
-                width={24}
-              >
-                <path
-                  clipRule="evenodd"
-                  d="M11.253 3.336a1 1 0 011.411-.083l9 8a1 1 0 010 1.494l-9 8a1 1 0 01-1.328-1.494L19.495 12l-8.16-7.253a1 1 0 01-.082-1.411z"
-                  fillRule="evenodd"
-                />
-                <path
-                  clipRule="evenodd"
-                  d="M2 12a1 1 0 011-1h17a1 1 0 110 2H3a1 1 0 01-1-1z"
-                  fillRule="evenodd"
-                />
-              </svg>
-            </ForwardRef(ArrowRightSVG)>
-          </button>
-        </ArrowButton>
       </div>
     </Carousel>
   </div>

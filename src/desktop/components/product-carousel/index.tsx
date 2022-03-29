@@ -96,7 +96,7 @@ export const ProductCarousel = ({
           // докидываем индекс чтобы позже брать актуальные данные из списка по нему
           items={items.map((item, index) => [item, index])}
           {...(itemWidth !== null && {
-            withControls: true,
+            withControls: undefined, // автоматически скрываем стрелки если все товары влезли (по дизайн-гайдам)
             controlProps: {
               size: needBigArrows ? 'l' : 's',
               style: {

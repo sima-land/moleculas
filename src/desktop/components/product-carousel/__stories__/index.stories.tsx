@@ -42,7 +42,7 @@ export const Primary = () => {
   return (
     <DemoBlock>
       <ProductCarousel withHoverCard>
-        {items.map((item, index) => (
+        {items.slice(0, 6).map((item, index) => (
           <ProductInfo key={index}>
             <Parts.Image
               src={item.imageSrc}

@@ -265,6 +265,22 @@ describe('<ProductCarousel />', () => {
 
     fireEvent.mouseEnter(getAllByTestId('product-carousel:item')[0]);
 
+    const carouselItems = getAllByTestId('product-carousel:item');
+    jest.spyOn(carouselItems[carouselItems.length - 1], 'getBoundingClientRect').mockReturnValue({
+      top: 0,
+      left: 0,
+      bottom: 0,
+      right: 500,
+      x: 0,
+      y: 0,
+      width: 500,
+      height: 0,
+      toJSON() {
+        return '';
+      },
+    });
+    fireEvent.resize(window);
+
     expect(getByTestId('product-card:hover-card').style.zIndex).toBe('21');
     getAllByTestId('arrow-button').forEach(button => {
       expect(button.style.zIndex).toBe('22');
