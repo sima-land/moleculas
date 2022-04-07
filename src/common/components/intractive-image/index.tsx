@@ -17,17 +17,14 @@ export interface InteractiveImagePointProps extends React.AnchorHTMLAttributes<H
   'data-testid'?: string;
 }
 
-export const InteractiveImage = ({
-  children,
-  'data-testid': testId,
-  className,
-  ...rest
-}: InteractiveImageProps) => (
-  <div className={classNames(styles.root, className)} {...rest} data-testid={testId}>
-    {Children.toArray(children).filter(
-      child => isValidElement(child) && (child.type === Image || child.type === Point),
-    )}
-  </div>
+export const InteractiveImage = forwardRef<HTMLDivElement, InteractiveImageProps>(
+  ({ children, 'data-testid': testId, className, ...rest }, ref) => (
+    <div ref={ref} className={classNames(styles.root, className)} {...rest} data-testid={testId}>
+      {Children.toArray(children).filter(
+        child => isValidElement(child) && (child.type === Image || child.type === Point),
+      )}
+    </div>
+  ),
 );
 
 const Image = forwardRef<HTMLImageElement, InteractiveImageImageProps>(
