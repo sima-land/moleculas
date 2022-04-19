@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
@@ -151,5 +151,13 @@ describe('SearchBar', () => {
       container.querySelector('.search-field').click();
     });
     expect(container.querySelectorAll('.dropdown-container')).toHaveLength(0);
+  });
+
+  it('should handle "inputRef" prop', () => {
+    const ref = createRef();
+
+    mount(<SearchBar inputRef={ref} value='Запрос в поисковой строке' onChange={jest.fn()} />);
+
+    expect(ref.current instanceof HTMLInputElement).toBe(true);
   });
 });
