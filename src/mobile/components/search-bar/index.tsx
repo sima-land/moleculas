@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, forwardRef } from 'react';
+import React, { useState, useRef, useEffect, forwardRef, useImperativeHandle } from 'react';
 import classnames from 'classnames/bind';
 import classes from './search-bar.module.scss';
 import { isFunction, throttle } from 'lodash';
@@ -22,41 +22,49 @@ export interface ButtonProps {
 }
 
 export interface SearchBarProps {
-  inputMode?: 'none' | 'text' | 'decimal' | 'numeric' | 'tel' | 'search' | 'email' | 'url';
+  /** Поисковый Запрос. */
   value?: string;
+
+  /** Вызовется при изменении поискового запроса. */
   onChange: React.ChangeEventHandler<HTMLInputElement>;
+
+  /** Тип клавиатуры. */
+  inputMode?: 'none' | 'text' | 'decimal' | 'numeric' | 'tel' | 'search' | 'email' | 'url';
+
+  /** Подсказка. */
   placeholder?: string;
+
+  /** Вызовется при нажатии на кнопку очистки. */
   onClear?: React.MouseEventHandler;
-  buttonText?: string;
-  onButtonClick?: (...args: any[]) => any;
+
+  /** Кнопки(а) после поля. */
   endButtons?: any[]; // @todo: избавиться от any
+
+  /** Кнопки(а) до поля. */
   startButtons?: any[]; // @todo: избавиться от any
+
+  /** Признак наличия иконки поиска слева. */
   withSearchIcon?: boolean;
+
+  /** Признак авто-фокуса. */
   autoFocus?: boolean;
+
+  /** Описание в поле ввода. */
   description?: string;
+
+  /** Ref для элемента текстового поля. */
+  inputRef?: React.MutableRefObject<HTMLInputElement | null>;
 }
 
 /**
  * Компонент поисковой строки.
- * @param props Свойства компонента.
- * @param props.value Поисковый Запрос.
- * @param props.onChange Вызовется при изменении поискового запроса.
- * @param props.inputMode Тип клавиатуры.
- * @param props.placeholder Подсказка.
- * @param props.onClear Вызовется при нажатии на кнопку очистки.
- * @param props.buttonText Текст кнопки.
- * @param props.onButtonClick Обработчик нажатия на кнопку.
- * @param props.endButtons Кнопки(а) после поля.
- * @param props.startButtons Кнопки(а) до поля.
- * @param props.withSearchIcon Признак наличия иконки поиска слева.
- * @param props.autoFocus Признак автофокуса.
- * @param props.description Описание в поле ввода.
+ * @param props Свойства.
  * @return Элемент.
  */
 export const SearchBar = ({
-  inputMode,
   value,
   onChange,
+  inputMode,
   placeholder = 'Поиск',
   onClear,
   endButtons = [],
@@ -64,6 +72,7 @@ export const SearchBar = ({
   withSearchIcon = true,
   autoFocus = true,
   description,
+  inputRef: inputRefProp,
 }: SearchBarProps) => {
   const [shownDropdown, toggleDropdown] = useState<boolean>(false);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -71,6 +80,11 @@ export const SearchBar = ({
   const dropDownOpenerRef = useRef<HTMLDivElement>(null);
 
   const needHideEndButtons = endButtons.length > 1;
+
+  useImperativeHandle<HTMLDivElement | null, HTMLDivElement | null>(
+    inputRefProp,
+    () => inputRef.current,
+  );
 
   useOutsideClick(dropDownRef, e => {
     !(dropDownOpenerRef.current as HTMLDivElement).contains(e.target as any) &&
