@@ -1,5 +1,5 @@
-import React, { Children, isValidElement, useRef } from 'react';
-import { useViewport } from '../../../desktop/components/product-carousel/utils';
+import React, { Children, isValidElement, useMemo, useRef } from 'react';
+import { useIntersection } from '@sima-land/ui-nucleons/hooks/intersection';
 import { TouchSlider } from '@sima-land/ui-nucleons/touch-slider';
 import { ProductInfo, ProductInfoProps } from '../../../common/components/product-info';
 import styles from './product-slider.module.scss';
@@ -26,15 +26,22 @@ export const ProductSlider = ({ children, onInViewport, onNeedRequest }: Product
   const rootRef = useRef<HTMLDivElement>(null);
 
   // инициируем загрузку данных, когда компонент почти попал в зону видимости
-  useViewport(rootRef, onNeedRequest, {
-    rootMargin: '200px 0px 200px 0px',
-  });
+  const options = useMemo(() => ({ rootMargin: '200px 0px 200px 0px' }), []);
+  useIntersection(
+    rootRef,
+    entry => {
+      entry.isIntersecting && onNeedRequest?.();
+    },
+    options,
+  );
 
   // сообщаем, когда компонент попадет в зону видимости
-  useViewport(rootRef, onInViewport);
+  useIntersection(rootRef, entry => {
+    entry.isIntersecting && onInViewport?.();
+  });
 
   return (
-    <div ref={rootRef}>
+    <div ref={rootRef} data-testid='product-slider:root'>
       <TouchSlider>
         {Children.toArray(children).reduce<React.ReactElement[]>((list, item) => {
           isValidElement(item) &&

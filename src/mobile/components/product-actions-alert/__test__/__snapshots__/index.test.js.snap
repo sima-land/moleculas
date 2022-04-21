@@ -155,18 +155,20 @@ exports[`ProductActionsContent renders properly 1`] = `
         >
           <CleanGroup>
             <div
-              className="clean-group"
+              className="group"
             >
               <CleanButton
                 key=".0"
               >
                 <ForwardRef(Link)
-                  className="clean-button"
-                  pseudo={false}
+                  className="button size-s"
+                  pseudo={true}
                 >
                   <a
-                    className="link clean-button basic-blue"
+                    className="link button size-s basic-blue"
                     data-testid="anchor"
+                    role="button"
+                    tabIndex={0}
                   >
                     Закрыть
                   </a>

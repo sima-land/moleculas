@@ -379,21 +379,24 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
             >
               <CleanGroup>
                 <div
-                  className="clean-group"
+                  className="group"
                 >
                   <CleanButton
                     key=".0"
                     onClick={[MockFunction]}
+                    size="m"
                   >
                     <ForwardRef(Link)
-                      className="clean-button"
+                      className="button size-m"
                       onClick={[MockFunction]}
-                      pseudo={false}
+                      pseudo={true}
                     >
                       <a
-                        className="link clean-button basic-blue"
+                        className="link button size-m basic-blue"
                         data-testid="anchor"
                         onClick={[MockFunction]}
+                        role="button"
+                        tabIndex={0}
                       >
                         Закрыть
                       </a>
@@ -604,18 +607,21 @@ exports[`<PersonModal /> should renders properly with minimal props 1`] = `
             >
               <CleanGroup>
                 <div
-                  className="clean-group"
+                  className="group"
                 >
                   <CleanButton
                     key=".0"
+                    size="m"
                   >
                     <ForwardRef(Link)
-                      className="clean-button"
-                      pseudo={false}
+                      className="button size-m"
+                      pseudo={true}
                     >
                       <a
-                        className="link clean-button basic-blue"
+                        className="link button size-m basic-blue"
                         data-testid="anchor"
+                        role="button"
+                        tabIndex={0}
                       >
                         Закрыть
                       </a>

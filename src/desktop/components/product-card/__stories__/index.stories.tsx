@@ -40,10 +40,10 @@ const data = {
 };
 
 const Bootstrap: React.FC = ({ children }) => (
-  <div style={{ width: '240px', margin: '20px' }}>{children}</div>
+  <div style={{ width: '200px', margin: '20px' }}>{children}</div>
 );
 
-export const Primary = () => {
+export const PrimaryItem = () => {
   const [wished, toggleWish] = useState<boolean>(false);
 
   return (
@@ -117,6 +117,14 @@ export const Primary = () => {
     </Bootstrap>
   );
 };
+
+export const Primary = () => (
+  <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+    {[...Array(10).keys()].map(index => (
+      <PrimaryItem key={index} />
+    ))}
+  </div>
+);
 
 export const NotEnough = () => {
   const [wished, toggleWish] = useState<boolean>(false);

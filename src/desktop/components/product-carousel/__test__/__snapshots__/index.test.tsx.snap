@@ -4,6 +4,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
 <div>
   <div
     class="root"
+    data-testid="product-carousel:root"
   >
     <div
       class="carousel-wrapper"
@@ -422,6 +423,7 @@ exports[`<ProductCarousel /> should renders correctly with only one item 1`] = `
 <div>
   <div
     class="root"
+    data-testid="product-carousel:root"
   >
     <div
       class="carousel-wrapper"
@@ -486,6 +488,7 @@ exports[`<ProductCarousel /> should renders correctly withhout children 1`] = `
 <div>
   <div
     class="root"
+    data-testid="product-carousel:root"
   />
 </div>
 `;
@@ -494,6 +497,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
 <ProductCarousel>
   <div
     className="root"
+    data-testid="product-carousel:root"
   >
     <Carousel
       controlProps={
@@ -2016,6 +2020,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
 >
   <div
     className="root"
+    data-testid="product-carousel:root"
   >
     <Carousel
       controlProps={

@@ -10,6 +10,7 @@ import { Carousel } from '@sima-land/ui-nucleons/carousel';
 import { Parts, ProductInfo } from '../../../../common/components/product-info';
 import { LayerProvider } from '@sima-land/ui-nucleons/helpers/layer';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
+import { IntersectionMock } from '@sima-land/ui-nucleons/hooks/intersection/test-utils';
 
 jest.mock('@sima-land/ui-nucleons/hooks/media', () => {
   const original = jest.requireActual('@sima-land/ui-nucleons/hooks/media');
@@ -321,5 +322,81 @@ describe('<ProductCarousel />', () => {
     expect(() => {
       rerender(<TestComponent withContent={false} />);
     }).not.toThrow();
+  });
+});
+
+describe('intersections', () => {
+  const intersectionMock = new IntersectionMock();
+
+  beforeAll(() => {
+    intersectionMock.apply();
+  });
+
+  afterAll(() => {
+    intersectionMock.restore();
+  });
+
+  it('should call "onNeedRequest" prop', () => {
+    const spy = jest.fn();
+
+    const { getByTestId } = render(
+      <ProductCarousel onNeedRequest={spy}>
+        {items.map((item, index) => (
+          <ProductInfo key={index}>
+            <Parts.Image src={item.imageSrc} href={item.url} />
+
+            <Parts.Prices
+              price={item.price}
+              oldPrice={item.oldPrice}
+              currencyGrapheme={item.currencyGrapheme}
+            />
+
+            <Parts.Title href={item.url}>{item.name}</Parts.Title>
+          </ProductInfo>
+        ))}
+      </ProductCarousel>,
+    );
+
+    expect(spy).toBeCalledTimes(0);
+
+    intersectionMock.changeElementState({
+      target: getByTestId('product-carousel:root'),
+      isIntersecting: true,
+      intersectionRatio: 0,
+    });
+
+    expect(spy).toBeCalledTimes(1);
+  });
+
+  it('should call "onInViewport" prop', () => {
+    const spy = jest.fn();
+
+    const { getByTestId } = render(
+      <ProductCarousel onInViewport={spy}>
+        {items.map((item, index) => (
+          <ProductInfo key={index}>
+            <Parts.Image src={item.imageSrc} href={item.url} />
+
+            <Parts.Prices
+              price={item.price}
+              oldPrice={item.oldPrice}
+              currencyGrapheme={item.currencyGrapheme}
+            />
+
+            <Parts.Title href={item.url}>{item.name}</Parts.Title>
+          </ProductInfo>
+        ))}
+      </ProductCarousel>,
+    );
+
+    expect(spy).toBeCalledTimes(0);
+
+    intersectionMock.changeElementState({
+      target: getByTestId('product-carousel:root'),
+      isIntersecting: true,
+      intersectionRatio: 0,
+    });
+
+    expect(spy).toBeCalledTimes(1);
   });
 });

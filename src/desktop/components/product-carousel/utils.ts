@@ -1,39 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import on from '@sima-land/ui-nucleons/helpers/on';
-import { useIdentityRef } from '@sima-land/ui-nucleons/hooks/identity';
-
-/**
- * Вызывает callback когда заданный в ref элемент попал во viewport.
- * @param ref Ref отслеживаемого элемента.
- * @param callback Функция обратного вызова.
- * @param options Опции IntersectionObserver.
- */
-export const useViewport = (
-  ref: React.MutableRefObject<HTMLElement | null>,
-  callback?: () => void,
-  options?: IntersectionObserverInit,
-) => {
-  const callbackRef = useIdentityRef(callback);
-
-  useEffect(() => {
-    const element = ref.current;
-
-    if (element) {
-      const observer = new IntersectionObserver(entries => {
-        const fn = callbackRef.current;
-
-        for (const entry of entries) {
-          entry.target === element && entry.isIntersecting && fn && fn();
-          break;
-        }
-      }, options);
-
-      observer.observe(element);
-
-      return () => observer.disconnect();
-    }
-  }, []);
-};
 
 /**
  * Возвращает объект работы с флагом, который автоматически возвращается в true через заданный промежуток времени.
