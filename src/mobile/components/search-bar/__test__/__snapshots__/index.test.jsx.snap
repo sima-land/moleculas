@@ -35,7 +35,7 @@ exports[`SearchBar should renders properly with all props 1`] = `
   withSearchIcon={false}
 >
   <div
-    className="wrapper"
+    className="root"
   >
     <div
       className="before-field"
@@ -91,6 +91,8 @@ exports[`SearchBar should renders properly with all props 1`] = `
     </div>
     <label
       className="input-wrapper"
+      data-testid="search-bar:input-wrapper"
+      onMouseDown={[Function]}
     >
       <div
         className="input-container"
@@ -116,41 +118,31 @@ exports[`SearchBar should renders properly with all props 1`] = `
           </span>
         </div>
       </div>
-      <ForwardRef(Link)
+      <button
         aria-label="Очистить"
-        className="clear-icon"
+        className="clear-button"
         data-testid="search-bar:clear-icon"
-        onClick={[Function]}
-        pseudo={true}
+        onClick={[MockFunction]}
       >
-        <a
-          aria-label="Очистить"
-          className="link clear-icon basic-blue"
-          data-testid="search-bar:clear-icon"
-          onClick={[Function]}
-          role="button"
-          tabIndex={0}
+        <ForwardRef(CrossSVG)
+          aria-hidden={true}
+          fill="#9e9e9e"
         >
-          <ForwardRef(CrossSVG)
+          <svg
             aria-hidden={true}
             fill="#9e9e9e"
+            height={24}
+            viewBox="0 0 24 24"
+            width={24}
           >
-            <svg
-              aria-hidden={true}
-              fill="#9e9e9e"
-              height={24}
-              viewBox="0 0 24 24"
-              width={24}
-            >
-              <path
-                clipRule="evenodd"
-                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm4.95-6.464a1 1 0 11-1.414 1.414L12 13.414 8.464 16.95a1 1 0 11-1.414-1.414L10.586 12 7.05 8.464A1 1 0 018.464 7.05L12 10.586l3.536-3.536a1 1 0 111.414 1.414L13.414 12l3.536 3.536z"
-                fillRule="evenodd"
-              />
-            </svg>
-          </ForwardRef(CrossSVG)>
-        </a>
-      </ForwardRef(Link)>
+            <path
+              clipRule="evenodd"
+              d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm4.95-6.464a1 1 0 11-1.414 1.414L12 13.414 8.464 16.95a1 1 0 11-1.414-1.414L10.586 12 7.05 8.464A1 1 0 018.464 7.05L12 10.586l3.536-3.536a1 1 0 111.414 1.414L13.414 12l3.536 3.536z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </ForwardRef(CrossSVG)>
+      </button>
     </label>
     <div
       className="after-field wide-screen"
@@ -243,10 +235,12 @@ exports[`SearchBar should renders properly with minimal props 1`] = `
   onChange={[MockFunction]}
 >
   <div
-    className="wrapper"
+    className="root"
   >
     <label
       className="input-wrapper"
+      data-testid="search-bar:input-wrapper"
+      onMouseDown={[Function]}
     >
       <span
         className="search-icon"

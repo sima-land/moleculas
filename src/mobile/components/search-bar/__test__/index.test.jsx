@@ -1,5 +1,6 @@
 import React, { createRef } from 'react';
 import ReactDOM from 'react-dom';
+import { createEvent, fireEvent, render } from '@testing-library/react';
 import { mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 import { SearchBar } from '../index';
@@ -48,7 +49,7 @@ describe('SearchBar', () => {
     expect(onChange).toHaveBeenCalledTimes(1);
 
     act(() => {
-      component.find('a.clear-icon').prop('onClick')();
+      component.find('.clear-button').prop('onClick')();
       component.find('.before-field .button').prop('onClick')();
       component.find('.after-field .button').at(0).prop('onClick')();
       component.find('.after-field .button').at(1).prop('onClick')();
@@ -69,7 +70,7 @@ describe('SearchBar', () => {
         value='Очень длинный запрос в поисковой строке'
         onChange={onChange}
         endButtons={[
-          { text: 'Oтмена', onClick: onCancelClick },
+          { text: 'Отмена', onClick: onCancelClick },
           { text: 'Поиск', onClick: onSearchClick },
         ]}
       />,
@@ -101,7 +102,7 @@ describe('SearchBar', () => {
         value='Очень длинный запрос в поисковой строке'
         onChange={onChange}
         endButtons={[
-          { text: 'Oтмена', onClick: onCancelClick },
+          { text: 'Отмена', onClick: onCancelClick },
           { text: 'Поиск', onClick: onSearchClick },
         ]}
       />,
@@ -151,6 +152,8 @@ describe('SearchBar', () => {
       container.querySelector('.search-field').click();
     });
     expect(container.querySelectorAll('.dropdown-container')).toHaveLength(0);
+
+    ReactDOM.unmountComponentAtNode(container);
   });
 
   it('should handle "inputRef" prop', () => {
@@ -159,5 +162,19 @@ describe('SearchBar', () => {
     mount(<SearchBar inputRef={ref} value='Запрос в поисковой строке' onChange={jest.fn()} />);
 
     expect(ref.current instanceof HTMLInputElement).toBe(true);
+  });
+
+  it('should prevent input blur by prevent input wrapper mouse down', () => {
+    const { getByTestId } = render(
+      <SearchBar value='Hello!' onChange={jest.fn()} onClear={jest.fn()} />,
+    );
+
+    fireEvent.focus(getByTestId('search-bar-input'));
+
+    const event = createEvent.mouseDown(getByTestId('search-bar:input-wrapper'));
+
+    expect(event.defaultPrevented).toBe(false);
+    fireEvent(getByTestId('search-bar:input-wrapper'), event);
+    expect(event.defaultPrevented).toBe(true);
   });
 });
