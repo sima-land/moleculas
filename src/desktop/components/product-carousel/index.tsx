@@ -1,7 +1,8 @@
-import React, { Children, isValidElement, cloneElement, useRef, useState } from 'react';
+import React, { Children, isValidElement, cloneElement, useRef, useState, useMemo } from 'react';
 import { Carousel } from '@sima-land/ui-nucleons/carousel';
 import { HoverCard } from './hover-card';
-import { useAllowFlag, useChildWidth, useViewport } from './utils';
+import { useAllowFlag, useChildWidth } from './utils';
+import { useIntersection } from '@sima-land/ui-nucleons/hooks/intersection';
 import { useMedia } from '@sima-land/ui-nucleons/hooks/media';
 import { ProductInfo, ProductInfoProps, Parts } from '../../../common/components/product-info';
 import classnames from 'classnames/bind';
@@ -80,15 +81,22 @@ export const ProductCarousel = ({
   const itemWidth = useChildWidth(rootRef, `.${cx('item')}`, [items.length]);
 
   // инициируем загрузку данных, когда компонент почти попал в зону видимости
-  useViewport(rootRef, onNeedRequest, {
-    rootMargin: '200px 0px 200px 0px',
-  });
+  const options = useMemo(() => ({ rootMargin: '200px 0px 200px 0px' }), []);
+  useIntersection(
+    rootRef,
+    entry => {
+      entry.isIntersecting && onNeedRequest && onNeedRequest();
+    },
+    options,
+  );
 
   // отправляем статистку, когда компонент попадает в зону видимости
-  useViewport(rootRef, onInViewport);
+  useIntersection(rootRef, entry => {
+    entry.isIntersecting && onInViewport && onInViewport();
+  });
 
   return (
-    <div ref={rootRef} className={cx('root', className)}>
+    <div ref={rootRef} className={cx('root', className)} data-testid='product-carousel:root'>
       {items.length > 0 && (
         <Carousel
           step={3}

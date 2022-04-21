@@ -7,6 +7,7 @@ import QuickView2SVG from '@sima-land/ui-quarks/icons/24x24/Stroked/quick-view-2
 import { items } from './test-items';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import { Badge } from '../../../../common/components/badge';
+import { IntersectionMock } from '@sima-land/ui-nucleons/hooks/intersection/test-utils';
 
 describe('<ProductSlider />', () => {
   it('should renders correctly', () => {
@@ -76,5 +77,81 @@ describe('<ProductSlider />', () => {
     );
 
     expect(container).toMatchSnapshot();
+  });
+});
+
+describe('intersections', () => {
+  const intersectionMock = new IntersectionMock();
+
+  beforeAll(() => {
+    intersectionMock.apply();
+  });
+
+  afterAll(() => {
+    intersectionMock.restore();
+  });
+
+  it('should call "onNeedRequest" prop', () => {
+    const spy = jest.fn();
+
+    const { getByTestId } = render(
+      <ProductSlider onNeedRequest={spy}>
+        {items.map((item, index) => (
+          <ProductInfo key={index}>
+            <Parts.Image src={item.imageSrc} href={item.url} />
+
+            <Parts.Prices
+              price={item.price}
+              oldPrice={item.oldPrice}
+              currencyGrapheme={item.currencyGrapheme}
+            />
+
+            <Parts.Title href={item.url}>{item.name}</Parts.Title>
+          </ProductInfo>
+        ))}
+      </ProductSlider>,
+    );
+
+    expect(spy).toBeCalledTimes(0);
+
+    intersectionMock.changeElementState({
+      target: getByTestId('product-slider:root'),
+      isIntersecting: true,
+      intersectionRatio: 0,
+    });
+
+    expect(spy).toBeCalledTimes(1);
+  });
+
+  it('should call "onInViewport" prop', () => {
+    const spy = jest.fn();
+
+    const { getByTestId } = render(
+      <ProductSlider onInViewport={spy}>
+        {items.map((item, index) => (
+          <ProductInfo key={index}>
+            <Parts.Image src={item.imageSrc} href={item.url} />
+
+            <Parts.Prices
+              price={item.price}
+              oldPrice={item.oldPrice}
+              currencyGrapheme={item.currencyGrapheme}
+            />
+
+            <Parts.Title href={item.url}>{item.name}</Parts.Title>
+          </ProductInfo>
+        ))}
+      </ProductSlider>,
+    );
+
+    expect(spy).toBeCalledTimes(0);
+
+    intersectionMock.changeElementState({
+      target: getByTestId('product-slider:root'),
+      isIntersecting: true,
+      intersectionRatio: 0,
+    });
+
+    expect(spy).toBeCalledTimes(1);
   });
 });

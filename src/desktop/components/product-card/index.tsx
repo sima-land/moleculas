@@ -31,14 +31,17 @@ export const ProductCard = ({ children, className, ...props }: ProductCardProps)
   const [hovered, toggle] = useState<boolean>(false);
 
   return (
-    <div {...props} data-testid='product-card' className={cn(styles.root, className)}>
-      <div data-testid='product-card:info' onMouseEnter={() => toggle(true)}>
-        {reduceBaseInfo(children)}
-      </div>
+    <div
+      {...props}
+      data-testid='product-card'
+      className={cn(styles.root, className)}
+      onMouseEnter={() => toggle(true)}
+      // вешаем onMouseLeave на корневой элемент так как в Chrome проблемы если вешать на "product-card:info"
+      onMouseLeave={() => toggle(false)}
+    >
+      <div data-testid='product-card:info'>{reduceBaseInfo(children)}</div>
 
-      {hovered && (
-        <HoverCard onMouseLeave={() => toggle(false)}>{reduceHoverInfo(children)}</HoverCard>
-      )}
+      {hovered && <HoverCard>{reduceHoverInfo(children)}</HoverCard>}
     </div>
   );
 };
