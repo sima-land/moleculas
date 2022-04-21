@@ -1,8 +1,5 @@
 import React, { useState, useRef, useEffect, forwardRef, useImperativeHandle } from 'react';
-import classnames from 'classnames/bind';
-import classes from './search-bar.module.scss';
-import { isFunction, throttle } from 'lodash';
-import { Link } from '@sima-land/ui-nucleons/link';
+import { throttle } from 'lodash';
 import { COLORS, Token } from '@sima-land/ui-nucleons/colors';
 import { Dropdown } from '@sima-land/ui-nucleons/dropdown';
 import { DropdownItem } from '@sima-land/ui-nucleons/dropdown-item';
@@ -11,8 +8,10 @@ import on from '@sima-land/ui-nucleons/helpers/on';
 import CrossSVG from '@sima-land/ui-quarks/icons/24x24/Filled/cross';
 import SearchSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/search';
 import MoreVertSVG from '@sima-land/ui-quarks/icons/24x24/Filled/more-vert';
+import classnames from 'classnames/bind';
+import styles from './search-bar.module.scss';
 
-export const cx = classnames.bind(classes);
+export const cx = classnames.bind(styles);
 
 export interface ButtonProps {
   text: string;
@@ -103,8 +102,18 @@ export const SearchBar = ({
     [needHideEndButtons],
   );
 
+  const preventFieldBlur: React.MouseEventHandler = e => {
+    if (
+      inputRef.current &&
+      inputRef.current !== e.target && // не предотвращаем события на самом поле (например выделение текста)
+      document.activeElement === inputRef.current
+    ) {
+      e.preventDefault();
+    }
+  };
+
   return (
-    <div className={cx('wrapper')}>
+    <div className={cx('root')}>
       {Boolean(startButtons.length) && (
         <div className={cx('before-field')}>
           <div className={cx('buttons-container')}>
@@ -114,7 +123,11 @@ export const SearchBar = ({
           </div>
         </div>
       )}
-      <label className={cx('input-wrapper')}>
+      <label
+        className={cx('input-wrapper')}
+        onMouseDown={preventFieldBlur}
+        data-testid='search-bar:input-wrapper'
+      >
         {withSearchIcon && (
           <span className={cx('search-icon')}>
             <SearchSVG fill={COLORS.get('basic-gray38')} aria-hidden />
@@ -139,18 +152,15 @@ export const SearchBar = ({
             </div>
           )}
         </div>
-        {isFunction(onClear) && value && (
-          <Link
-            onClick={event => {
-              onClear(event);
-              inputRef.current && inputRef.current.focus();
-            }}
-            pseudo
+        {value && onClear && (
+          <button
+            onClick={onClear}
             aria-label='Очистить'
             data-testid='search-bar:clear-icon'
-            className={cx('clear-icon')}
-            children={<CrossSVG fill={COLORS.get('basic-gray38')} aria-hidden />}
-          />
+            className={cx('clear-button')}
+          >
+            <CrossSVG fill={COLORS.get('basic-gray38')} aria-hidden />
+          </button>
         )}
       </label>
       {Boolean(endButtons.length) && (

@@ -1,11 +1,7 @@
 @import 'node_modules/@sima-land/ui-nucleons/colors';
 
-.wrapper {
+.root {
   display: flex;
-}
-
-.search-cancel {
-  margin-left: 16px;
 }
 
 .input-wrapper {
@@ -18,7 +14,7 @@
   border-radius: 8px;
   padding: 0 0 0 12px;
   &:focus-within {
-    .clear-icon {
+    .clear-button {
       display: flex;
     }
     .input-container {
@@ -42,12 +38,12 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-right: 12px;
 }
 
 .search-field {
   background-color: transparent;
   margin: 0;
+  padding: 0;
   border: 0;
   outline: 0;
   line-height: 24px;
@@ -84,13 +80,15 @@
   text-overflow: ellipsis;
 }
 
-.clear-icon {
+.clear-button {
   position: relative;
   align-items: center;
   justify-content: center;
   padding: 0 12px;
   display: none;
   cursor: pointer;
+  background: transparent;
+  border: 0;
 }
 
 .hidden {
