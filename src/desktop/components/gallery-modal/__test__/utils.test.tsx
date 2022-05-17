@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
-import { mount } from 'enzyme';
-import { useImagesLoad, useRectFit } from '../utils';
-import { act } from 'react-dom/test-utils';
+import { render, act } from '@testing-library/react';
+import { useImagesLoad, useSquareFit } from '../utils';
 
 describe('useImagesLoad', () => {
   const TestComponent = ({ srcList }: { srcList: string[] }) => {
@@ -11,9 +10,9 @@ describe('useImagesLoad', () => {
   };
 
   it('should return boolean', () => {
-    const wrapper = mount(<TestComponent srcList={['a']} />);
+    const { container } = render(<TestComponent srcList={['a']} />);
 
-    expect(wrapper.text()).toBe('loading');
+    expect(container.textContent).toBe('loading');
   });
 
   it('should return true after all images loaded', () => {
@@ -23,74 +22,71 @@ describe('useImagesLoad', () => {
       callbacks.push(callback);
     });
 
-    const wrapper = mount(
+    const { container } = render(
       <TestComponent srcList={['https://img.com/1', 'https://img.com/2', 'https://img.com/3']} />,
     );
 
-    expect(wrapper.text()).toBe('loading');
+    expect(container.textContent).toBe('loading');
 
     act(() => {
       callbacks.forEach(fn => fn());
     });
-    wrapper.update();
 
-    expect(wrapper.text()).toBe('ready');
-
-    wrapper.unmount();
+    expect(container.textContent).toBe('ready');
   });
 });
 
-describe('useRectFit', () => {
+describe('useSquareFit', () => {
   const TestComponent = ({ hidden }: { hidden?: boolean }) => {
     const ref = useRef<HTMLDivElement>(null);
-    const size = useRectFit(ref, { correction: 0 });
+    const size = useSquareFit(ref, { hasReview: false });
 
     return hidden ? null : <div ref={ref}>{size}</div>;
   };
 
   it('should calculate size properly', () => {
-    jest.spyOn(HTMLDivElement.prototype, 'clientWidth', 'get').mockImplementation(() => 100);
-    jest.spyOn(HTMLDivElement.prototype, 'clientHeight', 'get').mockImplementation(() => 200);
+    jest.spyOn(HTMLDivElement.prototype, 'clientWidth', 'get').mockImplementation(() => 800);
+    jest.spyOn(HTMLDivElement.prototype, 'clientHeight', 'get').mockImplementation(() => 600);
 
-    const wrapper = mount(<TestComponent />);
+    const { container } = render(<TestComponent />);
 
-    expect(wrapper.text()).toBe('100');
+    expect(container.textContent).toBe('400');
   });
 
   it('should fit size when height is not enough', () => {
-    jest.spyOn(HTMLDivElement.prototype, 'clientWidth', 'get').mockImplementation(() => 100);
-    jest.spyOn(HTMLDivElement.prototype, 'clientHeight', 'get').mockImplementation(() => 20);
+    jest.spyOn(HTMLDivElement.prototype, 'clientWidth', 'get').mockImplementation(() => 600);
+    jest.spyOn(HTMLDivElement.prototype, 'clientHeight', 'get').mockImplementation(() => 1000);
 
-    const wrapper = mount(<TestComponent />);
+    const { container } = render(<TestComponent />);
 
-    expect(wrapper.text()).toBe('20');
+    expect(container.textContent).toBe('200');
   });
 
   it('should recalculate on window resize', () => {
     jest.spyOn(window, 'requestAnimationFrame').mockImplementation((fn: any) => fn());
 
-    jest.spyOn(HTMLDivElement.prototype, 'clientWidth', 'get').mockImplementation(() => 100);
+    jest.spyOn(HTMLDivElement.prototype, 'clientWidth', 'get').mockImplementation(() => 1000);
+
     const heightMock = jest
       .spyOn(HTMLDivElement.prototype, 'clientHeight', 'get')
-      .mockImplementation(() => 20);
+      .mockImplementation(() => 600);
 
-    const wrapper = mount(<TestComponent />);
+    const { container } = render(<TestComponent />);
 
-    expect(wrapper.text()).toBe('20');
+    expect(container.textContent).toBe('560');
 
-    heightMock.mockReturnValue(45);
+    heightMock.mockReturnValue(400);
 
     act(() => {
       window.dispatchEvent(new Event('resize'));
     });
-    wrapper.update();
 
-    expect(wrapper.text()).toBe('45');
+    expect(container.textContent).toBe('360');
   });
 
   it('should do nothing when ref is empty', () => {
-    const wrapper = mount(<TestComponent hidden />);
+    const { container } = render(<TestComponent hidden />);
 
-    expect(wrapper.text()).toBe('');
+    expect(container.textContent).toBe('');
   });
 });

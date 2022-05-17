@@ -14,6 +14,7 @@ module.exports = {
       ],
       rules: {
         'require-jsdoc': 'off',
+        'jsdoc/require-jsdoc': 'off',
         'react/prop-types': 'off',
         'import/no-anonymous-default-export': 'off',
       },
