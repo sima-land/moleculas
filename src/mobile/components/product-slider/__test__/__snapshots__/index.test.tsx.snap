@@ -17,6 +17,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
         >
           <div
             class="item"
+            data-testid="product-slider:item"
           >
             <div
               class="root image-overlay"
@@ -207,6 +208,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
           </div>
           <div
             class="item"
+            data-testid="product-slider:item"
           >
             <div
               class="root image-overlay"
@@ -390,6 +392,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
           </div>
           <div
             class="item"
+            data-testid="product-slider:item"
           >
             <div
               class="root image-overlay"
@@ -629,6 +632,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
           </div>
           <div
             class="item"
+            data-testid="product-slider:item"
           >
             <div
               class="root image-overlay"
@@ -812,6 +816,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
           </div>
           <div
             class="item"
+            data-testid="product-slider:item"
           >
             <div
               class="root image-overlay"
@@ -995,6 +1000,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
           </div>
           <div
             class="item"
+            data-testid="product-slider:item"
           >
             <div
               class="root image-overlay"
@@ -1205,6 +1211,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
           </div>
           <div
             class="item"
+            data-testid="product-slider:item"
           >
             <div
               class="root image-overlay"
@@ -1388,6 +1395,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
           </div>
           <div
             class="item"
+            data-testid="product-slider:item"
           >
             <div
               class="root image-overlay"
@@ -1577,6 +1585,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
           </div>
           <div
             class="item"
+            data-testid="product-slider:item"
           >
             <div
               class="root image-overlay"
@@ -1766,6 +1775,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
           </div>
           <div
             class="item"
+            data-testid="product-slider:item"
           >
             <div
               class="root image-overlay"

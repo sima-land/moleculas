@@ -20,7 +20,7 @@ describe('<ProductSlider />', () => {
       trademarkClick: jest.fn(),
     };
 
-    const { container } = render(
+    const { container, queryAllByTestId } = render(
       <ProductSlider>
         {items.map((item, index) => (
           <ProductInfo key={index}>
@@ -77,6 +77,7 @@ describe('<ProductSlider />', () => {
     );
 
     expect(container).toMatchSnapshot();
+    expect(queryAllByTestId('product-slider:item')).toMatchSnapshot();
   });
 });
 

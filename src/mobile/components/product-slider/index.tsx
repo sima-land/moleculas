@@ -47,7 +47,7 @@ export const ProductSlider = ({ children, onInViewport, onNeedRequest }: Product
           isValidElement(item) &&
             item.type === ProductInfo &&
             list.push(
-              <div key={item.key} className={styles.item}>
+              <div key={item.key} className={styles.item} data-testid='product-slider:item'>
                 {item}
               </div>,
             );
