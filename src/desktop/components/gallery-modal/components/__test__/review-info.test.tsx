@@ -1,22 +1,56 @@
 import React from 'react';
-import { mount } from 'enzyme';
 import { ReviewInfo } from '../review-info';
-import { act } from 'react-dom/test-utils';
+import { fireEvent, render } from '@testing-library/react';
 
 describe('ReviewInfo', () => {
-  it('should renders correctly', () => {
+  it('should render loading view', () => {
+    const { container } = render(<ReviewInfo rating={3.2} author='John Doe' loading />);
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render not affect rating view', () => {
+    const { container, queryAllByTestId } = render(
+      <ReviewInfo rating={3.2} author='John Doe' notAffectRating />,
+    );
+
+    expect(container).toMatchSnapshot();
+    expect(container.textContent).toContain('Не влияет на рейтинг');
+    expect(queryAllByTestId('rating')).toHaveLength(0);
+  });
+
+  it('should regular view', () => {
     const spy = jest.fn();
 
-    const wrapper = mount(<ReviewInfo author='John Doe' rating={2.1} onGoToReview={spy} />);
+    const { container, queryAllByTestId } = render(
+      <ReviewInfo rating={2.8} author='Hello' content='World' onGoToReview={spy} />,
+    );
 
-    expect(wrapper).toMatchSnapshot();
+    expect(container.textContent).not.toContain('Не влияет на рейтинг');
+    expect(queryAllByTestId('rating')).toHaveLength(1);
+    expect(queryAllByTestId('gallery-modal:go-to-review-link')).toHaveLength(1);
+  });
 
-    expect(spy).toBeCalledTimes(0);
+  it('should render expand button when line clamp is active', () => {
+    const { getByTestId, queryAllByTestId } = render(
+      <ReviewInfo rating={2.8} author='Hello' content='World' />,
+    );
 
-    act(() => {
-      wrapper.find('a[data-testid="gallery-modal:go-to-review-link"]').simulate('click');
-    });
+    expect(queryAllByTestId('review-info:expand')).toHaveLength(0);
 
-    expect(spy).toBeCalledTimes(1);
+    const element = getByTestId('review-info:collapsed-content');
+
+    jest.spyOn(element, 'clientHeight', 'get').mockReturnValue(40);
+    jest.spyOn(element, 'scrollHeight', 'get').mockReturnValue(120);
+
+    fireEvent.resize(window);
+
+    expect(queryAllByTestId('review-info:expand')).toHaveLength(1);
+
+    fireEvent.click(getByTestId('review-info:expand'));
+    expect(queryAllByTestId('review-info:expanded-content')).toHaveLength(1);
+
+    fireEvent.click(getByTestId('review-info:collapse'));
+    expect(queryAllByTestId('review-info:expanded-content')).toHaveLength(0);
   });
 });

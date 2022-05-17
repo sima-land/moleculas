@@ -1,15 +1,35 @@
 @use 'node_modules/@sima-land/ui-nucleons/colors';
 
 .root {
-  height: 20px;
-  display: flex;
+  min-height: 140px;
+  max-height: 314px;
   font-size: 14px;
   line-height: 20px;
+  padding-bottom: 24px;
+  background: #fff;
+}
+
+.layout {
+  width: var(--square-size);
+  margin: 0 auto;
+}
+
+.header {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 26px 0 14px;
   white-space: nowrap;
 }
 
+.rating {
+  flex-shrink: 0;
+  font-weight: 600;
+  color: colors.$basic-gray38;
+}
+
 .author {
-  flex: 1;
+  flex-grow: 1;
   margin-left: 16px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -18,5 +38,52 @@
 
 .link {
   margin-left: 16px;
-  font-weight: 500;
+  font-weight: 600;
+  &:hover {
+    font-weight: 600;
+  }
+}
+
+.content {
+  &.opened {
+    max-height: calc(314px - 56px - 24px);
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  &:not(.opened) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+}
+
+.loading {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 26px;
+  .head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .text {
+    width: 100%;
+    border-radius: 4px;
+    background: colors.$basic-gray4;
+    height: 16px;
+    line-height: 20px;
+    vertical-align: middle;
+    margin: 2px 0;
+  }
+  .name {
+    max-width: 240px;
+    margin-right: 16px;
+  }
+  .button {
+    margin-left: auto;
+    white-space: nowrap;
+    font-weight: 600;
+  }
 }

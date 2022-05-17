@@ -24,35 +24,34 @@ export const useImagesLoad = (srcList: string[]): boolean => {
 };
 
 /**
- * Хук, вернет размер квадрата вписанного в прямоугольную область, определенную заданным элементом.
+ * Хук, вернет размер квадрата вписанного в область окна галереи фото по макетам.
  * @param areaRef Реф с элементом.
  * @param options Опции.
  * @return Размер или null.
  */
-export const useRectFit = (
+export const useSquareFit = (
   areaRef: React.RefObject<HTMLDivElement | null>,
-  { correction }: { correction: number },
+  { hasReview }: { hasReview: boolean },
 ) => {
   const [size, setSize] = useState<number | null>(null);
 
   useEffect(() => {
-    const calcSquareSize = () => {
+    function calc() {
       if (areaRef.current) {
-        const availWidth = areaRef.current.clientWidth;
-        const availHeight = areaRef.current.clientHeight;
+        const correction = 2 * (104 + 16 + 56 + 24); // ширина превью + отступ + ширина кнопки + отступ
 
-        if (availWidth + correction <= availHeight) {
-          setSize(availWidth);
-        } else {
-          setSize(availHeight - correction);
-        }
+        // доступная область в которую можно вписать **квадрат**
+        const availWidth = areaRef.current.clientWidth - correction;
+        const availHeight = areaRef.current.clientHeight - (hasReview ? 140 : 40); // вычитаем высоту футера
+
+        setSize(Math.min(availWidth, availHeight));
       }
-    };
+    }
 
-    calcSquareSize();
+    calc();
 
-    return on(window, 'resize', () => window.requestAnimationFrame(calcSquareSize));
-  }, [areaRef]);
+    return on(window, 'resize', () => window.requestAnimationFrame(calc));
+  }, [areaRef, hasReview]);
 
   return size;
 };

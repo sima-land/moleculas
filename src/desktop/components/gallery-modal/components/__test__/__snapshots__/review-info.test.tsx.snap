@@ -1,170 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ReviewInfo should renders correctly 1`] = `
-<ReviewInfo
-  author="John Doe"
-  onGoToReview={[MockFunction]}
-  rating={2.1}
->
+exports[`ReviewInfo should render loading view 1`] = `
+<div>
   <div
-    className="root"
+    class="root"
   >
-    <Rating
-      value={2.1}
+    <div
+      class="layout"
     >
       <div
-        className="root"
-        data-rating={2.1}
-        data-testid="rating"
+        class="loading"
       >
-        <Star
-          key="0"
-          size="s"
-          type="full"
+        <div
+          class="head"
         >
           <div
-            className="star size-s"
+            class="text name"
+          />
+          <a
+            class="link button basic-blue disabled"
+            data-testid="anchor"
+            role="button"
           >
-            <ForwardRef(SvgStar)
-              className="svg full"
-            >
-              <svg
-                className="svg full"
-                height={24}
-                viewBox="0 0 24 24"
-                width={24}
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M11.304 2.318a.75.75 0 011.392 0l2.567 6.393 6.874.466a.75.75 0 01.43 1.324l-5.287 4.417 1.68 6.681a.75.75 0 01-1.125.818L12 18.754l-5.835 3.663A.75.75 0 015.04 21.6l1.681-6.68L1.433 10.5a.75.75 0 01.43-1.324l6.874-.466 2.567-6.393z"
-                />
-              </svg>
-            </ForwardRef(SvgStar)>
-          </div>
-        </Star>
-        <Star
-          key="1"
-          size="s"
-          type="full"
-        >
-          <div
-            className="star size-s"
-          >
-            <ForwardRef(SvgStar)
-              className="svg full"
-            >
-              <svg
-                className="svg full"
-                height={24}
-                viewBox="0 0 24 24"
-                width={24}
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M11.304 2.318a.75.75 0 011.392 0l2.567 6.393 6.874.466a.75.75 0 01.43 1.324l-5.287 4.417 1.68 6.681a.75.75 0 01-1.125.818L12 18.754l-5.835 3.663A.75.75 0 015.04 21.6l1.681-6.68L1.433 10.5a.75.75 0 01.43-1.324l6.874-.466 2.567-6.393z"
-                />
-              </svg>
-            </ForwardRef(SvgStar)>
-          </div>
-        </Star>
-        <Star
-          key="2"
-          size="s"
-          type="empty"
-        >
-          <div
-            className="star size-s"
-          >
-            <ForwardRef(SvgStar)
-              className="svg"
-            >
-              <svg
-                className="svg"
-                height={24}
-                viewBox="0 0 24 24"
-                width={24}
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M11.304 2.318a.75.75 0 011.392 0l2.567 6.393 6.874.466a.75.75 0 01.43 1.324l-5.287 4.417 1.68 6.681a.75.75 0 01-1.125.818L12 18.754l-5.835 3.663A.75.75 0 015.04 21.6l1.681-6.68L1.433 10.5a.75.75 0 01.43-1.324l6.874-.466 2.567-6.393z"
-                />
-              </svg>
-            </ForwardRef(SvgStar)>
-          </div>
-        </Star>
-        <Star
-          key="3"
-          size="s"
-          type="empty"
-        >
-          <div
-            className="star size-s"
-          >
-            <ForwardRef(SvgStar)
-              className="svg"
-            >
-              <svg
-                className="svg"
-                height={24}
-                viewBox="0 0 24 24"
-                width={24}
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M11.304 2.318a.75.75 0 011.392 0l2.567 6.393 6.874.466a.75.75 0 01.43 1.324l-5.287 4.417 1.68 6.681a.75.75 0 01-1.125.818L12 18.754l-5.835 3.663A.75.75 0 015.04 21.6l1.681-6.68L1.433 10.5a.75.75 0 01.43-1.324l6.874-.466 2.567-6.393z"
-                />
-              </svg>
-            </ForwardRef(SvgStar)>
-          </div>
-        </Star>
-        <Star
-          key="4"
-          size="s"
-          type="empty"
-        >
-          <div
-            className="star size-s"
-          >
-            <ForwardRef(SvgStar)
-              className="svg"
-            >
-              <svg
-                className="svg"
-                height={24}
-                viewBox="0 0 24 24"
-                width={24}
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M11.304 2.318a.75.75 0 011.392 0l2.567 6.393 6.874.466a.75.75 0 01.43 1.324l-5.287 4.417 1.68 6.681a.75.75 0 01-1.125.818L12 18.754l-5.835 3.663A.75.75 0 015.04 21.6l1.681-6.68L1.433 10.5a.75.75 0 01.43-1.324l6.874-.466 2.567-6.393z"
-                />
-              </svg>
-            </ForwardRef(SvgStar)>
-          </div>
-        </Star>
+            Перейти к отзыву
+          </a>
+        </div>
+        <div
+          class="text"
+        />
+        <div
+          class="text"
+        />
       </div>
-    </Rating>
-    <div
-      className="author"
-    >
-      John Doe
     </div>
-    <ForwardRef(Link)
-      className="link"
-      data-testid="gallery-modal:go-to-review-link"
-      onClick={[MockFunction]}
-      pseudo={true}
-    >
-      <a
-        className="link link basic-blue"
-        data-testid="gallery-modal:go-to-review-link"
-        onClick={[MockFunction]}
-        role="button"
-        tabIndex={0}
-      >
-        Перейти к отзыву
-      </a>
-    </ForwardRef(Link)>
   </div>
-</ReviewInfo>
+</div>
+`;
+
+exports[`ReviewInfo should render not affect rating view 1`] = `
+<div>
+  <div
+    class="root"
+  >
+    <div
+      class="header layout"
+    >
+      <div
+        class="rating"
+      >
+        Не влияет на рейтинг
+      </div>
+      <div
+        class="author"
+      >
+        John Doe
+      </div>
+    </div>
+  </div>
+</div>
 `;
