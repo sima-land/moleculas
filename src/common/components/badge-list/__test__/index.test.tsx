@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { BadgeList } from '..';
 import { Badge, BadgeProps } from '../../badge';
 import { render } from '@testing-library/react';
@@ -22,5 +22,27 @@ describe('<BadgeList />', () => {
 
     expect(container).toMatchSnapshot();
     expect(getAllByTestId('badge')).toHaveLength(4);
+  });
+
+  it('should ignore non Badge/BadgeList.Slot children', () => {
+    function SomeWrapper({ children }: { children: ReactNode }) {
+      return <>{children}</>;
+    }
+
+    const { queryAllByTestId } = render(
+      <BadgeList className='test'>
+        {badges.map((item, index) => (
+          <BadgeList.Slot key={index}>
+            <SomeWrapper>
+              <Badge {...item} />
+            </SomeWrapper>
+          </BadgeList.Slot>
+        ))}
+        <div data-testid='invalid-child'>Hello</div>
+      </BadgeList>,
+    );
+
+    expect(queryAllByTestId('badge')).toHaveLength(4);
+    expect(queryAllByTestId('invalid-child')).toHaveLength(0);
   });
 });

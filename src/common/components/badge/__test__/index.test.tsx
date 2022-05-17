@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import { render } from '@testing-library/react';
 import { Badge, BadgeProps } from '..';
 import { addDays, addMonths } from 'date-fns';
@@ -72,5 +72,21 @@ describe('<Badge />', () => {
     );
 
     expect(getByRole('link').getAttribute('rel')).toBe('nofollow');
+  });
+
+  it('should handle ref', () => {
+    const ref = createRef<HTMLAnchorElement>();
+
+    const { getByTestId } = render(
+      <Badge
+        ref={ref}
+        href='https://www.ya.ru'
+        rel='nofollow'
+        color='#f00'
+        fields={[{ type: 'text', value: 'Some text' }]}
+      />,
+    );
+
+    expect(ref.current).toBe(getByTestId('badge'));
   });
 });

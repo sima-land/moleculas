@@ -2,6 +2,7 @@ import React from 'react';
 import { BadgeList } from '..';
 import { Badge, BadgeProps } from '../../badge';
 import { addMonths } from 'date-fns';
+import { WithHint } from '@sima-land/ui-nucleons/with-hint';
 
 const items: BadgeProps[] = [
   {
@@ -72,3 +73,30 @@ export const Primary = () => (
     </DemoBlock>
   </>
 );
+
+Primary.storyName = 'Простой пример';
+
+export function Hints() {
+  return (
+    <DemoBlock>
+      <BadgeList lineLimit={3}>
+        {items.map((item, index) => (
+          <BadgeList.Slot key={index}>
+            <WithHint hint='Тестовый хинт для шильика!' direction='right'>
+              {(ref, toggle) => (
+                <Badge
+                  {...item}
+                  ref={ref as any}
+                  onMouseOver={() => toggle(true)}
+                  onMouseLeave={() => toggle(false)}
+                />
+              )}
+            </WithHint>
+          </BadgeList.Slot>
+        ))}
+      </BadgeList>
+    </DemoBlock>
+  );
+}
+
+Hints.storyName = 'С хинтами';

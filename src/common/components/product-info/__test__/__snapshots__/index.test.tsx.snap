@@ -188,50 +188,66 @@ exports[`ProductInfo regular content should match snapshot 1`] = `
   <div
     class="root badges"
   >
-    <a
-      class="root item"
-      data-testid="badge"
-      style="--badge-color: #b52ea8;"
+    <div
+      class="item"
     >
-      <span
-        class="content"
+      <a
+        class="root"
+        data-testid="badge"
+        style="--badge-color: #b52ea8;"
       >
-        -56%
-      </span>
-    </a>
-    <a
-      class="root item"
-      data-testid="badge"
-      style="--badge-color: #ff7200;"
+        <span
+          class="content"
+        >
+          -56%
+        </span>
+      </a>
+    </div>
+    <div
+      class="item"
     >
-      <span
-        class="content"
+      <a
+        class="root"
+        data-testid="badge"
+        style="--badge-color: #ff7200;"
       >
-        3 по цене 2
-      </span>
-    </a>
-    <a
-      class="root item"
-      data-testid="badge"
-      style="--badge-color: #2962ff;"
+        <span
+          class="content"
+        >
+          3 по цене 2
+        </span>
+      </a>
+    </div>
+    <div
+      class="item"
     >
-      <span
-        class="content"
+      <a
+        class="root"
+        data-testid="badge"
+        style="--badge-color: #2962ff;"
       >
-        Товар месяца
-      </span>
-    </a>
-    <a
-      class="root item"
-      data-testid="badge"
-      style="--badge-color: #00b8d4;"
+        <span
+          class="content"
+        >
+          Товар месяца
+        </span>
+      </a>
+    </div>
+    <div
+      class="item"
     >
-      <span
-        class="content"
+      <a
+        class="root"
+        data-testid="badge"
+        style="--badge-color: #00b8d4;"
       >
-        Акция
-      </span>
-    </a>
+        <span
+          class="content"
+        >
+          Акция
+        </span>
+      </a>
+    </div>
   </div>
   <div
     class="prices height-limit"

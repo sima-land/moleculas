@@ -1,6 +1,7 @@
 import React from 'react';
 import { Badge } from '..';
 import { addDays, addMonths } from 'date-fns';
+import { WithHint } from '@sima-land/ui-nucleons/with-hint';
 
 export default {
   title: 'common/Badge',
@@ -101,3 +102,22 @@ export const NoInteractiveView = () => (
 );
 
 NoInteractiveView.storyName = 'Без ссылки и hover';
+
+export const Hints = () => (
+  <div style={{ padding: '48px', display: 'flex', justifyContent: 'center' }}>
+    <WithHint hint='Привет, это очень простой хинт'>
+      {(ref, toggle) => (
+        <Badge
+          ref={ref as any}
+          color='#607d8b'
+          href='https://sima-land.ru'
+          fields={[{ type: 'text', value: 'Уценённый товар' }]}
+          onMouseOver={() => toggle(true)}
+          onMouseLeave={() => toggle(false)}
+        />
+      )}
+    </WithHint>
+  </div>
+);
+
+Hints.storyName = 'С хинтом';
