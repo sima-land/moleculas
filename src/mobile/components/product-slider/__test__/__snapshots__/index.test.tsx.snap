@@ -1963,3 +1963,1950 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
   </div>
 </div>
 `;
+
+exports[`<ProductSlider /> should renders correctly 2`] = `
+Array [
+  <div
+    class="item"
+    data-testid="product-slider:item"
+  >
+    <div
+      class="root image-overlay"
+    >
+      <a
+        class="image-link"
+        data-testid="product-info:image-link"
+        href=""
+      >
+        <img
+          class="image"
+          data-testid="product-info:image"
+          src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
+        />
+      </a>
+      <div
+        class="image-buttons"
+      >
+        <div
+          class="root image-button"
+          data-testid="favorite-button"
+          role="banner"
+        >
+          <svg
+            class="stroke"
+            height="24"
+            stroke="#f5f5f5"
+            stroke-width="3px"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+            />
+          </svg>
+          <svg
+            class="svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+            />
+          </svg>
+        </div>
+        <div
+          class="root image-button"
+          data-testid="quick-view-button"
+          role="banner"
+        >
+          <svg
+            class="stroke"
+            height="24"
+            stroke="#f5f5f5"
+            stroke-width="3px"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+            />
+            <path
+              d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+            />
+          </svg>
+          <svg
+            class="svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+            />
+            <path
+              d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="prices height-limit"
+      data-testid="product-info:prices"
+    >
+      <span
+        class="root price"
+        data-testid="product-info:price"
+      >
+        261 ₽
+      </span>
+    </div>
+    <a
+      class="link link line-clamp basic-gray87"
+      data-testid="product-info:name-link"
+      href=""
+    >
+      Ножницы портновские, 19 см, цвет чёрный
+    </a>
+    <a
+      class="link trademark-link basic-blue"
+      data-testid="product-info:trademark-link"
+      href="https://sima-land.ru"
+    >
+      Торговая марка Сима-ленд
+    </a>
+    <div
+      class="footer"
+      data-testid="product-info:footer"
+    >
+      <div
+        class="control-wrapper"
+      >
+        <div
+          class="control"
+        >
+          <div
+            class="root size-s"
+            data-testid="stepper"
+            style="width: 122px;"
+          >
+            <svg
+              class="button"
+              data-testid="stepper:minus"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <input
+              class="input"
+              data-testid="stepper:input"
+              value="3"
+            />
+            <svg
+              class="button"
+              data-testid="stepper:plus"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="unit-text"
+          data-testid="product-info:cart-step"
+        >
+          По 5 шт
+        </div>
+        <div
+          class="bottom-text"
+          data-testid="product-info:cart-info"
+        >
+          Комплектация + 50 ₽ при покупке до 20 шт
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    class="item"
+    data-testid="product-slider:item"
+  >
+    <div
+      class="root image-overlay"
+    >
+      <a
+        class="image-link"
+        data-testid="product-info:image-link"
+        href=""
+      >
+        <img
+          class="image"
+          data-testid="product-info:image"
+          src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+        />
+      </a>
+      <div
+        class="image-buttons"
+      >
+        <div
+          class="root image-button"
+          data-testid="favorite-button"
+          role="banner"
+        >
+          <svg
+            class="stroke"
+            height="24"
+            stroke="#f5f5f5"
+            stroke-width="3px"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+            />
+          </svg>
+          <svg
+            class="svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+            />
+          </svg>
+        </div>
+        <div
+          class="root image-button"
+          data-testid="quick-view-button"
+          role="banner"
+        >
+          <svg
+            class="stroke"
+            height="24"
+            stroke="#f5f5f5"
+            stroke-width="3px"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+            />
+            <path
+              d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+            />
+          </svg>
+          <svg
+            class="svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+            />
+            <path
+              d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="prices height-limit"
+      data-testid="product-info:prices"
+    >
+      <span
+        class="root price"
+        data-testid="product-info:price"
+      >
+        322 ₽
+      </span>
+    </div>
+    <a
+      class="link link line-clamp basic-gray87"
+      data-testid="product-info:name-link"
+      href=""
+    >
+      Ножницы портновские, 31 см, цвет чёрный/голубой
+    </a>
+    <div
+      class="footer"
+      data-testid="product-info:footer"
+    >
+      <div
+        class="control-wrapper"
+      >
+        <div
+          class="control"
+        >
+          <div
+            class="root size-s"
+            data-testid="stepper"
+            style="width: 122px;"
+          >
+            <svg
+              class="button"
+              data-testid="stepper:minus"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <input
+              class="input"
+              data-testid="stepper:input"
+              value="3"
+            />
+            <svg
+              class="button"
+              data-testid="stepper:plus"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="unit-text"
+          data-testid="product-info:cart-step"
+        >
+          По 5 шт
+        </div>
+        <div
+          class="bottom-text"
+          data-testid="product-info:cart-info"
+        >
+          Комплектация + 50 ₽ при покупке до 20 шт
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    class="item"
+    data-testid="product-slider:item"
+  >
+    <div
+      class="root image-overlay"
+    >
+      <a
+        class="image-link"
+        data-testid="product-info:image-link"
+        href=""
+      >
+        <img
+          class="image"
+          data-testid="product-info:image"
+          src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
+        />
+      </a>
+      <div
+        class="image-buttons"
+      >
+        <div
+          class="root image-button"
+          data-testid="favorite-button"
+          role="banner"
+        >
+          <svg
+            class="stroke"
+            height="24"
+            stroke="#f5f5f5"
+            stroke-width="3px"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+            />
+          </svg>
+          <svg
+            class="svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+            />
+          </svg>
+        </div>
+        <div
+          class="root image-button"
+          data-testid="quick-view-button"
+          role="banner"
+        >
+          <svg
+            class="stroke"
+            height="24"
+            stroke="#f5f5f5"
+            stroke-width="3px"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+            />
+            <path
+              d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+            />
+          </svg>
+          <svg
+            class="svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+            />
+            <path
+              d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="root badges line-limit"
+      style="--line-limit: 1;"
+    >
+      <a
+        class="root item"
+        data-testid="badge"
+        style="--badge-color: #b52ea8;"
+      >
+        <span
+          class="content"
+        >
+          -56%
+        </span>
+      </a>
+      <a
+        class="root item"
+        data-testid="badge"
+        style="--badge-color: #ff7200;"
+      >
+        <span
+          class="content"
+        >
+          3 по цене 2
+        </span>
+      </a>
+      <a
+        class="root item"
+        data-testid="badge"
+        style="--badge-color: #2962ff;"
+      >
+        <span
+          class="content"
+        >
+          Товар месяца
+        </span>
+      </a>
+      <a
+        class="root item"
+        data-testid="badge"
+        style="--badge-color: #00b8d4;"
+      >
+        <span
+          class="content"
+        >
+          Акция
+        </span>
+      </a>
+    </div>
+    <div
+      class="prices height-limit"
+      data-testid="product-info:prices"
+    >
+      <span
+        class="root price"
+        data-testid="product-info:price"
+      >
+        238 ₽
+      </span>
+    </div>
+    <a
+      class="link link line-clamp basic-gray87"
+      data-testid="product-info:name-link"
+      href=""
+    >
+      Ножницы портновские, 21,5 см, цвет чёрный/голубой
+    </a>
+    <a
+      class="link trademark-link basic-blue"
+      data-testid="product-info:trademark-link"
+      href="https://sima-land.ru"
+    >
+      Торговая марка Привет
+    </a>
+    <div
+      class="footer"
+      data-testid="product-info:footer"
+    >
+      <div
+        class="control-wrapper"
+      >
+        <div
+          class="control"
+        >
+          <div
+            class="root size-s"
+            data-testid="stepper"
+            style="width: 122px;"
+          >
+            <svg
+              class="button"
+              data-testid="stepper:minus"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <input
+              class="input"
+              data-testid="stepper:input"
+              value="3"
+            />
+            <svg
+              class="button"
+              data-testid="stepper:plus"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="unit-text"
+          data-testid="product-info:cart-step"
+        >
+          По 5 шт
+        </div>
+        <div
+          class="bottom-text"
+          data-testid="product-info:cart-info"
+        >
+          Комплектация + 50 ₽ при покупке до 20 шт
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    class="item"
+    data-testid="product-slider:item"
+  >
+    <div
+      class="root image-overlay"
+    >
+      <a
+        class="image-link"
+        data-testid="product-info:image-link"
+        href=""
+      >
+        <img
+          class="image"
+          data-testid="product-info:image"
+          src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+        />
+      </a>
+      <div
+        class="image-buttons"
+      >
+        <div
+          class="root image-button"
+          data-testid="favorite-button"
+          role="banner"
+        >
+          <svg
+            class="stroke"
+            height="24"
+            stroke="#f5f5f5"
+            stroke-width="3px"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+            />
+          </svg>
+          <svg
+            class="svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+            />
+          </svg>
+        </div>
+        <div
+          class="root image-button"
+          data-testid="quick-view-button"
+          role="banner"
+        >
+          <svg
+            class="stroke"
+            height="24"
+            stroke="#f5f5f5"
+            stroke-width="3px"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+            />
+            <path
+              d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+            />
+          </svg>
+          <svg
+            class="svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+            />
+            <path
+              d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="prices height-limit"
+      data-testid="product-info:prices"
+    >
+      <span
+        class="root price"
+        data-testid="product-info:price"
+      >
+        171 ₽
+      </span>
+    </div>
+    <a
+      class="link link line-clamp basic-gray87"
+      data-testid="product-info:name-link"
+      href=""
+    >
+      Ножницы портновские, 23 см, цвет МИКС
+    </a>
+    <div
+      class="footer"
+      data-testid="product-info:footer"
+    >
+      <div
+        class="control-wrapper"
+      >
+        <div
+          class="control"
+        >
+          <div
+            class="root size-s"
+            data-testid="stepper"
+            style="width: 122px;"
+          >
+            <svg
+              class="button"
+              data-testid="stepper:minus"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <input
+              class="input"
+              data-testid="stepper:input"
+              value="3"
+            />
+            <svg
+              class="button"
+              data-testid="stepper:plus"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="unit-text"
+          data-testid="product-info:cart-step"
+        >
+          По 5 шт
+        </div>
+        <div
+          class="bottom-text"
+          data-testid="product-info:cart-info"
+        >
+          Комплектация + 50 ₽ при покупке до 20 шт
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    class="item"
+    data-testid="product-slider:item"
+  >
+    <div
+      class="root image-overlay"
+    >
+      <a
+        class="image-link"
+        data-testid="product-info:image-link"
+        href=""
+      >
+        <img
+          class="image"
+          data-testid="product-info:image"
+          src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
+        />
+      </a>
+      <div
+        class="image-buttons"
+      >
+        <div
+          class="root image-button"
+          data-testid="favorite-button"
+          role="banner"
+        >
+          <svg
+            class="stroke"
+            height="24"
+            stroke="#f5f5f5"
+            stroke-width="3px"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+            />
+          </svg>
+          <svg
+            class="svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+            />
+          </svg>
+        </div>
+        <div
+          class="root image-button"
+          data-testid="quick-view-button"
+          role="banner"
+        >
+          <svg
+            class="stroke"
+            height="24"
+            stroke="#f5f5f5"
+            stroke-width="3px"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+            />
+            <path
+              d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+            />
+          </svg>
+          <svg
+            class="svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+            />
+            <path
+              d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="prices height-limit"
+      data-testid="product-info:prices"
+    >
+      <span
+        class="root price"
+        data-testid="product-info:price"
+      >
+        483 ₽
+      </span>
+    </div>
+    <a
+      class="link link line-clamp basic-gray87"
+      data-testid="product-info:name-link"
+      href=""
+    >
+      Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный
+    </a>
+    <div
+      class="footer"
+      data-testid="product-info:footer"
+    >
+      <div
+        class="control-wrapper"
+      >
+        <div
+          class="control"
+        >
+          <div
+            class="root size-s"
+            data-testid="stepper"
+            style="width: 122px;"
+          >
+            <svg
+              class="button"
+              data-testid="stepper:minus"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <input
+              class="input"
+              data-testid="stepper:input"
+              value="3"
+            />
+            <svg
+              class="button"
+              data-testid="stepper:plus"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="unit-text"
+          data-testid="product-info:cart-step"
+        >
+          По 5 шт
+        </div>
+        <div
+          class="bottom-text"
+          data-testid="product-info:cart-info"
+        >
+          Комплектация + 50 ₽ при покупке до 20 шт
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    class="item"
+    data-testid="product-slider:item"
+  >
+    <div
+      class="root image-overlay"
+    >
+      <a
+        class="image-link"
+        data-testid="product-info:image-link"
+        href=""
+      >
+        <img
+          class="image"
+          data-testid="product-info:image"
+          src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
+        />
+      </a>
+      <div
+        class="image-buttons"
+      >
+        <div
+          class="root image-button"
+          data-testid="favorite-button"
+          role="banner"
+        >
+          <svg
+            class="stroke"
+            height="24"
+            stroke="#f5f5f5"
+            stroke-width="3px"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+            />
+          </svg>
+          <svg
+            class="svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+            />
+          </svg>
+        </div>
+        <div
+          class="root image-button"
+          data-testid="quick-view-button"
+          role="banner"
+        >
+          <svg
+            class="stroke"
+            height="24"
+            stroke="#f5f5f5"
+            stroke-width="3px"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+            />
+            <path
+              d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+            />
+          </svg>
+          <svg
+            class="svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+            />
+            <path
+              d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="root badges line-limit"
+      style="--line-limit: 1;"
+    >
+      <a
+        class="root item"
+        data-testid="badge"
+        style="--badge-color: #2962ff;"
+      >
+        <span
+          class="content"
+        >
+          Товар месяца
+        </span>
+      </a>
+      <a
+        class="root item"
+        data-testid="badge"
+        style="--badge-color: #00b8d4;"
+      >
+        <span
+          class="content"
+        >
+          Акция
+        </span>
+      </a>
+    </div>
+    <div
+      class="prices height-limit"
+      data-testid="product-info:prices"
+    >
+      <span
+        class="root price"
+        data-testid="product-info:price"
+      >
+        988 ₽
+      </span>
+    </div>
+    <a
+      class="link link line-clamp basic-gray87"
+      data-testid="product-info:name-link"
+      href=""
+    >
+      Ножницы портновские, 22,5 см, цвет чёрный
+    </a>
+    <div
+      class="footer"
+      data-testid="product-info:footer"
+    >
+      <div
+        class="control-wrapper"
+      >
+        <div
+          class="control"
+        >
+          <div
+            class="root size-s"
+            data-testid="stepper"
+            style="width: 122px;"
+          >
+            <svg
+              class="button"
+              data-testid="stepper:minus"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <input
+              class="input"
+              data-testid="stepper:input"
+              value="3"
+            />
+            <svg
+              class="button"
+              data-testid="stepper:plus"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="unit-text"
+          data-testid="product-info:cart-step"
+        >
+          По 5 шт
+        </div>
+        <div
+          class="bottom-text"
+          data-testid="product-info:cart-info"
+        >
+          Комплектация + 50 ₽ при покупке до 20 шт
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    class="item"
+    data-testid="product-slider:item"
+  >
+    <div
+      class="root image-overlay"
+    >
+      <a
+        class="image-link"
+        data-testid="product-info:image-link"
+        href=""
+      >
+        <img
+          class="image"
+          data-testid="product-info:image"
+          src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
+        />
+      </a>
+      <div
+        class="image-buttons"
+      >
+        <div
+          class="root image-button"
+          data-testid="favorite-button"
+          role="banner"
+        >
+          <svg
+            class="stroke"
+            height="24"
+            stroke="#f5f5f5"
+            stroke-width="3px"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+            />
+          </svg>
+          <svg
+            class="svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+            />
+          </svg>
+        </div>
+        <div
+          class="root image-button"
+          data-testid="quick-view-button"
+          role="banner"
+        >
+          <svg
+            class="stroke"
+            height="24"
+            stroke="#f5f5f5"
+            stroke-width="3px"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+            />
+            <path
+              d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+            />
+          </svg>
+          <svg
+            class="svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+            />
+            <path
+              d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="prices height-limit"
+      data-testid="product-info:prices"
+    >
+      <span
+        class="root price"
+        data-testid="product-info:price"
+      >
+        619 ₽
+      </span>
+    </div>
+    <a
+      class="link link line-clamp basic-gray87"
+      data-testid="product-info:name-link"
+      href=""
+    >
+      Ножницы портновские, 22 см, цвет серебряный
+    </a>
+    <div
+      class="footer"
+      data-testid="product-info:footer"
+    >
+      <div
+        class="control-wrapper"
+      >
+        <div
+          class="control"
+        >
+          <div
+            class="root size-s"
+            data-testid="stepper"
+            style="width: 122px;"
+          >
+            <svg
+              class="button"
+              data-testid="stepper:minus"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <input
+              class="input"
+              data-testid="stepper:input"
+              value="3"
+            />
+            <svg
+              class="button"
+              data-testid="stepper:plus"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="unit-text"
+          data-testid="product-info:cart-step"
+        >
+          По 5 шт
+        </div>
+        <div
+          class="bottom-text"
+          data-testid="product-info:cart-info"
+        >
+          Комплектация + 50 ₽ при покупке до 20 шт
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    class="item"
+    data-testid="product-slider:item"
+  >
+    <div
+      class="root image-overlay"
+    >
+      <a
+        class="image-link"
+        data-testid="product-info:image-link"
+        href=""
+      >
+        <img
+          class="image"
+          data-testid="product-info:image"
+          src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
+        />
+      </a>
+      <div
+        class="image-buttons"
+      >
+        <div
+          class="root image-button"
+          data-testid="favorite-button"
+          role="banner"
+        >
+          <svg
+            class="stroke"
+            height="24"
+            stroke="#f5f5f5"
+            stroke-width="3px"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+            />
+          </svg>
+          <svg
+            class="svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+            />
+          </svg>
+        </div>
+        <div
+          class="root image-button"
+          data-testid="quick-view-button"
+          role="banner"
+        >
+          <svg
+            class="stroke"
+            height="24"
+            stroke="#f5f5f5"
+            stroke-width="3px"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+            />
+            <path
+              d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+            />
+          </svg>
+          <svg
+            class="svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+            />
+            <path
+              d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="prices height-limit"
+      data-testid="product-info:prices"
+    >
+      <span
+        class="root price"
+        data-testid="product-info:price"
+      >
+        539 ₽
+      </span>
+      <span
+        class="root old-price crossed-out"
+        data-testid="product-info:old-price"
+      >
+        595 ₽
+      </span>
+    </div>
+    <a
+      class="link link line-clamp basic-gray87"
+      data-testid="product-info:name-link"
+      href=""
+    >
+      Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный
+    </a>
+    <div
+      class="footer"
+      data-testid="product-info:footer"
+    >
+      <div
+        class="control-wrapper"
+      >
+        <div
+          class="control"
+        >
+          <div
+            class="root size-s"
+            data-testid="stepper"
+            style="width: 122px;"
+          >
+            <svg
+              class="button"
+              data-testid="stepper:minus"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <input
+              class="input"
+              data-testid="stepper:input"
+              value="3"
+            />
+            <svg
+              class="button"
+              data-testid="stepper:plus"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="unit-text"
+          data-testid="product-info:cart-step"
+        >
+          По 5 шт
+        </div>
+        <div
+          class="bottom-text"
+          data-testid="product-info:cart-info"
+        >
+          Комплектация + 50 ₽ при покупке до 20 шт
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    class="item"
+    data-testid="product-slider:item"
+  >
+    <div
+      class="root image-overlay"
+    >
+      <a
+        class="image-link"
+        data-testid="product-info:image-link"
+        href=""
+      >
+        <img
+          class="image"
+          data-testid="product-info:image"
+          src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
+        />
+      </a>
+      <div
+        class="image-buttons"
+      >
+        <div
+          class="root image-button"
+          data-testid="favorite-button"
+          role="banner"
+        >
+          <svg
+            class="stroke"
+            height="24"
+            stroke="#f5f5f5"
+            stroke-width="3px"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+            />
+          </svg>
+          <svg
+            class="svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+            />
+          </svg>
+        </div>
+        <div
+          class="root image-button"
+          data-testid="quick-view-button"
+          role="banner"
+        >
+          <svg
+            class="stroke"
+            height="24"
+            stroke="#f5f5f5"
+            stroke-width="3px"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+            />
+            <path
+              d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+            />
+          </svg>
+          <svg
+            class="svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+            />
+            <path
+              d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="prices height-limit"
+      data-testid="product-info:prices"
+    >
+      <span
+        class="root price"
+        data-testid="product-info:price"
+      >
+        59 922 332 ₽
+      </span>
+      <span
+        class="root old-price crossed-out"
+        data-testid="product-info:old-price"
+      >
+        71 721 323 ₽
+      </span>
+    </div>
+    <a
+      class="link link line-clamp basic-gray87"
+      data-testid="product-info:name-link"
+      href=""
+    >
+      Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый
+    </a>
+    <div
+      class="footer"
+      data-testid="product-info:footer"
+    >
+      <div
+        class="control-wrapper"
+      >
+        <div
+          class="control"
+        >
+          <div
+            class="root size-s"
+            data-testid="stepper"
+            style="width: 122px;"
+          >
+            <svg
+              class="button"
+              data-testid="stepper:minus"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <input
+              class="input"
+              data-testid="stepper:input"
+              value="3"
+            />
+            <svg
+              class="button"
+              data-testid="stepper:plus"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="unit-text"
+          data-testid="product-info:cart-step"
+        >
+          По 5 шт
+        </div>
+        <div
+          class="bottom-text"
+          data-testid="product-info:cart-info"
+        >
+          Комплектация + 50 ₽ при покупке до 20 шт
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    class="item"
+    data-testid="product-slider:item"
+  >
+    <div
+      class="root image-overlay"
+    >
+      <a
+        class="image-link"
+        data-testid="product-info:image-link"
+        href=""
+      >
+        <img
+          class="image"
+          data-testid="product-info:image"
+          src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
+        />
+      </a>
+      <div
+        class="image-buttons"
+      >
+        <div
+          class="root image-button"
+          data-testid="favorite-button"
+          role="banner"
+        >
+          <svg
+            class="stroke"
+            height="24"
+            stroke="#f5f5f5"
+            stroke-width="3px"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+            />
+          </svg>
+          <svg
+            class="svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366zM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25z"
+            />
+          </svg>
+        </div>
+        <div
+          class="root image-button"
+          data-testid="quick-view-button"
+          role="banner"
+        >
+          <svg
+            class="stroke"
+            height="24"
+            stroke="#f5f5f5"
+            stroke-width="3px"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+            />
+            <path
+              d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+            />
+          </svg>
+          <svg
+            class="svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 11.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM11.5 5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.293 16.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414z"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M10.5 9a1 1 0 112 0v5a1 1 0 11-2 0V9z"
+            />
+            <path
+              d="M9 12.5a1 1 0 110-2h5a1 1 0 110 2H9z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="prices height-limit"
+      data-testid="product-info:prices"
+    >
+      <span
+        class="root price"
+        data-testid="product-info:price"
+      >
+        253 ₽
+      </span>
+    </div>
+    <a
+      class="link link line-clamp basic-gray87"
+      data-testid="product-info:name-link"
+      href=""
+    >
+      Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный
+    </a>
+    <div
+      class="footer"
+      data-testid="product-info:footer"
+    >
+      <div
+        class="control-wrapper"
+      >
+        <div
+          class="control"
+        >
+          <div
+            class="root size-s"
+            data-testid="stepper"
+            style="width: 122px;"
+          >
+            <svg
+              class="button"
+              data-testid="stepper:minus"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <input
+              class="input"
+              data-testid="stepper:input"
+              value="3"
+            />
+            <svg
+              class="button"
+              data-testid="stepper:plus"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="unit-text"
+          data-testid="product-info:cart-step"
+        >
+          По 5 шт
+        </div>
+        <div
+          class="bottom-text"
+          data-testid="product-info:cart-info"
+        >
+          Комплектация + 50 ₽ при покупке до 20 шт
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;

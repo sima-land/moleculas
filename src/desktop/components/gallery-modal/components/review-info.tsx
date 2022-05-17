@@ -5,6 +5,7 @@ import classnames from 'classnames/bind';
 import styles from './review-info.module.scss';
 import on from '@sima-land/ui-nucleons/helpers/on';
 import { BoxShadow } from '@sima-land/ui-nucleons/styling/shadows';
+import { CustomScrollbar } from '@sima-land/ui-nucleons/_internal/custom-scrollbar';
 
 export interface ReviewInfoProps {
   rating: number;
@@ -86,14 +87,14 @@ export const ReviewInfo = ({
           )}
 
           {content && opened && (
-            <div className={cx('content', 'opened')}>
+            <CustomScrollbar className={cx('content', 'opened')}>
               <Layout>
                 <div data-testid='review-info:expanded-content'>{content}</div>
                 <Link pseudo onClick={() => setOpened(false)} data-testid='review-info:collapse'>
                   Скрыть отзыв
                 </Link>
               </Layout>
-            </div>
+            </CustomScrollbar>
           )}
 
           {content && !opened && clamped && (
