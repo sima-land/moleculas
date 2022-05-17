@@ -47,8 +47,6 @@
 .content {
   &.opened {
     max-height: calc(314px - 56px - 24px);
-    overflow: hidden;
-    overflow-y: auto;
   }
   &:not(.opened) {
     display: -webkit-box;
