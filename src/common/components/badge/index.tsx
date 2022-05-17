@@ -1,6 +1,6 @@
-import React from 'react';
-import classnames from 'classnames/bind';
+import React, { forwardRef } from 'react';
 import { Timer } from '@sima-land/ui-nucleons/timer';
+import classnames from 'classnames/bind';
 import styles from './badge.module.scss';
 
 export interface BadgeField {
@@ -24,24 +24,17 @@ const cx = classnames.bind(styles);
 /**
  * Шильдик.
  * @param props Свойства.
- * @param props.color Цвет.
- * @param props.fields Содержимое.
- * @param props.href Ссылка.
  * @return Элемент.
  */
-export const Badge = ({
-  className,
-  color,
-  fields,
-  href,
-  style,
-  'data-testid': testId = 'badge',
-  ...restProps
-}: BadgeProps) => {
+export const Badge = forwardRef<HTMLAnchorElement, BadgeProps>(function Badge(
+  { className, color, fields, href, style, 'data-testid': testId = 'badge', ...restProps },
+  ref,
+) {
   const iconOnly = fields.length === 1 && fields[0].type === 'svg-url';
 
   return (
     <a
+      ref={ref}
       {...restProps}
       data-testid={testId}
       href={href}
@@ -69,6 +62,7 @@ export const Badge = ({
               }
 
               acc.push(result);
+
               i < fields.length - 1 && acc.push(' ');
 
               return acc;
@@ -78,7 +72,7 @@ export const Badge = ({
       }
     />
   );
-};
+});
 
 /**
  * Форматирует оставшееся время.

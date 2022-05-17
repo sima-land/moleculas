@@ -1,4 +1,4 @@
-import React, { Children, cloneElement, isValidElement } from 'react';
+import React, { Children, isValidElement, ReactNode } from 'react';
 import { Badge } from '../badge';
 import classnames from 'classnames/bind';
 import styles from './badge-list.module.scss';
@@ -29,11 +29,21 @@ export const BadgeList = ({ children, className, lineLimit, style }: BadgeListPr
     className={cx('root', className, lineLimit && 'line-limit')}
     style={lineLimit ? ({ ...style, '--line-limit': lineLimit } as React.CSSProperties) : style}
   >
-    {Children.toArray(children).reduce<React.ReactElement[]>((list, item) => {
-      isValidElement(item) &&
-        item.type === Badge &&
-        list.push(cloneElement(item, { className: cx('item', item.props.className) }));
-      return list;
-    }, [])}
+    {Children.toArray(children).map(child => {
+      switch (true) {
+        case isValidElement(child) && child.type === Badge:
+          return <BadgeListSlot>{child}</BadgeListSlot>;
+        case isValidElement(child) && child.type === BadgeListSlot:
+          return child;
+        default:
+          return null;
+      }
+    })}
   </div>
 );
+
+function BadgeListSlot({ children }: { children?: ReactNode }) {
+  return <div className={cx('item')}>{children}</div>;
+}
+
+BadgeList.Slot = BadgeListSlot;
