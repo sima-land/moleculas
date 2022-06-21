@@ -327,7 +327,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
               data-testid="product-info:name-link"
               href=""
             >
-              Ножницы портновские, 31 см, цвет чёрный/голубой
+              Ножницы портновские
             </a>
             <div
               class="footer"
@@ -2302,7 +2302,7 @@ Array [
       data-testid="product-info:name-link"
       href=""
     >
-      Ножницы портновские, 31 см, цвет чёрный/голубой
+      Ножницы портновские
     </a>
     <div
       class="footer"

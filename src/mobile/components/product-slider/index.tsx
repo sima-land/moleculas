@@ -1,7 +1,7 @@
 import React, { Children, isValidElement, useMemo, useRef } from 'react';
 import { useIntersection } from '@sima-land/ui-nucleons/hooks/intersection';
 import { TouchSlider } from '@sima-land/ui-nucleons/touch-slider';
-import { ProductInfo, ProductInfoProps } from '../../../common/components/product-info';
+import { ProductInfo, ProductInfoProps, Parts } from '../../../common/components/product-info';
 import styles from './product-slider.module.scss';
 
 export type ItemElement = React.ReactElement<ProductInfoProps, typeof ProductInfo>;
@@ -43,17 +43,19 @@ export const ProductSlider = ({ children, onInViewport, onNeedRequest }: Product
   return (
     <div ref={rootRef} data-testid='product-slider:root'>
       <TouchSlider>
-        {Children.toArray(children).reduce<React.ReactElement[]>((list, item) => {
-          isValidElement(item) &&
-            item.type === ProductInfo &&
-            list.push(
-              <div key={item.key} className={styles.item} data-testid='product-slider:item'>
-                {item}
-              </div>,
-            );
+        <Parts.FooterContext.Provider value={{ className: styles.footer }}>
+          {Children.toArray(children).reduce<React.ReactElement[]>((list, item) => {
+            isValidElement(item) &&
+              item.type === ProductInfo &&
+              list.push(
+                <div key={item.key} className={styles.item} data-testid='product-slider:item'>
+                  {item}
+                </div>,
+              );
 
-          return list;
-        }, [])}
+            return list;
+          }, [])}
+        </Parts.FooterContext.Provider>
       </TouchSlider>
     </div>
   );

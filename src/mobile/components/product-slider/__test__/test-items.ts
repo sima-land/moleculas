@@ -41,7 +41,7 @@ export const items: TestItem[] = [
     trademark: { name: 'Торговая марка Сима-ленд', url: 'https://sima-land.ru' },
   },
   {
-    name: 'Ножницы портновские, 31 см, цвет чёрный/голубой',
+    name: 'Ножницы портновские',
     imageSrc: 'https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798',
     imageAlt: 'Ножницы портновские, 31 см, цвет чёрный/голубой, Ножницы',
     url: '',
