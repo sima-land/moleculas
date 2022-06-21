@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { createContext, useContext } from 'react';
 import { Link, LinkProps } from '@sima-land/ui-nucleons/link';
 import { Price } from '@sima-land/ui-nucleons/price';
 import { StrokedSVG, StrokedSVGProps } from '@sima-land/ui-nucleons/stroked-svg';
@@ -210,16 +210,24 @@ const TrademarkLink = ({
   />
 );
 
+const FooterContext = createContext<{ className?: string }>({
+  className: undefined,
+});
+
 /**
  * Слот - футер.
  * @param props Свойства.
  * @return Элемент.
  */
-const Footer: React.FC = ({ children }) => (
-  <div className={cx('footer')} data-testid='product-info:footer'>
-    {children}
-  </div>
-);
+const Footer: React.FC = ({ children }) => {
+  const { className = cx('footer') } = useContext(FooterContext);
+
+  return (
+    <div className={className} data-testid='product-info:footer'>
+      {children}
+    </div>
+  );
+};
 
 /**
  * Блок управления корзиной.
@@ -318,6 +326,7 @@ export const Parts = {
 
   // компоненты-слоты и компоненты-запчасти, предназначенные для вывода футера (dcе что ниже ссылки на торговую марку)
   Footer,
+  FooterContext,
   CartControl,
   AdultConfirmButton,
   WaitListAddButton,

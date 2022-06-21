@@ -110,6 +110,8 @@ export const Primary = () => {
   );
 };
 
+Primary.storyName = 'Простой пример';
+
 export const Unavailable = () => (
   <Bootstrap>
     <ProductSlider>
@@ -150,6 +152,8 @@ export const Unavailable = () => (
   </Bootstrap>
 );
 
+Unavailable.storyName = 'Недоступные товары';
+
 export const Adult = () => (
   <Bootstrap>
     <ProductSlider>
@@ -188,3 +192,5 @@ export const Adult = () => (
     </ProductSlider>
   </Bootstrap>
 );
+
+Adult.storyName = 'Товары для взрослых';

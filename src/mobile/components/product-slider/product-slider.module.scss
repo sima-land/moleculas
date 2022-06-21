@@ -1,6 +1,8 @@
 @use 'node_modules/@sima-land/ui-nucleons/breakpoints';
 
 .item {
+  display: flex;
+  flex-direction: column;
   position: relative;
   flex-shrink: 0;
   width: 160px;
@@ -10,4 +12,9 @@
   &:not(:last-child) {
     margin-right: 16px;
   }
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: 16px;
 }
