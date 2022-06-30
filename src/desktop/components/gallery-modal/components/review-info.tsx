@@ -41,8 +41,14 @@ export const ReviewInfo = ({
     }
   }, [opened]);
 
+  useEffect(() => {
+    setClamped(false);
+    setOpened(false);
+  }, [content, author]);
+
   useEffect(checkClamp, [content, opened]);
 
+  // @todo что делать если при изменении размеров изменилось состояние обрезания?
   useEffect(() => on(window, 'resize', checkClamp), [content, checkClamp]);
 
   return (
