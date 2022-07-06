@@ -63,6 +63,8 @@
 }
 
 .image-button {
+  width: 24px;
+  height: 24px;
   display: block;
   border: 0;
   outline: 0;
@@ -71,13 +73,39 @@
   --gutter: 8px;
   right: var(--gutter);
   cursor: pointer;
-  &:nth-child(1) {
+  &:not(.positioned) {
+    &:nth-child(1) {
+      top: var(--gutter);
+    }
+    &:nth-child(2) {
+      bottom: var(--gutter);
+    }
+    &:nth-child(3) {
+      top: var(--gutter);
+      left: var(--gutter);
+    }
+    &:nth-child(3) {
+      top: var(--gutter);
+      left: var(--gutter);
+    }
+  }
+  &.left-top {
+    left: var(--gutter);
     top: var(--gutter);
   }
-  &:nth-child(2) {
+  &.left-bottom {
+    left: var(--gutter);
     bottom: var(--gutter);
   }
-  &:nth-child(n + 3) {
+  &.right-top {
+    right: var(--gutter);
+    top: var(--gutter);
+  }
+  &.right-bottom {
+    right: var(--gutter);
+    bottom: var(--gutter);
+  }
+  &:nth-child(n + 5) {
     display: none;
   }
   &:hover {
@@ -141,6 +169,13 @@
   font-size: 14px;
   line-height: 20px;
   color: colors.$basic-gray87;
+}
+
+.secondary-info {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  color: colors.$basic-gray38;
 }
 
 .trademark-link {

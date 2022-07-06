@@ -13,13 +13,14 @@ export const UNAVAILABLE_REASON = {
 } as const;
 
 export const ProductInfo = ({ restriction, children }: ProductInfoProps) => {
-  const { image, badges, prices, title, trademark, footer } = defineSlots(children, {
+  const { image, badges, prices, title, trademark, footer, secondaryInfo } = defineSlots(children, {
     image: Parts.Image,
     badges: Parts.Badges,
     prices: Parts.Prices,
     title: Parts.Title,
     trademark: Parts.TrademarkLink,
     footer: Parts.Footer,
+    secondaryInfo: Parts.SecondaryInfo,
   });
 
   return (
@@ -28,6 +29,7 @@ export const ProductInfo = ({ restriction, children }: ProductInfoProps) => {
       {restriction !== 'adult' && badges}
       {prices}
       {title}
+      {restriction !== 'adult' && secondaryInfo}
       {!restriction && trademark}
       {footer}
     </ProductInfoContext.Provider>

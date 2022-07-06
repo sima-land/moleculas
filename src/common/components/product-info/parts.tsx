@@ -1,5 +1,6 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext, ReactNode, useContext } from 'react';
 import { Link, LinkProps } from '@sima-land/ui-nucleons/link';
+import { HintProps } from '@sima-land/ui-nucleons/hint';
 import { Price } from '@sima-land/ui-nucleons/price';
 import { StrokedSVG, StrokedSVGProps } from '@sima-land/ui-nucleons/stroked-svg';
 import { WithHint } from '@sima-land/ui-nucleons/with-hint';
@@ -31,26 +32,37 @@ const ImageButton = ({
   fill,
   onClick,
   hint,
+  hintDirection = 'left',
   'data-testid': testId,
+  position,
 }: {
   icon: StrokedSVGProps['component'];
   fill?: string;
   onClick?: React.MouseEventHandler<HTMLDivElement>;
   hint?: string;
+  hintDirection?: HintProps['direction'];
   'data-testid'?: string;
+  position?: {
+    x: 'left' | 'right';
+    y: 'top' | 'bottom';
+  };
 }) => {
   const commonProps: StrokedSVGProps & { 'data-testid'?: string } = {
     role: 'banner',
     component: icon,
     fill,
     strokeWidth: 1.5,
-    className: cx('image-button'),
+    className: cx(
+      'image-button',
+      position && 'positioned',
+      position && `${position.x}-${position.y}`,
+    ),
     onClick,
     'data-testid': testId,
   };
 
   return hint ? (
-    <WithHint hint={hint} direction='left'>
+    <WithHint hint={hint} direction={hintDirection}>
       {(ref, toggle) => (
         <StrokedSVG
           {...commonProps}
@@ -315,6 +327,10 @@ const WaitListAddedLink = ({ className, ...props }: LinkProps) => (
   </span>
 );
 
+function SecondaryInfo({ children }: { children: ReactNode }) {
+  return <div className={cx('secondary-info')}>{children}</div>;
+}
+
 export const Parts = {
   // основные компоненты-слоты и компоненты-запчасти
   Image,
@@ -323,6 +339,7 @@ export const Parts = {
   Prices,
   Title,
   TrademarkLink,
+  SecondaryInfo,
 
   // компоненты-слоты и компоненты-запчасти, предназначенные для вывода футера (dcе что ниже ссылки на торговую марку)
   Footer,
