@@ -71,6 +71,8 @@ describe('ProductInfo', () => {
           {data.name}
         </Parts.Title>
 
+        <Parts.SecondaryInfo>Арт. 123456</Parts.SecondaryInfo>
+
         <Parts.TrademarkLink href={data.trademark.url} onClick={spies.trademarkClick}>
           {data.trademark.name}
         </Parts.TrademarkLink>
@@ -112,6 +114,40 @@ describe('ProductInfo', () => {
       expect(spies.quickViewClick).toBeCalledTimes(0);
       fireEvent.click(getByTestId('quick-view-button'));
       expect(spies.quickViewClick).toBeCalledTimes(1);
+    });
+
+    it('positioned image icon-buttons', () => {
+      const { container } = render(
+        <ProductInfo>
+          <Parts.Image href={data.url} src={data.imageSrc} onClick={spies.imageClick}>
+            <Parts.ImageButton
+              icon={QuickViewSVG}
+              position={{ x: 'left', y: 'top' }}
+              onClick={spies.quickViewClick}
+              data-testid='test-favorite-button'
+              hint='Добавить в избранное'
+            />
+            <Parts.ImageButton
+              icon={QuickViewSVG}
+              position={{ x: 'right', y: 'bottom' }}
+              onClick={spies.quickViewClick}
+              data-testid='quick-view-button'
+            />
+          </Parts.Image>
+
+          <Parts.Prices
+            price={data.price}
+            oldPrice={data.oldPrice}
+            currencyGrapheme={data.currencyGrapheme}
+          />
+
+          <Parts.Title href={data.url} onClick={spies.titleClick}>
+            {data.name}
+          </Parts.Title>
+        </ProductInfo>,
+      );
+
+      expect(container).toMatchSnapshot();
     });
 
     it('image icon-button hint', async () => {
