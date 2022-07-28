@@ -29,10 +29,10 @@ export const BadgeList = ({ children, className, lineLimit, style }: BadgeListPr
     className={cx('root', className, lineLimit && 'line-limit')}
     style={lineLimit ? ({ ...style, '--line-limit': lineLimit } as React.CSSProperties) : style}
   >
-    {Children.toArray(children).map(child => {
+    {Children.toArray(children).map((child, index) => {
       switch (true) {
         case isValidElement(child) && child.type === Badge:
-          return <BadgeListSlot>{child}</BadgeListSlot>;
+          return <BadgeListSlot key={index}>{child}</BadgeListSlot>;
         case isValidElement(child) && child.type === BadgeListSlot:
           return child;
         default:

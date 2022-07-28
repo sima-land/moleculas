@@ -1,24 +1,11 @@
 import React from 'react';
-import { act, Simulate } from 'react-dom/test-utils';
-import { mount } from 'enzyme';
 import { Breadcrumbs } from '..';
+import { render, fireEvent, act } from '@testing-library/react';
 import items from './test-items';
-import { render } from 'react-dom';
 
 describe('<Breadcrumbs />', () => {
-  let container: HTMLDivElement;
-
-  beforeEach(() => {
-    container = document.createElement('div');
-    document.body.append(container);
-  });
-
-  afterEach(() => {
-    container && container.remove();
-  });
-
   it('should renders correctly', () => {
-    const wrapper = mount(<Breadcrumbs items={items} />);
+    const wrapper = render(<Breadcrumbs items={items} />);
 
     expect(wrapper).toMatchSnapshot();
   });
@@ -27,30 +14,22 @@ describe('<Breadcrumbs />', () => {
     new Promise<void>(done => {
       const spy = jest.fn();
 
-      render(<Breadcrumbs items={items} onSiblingsPopupOpen={spy} />, container);
-
-      expect(container.querySelectorAll('[data-testid="plate"]')).toHaveLength(0);
-
-      act(() => {
-        Simulate.click(
-          container.querySelector('[data-testid="breadcrumb:siblings-opener"]') as any,
-        );
-      });
-
-      expect(container.querySelectorAll('[data-testid="plate"]')).toHaveLength(1);
-      expect(container.querySelectorAll('[data-testid="breadcrumb-sibling"]')).toHaveLength(7);
-      expect(container.querySelectorAll('[data-testid="breadcrumb:siblings-closer"]')).toHaveLength(
-        1,
+      const { getByTestId, queryAllByTestId } = render(
+        <Breadcrumbs items={items} onSiblingsPopupOpen={spy} />,
       );
 
-      act(() => {
-        Simulate.click(
-          container.querySelector('[data-testid="breadcrumb:siblings-closer"]') as any,
-        );
-      });
+      expect(queryAllByTestId('plate')).toHaveLength(0);
+
+      fireEvent.click(queryAllByTestId('breadcrumb:siblings-opener')[0]);
+
+      expect(queryAllByTestId('plate')).toHaveLength(1);
+      expect(queryAllByTestId('breadcrumb-sibling')).toHaveLength(7);
+      expect(queryAllByTestId('breadcrumb:siblings-closer')).toHaveLength(1);
+
+      fireEvent.click(getByTestId('breadcrumb:siblings-closer'));
 
       setTimeout(() => {
-        expect(container.querySelectorAll('[data-testid="plate"]')).toHaveLength(0);
+        expect(queryAllByTestId('plate')).toHaveLength(0);
         done();
       }, 500);
     }));
@@ -59,24 +38,20 @@ describe('<Breadcrumbs />', () => {
     new Promise<void>(resolve => {
       const spy = jest.fn();
 
-      render(<Breadcrumbs items={items} onSiblingsPopupOpen={spy} />, container);
+      const { queryAllByTestId } = render(<Breadcrumbs items={items} onSiblingsPopupOpen={spy} />);
 
-      expect(container.querySelectorAll('[data-testid="plate"]')).toHaveLength(0);
+      expect(queryAllByTestId('plate')).toHaveLength(0);
 
-      act(() => {
-        Simulate.click(
-          container.querySelector('[data-testid="breadcrumb:siblings-opener"]') as any,
-        );
-      });
+      fireEvent.click(queryAllByTestId('breadcrumb:siblings-opener')[0]);
 
-      expect(container.querySelectorAll('[data-testid="plate"]')).toHaveLength(1);
+      expect(queryAllByTestId('plate')).toHaveLength(1);
 
       act(() => {
         window.dispatchEvent(new MouseEvent('mousedown'));
       });
 
       setTimeout(() => {
-        expect(container.querySelectorAll('[data-testid="plate"]')).toHaveLength(0);
+        expect(queryAllByTestId('plate')).toHaveLength(0);
         resolve();
       }, 500);
     }));
@@ -84,7 +59,7 @@ describe('<Breadcrumbs />', () => {
   it('should open siblings popup with fetching state', () => {
     const spy = jest.fn();
 
-    render(
+    const { container, queryAllByTestId } = render(
       <Breadcrumbs
         items={[
           {
@@ -97,22 +72,19 @@ describe('<Breadcrumbs />', () => {
         ]}
         onSiblingsPopupOpen={spy}
       />,
-      container,
     );
 
-    expect(container.querySelectorAll('[data-testid="plate"]')).toHaveLength(0);
+    expect(queryAllByTestId('plate')).toHaveLength(0);
 
-    act(() => {
-      Simulate.click(container.querySelector('[data-testid="breadcrumb:siblings-opener"]') as any);
-    });
+    fireEvent.click(queryAllByTestId('breadcrumb:siblings-opener')[0]);
 
-    expect(container.querySelectorAll('[data-testid="plate"]')).toHaveLength(1);
-    expect(container.querySelectorAll('[data-testid="breadcrumb-sibling"]')).toHaveLength(0);
+    expect(queryAllByTestId('plate')).toHaveLength(1);
+    expect(queryAllByTestId('breadcrumb-sibling"]')).toHaveLength(0);
     expect(container.querySelectorAll('.sibling-placeholder')).toHaveLength(8);
   });
 
   it('should render active siblings', () => {
-    const wrapper = mount(
+    const { queryAllByTestId, getByTestId } = render(
       <Breadcrumbs
         items={[
           {
@@ -141,29 +113,20 @@ describe('<Breadcrumbs />', () => {
       />,
     );
 
-    expect(wrapper.find('[data-testid="plate"]')).toHaveLength(0);
+    expect(queryAllByTestId('plate')).toHaveLength(0);
 
-    act(() => {
-      wrapper.find('svg[data-testid="breadcrumb:siblings-opener"]').simulate('click');
-    });
-    wrapper.update();
+    fireEvent.click(getByTestId('breadcrumb:siblings-opener'));
 
-    expect(wrapper.find('[data-testid="plate"]')).toHaveLength(1);
+    expect(queryAllByTestId('plate')).toHaveLength(1);
 
-    expect(wrapper.find('[data-testid="breadcrumb-sibling"]')).toHaveLength(3);
-    expect(wrapper.find('[data-testid="breadcrumb-sibling"]').at(0).find('.active')).toHaveLength(
-      0,
-    );
-    expect(wrapper.find('[data-testid="breadcrumb-sibling"]').at(1).find('.active')).toHaveLength(
-      1,
-    );
-    expect(wrapper.find('[data-testid="breadcrumb-sibling"]').at(0).find('.active')).toHaveLength(
-      0,
-    );
+    expect(queryAllByTestId('breadcrumb-sibling')).toHaveLength(3);
+    expect(queryAllByTestId('breadcrumb-sibling')[0].querySelectorAll('.active')).toHaveLength(0);
+    expect(queryAllByTestId('breadcrumb-sibling')[1].querySelectorAll('.active')).toHaveLength(1);
+    expect(queryAllByTestId('breadcrumb-sibling')[2].querySelectorAll('.active')).toHaveLength(0);
   });
 
   it('should handle ready siblings without data', () => {
-    const wrapper = mount(
+    const { queryAllByTestId, getByTestId } = render(
       <Breadcrumbs
         items={[
           {
@@ -179,14 +142,43 @@ describe('<Breadcrumbs />', () => {
       />,
     );
 
-    expect(wrapper.find('[data-testid="plate"]')).toHaveLength(0);
+    expect(queryAllByTestId('plate')).toHaveLength(0);
 
-    act(() => {
-      wrapper.find('svg[data-testid="breadcrumb:siblings-opener"]').simulate('click');
-    });
-    wrapper.update();
+    fireEvent.click(getByTestId('breadcrumb:siblings-opener'));
 
-    expect(wrapper.find('[data-testid="plate"]')).toHaveLength(1);
-    expect(wrapper.find('[data-testid="breadcrumb-sibling"]')).toHaveLength(0);
+    expect(queryAllByTestId('plate')).toHaveLength(1);
+    expect(queryAllByTestId('breadcrumb-sibling"]')).toHaveLength(0);
+  });
+
+  it('should render item without url properly', () => {
+    const { queryAllByTestId } = render(
+      <Breadcrumbs
+        items={[
+          {
+            name: 'First breadcrumb',
+            url: 'https://first.breadcrumb/',
+            siblings: {
+              state: 'ready',
+              data: undefined,
+            },
+          },
+          {
+            name: 'Second breadcrumb',
+            siblings: {
+              state: 'ready',
+              data: undefined,
+            },
+          },
+        ]}
+      />,
+    );
+
+    const [first, second] = queryAllByTestId('breadcrumb');
+
+    expect(first.querySelector('a')?.getAttribute('href')).toBe('https://first.breadcrumb/');
+    expect(first.querySelector('a')?.getAttribute('role')).toBe(null);
+
+    expect(second.querySelector('a')?.getAttribute('href')).toBe(null);
+    expect(second.querySelector('a')?.getAttribute('role')).toBe('button');
   });
 });

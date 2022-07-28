@@ -86,7 +86,7 @@ const Breadcrumb = ({
   }, [withPopup]);
 
   const selfName = (
-    <Link color='basic-gray87' href={data.url}>
+    <Link color='basic-gray87' href={data.url} pseudo={!data.url}>
       {data.name}
     </Link>
   );

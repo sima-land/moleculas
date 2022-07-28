@@ -42,7 +42,7 @@ export const Badge = forwardRef<HTMLAnchorElement, BadgeProps>(function Badge(
       className={cx('root', iconOnly && 'icon-only', href && 'interactive', className)}
       children={
         iconOnly ? (
-          <img className={cx('icon')} src={fields[0].value} />
+          <img className={cx('icon')} src={fields[0].value} alt='' />
         ) : (
           // вложенный span нужен для того чтобы объединить `display: inline-flex` и `text-overflow: ellipsis`
           <span className={cx('content')}>
