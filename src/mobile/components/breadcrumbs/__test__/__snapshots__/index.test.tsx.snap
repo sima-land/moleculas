@@ -1,159 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Breadcrumbs should renders correctly 1`] = `
-<Breadcrumbs
-  items={
-    Array [
-      Object {
-        "name": "Каталог",
-        "url": "#",
-      },
-      Object {
-        "name": "Одежда и обувь",
-        "url": "#",
-      },
-      Object {
-        "name": "Женская одежда",
-        "url": "#",
-      },
-      Object {
-        "name": "Аксессуары",
-        "url": "#",
-      },
-      Object {
-        "name": "Брендированные стойки «Этель» и «Доляна» в подарок за покупку кухонного текстиля",
-        "url": "#",
-      },
-      Object {
-        "name": "Головные уборы",
-        "url": "#",
-      },
-      Object {
-        "name": "Кепки, бейсболки",
-        "url": "#",
-      },
-      Object {
-        "name": "Текущая страница",
-        "url": "#",
-      },
-    ]
-  }
->
+<div>
   <nav
-    className="root"
+    class="root"
   >
-    <ForwardRef(Link)
-      className="item"
-      color="basic-gray87"
+    <a
+      class="link item basic-gray87"
+      data-testid="breadcrumb"
       href="#"
-      key="0"
     >
-      <a
-        className="link item basic-gray87"
-        data-testid="anchor"
-        href="#"
-      >
-        Каталог
-      </a>
-    </ForwardRef(Link)>
-    <ForwardRef(Link)
-      className="item"
-      color="basic-gray87"
+      Каталог
+    </a>
+    <a
+      class="link item basic-gray87"
+      data-testid="breadcrumb"
       href="#"
-      key="1"
     >
-      <a
-        className="link item basic-gray87"
-        data-testid="anchor"
-        href="#"
-      >
-        Одежда и обувь
-      </a>
-    </ForwardRef(Link)>
-    <ForwardRef(Link)
-      className="item"
-      color="basic-gray87"
+      Одежда и обувь
+    </a>
+    <a
+      class="link item basic-gray87"
+      data-testid="breadcrumb"
       href="#"
-      key="2"
     >
-      <a
-        className="link item basic-gray87"
-        data-testid="anchor"
-        href="#"
-      >
-        Женская одежда
-      </a>
-    </ForwardRef(Link)>
-    <ForwardRef(Link)
-      className="item"
-      color="basic-gray87"
+      Женская одежда
+    </a>
+    <a
+      class="link item basic-gray87"
+      data-testid="breadcrumb"
       href="#"
-      key="3"
     >
-      <a
-        className="link item basic-gray87"
-        data-testid="anchor"
-        href="#"
-      >
-        Аксессуары
-      </a>
-    </ForwardRef(Link)>
-    <ForwardRef(Link)
-      className="item"
-      color="basic-gray87"
+      Аксессуары
+    </a>
+    <a
+      class="link item basic-gray87"
+      data-testid="breadcrumb"
       href="#"
-      key="4"
     >
-      <a
-        className="link item basic-gray87"
-        data-testid="anchor"
-        href="#"
-      >
-        Брендированные стойки «Этель» и «Доляна» в подарок за покупку кухонного текстиля
-      </a>
-    </ForwardRef(Link)>
-    <ForwardRef(Link)
-      className="item"
-      color="basic-gray87"
+      Брендированные стойки «Этель» и «Доляна» в подарок за покупку кухонного текстиля
+    </a>
+    <a
+      class="link item basic-gray87"
+      data-testid="breadcrumb"
       href="#"
-      key="5"
     >
-      <a
-        className="link item basic-gray87"
-        data-testid="anchor"
-        href="#"
-      >
-        Головные уборы
-      </a>
-    </ForwardRef(Link)>
-    <ForwardRef(Link)
-      className="item"
-      color="basic-gray87"
+      Головные уборы
+    </a>
+    <a
+      class="link item basic-gray87"
+      data-testid="breadcrumb"
       href="#"
-      key="6"
     >
-      <a
-        className="link item basic-gray87"
-        data-testid="anchor"
-        href="#"
-      >
-        Кепки, бейсболки
-      </a>
-    </ForwardRef(Link)>
-    <ForwardRef(Link)
-      className="item"
-      color="basic-gray87"
+      Кепки, бейсболки
+    </a>
+    <a
+      class="link item basic-gray87"
+      data-testid="breadcrumb"
       href="#"
-      key="7"
     >
-      <a
-        className="link item basic-gray87"
-        data-testid="anchor"
-        href="#"
-      >
-        Текущая страница
-      </a>
-    </ForwardRef(Link)>
+      Текущая страница
+    </a>
   </nav>
-</Breadcrumbs>
+</div>
 `;

@@ -26,6 +26,7 @@ exports[`<Badge /> should renders correctly 2`] = `
     style="--badge-color: #ff7200;"
   >
     <img
+      alt=""
       class="icon"
       src="https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg"
     />

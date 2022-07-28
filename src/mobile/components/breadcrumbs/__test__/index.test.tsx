@@ -1,10 +1,10 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react';
 import { Breadcrumbs } from '..';
 
 describe('Breadcrumbs', () => {
   it('should renders correctly', () => {
-    const wrapper = mount(
+    const { container } = render(
       <Breadcrumbs
         items={[
           {
@@ -43,6 +43,31 @@ describe('Breadcrumbs', () => {
       />,
     );
 
-    expect(wrapper).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render item without url properly', () => {
+    const { queryAllByTestId } = render(
+      <Breadcrumbs
+        items={[
+          {
+            name: 'First breadcrumb',
+            url: 'https://first.breadcrumb/',
+          },
+          {
+            name: 'Second breadcrumb',
+            url: undefined,
+          },
+        ]}
+      />,
+    );
+
+    const [first, second] = queryAllByTestId('breadcrumb');
+
+    expect(first.getAttribute('href')).toBe('https://first.breadcrumb/');
+    expect(first.getAttribute('role')).toBe(null);
+
+    expect(second.getAttribute('href')).toBe(null);
+    expect(second.getAttribute('role')).toBe('button');
   });
 });

@@ -1,284 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Breadcrumbs /> should renders correctly 1`] = `
-<Breadcrumbs
-  items={
-    Array [
-      Object {
-        "name": "Root",
-        "url": "/root_path",
-      },
-      Object {
-        "name": "First Level",
-        "siblings": Object {
-          "data": Array [
-            Object {
-              "name": "First Level Previous Sibling",
-              "url": "/first_level_previous_sibling_path",
-            },
-            Object {
-              "isActive": true,
-              "name": "First Level",
-              "url": "/first_level_path",
-            },
-            Object {
-              "name": "First Level Next Sibling",
-              "url": "/first_level_next_sibling_path",
-            },
-            Object {
-              "name": "First Level Next Sibling",
-              "url": "/first_level_next_sibling_path",
-            },
-            Object {
-              "name": "First Level Next Sibling",
-              "url": "/first_level_next_sibling_path",
-            },
-            Object {
-              "name": "First Level Next Sibling",
-              "url": "/first_level_next_sibling_path",
-            },
-            Object {
-              "name": "First Level Next Sibling",
-              "url": "/first_level_next_sibling_path",
-            },
-          ],
-          "state": "ready",
-        },
-        "url": "/first_level_path",
-      },
-      Object {
-        "name": "Second Level very long title here",
-        "siblings": Object {
-          "data": Array [
-            Object {
-              "name": "Second Level Previous Sibling",
-              "url": "/second_level_previous_sibling_path",
-            },
-            Object {
-              "isActive": true,
-              "name": "Second Level",
-              "url": "/second_level_path",
-            },
-          ],
-          "state": "ready",
-        },
-        "url": "/second_level_path",
-      },
-      Object {
-        "name": "Third Level",
-        "siblings": Object {
-          "data": Array [
-            Object {
-              "isActive": true,
-              "name": "Third Level",
-              "url": "/third_level_path",
-            },
-            Object {
-              "name": "Third Level Next Sibling",
-              "url": "/third_level_next_sibling_path",
-            },
-          ],
-          "state": "ready",
-        },
-        "url": "/third_level_path",
-      },
-      Object {
-        "name": "Fourth Level",
-        "siblings": Object {
-          "data": Array [
-            Object {
-              "name": "Fourth Level Previous Sibling",
-              "url": "/fourth_level_previous_sibling_path",
-            },
-            Object {
-              "isActive": true,
-              "name": "Fourth Level",
-              "url": "/fourth_level_path",
-            },
-            Object {
-              "name": "Fourth Level Next Sibling",
-              "url": "/fourth_level_next_sibling_path",
-            },
-            Object {
-              "name": "Fourth Level Next Sibling",
-              "url": "/fourth_level_next_sibling_path",
-            },
-            Object {
-              "name": "Fourth Level Next Sibling",
-              "url": "/Fourth_level_next_sibling_path",
-            },
-            Object {
-              "name": "Fourth Level Next Sibling",
-              "url": "/fourth_level_next_sibling_path",
-            },
-            Object {
-              "name": "Fourth Level Next Sibling",
-              "url": "/fourth_level_next_sibling_path",
-            },
-          ],
-          "state": "fetching",
-        },
-        "url": "/first_level_path",
-      },
-      Object {
-        "name": "Fifth Level",
-        "siblings": Object {
-          "data": Array [
-            Object {
-              "name": "Fifth Level Previous Sibling",
-              "url": "/fifth_level_previous_sibling_path",
-            },
-            Object {
-              "isActive": true,
-              "name": "Fifth Level",
-              "url": "/fifth_level_path",
-            },
-          ],
-          "state": "ready",
-        },
-        "url": "/fifth_level_path",
-      },
-      Object {
-        "name": "Sixth Level",
-        "siblings": Object {
-          "data": Array [
-            Object {
-              "isActive": true,
-              "name": "Sixth Level",
-              "url": "/sixth_level_path",
-            },
-            Object {
-              "name": "Sixth Level Next Sibling",
-              "url": "/sixth_level_next_sibling_path",
-            },
-          ],
-          "state": "ready",
-        },
-        "url": "/sixth_level_path",
-      },
-    ]
-  }
->
-  <nav
-    className="root"
-    data-testid="breadcrumbs"
-  >
-    <Breadcrumb
-      data={
-        Object {
-          "name": "Root",
-          "url": "/root_path",
-        }
-      }
-      isSiblingActive={[Function]}
-      key="0"
-      onSiblingsPopupOpen={[Function]}
-    >
-      <div
-        className="breadcrumb"
-        data-testid="breadcrumb"
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <nav
+        class="root"
+        data-testid="breadcrumbs"
       >
-        <ForwardRef(Link)
-          color="basic-gray87"
-          href="/root_path"
+        <div
+          class="breadcrumb"
+          data-testid="breadcrumb"
         >
           <a
-            className="link basic-gray87"
+            class="link basic-gray87"
             data-testid="anchor"
             href="/root_path"
           >
             Root
           </a>
-        </ForwardRef(Link)>
-      </div>
-    </Breadcrumb>
-    <Breadcrumb
-      data={
-        Object {
-          "name": "First Level",
-          "siblings": Object {
-            "data": Array [
-              Object {
-                "name": "First Level Previous Sibling",
-                "url": "/first_level_previous_sibling_path",
-              },
-              Object {
-                "isActive": true,
-                "name": "First Level",
-                "url": "/first_level_path",
-              },
-              Object {
-                "name": "First Level Next Sibling",
-                "url": "/first_level_next_sibling_path",
-              },
-              Object {
-                "name": "First Level Next Sibling",
-                "url": "/first_level_next_sibling_path",
-              },
-              Object {
-                "name": "First Level Next Sibling",
-                "url": "/first_level_next_sibling_path",
-              },
-              Object {
-                "name": "First Level Next Sibling",
-                "url": "/first_level_next_sibling_path",
-              },
-              Object {
-                "name": "First Level Next Sibling",
-                "url": "/first_level_next_sibling_path",
-              },
-            ],
-            "state": "ready",
-          },
-          "url": "/first_level_path",
-        }
-      }
-      isSiblingActive={[Function]}
-      key="1"
-      onSiblingsPopupOpen={[Function]}
-    >
-      <div
-        className="breadcrumb"
-        data-testid="breadcrumb"
-      >
-        <ForwardRef(Link)
-          color="basic-gray87"
-          href="/first_level_path"
+        </div>
+        <div
+          class="breadcrumb"
+          data-testid="breadcrumb"
         >
           <a
-            className="link basic-gray87"
+            class="link basic-gray87"
             data-testid="anchor"
             href="/first_level_path"
           >
             First Level
           </a>
-        </ForwardRef(Link)>
-        <ForwardRef(SvgSquareArrowDown)
-          className="toggle-icon"
-          data-testid="breadcrumb:siblings-opener"
-          onClick={[Function]}
-        >
           <svg
-            className="toggle-icon"
+            class="toggle-icon"
             data-testid="breadcrumb:siblings-opener"
             fill="none"
-            height={16}
-            onClick={[Function]}
+            height="16"
             viewBox="0 0 16 16"
-            width={16}
+            width="16"
             xmlns="http://www.w3.org/2000/svg"
           >
             <g
-              opacity={0.3}
+              opacity="0.3"
             >
               <mask
                 fill="#fff"
                 id="square-arrow-down_svg__path-1-inside-1"
               >
                 <path
-                  clipRule="evenodd"
+                  clip-rule="evenodd"
                   d="M3 3h10v10H3V3zM2 3a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm3.38 3.175a.5.5 0 00-.76.65l3 3.5a.5.5 0 00.76 0l3-3.5a.5.5 0 10-.76-.65L8 9.232 5.38 6.175z"
-                  fillRule="evenodd"
+                  fill-rule="evenodd"
                 />
               </mask>
               <path
@@ -288,105 +61,38 @@ exports[`<Breadcrumbs /> should renders correctly 1`] = `
               />
             </g>
           </svg>
-        </ForwardRef(SvgSquareArrowDown)>
-        <CSSTransition
-          classNames={
-            Object {
-              "enter": "fade-enter",
-              "enterActive": "fade-enter-active",
-              "exit": "fade-exit",
-              "exitActive": "fade-exit-active",
-            }
-          }
-          in={false}
-          timeout={200}
-          unmountOnExit={true}
-        >
-          <Transition
-            appear={false}
-            enter={true}
-            exit={true}
-            in={false}
-            mountOnEnter={false}
-            onEnter={[Function]}
-            onEntered={[Function]}
-            onEntering={[Function]}
-            onExit={[Function]}
-            onExited={[Function]}
-            onExiting={[Function]}
-            timeout={200}
-            unmountOnExit={true}
-          />
-        </CSSTransition>
-      </div>
-    </Breadcrumb>
-    <Breadcrumb
-      data={
-        Object {
-          "name": "Second Level very long title here",
-          "siblings": Object {
-            "data": Array [
-              Object {
-                "name": "Second Level Previous Sibling",
-                "url": "/second_level_previous_sibling_path",
-              },
-              Object {
-                "isActive": true,
-                "name": "Second Level",
-                "url": "/second_level_path",
-              },
-            ],
-            "state": "ready",
-          },
-          "url": "/second_level_path",
-        }
-      }
-      isSiblingActive={[Function]}
-      key="2"
-      onSiblingsPopupOpen={[Function]}
-    >
-      <div
-        className="breadcrumb"
-        data-testid="breadcrumb"
-      >
-        <ForwardRef(Link)
-          color="basic-gray87"
-          href="/second_level_path"
+        </div>
+        <div
+          class="breadcrumb"
+          data-testid="breadcrumb"
         >
           <a
-            className="link basic-gray87"
+            class="link basic-gray87"
             data-testid="anchor"
             href="/second_level_path"
           >
             Second Level very long title here
           </a>
-        </ForwardRef(Link)>
-        <ForwardRef(SvgSquareArrowDown)
-          className="toggle-icon"
-          data-testid="breadcrumb:siblings-opener"
-          onClick={[Function]}
-        >
           <svg
-            className="toggle-icon"
+            class="toggle-icon"
             data-testid="breadcrumb:siblings-opener"
             fill="none"
-            height={16}
-            onClick={[Function]}
+            height="16"
             viewBox="0 0 16 16"
-            width={16}
+            width="16"
             xmlns="http://www.w3.org/2000/svg"
           >
             <g
-              opacity={0.3}
+              opacity="0.3"
             >
               <mask
                 fill="#fff"
                 id="square-arrow-down_svg__path-1-inside-1"
               >
                 <path
-                  clipRule="evenodd"
+                  clip-rule="evenodd"
                   d="M3 3h10v10H3V3zM2 3a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm3.38 3.175a.5.5 0 00-.76.65l3 3.5a.5.5 0 00.76 0l3-3.5a.5.5 0 10-.76-.65L8 9.232 5.38 6.175z"
-                  fillRule="evenodd"
+                  fill-rule="evenodd"
                 />
               </mask>
               <path
@@ -396,105 +102,38 @@ exports[`<Breadcrumbs /> should renders correctly 1`] = `
               />
             </g>
           </svg>
-        </ForwardRef(SvgSquareArrowDown)>
-        <CSSTransition
-          classNames={
-            Object {
-              "enter": "fade-enter",
-              "enterActive": "fade-enter-active",
-              "exit": "fade-exit",
-              "exitActive": "fade-exit-active",
-            }
-          }
-          in={false}
-          timeout={200}
-          unmountOnExit={true}
-        >
-          <Transition
-            appear={false}
-            enter={true}
-            exit={true}
-            in={false}
-            mountOnEnter={false}
-            onEnter={[Function]}
-            onEntered={[Function]}
-            onEntering={[Function]}
-            onExit={[Function]}
-            onExited={[Function]}
-            onExiting={[Function]}
-            timeout={200}
-            unmountOnExit={true}
-          />
-        </CSSTransition>
-      </div>
-    </Breadcrumb>
-    <Breadcrumb
-      data={
-        Object {
-          "name": "Third Level",
-          "siblings": Object {
-            "data": Array [
-              Object {
-                "isActive": true,
-                "name": "Third Level",
-                "url": "/third_level_path",
-              },
-              Object {
-                "name": "Third Level Next Sibling",
-                "url": "/third_level_next_sibling_path",
-              },
-            ],
-            "state": "ready",
-          },
-          "url": "/third_level_path",
-        }
-      }
-      isSiblingActive={[Function]}
-      key="3"
-      onSiblingsPopupOpen={[Function]}
-    >
-      <div
-        className="breadcrumb"
-        data-testid="breadcrumb"
-      >
-        <ForwardRef(Link)
-          color="basic-gray87"
-          href="/third_level_path"
+        </div>
+        <div
+          class="breadcrumb"
+          data-testid="breadcrumb"
         >
           <a
-            className="link basic-gray87"
+            class="link basic-gray87"
             data-testid="anchor"
             href="/third_level_path"
           >
             Third Level
           </a>
-        </ForwardRef(Link)>
-        <ForwardRef(SvgSquareArrowDown)
-          className="toggle-icon"
-          data-testid="breadcrumb:siblings-opener"
-          onClick={[Function]}
-        >
           <svg
-            className="toggle-icon"
+            class="toggle-icon"
             data-testid="breadcrumb:siblings-opener"
             fill="none"
-            height={16}
-            onClick={[Function]}
+            height="16"
             viewBox="0 0 16 16"
-            width={16}
+            width="16"
             xmlns="http://www.w3.org/2000/svg"
           >
             <g
-              opacity={0.3}
+              opacity="0.3"
             >
               <mask
                 fill="#fff"
                 id="square-arrow-down_svg__path-1-inside-1"
               >
                 <path
-                  clipRule="evenodd"
+                  clip-rule="evenodd"
                   d="M3 3h10v10H3V3zM2 3a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm3.38 3.175a.5.5 0 00-.76.65l3 3.5a.5.5 0 00.76 0l3-3.5a.5.5 0 10-.76-.65L8 9.232 5.38 6.175z"
-                  fillRule="evenodd"
+                  fill-rule="evenodd"
                 />
               </mask>
               <path
@@ -504,125 +143,38 @@ exports[`<Breadcrumbs /> should renders correctly 1`] = `
               />
             </g>
           </svg>
-        </ForwardRef(SvgSquareArrowDown)>
-        <CSSTransition
-          classNames={
-            Object {
-              "enter": "fade-enter",
-              "enterActive": "fade-enter-active",
-              "exit": "fade-exit",
-              "exitActive": "fade-exit-active",
-            }
-          }
-          in={false}
-          timeout={200}
-          unmountOnExit={true}
-        >
-          <Transition
-            appear={false}
-            enter={true}
-            exit={true}
-            in={false}
-            mountOnEnter={false}
-            onEnter={[Function]}
-            onEntered={[Function]}
-            onEntering={[Function]}
-            onExit={[Function]}
-            onExited={[Function]}
-            onExiting={[Function]}
-            timeout={200}
-            unmountOnExit={true}
-          />
-        </CSSTransition>
-      </div>
-    </Breadcrumb>
-    <Breadcrumb
-      data={
-        Object {
-          "name": "Fourth Level",
-          "siblings": Object {
-            "data": Array [
-              Object {
-                "name": "Fourth Level Previous Sibling",
-                "url": "/fourth_level_previous_sibling_path",
-              },
-              Object {
-                "isActive": true,
-                "name": "Fourth Level",
-                "url": "/fourth_level_path",
-              },
-              Object {
-                "name": "Fourth Level Next Sibling",
-                "url": "/fourth_level_next_sibling_path",
-              },
-              Object {
-                "name": "Fourth Level Next Sibling",
-                "url": "/fourth_level_next_sibling_path",
-              },
-              Object {
-                "name": "Fourth Level Next Sibling",
-                "url": "/Fourth_level_next_sibling_path",
-              },
-              Object {
-                "name": "Fourth Level Next Sibling",
-                "url": "/fourth_level_next_sibling_path",
-              },
-              Object {
-                "name": "Fourth Level Next Sibling",
-                "url": "/fourth_level_next_sibling_path",
-              },
-            ],
-            "state": "fetching",
-          },
-          "url": "/first_level_path",
-        }
-      }
-      isSiblingActive={[Function]}
-      key="4"
-      onSiblingsPopupOpen={[Function]}
-    >
-      <div
-        className="breadcrumb"
-        data-testid="breadcrumb"
-      >
-        <ForwardRef(Link)
-          color="basic-gray87"
-          href="/first_level_path"
+        </div>
+        <div
+          class="breadcrumb"
+          data-testid="breadcrumb"
         >
           <a
-            className="link basic-gray87"
+            class="link basic-gray87"
             data-testid="anchor"
             href="/first_level_path"
           >
             Fourth Level
           </a>
-        </ForwardRef(Link)>
-        <ForwardRef(SvgSquareArrowDown)
-          className="toggle-icon"
-          data-testid="breadcrumb:siblings-opener"
-          onClick={[Function]}
-        >
           <svg
-            className="toggle-icon"
+            class="toggle-icon"
             data-testid="breadcrumb:siblings-opener"
             fill="none"
-            height={16}
-            onClick={[Function]}
+            height="16"
             viewBox="0 0 16 16"
-            width={16}
+            width="16"
             xmlns="http://www.w3.org/2000/svg"
           >
             <g
-              opacity={0.3}
+              opacity="0.3"
             >
               <mask
                 fill="#fff"
                 id="square-arrow-down_svg__path-1-inside-1"
               >
                 <path
-                  clipRule="evenodd"
+                  clip-rule="evenodd"
                   d="M3 3h10v10H3V3zM2 3a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm3.38 3.175a.5.5 0 00-.76.65l3 3.5a.5.5 0 00.76 0l3-3.5a.5.5 0 10-.76-.65L8 9.232 5.38 6.175z"
-                  fillRule="evenodd"
+                  fill-rule="evenodd"
                 />
               </mask>
               <path
@@ -632,105 +184,38 @@ exports[`<Breadcrumbs /> should renders correctly 1`] = `
               />
             </g>
           </svg>
-        </ForwardRef(SvgSquareArrowDown)>
-        <CSSTransition
-          classNames={
-            Object {
-              "enter": "fade-enter",
-              "enterActive": "fade-enter-active",
-              "exit": "fade-exit",
-              "exitActive": "fade-exit-active",
-            }
-          }
-          in={false}
-          timeout={200}
-          unmountOnExit={true}
-        >
-          <Transition
-            appear={false}
-            enter={true}
-            exit={true}
-            in={false}
-            mountOnEnter={false}
-            onEnter={[Function]}
-            onEntered={[Function]}
-            onEntering={[Function]}
-            onExit={[Function]}
-            onExited={[Function]}
-            onExiting={[Function]}
-            timeout={200}
-            unmountOnExit={true}
-          />
-        </CSSTransition>
-      </div>
-    </Breadcrumb>
-    <Breadcrumb
-      data={
-        Object {
-          "name": "Fifth Level",
-          "siblings": Object {
-            "data": Array [
-              Object {
-                "name": "Fifth Level Previous Sibling",
-                "url": "/fifth_level_previous_sibling_path",
-              },
-              Object {
-                "isActive": true,
-                "name": "Fifth Level",
-                "url": "/fifth_level_path",
-              },
-            ],
-            "state": "ready",
-          },
-          "url": "/fifth_level_path",
-        }
-      }
-      isSiblingActive={[Function]}
-      key="5"
-      onSiblingsPopupOpen={[Function]}
-    >
-      <div
-        className="breadcrumb"
-        data-testid="breadcrumb"
-      >
-        <ForwardRef(Link)
-          color="basic-gray87"
-          href="/fifth_level_path"
+        </div>
+        <div
+          class="breadcrumb"
+          data-testid="breadcrumb"
         >
           <a
-            className="link basic-gray87"
+            class="link basic-gray87"
             data-testid="anchor"
             href="/fifth_level_path"
           >
             Fifth Level
           </a>
-        </ForwardRef(Link)>
-        <ForwardRef(SvgSquareArrowDown)
-          className="toggle-icon"
-          data-testid="breadcrumb:siblings-opener"
-          onClick={[Function]}
-        >
           <svg
-            className="toggle-icon"
+            class="toggle-icon"
             data-testid="breadcrumb:siblings-opener"
             fill="none"
-            height={16}
-            onClick={[Function]}
+            height="16"
             viewBox="0 0 16 16"
-            width={16}
+            width="16"
             xmlns="http://www.w3.org/2000/svg"
           >
             <g
-              opacity={0.3}
+              opacity="0.3"
             >
               <mask
                 fill="#fff"
                 id="square-arrow-down_svg__path-1-inside-1"
               >
                 <path
-                  clipRule="evenodd"
+                  clip-rule="evenodd"
                   d="M3 3h10v10H3V3zM2 3a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm3.38 3.175a.5.5 0 00-.76.65l3 3.5a.5.5 0 00.76 0l3-3.5a.5.5 0 10-.76-.65L8 9.232 5.38 6.175z"
-                  fillRule="evenodd"
+                  fill-rule="evenodd"
                 />
               </mask>
               <path
@@ -740,105 +225,38 @@ exports[`<Breadcrumbs /> should renders correctly 1`] = `
               />
             </g>
           </svg>
-        </ForwardRef(SvgSquareArrowDown)>
-        <CSSTransition
-          classNames={
-            Object {
-              "enter": "fade-enter",
-              "enterActive": "fade-enter-active",
-              "exit": "fade-exit",
-              "exitActive": "fade-exit-active",
-            }
-          }
-          in={false}
-          timeout={200}
-          unmountOnExit={true}
-        >
-          <Transition
-            appear={false}
-            enter={true}
-            exit={true}
-            in={false}
-            mountOnEnter={false}
-            onEnter={[Function]}
-            onEntered={[Function]}
-            onEntering={[Function]}
-            onExit={[Function]}
-            onExited={[Function]}
-            onExiting={[Function]}
-            timeout={200}
-            unmountOnExit={true}
-          />
-        </CSSTransition>
-      </div>
-    </Breadcrumb>
-    <Breadcrumb
-      data={
-        Object {
-          "name": "Sixth Level",
-          "siblings": Object {
-            "data": Array [
-              Object {
-                "isActive": true,
-                "name": "Sixth Level",
-                "url": "/sixth_level_path",
-              },
-              Object {
-                "name": "Sixth Level Next Sibling",
-                "url": "/sixth_level_next_sibling_path",
-              },
-            ],
-            "state": "ready",
-          },
-          "url": "/sixth_level_path",
-        }
-      }
-      isSiblingActive={[Function]}
-      key="6"
-      onSiblingsPopupOpen={[Function]}
-    >
-      <div
-        className="breadcrumb"
-        data-testid="breadcrumb"
-      >
-        <ForwardRef(Link)
-          color="basic-gray87"
-          href="/sixth_level_path"
+        </div>
+        <div
+          class="breadcrumb"
+          data-testid="breadcrumb"
         >
           <a
-            className="link basic-gray87"
+            class="link basic-gray87"
             data-testid="anchor"
             href="/sixth_level_path"
           >
             Sixth Level
           </a>
-        </ForwardRef(Link)>
-        <ForwardRef(SvgSquareArrowDown)
-          className="toggle-icon"
-          data-testid="breadcrumb:siblings-opener"
-          onClick={[Function]}
-        >
           <svg
-            className="toggle-icon"
+            class="toggle-icon"
             data-testid="breadcrumb:siblings-opener"
             fill="none"
-            height={16}
-            onClick={[Function]}
+            height="16"
             viewBox="0 0 16 16"
-            width={16}
+            width="16"
             xmlns="http://www.w3.org/2000/svg"
           >
             <g
-              opacity={0.3}
+              opacity="0.3"
             >
               <mask
                 fill="#fff"
                 id="square-arrow-down_svg__path-1-inside-1"
               >
                 <path
-                  clipRule="evenodd"
+                  clip-rule="evenodd"
                   d="M3 3h10v10H3V3zM2 3a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm3.38 3.175a.5.5 0 00-.76.65l3 3.5a.5.5 0 00.76 0l3-3.5a.5.5 0 10-.76-.65L8 9.232 5.38 6.175z"
-                  fillRule="evenodd"
+                  fill-rule="evenodd"
                 />
               </mask>
               <path
@@ -848,38 +266,325 @@ exports[`<Breadcrumbs /> should renders correctly 1`] = `
               />
             </g>
           </svg>
-        </ForwardRef(SvgSquareArrowDown)>
-        <CSSTransition
-          classNames={
-            Object {
-              "enter": "fade-enter",
-              "enterActive": "fade-enter-active",
-              "exit": "fade-exit",
-              "exitActive": "fade-exit-active",
-            }
-          }
-          in={false}
-          timeout={200}
-          unmountOnExit={true}
+        </div>
+      </nav>
+    </div>
+  </body>,
+  "container": <div>
+    <nav
+      class="root"
+      data-testid="breadcrumbs"
+    >
+      <div
+        class="breadcrumb"
+        data-testid="breadcrumb"
+      >
+        <a
+          class="link basic-gray87"
+          data-testid="anchor"
+          href="/root_path"
         >
-          <Transition
-            appear={false}
-            enter={true}
-            exit={true}
-            in={false}
-            mountOnEnter={false}
-            onEnter={[Function]}
-            onEntered={[Function]}
-            onEntering={[Function]}
-            onExit={[Function]}
-            onExited={[Function]}
-            onExiting={[Function]}
-            timeout={200}
-            unmountOnExit={true}
-          />
-        </CSSTransition>
+          Root
+        </a>
       </div>
-    </Breadcrumb>
-  </nav>
-</Breadcrumbs>
+      <div
+        class="breadcrumb"
+        data-testid="breadcrumb"
+      >
+        <a
+          class="link basic-gray87"
+          data-testid="anchor"
+          href="/first_level_path"
+        >
+          First Level
+        </a>
+        <svg
+          class="toggle-icon"
+          data-testid="breadcrumb:siblings-opener"
+          fill="none"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            opacity="0.3"
+          >
+            <mask
+              fill="#fff"
+              id="square-arrow-down_svg__path-1-inside-1"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M3 3h10v10H3V3zM2 3a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm3.38 3.175a.5.5 0 00-.76.65l3 3.5a.5.5 0 00.76 0l3-3.5a.5.5 0 10-.76-.65L8 9.232 5.38 6.175z"
+                fill-rule="evenodd"
+              />
+            </mask>
+            <path
+              d="M13 3h1V2h-1v1zM3 3V2H2v1h1zm10 10v1h1v-1h-1zM3 13H2v1h1v-1zm1.675-6.88l.65.76-.65-.76zm.705.055l-.76.65.76-.65zm-.76.65l.76-.65-.76.65zm3 3.5l-.759.651.76-.65zm.76 0l.759.651-.76-.65zm3-3.5l-.76-.65.76.65zm-.055-.705l.651-.759-.65.76zm-.705.055l-.759-.651.76.65zM8 9.232l-.76.65.76.886.76-.886-.76-.65zM13 2H3v2h10V2zm1 11V3h-2v10h2zM3 14h10v-2H3v2zM2 3v10h2V3H2zm1-2a2 2 0 00-2 2h2V1zm10 0H3v2h10V1zm2 2a2 2 0 00-2-2v2h2zm0 10V3h-2v10h2zm-2 2a2 2 0 002-2h-2v2zM3 15h10v-2H3v2zm-2-2a2 2 0 002 2v-2H1zM1 3v10h2V3H1zm4.325 3.88a.5.5 0 01-.705-.055L6.14 5.524a1.5 1.5 0 00-2.115-.163L5.325 6.88zm.055-.705a.5.5 0 01-.055.705L4.024 5.36a1.5 1.5 0 00-.163 2.115L5.38 6.175zm3 3.5l-3-3.5L3.86 7.476l3 3.5L8.38 9.675zM8 9.5a.5.5 0 01.38.175L6.86 10.976A1.5 1.5 0 008 11.5v-2zm-.38.175A.5.5 0 018 9.5v2a1.5 1.5 0 001.139-.524L7.62 9.675zm3-3.5l-3 3.5 1.519 1.301 3-3.5-1.519-1.301zm.055.705a.5.5 0 01-.055-.705l1.519 1.301a1.5 1.5 0 00-.163-2.115L10.675 6.88zm.705-.055a.5.5 0 01-.705.055l1.301-1.519a1.5 1.5 0 00-2.115.163l1.519 1.301zM8.76 9.883l2.62-3.058L9.86 5.524 7.241 8.58l1.518 1.302zM4.62 6.825l2.62 3.058L8.76 8.58 6.138 5.524 4.62 6.825z"
+              fill="#212121"
+              mask="url(#square-arrow-down_svg__path-1-inside-1)"
+            />
+          </g>
+        </svg>
+      </div>
+      <div
+        class="breadcrumb"
+        data-testid="breadcrumb"
+      >
+        <a
+          class="link basic-gray87"
+          data-testid="anchor"
+          href="/second_level_path"
+        >
+          Second Level very long title here
+        </a>
+        <svg
+          class="toggle-icon"
+          data-testid="breadcrumb:siblings-opener"
+          fill="none"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            opacity="0.3"
+          >
+            <mask
+              fill="#fff"
+              id="square-arrow-down_svg__path-1-inside-1"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M3 3h10v10H3V3zM2 3a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm3.38 3.175a.5.5 0 00-.76.65l3 3.5a.5.5 0 00.76 0l3-3.5a.5.5 0 10-.76-.65L8 9.232 5.38 6.175z"
+                fill-rule="evenodd"
+              />
+            </mask>
+            <path
+              d="M13 3h1V2h-1v1zM3 3V2H2v1h1zm10 10v1h1v-1h-1zM3 13H2v1h1v-1zm1.675-6.88l.65.76-.65-.76zm.705.055l-.76.65.76-.65zm-.76.65l.76-.65-.76.65zm3 3.5l-.759.651.76-.65zm.76 0l.759.651-.76-.65zm3-3.5l-.76-.65.76.65zm-.055-.705l.651-.759-.65.76zm-.705.055l-.759-.651.76.65zM8 9.232l-.76.65.76.886.76-.886-.76-.65zM13 2H3v2h10V2zm1 11V3h-2v10h2zM3 14h10v-2H3v2zM2 3v10h2V3H2zm1-2a2 2 0 00-2 2h2V1zm10 0H3v2h10V1zm2 2a2 2 0 00-2-2v2h2zm0 10V3h-2v10h2zm-2 2a2 2 0 002-2h-2v2zM3 15h10v-2H3v2zm-2-2a2 2 0 002 2v-2H1zM1 3v10h2V3H1zm4.325 3.88a.5.5 0 01-.705-.055L6.14 5.524a1.5 1.5 0 00-2.115-.163L5.325 6.88zm.055-.705a.5.5 0 01-.055.705L4.024 5.36a1.5 1.5 0 00-.163 2.115L5.38 6.175zm3 3.5l-3-3.5L3.86 7.476l3 3.5L8.38 9.675zM8 9.5a.5.5 0 01.38.175L6.86 10.976A1.5 1.5 0 008 11.5v-2zm-.38.175A.5.5 0 018 9.5v2a1.5 1.5 0 001.139-.524L7.62 9.675zm3-3.5l-3 3.5 1.519 1.301 3-3.5-1.519-1.301zm.055.705a.5.5 0 01-.055-.705l1.519 1.301a1.5 1.5 0 00-.163-2.115L10.675 6.88zm.705-.055a.5.5 0 01-.705.055l1.301-1.519a1.5 1.5 0 00-2.115.163l1.519 1.301zM8.76 9.883l2.62-3.058L9.86 5.524 7.241 8.58l1.518 1.302zM4.62 6.825l2.62 3.058L8.76 8.58 6.138 5.524 4.62 6.825z"
+              fill="#212121"
+              mask="url(#square-arrow-down_svg__path-1-inside-1)"
+            />
+          </g>
+        </svg>
+      </div>
+      <div
+        class="breadcrumb"
+        data-testid="breadcrumb"
+      >
+        <a
+          class="link basic-gray87"
+          data-testid="anchor"
+          href="/third_level_path"
+        >
+          Third Level
+        </a>
+        <svg
+          class="toggle-icon"
+          data-testid="breadcrumb:siblings-opener"
+          fill="none"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            opacity="0.3"
+          >
+            <mask
+              fill="#fff"
+              id="square-arrow-down_svg__path-1-inside-1"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M3 3h10v10H3V3zM2 3a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm3.38 3.175a.5.5 0 00-.76.65l3 3.5a.5.5 0 00.76 0l3-3.5a.5.5 0 10-.76-.65L8 9.232 5.38 6.175z"
+                fill-rule="evenodd"
+              />
+            </mask>
+            <path
+              d="M13 3h1V2h-1v1zM3 3V2H2v1h1zm10 10v1h1v-1h-1zM3 13H2v1h1v-1zm1.675-6.88l.65.76-.65-.76zm.705.055l-.76.65.76-.65zm-.76.65l.76-.65-.76.65zm3 3.5l-.759.651.76-.65zm.76 0l.759.651-.76-.65zm3-3.5l-.76-.65.76.65zm-.055-.705l.651-.759-.65.76zm-.705.055l-.759-.651.76.65zM8 9.232l-.76.65.76.886.76-.886-.76-.65zM13 2H3v2h10V2zm1 11V3h-2v10h2zM3 14h10v-2H3v2zM2 3v10h2V3H2zm1-2a2 2 0 00-2 2h2V1zm10 0H3v2h10V1zm2 2a2 2 0 00-2-2v2h2zm0 10V3h-2v10h2zm-2 2a2 2 0 002-2h-2v2zM3 15h10v-2H3v2zm-2-2a2 2 0 002 2v-2H1zM1 3v10h2V3H1zm4.325 3.88a.5.5 0 01-.705-.055L6.14 5.524a1.5 1.5 0 00-2.115-.163L5.325 6.88zm.055-.705a.5.5 0 01-.055.705L4.024 5.36a1.5 1.5 0 00-.163 2.115L5.38 6.175zm3 3.5l-3-3.5L3.86 7.476l3 3.5L8.38 9.675zM8 9.5a.5.5 0 01.38.175L6.86 10.976A1.5 1.5 0 008 11.5v-2zm-.38.175A.5.5 0 018 9.5v2a1.5 1.5 0 001.139-.524L7.62 9.675zm3-3.5l-3 3.5 1.519 1.301 3-3.5-1.519-1.301zm.055.705a.5.5 0 01-.055-.705l1.519 1.301a1.5 1.5 0 00-.163-2.115L10.675 6.88zm.705-.055a.5.5 0 01-.705.055l1.301-1.519a1.5 1.5 0 00-2.115.163l1.519 1.301zM8.76 9.883l2.62-3.058L9.86 5.524 7.241 8.58l1.518 1.302zM4.62 6.825l2.62 3.058L8.76 8.58 6.138 5.524 4.62 6.825z"
+              fill="#212121"
+              mask="url(#square-arrow-down_svg__path-1-inside-1)"
+            />
+          </g>
+        </svg>
+      </div>
+      <div
+        class="breadcrumb"
+        data-testid="breadcrumb"
+      >
+        <a
+          class="link basic-gray87"
+          data-testid="anchor"
+          href="/first_level_path"
+        >
+          Fourth Level
+        </a>
+        <svg
+          class="toggle-icon"
+          data-testid="breadcrumb:siblings-opener"
+          fill="none"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            opacity="0.3"
+          >
+            <mask
+              fill="#fff"
+              id="square-arrow-down_svg__path-1-inside-1"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M3 3h10v10H3V3zM2 3a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm3.38 3.175a.5.5 0 00-.76.65l3 3.5a.5.5 0 00.76 0l3-3.5a.5.5 0 10-.76-.65L8 9.232 5.38 6.175z"
+                fill-rule="evenodd"
+              />
+            </mask>
+            <path
+              d="M13 3h1V2h-1v1zM3 3V2H2v1h1zm10 10v1h1v-1h-1zM3 13H2v1h1v-1zm1.675-6.88l.65.76-.65-.76zm.705.055l-.76.65.76-.65zm-.76.65l.76-.65-.76.65zm3 3.5l-.759.651.76-.65zm.76 0l.759.651-.76-.65zm3-3.5l-.76-.65.76.65zm-.055-.705l.651-.759-.65.76zm-.705.055l-.759-.651.76.65zM8 9.232l-.76.65.76.886.76-.886-.76-.65zM13 2H3v2h10V2zm1 11V3h-2v10h2zM3 14h10v-2H3v2zM2 3v10h2V3H2zm1-2a2 2 0 00-2 2h2V1zm10 0H3v2h10V1zm2 2a2 2 0 00-2-2v2h2zm0 10V3h-2v10h2zm-2 2a2 2 0 002-2h-2v2zM3 15h10v-2H3v2zm-2-2a2 2 0 002 2v-2H1zM1 3v10h2V3H1zm4.325 3.88a.5.5 0 01-.705-.055L6.14 5.524a1.5 1.5 0 00-2.115-.163L5.325 6.88zm.055-.705a.5.5 0 01-.055.705L4.024 5.36a1.5 1.5 0 00-.163 2.115L5.38 6.175zm3 3.5l-3-3.5L3.86 7.476l3 3.5L8.38 9.675zM8 9.5a.5.5 0 01.38.175L6.86 10.976A1.5 1.5 0 008 11.5v-2zm-.38.175A.5.5 0 018 9.5v2a1.5 1.5 0 001.139-.524L7.62 9.675zm3-3.5l-3 3.5 1.519 1.301 3-3.5-1.519-1.301zm.055.705a.5.5 0 01-.055-.705l1.519 1.301a1.5 1.5 0 00-.163-2.115L10.675 6.88zm.705-.055a.5.5 0 01-.705.055l1.301-1.519a1.5 1.5 0 00-2.115.163l1.519 1.301zM8.76 9.883l2.62-3.058L9.86 5.524 7.241 8.58l1.518 1.302zM4.62 6.825l2.62 3.058L8.76 8.58 6.138 5.524 4.62 6.825z"
+              fill="#212121"
+              mask="url(#square-arrow-down_svg__path-1-inside-1)"
+            />
+          </g>
+        </svg>
+      </div>
+      <div
+        class="breadcrumb"
+        data-testid="breadcrumb"
+      >
+        <a
+          class="link basic-gray87"
+          data-testid="anchor"
+          href="/fifth_level_path"
+        >
+          Fifth Level
+        </a>
+        <svg
+          class="toggle-icon"
+          data-testid="breadcrumb:siblings-opener"
+          fill="none"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            opacity="0.3"
+          >
+            <mask
+              fill="#fff"
+              id="square-arrow-down_svg__path-1-inside-1"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M3 3h10v10H3V3zM2 3a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm3.38 3.175a.5.5 0 00-.76.65l3 3.5a.5.5 0 00.76 0l3-3.5a.5.5 0 10-.76-.65L8 9.232 5.38 6.175z"
+                fill-rule="evenodd"
+              />
+            </mask>
+            <path
+              d="M13 3h1V2h-1v1zM3 3V2H2v1h1zm10 10v1h1v-1h-1zM3 13H2v1h1v-1zm1.675-6.88l.65.76-.65-.76zm.705.055l-.76.65.76-.65zm-.76.65l.76-.65-.76.65zm3 3.5l-.759.651.76-.65zm.76 0l.759.651-.76-.65zm3-3.5l-.76-.65.76.65zm-.055-.705l.651-.759-.65.76zm-.705.055l-.759-.651.76.65zM8 9.232l-.76.65.76.886.76-.886-.76-.65zM13 2H3v2h10V2zm1 11V3h-2v10h2zM3 14h10v-2H3v2zM2 3v10h2V3H2zm1-2a2 2 0 00-2 2h2V1zm10 0H3v2h10V1zm2 2a2 2 0 00-2-2v2h2zm0 10V3h-2v10h2zm-2 2a2 2 0 002-2h-2v2zM3 15h10v-2H3v2zm-2-2a2 2 0 002 2v-2H1zM1 3v10h2V3H1zm4.325 3.88a.5.5 0 01-.705-.055L6.14 5.524a1.5 1.5 0 00-2.115-.163L5.325 6.88zm.055-.705a.5.5 0 01-.055.705L4.024 5.36a1.5 1.5 0 00-.163 2.115L5.38 6.175zm3 3.5l-3-3.5L3.86 7.476l3 3.5L8.38 9.675zM8 9.5a.5.5 0 01.38.175L6.86 10.976A1.5 1.5 0 008 11.5v-2zm-.38.175A.5.5 0 018 9.5v2a1.5 1.5 0 001.139-.524L7.62 9.675zm3-3.5l-3 3.5 1.519 1.301 3-3.5-1.519-1.301zm.055.705a.5.5 0 01-.055-.705l1.519 1.301a1.5 1.5 0 00-.163-2.115L10.675 6.88zm.705-.055a.5.5 0 01-.705.055l1.301-1.519a1.5 1.5 0 00-2.115.163l1.519 1.301zM8.76 9.883l2.62-3.058L9.86 5.524 7.241 8.58l1.518 1.302zM4.62 6.825l2.62 3.058L8.76 8.58 6.138 5.524 4.62 6.825z"
+              fill="#212121"
+              mask="url(#square-arrow-down_svg__path-1-inside-1)"
+            />
+          </g>
+        </svg>
+      </div>
+      <div
+        class="breadcrumb"
+        data-testid="breadcrumb"
+      >
+        <a
+          class="link basic-gray87"
+          data-testid="anchor"
+          href="/sixth_level_path"
+        >
+          Sixth Level
+        </a>
+        <svg
+          class="toggle-icon"
+          data-testid="breadcrumb:siblings-opener"
+          fill="none"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            opacity="0.3"
+          >
+            <mask
+              fill="#fff"
+              id="square-arrow-down_svg__path-1-inside-1"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M3 3h10v10H3V3zM2 3a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm3.38 3.175a.5.5 0 00-.76.65l3 3.5a.5.5 0 00.76 0l3-3.5a.5.5 0 10-.76-.65L8 9.232 5.38 6.175z"
+                fill-rule="evenodd"
+              />
+            </mask>
+            <path
+              d="M13 3h1V2h-1v1zM3 3V2H2v1h1zm10 10v1h1v-1h-1zM3 13H2v1h1v-1zm1.675-6.88l.65.76-.65-.76zm.705.055l-.76.65.76-.65zm-.76.65l.76-.65-.76.65zm3 3.5l-.759.651.76-.65zm.76 0l.759.651-.76-.65zm3-3.5l-.76-.65.76.65zm-.055-.705l.651-.759-.65.76zm-.705.055l-.759-.651.76.65zM8 9.232l-.76.65.76.886.76-.886-.76-.65zM13 2H3v2h10V2zm1 11V3h-2v10h2zM3 14h10v-2H3v2zM2 3v10h2V3H2zm1-2a2 2 0 00-2 2h2V1zm10 0H3v2h10V1zm2 2a2 2 0 00-2-2v2h2zm0 10V3h-2v10h2zm-2 2a2 2 0 002-2h-2v2zM3 15h10v-2H3v2zm-2-2a2 2 0 002 2v-2H1zM1 3v10h2V3H1zm4.325 3.88a.5.5 0 01-.705-.055L6.14 5.524a1.5 1.5 0 00-2.115-.163L5.325 6.88zm.055-.705a.5.5 0 01-.055.705L4.024 5.36a1.5 1.5 0 00-.163 2.115L5.38 6.175zm3 3.5l-3-3.5L3.86 7.476l3 3.5L8.38 9.675zM8 9.5a.5.5 0 01.38.175L6.86 10.976A1.5 1.5 0 008 11.5v-2zm-.38.175A.5.5 0 018 9.5v2a1.5 1.5 0 001.139-.524L7.62 9.675zm3-3.5l-3 3.5 1.519 1.301 3-3.5-1.519-1.301zm.055.705a.5.5 0 01-.055-.705l1.519 1.301a1.5 1.5 0 00-.163-2.115L10.675 6.88zm.705-.055a.5.5 0 01-.705.055l1.301-1.519a1.5 1.5 0 00-2.115.163l1.519 1.301zM8.76 9.883l2.62-3.058L9.86 5.524 7.241 8.58l1.518 1.302zM4.62 6.825l2.62 3.058L8.76 8.58 6.138 5.524 4.62 6.825z"
+              fill="#212121"
+              mask="url(#square-arrow-down_svg__path-1-inside-1)"
+            />
+          </g>
+        </svg>
+      </div>
+    </nav>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
