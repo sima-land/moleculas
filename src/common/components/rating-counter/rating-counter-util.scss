@@ -1,0 +1,17 @@
+@mixin size-s {
+  --rating-icon-size: 16px;
+  --rating-value-size: 12px;
+  --rating-value-height: 16px;
+  --rating-count-gutter: 8px;
+  --rating-count-size: 12px;
+  --rating-count-height: 16px;
+}
+
+@mixin size-m {
+  --rating-icon-size: 24px;
+  --rating-value-size: 16px;
+  --rating-value-height: 24px;
+  --rating-count-gutter: 8px;
+  --rating-count-size: 14px;
+  --rating-count-height: 20px;
+}
