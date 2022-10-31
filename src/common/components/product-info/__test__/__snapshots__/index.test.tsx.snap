@@ -442,7 +442,7 @@ exports[`ProductInfo regular content should match snapshot 1`] = `
     Test Trademark
   </a>
   <div
-    class="root size-unset rating"
+    class="root size-unset hover-disabled rating"
     data-testid="rating-counter"
   >
     <svg
