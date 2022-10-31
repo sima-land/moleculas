@@ -1,0 +1,66 @@
+@use 'node_modules/@sima-land/ui-nucleons/colors';
+@use 'node_modules/@sima-land/ui-nucleons/breakpoints';
+@use './rating-counter-util';
+
+.root {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  white-space: nowrap;
+  --rating-icon-color: #{colors.$additional-amber};
+  --rating-count-color: #{colors.$basic-gray38};
+  &:hover:not(.hover-disabled) {
+    cursor: pointer;
+    --rating-count-color: #{colors.$basic-gray54};
+  }
+}
+
+// модификаторы
+.empty {
+  --rating-icon-color: #{colors.$basic-gray12};
+}
+
+.size-s {
+  @include rating-counter-util.size-s;
+}
+
+.size-m {
+  @include rating-counter-util.size-m;
+}
+
+// составляющие
+.star {
+  flex-shrink: 0;
+  display: block;
+  width: var(--rating-icon-size);
+  height: var(--rating-icon-size);
+  fill: var(--rating-icon-color);
+}
+
+.value {
+  font-weight: 700;
+  color: #{colors.$additional-amber};
+  font-size: var(--rating-value-size);
+  line-height: var(--rating-value-height);
+}
+
+.count {
+  overflow: hidden;
+  color: var(--rating-count-color);
+  font-size: var(--rating-count-size);
+  line-height: var(--rating-count-height);
+  text-overflow: ellipsis;
+}
+
+// отступы
+.star + .value {
+  margin-left: 4px;
+}
+
+.star + .count {
+  margin-left: var(--rating-count-gutter);
+}
+
+.value + .count {
+  margin-left: var(--rating-count-gutter);
+}

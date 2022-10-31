@@ -77,6 +77,8 @@ describe('ProductInfo', () => {
           {data.trademark.name}
         </Parts.TrademarkLink>
 
+        <Parts.RatingCounter value={4.8} reviewCount={943} />
+
         <Parts.Footer>
           <Parts.CartControl stepText={data.cart.stepInfo} markupText={data.cart.markupInfo}>
             <Button size='s' data-testid='test-add-to-cart-button'>

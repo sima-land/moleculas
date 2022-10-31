@@ -7,6 +7,7 @@ import { WithHint } from '@sima-land/ui-nucleons/with-hint';
 import { ImageOverlay } from '../../../desktop/components/gallery-modal/components/image-overlay';
 import { BadgeList, BadgeListProps } from '../badge-list';
 import { ProductInfoContext } from './utils';
+import { RatingCounter, RatingCounterProps } from '../rating-counter';
 import AdultSVG from '../../icons/eighteen-plus.svg';
 import classnames from 'classnames/bind';
 import styles from './product-info.module.scss';
@@ -331,6 +332,10 @@ function SecondaryInfo({ children }: { children: ReactNode }) {
   return <div className={cx('secondary-info')}>{children}</div>;
 }
 
+function CustomRatingCounter({ className, ...rest }: RatingCounterProps) {
+  return <RatingCounter size='unset' className={cx('rating', className)} hoverDisabled {...rest} />;
+}
+
 export const Parts = {
   // основные компоненты-слоты и компоненты-запчасти
   Image,
@@ -340,6 +345,7 @@ export const Parts = {
   Title,
   TrademarkLink,
   SecondaryInfo,
+  RatingCounter: CustomRatingCounter,
 
   // компоненты-слоты и компоненты-запчасти, предназначенные для вывода футера (dcе что ниже ссылки на торговую марку)
   Footer,

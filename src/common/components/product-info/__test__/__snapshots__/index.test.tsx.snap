@@ -442,6 +442,32 @@ exports[`ProductInfo regular content should match snapshot 1`] = `
     Test Trademark
   </a>
   <div
+    class="root size-unset hover-disabled rating"
+    data-testid="rating-counter"
+  >
+    <svg
+      class="star"
+      height="16"
+      viewBox="0 0 16 16"
+      width="16"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.536 1.545a.5.5 0 01.928 0l1.711 4.262 4.583.311a.5.5 0 01.287.883L11.52 9.945l1.12 4.454a.5.5 0 01-.75.546L8 12.503l-3.89 2.442a.5.5 0 01-.75-.546l1.12-4.454L.955 7.001a.5.5 0 01.287-.883l4.583-.31 1.711-4.263z"
+      />
+    </svg>
+    <span
+      class="value"
+    >
+      4,8
+    </span>
+    <span
+      class="count"
+    >
+      943 отзыва
+    </span>
+  </div>
+  <div
     class="footer"
     data-testid="product-info:footer"
   >
