@@ -112,6 +112,8 @@ export const Primary = () => (
         {data.trademarkName}
       </Parts.TrademarkLink>
 
+      <Parts.RatingCounter value={4.5} reviewCount={28} />
+
       <Parts.Footer>
         <Parts.CartControl stepText='По 5 шт' markupText='Комплектация + 50 ₽ при покупке до 20 шт'>
           <Stepper defaultValue={3} size='s' style={{ width: '122px' }} />

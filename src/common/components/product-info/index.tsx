@@ -13,15 +13,17 @@ export const UNAVAILABLE_REASON = {
 } as const;
 
 export const ProductInfo = ({ restriction, children }: ProductInfoProps) => {
-  const { image, badges, prices, title, trademark, footer, secondaryInfo } = defineSlots(children, {
-    image: Parts.Image,
-    badges: Parts.Badges,
-    prices: Parts.Prices,
-    title: Parts.Title,
-    trademark: Parts.TrademarkLink,
-    footer: Parts.Footer,
-    secondaryInfo: Parts.SecondaryInfo,
-  });
+  const { image, badges, prices, title, trademark, footer, secondaryInfo, ratingCounter } =
+    defineSlots(children, {
+      image: Parts.Image,
+      badges: Parts.Badges,
+      prices: Parts.Prices,
+      title: Parts.Title,
+      trademark: Parts.TrademarkLink,
+      footer: Parts.Footer,
+      secondaryInfo: Parts.SecondaryInfo,
+      ratingCounter: Parts.RatingCounter,
+    });
 
   return (
     <ProductInfoContext.Provider value={{ restriction }}>
@@ -31,6 +33,7 @@ export const ProductInfo = ({ restriction, children }: ProductInfoProps) => {
       {title}
       {restriction !== 'adult' && secondaryInfo}
       {!restriction && trademark}
+      {restriction !== 'adult' && ratingCounter}
       {footer}
     </ProductInfoContext.Provider>
   );
