@@ -47,80 +47,50 @@ const Bootstrap: React.FC = ({ children }) => (
 );
 
 export const Primary = () => (
-  <Bootstrap>
-    <ProductInfo>
-      <Parts.Image
-        src={data.imageSrc}
-        href={data.url}
-        onClick={e => {
-          e.preventDefault();
-          action('Клик: ссылка на товар (изображение)')();
-        }}
-      >
-        <Parts.ImageButton
-          icon={FavoriteSVG}
-          hint='Добавить в избранное'
-          onClick={action('Клик: добавить в избранное')}
-          data-testid='favorite-button'
-        />
-        <Parts.ImageButton
-          icon={QuickView2SVG}
-          hint='Быстрый просмотр'
-          onClick={action('Клик: быстрый просмотр')}
-          data-testid='quick-view-button'
-        />
-        <Parts.ImageButton
-          icon={Camera2SVG}
-          hint='Смотреть фото'
-          onClick={action('Клик: Смотреть фото')}
-          data-testid='photo-button'
-          hintDirection='right'
-        />
-      </Parts.Image>
-
-      <Parts.Badges lineLimit={1}>
-        {data.badges.map((badge, index) => (
-          <Badge key={index} {...badge} onClick={action('Клик: шильдик')} />
-        ))}
-      </Parts.Badges>
-
-      <Parts.Prices
-        price={data.price}
-        oldPrice={data.oldPrice}
-        currencyGrapheme={data.currencyGrapheme}
+  <ProductInfo>
+    <Parts.Image src={data.imageSrc} href={data.url}>
+      <Parts.ImageButton
+        icon={FavoriteSVG}
+        hint='Добавить в избранное'
+        onClick={action('Клик: добавить в избранное')}
       />
+      <Parts.ImageButton
+        icon={QuickView2SVG}
+        hint='Быстрый просмотр'
+        onClick={action('Клик: быстрый просмотр')}
+      />
+      <Parts.ImageButton
+        icon={Camera2SVG}
+        hint='Смотреть фото'
+        onClick={action('Клик: Смотреть фото')}
+      />
+    </Parts.Image>
 
-      <Parts.Title
-        href={data.url}
-        onClick={e => {
-          e.preventDefault();
-          action('Клик: ссылка на товар')();
-        }}
-      >
-        {data.name}
-      </Parts.Title>
+    <Parts.Badges lineLimit={1}>
+      <Badge {...badges[0]} />
+      <Badge {...badges[1]} />
+    </Parts.Badges>
 
-      <Parts.SecondaryInfo>Арт. 1234567890</Parts.SecondaryInfo>
+    <Parts.Prices
+      price={data.price}
+      oldPrice={data.oldPrice}
+      currencyGrapheme={data.currencyGrapheme}
+    />
 
-      <Parts.TrademarkLink
-        href={data.trademarkUrl}
-        onClick={e => {
-          e.preventDefault();
-          action('Клик: ссылка на торговую марку')();
-        }}
-      >
-        {data.trademarkName}
-      </Parts.TrademarkLink>
+    <Parts.Title href={data.url}>{data.name}</Parts.Title>
 
-      <Parts.RatingCounter value={4.5} reviewCount={28} />
+    <Parts.SecondaryInfo>Арт. 1234567890</Parts.SecondaryInfo>
 
-      <Parts.Footer>
-        <Parts.CartControl stepText='По 5 шт' markupText='Комплектация + 50 ₽ при покупке до 20 шт'>
-          <Stepper defaultValue={3} size='s' style={{ width: '122px' }} />
-        </Parts.CartControl>
-      </Parts.Footer>
-    </ProductInfo>
-  </Bootstrap>
+    <Parts.TrademarkLink href={data.trademarkUrl}>{data.trademarkName}</Parts.TrademarkLink>
+
+    <Parts.RatingCounter value={4.5} reviewCount={28} />
+
+    <Parts.Footer>
+      <Parts.CartControl stepText='По 5 шт' markupText='Комплектация + 50 ₽ при покупке до 20 шт'>
+        <Stepper defaultValue={3} size='s' style={{ width: '122px' }} />
+      </Parts.CartControl>
+    </Parts.Footer>
+  </ProductInfo>
 );
 
 export const PositionedImageIcons = () => (
