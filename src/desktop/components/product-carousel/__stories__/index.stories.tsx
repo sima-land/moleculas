@@ -88,6 +88,8 @@ export const Primary = () => {
               {item.name}
             </Parts.Title>
 
+            <Parts.RatingCounter value={4.7} reviewCount={52} />
+
             <Parts.Footer>
               <Parts.CartControl
                 stepText='По 5 шт'

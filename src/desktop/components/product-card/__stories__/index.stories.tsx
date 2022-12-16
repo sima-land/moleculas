@@ -104,6 +104,8 @@ export const PrimaryItem = () => {
             {data.trademark.name}
           </Parts.TrademarkLink>
 
+          <Parts.RatingCounter value={4.7} reviewCount={52} />
+
           <Parts.Footer>
             <Parts.CartControl
               stepText='По 5 шт'
