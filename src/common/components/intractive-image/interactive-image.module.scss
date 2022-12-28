@@ -1,5 +1,6 @@
 @use 'node_modules/@sima-land/ui-nucleons/colors';
 @use 'node_modules/@sima-land/ui-nucleons/breakpoints';
+@use './interactive-image-util';
 
 .root {
   display: inline-block;
@@ -7,6 +8,9 @@
   position: relative;
   overflow: hidden;
   background: colors.$basic-gray4;
+  &:not(.dot-size-unset) {
+    @include interactive-image-util.dot-size-default;
+  }
 }
 
 .image {
@@ -22,8 +26,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 52px;
-  height: 52px;
+  width: var(--dot-size, 32px);
+  height: var(--dot-size, 32px);
   background: rgba(colors.$basic-gray87, 0.4);
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -34,17 +38,9 @@
   &::after {
     content: '';
     display: block;
-    width: 20px;
-    height: 20px;
+    width: var(--dot-size-core, 12px);
+    height: var(--dot-size-core, 12px);
     background: #fff;
     border-radius: 50%;
-  }
-  @include breakpoints.down('xs') {
-    width: 40px;
-    height: 40px;
-    &::after {
-      width: 16px;
-      height: 16px;
-    }
   }
 }
