@@ -1,35 +1,37 @@
 import React, { Children, forwardRef, isValidElement } from 'react';
-import classNames from 'classnames';
+import {
+  InteractiveImageProps,
+  InteractiveImageImageProps,
+  InteractiveImagePointProps,
+} from './types';
+import classNames from 'classnames/bind';
 import styles from './interactive-image.module.scss';
 
-export interface InteractiveImageProps extends React.HTMLAttributes<HTMLDivElement> {
-  children?: React.ReactNode;
-  'data-testid'?: string;
-}
-
-export interface InteractiveImageImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
-  'data-testid'?: string;
-}
-
-export interface InteractiveImagePointProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
-  x: number;
-  y: number;
-  'data-testid'?: string;
-}
+const cx = classNames.bind(styles);
 
 export const InteractiveImage = forwardRef<HTMLDivElement, InteractiveImageProps>(
-  ({ children, 'data-testid': testId, className, ...rest }, ref) => (
-    <div ref={ref} className={classNames(styles.root, className)} {...rest} data-testid={testId}>
-      {Children.toArray(children).filter(
-        child => isValidElement(child) && (child.type === Image || child.type === Point),
-      )}
-    </div>
-  ),
+  ({ children, 'data-testid': testId, className, dotSize, ...rest }, ref) => {
+    const rootClassName = cx(
+      'root',
+      {
+        'dot-size-unset': dotSize === 'unset',
+      },
+      className,
+    );
+
+    return (
+      <div ref={ref} className={rootClassName} {...rest} data-testid={testId}>
+        {Children.toArray(children).filter(
+          child => isValidElement(child) && (child.type === Image || child.type === Point),
+        )}
+      </div>
+    );
+  },
 );
 
 const Image = forwardRef<HTMLImageElement, InteractiveImageImageProps>(
   ({ className, 'data-testid': testId = 'interactive-image:image', ...rest }, ref) => (
-    <img ref={ref} className={classNames(styles.image, className)} data-testid={testId} {...rest} />
+    <img ref={ref} className={cx('image', className)} data-testid={testId} {...rest} />
   ),
 );
 
@@ -39,7 +41,7 @@ const Point = forwardRef<HTMLAnchorElement, InteractiveImagePointProps>(
       ref={ref}
       aria-label='Точка на изображении'
       data-testid={testId}
-      className={classNames(styles.point, className)}
+      className={cx('point', className)}
       style={{ ...style, top: `${y}%`, left: `${x}%` }}
       {...rest}
     />

@@ -1,5 +1,4 @@
-import { action } from '@storybook/addon-actions';
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import { InteractiveImage, Parts } from '..';
 import imageSrc from './image.png';
 
@@ -17,7 +16,7 @@ interface TitledPoint {
   title: string;
 }
 
-export const Primary = () => {
+export function Primary() {
   const points: TitledPoint[] = [
     { x: 28, y: 30, title: 'Яйца' },
     { x: 63, y: 35, title: 'Кружка' },
@@ -25,15 +24,15 @@ export const Primary = () => {
     { x: 83, y: 69, title: 'Приборы' },
   ];
 
-  const style: React.CSSProperties = {
+  const style: CSSProperties = {
     borderRadius: '8px',
     width: '600px',
     maxWidth: '100%',
     marginBottom: '32px',
   };
 
-  const ClickHandler = (value: string) => () => {
-    action('click')(value);
+  const onPointClick = (point: TitledPoint) => {
+    alert(`Клик по точке "${point.title}"`);
   };
 
   return (
@@ -46,11 +45,11 @@ export const Primary = () => {
         <Parts.Image src={imageSrc} />
 
         {points.map((point, index) => (
-          <Parts.Point key={index} role='button' {...point} onClick={ClickHandler(point.title)} />
+          <Parts.Point key={index} role='button' {...point} onClick={() => onPointClick(point)} />
         ))}
       </InteractiveImage>
     </>
   );
-};
+}
 
 Primary.storyName = 'Простой пример';
