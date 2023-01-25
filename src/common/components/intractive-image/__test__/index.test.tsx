@@ -49,4 +49,39 @@ describe('InteractiveImage', () => {
 
     expect(getByTestId('interactive-image').classList.contains('dot-size-unset')).toBe(true);
   });
+
+  it('should handle Parts.ImageAnchor as a child', () => {
+    const { queryAllByTestId, getByTestId } = render(
+      <InteractiveImage>
+        <Parts.ImageAnchor href='https://www.site.com' className='my-class'>
+          <Parts.Image src='https://www.images.com/123' />
+        </Parts.ImageAnchor>
+        <Parts.Point role='button' x={1} y={2} />
+        <Parts.Point role='button' x={2} y={3} />
+        <Parts.Point role='button' x={3} y={4} />
+      </InteractiveImage>,
+    );
+
+    expect(queryAllByTestId('interactive-image:image-anchor')).toHaveLength(1);
+    expect(queryAllByTestId('interactive-image:image')).toHaveLength(1);
+    expect(queryAllByTestId('interactive-image:point')).toHaveLength(3);
+
+    const imageAnchor = getByTestId('interactive-image:image-anchor') as HTMLAnchorElement;
+    expect(imageAnchor.href).toBe('https://www.site.com/');
+    expect(imageAnchor.classList.contains('image-anchor')).toBe(true);
+    expect(imageAnchor.classList.contains('my-class')).toBe(true);
+  });
+
+  it('should throw error when both ImageAnchor and Image are in children', () => {
+    expect(() => {
+      render(
+        <InteractiveImage>
+          <Parts.ImageAnchor href='https://www.site.com' className='my-class'>
+            <Parts.Image src='https://www.images.com/123' />
+          </Parts.ImageAnchor>
+          <Parts.Image src='https://www.images.com/123' />
+        </InteractiveImage>,
+      );
+    }).toThrow();
+  });
 });
