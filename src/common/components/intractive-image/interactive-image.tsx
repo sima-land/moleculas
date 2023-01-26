@@ -1,4 +1,10 @@
-import React, { Children, forwardRef, isValidElement } from 'react';
+import React, {
+  AnchorHTMLAttributes,
+  Children,
+  forwardRef,
+  isValidElement,
+  ReactNode,
+} from 'react';
 import {
   InteractiveImageProps,
   InteractiveImageImageProps,
@@ -19,15 +25,44 @@ export const InteractiveImage = forwardRef<HTMLDivElement, InteractiveImageProps
       className,
     );
 
+    validateChildren(children);
+
     return (
       <div ref={ref} className={rootClassName} {...rest} data-testid={testId}>
         {Children.toArray(children).filter(
-          child => isValidElement(child) && (child.type === Image || child.type === Point),
+          child =>
+            isValidElement(child) &&
+            (child.type === ImageAnchor || child.type === Image || child.type === Point),
         )}
       </div>
     );
   },
 );
+
+function validateChildren(children: ReactNode) {
+  let counter = 0;
+
+  for (const child of Children.toArray(children)) {
+    if (isValidElement(child) && (child.type === ImageAnchor || child.type === Image)) {
+      counter++;
+    }
+    if (counter > 1) {
+      throw new Error('[InteractiveImage] Either Image or ImageAnchor allowed. Not both.');
+    }
+  }
+}
+
+function ImageAnchor({ children, className, ...rest }: AnchorHTMLAttributes<HTMLAnchorElement>) {
+  return (
+    <a
+      {...rest}
+      className={cx('image-anchor', className)}
+      data-testid='interactive-image:image-anchor'
+    >
+      {Children.toArray(children).filter(child => isValidElement(child) && child.type === Image)}
+    </a>
+  );
+}
 
 const Image = forwardRef<HTMLImageElement, InteractiveImageImageProps>(
   ({ className, 'data-testid': testId = 'interactive-image:image', ...rest }, ref) => (
@@ -48,4 +83,4 @@ const Point = forwardRef<HTMLAnchorElement, InteractiveImagePointProps>(
   ),
 );
 
-export const Parts = { Image, Point } as const;
+export const Parts = { ImageAnchor, Image, Point } as const;
