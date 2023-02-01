@@ -5,7 +5,7 @@ import { addDays, addYears } from 'date-fns';
 
 describe('<Estimate />', () => {
   beforeEach(() => {
-    jest.useFakeTimers('modern');
+    jest.useFakeTimers();
     jest.setSystemTime(new Date('2021-01-01T09:00:00'));
   });
 
