@@ -26,10 +26,10 @@ describe('useViewState', () => {
     const spy = jest.fn();
 
     render(<TestComponent takeViewState={spy} />);
-    expect(spy).toBeCalledTimes(2);
+    expect(spy).toHaveBeenCalledTimes(2);
 
     fireEvent.resize(window);
-    expect(spy).toBeCalledTimes(4);
+    expect(spy).toHaveBeenCalledTimes(4);
   });
 });
 

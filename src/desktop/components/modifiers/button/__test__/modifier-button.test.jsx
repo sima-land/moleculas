@@ -81,9 +81,9 @@ describe('<ModifierButton />', () => {
     );
 
     expect(wrapper).toMatchSnapshot();
-    expect(spy).toBeCalledTimes(0);
+    expect(spy).toHaveBeenCalledTimes(0);
 
     wrapper.find('.modifier-button').simulate('click');
-    expect(spy).toBeCalledTimes(1);
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 });

@@ -13,8 +13,8 @@ describe('<PseudoInput />', () => {
     const onClick = jest.fn();
     const { getByRole } = render(<PseudoInput onClick={onClick} />);
 
-    expect(onClick).toBeCalledTimes(0);
+    expect(onClick).toHaveBeenCalledTimes(0);
     fireEvent.click(getByRole('button'));
-    expect(onClick).toBeCalledTimes(1);
+    expect(onClick).toHaveBeenCalledTimes(1);
   });
 });

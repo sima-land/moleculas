@@ -48,12 +48,12 @@ describe('<PersonScreen />', () => {
 
     expect(wrapper).toMatchSnapshot();
 
-    expect(spy).toBeCalledTimes(0);
+    expect(spy).toHaveBeenCalledTimes(0);
 
     act(() => {
       wrapper.find('button[data-testid="screen:close"]').simulate('click');
     });
 
-    expect(spy).toBeCalledTimes(1);
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 });

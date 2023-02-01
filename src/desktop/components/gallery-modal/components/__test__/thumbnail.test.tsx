@@ -11,13 +11,13 @@ describe('Thumbnail', () => {
 
     expect(wrapper).toMatchSnapshot();
 
-    expect(spy).toBeCalledTimes(0);
+    expect(spy).toHaveBeenCalledTimes(0);
 
     act(() => {
       wrapper.find('button').simulate('click');
     });
 
-    expect(spy).toBeCalledTimes(1);
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 
   it('should render video icon', () => {
@@ -27,13 +27,13 @@ describe('Thumbnail', () => {
 
     expect(wrapper).toMatchSnapshot();
 
-    expect(spy).toBeCalledTimes(0);
+    expect(spy).toHaveBeenCalledTimes(0);
 
     act(() => {
       wrapper.find('button').simulate('click');
     });
 
-    expect(spy).toBeCalledTimes(1);
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 
   it('should render image', () => {
@@ -43,13 +43,13 @@ describe('Thumbnail', () => {
 
     expect(wrapper).toMatchSnapshot();
 
-    expect(spy).toBeCalledTimes(0);
+    expect(spy).toHaveBeenCalledTimes(0);
 
     act(() => {
       wrapper.find('button').simulate('click');
     });
 
-    expect(spy).toBeCalledTimes(1);
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 
   it('should render 360 checked icon', () => {

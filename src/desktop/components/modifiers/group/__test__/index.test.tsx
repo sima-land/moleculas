@@ -92,9 +92,9 @@ describe('ModifiersGroup', () => {
       </ModifiersGroup>,
     );
 
-    expect(spy).toBeCalledTimes(0);
+    expect(spy).toHaveBeenCalledTimes(0);
     fireEvent.click(getByTestId('modifier-group:show-all-button'));
-    expect(spy).toBeCalledTimes(1);
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 
   it('should do not call "onShowAll" on opener click', () => {
