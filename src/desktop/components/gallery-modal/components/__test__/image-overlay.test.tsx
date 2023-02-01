@@ -15,12 +15,12 @@ describe('ImageOverlay', () => {
 
     expect(wrapper).toMatchSnapshot();
 
-    expect(spy).toBeCalledTimes(0);
+    expect(spy).toHaveBeenCalledTimes(0);
 
     act(() => {
       wrapper.find('div#test-id').simulate('click');
     });
 
-    expect(spy).toBeCalledTimes(1);
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 });

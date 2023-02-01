@@ -56,19 +56,6 @@ module.exports = ({ config }) => {
           include: path.resolve(__dirname, '../'),
           exclude: /node_modules\/(?!(@sima-land)).*/,
         },
-
-        {
-          test: /\.(woff|woff2|eot|ttf)$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: '[name].[ext]',
-              },
-            },
-          ],
-          include: path.resolve(__dirname, '../'),
-        },
       ],
     },
   };

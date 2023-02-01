@@ -113,7 +113,7 @@ describe('intersections', () => {
       </ProductSlider>,
     );
 
-    expect(spy).toBeCalledTimes(0);
+    expect(spy).toHaveBeenCalledTimes(0);
 
     intersectionMock.changeElementState({
       target: getByTestId('product-slider:root'),
@@ -121,7 +121,7 @@ describe('intersections', () => {
       intersectionRatio: 0,
     });
 
-    expect(spy).toBeCalledTimes(1);
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 
   it('should call "onInViewport" prop', () => {
@@ -145,7 +145,7 @@ describe('intersections', () => {
       </ProductSlider>,
     );
 
-    expect(spy).toBeCalledTimes(0);
+    expect(spy).toHaveBeenCalledTimes(0);
 
     intersectionMock.changeElementState({
       target: getByTestId('product-slider:root'),
@@ -153,6 +153,6 @@ describe('intersections', () => {
       intersectionRatio: 0,
     });
 
-    expect(spy).toBeCalledTimes(1);
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 });

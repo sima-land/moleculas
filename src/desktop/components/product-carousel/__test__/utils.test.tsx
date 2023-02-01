@@ -36,20 +36,20 @@ describe('useAllowFlag', () => {
       render(<TestComponent callback={spy} />, container);
     });
 
-    expect(spy).toBeCalledTimes(0);
+    expect(spy).toHaveBeenCalledTimes(0);
 
     act(() => {
       Simulate.click(container.querySelector('.test-one') as any);
     });
 
-    expect(spy).toBeCalledTimes(1);
+    expect(spy).toHaveBeenCalledTimes(1);
 
     act(() => {
       Simulate.click(container.querySelector('.test-two') as any);
       Simulate.click(container.querySelector('.test-one') as any);
     });
 
-    expect(spy).toBeCalledTimes(1);
+    expect(spy).toHaveBeenCalledTimes(1);
 
     act(() => {
       jest.advanceTimersByTime(200);
@@ -59,7 +59,7 @@ describe('useAllowFlag', () => {
       Simulate.click(container.querySelector('.test-one') as any);
     });
 
-    expect(spy).toBeCalledTimes(1);
+    expect(spy).toHaveBeenCalledTimes(1);
 
     act(() => {
       jest.advanceTimersByTime(400);
@@ -69,7 +69,7 @@ describe('useAllowFlag', () => {
       Simulate.click(container.querySelector('.test-one') as any);
     });
 
-    expect(spy).toBeCalledTimes(2);
+    expect(spy).toHaveBeenCalledTimes(2);
   });
 });
 

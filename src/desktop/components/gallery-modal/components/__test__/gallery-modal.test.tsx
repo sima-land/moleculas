@@ -17,24 +17,24 @@ describe('GalleryModal', () => {
       <GalleryModal media={data.media.filter(item => item.type === 'video')} onVideoEvent={spy} />,
     );
 
-    expect(spy).toBeCalledTimes(0);
+    expect(spy).toHaveBeenCalledTimes(0);
 
     // play
     fireEvent.play(container.querySelector('video') as any);
 
-    expect(spy).toBeCalledTimes(1);
+    expect(spy).toHaveBeenCalledTimes(1);
     expect(spy.mock.calls[0][0].type).toBe('play');
 
     // pause
     fireEvent.pause(container.querySelector('video') as any);
 
-    expect(spy).toBeCalledTimes(2);
+    expect(spy).toHaveBeenCalledTimes(2);
     expect(spy.mock.calls[1][0].type).toBe('pause');
 
     // ended
     fireEvent.ended(container.querySelector('video') as any);
 
-    expect(spy).toBeCalledTimes(3);
+    expect(spy).toHaveBeenCalledTimes(3);
     expect(spy.mock.calls[2][0].type).toBe('ended');
   });
 
@@ -88,7 +88,7 @@ describe('GalleryModal', () => {
 
     expect(container).toMatchSnapshot();
 
-    expect(spy).toBeCalledTimes(5);
+    expect(spy).toHaveBeenCalledTimes(5);
   });
 
   it('should renders with single item media list', () => {

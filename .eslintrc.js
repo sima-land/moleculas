@@ -4,6 +4,13 @@ module.exports = {
   extends: require.resolve('@sima-land/linters/eslint'),
   overrides: [
     {
+      files: ['./**/__stories__/**/*', './**/__stories__/**/*'],
+      rules: {
+        'no-alert': 'off',
+        'import/no-anonymous-default-export': 'off',
+      },
+    },
+    {
       files: [
         './**/__stories__/**/*',
         './**/__stories__/**/*',

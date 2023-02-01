@@ -59,13 +59,13 @@ describe('<HoverCard />', () => {
       </>,
     );
 
-    expect(spy).toBeCalledTimes(0);
+    expect(spy).toHaveBeenCalledTimes(0);
 
     act(() => {
       wrapper.find('div[data-testid="product-card:hover-card"]').simulate('mouseleave');
     });
     wrapper.update();
 
-    expect(spy).toBeCalledTimes(1);
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 });

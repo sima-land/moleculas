@@ -94,28 +94,28 @@ describe('ProductInfo', () => {
 
       expect(container).toMatchSnapshot();
 
-      expect(spies.imageClick).toBeCalledTimes(0);
-      expect(spies.quickViewClick).toBeCalledTimes(0);
-      expect(spies.badgeClick).toBeCalledTimes(0);
-      expect(spies.titleClick).toBeCalledTimes(0);
-      expect(spies.trademarkClick).toBeCalledTimes(0);
+      expect(spies.imageClick).toHaveBeenCalledTimes(0);
+      expect(spies.quickViewClick).toHaveBeenCalledTimes(0);
+      expect(spies.badgeClick).toHaveBeenCalledTimes(0);
+      expect(spies.titleClick).toHaveBeenCalledTimes(0);
+      expect(spies.trademarkClick).toHaveBeenCalledTimes(0);
     });
 
     it('image-link click', () => {
       const { getByTestId } = render(template);
 
       expect(getByTestId('product-info:image-link').getAttribute('href')).toBe(data.url);
-      expect(spies.imageClick).toBeCalledTimes(0);
+      expect(spies.imageClick).toHaveBeenCalledTimes(0);
       fireEvent.click(getByTestId('product-info:image-link'));
-      expect(spies.imageClick).toBeCalledTimes(1);
+      expect(spies.imageClick).toHaveBeenCalledTimes(1);
     });
 
     it('image icon-button click', () => {
       const { getByTestId } = render(template);
 
-      expect(spies.quickViewClick).toBeCalledTimes(0);
+      expect(spies.quickViewClick).toHaveBeenCalledTimes(0);
       fireEvent.click(getByTestId('quick-view-button'));
-      expect(spies.quickViewClick).toBeCalledTimes(1);
+      expect(spies.quickViewClick).toHaveBeenCalledTimes(1);
     });
 
     it('positioned image icon-buttons', () => {
@@ -178,10 +178,10 @@ describe('ProductInfo', () => {
     it('badges click', () => {
       const { getAllByTestId } = render(template);
 
-      expect(spies.badgeClick).toBeCalledTimes(0);
+      expect(spies.badgeClick).toHaveBeenCalledTimes(0);
       fireEvent.click(getAllByTestId('badge')[data.badges.length - 1]);
-      expect(spies.badgeClick).toBeCalledTimes(1);
-      expect(spies.badgeClick).toBeCalledWith(data.badges[data.badges.length - 1]);
+      expect(spies.badgeClick).toHaveBeenCalledTimes(1);
+      expect(spies.badgeClick).toHaveBeenCalledWith(data.badges[data.badges.length - 1]);
     });
 
     it('prices', () => {
@@ -202,18 +202,18 @@ describe('ProductInfo', () => {
 
       expect(getByTestId('product-info:name-link').textContent).toContain(data.name);
       expect(getByTestId('product-info:name-link').getAttribute('href')).toBe(data.url);
-      expect(spies.titleClick).toBeCalledTimes(0);
+      expect(spies.titleClick).toHaveBeenCalledTimes(0);
       fireEvent.click(getByTestId('product-info:name-link'));
-      expect(spies.titleClick).toBeCalledTimes(1);
+      expect(spies.titleClick).toHaveBeenCalledTimes(1);
     });
 
     it('trademark', () => {
       const { getByTestId } = render(template);
 
       expect(getByTestId('product-info:trademark-link').textContent).toContain(data.trademark.name);
-      expect(spies.trademarkClick).toBeCalledTimes(0);
+      expect(spies.trademarkClick).toHaveBeenCalledTimes(0);
       fireEvent.click(getByTestId('product-info:trademark-link'));
-      expect(spies.trademarkClick).toBeCalledTimes(1);
+      expect(spies.trademarkClick).toHaveBeenCalledTimes(1);
     });
 
     it('cart control in footer', () => {
@@ -320,9 +320,9 @@ describe('ProductInfo', () => {
       const { getByTestId } = render(template);
 
       expect(getByTestId('product-info:adult-confirm-button').textContent).toBe('Подтвердить');
-      expect(spies.adultConfirm).toBeCalledTimes(0);
+      expect(spies.adultConfirm).toHaveBeenCalledTimes(0);
       fireEvent.click(getByTestId('product-info:adult-confirm-button'));
-      expect(spies.adultConfirm).toBeCalledTimes(1);
+      expect(spies.adultConfirm).toHaveBeenCalledTimes(1);
     });
   });
 

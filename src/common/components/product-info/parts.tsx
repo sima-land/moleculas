@@ -204,7 +204,8 @@ const Title = ({ children, href, onClick }: Pick<LinkProps, 'children' | 'href' 
   );
 };
 
-/** Слот для вывода ссылки торговой марки.
+/**
+ * Слот для вывода ссылки торговой марки.
  * @param props Свойства.
  * @return Элемент.
  */

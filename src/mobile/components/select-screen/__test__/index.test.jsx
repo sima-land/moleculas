@@ -42,7 +42,7 @@ describe('<SelectScreen />', () => {
     });
 
     expect(spy).toHaveBeenCalledTimes(1);
-    expect(spy).toBeCalledWith('Железнодорожный');
+    expect(spy).toHaveBeenCalledWith('Железнодорожный');
   });
 
   it('should handle "displayItem" prop', () => {
@@ -105,12 +105,12 @@ describe('<SelectScreen />', () => {
       />,
     );
 
-    expect(spy).toBeCalledTimes(0);
+    expect(spy).toHaveBeenCalledTimes(0);
     act(() => {
       wrapper.find('button[data-testid="screen:close"]').simulate('click');
     });
     wrapper.update();
-    expect(spy).toBeCalledTimes(1);
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 });
 
@@ -136,9 +136,9 @@ describe('select screen parts', () => {
     expect(container).toMatchSnapshot();
     expect(getAllByTestId('select-screen:option')).toHaveLength(3);
 
-    expect(spy).toBeCalledTimes(0);
+    expect(spy).toHaveBeenCalledTimes(0);
     fireEvent.click(getAllByTestId('select-screen:option')[0]);
-    expect(spy).toBeCalledTimes(1);
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 });
 
