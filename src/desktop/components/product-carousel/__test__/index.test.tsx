@@ -58,6 +58,36 @@ describe('<ProductCarousel />', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should ignore non "valid element" children of ProductInfo', () => {
+    const { getAllByTestId } = render(
+      <ProductCarousel>
+        {items.map((item, index) => (
+          <ProductInfo key={index}>
+            {false}
+            {null}
+            some string here
+          </ProductInfo>
+        ))}
+      </ProductCarousel>,
+    );
+
+    expect(getAllByTestId('product-carousel:item').at(0)?.textContent).toBe('');
+  });
+
+  it('should render footer of carousel item only when hover card disabled', () => {
+    const { getAllByTestId } = render(
+      <ProductCarousel withHoverCard={false}>
+        {items.map((item, index) => (
+          <ProductInfo key={index}>
+            <Parts.Footer>Some text of footer</Parts.Footer>
+          </ProductInfo>
+        ))}
+      </ProductCarousel>,
+    );
+
+    expect(getAllByTestId('product-carousel:item').at(0)?.textContent).toBe('Some text of footer');
+  });
+
   it('should renders correctly with only one item', () => {
     const spies = {
       imageClick: jest.fn(),
@@ -244,7 +274,7 @@ describe('<ProductCarousel />', () => {
   });
 
   it('should handle layer', () => {
-    const { getByTestId, getAllByTestId } = render(
+    const { container, getByTestId, getAllByTestId } = render(
       <LayerProvider value={20}>
         <ProductCarousel itemSize={{ xs: 3 }} withHoverCard>
           {items.map((item, index) => (
@@ -264,10 +294,23 @@ describe('<ProductCarousel />', () => {
       </LayerProvider>,
     );
 
-    fireEvent.mouseEnter(getAllByTestId('product-carousel:item')[0]);
+    const viewportEl = container.querySelector('.draggable-container.full-size') as HTMLElement;
+    const itemsEls = getAllByTestId('product-carousel:item');
 
-    const carouselItems = getAllByTestId('product-carousel:item');
-    jest.spyOn(carouselItems[carouselItems.length - 1], 'getBoundingClientRect').mockReturnValue({
+    jest.spyOn(viewportEl, 'getBoundingClientRect').mockReturnValue({
+      top: 0,
+      left: 0,
+      bottom: 0,
+      right: 400,
+      x: 0,
+      y: 0,
+      width: 400,
+      height: 0,
+      toJSON() {
+        return '';
+      },
+    });
+    jest.spyOn(itemsEls[itemsEls.length - 1], 'getBoundingClientRect').mockReturnValue({
       top: 0,
       left: 0,
       bottom: 0,
@@ -280,6 +323,8 @@ describe('<ProductCarousel />', () => {
         return '';
       },
     });
+
+    fireEvent.mouseEnter(getAllByTestId('product-carousel:item')[0]);
     fireEvent.resize(window);
 
     expect(getByTestId('product-card:hover-card').style.zIndex).toBe('21');

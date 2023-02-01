@@ -4,6 +4,7 @@ import { Plate, PlateProps } from '@sima-land/ui-nucleons/plate';
 import { useLayer } from '@sima-land/ui-nucleons/helpers/layer';
 import cn from 'classnames';
 import styles from './product-card.module.scss';
+import { ImageProps } from '../../../common/components/product-info/parts';
 
 export type ProductCardChildren = React.ReactElement<ProductInfoProps, typeof ProductInfo>;
 
@@ -83,8 +84,8 @@ export const reduceHoverInfo = (el: ProductCardChildren) =>
   cloneElement(el, {
     // при наведении у изображения строго непрозрачность = 1
     children: Children.map(el.props.children, child =>
-      isValidElement(child) && child.type === Parts.Image
-        ? cloneElement(child, { opacity: 1 })
+      isValidElement<ImageProps>(child) && child.type === Parts.Image
+        ? cloneElement<ImageProps>(child, { opacity: 1 })
         : child,
     ),
   });

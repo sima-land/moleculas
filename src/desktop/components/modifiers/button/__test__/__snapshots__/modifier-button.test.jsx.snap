@@ -27,7 +27,7 @@ exports[`<ModifierButton /> should handle "color" properly 1`] = `
     className="modifier-button"
     data-testid="modifier-button"
     style={
-      Object {
+      {
         "background": "#bada55",
       }
     }

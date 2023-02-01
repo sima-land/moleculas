@@ -5,28 +5,28 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
   displayItem={[Function]}
   isItemSelected={[Function]}
   items={
-    Array [
-      Object {
+    [
+      {
         "name": "Российский рубль",
         "shortName": "RUB",
       },
-      Object {
+      {
         "name": "Американский доллар",
         "shortName": "USD",
       },
-      Object {
+      {
         "name": "Единая европейская валюта",
         "shortName": "EUR",
       },
-      Object {
+      {
         "name": "Белорусский рубль",
         "shortName": "BYN",
       },
-      Object {
+      {
         "name": "Украинская гривна",
         "shortName": "UAH",
       },
-      Object {
+      {
         "name": "Казахстанский тенге",
         "shortName": "KZT",
       },
@@ -39,7 +39,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
       className="root"
       data-testid="screen"
       style={
-        Object {
+        {
           "zIndex": 300,
         }
       }
@@ -50,7 +50,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
       >
         <NavBar
           buttons={
-            Object {
+            {
               "end": undefined,
               "start": undefined,
             }
@@ -60,7 +60,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
           <div
             className="nav-bar"
             style={
-              Object {
+              {
                 "height": "56px",
               }
             }
@@ -82,24 +82,25 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
       >
         <div
           className="body"
+          data-bsl-ignore={true}
           data-testid="screen:body"
         >
           <SelectScreenLayout
             style={
-              Object {
+              {
                 "padding": "16px 0",
               }
             }
           >
             <MobileLayout
               disabledOn={
-                Array [
+                [
                   "mxs",
                   "ms",
                 ]
               }
               style={
-                Object {
+                {
                   "padding": "16px 0",
                 }
               }
@@ -107,7 +108,7 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
               <div
                 className="layout mobile disabled-mxs disabled-ms"
                 style={
-                  Object {
+                  {
                     "padding": "16px 0",
                   }
                 }
@@ -265,23 +266,23 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
 exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
 <SelectScreen
   items={
-    Array [
-      Object {
+    [
+      {
         "name": "Российский рубль",
       },
-      Object {
+      {
         "name": "Американский доллар",
       },
-      Object {
+      {
         "name": "Единая европейская валюта",
       },
-      Object {
+      {
         "name": "Белорусский рубль",
       },
-      Object {
+      {
         "name": "Украинская гривна",
       },
-      Object {
+      {
         "name": "Казахстанский тенге",
       },
     ]
@@ -293,7 +294,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
       className="root"
       data-testid="screen"
       style={
-        Object {
+        {
           "zIndex": 300,
         }
       }
@@ -304,7 +305,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
       >
         <NavBar
           buttons={
-            Object {
+            {
               "end": undefined,
               "start": undefined,
             }
@@ -314,7 +315,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
           <div
             className="nav-bar"
             style={
-              Object {
+              {
                 "height": "56px",
               }
             }
@@ -336,24 +337,25 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
       >
         <div
           className="body"
+          data-bsl-ignore={true}
           data-testid="screen:body"
         >
           <SelectScreenLayout
             style={
-              Object {
+              {
                 "padding": "16px 0",
               }
             }
           >
             <MobileLayout
               disabledOn={
-                Array [
+                [
                   "mxs",
                   "ms",
                 ]
               }
               style={
-                Object {
+                {
                   "padding": "16px 0",
                 }
               }
@@ -361,7 +363,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
               <div
                 className="layout mobile disabled-mxs disabled-ms"
                 style={
-                  Object {
+                  {
                     "padding": "16px 0",
                   }
                 }
@@ -386,7 +388,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__basic-gray87"
-                          style={Object {}}
+                          style={{}}
                         >
                           Российский рубль
                         </span>
@@ -410,7 +412,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__basic-gray87"
-                          style={Object {}}
+                          style={{}}
                         >
                           Американский доллар
                         </span>
@@ -434,7 +436,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__basic-gray87"
-                          style={Object {}}
+                          style={{}}
                         >
                           Единая европейская валюта
                         </span>
@@ -458,7 +460,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__basic-gray87"
-                          style={Object {}}
+                          style={{}}
                         >
                           Белорусский рубль
                         </span>
@@ -482,7 +484,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__basic-gray87"
-                          style={Object {}}
+                          style={{}}
                         >
                           Украинская гривна
                         </span>
@@ -506,7 +508,7 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__basic-gray87"
-                          style={Object {}}
+                          style={{}}
                         >
                           Казахстанский тенге
                         </span>
@@ -529,7 +531,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
   getItemName={[Function]}
   isItemSelected={[Function]}
   items={
-    Array [
+    [
       "Верх-Исетский",
       "Чкаловский",
       "Железнодорожный",
@@ -547,7 +549,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
       className="root"
       data-testid="screen"
       style={
-        Object {
+        {
           "zIndex": 300,
         }
       }
@@ -558,7 +560,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
       >
         <NavBar
           buttons={
-            Object {
+            {
               "end": undefined,
               "start": undefined,
             }
@@ -568,7 +570,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
           <div
             className="nav-bar"
             style={
-              Object {
+              {
                 "height": "56px",
               }
             }
@@ -590,24 +592,25 @@ exports[`<SelectScreen /> should handle props 1`] = `
       >
         <div
           className="body"
+          data-bsl-ignore={true}
           data-testid="screen:body"
         >
           <SelectScreenLayout
             style={
-              Object {
+              {
                 "padding": "16px 0",
               }
             }
           >
             <MobileLayout
               disabledOn={
-                Array [
+                [
                   "mxs",
                   "ms",
                 ]
               }
               style={
-                Object {
+                {
                   "padding": "16px 0",
                 }
               }
@@ -615,7 +618,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
               <div
                 className="layout mobile disabled-mxs disabled-ms"
                 style={
-                  Object {
+                  {
                     "padding": "16px 0",
                   }
                 }
@@ -640,7 +643,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__basic-gray87"
-                          style={Object {}}
+                          style={{}}
                         >
                           Верх-Исетский
                         </span>
@@ -664,7 +667,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__basic-gray87"
-                          style={Object {}}
+                          style={{}}
                         >
                           Чкаловский
                         </span>
@@ -688,7 +691,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__basic-gray87"
-                          style={Object {}}
+                          style={{}}
                         >
                           Железнодорожный
                         </span>
@@ -712,7 +715,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__basic-gray87"
-                          style={Object {}}
+                          style={{}}
                         >
                           Кировский
                         </span>
@@ -752,7 +755,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__basic-gray87"
-                          style={Object {}}
+                          style={{}}
                         >
                           Орджоникидзевский
                         </span>
@@ -776,7 +779,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__basic-gray87"
-                          style={Object {}}
+                          style={{}}
                         >
                           Октябрьский
                         </span>
@@ -800,7 +803,7 @@ exports[`<SelectScreen /> should handle props 1`] = `
                       >
                         <span
                           className="size-16 line-height-24 color__basic-gray87"
-                          style={Object {}}
+                          style={{}}
                         >
                           Ленинский
                         </span>
@@ -825,7 +828,7 @@ exports[`<SelectScreen /> should render without props 1`] = `
       className="root"
       data-testid="screen"
       style={
-        Object {
+        {
           "zIndex": 300,
         }
       }
@@ -835,7 +838,7 @@ exports[`<SelectScreen /> should render without props 1`] = `
       >
         <NavBar
           buttons={
-            Object {
+            {
               "end": undefined,
               "start": undefined,
             }
@@ -844,7 +847,7 @@ exports[`<SelectScreen /> should render without props 1`] = `
           <div
             className="nav-bar"
             style={
-              Object {
+              {
                 "height": "56px",
               }
             }
@@ -860,24 +863,25 @@ exports[`<SelectScreen /> should render without props 1`] = `
       >
         <div
           className="body"
+          data-bsl-ignore={true}
           data-testid="screen:body"
         >
           <SelectScreenLayout
             style={
-              Object {
+              {
                 "padding": "16px 0",
               }
             }
           >
             <MobileLayout
               disabledOn={
-                Array [
+                [
                   "mxs",
                   "ms",
                 ]
               }
               style={
-                Object {
+                {
                   "padding": "16px 0",
                 }
               }
@@ -885,7 +889,7 @@ exports[`<SelectScreen /> should render without props 1`] = `
               <div
                 className="layout mobile disabled-mxs disabled-ms"
                 style={
-                  Object {
+                  {
                     "padding": "16px 0",
                   }
                 }
@@ -924,6 +928,7 @@ exports[`select screen parts should works properly 1`] = `
   >
     <div
       class="body"
+      data-bsl-ignore="true"
       data-testid="screen:body"
     >
       <div

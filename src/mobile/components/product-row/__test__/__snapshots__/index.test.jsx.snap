@@ -6,7 +6,7 @@ exports[`ProductRow renders properly 1`] = `
   count={23}
   currencyGrapheme="₽"
   deliveryCost={10}
-  flags={Array []}
+  flags={[]}
   imageUrl="https://cdn3.static1-sima-land.com/items/29455/1/140.jpg?v=1598850721"
   initialCount={42}
   isFetchingWishItems={[Function]}
@@ -68,7 +68,7 @@ exports[`ProductRow renders properly 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366z"
+              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366Z"
             />
           </svg>
         </ForwardRef(SvgFilledHeart)>
@@ -92,7 +92,7 @@ exports[`ProductRow renders properly 1`] = `
           >
             <span
               className="weight-600"
-              style={Object {}}
+              style={{}}
             >
               Зеленый слоник 25мм МИКС
             </span>
@@ -110,7 +110,7 @@ exports[`ProductRow renders properly 1`] = `
           >
             <span
               className="color__basic-gray38"
-              style={Object {}}
+              style={{}}
             >
               Арт.: 
               123
@@ -130,7 +130,7 @@ exports[`ProductRow renders properly 1`] = `
           >
             <div
               className="size-12 line-height-16"
-              style={Object {}}
+              style={{}}
             >
               <div>
                 Было в заказе: 42 шт.
@@ -155,7 +155,7 @@ exports[`ProductRow renders properly 1`] = `
           >
             <div
               className="size-12 line-height-16 weight-600"
-              style={Object {}}
+              style={{}}
             >
               <Price
                 currencyGrapheme="₽"
@@ -185,7 +185,7 @@ exports[`ProductRow renders properly 1`] = `
           >
             <div
               className="weight-600"
-              style={Object {}}
+              style={{}}
             >
               <Price
                 currencyGrapheme="₽"
@@ -214,7 +214,7 @@ exports[`ProductRow renders properly 1`] = `
           >
             <div
               className="color__basic-gray38"
-              style={Object {}}
+              style={{}}
             >
               Перемещен в заказ
             </div>
@@ -242,7 +242,7 @@ exports[`ProductRow renders properly 1`] = `
           >
             <div
               className="color__basic-gray38"
-              style={Object {}}
+              style={{}}
             >
               Нет на складе
             </div>
@@ -280,7 +280,7 @@ exports[`ProductRow renders properly without heart 1`] = `
   count={23}
   currencyGrapheme="₽"
   deliveryCost={10}
-  flags={Array []}
+  flags={[]}
   imageUrl="https://cdn3.static1-sima-land.com/items/29455/1/140.jpg?v=1598850721"
   initialCount={42}
   isFetchingWishItems={[Function]}
@@ -334,7 +334,7 @@ exports[`ProductRow renders properly without heart 1`] = `
           >
             <span
               className="weight-600"
-              style={Object {}}
+              style={{}}
             >
               Зеленый слоник 25мм МИКС
             </span>
@@ -352,7 +352,7 @@ exports[`ProductRow renders properly without heart 1`] = `
           >
             <span
               className="color__basic-gray38"
-              style={Object {}}
+              style={{}}
             >
               Арт.: 
               123
@@ -372,7 +372,7 @@ exports[`ProductRow renders properly without heart 1`] = `
           >
             <div
               className="size-12 line-height-16"
-              style={Object {}}
+              style={{}}
             >
               <div>
                 Было в заказе: 42 шт.
@@ -397,7 +397,7 @@ exports[`ProductRow renders properly without heart 1`] = `
           >
             <div
               className="size-12 line-height-16 weight-600"
-              style={Object {}}
+              style={{}}
             >
               <Price
                 currencyGrapheme="₽"
@@ -427,7 +427,7 @@ exports[`ProductRow renders properly without heart 1`] = `
           >
             <div
               className="weight-600"
-              style={Object {}}
+              style={{}}
             >
               <Price
                 currencyGrapheme="₽"
@@ -456,7 +456,7 @@ exports[`ProductRow renders properly without heart 1`] = `
           >
             <div
               className="color__basic-gray38"
-              style={Object {}}
+              style={{}}
             >
               Перемещен в заказ
             </div>
@@ -484,7 +484,7 @@ exports[`ProductRow renders properly without heart 1`] = `
           >
             <div
               className="color__basic-gray38"
-              style={Object {}}
+              style={{}}
             >
               Нет на складе
             </div>

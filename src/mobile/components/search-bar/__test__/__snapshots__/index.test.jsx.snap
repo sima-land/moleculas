@@ -4,12 +4,12 @@ exports[`SearchBar should renders properly with all props 1`] = `
 <SearchBar
   description="150 324 предложений"
   endButtons={
-    Array [
-      Object {
+    [
+      {
         "onClick": [MockFunction],
         "text": "Поиск",
       },
-      Object {
+      {
         "onClick": [MockFunction],
         "text": "Отмена",
       },
@@ -20,9 +20,9 @@ exports[`SearchBar should renders properly with all props 1`] = `
   onClear={[MockFunction]}
   placeholder="Найти"
   startButtons={
-    Array [
-      Object {
-        "icon": Object {
+    [
+      {
+        "icon": {
           "$$typeof": Symbol(react.forward_ref),
           "render": [Function],
         },
@@ -45,7 +45,7 @@ exports[`SearchBar should renders properly with all props 1`] = `
       >
         <ForwardRef(Button)
           icon={
-            Object {
+            {
               "$$typeof": Symbol(react.forward_ref),
               "render": [Function],
             }
@@ -190,7 +190,7 @@ exports[`SearchBar should renders properly with all props 1`] = `
       >
         <ForwardRef(Button)
           icon={
-            Object {
+            {
               "$$typeof": Symbol(react.forward_ref),
               "render": [Function],
             }

@@ -1,5 +1,4 @@
 module.exports = {
-  preset: 'ts-jest/presets/js-with-babel',
   globalSetup: './.jest/global-setup.js',
   testEnvironment: 'jsdom',
   setupFiles: ['./.jest/setup.js'],
@@ -8,6 +7,8 @@ module.exports = {
   testPathIgnorePatterns: ['<rootDir>/.yarn-cache/', '<rootDir>/node_modules/'],
   modulePathIgnorePatterns: ['<rootDir>/.yarn-cache/', '<rootDir>/build/'],
   transform: {
+    '\\.[jt]sx?$': 'babel-jest',
+
     // svg заменяем на React-компоненты
     '\\.svg$': '<rootDir>/.jest/transforms/svg.js',
 

@@ -1,3 +1,9 @@
+const path = require('path');
+
 module.exports = {
-  process: (src, filename, { rootDir }) => `module.exports = ${JSON.stringify(filename.replace(rootDir, ''))};`,
+  process(sourceText, sourcePath) {
+    return {
+      code: `module.exports = ${JSON.stringify(path.basename(sourcePath))};`,
+    };
+  },
 };

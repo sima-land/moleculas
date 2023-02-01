@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Children } from 'react';
 import { fireEvent, render } from '@testing-library/react';
-import { ProductCard } from '..';
+import { ProductCard, reduceBaseInfo } from '..';
 import { ProductInfo, Parts } from '../../../../common/components/product-info';
 import { Button } from '@sima-land/ui-nucleons/button';
 import { LayerProvider } from '@sima-land/ui-nucleons/helpers/layer';
@@ -113,5 +113,19 @@ describe('ProductCard', () => {
 
     fireEvent.mouseEnter(getByTestId('product-card:info'));
     expect(getByTestId('product-card:hover-card').style.zIndex).toBe('11');
+  });
+});
+
+describe('reduceBaseInfo', () => {
+  it('should ignore non "valid element" children', () => {
+    const result = reduceBaseInfo(
+      <ProductInfo>
+        some string
+        {null}
+        {false}
+      </ProductInfo>,
+    );
+
+    expect(Children.toArray(result.props.children)).toEqual([]);
   });
 });

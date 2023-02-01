@@ -3,7 +3,7 @@
 exports[`<HoverCard /> should renders hidden 1`] = `
 <HoverCard
   targetRef={
-    Object {
+    {
       "current": null,
     }
   }
@@ -12,7 +12,7 @@ exports[`<HoverCard /> should renders hidden 1`] = `
     className="root hidden rounds-sm__all shadow-z4"
     onMouseLeave={[Function]}
     style={
-      Object {
+      {
         "padding": "16px 16px 24px 16px",
       }
     }
@@ -24,7 +24,7 @@ exports[`<HoverCard /> should renders hidden 1`] = `
       rounds="m"
       shadow="z4"
       style={
-        Object {
+        {
           "padding": "16px 16px 24px 16px",
           "zIndex": 1,
         }
@@ -35,7 +35,7 @@ exports[`<HoverCard /> should renders hidden 1`] = `
         data-testid="product-card:hover-card"
         onMouseLeave={[Function]}
         style={
-          Object {
+          {
             "padding": "16px 16px 24px 16px",
             "zIndex": 1,
           }
@@ -49,13 +49,13 @@ exports[`<HoverCard /> should renders hidden 1`] = `
 `;
 
 exports[`<HoverCard /> should renders with positioning 1`] = `
-Array [
+[
   <div>
     Target
   </div>,
   <HoverCard
     targetRef={
-      Object {
+      {
         "current": <div>
           Target
         </div>,
@@ -66,7 +66,7 @@ Array [
       className="root rounds-sm__all shadow-z4"
       onMouseLeave={[Function]}
       style={
-        Object {
+        {
           "padding": "16px 16px 24px 16px",
         }
       }
@@ -78,7 +78,7 @@ Array [
         rounds="m"
         shadow="z4"
         style={
-          Object {
+          {
             "padding": "16px 16px 24px 16px",
             "zIndex": 1,
           }
@@ -89,7 +89,7 @@ Array [
           data-testid="product-card:hover-card"
           onMouseLeave={[Function]}
           style={
-            Object {
+            {
               "padding": "16px 16px 24px 16px",
               "zIndex": 1,
             }
