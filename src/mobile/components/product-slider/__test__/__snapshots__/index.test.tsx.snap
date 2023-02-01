@@ -160,35 +160,41 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     data-testid="stepper"
                     style="width: 122px;"
                   >
-                    <svg
+                    <button
                       class="button"
                       data-testid="stepper:minus"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      width="16"
                     >
-                      <path
-                        clip-rule="evenodd"
-                        d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
                     <input
                       class="input"
                       data-testid="stepper:input"
                       value="3"
                     />
-                    <svg
+                    <button
                       class="button"
                       data-testid="stepper:plus"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      width="16"
                     >
-                      <path
-                        d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                        />
+                      </svg>
+                    </button>
                   </div>
                 </div>
                 <div
@@ -344,35 +350,41 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     data-testid="stepper"
                     style="width: 122px;"
                   >
-                    <svg
+                    <button
                       class="button"
                       data-testid="stepper:minus"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      width="16"
                     >
-                      <path
-                        clip-rule="evenodd"
-                        d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
                     <input
                       class="input"
                       data-testid="stepper:input"
                       value="3"
                     />
-                    <svg
+                    <button
                       class="button"
                       data-testid="stepper:plus"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      width="16"
                     >
-                      <path
-                        d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                        />
+                      </svg>
+                    </button>
                   </div>
                 </div>
                 <div
@@ -600,35 +612,41 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     data-testid="stepper"
                     style="width: 122px;"
                   >
-                    <svg
+                    <button
                       class="button"
                       data-testid="stepper:minus"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      width="16"
                     >
-                      <path
-                        clip-rule="evenodd"
-                        d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
                     <input
                       class="input"
                       data-testid="stepper:input"
                       value="3"
                     />
-                    <svg
+                    <button
                       class="button"
                       data-testid="stepper:plus"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      width="16"
                     >
-                      <path
-                        d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                        />
+                      </svg>
+                    </button>
                   </div>
                 </div>
                 <div
@@ -784,35 +802,41 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     data-testid="stepper"
                     style="width: 122px;"
                   >
-                    <svg
+                    <button
                       class="button"
                       data-testid="stepper:minus"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      width="16"
                     >
-                      <path
-                        clip-rule="evenodd"
-                        d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
                     <input
                       class="input"
                       data-testid="stepper:input"
                       value="3"
                     />
-                    <svg
+                    <button
                       class="button"
                       data-testid="stepper:plus"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      width="16"
                     >
-                      <path
-                        d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                        />
+                      </svg>
+                    </button>
                   </div>
                 </div>
                 <div
@@ -968,35 +992,41 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     data-testid="stepper"
                     style="width: 122px;"
                   >
-                    <svg
+                    <button
                       class="button"
                       data-testid="stepper:minus"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      width="16"
                     >
-                      <path
-                        clip-rule="evenodd"
-                        d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
                     <input
                       class="input"
                       data-testid="stepper:input"
                       value="3"
                     />
-                    <svg
+                    <button
                       class="button"
                       data-testid="stepper:plus"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      width="16"
                     >
-                      <path
-                        d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                        />
+                      </svg>
+                    </button>
                   </div>
                 </div>
                 <div
@@ -1187,35 +1217,41 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     data-testid="stepper"
                     style="width: 122px;"
                   >
-                    <svg
+                    <button
                       class="button"
                       data-testid="stepper:minus"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      width="16"
                     >
-                      <path
-                        clip-rule="evenodd"
-                        d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
                     <input
                       class="input"
                       data-testid="stepper:input"
                       value="3"
                     />
-                    <svg
+                    <button
                       class="button"
                       data-testid="stepper:plus"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      width="16"
                     >
-                      <path
-                        d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                        />
+                      </svg>
+                    </button>
                   </div>
                 </div>
                 <div
@@ -1371,35 +1407,41 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     data-testid="stepper"
                     style="width: 122px;"
                   >
-                    <svg
+                    <button
                       class="button"
                       data-testid="stepper:minus"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      width="16"
                     >
-                      <path
-                        clip-rule="evenodd"
-                        d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
                     <input
                       class="input"
                       data-testid="stepper:input"
                       value="3"
                     />
-                    <svg
+                    <button
                       class="button"
                       data-testid="stepper:plus"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      width="16"
                     >
-                      <path
-                        d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                        />
+                      </svg>
+                    </button>
                   </div>
                 </div>
                 <div
@@ -1561,35 +1603,41 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     data-testid="stepper"
                     style="width: 122px;"
                   >
-                    <svg
+                    <button
                       class="button"
                       data-testid="stepper:minus"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      width="16"
                     >
-                      <path
-                        clip-rule="evenodd"
-                        d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
                     <input
                       class="input"
                       data-testid="stepper:input"
                       value="3"
                     />
-                    <svg
+                    <button
                       class="button"
                       data-testid="stepper:plus"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      width="16"
                     >
-                      <path
-                        d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                        />
+                      </svg>
+                    </button>
                   </div>
                 </div>
                 <div
@@ -1751,35 +1799,41 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     data-testid="stepper"
                     style="width: 122px;"
                   >
-                    <svg
+                    <button
                       class="button"
                       data-testid="stepper:minus"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      width="16"
                     >
-                      <path
-                        clip-rule="evenodd"
-                        d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
                     <input
                       class="input"
                       data-testid="stepper:input"
                       value="3"
                     />
-                    <svg
+                    <button
                       class="button"
                       data-testid="stepper:plus"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      width="16"
                     >
-                      <path
-                        d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                        />
+                      </svg>
+                    </button>
                   </div>
                 </div>
                 <div
@@ -1935,35 +1989,41 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     data-testid="stepper"
                     style="width: 122px;"
                   >
-                    <svg
+                    <button
                       class="button"
                       data-testid="stepper:minus"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      width="16"
                     >
-                      <path
-                        clip-rule="evenodd"
-                        d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
                     <input
                       class="input"
                       data-testid="stepper:input"
                       value="3"
                     />
-                    <svg
+                    <button
                       class="button"
                       data-testid="stepper:plus"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      width="16"
                     >
-                      <path
-                        d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                        />
+                      </svg>
+                    </button>
                   </div>
                 </div>
                 <div
@@ -1989,7 +2049,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
 `;
 
 exports[`<ProductSlider /> should renders correctly 2`] = `
-Array [
+[
   <div
     class="item"
     data-testid="product-slider:item"
@@ -2135,35 +2195,41 @@ Array [
             data-testid="stepper"
             style="width: 122px;"
           >
-            <svg
+            <button
               class="button"
               data-testid="stepper:minus"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
             >
-              <path
-                clip-rule="evenodd"
-                d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
-                fill-rule="evenodd"
-              />
-            </svg>
+              <svg
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
             <input
               class="input"
               data-testid="stepper:input"
               value="3"
             />
-            <svg
+            <button
               class="button"
               data-testid="stepper:plus"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
             >
-              <path
-                d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
-              />
-            </svg>
+              <svg
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                />
+              </svg>
+            </button>
           </div>
         </div>
         <div
@@ -2319,35 +2385,41 @@ Array [
             data-testid="stepper"
             style="width: 122px;"
           >
-            <svg
+            <button
               class="button"
               data-testid="stepper:minus"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
             >
-              <path
-                clip-rule="evenodd"
-                d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
-                fill-rule="evenodd"
-              />
-            </svg>
+              <svg
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
             <input
               class="input"
               data-testid="stepper:input"
               value="3"
             />
-            <svg
+            <button
               class="button"
               data-testid="stepper:plus"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
             >
-              <path
-                d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
-              />
-            </svg>
+              <svg
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                />
+              </svg>
+            </button>
           </div>
         </div>
         <div
@@ -2575,35 +2647,41 @@ Array [
             data-testid="stepper"
             style="width: 122px;"
           >
-            <svg
+            <button
               class="button"
               data-testid="stepper:minus"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
             >
-              <path
-                clip-rule="evenodd"
-                d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
-                fill-rule="evenodd"
-              />
-            </svg>
+              <svg
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
             <input
               class="input"
               data-testid="stepper:input"
               value="3"
             />
-            <svg
+            <button
               class="button"
               data-testid="stepper:plus"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
             >
-              <path
-                d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
-              />
-            </svg>
+              <svg
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                />
+              </svg>
+            </button>
           </div>
         </div>
         <div
@@ -2759,35 +2837,41 @@ Array [
             data-testid="stepper"
             style="width: 122px;"
           >
-            <svg
+            <button
               class="button"
               data-testid="stepper:minus"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
             >
-              <path
-                clip-rule="evenodd"
-                d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
-                fill-rule="evenodd"
-              />
-            </svg>
+              <svg
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
             <input
               class="input"
               data-testid="stepper:input"
               value="3"
             />
-            <svg
+            <button
               class="button"
               data-testid="stepper:plus"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
             >
-              <path
-                d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
-              />
-            </svg>
+              <svg
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                />
+              </svg>
+            </button>
           </div>
         </div>
         <div
@@ -2943,35 +3027,41 @@ Array [
             data-testid="stepper"
             style="width: 122px;"
           >
-            <svg
+            <button
               class="button"
               data-testid="stepper:minus"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
             >
-              <path
-                clip-rule="evenodd"
-                d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
-                fill-rule="evenodd"
-              />
-            </svg>
+              <svg
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
             <input
               class="input"
               data-testid="stepper:input"
               value="3"
             />
-            <svg
+            <button
               class="button"
               data-testid="stepper:plus"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
             >
-              <path
-                d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
-              />
-            </svg>
+              <svg
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                />
+              </svg>
+            </button>
           </div>
         </div>
         <div
@@ -3162,35 +3252,41 @@ Array [
             data-testid="stepper"
             style="width: 122px;"
           >
-            <svg
+            <button
               class="button"
               data-testid="stepper:minus"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
             >
-              <path
-                clip-rule="evenodd"
-                d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
-                fill-rule="evenodd"
-              />
-            </svg>
+              <svg
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
             <input
               class="input"
               data-testid="stepper:input"
               value="3"
             />
-            <svg
+            <button
               class="button"
               data-testid="stepper:plus"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
             >
-              <path
-                d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
-              />
-            </svg>
+              <svg
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                />
+              </svg>
+            </button>
           </div>
         </div>
         <div
@@ -3346,35 +3442,41 @@ Array [
             data-testid="stepper"
             style="width: 122px;"
           >
-            <svg
+            <button
               class="button"
               data-testid="stepper:minus"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
             >
-              <path
-                clip-rule="evenodd"
-                d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
-                fill-rule="evenodd"
-              />
-            </svg>
+              <svg
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
             <input
               class="input"
               data-testid="stepper:input"
               value="3"
             />
-            <svg
+            <button
               class="button"
               data-testid="stepper:plus"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
             >
-              <path
-                d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
-              />
-            </svg>
+              <svg
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                />
+              </svg>
+            </button>
           </div>
         </div>
         <div
@@ -3536,35 +3638,41 @@ Array [
             data-testid="stepper"
             style="width: 122px;"
           >
-            <svg
+            <button
               class="button"
               data-testid="stepper:minus"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
             >
-              <path
-                clip-rule="evenodd"
-                d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
-                fill-rule="evenodd"
-              />
-            </svg>
+              <svg
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
             <input
               class="input"
               data-testid="stepper:input"
               value="3"
             />
-            <svg
+            <button
               class="button"
               data-testid="stepper:plus"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
             >
-              <path
-                d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
-              />
-            </svg>
+              <svg
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                />
+              </svg>
+            </button>
           </div>
         </div>
         <div
@@ -3726,35 +3834,41 @@ Array [
             data-testid="stepper"
             style="width: 122px;"
           >
-            <svg
+            <button
               class="button"
               data-testid="stepper:minus"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
             >
-              <path
-                clip-rule="evenodd"
-                d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
-                fill-rule="evenodd"
-              />
-            </svg>
+              <svg
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
             <input
               class="input"
               data-testid="stepper:input"
               value="3"
             />
-            <svg
+            <button
               class="button"
               data-testid="stepper:plus"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
             >
-              <path
-                d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
-              />
-            </svg>
+              <svg
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                />
+              </svg>
+            </button>
           </div>
         </div>
         <div
@@ -3910,35 +4024,41 @@ Array [
             data-testid="stepper"
             style="width: 122px;"
           >
-            <svg
+            <button
               class="button"
               data-testid="stepper:minus"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
             >
-              <path
-                clip-rule="evenodd"
-                d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
-                fill-rule="evenodd"
-              />
-            </svg>
+              <svg
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
             <input
               class="input"
               data-testid="stepper:input"
               value="3"
             />
-            <svg
+            <button
               class="button"
               data-testid="stepper:plus"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
             >
-              <path
-                d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
-              />
-            </svg>
+              <svg
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                />
+              </svg>
+            </button>
           </div>
         </div>
         <div

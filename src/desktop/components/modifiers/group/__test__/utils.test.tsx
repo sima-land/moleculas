@@ -111,4 +111,32 @@ describe('defineViewState', () => {
     expect(viewState.phase).toBe('ready');
     expect(viewState.lastVisibleIndex).toBe(3);
   });
+
+  it('should do nothing when container or opener ref is empty', () => {
+    const viewState = defineViewState({ current: null }, { current: null });
+
+    expect(viewState.phase).toBe('ready');
+    expect(viewState.lastVisibleIndex).toBe(-1);
+  });
+
+  it('should do nothing when container has no items', () => {
+    const container = createElement({
+      width: 300,
+      height: 100,
+    });
+
+    const opener = createElement({
+      x: 0,
+      y: 200,
+      width: 100,
+      height: 100,
+    });
+
+    container.append(opener);
+
+    const viewState = defineViewState({ current: container }, { current: opener });
+
+    expect(viewState.phase).toBe('ready');
+    expect(viewState.lastVisibleIndex).toBe(-1);
+  });
 });

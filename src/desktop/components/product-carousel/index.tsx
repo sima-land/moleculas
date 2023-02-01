@@ -126,13 +126,27 @@ export const ProductCarousel = ({
             >
               {cloneElement(item, {
                 children: Children.toArray(item.props.children).reduce<any[]>((list, child) => {
-                  if (isValidElement(child)) {
-                    child.type === Parts.Image &&
-                      list.push(
-                        withHoverCard ? cloneElement(child, { children: undefined }) : child,
-                      );
+                  if (isValidElement<any>(child)) {
+                    switch (child.type) {
+                      case Parts.Image: {
+                        // иконки у картинки скрываем если есть HoverCard
+                        list.push(
+                          withHoverCard ? cloneElement(child, { children: undefined }) : child,
+                        );
+                        break;
+                      }
 
-                    child.type !== Parts.Footer && list.push(child);
+                      case Parts.Footer:
+                        // футер не выводим если есть HoverCard
+                        !withHoverCard && list.push(child);
+                        break;
+
+                      default: {
+                        // остальное выводим как есть
+                        list.push(child);
+                        break;
+                      }
+                    }
                   }
 
                   return list;

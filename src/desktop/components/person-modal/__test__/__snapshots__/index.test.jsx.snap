@@ -4,7 +4,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
 <PersonModal
   appointment="Менеджер по игрушке"
   arbitraryLinkProps={
-    Object {
+    {
       "children": "test",
       "href": "/test",
     }
@@ -18,16 +18,16 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
   secondPhoneText="+7 (900) 000 000"
   skype="example@skype.com"
   social={
-    Array [
-      Object {
+    [
+      {
         "children": "vk.com/oks2art",
         "href": "https://example.com",
       },
-      Object {
+      {
         "children": "twitter.com/oks2art",
         "href": "https://example.com",
       },
-      Object {
+      {
         "children": "odnoklassniki.ru/oks2art",
         "href": "https://example.com",
       },
@@ -44,7 +44,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
       onMouseDown={[Function]}
       onMouseUp={[Function]}
       style={
-        Object {
+        {
           "zIndex": 100,
         }
       }
@@ -53,7 +53,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
         className="modal size-s shadow-z4"
         data-testid="modal"
         style={
-          Object {
+          {
             "--footer-height": "72px",
             "--header-height": "0px",
             "--modal-height": undefined,
@@ -67,7 +67,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
             className="body"
             inFlexBox={true}
             overflow={
-              Object {
+              {
                 "x": "h",
                 "y": "s",
               }
@@ -76,9 +76,9 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
             <OverlayScrollbarsComponent
               className="custom-scrollbar body os-host-flexbox"
               options={
-                Object {
+                {
                   "callbacks": undefined,
-                  "overflowBehavior": Object {
+                  "overflowBehavior": {
                     "x": "h",
                     "y": "s",
                   },
@@ -102,6 +102,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
                     >
                       <div
                         className="main"
+                        data-bsl-ignore={true}
                       >
                         <div
                           className="main"
@@ -127,7 +128,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
                                     className="root size-104 color__basic-white"
                                     data-testid="avatar"
                                     style={
-                                      Object {
+                                      {
                                         "--avatar-color": "#d50000",
                                         "--avatar-color-opacity": 0.48,
                                       }
@@ -156,7 +157,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
                               >
                                 <span
                                   className="size-14 line-height-20 color__basic-gray38 weight-400"
-                                  style={Object {}}
+                                  style={{}}
                                 >
                                   Менеджер по игрушке
                                 </span>
@@ -180,7 +181,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
                               >
                                 <span
                                   className="size-12 line-height-16 weight-600"
-                                  style={Object {}}
+                                  style={{}}
                                 >
                                   <ForwardRef(Link)
                                     href="/test"
@@ -372,7 +373,7 @@ exports[`<PersonModal /> should renders properly with all props 1`] = `
               className="root divided rounds-md__b"
               data-testid="bottom-bar"
               style={
-                Object {
+                {
                   "height": "72px",
                 }
               }
@@ -428,7 +429,7 @@ exports[`<PersonModal /> should renders properly with minimal props 1`] = `
       onMouseDown={[Function]}
       onMouseUp={[Function]}
       style={
-        Object {
+        {
           "zIndex": 100,
         }
       }
@@ -437,7 +438,7 @@ exports[`<PersonModal /> should renders properly with minimal props 1`] = `
         className="modal size-s shadow-z4"
         data-testid="modal"
         style={
-          Object {
+          {
             "--footer-height": "72px",
             "--header-height": "0px",
             "--modal-height": undefined,
@@ -451,7 +452,7 @@ exports[`<PersonModal /> should renders properly with minimal props 1`] = `
             className="body"
             inFlexBox={true}
             overflow={
-              Object {
+              {
                 "x": "h",
                 "y": "s",
               }
@@ -460,9 +461,9 @@ exports[`<PersonModal /> should renders properly with minimal props 1`] = `
             <OverlayScrollbarsComponent
               className="custom-scrollbar body os-host-flexbox"
               options={
-                Object {
+                {
                   "callbacks": undefined,
-                  "overflowBehavior": Object {
+                  "overflowBehavior": {
                     "x": "h",
                     "y": "s",
                   },
@@ -486,6 +487,7 @@ exports[`<PersonModal /> should renders properly with minimal props 1`] = `
                     >
                       <div
                         className="main"
+                        data-bsl-ignore={true}
                       >
                         <div
                           className="main"
@@ -511,7 +513,7 @@ exports[`<PersonModal /> should renders properly with minimal props 1`] = `
                                     className="root size-104 color__basic-white"
                                     data-testid="avatar"
                                     style={
-                                      Object {
+                                      {
                                         "--avatar-color": "#d50000",
                                         "--avatar-color-opacity": 0.48,
                                       }
@@ -540,7 +542,7 @@ exports[`<PersonModal /> should renders properly with minimal props 1`] = `
                               >
                                 <span
                                   className="size-14 line-height-20 color__basic-gray38 weight-400"
-                                  style={Object {}}
+                                  style={{}}
                                 >
                                   Дворник
                                 </span>
@@ -600,7 +602,7 @@ exports[`<PersonModal /> should renders properly with minimal props 1`] = `
               className="root divided rounds-md__b"
               data-testid="bottom-bar"
               style={
-                Object {
+                {
                   "height": "72px",
                 }
               }

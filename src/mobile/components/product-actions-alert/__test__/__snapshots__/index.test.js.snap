@@ -3,23 +3,23 @@
 exports[`ProductActionsContent renders properly 1`] = `
 <ProductActionsAlert
   alertProps={
-    Object {
+    {
       "title": "title",
     }
   }
   buttons={
-    Array [
-      Object {
+    [
+      {
         "href": "href",
         "icon": <ForwardRef(StatementSVG) />,
         "onClick": [Function],
         "text": "text",
       },
-      Object {
+      {
         "href": "href",
         "text": "text",
       },
-      Object {
+      {
         "text": "text",
       },
     ]
@@ -40,7 +40,7 @@ exports[`ProductActionsContent renders properly 1`] = `
       data-testid="alert:overlay"
       onClick={[Function]}
       style={
-        Object {
+        {
           "zIndex": 100,
         }
       }
@@ -56,7 +56,7 @@ exports[`ProductActionsContent renders properly 1`] = `
           <div
             className="nav-bar header"
             style={
-              Object {
+              {
                 "height": "56px",
               }
             }

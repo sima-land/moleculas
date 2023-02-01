@@ -4,7 +4,7 @@ import { PromotionCard } from '..';
 
 describe('<PromotionCard />', () => {
   beforeEach(() => {
-    jest.useFakeTimers('modern');
+    jest.useFakeTimers();
     jest.setSystemTime(new Date('2021-01-01T09:00:00'));
   });
 

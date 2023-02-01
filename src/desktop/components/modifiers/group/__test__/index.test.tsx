@@ -14,6 +14,26 @@ jest.mock('../utils', () => {
 });
 
 describe('ModifiersGroup', () => {
+  it('should ignore non ModifierButton children', () => {
+    const definedViewState: ViewState = {
+      phase: 'ready',
+      lastVisibleIndex: 2,
+    };
+
+    (useViewState as jest.Mock<ViewState>).mockReturnValue(definedViewState);
+
+    const { queryAllByTestId } = render(
+      <ModifiersGroup>
+        <ModifierButton type='text' content='Foo' />
+        <ModifierButton type='text' content='Bar' />
+        <ModifierButton type='text' content='Baz' />
+        <div data-testid='my-spy'>Hello, world!</div>
+      </ModifiersGroup>,
+    );
+
+    expect(queryAllByTestId('my-spy')).toHaveLength(0);
+  });
+
   it('should mark item as hidden when it is hidden by overflow', () => {
     const definedViewState: ViewState = {
       phase: 'ready',

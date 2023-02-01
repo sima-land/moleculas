@@ -177,4 +177,18 @@ describe('SearchBar', () => {
     fireEvent(getByTestId('search-bar:input-wrapper'), event);
     expect(event.defaultPrevented).toBe(true);
   });
+
+  it('should NOT prevent input blur when its', () => {
+    const { getByTestId } = render(
+      <SearchBar value='Hello!' onChange={jest.fn()} onClear={jest.fn()} />,
+    );
+
+    const event = createEvent.mouseDown(getByTestId('search-bar:input-wrapper'));
+    Object.defineProperty(event, 'target', {
+      value: getByTestId('search-bar-input'),
+    });
+    fireEvent(getByTestId('search-bar:input-wrapper'), event);
+
+    expect(event.defaultPrevented).toBe(false);
+  });
 });

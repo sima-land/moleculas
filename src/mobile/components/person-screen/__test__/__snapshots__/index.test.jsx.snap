@@ -4,7 +4,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
 <PersonScreen
   appointment="Менеджер по игрушке"
   arbitraryLinkProps={
-    Object {
+    {
       "children": "test",
       "href": "/test",
     }
@@ -23,7 +23,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
       className="root"
       data-testid="screen"
       style={
-        Object {
+        {
           "zIndex": 300,
         }
       }
@@ -34,11 +34,11 @@ exports[`<PersonScreen /> should handle props 1`] = `
       >
         <NavBar
           buttons={
-            Object {
-              "end": Object {
+            {
+              "end": {
                 "aria-label": "Закрыть",
                 "data-testid": "screen:close",
-                "icon": Object {
+                "icon": {
                   "$$typeof": Symbol(react.forward_ref),
                   "render": [Function],
                 },
@@ -51,7 +51,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
           <div
             className="nav-bar"
             style={
-              Object {
+              {
                 "height": "56px",
               }
             }
@@ -66,7 +66,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                   aria-label="Закрыть"
                   data-testid="screen:close"
                   icon={
-                    Object {
+                    {
                       "$$typeof": Symbol(react.forward_ref),
                       "render": [Function],
                     }
@@ -95,7 +95,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                   aria-label="Закрыть"
                   data-testid="screen:close"
                   icon={
-                    Object {
+                    {
                       "$$typeof": Symbol(react.forward_ref),
                       "render": [Function],
                     }
@@ -147,6 +147,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
       >
         <div
           className="body"
+          data-bsl-ignore={true}
           data-testid="screen:body"
         >
           <div
@@ -167,7 +168,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                   className="root size-64 color__basic-white"
                   data-testid="avatar"
                   style={
-                    Object {
+                    {
                       "--avatar-color": "#d50000",
                       "--avatar-color-opacity": 0.48,
                     }
@@ -200,7 +201,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                   className="root size-104 color__basic-white"
                   data-testid="avatar"
                   style={
-                    Object {
+                    {
                       "--avatar-color": "#d50000",
                       "--avatar-color-opacity": 0.48,
                     }
@@ -262,7 +263,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                     >
                       <span
                         className="size-16 line-height-24 color__basic-gray87 weight-600"
-                        style={Object {}}
+                        style={{}}
                       >
                         example@email.com
                       </span>
@@ -280,7 +281,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                         >
                           <span
                             className="size-14 line-height-20 color__basic-gray38"
-                            style={Object {}}
+                            style={{}}
                           >
                             Электронная почта
                           </span>
@@ -332,7 +333,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                     >
                       <span
                         className="size-16 line-height-24 color__basic-gray87 weight-600"
-                        style={Object {}}
+                        style={{}}
                       >
                         example@skype.com
                       </span>
@@ -350,7 +351,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                         >
                           <span
                             className="size-14 line-height-20 color__basic-gray38"
-                            style={Object {}}
+                            style={{}}
                           >
                             Skype
                           </span>
@@ -405,7 +406,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                     >
                       <span
                         className="size-16 line-height-24 color__basic-gray87 weight-600"
-                        style={Object {}}
+                        style={{}}
                       >
                         88000000000 доб. 8823
                       </span>
@@ -423,7 +424,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                         >
                           <span
                             className="size-14 line-height-20 color__basic-gray38"
-                            style={Object {}}
+                            style={{}}
                           >
                             Рабочий
                           </span>
@@ -475,7 +476,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                     >
                       <span
                         className="size-16 line-height-24 color__basic-gray87 weight-600"
-                        style={Object {}}
+                        style={{}}
                       >
                         +7 (900) 000 000
                       </span>
@@ -493,7 +494,7 @@ exports[`<PersonScreen /> should handle props 1`] = `
                         >
                           <span
                             className="size-14 line-height-20 color__basic-gray38"
-                            style={Object {}}
+                            style={{}}
                           >
                             Сотовый
                           </span>
@@ -540,7 +541,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
       className="root"
       data-testid="screen"
       style={
-        Object {
+        {
           "zIndex": 300,
         }
       }
@@ -550,7 +551,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
       >
         <NavBar
           buttons={
-            Object {
+            {
               "end": undefined,
               "start": undefined,
             }
@@ -559,7 +560,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
           <div
             className="nav-bar"
             style={
-              Object {
+              {
                 "height": "56px",
               }
             }
@@ -575,6 +576,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
       >
         <div
           className="body"
+          data-bsl-ignore={true}
           data-testid="screen:body"
         >
           <div
@@ -595,7 +597,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                   className="root size-64 color__basic-white"
                   data-testid="avatar"
                   style={
-                    Object {
+                    {
                       "--avatar-color": "#d50000",
                       "--avatar-color-opacity": 0.48,
                     }
@@ -628,7 +630,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                   className="root size-104 color__basic-white"
                   data-testid="avatar"
                   style={
-                    Object {
+                    {
                       "--avatar-color": "#d50000",
                       "--avatar-color-opacity": 0.48,
                     }
@@ -673,7 +675,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                     >
                       <span
                         className="size-16 line-height-24 color__basic-gray87 weight-600"
-                        style={Object {}}
+                        style={{}}
                       >
                         88000000000 доб. 8823
                       </span>
@@ -691,7 +693,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                         >
                           <span
                             className="size-14 line-height-20 color__basic-gray38"
-                            style={Object {}}
+                            style={{}}
                           >
                             Рабочий
                           </span>
@@ -741,7 +743,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                     >
                       <span
                         className="size-16 line-height-24 color__basic-gray87 weight-600"
-                        style={Object {}}
+                        style={{}}
                       >
                         +7 (900) 000 000
                       </span>
@@ -759,7 +761,7 @@ exports[`<PersonScreen /> should render with name 1`] = `
                         >
                           <span
                             className="size-14 line-height-20 color__basic-gray38"
-                            style={Object {}}
+                            style={{}}
                           >
                             Сотовый
                           </span>
