@@ -47,51 +47,56 @@ const Bootstrap: React.FC = ({ children }) => (
 );
 
 export const Primary = () => (
-  <ProductInfo>
-    <Parts.Image src={data.imageSrc} href={data.url}>
-      <Parts.ImageButton
-        icon={FavoriteSVG}
-        hint='Добавить в избранное'
-        onClick={action('Клик: добавить в избранное')}
+  <div style={{ maxWidth: '200px' }}>
+    <ProductInfo>
+      <Parts.Image src={data.imageSrc} href={data.url}>
+        <Parts.ImageButton
+          icon={FavoriteSVG}
+          hint='Добавить в избранное'
+          onClick={action('Клик: добавить в избранное')}
+        />
+        <Parts.ImageButton
+          icon={QuickView2SVG}
+          hint='Быстрый просмотр'
+          onClick={action('Клик: быстрый просмотр')}
+        />
+        <Parts.ImageButton
+          icon={Camera2SVG}
+          hint='Смотреть фото'
+          hintDirection='right'
+          onClick={action('Клик: Смотреть фото')}
+        />
+      </Parts.Image>
+
+      <Parts.Badges lineLimit={1}>
+        <Badge {...badges[0]} />
+        <Badge {...badges[1]} />
+      </Parts.Badges>
+
+      <Parts.Prices
+        price={data.price}
+        oldPrice={data.oldPrice}
+        currencyGrapheme={data.currencyGrapheme}
       />
-      <Parts.ImageButton
-        icon={QuickView2SVG}
-        hint='Быстрый просмотр'
-        onClick={action('Клик: быстрый просмотр')}
-      />
-      <Parts.ImageButton
-        icon={Camera2SVG}
-        hint='Смотреть фото'
-        onClick={action('Клик: Смотреть фото')}
-      />
-    </Parts.Image>
 
-    <Parts.Badges lineLimit={1}>
-      <Badge {...badges[0]} />
-      <Badge {...badges[1]} />
-    </Parts.Badges>
+      <Parts.Title href={data.url}>{data.name}</Parts.Title>
 
-    <Parts.Prices
-      price={data.price}
-      oldPrice={data.oldPrice}
-      currencyGrapheme={data.currencyGrapheme}
-    />
+      <Parts.SecondaryInfo>Арт. 1234567890</Parts.SecondaryInfo>
 
-    <Parts.Title href={data.url}>{data.name}</Parts.Title>
+      <Parts.TrademarkLink href={data.trademarkUrl}>{data.trademarkName}</Parts.TrademarkLink>
 
-    <Parts.SecondaryInfo>Арт. 1234567890</Parts.SecondaryInfo>
+      <Parts.RatingCounter value={4.5} reviewCount={28} />
 
-    <Parts.TrademarkLink href={data.trademarkUrl}>{data.trademarkName}</Parts.TrademarkLink>
-
-    <Parts.RatingCounter value={4.5} reviewCount={28} />
-
-    <Parts.Footer>
-      <Parts.CartControl stepText='По 5 шт' markupText='Комплектация + 50 ₽ при покупке до 20 шт'>
-        <Stepper defaultValue={3} size='s' style={{ width: '122px' }} />
-      </Parts.CartControl>
-    </Parts.Footer>
-  </ProductInfo>
+      <Parts.Footer>
+        <Parts.CartControl stepText='По 5 шт' markupText='Комплектация + 50 ₽ при покупке до 20 шт'>
+          <Stepper defaultValue={3} size='s' style={{ width: '122px' }} />
+        </Parts.CartControl>
+      </Parts.Footer>
+    </ProductInfo>
+  </div>
 );
+
+Primary.storyName = 'Простой пример';
 
 export const PositionedImageIcons = () => (
   <Bootstrap>
@@ -159,6 +164,8 @@ export const PositionedImageIcons = () => (
   </Bootstrap>
 );
 
+PositionedImageIcons.storyName = 'Иконки на изображении';
+
 export const CartLoading = () => (
   <Bootstrap>
     <ProductInfo>
@@ -222,6 +229,8 @@ export const CartLoading = () => (
     </ProductInfo>
   </Bootstrap>
 );
+
+CartLoading.storyName = 'Загрузка данных корзины';
 
 export const NotEnough = () => (
   <Bootstrap>
@@ -287,6 +296,8 @@ export const NotEnough = () => (
     </ProductInfo>
   </Bootstrap>
 );
+
+NotEnough.storyName = 'Товара нет в наличии';
 
 export const NotEnoughWaited = () => (
   <Bootstrap>
@@ -359,6 +370,8 @@ export const NotEnoughWaited = () => (
   </Bootstrap>
 );
 
+NotEnoughWaited.storyName = 'Товар в листе ожидания';
+
 export const Unavailable = () => (
   <Bootstrap>
     <ProductInfo restriction='unavailable'>
@@ -419,6 +432,8 @@ export const Unavailable = () => (
     </ProductInfo>
   </Bootstrap>
 );
+
+Unavailable.storyName = 'Товар недоступен для покупки';
 
 export const Adult = () => (
   <Bootstrap>
@@ -483,3 +498,5 @@ export const Adult = () => (
     </ProductInfo>
   </Bootstrap>
 );
+
+Adult.storyName = 'Товар для взрослых';
