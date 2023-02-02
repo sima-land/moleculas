@@ -74,6 +74,11 @@ export const SelectScreen = ({
   </Screen>
 );
 
+/**
+ * Отступы для вывода опций в компоненте Screen.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 export const SelectScreenLayout = ({ children, ...props }: LayoutProps) => (
   <MobileLayout {...props} disabledOn={['mxs', 'ms']}>
     <div className={styles.container}>
@@ -82,6 +87,11 @@ export const SelectScreenLayout = ({ children, ...props }: LayoutProps) => (
   </MobileLayout>
 );
 
+/**
+ * Опция.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 export const SelectScreenOption = ({
   children,
   className,
