@@ -1,6 +1,4 @@
-import { Story } from '@storybook/react';
-import { noop } from 'lodash';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { ProductRow, ProductRowProps } from '..';
 
 export default {
@@ -8,67 +6,70 @@ export default {
   component: ProductRow,
   parameters: {
     layout: 'padded',
-    docs: {
-      description: {
-        component: 'Компонент информации о товаре',
-      },
-    },
   },
 };
 
-const Template: Story<ProductRowProps> = props => (
-  <div style={{ width: '480px', height: '160px', margin: '80px auto' }}>
-    <ProductRow {...props} />
-  </div>
-);
-
-export const Primary = Template.bind({});
-export const Secondary = Template.bind({});
-export const Thirdy = Template.bind({});
-export const WithoutHeart = Template.bind({});
-
-const baseArgs: ProductRowProps = {
-  itemUrl: '/',
+const productData: ProductRowProps = {
+  itemUrl: 'https://www.sima-land.ru',
   imageUrl: 'https://cdn3.static1-sima-land.com/items/4243920/0/280.jpg?v=1584652193',
-  name: 'Тестовое название',
+  name: 'Достаточно длинное тестовое название (возможно оно даже не влезет полностью)',
   sid: 123456,
-  isWished: false,
-  count: 1,
+  count: 12,
   unit: 'шт.',
-  initialCount: 1,
-  movedOrderId: 1,
-  notInStock: false,
   currencyGrapheme: 'р',
-  commonPrice: 1234,
+  commonPrice: 1234 * 12,
   itemPrice: 1234,
-  onWishButtonClick: noop,
-  onActionsClick: noop,
-  isFetchingWishItems: false,
 };
 
-Primary.args = {
-  ...baseArgs,
-  notInStock: true,
-  movedOrderId: 0,
-  initialCount: 0,
-};
+function Container({ children }: { children: ReactNode }) {
+  return <div style={{ width: '480px', height: '160px', margin: '80px auto' }}>{children}</div>;
+}
 
-Secondary.args = {
-  ...baseArgs,
-  initialCount: 0,
-};
+export function Primary() {
+  return (
+    <Container>
+      <ProductRow
+        {...productData}
+        onActionsClick={() => alert('Это всего лишь просто пример')}
+        onWishButtonClick={() => alert('Мы учтём, что вам это нравится')}
+      />
+    </Container>
+  );
+}
 
-Thirdy.args = {
-  ...baseArgs,
-  commonPrice: 0,
-  itemPrice: 0,
-  movedOrderId: undefined,
-};
+Primary.storyName = 'Простой пример';
 
-WithoutHeart.args = {
-  ...baseArgs,
-  commonPrice: 0,
-  itemPrice: 0,
-  movedOrderId: undefined,
-  onWishButtonClick: undefined,
-};
+export function Wished() {
+  return (
+    <Container>
+      <ProductRow
+        {...productData}
+        isWished
+        onActionsClick={() => alert('Это всего лишь просто пример')}
+        onWishButtonClick={() => alert('Мы учтём, что вам это нравится')}
+      />
+    </Container>
+  );
+}
+
+Wished.storyName = 'В избранном';
+
+export function InitialCount() {
+  return (
+    <Container>
+      <ProductRow {...productData} initialCount={12} />
+    </Container>
+  );
+}
+
+InitialCount.storyName = 'Было в заказе';
+
+export function MoveOrder() {
+  return (
+    <Container>
+      <ProductRow {...productData} movedOrderId={20304} />
+    </Container>
+  );
+}
+
+MoveOrder.storyName = 'Перемещен в заказ';

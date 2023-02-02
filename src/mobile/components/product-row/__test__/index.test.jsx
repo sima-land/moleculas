@@ -2,6 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { ProductRow } from '..';
 import { noop } from 'lodash';
+import { fireEvent } from '@testing-library/react';
 
 describe('ProductRow', () => {
   const item = {
@@ -30,8 +31,40 @@ describe('ProductRow', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('renders properly without heart', () => {
-    const wrapper = mount(<ProductRow {...item} onWishButtonClick={null} />);
-    expect(wrapper).toMatchSnapshot();
+  it('should render wish button', () => {
+    const spy = jest.fn();
+    const wrapper = mount(<ProductRow {...item} onWishButtonClick={spy} />);
+    expect(wrapper.getDOMNode().querySelectorAll('.wish-button')).toHaveLength(1);
+  });
+
+  it('should render wish button with click handler', () => {
+    const spy = jest.fn();
+    const wrapper = mount(
+      <ProductRow {...item} isFetchingWishItems={false} onWishButtonClick={spy} isWished />,
+    );
+
+    expect(wrapper.getDOMNode().querySelectorAll('.wish-button')).toHaveLength(1);
+
+    expect(spy).toHaveBeenCalledTimes(0);
+    fireEvent.click(wrapper.getDOMNode().querySelector('.wish-button'));
+    expect(spy).toHaveBeenCalledTimes(1);
+  });
+
+  it('should render wish button not pressed', () => {
+    const spy = jest.fn();
+    const wrapper = mount(
+      <ProductRow {...item} isFetchingWishItems={false} onWishButtonClick={spy} isWished={false} />,
+    );
+
+    expect(wrapper.getDOMNode().querySelectorAll('.wish-button')).toHaveLength(1);
+
+    expect(spy).toHaveBeenCalledTimes(0);
+    fireEvent.click(wrapper.getDOMNode().querySelector('.wish-button'));
+    expect(spy).toHaveBeenCalledTimes(1);
+  });
+
+  it('should NOT render wish button', () => {
+    const wrapper = mount(<ProductRow {...item} onWishButtonClick={undefined} />);
+    expect(wrapper.getDOMNode().querySelectorAll('.wish-button')).toHaveLength(0);
   });
 });
