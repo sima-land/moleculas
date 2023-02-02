@@ -10,6 +10,11 @@ export interface BannerTitleProps {
   dueDate?: Date;
 }
 
+/**
+ * Заголовок баннера.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 export const BannerTitle = ({ promotionType, volumeDiscount, dueDate }: BannerTitleProps) => {
   let content: React.ReactNode = null;
 
@@ -37,6 +42,11 @@ export const BannerTitle = ({ promotionType, volumeDiscount, dueDate }: BannerTi
   return <>{content}</>;
 };
 
+/**
+ * Таймер.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 export const CustomTimer = ({ dueDate }: { dueDate: Date }) => (
   <Timer
     date={formatISO(dueDate)}
@@ -53,6 +63,11 @@ export const CustomTimer = ({ dueDate }: { dueDate: Date }) => (
   />
 );
 
+/**
+ * Часть таймера.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 const TimerPart = ({ label, value }: { label: string; value: number }) => (
   <div className={styles.part}>
     <div>{`${value}`.padStart(2, '0')}</div>
@@ -60,4 +75,8 @@ const TimerPart = ({ label, value }: { label: string; value: number }) => (
   </div>
 );
 
+/**
+ * Разделитель частей таймера.
+ * @return Элемент.
+ */
 const TimerDivider = () => <div className={styles.divider}>:</div>;

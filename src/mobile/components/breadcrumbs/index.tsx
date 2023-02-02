@@ -9,6 +9,11 @@ export interface BreadcrumbsProps {
   }[];
 }
 
+/**
+ * Хлебные крошки.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 export const Breadcrumbs = ({ items }: BreadcrumbsProps) => (
   <nav className={styles.root}>
     {items.map((item, index) => (

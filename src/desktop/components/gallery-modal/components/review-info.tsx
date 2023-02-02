@@ -19,6 +19,11 @@ export interface ReviewInfoProps {
 
 const cx = classnames.bind(styles);
 
+/**
+ * Отзыв.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 export const ReviewInfo = ({
   rating,
   author,
@@ -116,10 +121,19 @@ export const ReviewInfo = ({
   );
 };
 
+/**
+ * Оступы для блоков отзыва.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 function Layout({ className, children }: { className?: string; children: ReactNode }) {
   return <div className={cx(className, 'layout')}>{children}</div>;
 }
 
+/**
+ * Отображение загрузки данных отзыва.
+ * @return Элемент.
+ */
 function LoadingView() {
   return (
     <div className={cx('loading')}>

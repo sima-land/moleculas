@@ -28,6 +28,11 @@ export const HoverCard = forwardRef<HTMLDivElement | null, PlateProps>((props, r
   );
 });
 
+/**
+ * Карточка данных товара с расширенной инф-ой при наведении.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 export const ProductCard = ({ children, className, ...props }: ProductCardProps) => {
   const [hovered, toggle] = useState<boolean>(false);
 
@@ -80,6 +85,11 @@ export const reduceBaseInfo = (el: ProductCardChildren) =>
     }),
   });
 
+/**
+ * Получив содержимое карточки фильтрует/меняет его для вывода в карточке при наведении.
+ * @param el Содержимое.
+ * @return Элемент.
+ */
 export const reduceHoverInfo = (el: ProductCardChildren) =>
   cloneElement(el, {
     // при наведении у изображения строго непрозрачность = 1

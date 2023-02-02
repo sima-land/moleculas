@@ -10,20 +10,8 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "plugins": [
-      {
-        "name": "typescript-plugin-css-modules",
-        "options": {
-          "customMatcher": "\\.scss$"
-        }
-      }
-    ]
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
-  "include": [
-    "./src/**/*"
-  ],
-  "exclude": [
-    "build",
-    "node_modules"
-  ]
+  "include": ["./src/**/*"],
+  "exclude": ["build", "node_modules"]
 }
