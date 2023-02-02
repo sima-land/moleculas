@@ -1,48 +1,55 @@
-import React from 'react';
+import React, { AnchorHTMLAttributes, ReactNode } from 'react';
 import classnames from 'classnames/bind';
 import { UserAvatar } from '@sima-land/ui-nucleons/avatar/user';
 import { Box } from '@sima-land/ui-nucleons/box';
 import { Text } from '@sima-land/ui-nucleons/text';
-import { Screen } from '@sima-land/ui-nucleons/screen';
 import { InnerBorder } from '@sima-land/ui-nucleons/styling/borders';
 import MailSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/mail';
 import SkypeSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/skype';
 import PhoneSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/phone';
 import MobileSVG from '@sima-land/ui-quarks/icons/24x24/Filled/mobile';
-import classes from './person-screen.module.scss';
+import styles from './person-info.module.scss';
 
-export interface PersonScreenProps {
-  name?: string;
+export interface PersonInfoProps {
+  /** Специализация. */
   appointment?: string;
-  photoUrl?: string;
+
+  /** Свойства произвольной ссылки. */
+  arbitraryLinkProps?: AnchorHTMLAttributes<HTMLAnchorElement>;
+
+  /** Адрес электронной почты. */
   email?: string;
-  skype?: string;
+
+  /** Имя. */
+  name?: string;
+
+  /** Ссылка на рабочий номер телефона. */
   phoneHref?: string;
+
+  /** Рабочий номер телефона. */
   phoneText?: string;
+
+  /** Ссылка на фото. */
+  photoUrl?: string;
+
+  /** Ссылка на сотовый номер телефона. */
   secondPhoneHref?: string;
+
+  /** Сотовый номер телефона. */
   secondPhoneText?: string;
-  arbitraryLinkProps?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
-  onClose?: () => void;
+
+  /** Адрес Skype-аккаунта. */
+  skype?: string;
 }
 
-const cx = classnames.bind(classes);
+const cx = classnames.bind(styles);
 
 /**
- * Компонент экрана персональных данных.
+ * Информация о персоне.
  * @param props Свойства.
- * @param props.name Имя.
- * @param props.appointment Специализация.
- * @param props.photoUrl Ссылка на фото.
- * @param props.email Адрес электронной почты.
- * @param props.skype Адрес Skype-аккаунта.
- * @param props.phoneHref Ссылка на рабочий номер телефона.
- * @param props.phoneText Рабочий номер телефона.
- * @param props.secondPhoneHref Ссылка на сотовый номер телефона.
- * @param props.secondPhoneText Сотовый номер телефона.
- * @param props.arbitraryLinkProps Свойства произвольной ссылки.
  * @return Элемент.
  */
-export const PersonScreen = ({
+export function PersonInfo({
   name,
   appointment,
   photoUrl,
@@ -53,26 +60,28 @@ export const PersonScreen = ({
   secondPhoneHref,
   secondPhoneText,
   arbitraryLinkProps,
-  onClose,
-  ...screenProps
-}: PersonScreenProps) => (
-  <Screen {...screenProps}>
-    <Screen.Header onClose={onClose} />
-    <Screen.Body>
+}: PersonInfoProps) {
+  return (
+    <>
+      {/* @todo заменить на 1 аватар после обновления нуклонов */}
       <div className={cx('avatar', 'small')}>
         <UserAvatar size={64} title={name} imageUrl={photoUrl} />
       </div>
       <div className={cx('avatar', 'big')}>
         <UserAvatar size={104} title={name} imageUrl={photoUrl} />
       </div>
+
       <span className={cx('name')}>{name}</span>
+
       {Boolean(appointment) && <span className={cx('appointment')}>{appointment}</span>}
+
       {arbitraryLinkProps && (
         <div
           className={cx('profile-url')}
           children={<a className={cx('link')} {...arbitraryLinkProps} />}
         />
       )}
+
       <div className={cx('items', InnerBorder.bottom)}>
         {Boolean(email) && (
           <CommunicateLink
@@ -92,7 +101,7 @@ export const PersonScreen = ({
         )}
         {Boolean(phoneText) && (
           <CommunicateLink
-            href={phoneHref || undefined}
+            href={phoneHref}
             primaryText={phoneText}
             secondaryText='Рабочий'
             icon={<PhoneSVG />}
@@ -100,16 +109,16 @@ export const PersonScreen = ({
         )}
         {Boolean(secondPhoneText) && (
           <CommunicateLink
-            href={secondPhoneHref || undefined}
+            href={secondPhoneHref}
             primaryText={secondPhoneText}
             secondaryText='Сотовый'
             icon={<MobileSVG />}
           />
         )}
       </div>
-    </Screen.Body>
-  </Screen>
-);
+    </>
+  );
+}
 
 /**
  * Компонент блока-ссылки для связи.
@@ -120,7 +129,7 @@ export const PersonScreen = ({
  * @param props.icon Иконка.
  * @return Элемент.
  */
-export const CommunicateLink = ({
+export function CommunicateLink({
   href,
   primaryText,
   secondaryText,
@@ -129,19 +138,21 @@ export const CommunicateLink = ({
   href?: string;
   primaryText?: string;
   secondaryText?: string;
-  icon?: React.ReactNode;
-}) => (
-  <a href={href} className={cx('item', InnerBorder.top)}>
-    <Box flex='grow'>
-      <Text size={16} lineHeight={24} color='basic-gray87' weight={600}>
-        {primaryText}
-      </Text>
-      <Box marginTop={1}>
-        <Text size={14} lineHeight={20} color='basic-gray38'>
-          {secondaryText}
+  icon?: ReactNode;
+}) {
+  return (
+    <a href={href} className={cx('item', InnerBorder.top)}>
+      <Box flex='grow'>
+        <Text size={16} lineHeight={24} color='basic-gray87' weight={600}>
+          {primaryText}
         </Text>
+        <Box marginTop={1}>
+          <Text size={14} lineHeight={20} color='basic-gray38'>
+            {secondaryText}
+          </Text>
+        </Box>
       </Box>
-    </Box>
-    <div className={cx('icon-circle')}>{icon}</div>
-  </a>
-);
+      <div className={cx('icon-circle')}>{icon}</div>
+    </a>
+  );
+}
