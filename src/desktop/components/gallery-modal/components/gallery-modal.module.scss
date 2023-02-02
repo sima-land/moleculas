@@ -1,21 +1,22 @@
 @use 'node_modules/@sima-land/ui-nucleons/colors';
+@use 'node_modules/@sima-land/ui-nucleons/utils';
 
 .root {
+  --header-height: 80px;
   position: relative;
   height: calc(100vh - var(--header-height));
   display: flex;
   flex-direction: column;
-  // box-shadow: inset 0 0 0 6px #f00;
 }
 
 .main {
   position: relative;
-  // box-shadow: inset 0 0 0 6px #0f0;
   width: 100%;
   height: var(--area-height);
 }
 
 .thumbnails {
+  @include utils.semi-stylized-scrollbars;
   width: 104px;
   height: 100%;
   overflow-x: hidden;
@@ -81,5 +82,4 @@
   left: 0;
   right: 0;
   margin-top: auto;
-  // background-color: #ff000024;
 }
