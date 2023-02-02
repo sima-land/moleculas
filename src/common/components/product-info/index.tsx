@@ -12,6 +12,11 @@ export const UNAVAILABLE_REASON = {
   onlyForLegalEntities: 'Товар доступен только для юридических лиц',
 } as const;
 
+/**
+ * Блок информации о товаре по дизайн-гайдам.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 export const ProductInfo = ({ restriction, children }: ProductInfoProps) => {
   const { image, badges, prices, title, trademark, footer, secondaryInfo, ratingCounter } =
     defineSlots(children, {

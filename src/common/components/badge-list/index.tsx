@@ -42,6 +42,11 @@ export const BadgeList = ({ children, className, lineLimit, style }: BadgeListPr
   </div>
 );
 
+/**
+ * Слот для вывода Badge с произвольной оберткой.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 function BadgeListSlot({ children }: { children?: ReactNode }) {
   return <div className={cx('item')}>{children}</div>;
 }

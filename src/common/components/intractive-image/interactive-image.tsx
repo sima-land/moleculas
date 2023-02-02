@@ -39,6 +39,10 @@ export const InteractiveImage = forwardRef<HTMLDivElement, InteractiveImageProps
   },
 );
 
+/**
+ * Проверка валидности содержимого, переданного в InteractiveImage.
+ * @param children Содержимое.
+ */
 function validateChildren(children: ReactNode) {
   let counter = 0;
 
@@ -52,6 +56,11 @@ function validateChildren(children: ReactNode) {
   }
 }
 
+/**
+ * Обертка-ссылка для картинки.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 function ImageAnchor({ children, className, ...rest }: AnchorHTMLAttributes<HTMLAnchorElement>) {
   return (
     <a
@@ -64,12 +73,22 @@ function ImageAnchor({ children, className, ...rest }: AnchorHTMLAttributes<HTML
   );
 }
 
+/**
+ * Изображение на котором будут располагаться точки.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 const Image = forwardRef<HTMLImageElement, InteractiveImageImageProps>(
   ({ className, 'data-testid': testId = 'interactive-image:image', ...rest }, ref) => (
     <img ref={ref} className={cx('image', className)} data-testid={testId} {...rest} />
   ),
 );
 
+/**
+ * Точка которая будет располагаться на изображении.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 const Point = forwardRef<HTMLAnchorElement, InteractiveImagePointProps>(
   ({ x, y, className, style, 'data-testid': testId = 'interactive-image:point', ...rest }, ref) => (
     <a

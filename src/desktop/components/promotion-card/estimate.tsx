@@ -20,8 +20,18 @@ const MONTH_SHORT_NAME = [
   'дек',
 ] as const;
 
+/**
+ * Получив число возвращает его строковое отображение.
+ * @param n Число.
+ * @return Отображение.
+ */
 const toTimePart = (n: number): string => `${n}`.padStart(2, '0');
 
+/**
+ * Оставшееся время.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 export const Estimate = ({ dueDate }: EstimateProps) => {
   const now = new Date();
 

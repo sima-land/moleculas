@@ -18,12 +18,19 @@ type ViewState = 'default' | 'autoplay' | 'turn-right' | 'turn-left';
 
 const cx = classNames.bind(styles);
 
+/**
+ * 3д-просмотр.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 export const AllRoundView = ({ photos }: AllRoundViewProps) => {
   const imageRef = useRef<HTMLImageElement>(null);
   const dragStartRef = useRef<{ position: number; index: number } | null>(null);
 
   const [state, setState] = useState<ViewState>('autoplay');
   const autoplay = state === 'autoplay';
+
+  // eslint-disable-next-line require-jsdoc
   const ChangeState = (bindState: ViewState) => () => setState(bindState);
 
   const [index, setIndex] = useState<number>(0);
@@ -47,6 +54,7 @@ export const AllRoundView = ({ photos }: AllRoundViewProps) => {
   // перетаскивание
   useEffect(() => {
     // переданное число всегда замениться на такое, которое будет в промежутке от 0 до количества фото
+    // eslint-disable-next-line require-jsdoc
     const wrap = (value: number) => (photos.length + value) % photos.length;
 
     const image = imageRef.current as HTMLImageElement;

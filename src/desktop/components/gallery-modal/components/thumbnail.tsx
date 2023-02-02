@@ -17,6 +17,11 @@ export interface ThumbnailProps {
   className?: string;
 }
 
+/**
+ * Превью медиа.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 export const Thumbnail = ({ type, src, alt, checked, onClick, className }: ThumbnailProps) => (
   <button
     className={cx('root', type !== 'image' && 'iconic', checked && 'checked', className)}
