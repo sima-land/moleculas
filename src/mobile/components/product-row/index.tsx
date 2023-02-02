@@ -6,51 +6,69 @@ import { Link } from '@sima-land/ui-nucleons/link';
 import { Price } from '@sima-land/ui-nucleons/price';
 import { Box } from '@sima-land/ui-nucleons/box';
 import { Text } from '@sima-land/ui-nucleons/text';
-import { WishButton } from '../../../common/components/wish-button';
+import { StrokedSVG } from '@sima-land/ui-nucleons/stroked-svg';
+import FavSVG from '@sima-land/ui-quarks/icons/24x24/Filled/favorite';
+import NotFavSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/favorite';
+import { COLORS } from '@sima-land/ui-nucleons/colors';
+
+export interface ProductRowProps {
+  /** Общая сумма товара. */
+  commonPrice: number;
+
+  /** Количество товара, которое будет доставлено. */
+  count?: number;
+
+  /** Символ валюты. */
+  currencyGrapheme: string;
+
+  /** Ссылка на картинку товара. */
+  imageUrl: string;
+
+  /** Изначально добавленное количество товара при заказе. */
+  initialCount?: number;
+
+  /** Признак загрузки добавления товара в список избранного. */
+  isFetchingWishItems?: boolean;
+
+  /** Товар добавлен в избранное. */
+  isWished?: boolean;
+
+  /** Цена товара за единицу. */
+  itemPrice: number;
+
+  /** Ссылка на страницу товара. */
+  itemUrl: string;
+
+  /** Id заказа в который перемещен товар. */
+  movedOrderId?: number;
+
+  /** Название товара. */
+  name: string;
+
+  /** Признак товара не в наличии. */
+  notInStock?: boolean;
+
+  /** Обработчик нажатия на кнопку действий над товаром. */
+  onActionsClick?: () => void;
+
+  /** Обработчик добавления/удаления в избранное. */
+  onWishButtonClick?: () => void;
+
+  /** Артикул товара. */
+  sid: number;
+
+  /** Единицы измерения. */
+  unit: string;
+}
 
 const cx = classnames.bind(styles);
 
-export interface ProductRowProps {
-  sid: number;
-  itemUrl: string;
-  imageUrl: string;
-  name: string;
-  currencyGrapheme: string;
-  itemPrice: number;
-  commonPrice: number;
-  isFetchingWishItems: boolean;
-  isWished: boolean;
-  unit: string;
-  onActionsClick: () => void;
-  onWishButtonClick?: () => void;
-  count?: number;
-  initialCount?: number;
-  movedOrderId?: number;
-  notInStock?: boolean;
-}
-
 /**
- * Компонент вертикальной карточки товара для списков товаров.
- * @param props Свойства компонента.
- * @param props.itemUrl Ссылка на страницу товара.
- * @param props.imageUrl Ссылка на картинку товара.
- * @param props.name Название товара.
- * @param props.sid Артикул товара.
- * @param props.isWished Товар добавлен в избранное.
- * @param props.count Количество товара, которое будет доставлено.
- * @param props.unit Единицы измерения.
- * @param props.initialCount Изначально добавленное количество товара при заказе.
- * @param props.movedOrderId Id заказа в который перемещен товар.
- * @param props.notInStock Признак товара не в наличии.
- * @param props.currencyGrapheme Символ валюты.
- * @param props.commonPrice Общая сумма товара.
- * @param props.itemPrice Цена товара за единицу.
- * @param props.onWishButtonClick Обработчик добавления/удаления в избранное.
- * @param props.onActionsClick Обработчик нажатия на кнопку действий над товаром.
- * @param props.isFetchingWishItems Признак загрузки добавления товара в список избранного.
+ * Карточка товара для вертикальных списков товаров.
+ * @param props Свойства.
  * @return Элемент.
  */
-export const ProductRow = ({
+export function ProductRow({
   itemUrl,
   imageUrl,
   name,
@@ -67,71 +85,72 @@ export const ProductRow = ({
   onWishButtonClick,
   onActionsClick,
   isFetchingWishItems,
-}: ProductRowProps) => (
-  <div className={cx('wrapper')}>
-    <div className={cx('image-wrapper')}>
-      <Link href={itemUrl}>
-        <img src={imageUrl} className={cx('image')} />
-      </Link>
-      {onWishButtonClick && (
-        <WishButton
-          onClick={onWishButtonClick}
-          className={cx('wish-button', { 'is-wished': isWished })}
-          width={20}
-          height={20}
-          checked={isWished}
-          disabled={isFetchingWishItems}
-        />
-      )}
+}: ProductRowProps) {
+  return (
+    <div className={cx('wrapper')}>
+      <div className={cx('image-wrapper')}>
+        <Link href={itemUrl}>
+          {/* @todo Использовать Parts.Image из ProductInfo */}
+          <img src={imageUrl} className={cx('image')} />
+        </Link>
+        {onWishButtonClick && (
+          <StrokedSVG
+            className={cx('wish-button')}
+            fill={isWished ? COLORS.get('additional-red') : undefined}
+            component={isWished ? FavSVG : NotFavSVG}
+            onClick={isFetchingWishItems ? undefined : onWishButtonClick}
+          />
+        )}
+      </div>
+      <div className={cx('info-column')}>
+        <Link href={itemUrl} className={cx('link')} color='basic-gray87'>
+          <Text weight={600}>{name}</Text>
+        </Link>
+        <Box marginTop={2}>
+          <Text color='basic-gray38'>Арт.: {sid}</Text>
+        </Box>
+        {Boolean(initialCount) && (
+          <Box marginTop={2}>
+            <Text element='div' size={12}>
+              <div>{`Было в заказе: ${initialCount} ${unit}`}</div>
+              <div>{`Вы получите: ${count} ${unit}`}</div>
+            </Text>
+          </Box>
+        )}
+        {Boolean(itemPrice) && (
+          <Box marginTop={2}>
+            <Text element='div' weight={600} size={12}>
+              <Price value={itemPrice} currencyGrapheme={currencyGrapheme} />
+              {` × ${count} ${unit}`}
+            </Text>
+          </Box>
+        )}
+        {Boolean(commonPrice && itemPrice) && (
+          <Box marginTop={4}>
+            <Text element='div' weight={600}>
+              <Price value={commonPrice} currencyGrapheme={currencyGrapheme} />
+            </Text>
+          </Box>
+        )}
+        {Boolean(movedOrderId) && (
+          <Box marginTop={2}>
+            <Text element='div' color='basic-gray38'>
+              Перемещен в заказ
+            </Text>
+            <Link>№{movedOrderId}</Link>
+          </Box>
+        )}
+        {notInStock && (
+          <Box marginTop={2}>
+            <Text element='div' color='basic-gray38'>
+              Нет на складе
+            </Text>
+          </Box>
+        )}
+      </div>
+      <div className={cx('action-button')}>
+        <MoreSVG onClick={onActionsClick} />
+      </div>
     </div>
-    <div className={cx('info-column')}>
-      <Link href={itemUrl} className={cx('link')} color='basic-gray87'>
-        <Text weight={600}>{name}</Text>
-      </Link>
-      <Box marginTop={2}>
-        <Text color='basic-gray38'>Арт.: {sid}</Text>
-      </Box>
-      {Boolean(initialCount) && (
-        <Box marginTop={2}>
-          <Text element='div' size={12}>
-            <div>{`Было в заказе: ${initialCount} ${unit}`}</div>
-            <div>{`Вы получите: ${count} ${unit}`}</div>
-          </Text>
-        </Box>
-      )}
-      {Boolean(itemPrice) && (
-        <Box marginTop={2}>
-          <Text element='div' weight={600} size={12}>
-            <Price value={itemPrice} currencyGrapheme={currencyGrapheme} />
-            {` × ${count} ${unit}`}
-          </Text>
-        </Box>
-      )}
-      {Boolean(commonPrice && itemPrice) && (
-        <Box marginTop={4}>
-          <Text element='div' weight={600}>
-            <Price value={commonPrice} currencyGrapheme={currencyGrapheme} />
-          </Text>
-        </Box>
-      )}
-      {Boolean(movedOrderId) && (
-        <Box marginTop={2}>
-          <Text element='div' color='basic-gray38'>
-            Перемещен в заказ
-          </Text>
-          <Link>№{movedOrderId}</Link>
-        </Box>
-      )}
-      {notInStock && (
-        <Box marginTop={2}>
-          <Text element='div' color='basic-gray38'>
-            Нет на складе
-          </Text>
-        </Box>
-      )}
-    </div>
-    <div className={cx('action-button')}>
-      <MoreSVG onClick={onActionsClick} />
-    </div>
-  </div>
-);
+  );
+}
