@@ -478,7 +478,7 @@ exports[`ProductInfo regular content should match snapshot 1`] = `
         class="control"
       >
         <button
-          class="button-base button-primary button-s text-button-s"
+          class="root size-s view-primary"
           data-testid="test-add-to-cart-button"
         >
           В корзину

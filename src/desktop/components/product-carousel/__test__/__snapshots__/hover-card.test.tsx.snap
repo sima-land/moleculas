@@ -31,7 +31,7 @@ exports[`<HoverCard /> should renders hidden 1`] = `
       }
     >
       <div
-        className="bg-color__basic-white card root hidden rounds-sm__all shadow-z4 shadow-z4 rounds-md__all"
+        className="root card root hidden rounds-sm__all shadow-z4 shadow-z4 rounds-md__all"
         data-testid="product-card:hover-card"
         onMouseLeave={[Function]}
         style={
@@ -85,7 +85,7 @@ exports[`<HoverCard /> should renders with positioning 1`] = `
         }
       >
         <div
-          className="bg-color__basic-white card root rounds-sm__all shadow-z4 shadow-z4 rounds-md__all"
+          className="root card root rounds-sm__all shadow-z4 shadow-z4 rounds-md__all"
           data-testid="product-card:hover-card"
           onMouseLeave={[Function]}
           style={

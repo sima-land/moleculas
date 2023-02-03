@@ -161,10 +161,13 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     style="width: 122px;"
                   >
                     <button
+                      aria-label="Уменьшить"
                       class="button"
                       data-testid="stepper:minus"
+                      tabindex="-1"
                     >
                       <svg
+                        class="svg"
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
@@ -182,10 +185,13 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                       value="3"
                     />
                     <button
+                      aria-label="Увеличить"
                       class="button"
                       data-testid="stepper:plus"
+                      tabindex="-1"
                     >
                       <svg
+                        class="svg"
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
@@ -351,10 +357,13 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     style="width: 122px;"
                   >
                     <button
+                      aria-label="Уменьшить"
                       class="button"
                       data-testid="stepper:minus"
+                      tabindex="-1"
                     >
                       <svg
+                        class="svg"
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
@@ -372,10 +381,13 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                       value="3"
                     />
                     <button
+                      aria-label="Увеличить"
                       class="button"
                       data-testid="stepper:plus"
+                      tabindex="-1"
                     >
                       <svg
+                        class="svg"
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
@@ -613,10 +625,13 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     style="width: 122px;"
                   >
                     <button
+                      aria-label="Уменьшить"
                       class="button"
                       data-testid="stepper:minus"
+                      tabindex="-1"
                     >
                       <svg
+                        class="svg"
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
@@ -634,10 +649,13 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                       value="3"
                     />
                     <button
+                      aria-label="Увеличить"
                       class="button"
                       data-testid="stepper:plus"
+                      tabindex="-1"
                     >
                       <svg
+                        class="svg"
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
@@ -803,10 +821,13 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     style="width: 122px;"
                   >
                     <button
+                      aria-label="Уменьшить"
                       class="button"
                       data-testid="stepper:minus"
+                      tabindex="-1"
                     >
                       <svg
+                        class="svg"
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
@@ -824,10 +845,13 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                       value="3"
                     />
                     <button
+                      aria-label="Увеличить"
                       class="button"
                       data-testid="stepper:plus"
+                      tabindex="-1"
                     >
                       <svg
+                        class="svg"
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
@@ -993,10 +1017,13 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     style="width: 122px;"
                   >
                     <button
+                      aria-label="Уменьшить"
                       class="button"
                       data-testid="stepper:minus"
+                      tabindex="-1"
                     >
                       <svg
+                        class="svg"
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
@@ -1014,10 +1041,13 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                       value="3"
                     />
                     <button
+                      aria-label="Увеличить"
                       class="button"
                       data-testid="stepper:plus"
+                      tabindex="-1"
                     >
                       <svg
+                        class="svg"
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
@@ -1218,10 +1248,13 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     style="width: 122px;"
                   >
                     <button
+                      aria-label="Уменьшить"
                       class="button"
                       data-testid="stepper:minus"
+                      tabindex="-1"
                     >
                       <svg
+                        class="svg"
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
@@ -1239,10 +1272,13 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                       value="3"
                     />
                     <button
+                      aria-label="Увеличить"
                       class="button"
                       data-testid="stepper:plus"
+                      tabindex="-1"
                     >
                       <svg
+                        class="svg"
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
@@ -1408,10 +1444,13 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     style="width: 122px;"
                   >
                     <button
+                      aria-label="Уменьшить"
                       class="button"
                       data-testid="stepper:minus"
+                      tabindex="-1"
                     >
                       <svg
+                        class="svg"
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
@@ -1429,10 +1468,13 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                       value="3"
                     />
                     <button
+                      aria-label="Увеличить"
                       class="button"
                       data-testid="stepper:plus"
+                      tabindex="-1"
                     >
                       <svg
+                        class="svg"
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
@@ -1604,10 +1646,13 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     style="width: 122px;"
                   >
                     <button
+                      aria-label="Уменьшить"
                       class="button"
                       data-testid="stepper:minus"
+                      tabindex="-1"
                     >
                       <svg
+                        class="svg"
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
@@ -1625,10 +1670,13 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                       value="3"
                     />
                     <button
+                      aria-label="Увеличить"
                       class="button"
                       data-testid="stepper:plus"
+                      tabindex="-1"
                     >
                       <svg
+                        class="svg"
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
@@ -1800,10 +1848,13 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     style="width: 122px;"
                   >
                     <button
+                      aria-label="Уменьшить"
                       class="button"
                       data-testid="stepper:minus"
+                      tabindex="-1"
                     >
                       <svg
+                        class="svg"
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
@@ -1821,10 +1872,13 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                       value="3"
                     />
                     <button
+                      aria-label="Увеличить"
                       class="button"
                       data-testid="stepper:plus"
+                      tabindex="-1"
                     >
                       <svg
+                        class="svg"
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
@@ -1990,10 +2044,13 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     style="width: 122px;"
                   >
                     <button
+                      aria-label="Уменьшить"
                       class="button"
                       data-testid="stepper:minus"
+                      tabindex="-1"
                     >
                       <svg
+                        class="svg"
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
@@ -2011,10 +2068,13 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                       value="3"
                     />
                     <button
+                      aria-label="Увеличить"
                       class="button"
                       data-testid="stepper:plus"
+                      tabindex="-1"
                     >
                       <svg
+                        class="svg"
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
@@ -2196,10 +2256,13 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             style="width: 122px;"
           >
             <button
+              aria-label="Уменьшить"
               class="button"
               data-testid="stepper:minus"
+              tabindex="-1"
             >
               <svg
+                class="svg"
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
@@ -2217,10 +2280,13 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
               value="3"
             />
             <button
+              aria-label="Увеличить"
               class="button"
               data-testid="stepper:plus"
+              tabindex="-1"
             >
               <svg
+                class="svg"
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
@@ -2386,10 +2452,13 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             style="width: 122px;"
           >
             <button
+              aria-label="Уменьшить"
               class="button"
               data-testid="stepper:minus"
+              tabindex="-1"
             >
               <svg
+                class="svg"
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
@@ -2407,10 +2476,13 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
               value="3"
             />
             <button
+              aria-label="Увеличить"
               class="button"
               data-testid="stepper:plus"
+              tabindex="-1"
             >
               <svg
+                class="svg"
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
@@ -2648,10 +2720,13 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             style="width: 122px;"
           >
             <button
+              aria-label="Уменьшить"
               class="button"
               data-testid="stepper:minus"
+              tabindex="-1"
             >
               <svg
+                class="svg"
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
@@ -2669,10 +2744,13 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
               value="3"
             />
             <button
+              aria-label="Увеличить"
               class="button"
               data-testid="stepper:plus"
+              tabindex="-1"
             >
               <svg
+                class="svg"
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
@@ -2838,10 +2916,13 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             style="width: 122px;"
           >
             <button
+              aria-label="Уменьшить"
               class="button"
               data-testid="stepper:minus"
+              tabindex="-1"
             >
               <svg
+                class="svg"
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
@@ -2859,10 +2940,13 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
               value="3"
             />
             <button
+              aria-label="Увеличить"
               class="button"
               data-testid="stepper:plus"
+              tabindex="-1"
             >
               <svg
+                class="svg"
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
@@ -3028,10 +3112,13 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             style="width: 122px;"
           >
             <button
+              aria-label="Уменьшить"
               class="button"
               data-testid="stepper:minus"
+              tabindex="-1"
             >
               <svg
+                class="svg"
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
@@ -3049,10 +3136,13 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
               value="3"
             />
             <button
+              aria-label="Увеличить"
               class="button"
               data-testid="stepper:plus"
+              tabindex="-1"
             >
               <svg
+                class="svg"
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
@@ -3253,10 +3343,13 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             style="width: 122px;"
           >
             <button
+              aria-label="Уменьшить"
               class="button"
               data-testid="stepper:minus"
+              tabindex="-1"
             >
               <svg
+                class="svg"
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
@@ -3274,10 +3367,13 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
               value="3"
             />
             <button
+              aria-label="Увеличить"
               class="button"
               data-testid="stepper:plus"
+              tabindex="-1"
             >
               <svg
+                class="svg"
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
@@ -3443,10 +3539,13 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             style="width: 122px;"
           >
             <button
+              aria-label="Уменьшить"
               class="button"
               data-testid="stepper:minus"
+              tabindex="-1"
             >
               <svg
+                class="svg"
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
@@ -3464,10 +3563,13 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
               value="3"
             />
             <button
+              aria-label="Увеличить"
               class="button"
               data-testid="stepper:plus"
+              tabindex="-1"
             >
               <svg
+                class="svg"
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
@@ -3639,10 +3741,13 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             style="width: 122px;"
           >
             <button
+              aria-label="Уменьшить"
               class="button"
               data-testid="stepper:minus"
+              tabindex="-1"
             >
               <svg
+                class="svg"
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
@@ -3660,10 +3765,13 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
               value="3"
             />
             <button
+              aria-label="Увеличить"
               class="button"
               data-testid="stepper:plus"
+              tabindex="-1"
             >
               <svg
+                class="svg"
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
@@ -3835,10 +3943,13 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             style="width: 122px;"
           >
             <button
+              aria-label="Уменьшить"
               class="button"
               data-testid="stepper:minus"
+              tabindex="-1"
             >
               <svg
+                class="svg"
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
@@ -3856,10 +3967,13 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
               value="3"
             />
             <button
+              aria-label="Увеличить"
               class="button"
               data-testid="stepper:plus"
+              tabindex="-1"
             >
               <svg
+                class="svg"
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
@@ -4025,10 +4139,13 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             style="width: 122px;"
           >
             <button
+              aria-label="Уменьшить"
               class="button"
               data-testid="stepper:minus"
+              tabindex="-1"
             >
               <svg
+                class="svg"
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
@@ -4046,10 +4163,13 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
               value="3"
             />
             <button
+              aria-label="Увеличить"
               class="button"
               data-testid="stepper:plus"
+              tabindex="-1"
             >
               <svg
+                class="svg"
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"

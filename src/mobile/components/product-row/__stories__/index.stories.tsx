@@ -22,7 +22,7 @@ const productData: ProductRowProps = {
 };
 
 function Container({ children }: { children: ReactNode }) {
-  return <div style={{ width: '480px', height: '160px', margin: '80px auto' }}>{children}</div>;
+  return <div style={{ width: '480px', margin: '80px auto' }}>{children}</div>;
 }
 
 export function Primary() {

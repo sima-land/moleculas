@@ -1,6 +1,6 @@
 import React, { createContext, ReactNode, useContext } from 'react';
 import { Link, LinkProps } from '@sima-land/ui-nucleons/link';
-import { HintProps } from '@sima-land/ui-nucleons/hint';
+import { HintProps } from '@sima-land/ui-nucleons/hint-deprecated';
 import { Price } from '@sima-land/ui-nucleons/price';
 import { StrokedSVG, StrokedSVGProps } from '@sima-land/ui-nucleons/stroked-svg';
 import { WithHint } from '@sima-land/ui-nucleons/with-hint';
@@ -329,10 +329,20 @@ const WaitListAddedLink = ({ className, ...props }: LinkProps) => (
   </span>
 );
 
+/**
+ * Дополнительный контент после заголовка.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 function SecondaryInfo({ children }: { children: ReactNode }) {
   return <div className={cx('secondary-info')}>{children}</div>;
 }
 
+/**
+ * Счетчик рейтинга.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 function CustomRatingCounter({ className, ...rest }: RatingCounterProps) {
   return <RatingCounter size='unset' className={cx('rating', className)} hoverDisabled {...rest} />;
 }

@@ -25,7 +25,7 @@
     "prettier:check": "prettier --check \"./src/**/*.{js,jsx,ts,tsx,css,scss}\" --loglevel error"
   },
   "dependencies": {
-    "@sima-land/ui-nucleons": "^44.2.10",
+    "@sima-land/ui-nucleons": "^45.0.0-alpha.0",
     "@sima-land/ui-quarks": "^3.6.0",
     "classnames": "^2.3.2",
     "date-fns": "^2.29.3",
@@ -74,7 +74,6 @@
     "jest": "^29.4.1",
     "jest-environment-jsdom": "^29.4.1",
     "lint-staged": "^13.1.0",
-    "postcss": "^8.4.21",
     "prettier": "^2.8.3",
     "react": "^17.0.2",
     "react-docgen-typescript": "^2.2.2",

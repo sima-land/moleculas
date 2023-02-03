@@ -11,14 +11,7 @@ module.exports = {
       },
     },
     {
-      files: [
-        './**/__stories__/**/*',
-        './**/__stories__/**/*',
-        './**/*.test.*',
-        './**/*.test.*',
-        '*.ts',
-        '*.tsx',
-      ],
+      files: ['./**/__stories__/**/*', './**/__stories__/**/*', './**/*.test.*', './**/*.test.*'],
       rules: {
         'require-jsdoc': 'off',
         'jsdoc/require-jsdoc': 'off',

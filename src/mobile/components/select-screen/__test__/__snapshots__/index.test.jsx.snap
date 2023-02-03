@@ -48,41 +48,37 @@ exports[`<SelectScreen /> should handle "displayItem" prop 1`] = `
         key=".0"
         title="Валюта"
       >
-        <NavBar
+        <TopBar
           buttons={
             {
               "end": undefined,
               "start": undefined,
             }
           }
+          size="s"
           title="Валюта"
         >
           <div
-            className="nav-bar"
-            style={
-              {
-                "height": "56px",
-              }
-            }
+            className="root size-s no-subtitle"
+            data-testid="top-bar"
           >
             <div
               className="main"
             >
               <div
-                className="title truncate"
+                className="title"
               >
                 Валюта
               </div>
             </div>
           </div>
-        </NavBar>
+        </TopBar>
       </HeaderSlot>
       <ForwardRef(BodySlot)
         key=".1"
       >
         <div
           className="body"
-          data-bsl-ignore={true}
           data-testid="screen:body"
         >
           <SelectScreenLayout
@@ -303,41 +299,37 @@ exports[`<SelectScreen /> should handle miss "getItemName" prop 1`] = `
         key=".0"
         title="Валюта"
       >
-        <NavBar
+        <TopBar
           buttons={
             {
               "end": undefined,
               "start": undefined,
             }
           }
+          size="s"
           title="Валюта"
         >
           <div
-            className="nav-bar"
-            style={
-              {
-                "height": "56px",
-              }
-            }
+            className="root size-s no-subtitle"
+            data-testid="top-bar"
           >
             <div
               className="main"
             >
               <div
-                className="title truncate"
+                className="title"
               >
                 Валюта
               </div>
             </div>
           </div>
-        </NavBar>
+        </TopBar>
       </HeaderSlot>
       <ForwardRef(BodySlot)
         key=".1"
       >
         <div
           className="body"
-          data-bsl-ignore={true}
           data-testid="screen:body"
         >
           <SelectScreenLayout
@@ -558,41 +550,37 @@ exports[`<SelectScreen /> should handle props 1`] = `
         key=".0"
         title="Районы"
       >
-        <NavBar
+        <TopBar
           buttons={
             {
               "end": undefined,
               "start": undefined,
             }
           }
+          size="s"
           title="Районы"
         >
           <div
-            className="nav-bar"
-            style={
-              {
-                "height": "56px",
-              }
-            }
+            className="root size-s no-subtitle"
+            data-testid="top-bar"
           >
             <div
               className="main"
             >
               <div
-                className="title truncate"
+                className="title"
               >
                 Районы
               </div>
             </div>
           </div>
-        </NavBar>
+        </TopBar>
       </HeaderSlot>
       <ForwardRef(BodySlot)
         key=".1"
       >
         <div
           className="body"
-          data-bsl-ignore={true}
           data-testid="screen:body"
         >
           <SelectScreenLayout
@@ -836,34 +824,30 @@ exports[`<SelectScreen /> should render without props 1`] = `
       <HeaderSlot
         key=".0"
       >
-        <NavBar
+        <TopBar
           buttons={
             {
               "end": undefined,
               "start": undefined,
             }
           }
+          size="s"
         >
           <div
-            className="nav-bar"
-            style={
-              {
-                "height": "56px",
-              }
-            }
+            className="root size-s no-subtitle"
+            data-testid="top-bar"
           >
             <div
               className="main"
             />
           </div>
-        </NavBar>
+        </TopBar>
       </HeaderSlot>
       <ForwardRef(BodySlot)
         key=".1"
       >
         <div
           className="body"
-          data-bsl-ignore={true}
           data-testid="screen:body"
         >
           <SelectScreenLayout
@@ -924,11 +908,10 @@ exports[`select screen parts should works properly 1`] = `
   <div
     class="root"
     data-testid="screen"
-    style="z-index: 300;"
+    style="z-index: 300; --vh: 7.68px;"
   >
     <div
       class="body"
-      data-bsl-ignore="true"
       data-testid="screen:body"
     >
       <div
