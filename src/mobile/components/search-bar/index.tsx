@@ -75,8 +75,8 @@ export const SearchBar = ({
 }: SearchBarProps) => {
   const [shownDropdown, toggleDropdown] = useState<boolean>(false);
   const inputRef = useRef<HTMLInputElement>(null);
-  const dropDownRef = useRef<HTMLDivElement>(null);
-  const dropDownOpenerRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const dropdownOpenerRef = useRef<HTMLDivElement>(null);
 
   const needHideEndButtons = endButtons.length > 1;
 
@@ -85,9 +85,8 @@ export const SearchBar = ({
     () => inputRef.current,
   );
 
-  useOutsideClick(dropDownRef, e => {
-    !(dropDownOpenerRef.current as HTMLDivElement).contains(e.target as any) &&
-      toggleDropdown(false);
+  useOutsideClick(dropdownRef, e => {
+    !dropdownOpenerRef.current?.contains(e.target as any) && toggleDropdown(false);
   });
 
   useEffect(
@@ -102,6 +101,7 @@ export const SearchBar = ({
     [needHideEndButtons],
   );
 
+  // eslint-disable-next-line require-jsdoc
   const preventFieldBlur: React.MouseEventHandler = e => {
     if (
       inputRef.current &&
@@ -177,13 +177,13 @@ export const SearchBar = ({
               <div className={cx('buttons-container')}>
                 <Button
                   text='Больше'
-                  ref={dropDownOpenerRef}
+                  ref={dropdownOpenerRef}
                   icon={MoreVertSVG}
                   onClick={() => toggleDropdown(!shownDropdown)}
                 />
               </div>
               {shownDropdown && (
-                <div ref={dropDownRef} className={cx('dropdown-container')}>
+                <div ref={dropdownRef} className={cx('dropdown-container')}>
                   <Dropdown>
                     {endButtons.map(({ text, onClick }, index) => (
                       <DropdownItem

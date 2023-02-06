@@ -41,6 +41,7 @@ export interface ProductCarouselProps {
 
 const cx = classnames.bind(styles);
 
+// eslint-disable-next-line require-jsdoc
 const getSizeClasses = (size = {}) => [
   `size-xs-${(size as any).xs || 4}`,
   `size-s-${(size as any).s || 3}`,

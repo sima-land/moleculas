@@ -97,6 +97,11 @@ const GroupItem = forwardRef<HTMLDivElement, GroupItemProps>(
   ),
 );
 
+/**
+ * Кнопка показа скрытых модификаторов.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 const OpenButton = ({ count, onClick }: OpenButtonProps) => (
   <ModifierButton
     squared

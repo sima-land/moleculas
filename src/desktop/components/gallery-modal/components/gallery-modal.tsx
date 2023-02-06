@@ -44,6 +44,11 @@ interface InnerStyles extends React.CSSProperties {
 
 const cx = classNames.bind(styles);
 
+/**
+ * Полноэкранное модальное окно галереи фото/видео.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 export const GalleryModal = ({
   media,
   defaultMediaIndex = 0,
@@ -136,6 +141,11 @@ export const GalleryModal = ({
   );
 };
 
+/**
+ * Изображение или видео.
+ * @param props Свойства.
+ * @return Элемент.
+ */
 const Media = ({
   onVideoEvent,
   ...media

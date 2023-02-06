@@ -1,15 +1,9 @@
 import React from 'react';
-import {
-  Title,
-  Subtitle,
-  Description,
-  ArgsTable,
-  PRIMARY_STORY,
-} from '@storybook/addon-docs';
+import { Title, Subtitle, Description, ArgsTable, PRIMARY_STORY } from '@storybook/addon-docs';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   viewport: {
     viewports: INITIAL_VIEWPORTS,
   },
@@ -25,5 +19,18 @@ export const parameters = {
         <ArgsTable story={PRIMARY_STORY} />
       </>
     ),
+  },
+  backgrounds: {
+    default: 'white',
+    values: [
+      {
+        name: 'white',
+        value: '#fff',
+      },
+      {
+        name: 'custom:gray',
+        value: '#ccc',
+      },
+    ],
   },
 };

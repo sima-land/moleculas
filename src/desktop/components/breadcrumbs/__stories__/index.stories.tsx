@@ -22,3 +22,5 @@ export const Primary = () => (
     <div style={{ background: '#ddd', height: 32 }} />
   </>
 );
+
+Primary.storyName = 'Простой пример';

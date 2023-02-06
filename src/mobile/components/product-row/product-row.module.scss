@@ -2,7 +2,6 @@
 
 .wrapper {
   display: flex;
-  padding: 16px 0;
   font-size: 14px;
   &:not(:last-of-type) {
     border-bottom: 1px solid colors.$basic-gray12;

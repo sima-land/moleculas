@@ -41,280 +41,55 @@ exports[`ProductRow renders properly 1`] = `
           />
         </a>
       </ForwardRef(Link)>
-      <ForwardRef
-        checked={true}
-        className="wish-button is-wished"
-        disabled={[Function]}
-        height={20}
-        onClick={[Function]}
-        width={20}
-      >
-        <ForwardRef(SvgFilledHeart)
-          aria-label="Убрать из избранного"
-          className="button wish-button is-wished checked disabled"
-          data-testid="favorite-button"
-          height={24}
-          role="button"
-          width={24}
-        >
-          <svg
-            aria-label="Убрать из избранного"
-            className="button wish-button is-wished checked disabled"
-            data-testid="favorite-button"
-            height={24}
-            role="button"
-            viewBox="0 0 24 24"
-            width={24}
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366Z"
-            />
-          </svg>
-        </ForwardRef(SvgFilledHeart)>
-      </ForwardRef>
-    </div>
-    <div
-      className="info-column"
-    >
-      <ForwardRef(Link)
-        className="link"
-        color="basic-gray87"
-        href="test"
-      >
-        <a
-          className="link link basic-gray87"
-          data-testid="anchor"
-          href="test"
-        >
-          <ForwardRef(Text)
-            weight={600}
-          >
-            <span
-              className="weight-600"
-              style={{}}
-            >
-              Зеленый слоник 25мм МИКС
-            </span>
-          </ForwardRef(Text)>
-        </a>
-      </ForwardRef(Link)>
-      <Box
-        marginTop={2}
+      <StrokedSVG
+        className="wish-button"
+        component={
+          {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          }
+        }
+        fill="#fb3a2f"
       >
         <div
-          className="M-t__2"
+          className="root wish-button"
         >
-          <ForwardRef(Text)
-            color="basic-gray38"
+          <ForwardRef(FavoriteSVG)
+            className="stroke"
+            stroke="#f5f5f5"
+            strokeWidth="2px"
           >
-            <span
-              className="color__basic-gray38"
-              style={{}}
+            <svg
+              className="stroke"
+              height={24}
+              stroke="#f5f5f5"
+              strokeWidth="2px"
+              viewBox="0 0 24 24"
+              width={24}
             >
-              Арт.: 
-              123
-            </span>
-          </ForwardRef(Text)>
-        </div>
-      </Box>
-      <Box
-        marginTop={2}
-      >
-        <div
-          className="M-t__2"
-        >
-          <ForwardRef(Text)
-            element="div"
-            size={12}
+              <path
+                d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366z"
+              />
+            </svg>
+          </ForwardRef(FavoriteSVG)>
+          <ForwardRef(FavoriteSVG)
+            className="svg"
+            fill="#fb3a2f"
           >
-            <div
-              className="size-12 line-height-16"
-              style={{}}
+            <svg
+              className="svg"
+              fill="#fb3a2f"
+              height={24}
+              viewBox="0 0 24 24"
+              width={24}
             >
-              <div>
-                Было в заказе: 42 шт.
-              </div>
-              <div>
-                Вы получите: 23 шт.
-              </div>
-            </div>
-          </ForwardRef(Text)>
+              <path
+                d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366z"
+              />
+            </svg>
+          </ForwardRef(FavoriteSVG)>
         </div>
-      </Box>
-      <Box
-        marginTop={2}
-      >
-        <div
-          className="M-t__2"
-        >
-          <ForwardRef(Text)
-            element="div"
-            size={12}
-            weight={600}
-          >
-            <div
-              className="size-12 line-height-16 weight-600"
-              style={{}}
-            >
-              <Price
-                currencyGrapheme="₽"
-                value={5}
-              >
-                <span
-                  className="root"
-                  data-testid="price"
-                >
-                  5 ₽
-                </span>
-              </Price>
-               × 23 шт.
-            </div>
-          </ForwardRef(Text)>
-        </div>
-      </Box>
-      <Box
-        marginTop={4}
-      >
-        <div
-          className="M-t__4"
-        >
-          <ForwardRef(Text)
-            element="div"
-            weight={600}
-          >
-            <div
-              className="weight-600"
-              style={{}}
-            >
-              <Price
-                currencyGrapheme="₽"
-                value={50}
-              >
-                <span
-                  className="root"
-                  data-testid="price"
-                >
-                  50 ₽
-                </span>
-              </Price>
-            </div>
-          </ForwardRef(Text)>
-        </div>
-      </Box>
-      <Box
-        marginTop={2}
-      >
-        <div
-          className="M-t__2"
-        >
-          <ForwardRef(Text)
-            color="basic-gray38"
-            element="div"
-          >
-            <div
-              className="color__basic-gray38"
-              style={{}}
-            >
-              Перемещен в заказ
-            </div>
-          </ForwardRef(Text)>
-          <ForwardRef(Link)>
-            <a
-              className="link basic-blue"
-              data-testid="anchor"
-            >
-              №
-              123456
-            </a>
-          </ForwardRef(Link)>
-        </div>
-      </Box>
-      <Box
-        marginTop={2}
-      >
-        <div
-          className="M-t__2"
-        >
-          <ForwardRef(Text)
-            color="basic-gray38"
-            element="div"
-          >
-            <div
-              className="color__basic-gray38"
-              style={{}}
-            >
-              Нет на складе
-            </div>
-          </ForwardRef(Text)>
-        </div>
-      </Box>
-    </div>
-    <div
-      className="action-button"
-    >
-      <ForwardRef(MoreSVG)
-        onClick={[Function]}
-      >
-        <svg
-          height={24}
-          onClick={[Function]}
-          viewBox="0 0 24 24"
-          width={24}
-        >
-          <path
-            clipRule="evenodd"
-            d="M16 12c0 1.1.9 2 2 2s2-.9 2-2-.9-2-2-2-2 .9-2 2zM14 12c0-1.1-.9-2-2-2s-2 .9-2 2 .9 2 2 2 2-.9 2-2zM8 12c0-1.1-.9-2-2-2s-2 .9-2 2 .9 2 2 2 2-.9 2-2z"
-            fillRule="evenodd"
-          />
-        </svg>
-      </ForwardRef(MoreSVG)>
-    </div>
-  </div>
-</ProductRow>
-`;
-
-exports[`ProductRow renders properly without heart 1`] = `
-<ProductRow
-  commonPrice={50}
-  count={23}
-  currencyGrapheme="₽"
-  deliveryCost={10}
-  flags={[]}
-  imageUrl="https://cdn3.static1-sima-land.com/items/29455/1/140.jpg?v=1598850721"
-  initialCount={42}
-  isFetchingWishItems={[Function]}
-  isWished={true}
-  itemPrice={5}
-  itemUrl="test"
-  movedOrderId={123456}
-  name="Зеленый слоник 25мм МИКС"
-  notInStock={true}
-  onActionsClick={[Function]}
-  onWishButtonClick={null}
-  sid={123}
-  unit="шт."
->
-  <div
-    className="wrapper"
-  >
-    <div
-      className="image-wrapper"
-    >
-      <ForwardRef(Link)
-        href="test"
-      >
-        <a
-          className="link basic-blue"
-          data-testid="anchor"
-          href="test"
-        >
-          <img
-            className="image"
-            src="https://cdn3.static1-sima-land.com/items/29455/1/140.jpg?v=1598850721"
-          />
-        </a>
-      </ForwardRef(Link)>
+      </StrokedSVG>
     </div>
     <div
       className="info-column"

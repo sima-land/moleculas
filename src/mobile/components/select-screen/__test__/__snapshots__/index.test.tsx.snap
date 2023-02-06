@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectScreenOption should handle size prop 1`] = `
+<div>
+  <button
+    class="item size-xl"
+    data-testid="select-screen:option"
+    type="button"
+  >
+    Test option
+  </button>
+</div>
+`;
+
+exports[`select screen parts should works properly 1`] = `
+<div>
+  <div
+    class="root"
+    data-testid="screen"
+    style="z-index: 300; --vh: 7.68px;"
+  >
+    <div
+      class="body"
+      data-testid="screen:body"
+    >
+      <div
+        class="layout mobile disabled-mxs disabled-ms"
+        style="padding: 16px 0px;"
+      >
+        <div
+          class="container"
+        >
+          <button
+            class="item size-m"
+            data-testid="select-screen:option"
+            type="button"
+          >
+            Foo
+          </button>
+          <button
+            class="item size-m"
+            data-testid="select-screen:option"
+            type="button"
+          >
+            Bar
+            <svg
+              class="icon"
+              height="24"
+              role="presentation"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M21.678 5.265a1 1 0 01.057 1.413l-12 13a1 1 0 01-1.36.103l-5-4a1 1 0 011.25-1.562l4.272 3.418L20.265 5.322a1 1 0 011.413-.057z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <button
+            class="item size-m"
+            data-testid="select-screen:option"
+            type="button"
+          >
+            Baz
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

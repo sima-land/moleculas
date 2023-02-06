@@ -43,7 +43,7 @@ const Bootstrap: React.FC = ({ children }) => (
   <div style={{ width: '200px', margin: '20px' }}>{children}</div>
 );
 
-export const PrimaryItem = () => {
+export const Primary = () => {
   const [wished, toggleWish] = useState<boolean>(false);
 
   return (
@@ -120,13 +120,7 @@ export const PrimaryItem = () => {
   );
 };
 
-export const Primary = () => (
-  <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-    {[...Array(10).keys()].map(index => (
-      <PrimaryItem key={index} />
-    ))}
-  </div>
-);
+Primary.storyName = 'Простой пример';
 
 export const NotEnough = () => {
   const [wished, toggleWish] = useState<boolean>(false);
@@ -196,3 +190,15 @@ export const NotEnough = () => {
     </Bootstrap>
   );
 };
+
+NotEnough.storyName = 'Товара нет в наличии';
+
+export const TestHover = () => (
+  <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+    {[...Array(10).keys()].map(index => (
+      <Primary key={index} />
+    ))}
+  </div>
+);
+
+TestHover.storyName = 'Тест: показ/скрытие всплывающей карточки';
