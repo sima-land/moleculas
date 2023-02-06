@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Screen } from '@sima-land/ui-nucleons/screen';
 import { random } from 'lodash';
-import { SelectScreen, SelectScreenLayout, SelectScreenOption } from '..';
+import { SelectScreenLayout, SelectScreenOption } from '..';
 import { TextField } from '@sima-land/ui-nucleons/text-field';
 import { MobileLayout } from '@sima-land/ui-nucleons/layout';
 
 export default {
-  title: 'mobile/SelectScreen',
-  component: SelectScreen,
+  title: 'mobile/SelectScreenLayout',
+  component: SelectScreenLayout,
   parameters: {
     layout: 'fullscreen',
     docs: {
@@ -38,7 +38,7 @@ export const Primary = () => {
         <TextField
           variant='mobile'
           style={{ width: '100%' }}
-          label='Район'
+          label='Район (нажмите чтобы выбрать)'
           value={items[selectedId]}
           onClick={e => {
             e.preventDefault();
@@ -121,7 +121,7 @@ export const SizeXL = () => {
         <TextField
           variant='mobile'
           style={{ width: '100%' }}
-          label='Валюта'
+          label='Валюта (нажмите чтобы выбрать)'
           value={items[selectedId].name}
           onClick={e => {
             e.preventDefault();
