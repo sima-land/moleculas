@@ -28,6 +28,8 @@ export const Primary = () => (
   />
 );
 
+Primary.storyName = 'Простой пример';
+
 export const WithReview = () => {
   const [index, setIndex] = useState<number>(0);
 
@@ -47,6 +49,8 @@ export const WithReview = () => {
   );
 };
 
+WithReview.storyName = 'С отзывом';
+
 export const WithReviewShort = () => (
   <GalleryModal
     media={data.media}
@@ -60,6 +64,8 @@ export const WithReviewShort = () => (
     onVideoEvent={e => action('GalleryModal:video-event')(e.type)}
   />
 );
+
+WithReviewShort.storyName = 'С коротким отзывом';
 
 export const WithReviewLoading = () => (
   <GalleryModal
@@ -75,6 +81,8 @@ export const WithReviewLoading = () => (
   />
 );
 
+WithReviewLoading.storyName = 'Загрузка отзыва';
+
 export const WithReviewEmpty = () => (
   <GalleryModal
     media={data.media}
@@ -87,6 +95,8 @@ export const WithReviewEmpty = () => (
     onVideoEvent={e => action('GalleryModal:video-event')(e.type)}
   />
 );
+
+WithReviewEmpty.storyName = 'Отзыв без текста';
 
 export const WithReviewNotAffect = () => {
   const markup = (
@@ -121,3 +131,5 @@ export const WithReviewNotAffect = () => {
     />
   );
 };
+
+WithReviewNotAffect.storyName = 'Отзыв не влияет на рейтинг';

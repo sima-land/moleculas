@@ -14,4 +14,12 @@ export default {
   },
 };
 
-export const Primary = () => <PseudoInput text='Искать туфли' />;
+export function Primary() {
+  return (
+    <>
+      <PseudoInput text='Искать туфли' />;
+    </>
+  );
+}
+
+Primary.storyName = 'Простой пример';

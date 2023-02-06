@@ -32,6 +32,8 @@ export const Primary = () => {
   );
 };
 
+Primary.storyName = 'Простой пример';
+
 export const Secondary = () => {
   const [value, setValue] = useState<string>('');
 
@@ -51,3 +53,5 @@ export const Secondary = () => {
     />
   );
 };
+
+Secondary.storyName = 'С иконками';

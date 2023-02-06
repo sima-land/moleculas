@@ -5,6 +5,7 @@ module.exports = {
   stories: ['./index.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     '@storybook/addon-actions',
+    '@storybook/addon-backgrounds',
     '@storybook/addon-storysource',
     '@storybook/addon-viewport',
     {
