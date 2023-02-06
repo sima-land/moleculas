@@ -28,6 +28,7 @@ jobs:
         run: |
           npm run lint:styles
           npm run lint:scripts
+          npm run prettier:check
           npm run type-check
 
       - name: Test
