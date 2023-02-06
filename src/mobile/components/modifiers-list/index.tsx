@@ -6,11 +6,22 @@ import classes from './modifiers-list.module.scss';
 import classnames from 'classnames/bind';
 
 export interface ModifierListProps {
+  /** Массив данных модификаторов. */
   items?: ModifierItemProps[];
+
+  /** Графема валюты пользователя. */
   currencyGrapheme?: string;
+
+  /** Url таблицы размеров. */
   sizesTableUrl?: string;
-  wrapperProps: React.HTMLAttributes<HTMLDivElement>;
-  itemsContainerProps: React.HTMLAttributes<HTMLDivElement>;
+
+  /** Свойства блока-обертки. */
+  wrapperProps?: React.HTMLAttributes<HTMLDivElement>;
+
+  /** Свойства блока-обертки списка модификаторов. */
+  itemsContainerProps?: React.HTMLAttributes<HTMLDivElement>;
+
+  /** Обработчик клика на модификатор. */
   onItemClick?: (item: ModifierItemProps) => void;
 }
 
@@ -18,13 +29,7 @@ const cx = classnames.bind(classes);
 
 /**
  * Компонент списка модификаторов.
- * @param props Свойства компонента.
- * @param props.items Массив данных модификаторов.
- * @param props.currencyGrapheme Графема валюты пользователя.
- * @param props.sizesTableUrl Url таблицы размеров.
- * @param props.wrapperProps Свойства блока-обертки.
- * @param props.itemsContainerProps Свойства блока-обертки списка модификаторов.
- * @param props.onItemClick Обработчик клика на модификатор.
+ * @param props Свойства.
  * @return Элемент.
  */
 export const ModifiersList = ({

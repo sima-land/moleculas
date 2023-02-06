@@ -73,6 +73,8 @@ export const Primary = () => {
   );
 };
 
+Primary.storyName = 'Простой пример';
+
 export const SizeXL = () => {
   const [opened, toggleScreen] = useState<boolean>(false);
   const [selectedId, selectItem] = useState<number>(0);
@@ -158,3 +160,5 @@ export const SizeXL = () => {
     </>
   );
 };
+
+SizeXL.storyName = 'Большие опции';

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BadgeList } from '..';
 import { Badge, BadgeProps } from '../../badge';
 import { addMonths } from 'date-fns';
-import { WithHint } from '@sima-land/ui-nucleons/with-hint';
+import { Hint, useHintFloating, useHintFloatingStyle } from '@sima-land/ui-nucleons/hint';
 
 const items: BadgeProps[] = [
   {
@@ -77,25 +77,32 @@ export const Primary = () => (
 Primary.storyName = 'Простой пример';
 
 export function Hints() {
+  const [open, setOpen] = useState(false);
+  const { refs, ...floating } = useHintFloating({ open, onOpenChange: setOpen });
+  const style = useHintFloatingStyle(floating);
+
   return (
-    <DemoBlock>
+    <>
       <BadgeList lineLimit={3}>
         {items.map((item, index) => (
-          <BadgeList.Slot key={index}>
-            <WithHint hint='Тестовый хинт для шильика!' direction='right'>
-              {(ref, toggle) => (
-                <Badge
-                  {...item}
-                  ref={ref as any}
-                  onMouseOver={() => toggle(true)}
-                  onMouseLeave={() => toggle(false)}
-                />
-              )}
-            </WithHint>
-          </BadgeList.Slot>
+          <Badge
+            key={index}
+            onMouseOver={e => {
+              refs.setReference(e.currentTarget);
+              setOpen(true);
+            }}
+            onMouseLeave={() => {
+              setOpen(false);
+            }}
+            {...item}
+          />
         ))}
       </BadgeList>
-    </DemoBlock>
+
+      <Hint open={open} hintRef={refs.setFloating} arrowRef={refs.setArrow} style={style}>
+        Тестовый хинт для шильдика
+      </Hint>
+    </>
   );
 }
 

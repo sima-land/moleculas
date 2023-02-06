@@ -16,7 +16,7 @@ export interface ModifierItemProps {
   price: number;
   currencyGrapheme?: string;
   additionalText?: string;
-  onClick: React.MouseEventHandler<HTMLDivElement>;
+  onClick?: React.MouseEventHandler<HTMLDivElement>;
 }
 
 export const cx = classnames.bind(classes);

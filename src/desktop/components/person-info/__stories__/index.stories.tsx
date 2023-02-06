@@ -24,8 +24,10 @@ export function Primary() {
           appointment='Менеджер по игрушке'
           email='example@email.com'
           skype='example@skype.com'
-          phoneText='88000000000 доб. 8823'
-          secondPhoneText='+7 (900) 000 000'
+          phoneText='+7 (999) 888-77-66'
+          phoneHref='tel:89998887766'
+          secondPhoneHref='tel:+79005554433'
+          secondPhoneText='+7 (900) 555-44-33'
         />
       </Modal.Body>
 
@@ -46,14 +48,14 @@ export function ArbitraryLink() {
       <Modal.Body>
         <PersonInfo
           photoUrl='https://picsum.photos/id/342/200/200'
-          name='Сёмин Денис Геннадьевич (ежедневная отгрузка из Екатеринбурга'
+          name='Сёмин Денис Геннадьевич (ежедневная отгрузка из Екатеринбурга)'
           appointment='Менеджер по игрушке'
           email='example@email.com'
           skype='example@skype.com'
-          phoneHref='tel:88000000000;postd=8823'
-          phoneText='88000000000 доб. 8823'
-          secondPhoneHref='tel:+7900000000'
-          secondPhoneText='+7 (900) 000 000'
+          phoneText='89998887766 доб. 8823'
+          phoneHref='tel:89998887766;postd=8823'
+          secondPhoneHref='tel:+79005554433'
+          secondPhoneText='+7 (900) 555-44-33'
           social={[
             {
               children: 'vk.com/oks2art',

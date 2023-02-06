@@ -1,18 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Badge } from '..';
 import { addDays, addMonths } from 'date-fns';
-import { WithHint } from '@sima-land/ui-nucleons/with-hint';
+import { Hint, useHintFloating, useHintOnHover } from '@sima-land/ui-nucleons/hint';
 
 export default {
   title: 'common/Badge',
   component: Badge,
   parameters: {
     layout: 'padded',
-    docs: {
-      description: {
-        component: 'Компонент шильдика',
-      },
-    },
   },
 };
 
@@ -103,21 +98,25 @@ export const NoInteractiveView = () => (
 
 NoInteractiveView.storyName = 'Без ссылки и hover';
 
-export const Hints = () => (
-  <div style={{ padding: '48px', display: 'flex', justifyContent: 'center' }}>
-    <WithHint hint='Привет, это очень простой хинт'>
-      {(ref, toggle) => (
-        <Badge
-          ref={ref as any}
-          color='#607d8b'
-          href='https://sima-land.ru'
-          fields={[{ type: 'text', value: 'Уценённый товар' }]}
-          onMouseOver={() => toggle(true)}
-          onMouseLeave={() => toggle(false)}
-        />
-      )}
-    </WithHint>
-  </div>
-);
+export function Hints() {
+  const [open, setOpen] = useState(false);
+  const { refs, ...floating } = useHintFloating({ open, onOpenChange: setOpen });
+  const { getReferenceProps, getFloatingProps } = useHintOnHover(floating);
+
+  return (
+    <div style={{ padding: '48px', display: 'flex', justifyContent: 'center' }}>
+      <Badge
+        ref={refs.setReference}
+        color='#607d8b'
+        href='https://sima-land.ru'
+        fields={[{ type: 'text', value: 'Уценённый товар' }]}
+        {...getReferenceProps()}
+      />
+      <Hint open={open} hintRef={refs.setFloating} arrowRef={refs.setArrow} {...getFloatingProps()}>
+        Привет, это очень простой хинт
+      </Hint>
+    </div>
+  );
+}
 
 Hints.storyName = 'С хинтом';

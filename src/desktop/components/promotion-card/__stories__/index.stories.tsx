@@ -64,6 +64,8 @@ export const Primary = () => (
   </div>
 );
 
+Primary.storyName = 'Простой пример';
+
 export const Placeholder = () => (
   <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
     {demoItems.map((_, index) => (
@@ -74,3 +76,5 @@ export const Placeholder = () => (
     ))}
   </div>
 );
+
+Placeholder.storyName = 'Загрузка';
