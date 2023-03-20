@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import on from '@sima-land/ui-nucleons/helpers/on';
 
 /**
  * Возвращает объект работы с флагом, который автоматически возвращается в true через заданный промежуток времени.
@@ -24,31 +23,33 @@ export const useAllowFlag = () => {
 
 /**
  * Возвращает ширину дочернего элемента.
- * @param ref Ref элемента.
- * @param selector CSS-селектор дочернего элемента.
+ * @param ref Ref дочернего элемента.
  * @param deps Массив зависимостей от которых зависит пересчет.
  * @return Ширина.
  */
-export const useChildWidth = (
+export const useClientWidth = (
   ref: React.RefObject<HTMLElement | null>,
-  selector: string,
-  deps?: React.DependencyList,
+  deps: React.DependencyList = [],
 ) => {
-  const [itemWidth, setItemWidth] = useState<number | null>(null);
-
-  const update = useCallback(() => {
-    if (ref.current) {
-      const child = ref.current.querySelector(selector);
-
-      child && setItemWidth(child.clientWidth);
-    }
-  }, [ref]);
+  const [width, setWidth] = useState<number | null>(null);
 
   useEffect(() => {
-    ref.current && update();
+    if (!ref.current) {
+      return;
+    }
 
-    return on(window, 'resize', update);
-  }, deps);
+    const element = ref.current;
 
-  return itemWidth;
+    const observer = new ResizeObserver(() => {
+      setWidth(element.clientWidth);
+    });
+
+    observer.observe(ref.current);
+
+    setWidth(element.clientWidth);
+
+    return observer.disconnect();
+  }, [ref, ...deps]);
+
+  return width;
 };
