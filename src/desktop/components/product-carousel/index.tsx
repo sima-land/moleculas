@@ -1,7 +1,16 @@
-import React, { Children, isValidElement, cloneElement, useRef, useState, useMemo } from 'react';
+import React, {
+  Children,
+  isValidElement,
+  cloneElement,
+  useRef,
+  useState,
+  useMemo,
+  MouseEventHandler,
+  Ref,
+} from 'react';
 import { Carousel } from '@sima-land/ui-nucleons/carousel';
 import { HoverCard } from './hover-card';
-import { useAllowFlag, useChildWidth } from './utils';
+import { useAllowFlag, useClientWidth } from './utils';
 import { useIntersection } from '@sima-land/ui-nucleons/hooks/intersection';
 import { useMedia } from '@sima-land/ui-nucleons/hooks/media';
 import { ProductInfo, ProductInfoProps, Parts } from '../../../common/components/product-info';
@@ -55,14 +64,14 @@ const getSizeClasses = (size = {}) => [
  * @param props Свойства.
  * @return Элемент.
  */
-export const ProductCarousel = ({
+export function ProductCarousel({
   className,
   itemSize,
   onInViewport,
   onNeedRequest,
   withHoverCard,
   children,
-}: ProductCarouselProps) => {
+}: ProductCarouselProps) {
   const layer = useLayer();
   const [activeItemIndex, setActiveItemIndex] = useState<number | null>(null);
   const cardShow = useAllowFlag();
@@ -79,7 +88,8 @@ export const ProductCarousel = ({
   }
 
   // вычисляем ширину элемента карусели для позиционирования стрелок
-  const itemWidth = useChildWidth(rootRef, `.${cx('item')}`, [items.length]);
+  const firstItemRef = useRef<HTMLDivElement>(null);
+  const itemWidth = useClientWidth(firstItemRef, [items.length]);
 
   // инициируем загрузку данных, когда компонент почти попал в зону видимости
   const options = useMemo(() => ({ rootMargin: '200px 0px 200px 0px' }), []);
@@ -114,10 +124,11 @@ export const ProductCarousel = ({
               },
             },
           })}
-          renderItem={([item, index]: [ItemElement, number]) => (
-            <div
-              data-testid='product-carousel:item'
-              className={cx('item', getSizeClasses(itemSize))}
+          renderItem={([item, index]: [ItemElement, number], realIndex) => (
+            <ProductCarouselItem
+              rootRef={realIndex === 0 ? firstItemRef : undefined}
+              withHoverCard={withHoverCard}
+              className={cx(getSizeClasses(itemSize))}
               onMouseEnter={e => {
                 if (cardShow.allowed()) {
                   targetItemRef.current = e.currentTarget;
@@ -125,35 +136,8 @@ export const ProductCarousel = ({
                 }
               }}
             >
-              {cloneElement(item, {
-                children: Children.toArray(item.props.children).reduce<any[]>((list, child) => {
-                  if (isValidElement<any>(child)) {
-                    switch (child.type) {
-                      case Parts.Image: {
-                        // иконки у картинки скрываем если есть HoverCard
-                        list.push(
-                          withHoverCard ? cloneElement(child, { children: undefined }) : child,
-                        );
-                        break;
-                      }
-
-                      case Parts.Footer:
-                        // футер не выводим если есть HoverCard
-                        !withHoverCard && list.push(child);
-                        break;
-
-                      default: {
-                        // остальное выводим как есть
-                        list.push(child);
-                        break;
-                      }
-                    }
-                  }
-
-                  return list;
-                }, []),
-              })}
-            </div>
+              {item}
+            </ProductCarouselItem>
           )}
           // длительность прокрутки в Carousel - 320, делаем слегка с запасом
           // @todo после восстановления проверить позицию курсора чтобы показать карточку (если будет критично)
@@ -176,4 +160,59 @@ export const ProductCarousel = ({
         ))}
     </div>
   );
-};
+}
+
+/**
+ * Элемент карусели. Выведет базовый контент.
+ * Полное содержимое будет выведено во всплывающей карточке.
+ * @inheritdoc
+ */
+function ProductCarouselItem({
+  rootRef,
+  className,
+  onMouseEnter,
+  withHoverCard,
+  children,
+}: {
+  rootRef?: Ref<HTMLDivElement>;
+  children: ItemElement;
+  className?: string;
+  onMouseEnter?: MouseEventHandler<HTMLDivElement>;
+  withHoverCard?: boolean;
+}) {
+  return (
+    <div
+      ref={rootRef}
+      data-testid='product-carousel:item'
+      className={cx('item', className)}
+      onMouseEnter={onMouseEnter}
+    >
+      {cloneElement(children, {
+        children: Children.toArray(children.props.children).reduce<any[]>((list, child) => {
+          if (isValidElement<any>(child)) {
+            switch (child.type) {
+              case Parts.Image: {
+                // иконки у картинки скрываем если есть HoverCard
+                list.push(withHoverCard ? cloneElement(child, { children: undefined }) : child);
+                break;
+              }
+
+              case Parts.Footer:
+                // футер не выводим если есть HoverCard
+                !withHoverCard && list.push(child);
+                break;
+
+              default: {
+                // остальное выводим как есть
+                list.push(child);
+                break;
+              }
+            }
+          }
+
+          return list;
+        }, []),
+      })}
+    </div>
+  );
+}
