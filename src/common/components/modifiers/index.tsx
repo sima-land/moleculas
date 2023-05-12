@@ -1,7 +1,7 @@
 import React, { AnchorHTMLAttributes, useEffect, useState } from 'react';
 import { Hint, useHintFloating, useHintOnHover } from '@sima-land/ui-nucleons/hint';
 import classNames from 'classnames/bind';
-import styles from './modifier.module.scss';
+import styles from './modifiers.module.scss';
 
 interface TextContent {
   type: 'text';
@@ -21,13 +21,29 @@ interface ImageContent {
 export type ModifierContent = TextContent | ColorContent | ImageContent;
 
 export interface ModifierProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+  /** Вывести выбранным. */
   active?: boolean;
+
+  /** Вывести отключенным. */
   disabled?: boolean;
+
+  /** Вывести зачеркнутым. */
   crossedOut?: boolean;
+
+  /** Содержимое. */
   content: ModifierContent;
+
+  /** Высота по дизайн-гайдам. */
   size?: 's' | 'm';
+
+  /** Кол-во. */
   count?: number;
+
+  /** Идентификатор для систем автоматизированного тестирования. */
+  'data-testid'?: string;
 }
+
+export type MoreButtonProps = Omit<ModifierProps, 'content' | 'crossedOut' | 'active'>;
 
 const cx = classNames.bind(styles);
 
@@ -44,6 +60,7 @@ export function Modifier({
   content,
   count,
   className,
+  'data-testid': testId = 'modifier',
   ...props
 }: ModifierProps) {
   // текст хинта
@@ -80,7 +97,11 @@ export function Modifier({
 
   return (
     <>
-      <a {...props} className={cx('root', `size-${size}`, { active, disabled }, className)}>
+      <a
+        {...props}
+        className={cx('root', `size-${size}`, { active, disabled }, className)}
+        data-testid={testId}
+      >
         {content.type === 'color' && (
           <span className={cx('color')} role='banner' style={{ background: content.color }}></span>
         )}
@@ -121,6 +142,29 @@ export function Modifier({
         </Hint>
       )}
     </>
+  );
+}
+
+/**
+ * Кнопка "+N" для показа полного списка модификаторов.
+ * @param props Свойства.
+ * @return Элемент.
+ */
+export function MoreButton({
+  count,
+  className,
+  'data-testid': testId = 'more-modifiers',
+  ...rest
+}: MoreButtonProps) {
+  return (
+    <Modifier
+      role='button'
+      aria-label='Показать все аналоги'
+      {...rest}
+      className={cx('more', className)}
+      content={{ type: 'text', text: `+${count}` }}
+      data-testid={testId}
+    />
   );
 }
 

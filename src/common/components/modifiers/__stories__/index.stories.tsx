@@ -1,5 +1,8 @@
 import React from 'react';
-import { Modifier, ModifierContent } from '..';
+import { Modifier, ModifierContent, MoreButton } from '..';
+import { Expandable } from '@sima-land/ui-nucleons/expandable';
+import { Layout } from '@sima-land/ui-nucleons/layout';
+import { Carousel } from '@sima-land/ui-nucleons/carousel';
 
 export default {
   title: 'common/Modifier',
@@ -30,13 +33,19 @@ const items: ModifierContent[] = [
 
 export function Primary() {
   return (
+    <>
+      <Modifier content={{ type: 'text', text: 'Какой-то текст' }} count={17} />
+    </>
+  );
+}
+
+Primary.storyName = 'Простой пример';
+
+export function SizeM() {
+  return (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', maxWidth: '400px' }}>
       {items.map((item, index) => (
         <Modifier count={23} key={index} content={item} />
-      ))}
-
-      {items.map((item, index) => (
-        <Modifier count={23} key={index} content={item} active />
       ))}
 
       {items.map((item, index) => (
@@ -44,13 +53,25 @@ export function Primary() {
       ))}
 
       {items.map((item, index) => (
+        <Modifier count={23} key={index} content={item} active />
+      ))}
+
+      {items.map((item, index) => (
+        <Modifier count={23} key={index} content={item} active crossedOut />
+      ))}
+
+      {items.map((item, index) => (
         <Modifier count={23} key={index} content={item} disabled />
+      ))}
+
+      {items.map((item, index) => (
+        <Modifier count={23} key={index} content={item} disabled crossedOut />
       ))}
     </div>
   );
 }
 
-Primary.storyName = 'Простой пример';
+SizeM.storyName = 'Размер M';
 
 export function SizeS() {
   return (
@@ -60,18 +81,68 @@ export function SizeS() {
       ))}
 
       {items.map((item, index) => (
-        <Modifier size='s' count={23} key={index} content={item} active />
-      ))}
-
-      {items.map((item, index) => (
         <Modifier size='s' count={23} key={index} content={item} crossedOut />
       ))}
 
       {items.map((item, index) => (
+        <Modifier size='s' count={23} key={index} content={item} active />
+      ))}
+
+      {items.map((item, index) => (
+        <Modifier size='s' count={23} key={index} content={item} active crossedOut />
+      ))}
+
+      {items.map((item, index) => (
         <Modifier size='s' count={23} key={index} content={item} disabled />
+      ))}
+
+      {items.map((item, index) => (
+        <Modifier size='s' count={23} key={index} content={item} disabled crossedOut />
       ))}
     </div>
   );
 }
 
 SizeS.storyName = 'Размер S';
+
+export function WithExpandable() {
+  const manyItems: ModifierContent[] = [...Array(32).keys()].map(index => ({
+    type: 'text',
+    text: `Вариант №${index + 1}`,
+  }));
+
+  return (
+    <Layout>
+      <Expandable.Group gap={8} itemHeight={48} opener={d => <MoreButton count={d.hiddenCount} />}>
+        {manyItems.map((item, index) => (
+          <Expandable.Item key={index}>
+            <Modifier content={item} />
+          </Expandable.Item>
+        ))}
+      </Expandable.Group>
+    </Layout>
+  );
+}
+
+WithExpandable.storyName = 'Вместе с Expandable';
+
+export function WithCarousel() {
+  const manyItems: ModifierContent[] = [...Array(32).keys()].map(index => ({
+    type: 'text',
+    text: `Вариант №${index + 1}`,
+  }));
+
+  return (
+    <Layout>
+      <Carousel
+        autoplay={false}
+        infinite={false}
+        withControls={false}
+        items={manyItems}
+        renderItem={item => <Modifier content={item} style={{ flexShrink: 0, marginLeft: 8 }} />}
+      />
+    </Layout>
+  );
+}
+
+WithCarousel.storyName = 'Вместе с Carousel';
