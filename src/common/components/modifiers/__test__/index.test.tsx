@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { Modifier } from '..';
+import { Modifier, MoreButton } from '..';
 
 describe('Modifier', () => {
   it('should render text', () => {
@@ -67,5 +67,13 @@ describe('Modifier', () => {
     await userEvent.hover(text as any);
 
     expect(queryAllByTestId('hint')).toHaveLength(1);
+  });
+});
+
+describe('MoreButton', () => {
+  it('should render modifier with specific className', () => {
+    const { container } = render(<MoreButton count={46} />);
+
+    expect(container.textContent).toBe('+46');
   });
 });

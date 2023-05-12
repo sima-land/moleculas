@@ -38,6 +38,9 @@ export interface ModifierProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 
   /** Кол-во. */
   count?: number;
+
+  /** Идентификатор для систем автоматизированного тестирования. */
+  'data-testid'?: string;
 }
 
 export type MoreButtonProps = Omit<ModifierProps, 'content' | 'crossedOut' | 'active'>;
@@ -57,6 +60,7 @@ export function Modifier({
   content,
   count,
   className,
+  'data-testid': testId = 'modifier',
   ...props
 }: ModifierProps) {
   // текст хинта
@@ -93,7 +97,11 @@ export function Modifier({
 
   return (
     <>
-      <a {...props} className={cx('root', `size-${size}`, { active, disabled }, className)}>
+      <a
+        {...props}
+        className={cx('root', `size-${size}`, { active, disabled }, className)}
+        data-testid={testId}
+      >
         {content.type === 'color' && (
           <span className={cx('color')} role='banner' style={{ background: content.color }}></span>
         )}
@@ -142,7 +150,12 @@ export function Modifier({
  * @param props Свойства.
  * @return Элемент.
  */
-export function MoreButton({ count, className, ...rest }: MoreButtonProps) {
+export function MoreButton({
+  count,
+  className,
+  'data-testid': testId = 'more-modifiers',
+  ...rest
+}: MoreButtonProps) {
   return (
     <Modifier
       role='button'
@@ -150,6 +163,7 @@ export function MoreButton({ count, className, ...rest }: MoreButtonProps) {
       {...rest}
       className={cx('more', className)}
       content={{ type: 'text', text: `+${count}` }}
+      data-testid={testId}
     />
   );
 }
