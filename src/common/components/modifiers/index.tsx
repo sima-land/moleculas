@@ -1,7 +1,7 @@
 import React, { AnchorHTMLAttributes, useEffect, useState } from 'react';
 import { Hint, useHintFloating, useHintOnHover } from '@sima-land/ui-nucleons/hint';
 import classNames from 'classnames/bind';
-import styles from './modifier.module.scss';
+import styles from './modifiers.module.scss';
 
 interface TextContent {
   type: 'text';
@@ -21,13 +21,26 @@ interface ImageContent {
 export type ModifierContent = TextContent | ColorContent | ImageContent;
 
 export interface ModifierProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+  /** Вывести выбранным. */
   active?: boolean;
+
+  /** Вывести отключенным. */
   disabled?: boolean;
+
+  /** Вывести зачеркнутым. */
   crossedOut?: boolean;
+
+  /** Содержимое. */
   content: ModifierContent;
+
+  /** Высота по дизайн-гайдам. */
   size?: 's' | 'm';
+
+  /** Кол-во. */
   count?: number;
 }
+
+export type MoreButtonProps = Omit<ModifierProps, 'content' | 'crossedOut' | 'active'>;
 
 const cx = classNames.bind(styles);
 
@@ -121,6 +134,23 @@ export function Modifier({
         </Hint>
       )}
     </>
+  );
+}
+
+/**
+ * Кнопка "+N" для показа полного списка модификаторов.
+ * @param props Свойства.
+ * @return Элемент.
+ */
+export function MoreButton({ count, className, ...rest }: MoreButtonProps) {
+  return (
+    <Modifier
+      role='button'
+      aria-label='Показать все аналоги'
+      {...rest}
+      className={cx('more', className)}
+      content={{ type: 'text', text: `+${count}` }}
+    />
   );
 }
 
