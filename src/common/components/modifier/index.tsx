@@ -43,7 +43,9 @@ export interface ModifierProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   'data-testid'?: string;
 }
 
-export type MoreButtonProps = Omit<ModifierProps, 'content' | 'crossedOut' | 'active'>;
+export type MoreButtonProps = Omit<ModifierProps, 'content' | 'crossedOut' | 'active' | 'count'> & {
+  count: number;
+};
 
 const cx = classNames.bind(styles);
 

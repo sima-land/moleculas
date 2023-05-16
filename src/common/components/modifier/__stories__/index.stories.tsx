@@ -3,6 +3,7 @@ import { Modifier, ModifierContent, MoreButton } from '..';
 import { Expandable } from '@sima-land/ui-nucleons/expandable';
 import { Layout } from '@sima-land/ui-nucleons/layout';
 import { Carousel } from '@sima-land/ui-nucleons/carousel';
+import { GroupOverflow } from '@sima-land/ui-nucleons/group-overflow';
 
 export default {
   title: 'common/Modifier',
@@ -104,6 +105,25 @@ export function SizeS() {
 }
 
 SizeS.storyName = 'Размер S';
+
+export function WithGroupOverflow() {
+  const list: ModifierContent[] = [...Array(32).keys()].map(index => ({
+    type: 'text',
+    text: `Вариант №${index + 1}`,
+  }));
+
+  return (
+    <Layout>
+      <GroupOverflow tail={data => <MoreButton count={data.hiddenCount} />}>
+        {list.map((item, index) => (
+          <Modifier key={index} content={item} />
+        ))}
+      </GroupOverflow>
+    </Layout>
+  );
+}
+
+WithGroupOverflow.storyName = 'Вместе с GroupOverflow';
 
 export function WithExpandable() {
   const manyItems: ModifierContent[] = [...Array(32).keys()].map(index => ({
