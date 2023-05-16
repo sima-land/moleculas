@@ -32,7 +32,7 @@
     "react-transition-group": "^4.4.5"
   },
   "peerDependencies": {
-    "@sima-land/ui-nucleons": "^45.0.0-alpha.0",
+    "@sima-land/ui-nucleons": "^45.0.0-alpha.3",
     "@sima-land/ui-quarks": "^3.6.0",
     "react": ">=17",
     "react-dom": ">=17"
