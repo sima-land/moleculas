@@ -13,8 +13,10 @@ module.exports = {
           },
         },
       },
-      'prefixIds',
-      'removeXMLNS',
+
+      // @todo временно не включаем чтобы не обновлять снепшоты
+      // 'prefixIds',
+      // 'removeXMLNS',
     ],
   },
 };
