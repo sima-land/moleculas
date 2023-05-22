@@ -1,0 +1,80 @@
+@use 'node_modules/@sima-land/ui-nucleons/breakpoints';
+@use 'node_modules/@sima-land/ui-nucleons/utils';
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--modal-header-height));
+}
+
+.body {
+  flex-grow: 1;
+  display: flex;
+}
+
+.main {
+  position: relative; // ВАЖНО: что иметь возможность заполнить доступную область содержимым
+  min-height: 50vh;
+}
+
+@include breakpoints.down('xs') {
+  .header + .body {
+    margin-top: 24px;
+  }
+  .body {
+    flex-direction: column-reverse;
+    &:first-child {
+      margin-top: 24px;
+    }
+    &:last-child {
+      margin-bottom: 24px;
+    }
+  }
+  .main {
+    flex-grow: 1;
+  }
+  .aside + .main {
+    margin-bottom: 24px;
+  }
+  .body + .footer {
+    margin-top: 24px;
+  }
+  .footer {
+    margin-bottom: 24px;
+  }
+}
+
+@include breakpoints.up('xs') {
+  .header + .body {
+    margin-top: 40px;
+  }
+  .body {
+    &:first-child {
+      margin-top: 40px;
+    }
+    &:last-child {
+      margin-bottom: 40px;
+    }
+  }
+  .aside {
+    display: flex;
+    flex-direction: column;
+    width: 104px;
+    max-height: 100%;
+  }
+  .aside + .main {
+    margin-left: 16px;
+  }
+  .main {
+    flex-grow: 1;
+  }
+  .body + .footer {
+    margin-top: 32px;
+  }
+  .footer {
+    margin-bottom: 40px;
+  }
+  .footer-inner.with-aside {
+    margin-left: calc(104px + 16px);
+  }
+}
