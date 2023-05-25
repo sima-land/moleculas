@@ -1,3 +1,4 @@
+import { useIdentityRef } from '@sima-land/ui-nucleons/hooks/identity';
 import { RefObject, useEffect, useState } from 'react';
 
 /**
@@ -52,4 +53,33 @@ export function useMounted() {
   }, []);
 
   return mounted;
+}
+
+/**
+ * Хук получения доступка к visualViewport.
+ * @param handle Получит visualViewport.
+ */
+export function useVisualViewport(handle: (viewport: VisualViewport) => void) {
+  const ref = useIdentityRef(handle);
+
+  useEffect(() => {
+    const viewport = window.visualViewport;
+
+    if (!viewport) {
+      return;
+    }
+
+    // eslint-disable-next-line require-jsdoc
+    const update = () => ref.current(viewport);
+
+    window.visualViewport?.addEventListener('resize', update);
+    window.visualViewport?.addEventListener('scroll', update);
+
+    update();
+
+    return () => {
+      window.visualViewport?.removeEventListener('resize', update);
+      window.visualViewport?.removeEventListener('scroll', update);
+    };
+  }, []);
 }

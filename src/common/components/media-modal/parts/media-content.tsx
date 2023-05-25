@@ -2,11 +2,10 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Carousel } from '@sima-land/ui-nucleons/carousel';
 import { ArrowButton } from '@sima-land/ui-nucleons/arrow-button';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
-import { MediaData } from '../types';
-import { ImageOverlay } from '../../../../desktop/components/gallery-modal/components/image-overlay';
-import { AllRoundView } from '../../../../desktop/components/gallery-modal/components/all-round-view';
 import { useClientRect } from '../utils';
-import styles from './media.module.scss';
+import { MediaData } from '../types';
+import { MediaView } from './media-view';
+import styles from './media-content.module.scss';
 
 export interface MediaContentProps {
   items: MediaData[];
@@ -117,31 +116,6 @@ function MediaSlider({ items, targetIndex, onChangeTargetIndex }: MediaContentPr
           )}
         </>
       )}
-    </div>
-  );
-}
-
-/**
- * Отображает медиа-контент - 360, видео или изображение.
- * @param props Свойства.
- * @return Элемент.
- */
-function MediaView({ media }: { media: MediaData }) {
-  return (
-    <div className={styles.media}>
-      {media.type === 'image' && (
-        <ImageOverlay className={styles['media-image-wrap']}>
-          <img src={media.data.src} alt={media.data.alt || ''} />
-        </ImageOverlay>
-      )}
-
-      {media.type === 'video' && (
-        <video autoPlay={false} controls controlsList='nodownload'>
-          <source src={media.data.src} />
-        </video>
-      )}
-
-      {media.type === '360' && <AllRoundView photos={media.data.photos} />}
     </div>
   );
 }
