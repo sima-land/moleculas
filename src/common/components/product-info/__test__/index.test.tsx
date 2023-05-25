@@ -383,4 +383,51 @@ describe('ProductInfo', () => {
       expect(getByTestId('product-info:prices').textContent).toContain('Test reason');
     });
   });
+
+  it('should render stub for broken image', () => {
+    const { container, getByTestId } = render(
+      <ProductInfo>
+        <Parts.Image src={data.imageSrc} href={data.url} opacity={0.72}>
+          <Parts.ImageButton icon={QuickViewSVG} data-testid='quick-view-button' />
+        </Parts.Image>
+
+        <Parts.Prices
+          price={data.price}
+          oldPrice={data.oldPrice}
+          currencyGrapheme={data.currencyGrapheme}
+          unavailableReason='Test reason'
+        />
+
+        <Parts.Title href={data.url}>{data.name}</Parts.Title>
+      </ProductInfo>,
+    );
+
+    expect(container.querySelectorAll('.broken-icon')).toHaveLength(0);
+    fireEvent.error(getByTestId('product-info:image'));
+    expect(container.querySelectorAll('.broken-icon')).toHaveLength(1);
+  });
+
+  it('should render stub for broken adult image', () => {
+    const { container, getByTestId } = render(
+      <ProductInfo restriction='adult'>
+        <Parts.Image src={data.imageSrc} href={data.url} opacity={0.72}>
+          <Parts.ImageButton icon={QuickViewSVG} data-testid='quick-view-button' />
+        </Parts.Image>
+
+        <Parts.Prices
+          price={data.price}
+          oldPrice={data.oldPrice}
+          currencyGrapheme={data.currencyGrapheme}
+          unavailableReason='Test reason'
+        />
+
+        <Parts.Title href={data.url}>{data.name}</Parts.Title>
+      </ProductInfo>,
+    );
+
+    expect(container.querySelectorAll('.broken-icon')).toHaveLength(0);
+    fireEvent.error(getByTestId('product-info:adult-image'));
+    expect(container.querySelectorAll('.broken-icon')).toHaveLength(0);
+    expect(getByTestId('product-info:adult-image').classList.contains('broken')).toBe(true);
+  });
 });
