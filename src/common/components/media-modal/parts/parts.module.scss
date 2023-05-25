@@ -1,0 +1,21 @@
+@use 'node_modules/@sima-land/ui-nucleons/breakpoints';
+@use 'node_modules/@sima-land/ui-nucleons/utils';
+
+.header-layout {
+  min-height: 40px; // ВАЖНО: чтобы при отсутствии табов не уменьшалась высота
+  @include breakpoints.up('xs') {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.header-button {
+  margin-top: 16px !important;
+  @include breakpoints.down('xs') {
+    &:first-child {
+      margin-left: auto;
+    }
+  }
+}

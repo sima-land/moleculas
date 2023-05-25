@@ -1,0 +1,70 @@
+@use 'node_modules/@sima-land/ui-nucleons/breakpoints';
+@use 'node_modules/@sima-land/ui-nucleons/colors';
+
+.root {
+  display: grid;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.rating {
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.author {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: colors.$basic-gray24;
+}
+
+@include breakpoints.down('xs') {
+  .root {
+    gap: 12px;
+    grid-template-columns: auto 1fr;
+  }
+  .rating {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  .author {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  .link {
+    grid-column: 1 / 3;
+  }
+  .content {
+    grid-column: 1 / 3;
+  }
+}
+
+@include breakpoints.up('xs') {
+  .root {
+    column-gap: 16px;
+    row-gap: 12px;
+    grid-template-columns: auto 1fr auto;
+  }
+  .rating {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  .author {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: colors.$basic-gray24;
+  }
+  .link {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+  .content {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+  }
+}

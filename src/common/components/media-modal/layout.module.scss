@@ -31,6 +31,7 @@
     }
   }
   .main {
+    min-height: max(50vh, 240px);
     flex-grow: 1;
   }
   .aside + .main {
