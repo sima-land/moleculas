@@ -1217,6 +1217,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                               <img
                                 className="image"
                                 data-testid="product-info:image"
+                                onError={[Function]}
                                 src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                                 style={
                                   {
@@ -1305,6 +1306,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                               <img
                                 className="image"
                                 data-testid="product-info:image"
+                                onError={[Function]}
                                 src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
                                 style={
                                   {
@@ -1393,6 +1395,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                               <img
                                 className="image"
                                 data-testid="product-info:image"
+                                onError={[Function]}
                                 src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
                                 style={
                                   {
@@ -1481,6 +1484,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                               <img
                                 className="image"
                                 data-testid="product-info:image"
+                                onError={[Function]}
                                 src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
                                 style={
                                   {
@@ -1569,6 +1573,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                               <img
                                 className="image"
                                 data-testid="product-info:image"
+                                onError={[Function]}
                                 src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
                                 style={
                                   {
@@ -1657,6 +1662,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                               <img
                                 className="image"
                                 data-testid="product-info:image"
+                                onError={[Function]}
                                 src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
                                 style={
                                   {
@@ -1745,6 +1751,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                               <img
                                 className="image"
                                 data-testid="product-info:image"
+                                onError={[Function]}
                                 src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
                                 style={
                                   {
@@ -1833,6 +1840,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                               <img
                                 className="image"
                                 data-testid="product-info:image"
+                                onError={[Function]}
                                 src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
                                 style={
                                   {
@@ -1936,6 +1944,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                               <img
                                 className="image"
                                 data-testid="product-info:image"
+                                onError={[Function]}
                                 src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
                                 style={
                                   {
@@ -2039,6 +2048,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                               <img
                                 className="image"
                                 data-testid="product-info:image"
+                                onError={[Function]}
                                 src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
                                 style={
                                   {
@@ -2832,6 +2842,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                               <img
                                 className="image"
                                 data-testid="product-info:image"
+                                onError={[Function]}
                                 src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                                 style={
                                   {
@@ -2920,6 +2931,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                               <img
                                 className="image"
                                 data-testid="product-info:image"
+                                onError={[Function]}
                                 src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
                                 style={
                                   {
@@ -3008,6 +3020,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                               <img
                                 className="image"
                                 data-testid="product-info:image"
+                                onError={[Function]}
                                 src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
                                 style={
                                   {
@@ -3096,6 +3109,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                               <img
                                 className="image"
                                 data-testid="product-info:image"
+                                onError={[Function]}
                                 src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
                                 style={
                                   {
@@ -3184,6 +3198,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                               <img
                                 className="image"
                                 data-testid="product-info:image"
+                                onError={[Function]}
                                 src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
                                 style={
                                   {
@@ -3272,6 +3287,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                               <img
                                 className="image"
                                 data-testid="product-info:image"
+                                onError={[Function]}
                                 src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
                                 style={
                                   {
@@ -3360,6 +3376,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                               <img
                                 className="image"
                                 data-testid="product-info:image"
+                                onError={[Function]}
                                 src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
                                 style={
                                   {
@@ -3448,6 +3465,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                               <img
                                 className="image"
                                 data-testid="product-info:image"
+                                onError={[Function]}
                                 src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
                                 style={
                                   {
@@ -3551,6 +3569,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                               <img
                                 className="image"
                                 data-testid="product-info:image"
+                                onError={[Function]}
                                 src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
                                 style={
                                   {
@@ -3654,6 +3673,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                               <img
                                 className="image"
                                 data-testid="product-info:image"
+                                onError={[Function]}
                                 src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
                                 style={
                                   {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { action } from '@storybook/addon-actions';
 import { ProductInfo, Parts } from '..';
 import { Badge, BadgeProps } from '../../badge';
@@ -6,6 +6,7 @@ import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import FavoriteSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/favorite';
 import QuickView2SVG from '@sima-land/ui-quarks/icons/24x24/Stroked/quick-view-2';
 import Camera2SVG from '@sima-land/ui-quarks/icons/24x24/Stroked/camera-2';
+import on from '@sima-land/ui-nucleons/helpers/on';
 
 export default {
   title: 'common/ProductInfo',
@@ -29,7 +30,7 @@ const badges: BadgeProps[] = [
 
 const data = {
   name: 'Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый',
-  imageSrc: 'https://picsum.photos/240/360',
+  imageSrc: 'https://loremflickr.com/240/360',
   url: 'https://www.sima-land.ru',
   price: 99876543.21,
   oldPrice: 99987654.32,
@@ -500,3 +501,46 @@ export const Adult = () => (
 );
 
 Adult.storyName = 'Товар для взрослых';
+
+export function TestBrokenImage() {
+  const brokenSrc = 'https://kasjbgakjbsg.asgkjabsghj';
+  const [imageSrc, setImageSrc] = useState(data.imageSrc);
+
+  useEffect(() => {
+    const off = on<KeyboardEvent>(window, 'keydown', e => {
+      if (e.code === 'KeyR') {
+        setImageSrc(src => (src === brokenSrc ? data.imageSrc : brokenSrc));
+      }
+    });
+
+    return off;
+  }, []);
+
+  return (
+    <div style={{ width: '260px' }}>
+      <ProductInfo>
+        <Parts.Image src={imageSrc} href={data.url}>
+          <Parts.ImageButton
+            icon={FavoriteSVG}
+            hint='Добавить в избранное'
+            data-testid='favorite-button'
+          />
+          <Parts.ImageButton
+            icon={QuickView2SVG}
+            hint='Быстрый просмотр'
+            data-testid='quick-view-button'
+          />
+        </Parts.Image>
+
+        <Parts.Prices
+          price={data.price}
+          oldPrice={data.oldPrice}
+          currencyGrapheme={data.currencyGrapheme}
+        />
+
+        <Parts.Title href={data.url}>{data.name}</Parts.Title>
+      </ProductInfo>
+      <p>Нажмите R на клавиатуре чтобы переключить картинку на битую и обратно</p>
+    </div>
+  );
+}

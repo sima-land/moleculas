@@ -1,4 +1,4 @@
-import React, { createContext, ReactNode, useContext } from 'react';
+import React, { createContext, ReactNode, useContext, useEffect, useState } from 'react';
 import { Link, LinkProps } from '@sima-land/ui-nucleons/link';
 import { HintProps } from '@sima-land/ui-nucleons/hint-deprecated';
 import { Price } from '@sima-land/ui-nucleons/price';
@@ -9,6 +9,7 @@ import { BadgeList, BadgeListProps } from '../badge-list';
 import { ProductInfoContext } from './utils';
 import { RatingCounter, RatingCounterProps } from '../rating-counter';
 import AdultSVG from '../../icons/eighteen-plus.svg';
+import BrokenSVG from '../../icons/image-broken.svg';
 import classnames from 'classnames/bind';
 import styles from './product-info.module.scss';
 
@@ -86,15 +87,19 @@ const ImageButton = ({
 const Image = ({ src, alt, href, onClick, children, opacity }: ImageProps) => {
   const { restriction } = useContext(ProductInfoContext);
   const defaultOpacity = restriction ? 0.4 : undefined;
+  const [broken, setBroken] = useState(false);
+
+  useEffect(() => setBroken(false), [src]);
 
   return (
     <ImageOverlay className={cx('image-overlay')}>
       {restriction === 'adult' ? (
         <>
           <img
+            onError={() => setBroken(true)}
             alt={alt}
             src={src}
-            className={cx('image', 'adult')}
+            className={cx('image', 'adult', { broken })}
             data-testid='product-info:adult-image'
           />
           <AdultSVG className={cx('adult-icon')} />
@@ -108,12 +113,14 @@ const Image = ({ src, alt, href, onClick, children, opacity }: ImageProps) => {
             data-testid='product-info:image-link'
           >
             <img
+              onError={() => setBroken(true)}
               alt={alt}
               src={src}
-              className={cx('image')}
+              className={cx('image', { broken })}
               style={{ opacity: typeof opacity === 'number' ? opacity : defaultOpacity }}
               data-testid='product-info:image'
             />
+            {broken && <BrokenSVG className={cx('broken-icon')} />}
           </a>
 
           {children && <div className={cx('image-buttons')}>{children}</div>}
