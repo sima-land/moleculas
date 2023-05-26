@@ -20,7 +20,7 @@
   flex-direction: column;
   flex-grow: 1;
   position: relative; // ВАЖНО: что иметь возможность заполнить доступную область содержимым
-  min-height: 50vh;
+  min-height: max(50vh, 240px);
 }
 
 @include breakpoints.down('xs') {

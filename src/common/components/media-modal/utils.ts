@@ -1,6 +1,60 @@
 import { useIdentityRef } from '@sima-land/ui-nucleons/hooks/identity';
 import { RefObject, useEffect, useState } from 'react';
 
+export interface Range {
+  start: number;
+  finish: number;
+}
+
+/** Диапазон. */
+export class Range {
+  /**
+   * Возвращает диапазон на основе вертикального размера элемента.
+   * @param el Элемент.
+   * @return Диапазон.
+   */
+  static fromRectVertical(el: Element): Range {
+    const rect = el.getBoundingClientRect();
+
+    return {
+      start: rect.top,
+      finish: rect.bottom,
+    };
+  }
+
+  /**
+   * Возвращает диапазон на основе вертикального размера элемента.
+   * @param el Элемент.
+   * @return Диапазон.
+   */
+  static fromRectHorizontal(el: Element): Range {
+    const rect = el.getBoundingClientRect();
+
+    return {
+      start: rect.left,
+      finish: rect.right,
+    };
+  }
+
+  /**
+   * Возвращает кратчайшее расстояние от диапазона до другого диапазона на которое нужно сместиться.
+   * @param range Диапазон.
+   * @param target Диапазон.
+   * @return Расстояние.
+   */
+  static getShiftDistance(range: Range, target: Range) {
+    let result = 0;
+
+    if (target.finish > range.finish) {
+      result = target.finish - range.finish;
+    } else if (target.start < range.start) {
+      result = -(range.start - target.start);
+    }
+
+    return result;
+  }
+}
+
 /**
  * Возвращает ограничивающий прямоугольник элемента в виде состояния.
  * @param ref Ref элемента.

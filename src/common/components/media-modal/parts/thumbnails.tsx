@@ -1,12 +1,12 @@
-import React, { createContext, ReactNode, useContext } from 'react';
+import React, { useRef, createContext, ReactNode, useContext, useEffect } from 'react';
 import { ImageOverlay } from '../../../../desktop/components/gallery-modal/components/image-overlay';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
 import PlaySVG from '@sima-land/ui-quarks/icons/24x24/Filled/play';
 import AllRoundSVG from '../../../../desktop/components/gallery-modal/icons/360.svg';
+import { Range, useMounted } from '../utils';
+import { ScrollSection } from './scroll-section';
 import classNames from 'classnames/bind';
 import styles from './thumbnails.module.scss';
-import { useMounted } from '../utils';
-import { ScrollSection } from './scroll-section';
 
 export interface ThumbnailProps {
   size?: 's' | 'l';
@@ -22,6 +22,7 @@ export interface ThumbnailProps {
 export interface ThumbnailsProps {
   size?: 's' | 'l';
   children?: ReactNode;
+  targetIndex?: number;
 }
 
 const cx = classNames.bind(styles);
@@ -79,9 +80,42 @@ export function Thumbnail({
  * @param props Свойства.
  * @return Элемент.
  */
-export function Thumbnails({ children, ...rest }: ThumbnailsProps) {
+export function Thumbnails({ children, targetIndex, ...rest }: ThumbnailsProps) {
   const mounted = useMounted();
   const desktop = useBreakpoint('xs+');
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const parent = ref.current;
+
+    if (!(mounted && parent && typeof targetIndex === 'number')) {
+      return;
+    }
+
+    const target = parent?.children[targetIndex];
+
+    if (!target) {
+      return;
+    }
+
+    if (desktop) {
+      parent.scrollTop += Range.getShiftDistance(
+        Range.fromRectVertical(parent),
+        Range.fromRectVertical(target),
+      );
+    } else {
+      const rect = parent.getBoundingClientRect();
+      const style = getComputedStyle(parent);
+
+      parent.scrollLeft += Range.getShiftDistance(
+        {
+          start: rect.left + parseFloat(style.paddingLeft),
+          finish: rect.right - parseFloat(style.paddingRight),
+        },
+        Range.fromRectHorizontal(target),
+      );
+    }
+  }, [mounted, targetIndex]);
 
   if (!mounted) {
     return null;
@@ -90,14 +124,16 @@ export function Thumbnails({ children, ...rest }: ThumbnailsProps) {
   if (!desktop) {
     return (
       <ThumbnailsContext.Provider value={{ size: 's', ...rest }}>
-        <ScrollSection>{children}</ScrollSection>
+        <ScrollSection innerRef={ref}>{children}</ScrollSection>
       </ThumbnailsContext.Provider>
     );
   }
 
   return (
     <ThumbnailsContext.Provider value={{ size: 'l', ...rest }}>
-      <div className={cx('list-desktop')}>{children}</div>
+      <div ref={ref} className={cx('list-desktop')}>
+        {children}
+      </div>
     </ThumbnailsContext.Provider>
   );
 }

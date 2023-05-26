@@ -41,6 +41,7 @@ function MediaCarousel({ items, targetIndex, onChangeTargetIndex }: MediaContent
     <div ref={ref} className={styles.carousel}>
       {area.ready && (
         <Carousel
+          infinite={false}
           targetIndex={targetIndex}
           onChangeTargetIndex={onChangeTargetIndex}
           draggable
@@ -77,7 +78,7 @@ function MediaSlider({ items, targetIndex, onChangeTargetIndex }: MediaContentPr
   const area = useClientRect(ref);
   const total = items.length;
   const controls = total > 1;
-  const correction = controls ? 2 * (56 + 24) : 0;
+  const correction = controls ? -(2 * (56 + 24)) : 0;
 
   useEffect(() => {
     if (typeof targetIndex === 'number') {
