@@ -1,5 +1,5 @@
 import { Layout } from '@sima-land/ui-nucleons/layout';
-import React, { ReactNode } from 'react';
+import React, { ReactNode, Ref } from 'react';
 import styles from './scroll-section.module.scss';
 
 /**
@@ -7,10 +7,18 @@ import styles from './scroll-section.module.scss';
  * @param props Свойства.
  * @return Элемент.
  */
-export function ScrollSection({ children }: { children?: ReactNode }) {
+export function ScrollSection({
+  children,
+  innerRef,
+}: {
+  children?: ReactNode;
+  innerRef?: Ref<HTMLDivElement>;
+}) {
   return (
     <Layout disabledOn={['mxs', 'ms']}>
-      <div className={styles.inner}>{children}</div>
+      <div ref={innerRef} className={styles.inner}>
+        {children}
+      </div>
     </Layout>
   );
 }

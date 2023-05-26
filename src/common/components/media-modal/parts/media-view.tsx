@@ -2,6 +2,7 @@ import React from 'react';
 import { ImageOverlay } from '../../../../desktop/components/gallery-modal/components/image-overlay';
 import { AllRoundView } from '../../../../desktop/components/gallery-modal/components/all-round-view';
 import { MediaData } from '../types';
+import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
 import styles from './media-view.module.scss';
 
 /**
@@ -10,6 +11,8 @@ import styles from './media-view.module.scss';
  * @return Элемент.
  */
 export function MediaView({ media }: { media: MediaData }) {
+  const desktop = useBreakpoint('xs+');
+
   return (
     <div className={styles.root}>
       {media.type === 'image' && (
@@ -24,7 +27,7 @@ export function MediaView({ media }: { media: MediaData }) {
         </video>
       )}
 
-      {media.type === '360' && <AllRoundView photos={media.data.photos} />}
+      {media.type === '360' && <AllRoundView photos={media.data.photos} controls={desktop} />}
     </div>
   );
 }

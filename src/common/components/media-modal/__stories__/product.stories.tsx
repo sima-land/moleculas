@@ -61,7 +61,7 @@ export function WithProduct() {
           </MediaMain>
 
           <MediaAside>
-            <Thumbnails>
+            <Thumbnails targetIndex={targetIndex}>
               {data.media.map((item, index) => (
                 <Fragment key={index}>
                   {item.type === '360' && (
