@@ -12,6 +12,7 @@ import TurnRightSVG from '../icons/turn-right.svg';
 
 export interface AllRoundViewProps {
   photos: string[];
+  controls?: boolean;
 }
 
 type ViewState = 'default' | 'autoplay' | 'turn-right' | 'turn-left';
@@ -23,7 +24,7 @@ const cx = classNames.bind(styles);
  * @param props Свойства.
  * @return Элемент.
  */
-export const AllRoundView = ({ photos }: AllRoundViewProps) => {
+export const AllRoundView = ({ photos, controls = true }: AllRoundViewProps) => {
   const imageRef = useRef<HTMLImageElement>(null);
   const dragStartRef = useRef<{ position: number; index: number } | null>(null);
 
@@ -110,47 +111,49 @@ export const AllRoundView = ({ photos }: AllRoundViewProps) => {
     <div className={cx('root')}>
       <img data-testid='gallery-modal:360-current-photo' ref={imageRef} src={photos[index]} />
 
-      <div className={cx('controls')}>
-        <button
-          className={cx('control', 'turn')}
-          disabled={autoplay}
-          onPointerDown={ChangeState('turn-left')}
-          onPointerUp={ChangeState('default')}
-          onPointerLeave={ChangeState('default')}
-          data-testid='gallery-modal:360-turn-left-button'
-        >
-          <TurnRightSVG />
-        </button>
+      {controls && (
+        <div className={cx('controls')}>
+          <button
+            className={cx('control', 'turn')}
+            disabled={autoplay}
+            onPointerDown={ChangeState('turn-left')}
+            onPointerUp={ChangeState('default')}
+            onPointerLeave={ChangeState('default')}
+            data-testid='gallery-modal:360-turn-left-button'
+          >
+            <TurnRightSVG />
+          </button>
 
-        <WithHint hint={HINT}>
-          {(ref, toggleHint) => (
-            <button
-              ref={ref as any}
-              className={cx('control', 'primary', autoplay && 'pause')}
-              onClick={() => {
-                setState(s => (s === 'autoplay' ? 'default' : 'autoplay'));
-                toggleHint(false);
-              }}
-              onMouseEnter={() => autoplay && toggleHint(true)}
-              onMouseLeave={() => toggleHint(false)}
-              data-testid='gallery-modal:toggle-autoplay-button'
-            >
-              {autoplay ? <PauseSVG /> : <AllRoundSVG />}
-            </button>
-          )}
-        </WithHint>
+          <WithHint hint={HINT}>
+            {(ref, toggleHint) => (
+              <button
+                ref={ref as any}
+                className={cx('control', 'primary', autoplay && 'pause')}
+                onClick={() => {
+                  setState(s => (s === 'autoplay' ? 'default' : 'autoplay'));
+                  toggleHint(false);
+                }}
+                onMouseEnter={() => autoplay && toggleHint(true)}
+                onMouseLeave={() => toggleHint(false)}
+                data-testid='gallery-modal:toggle-autoplay-button'
+              >
+                {autoplay ? <PauseSVG /> : <AllRoundSVG />}
+              </button>
+            )}
+          </WithHint>
 
-        <button
-          className={cx('control', 'turn')}
-          disabled={autoplay}
-          onPointerDown={ChangeState('turn-right')}
-          onPointerUp={ChangeState('default')}
-          onPointerLeave={ChangeState('default')}
-          data-testid='gallery-modal:360-turn-right-button'
-        >
-          <TurnLeftSVG />
-        </button>
-      </div>
+          <button
+            className={cx('control', 'turn')}
+            disabled={autoplay}
+            onPointerDown={ChangeState('turn-right')}
+            onPointerUp={ChangeState('default')}
+            onPointerLeave={ChangeState('default')}
+            data-testid='gallery-modal:360-turn-right-button'
+          >
+            <TurnLeftSVG />
+          </button>
+        </div>
+      )}
     </div>
   );
 };
