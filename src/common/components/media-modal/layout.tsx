@@ -1,6 +1,7 @@
-import React, { ReactNode } from 'react';
+import React, { CSSProperties, ReactNode, useRef, useState } from 'react';
 import { defineSlots } from '@sima-land/ui-nucleons/helpers/define-slots';
 import { Breakpoint, Layout } from '@sima-land/ui-nucleons/layout';
+import { useClientRect, useVisualViewport } from './utils';
 import classNames from 'classnames/bind';
 import styles from './layout.module.scss';
 
@@ -17,6 +18,8 @@ const cx = classNames.bind(styles);
  * @return Элемент.
  */
 export function MediaLayout({ children }: ContainerProps) {
+  const mobile: Breakpoint[] = ['mxs', 'ms', 'mm', 'ml'];
+
   const { header, main, aside, footer } = defineSlots(children, {
     header: MediaHeader,
     main: MediaMain,
@@ -24,7 +27,19 @@ export function MediaLayout({ children }: ContainerProps) {
     footer: MediaFooter,
   });
 
-  const mobile: Breakpoint[] = ['mxs', 'ms', 'mm', 'ml'];
+  const [vh, setVh] = useState<number | null>(null);
+  const mainRef = useRef<HTMLDivElement>(null);
+  const mainRect = useClientRect(mainRef);
+
+  useVisualViewport(viewport => {
+    setVh(viewport.height / 100);
+  });
+
+  const mainStyle = {
+    '--vh': `${vh}px` ?? '1vh',
+    '--media-width': `${mainRect.width}px`,
+    '--media-height': `${mainRect.height}px`,
+  } as CSSProperties;
 
   return (
     <div className={styles.layout}>
@@ -36,7 +51,9 @@ export function MediaLayout({ children }: ContainerProps) {
 
       <Layout disabledOn={mobile} className={styles.body}>
         {aside && <div className={styles.aside}>{aside}</div>}
-        <div className={styles.main}>{main}</div>
+        <div ref={mainRef} className={styles.main} style={mainStyle}>
+          {main}
+        </div>
       </Layout>
 
       {footer && (

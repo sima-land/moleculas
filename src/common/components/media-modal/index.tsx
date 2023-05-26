@@ -2,7 +2,8 @@ import { MediaLayout, MediaHeader, MediaMain, MediaAside, MediaFooter } from './
 import { Preset, HeaderLayout } from './parts';
 import { ScrollSection } from './parts/scroll-section';
 import { ThumbnailsProps, Thumbnail, Thumbnails } from './parts/thumbnails';
-import { MediaContentProps, MediaContent } from './parts/media';
+import { MediaContentProps, MediaContent } from './parts/media-content';
+import { MediaView } from './parts/media-view';
 import { ReviewProps, Review } from './parts/review';
 import { ProductBriefProps, ProductBrief } from './parts/product-brief';
 
@@ -18,6 +19,7 @@ export {
 
   // main content
   MediaContent,
+  MediaView,
 
   // header content
   HeaderLayout,

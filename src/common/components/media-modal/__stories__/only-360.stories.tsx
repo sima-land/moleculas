@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Modal } from '@sima-land/ui-nucleons/modal';
-import { MediaLayout, MediaMain, MediaContent } from '..';
+import { MediaLayout, MediaMain, MediaView } from '..';
 import { data } from '../__mocks__';
 
 export default {
@@ -12,7 +12,7 @@ export default {
 };
 
 export function Only360() {
-  const [targetIndex, setTargetIndex] = useState(0);
+  const media = data.media.filter(item => item.type === '360')[0];
 
   return (
     <Modal size='fullscreen' footerStub={false} withScrollDisable>
@@ -20,11 +20,7 @@ export function Only360() {
       <Modal.Body>
         <MediaLayout>
           <MediaMain>
-            <MediaContent
-              items={data.media.filter(item => item.type === '360')}
-              targetIndex={targetIndex}
-              onChangeTargetIndex={setTargetIndex}
-            />
+            <MediaView media={media} />
           </MediaMain>
         </MediaLayout>
       </Modal.Body>

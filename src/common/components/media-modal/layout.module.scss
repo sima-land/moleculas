@@ -4,7 +4,7 @@
 .layout {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - var(--modal-header-height));
+  min-height: calc((100 * var(--vh, 1vh)) - var(--modal-header-height));
 }
 
 .body {
@@ -13,6 +13,12 @@
 }
 
 .main {
+  --media-width: var(--square-size);
+  --media-height: var(--square-size);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 1;
   position: relative; // ВАЖНО: что иметь возможность заполнить доступную область содержимым
   min-height: 50vh;
 }
@@ -29,10 +35,6 @@
     &:last-child {
       margin-bottom: 24px;
     }
-  }
-  .main {
-    min-height: max(50vh, 240px);
-    flex-grow: 1;
   }
   .aside + .main {
     margin-bottom: 24px;
@@ -65,9 +67,6 @@
   }
   .aside + .main {
     margin-left: 16px;
-  }
-  .main {
-    flex-grow: 1;
   }
   .body + .footer {
     margin-top: 32px;
