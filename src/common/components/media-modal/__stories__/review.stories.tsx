@@ -38,9 +38,9 @@ export function WithReview() {
             <HeaderLayout>
               <HeaderLayout.Tabs>
                 <Tabs {...Preset.headerTabs()}>
-                  <Tabs.Item name='Фото' />
-                  <Tabs.Item name='Видео' selected />
-                  <Tabs.Item name='360' />
+                  <Tabs.Item name='Фото покупателей' />
+                  <Tabs.Item name='Видео покупателей' selected />
+                  <Tabs.Item name='360 покупателей' />
                   <Tabs.Item name='Фото покупателей' />
                 </Tabs>
               </HeaderLayout.Tabs>

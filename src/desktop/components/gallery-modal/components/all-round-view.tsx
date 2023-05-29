@@ -59,14 +59,13 @@ export const AllRoundView = ({ photos, controls = true }: AllRoundViewProps) => 
     const wrap = (value: number) => (photos.length + value) % photos.length;
 
     const image = imageRef.current as HTMLImageElement;
-    const imageWidth = image.clientWidth;
-    const imageLeft = image.getBoundingClientRect().left;
 
     const offList = [
       on<PointerEvent>(image, 'pointerdown', e => {
         e.preventDefault();
         setState('default');
 
+        const imageLeft = image.getBoundingClientRect().left;
         image.style.touchAction = 'none';
 
         dragStartRef.current = {
@@ -77,6 +76,8 @@ export const AllRoundView = ({ photos, controls = true }: AllRoundViewProps) => 
 
       on<PointerEvent>(window, 'pointermove', e => {
         if (dragStartRef.current !== null) {
+          const imageWidth = image.clientWidth;
+          const imageLeft = image.getBoundingClientRect().left;
           const startX = dragStartRef.current.position;
           const currentX = e.clientX - imageLeft;
 

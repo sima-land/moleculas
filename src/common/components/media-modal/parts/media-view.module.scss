@@ -3,7 +3,7 @@
 .root {
   width: var(--media-width, 320px);
   height: var(--media-height, 240px);
-  position: relative;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;

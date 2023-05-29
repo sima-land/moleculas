@@ -17,7 +17,9 @@ export function ScrollSection({
   return (
     <Layout disabledOn={['mxs', 'ms']}>
       <div ref={innerRef} className={styles.inner}>
-        {children}
+        <div className={styles.gutter} />
+        <div className={styles.content}>{children}</div>
+        <div className={styles.gutter} />
       </div>
     </Layout>
   );

@@ -18,7 +18,7 @@ export function Areas() {
 
   return (
     <Modal size='fullscreen' footerStub={false}>
-      <Modal.Header title='Области' onClose={() => void 0} />
+      <Modal.Header onClose={() => void 0} />
       <Modal.Body>
         <MediaLayout>
           <MediaHeader>
@@ -34,19 +34,6 @@ export function Areas() {
             </div>
           </MediaHeader>
 
-          <MediaAside>
-            <div
-              style={{
-                ...styles,
-                width: '100%',
-                height: '100%',
-                background: 'rgb(255, 214, 0, 0.24)',
-              }}
-            >
-              Aside
-            </div>
-          </MediaAside>
-
           <MediaMain>
             <div
               style={{
@@ -60,6 +47,20 @@ export function Areas() {
               Main
             </div>
           </MediaMain>
+
+          <MediaAside>
+            <div
+              style={{
+                ...styles,
+                width: '100%',
+                height: '100%',
+                minHeight: '40px',
+                background: 'rgb(255, 214, 0, 0.24)',
+              }}
+            >
+              Aside
+            </div>
+          </MediaAside>
 
           <MediaFooter>
             <div

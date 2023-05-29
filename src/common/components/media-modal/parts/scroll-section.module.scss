@@ -5,14 +5,28 @@
   display: flex;
   overflow-x: scroll;
   @include utils.hidden-scrollbars;
-  @include breakpoints.down('mm') {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+}
+
+.content {
+  flex-shrink: 0;
+  display: flex;
   > * {
     flex-shrink: 0;
   }
   > *:not(:last-child) {
     margin-right: 8px;
+  }
+}
+
+.gutter {
+  flex-shrink: 0;
+  display: none;
+  &:first-child {
+    margin: 0;
+  }
+  @include breakpoints.down('mm') {
+    display: block;
+    width: 16px;
+    height: 16px;
   }
 }
