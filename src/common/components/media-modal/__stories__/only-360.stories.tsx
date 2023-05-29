@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modal } from '@sima-land/ui-nucleons/modal';
 import { MediaLayout, MediaMain, MediaView } from '..';
-import { data } from '../__mocks__';
+import { mixed } from '../__mocks__';
 
 export default {
   title: 'common/MediaLayout',
@@ -12,7 +12,7 @@ export default {
 };
 
 export function Only360() {
-  const media = data.media.filter(item => item.type === '360')[0];
+  const media = mixed.filter(item => item.type === '360')[0];
 
   return (
     <Modal size='fullscreen' footerStub={false} withScrollDisable>

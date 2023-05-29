@@ -20,6 +20,7 @@ export interface MediaContentProps {
   items: MediaData[];
   targetIndex?: number;
   onChangeTargetIndex?: (newIndex: number) => void;
+  loading?: boolean;
 }
 
 export interface FitSquareProps {
@@ -48,7 +49,7 @@ export function MediaContent(props: MediaContentProps) {
  * @param props Свойства.
  * @return Элемент.
  */
-function MediaCarousel({ items, targetIndex, onChangeTargetIndex }: MediaContentProps) {
+function MediaCarousel({ items, targetIndex, onChangeTargetIndex, loading }: MediaContentProps) {
   const ref = useRef<HTMLDivElement>(null);
   const area = useClientRect(ref);
 
@@ -73,7 +74,7 @@ function MediaCarousel({ items, targetIndex, onChangeTargetIndex }: MediaContent
           renderItem={data => (
             <div className={styles['carousel-item']}>
               <FitSquare {...area}>
-                <MediaView media={data} />
+                <MediaView media={data} loading={loading} />
               </FitSquare>
             </div>
           )}
@@ -88,7 +89,7 @@ function MediaCarousel({ items, targetIndex, onChangeTargetIndex }: MediaContent
  * @param props Свойства.
  * @return Элемент.
  */
-function MediaSlider({ items, targetIndex, onChangeTargetIndex }: MediaContentProps) {
+function MediaSlider({ items, targetIndex, onChangeTargetIndex, loading }: MediaContentProps) {
   const [position, setPosition] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const area = useClientRect(ref);
@@ -118,7 +119,7 @@ function MediaSlider({ items, targetIndex, onChangeTargetIndex }: MediaContentPr
           )}
 
           <FitSquare width={area.width + correction} height={area.height}>
-            <MediaView media={items[position]} />
+            <MediaView media={items[position]} loading={loading} />
           </FitSquare>
 
           {controls && (

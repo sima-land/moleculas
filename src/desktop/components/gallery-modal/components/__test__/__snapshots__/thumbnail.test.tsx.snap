@@ -77,13 +77,13 @@ exports[`Thumbnail should render image 1`] = `
     <ImageOverlay
       className="image-overlay"
     >
-      <div
+      <span
         className="root image-overlay"
       >
         <img
           src="https://image.com/1"
         />
-      </div>
+      </span>
     </ImageOverlay>
   </button>
 </Thumbnail>

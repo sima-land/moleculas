@@ -1,7 +1,7 @@
 import React, { HTMLAttributes, MouseEventHandler, ReactNode } from 'react';
 import { ImageOverlay } from '../../../../desktop/components/gallery-modal/components/image-overlay';
 import { Price } from '@sima-land/ui-nucleons/price';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import styles from './product-brief.module.scss';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
 
@@ -14,7 +14,10 @@ export interface ProductBriefProps extends HTMLAttributes<HTMLDivElement> {
   href?: string;
   onLinkClick?: MouseEventHandler<HTMLAnchorElement>;
   imageSrc?: string;
+  loading?: boolean;
 }
+
+const cx = classNames.bind(styles);
 
 /**
  * Блок товара-рекомендации.
@@ -31,13 +34,18 @@ export function ProductBrief({
   className,
   href,
   onLinkClick,
+  loading,
   ...restProps
 }: ProductBriefProps) {
   const desktop = useBreakpoint('xs+');
   const size = sizeProp ?? desktop ? 'l' : 's';
 
+  if (loading) {
+    return <ProductBriefSkeleton size={size} />;
+  }
+
   return (
-    <div className={classNames(styles.root, styles[`size-${size}`], className)} {...restProps}>
+    <div className={cx('root', `size-${size}`, className)} {...restProps}>
       <a className={styles.image} href={href} onClick={onLinkClick}>
         <ImageOverlay className={styles.overlay}>
           <img src={imageSrc} />
@@ -52,6 +60,21 @@ export function ProductBrief({
       </div>
 
       {footer && <div className={styles.footer}>{footer}</div>}
+    </div>
+  );
+}
+
+/**
+ * Заглушка блока товара-рекомендации.
+ * @param props Свойства.
+ * @return Элемент.
+ */
+function ProductBriefSkeleton({ size }: any) {
+  return (
+    <div className={cx('skeleton', size)}>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   );
 }

@@ -1,34 +1,78 @@
 import React, { ReactNode } from 'react';
 import { Rating } from '@sima-land/ui-nucleons/rating';
-import { TextButton } from '@sima-land/ui-nucleons/text-button';
+import classNames from 'classnames/bind';
 import styles from './review.module.scss';
 
 export interface ReviewProps {
   rating?: number;
-  ratingPlaceholder?: string;
-  author?: string;
+  ratingPlaceholder?: ReactNode;
+  author?: ReactNode;
+  button?: ReactNode;
   children?: ReactNode;
+  loading?: boolean;
 }
+
+const cx = classNames.bind(styles);
 
 /**
  * Отзыв.
  * @param props Свойства.
  * @return Элемент.
  */
-export function Review({ rating, ratingPlaceholder, author, children }: ReviewProps) {
+export function Review({
+  rating,
+  ratingPlaceholder,
+  author,
+  children,
+  loading,
+  button,
+}: ReviewProps) {
+  if (loading) {
+    return <ReviewSkeleton button={button} />;
+  }
+
   return (
-    <div className={styles.root}>
-      <div className={styles.rating}>
-        {typeof rating === 'number' ? <Rating size='s' value={rating} /> : ratingPlaceholder}
+    <div className={cx('root')}>
+      <div className={cx('header')}>
+        {(rating || ratingPlaceholder || author) && (
+          <div className={cx('col', 'meta')}>
+            {(typeof rating === 'number' || ratingPlaceholder) && (
+              <div className={cx('col', 'rating')}>
+                {rating ? <Rating size='s' value={rating} /> : ratingPlaceholder}
+              </div>
+            )}
+
+            {author && <div className={cx('col', 'author')}>{author}</div>}
+          </div>
+        )}
+
+        {button && <div className={cx('col', 'button')}>{button}</div>}
       </div>
 
-      <div className={styles.author}>{author}</div>
+      {Boolean(children) && <div className={styles.content}>{children}</div>}
+    </div>
+  );
+}
 
-      <div className={styles.link}>
-        <TextButton size='s'>Перейти к отзыву</TextButton>
+/**
+ * Заглушка отзыва.
+ * @param props Свойства.
+ * @return Элемент.
+ */
+function ReviewSkeleton({ button }: { button?: ReactNode }) {
+  return (
+    <div className={cx('root')}>
+      <div className={cx('header')}>
+        <div className={cx('col', 'meta')}>
+          <div className={cx('skeleton', 'skeleton-meta')} />
+        </div>
+        {button && <div className={cx('col', 'button')}>{button}</div>}
       </div>
 
-      <div className={styles.content}>{children}</div>
+      <div className={cx('content')}>
+        <div className={cx('skeleton')} />
+        <div className={cx('skeleton')} />
+      </div>
     </div>
   );
 }

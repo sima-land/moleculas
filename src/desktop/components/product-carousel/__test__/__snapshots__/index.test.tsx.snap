@@ -23,7 +23,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <div
+              <span
                 class="root image-overlay"
               >
                 <a
@@ -37,7 +37,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                     src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                   />
                 </a>
-              </div>
+              </span>
               <div
                 class="prices height-limit"
                 data-testid="product-info:prices"
@@ -61,7 +61,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <div
+              <span
                 class="root image-overlay"
               >
                 <a
@@ -75,7 +75,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                     src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
                   />
                 </a>
-              </div>
+              </span>
               <div
                 class="prices height-limit"
                 data-testid="product-info:prices"
@@ -99,7 +99,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <div
+              <span
                 class="root image-overlay"
               >
                 <a
@@ -113,7 +113,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                     src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
                   />
                 </a>
-              </div>
+              </span>
               <div
                 class="prices height-limit"
                 data-testid="product-info:prices"
@@ -137,7 +137,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <div
+              <span
                 class="root image-overlay"
               >
                 <a
@@ -151,7 +151,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                     src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
                   />
                 </a>
-              </div>
+              </span>
               <div
                 class="prices height-limit"
                 data-testid="product-info:prices"
@@ -175,7 +175,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <div
+              <span
                 class="root image-overlay"
               >
                 <a
@@ -189,7 +189,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                     src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
                   />
                 </a>
-              </div>
+              </span>
               <div
                 class="prices height-limit"
                 data-testid="product-info:prices"
@@ -213,7 +213,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <div
+              <span
                 class="root image-overlay"
               >
                 <a
@@ -227,7 +227,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                     src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
                   />
                 </a>
-              </div>
+              </span>
               <div
                 class="prices height-limit"
                 data-testid="product-info:prices"
@@ -251,7 +251,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <div
+              <span
                 class="root image-overlay"
               >
                 <a
@@ -265,7 +265,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                     src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
                   />
                 </a>
-              </div>
+              </span>
               <div
                 class="prices height-limit"
                 data-testid="product-info:prices"
@@ -289,7 +289,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <div
+              <span
                 class="root image-overlay"
               >
                 <a
@@ -303,7 +303,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                     src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
                   />
                 </a>
-              </div>
+              </span>
               <div
                 class="prices height-limit"
                 data-testid="product-info:prices"
@@ -333,7 +333,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <div
+              <span
                 class="root image-overlay"
               >
                 <a
@@ -347,7 +347,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                     src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
                   />
                 </a>
-              </div>
+              </span>
               <div
                 class="prices height-limit"
                 data-testid="product-info:prices"
@@ -377,7 +377,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <div
+              <span
                 class="root image-overlay"
               >
                 <a
@@ -391,7 +391,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
                     src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
                   />
                 </a>
-              </div>
+              </span>
               <div
                 class="prices height-limit"
                 data-testid="product-info:prices"
@@ -442,7 +442,7 @@ exports[`<ProductCarousel /> should renders correctly with only one item 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <div
+              <span
                 class="root image-overlay"
               >
                 <a
@@ -456,7 +456,7 @@ exports[`<ProductCarousel /> should renders correctly with only one item 1`] = `
                     src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                   />
                 </a>
-              </div>
+              </span>
               <div
                 class="prices height-limit"
                 data-testid="product-info:prices"
@@ -726,7 +726,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -740,7 +740,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                               src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -764,7 +764,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -778,7 +778,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                               src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -802,7 +802,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -816,7 +816,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                               src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -840,7 +840,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -854,7 +854,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                               src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -878,7 +878,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -892,7 +892,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                               src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -916,7 +916,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -930,7 +930,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                               src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -954,7 +954,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -968,7 +968,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                               src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -992,7 +992,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -1006,7 +1006,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                               src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -1036,7 +1036,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -1050,7 +1050,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                               src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -1080,7 +1080,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -1094,7 +1094,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                               src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -1153,7 +1153,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -1167,7 +1167,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                               src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -1206,7 +1206,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         <ImageOverlay
                           className="image-overlay"
                         >
-                          <div
+                          <span
                             className="root image-overlay"
                           >
                             <a
@@ -1226,7 +1226,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                                 }
                               />
                             </a>
-                          </div>
+                          </span>
                         </ImageOverlay>
                       </Image>
                       <Prices
@@ -1295,7 +1295,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         <ImageOverlay
                           className="image-overlay"
                         >
-                          <div
+                          <span
                             className="root image-overlay"
                           >
                             <a
@@ -1315,7 +1315,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                                 }
                               />
                             </a>
-                          </div>
+                          </span>
                         </ImageOverlay>
                       </Image>
                       <Prices
@@ -1384,7 +1384,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         <ImageOverlay
                           className="image-overlay"
                         >
-                          <div
+                          <span
                             className="root image-overlay"
                           >
                             <a
@@ -1404,7 +1404,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                                 }
                               />
                             </a>
-                          </div>
+                          </span>
                         </ImageOverlay>
                       </Image>
                       <Prices
@@ -1473,7 +1473,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         <ImageOverlay
                           className="image-overlay"
                         >
-                          <div
+                          <span
                             className="root image-overlay"
                           >
                             <a
@@ -1493,7 +1493,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                                 }
                               />
                             </a>
-                          </div>
+                          </span>
                         </ImageOverlay>
                       </Image>
                       <Prices
@@ -1562,7 +1562,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         <ImageOverlay
                           className="image-overlay"
                         >
-                          <div
+                          <span
                             className="root image-overlay"
                           >
                             <a
@@ -1582,7 +1582,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                                 }
                               />
                             </a>
-                          </div>
+                          </span>
                         </ImageOverlay>
                       </Image>
                       <Prices
@@ -1651,7 +1651,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         <ImageOverlay
                           className="image-overlay"
                         >
-                          <div
+                          <span
                             className="root image-overlay"
                           >
                             <a
@@ -1671,7 +1671,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                                 }
                               />
                             </a>
-                          </div>
+                          </span>
                         </ImageOverlay>
                       </Image>
                       <Prices
@@ -1740,7 +1740,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         <ImageOverlay
                           className="image-overlay"
                         >
-                          <div
+                          <span
                             className="root image-overlay"
                           >
                             <a
@@ -1760,7 +1760,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                                 }
                               />
                             </a>
-                          </div>
+                          </span>
                         </ImageOverlay>
                       </Image>
                       <Prices
@@ -1829,7 +1829,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         <ImageOverlay
                           className="image-overlay"
                         >
-                          <div
+                          <span
                             className="root image-overlay"
                           >
                             <a
@@ -1849,7 +1849,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                                 }
                               />
                             </a>
-                          </div>
+                          </span>
                         </ImageOverlay>
                       </Image>
                       <Prices
@@ -1933,7 +1933,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         <ImageOverlay
                           className="image-overlay"
                         >
-                          <div
+                          <span
                             className="root image-overlay"
                           >
                             <a
@@ -1953,7 +1953,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                                 }
                               />
                             </a>
-                          </div>
+                          </span>
                         </ImageOverlay>
                       </Image>
                       <Prices
@@ -2037,7 +2037,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                         <ImageOverlay
                           className="image-overlay"
                         >
-                          <div
+                          <span
                             className="root image-overlay"
                           >
                             <a
@@ -2057,7 +2057,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                                 }
                               />
                             </a>
-                          </div>
+                          </span>
                         </ImageOverlay>
                       </Image>
                       <Prices
@@ -2351,7 +2351,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -2365,7 +2365,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                               src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -2389,7 +2389,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -2403,7 +2403,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                               src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -2427,7 +2427,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -2441,7 +2441,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                               src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -2465,7 +2465,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -2479,7 +2479,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                               src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -2503,7 +2503,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -2517,7 +2517,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                               src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -2541,7 +2541,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -2555,7 +2555,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                               src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -2579,7 +2579,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -2593,7 +2593,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                               src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -2617,7 +2617,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -2631,7 +2631,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                               src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -2661,7 +2661,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -2675,7 +2675,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                               src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -2705,7 +2705,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -2719,7 +2719,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                               src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -2778,7 +2778,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                         data-testid="product-carousel:item"
                       >
-                        <div
+                        <span
                           class="root image-overlay"
                         >
                           <a
@@ -2792,7 +2792,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                               src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
                             />
                           </a>
-                        </div>
+                        </span>
                         <div
                           class="prices height-limit"
                           data-testid="product-info:prices"
@@ -2831,7 +2831,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         <ImageOverlay
                           className="image-overlay"
                         >
-                          <div
+                          <span
                             className="root image-overlay"
                           >
                             <a
@@ -2851,7 +2851,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                                 }
                               />
                             </a>
-                          </div>
+                          </span>
                         </ImageOverlay>
                       </Image>
                       <Prices
@@ -2920,7 +2920,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         <ImageOverlay
                           className="image-overlay"
                         >
-                          <div
+                          <span
                             className="root image-overlay"
                           >
                             <a
@@ -2940,7 +2940,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                                 }
                               />
                             </a>
-                          </div>
+                          </span>
                         </ImageOverlay>
                       </Image>
                       <Prices
@@ -3009,7 +3009,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         <ImageOverlay
                           className="image-overlay"
                         >
-                          <div
+                          <span
                             className="root image-overlay"
                           >
                             <a
@@ -3029,7 +3029,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                                 }
                               />
                             </a>
-                          </div>
+                          </span>
                         </ImageOverlay>
                       </Image>
                       <Prices
@@ -3098,7 +3098,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         <ImageOverlay
                           className="image-overlay"
                         >
-                          <div
+                          <span
                             className="root image-overlay"
                           >
                             <a
@@ -3118,7 +3118,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                                 }
                               />
                             </a>
-                          </div>
+                          </span>
                         </ImageOverlay>
                       </Image>
                       <Prices
@@ -3187,7 +3187,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         <ImageOverlay
                           className="image-overlay"
                         >
-                          <div
+                          <span
                             className="root image-overlay"
                           >
                             <a
@@ -3207,7 +3207,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                                 }
                               />
                             </a>
-                          </div>
+                          </span>
                         </ImageOverlay>
                       </Image>
                       <Prices
@@ -3276,7 +3276,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         <ImageOverlay
                           className="image-overlay"
                         >
-                          <div
+                          <span
                             className="root image-overlay"
                           >
                             <a
@@ -3296,7 +3296,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                                 }
                               />
                             </a>
-                          </div>
+                          </span>
                         </ImageOverlay>
                       </Image>
                       <Prices
@@ -3365,7 +3365,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         <ImageOverlay
                           className="image-overlay"
                         >
-                          <div
+                          <span
                             className="root image-overlay"
                           >
                             <a
@@ -3385,7 +3385,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                                 }
                               />
                             </a>
-                          </div>
+                          </span>
                         </ImageOverlay>
                       </Image>
                       <Prices
@@ -3454,7 +3454,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         <ImageOverlay
                           className="image-overlay"
                         >
-                          <div
+                          <span
                             className="root image-overlay"
                           >
                             <a
@@ -3474,7 +3474,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                                 }
                               />
                             </a>
-                          </div>
+                          </span>
                         </ImageOverlay>
                       </Image>
                       <Prices
@@ -3558,7 +3558,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         <ImageOverlay
                           className="image-overlay"
                         >
-                          <div
+                          <span
                             className="root image-overlay"
                           >
                             <a
@@ -3578,7 +3578,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                                 }
                               />
                             </a>
-                          </div>
+                          </span>
                         </ImageOverlay>
                       </Image>
                       <Prices
@@ -3662,7 +3662,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                         <ImageOverlay
                           className="image-overlay"
                         >
-                          <div
+                          <span
                             className="root image-overlay"
                           >
                             <a
@@ -3682,7 +3682,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                                 }
                               />
                             </a>
-                          </div>
+                          </span>
                         </ImageOverlay>
                       </Image>
                       <Prices

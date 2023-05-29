@@ -19,7 +19,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
             class="item"
             data-testid="product-slider:item"
           >
-            <div
+            <span
               class="root image-overlay"
             >
               <a
@@ -119,7 +119,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                   </svg>
                 </div>
               </div>
-            </div>
+            </span>
             <div
               class="prices height-limit"
               data-testid="product-info:prices"
@@ -222,7 +222,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
             class="item"
             data-testid="product-slider:item"
           >
-            <div
+            <span
               class="root image-overlay"
             >
               <a
@@ -322,7 +322,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                   </svg>
                 </div>
               </div>
-            </div>
+            </span>
             <div
               class="prices height-limit"
               data-testid="product-info:prices"
@@ -418,7 +418,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
             class="item"
             data-testid="product-slider:item"
           >
-            <div
+            <span
               class="root image-overlay"
             >
               <a
@@ -518,7 +518,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                   </svg>
                 </div>
               </div>
-            </div>
+            </span>
             <div
               class="root badges line-limit"
               style="--line-limit: 1;"
@@ -686,7 +686,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
             class="item"
             data-testid="product-slider:item"
           >
-            <div
+            <span
               class="root image-overlay"
             >
               <a
@@ -786,7 +786,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                   </svg>
                 </div>
               </div>
-            </div>
+            </span>
             <div
               class="prices height-limit"
               data-testid="product-info:prices"
@@ -882,7 +882,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
             class="item"
             data-testid="product-slider:item"
           >
-            <div
+            <span
               class="root image-overlay"
             >
               <a
@@ -982,7 +982,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                   </svg>
                 </div>
               </div>
-            </div>
+            </span>
             <div
               class="prices height-limit"
               data-testid="product-info:prices"
@@ -1078,7 +1078,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
             class="item"
             data-testid="product-slider:item"
           >
-            <div
+            <span
               class="root image-overlay"
             >
               <a
@@ -1178,7 +1178,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                   </svg>
                 </div>
               </div>
-            </div>
+            </span>
             <div
               class="root badges line-limit"
               style="--line-limit: 1;"
@@ -1309,7 +1309,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
             class="item"
             data-testid="product-slider:item"
           >
-            <div
+            <span
               class="root image-overlay"
             >
               <a
@@ -1409,7 +1409,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                   </svg>
                 </div>
               </div>
-            </div>
+            </span>
             <div
               class="prices height-limit"
               data-testid="product-info:prices"
@@ -1505,7 +1505,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
             class="item"
             data-testid="product-slider:item"
           >
-            <div
+            <span
               class="root image-overlay"
             >
               <a
@@ -1605,7 +1605,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                   </svg>
                 </div>
               </div>
-            </div>
+            </span>
             <div
               class="prices height-limit"
               data-testid="product-info:prices"
@@ -1707,7 +1707,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
             class="item"
             data-testid="product-slider:item"
           >
-            <div
+            <span
               class="root image-overlay"
             >
               <a
@@ -1807,7 +1807,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                   </svg>
                 </div>
               </div>
-            </div>
+            </span>
             <div
               class="prices height-limit"
               data-testid="product-info:prices"
@@ -1909,7 +1909,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
             class="item"
             data-testid="product-slider:item"
           >
-            <div
+            <span
               class="root image-overlay"
             >
               <a
@@ -2009,7 +2009,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                   </svg>
                 </div>
               </div>
-            </div>
+            </span>
             <div
               class="prices height-limit"
               data-testid="product-info:prices"
@@ -2114,7 +2114,7 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
     class="item"
     data-testid="product-slider:item"
   >
-    <div
+    <span
       class="root image-overlay"
     >
       <a
@@ -2214,7 +2214,7 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
           </svg>
         </div>
       </div>
-    </div>
+    </span>
     <div
       class="prices height-limit"
       data-testid="product-info:prices"
@@ -2317,7 +2317,7 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
     class="item"
     data-testid="product-slider:item"
   >
-    <div
+    <span
       class="root image-overlay"
     >
       <a
@@ -2417,7 +2417,7 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
           </svg>
         </div>
       </div>
-    </div>
+    </span>
     <div
       class="prices height-limit"
       data-testid="product-info:prices"
@@ -2513,7 +2513,7 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
     class="item"
     data-testid="product-slider:item"
   >
-    <div
+    <span
       class="root image-overlay"
     >
       <a
@@ -2613,7 +2613,7 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
           </svg>
         </div>
       </div>
-    </div>
+    </span>
     <div
       class="root badges line-limit"
       style="--line-limit: 1;"
@@ -2781,7 +2781,7 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
     class="item"
     data-testid="product-slider:item"
   >
-    <div
+    <span
       class="root image-overlay"
     >
       <a
@@ -2881,7 +2881,7 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
           </svg>
         </div>
       </div>
-    </div>
+    </span>
     <div
       class="prices height-limit"
       data-testid="product-info:prices"
@@ -2977,7 +2977,7 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
     class="item"
     data-testid="product-slider:item"
   >
-    <div
+    <span
       class="root image-overlay"
     >
       <a
@@ -3077,7 +3077,7 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
           </svg>
         </div>
       </div>
-    </div>
+    </span>
     <div
       class="prices height-limit"
       data-testid="product-info:prices"
@@ -3173,7 +3173,7 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
     class="item"
     data-testid="product-slider:item"
   >
-    <div
+    <span
       class="root image-overlay"
     >
       <a
@@ -3273,7 +3273,7 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
           </svg>
         </div>
       </div>
-    </div>
+    </span>
     <div
       class="root badges line-limit"
       style="--line-limit: 1;"
@@ -3404,7 +3404,7 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
     class="item"
     data-testid="product-slider:item"
   >
-    <div
+    <span
       class="root image-overlay"
     >
       <a
@@ -3504,7 +3504,7 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
           </svg>
         </div>
       </div>
-    </div>
+    </span>
     <div
       class="prices height-limit"
       data-testid="product-info:prices"
@@ -3600,7 +3600,7 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
     class="item"
     data-testid="product-slider:item"
   >
-    <div
+    <span
       class="root image-overlay"
     >
       <a
@@ -3700,7 +3700,7 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
           </svg>
         </div>
       </div>
-    </div>
+    </span>
     <div
       class="prices height-limit"
       data-testid="product-info:prices"
@@ -3802,7 +3802,7 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
     class="item"
     data-testid="product-slider:item"
   >
-    <div
+    <span
       class="root image-overlay"
     >
       <a
@@ -3902,7 +3902,7 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
           </svg>
         </div>
       </div>
-    </div>
+    </span>
     <div
       class="prices height-limit"
       data-testid="product-info:prices"
@@ -4004,7 +4004,7 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
     class="item"
     data-testid="product-slider:item"
   >
-    <div
+    <span
       class="root image-overlay"
     >
       <a
@@ -4104,7 +4104,7 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
           </svg>
         </div>
       </div>
-    </div>
+    </span>
     <div
       class="prices height-limit"
       data-testid="product-info:prices"

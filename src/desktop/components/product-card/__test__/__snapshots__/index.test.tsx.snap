@@ -9,7 +9,7 @@ exports[`ProductCard should render base info correctly 1`] = `
     <div
       data-testid="product-card:info"
     >
-      <div
+      <span
         class="root image-overlay"
       >
         <a
@@ -23,7 +23,7 @@ exports[`ProductCard should render base info correctly 1`] = `
             src="https://www.images.com/some-product/1"
           />
         </a>
-      </div>
+      </span>
       <div
         class="prices height-limit"
         data-testid="product-info:prices"
@@ -62,7 +62,7 @@ exports[`ProductCard should render hover card correctly 1`] = `
     <div
       data-testid="product-card:info"
     >
-      <div
+      <span
         class="root image-overlay"
       >
         <a
@@ -76,7 +76,7 @@ exports[`ProductCard should render hover card correctly 1`] = `
             src="https://www.images.com/some-product/1"
           />
         </a>
-      </div>
+      </span>
       <div
         class="prices height-limit"
         data-testid="product-info:prices"
@@ -107,7 +107,7 @@ exports[`ProductCard should render hover card correctly 1`] = `
       data-testid="product-card:hover-card"
       style="z-index: 1;"
     >
-      <div
+      <span
         class="root image-overlay"
       >
         <a
@@ -122,7 +122,7 @@ exports[`ProductCard should render hover card correctly 1`] = `
             style="opacity: 1;"
           />
         </a>
-      </div>
+      </span>
       <div
         class="prices height-limit"
         data-testid="product-info:prices"

@@ -10,7 +10,7 @@ export type ImageOverlayProps = React.HTMLAttributes<HTMLDivElement>;
  * @return Элемент.
  */
 export const ImageOverlay = ({ className, children, ...restProps }: ImageOverlayProps) => (
-  <div className={cn(styles.root, className)} {...restProps}>
+  <span className={cn(styles.root, className)} {...restProps}>
     {children}
-  </div>
+  </span>
 );

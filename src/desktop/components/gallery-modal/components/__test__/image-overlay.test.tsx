@@ -1,24 +1,25 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { fireEvent, render } from '@testing-library/react';
 import { ImageOverlay } from '../image-overlay';
-import { act } from 'react-dom/test-utils';
 
 describe('ImageOverlay', () => {
   it('should renders correctly', () => {
     const spy = jest.fn();
 
-    const wrapper = mount(
+    const { container } = render(
       <ImageOverlay className='test-class' id='test-id' onClick={spy}>
         <img src='https://images.com/2' />
       </ImageOverlay>,
     );
 
-    expect(wrapper).toMatchSnapshot();
+    expect(container.querySelectorAll('img')).toHaveLength(1);
+    expect(container.querySelectorAll('#test-id')).toHaveLength(1);
+    expect(container.querySelectorAll('.test-class')).toHaveLength(1);
 
     expect(spy).toHaveBeenCalledTimes(0);
 
-    act(() => {
-      wrapper.find('div#test-id').simulate('click');
+    container.querySelectorAll('#test-id').forEach(el => {
+      fireEvent.click(el);
     });
 
     expect(spy).toHaveBeenCalledTimes(1);

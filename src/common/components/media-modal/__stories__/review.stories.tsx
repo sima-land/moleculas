@@ -16,7 +16,7 @@ import { Tabs } from '@sima-land/ui-nucleons/tabs';
 import { TextButton } from '@sima-land/ui-nucleons/text-button';
 import { Layout } from '@sima-land/ui-nucleons/layout';
 import { Review } from '../parts/review';
-import { data } from '../__mocks__';
+import { mixed } from '../__mocks__';
 
 export default {
   title: 'common/MediaLayout',
@@ -38,10 +38,10 @@ export function WithReview() {
             <HeaderLayout>
               <HeaderLayout.Tabs>
                 <Tabs {...Preset.headerTabs()}>
-                  <Tabs.Item name='Фото покупателей' />
-                  <Tabs.Item name='Видео покупателей' selected />
-                  <Tabs.Item name='360 покупателей' />
-                  <Tabs.Item name='Фото покупателей' />
+                  <Tabs.Item name='Фото' />
+                  <Tabs.Item name='Видео' />
+                  <Tabs.Item name='360' />
+                  <Tabs.Item name='Фото покупателей' selected />
                 </Tabs>
               </HeaderLayout.Tabs>
               <HeaderLayout.Button>
@@ -52,7 +52,7 @@ export function WithReview() {
 
           <MediaMain>
             <MediaContent
-              items={data.media}
+              items={mixed}
               targetIndex={targetIndex}
               onChangeTargetIndex={setTargetIndex}
             />
@@ -60,7 +60,7 @@ export function WithReview() {
 
           <MediaAside>
             <Thumbnails targetIndex={targetIndex}>
-              {data.media.map((item, index) => (
+              {mixed.map((item, index) => (
                 <Fragment key={index}>
                   {item.type === '360' && (
                     <Thumbnail
@@ -91,7 +91,11 @@ export function WithReview() {
 
           <MediaFooter>
             <Layout disabledOn={['xs', 's', 'm', 'l', 'xl']}>
-              <Review rating={4} author='Пелагеевская Вероника Сергеевна'>
+              <Review
+                rating={4}
+                author='Пелагеевская Вероника Сергеевна'
+                button={<TextButton size='s'>Перейти к отзыву</TextButton>}
+              >
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus tempora tenetur
                 sapiente quisquam. Repellendus labore enim dicta natus sunt, saepe ab rem nostrum
                 architecto, veritatis porro at harum, est tempora molestiae excepturi? Neque

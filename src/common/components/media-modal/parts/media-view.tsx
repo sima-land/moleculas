@@ -4,30 +4,35 @@ import { AllRoundView } from '../../../../desktop/components/gallery-modal/compo
 import { MediaData } from '../types';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
 import styles from './media-view.module.scss';
+import classNames from 'classnames';
 
 /**
  * Отображает медиа-контент - 360, видео или изображение.
  * @param props Свойства.
  * @return Элемент.
  */
-export function MediaView({ media }: { media: MediaData }) {
+export function MediaView({ media, loading }: { media?: MediaData; loading?: boolean }) {
   const desktop = useBreakpoint('xs+');
 
+  if (loading) {
+    return <div className={classNames(styles.root, styles.loading)}></div>;
+  }
+
   return (
-    <div className={styles.root}>
-      {media.type === 'image' && (
+    <div className={classNames(styles.root)}>
+      {media?.type === 'image' && (
         <ImageOverlay className={styles.image}>
           <img src={media.data.src} alt={media.data.alt || ''} />
         </ImageOverlay>
       )}
 
-      {media.type === 'video' && (
+      {media?.type === 'video' && (
         <video autoPlay={false} controls controlsList='nodownload'>
           <source src={media.data.src} />
         </video>
       )}
 
-      {media.type === '360' && <AllRoundView photos={media.data.photos} controls={desktop} />}
+      {media?.type === '360' && <AllRoundView photos={media.data.photos} controls={desktop} />}
     </div>
   );
 }
