@@ -2,7 +2,7 @@
 
 exports[`ProductInfo adult content should match snapshot 1`] = `
 <div>
-  <div
+  <span
     class="root image-overlay"
   >
     <img
@@ -22,7 +22,7 @@ exports[`ProductInfo adult content should match snapshot 1`] = `
         fill-rule="evenodd"
       />
     </svg>
-  </div>
+  </span>
   <div
     class="prices height-limit"
     data-testid="product-info:prices"
@@ -58,7 +58,7 @@ exports[`ProductInfo adult content should match snapshot 1`] = `
 
 exports[`ProductInfo regular content positioned image icon-buttons 1`] = `
 <div>
-  <div
+  <span
     class="root image-overlay"
   >
     <a
@@ -184,7 +184,7 @@ exports[`ProductInfo regular content positioned image icon-buttons 1`] = `
         </svg>
       </div>
     </div>
-  </div>
+  </span>
   <div
     class="prices height-limit"
     data-testid="product-info:prices"
@@ -214,7 +214,7 @@ exports[`ProductInfo regular content positioned image icon-buttons 1`] = `
 
 exports[`ProductInfo regular content should match snapshot 1`] = `
 <div>
-  <div
+  <span
     class="root image-overlay"
   >
     <a
@@ -340,7 +340,7 @@ exports[`ProductInfo regular content should match snapshot 1`] = `
         </svg>
       </div>
     </div>
-  </div>
+  </span>
   <div
     class="root badges"
   >
