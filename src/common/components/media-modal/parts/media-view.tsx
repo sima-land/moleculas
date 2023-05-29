@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { VideoHTMLAttributes } from 'react';
 import { ImageOverlay } from '../../../../desktop/components/gallery-modal/components/image-overlay';
 import { AllRoundView } from '../../../../desktop/components/gallery-modal/components/all-round-view';
 import { MediaData } from '../types';
@@ -6,12 +6,18 @@ import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
 import styles from './media-view.module.scss';
 import classNames from 'classnames';
 
+export interface MediaViewProps {
+  media?: MediaData;
+  loading?: boolean;
+  videoProps?: VideoHTMLAttributes<HTMLVideoElement>;
+}
+
 /**
  * Отображает медиа-контент - 360, видео или изображение.
  * @param props Свойства.
  * @return Элемент.
  */
-export function MediaView({ media, loading }: { media?: MediaData; loading?: boolean }) {
+export function MediaView({ media, loading, videoProps }: MediaViewProps) {
   const desktop = useBreakpoint('xs+');
 
   if (loading) {
@@ -27,7 +33,7 @@ export function MediaView({ media, loading }: { media?: MediaData; loading?: boo
       )}
 
       {media?.type === 'video' && (
-        <video autoPlay={false} controls controlsList='nodownload'>
+        <video autoPlay={false} controls controlsList='nodownload' {...videoProps}>
           <source src={media.data.src} />
         </video>
       )}
