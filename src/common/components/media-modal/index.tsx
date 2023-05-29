@@ -17,8 +17,10 @@ export {
   MediaAside,
   MediaFooter,
 
-  // main content
+  // main content - multiple
   MediaContent,
+
+  // main content - single
   MediaView,
 
   // header content

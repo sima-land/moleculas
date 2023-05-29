@@ -110,7 +110,7 @@ export function useMounted() {
 }
 
 /**
- * Хук получения доступка к visualViewport.
+ * Хук получения доступа к visualViewport.
  * @param handle Получит visualViewport.
  */
 export function useVisualViewport(handle: (viewport: VisualViewport) => void) {
@@ -126,12 +126,14 @@ export function useVisualViewport(handle: (viewport: VisualViewport) => void) {
     // eslint-disable-next-line require-jsdoc
     const update = () => ref.current(viewport);
 
+    window.addEventListener('resize', update);
     window.visualViewport?.addEventListener('resize', update);
     window.visualViewport?.addEventListener('scroll', update);
 
     update();
 
     return () => {
+      window.removeEventListener('resize', update);
       window.visualViewport?.removeEventListener('resize', update);
       window.visualViewport?.removeEventListener('scroll', update);
     };

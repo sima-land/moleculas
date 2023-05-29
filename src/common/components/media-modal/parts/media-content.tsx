@@ -1,16 +1,31 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, {
+  CSSProperties,
+  HTMLAttributes,
+  ReactNode,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import { Carousel } from '@sima-land/ui-nucleons/carousel';
 import { ArrowButton } from '@sima-land/ui-nucleons/arrow-button';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
 import { useClientRect } from '../utils';
 import { MediaData } from '../types';
 import { MediaView } from './media-view';
+import { BSL_IGNORE_ATTR } from '@sima-land/ui-nucleons/_internal/page-scroll-lock';
 import styles from './media-content.module.scss';
 
 export interface MediaContentProps {
   items: MediaData[];
   targetIndex?: number;
   onChangeTargetIndex?: (newIndex: number) => void;
+}
+
+export interface FitSquareProps {
+  children?: ReactNode;
+  width: number;
+  height: number;
 }
 
 /**
@@ -45,13 +60,14 @@ function MediaCarousel({ items, targetIndex, onChangeTargetIndex }: MediaContent
           targetIndex={targetIndex}
           onChangeTargetIndex={onChangeTargetIndex}
           draggable
-          containerProps={{
-            className: styles.carousel,
-            style: {
-              '--item-width': `${area.width}px`,
-              '--item-height': `${area.height}px`,
-            } as any,
-          }}
+          containerProps={
+            {
+              className: styles.carousel,
+
+              // в случае если будет работать некорректно - дать возможность задавать пропсы для Carousel
+              [BSL_IGNORE_ATTR]: true,
+            } as HTMLAttributes<HTMLDivElement>
+          }
           withControls={false}
           items={items}
           renderItem={data => (
@@ -126,11 +142,11 @@ function MediaSlider({ items, targetIndex, onChangeTargetIndex }: MediaContentPr
  * @param props Свойства.
  * @return Элемент.
  */
-function FitSquare({ children, width, height }: any) {
+function FitSquare({ children, width, height }: FitSquareProps) {
   const size = useMemo(() => Math.min(width, height), [width, height]);
 
   return (
-    <div className={styles.square} style={{ '--square-size': `${size}px` } as any}>
+    <div className={styles.square} style={{ '--square-size': `${size}px` } as CSSProperties}>
       {children}
     </div>
   );
