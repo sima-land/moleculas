@@ -2,9 +2,60 @@
 @use 'node_modules/@sima-land/ui-nucleons/colors';
 
 .root {
-  display: grid;
+  display: block;
   font-size: 14px;
   line-height: 20px;
+}
+
+.header {
+  display: flex;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.meta {
+  flex-grow: 1;
+  display: flex;
+  max-width: 100%;
+}
+
+.rating {
+  font-weight: 600;
+  color: colors.$basic-gray38;
+}
+
+.author {
+  width: 0;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: colors.$basic-gray24;
+}
+
+@include breakpoints.down('xs') {
+  .header {
+    flex-wrap: wrap;
+  }
+  .meta {
+    width: 100%;
+  }
+  .rating + .author {
+    margin-left: 12px;
+  }
+  .meta + .button {
+    width: 100%;
+    margin-top: 12px;
+  }
+}
+
+@include breakpoints.up('xs') {
+  .col + .col {
+    margin-left: 16px;
+  }
+  .button:first-child {
+    margin-left: auto;
+  }
 }
 
 .rating {
@@ -13,58 +64,23 @@
   align-items: center;
 }
 
-.author {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: colors.$basic-gray24;
+.header + .content {
+  margin-top: 12px;
 }
 
-@include breakpoints.down('xs') {
-  .root {
-    gap: 12px;
-    grid-template-columns: auto 1fr;
-  }
-  .rating {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-  .author {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-  }
-  .link {
-    grid-column: 1 / 3;
-  }
-  .content {
-    grid-column: 1 / 3;
-  }
+.skeleton {
+  flex-grow: 1;
+  height: 16px;
+  background: colors.$basic-gray4;
+  border-radius: 4px;
+  margin: 2px 0;
 }
 
-@include breakpoints.up('xs') {
-  .root {
-    column-gap: 16px;
-    row-gap: 12px;
-    grid-template-columns: auto 1fr auto;
-  }
-  .rating {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-  .author {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    color: colors.$basic-gray24;
-  }
-  .link {
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
-  }
-  .content {
-    grid-column: 1 / 4;
-    grid-row: 2 / 3;
-  }
+.skeleton-meta {
+  width: 216px;
+  max-width: 216px;
+}
+
+.skeleton + .skeleton {
+  margin-top: 4px;
 }

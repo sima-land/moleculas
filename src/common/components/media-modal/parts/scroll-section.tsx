@@ -9,16 +9,20 @@ import styles from './scroll-section.module.scss';
  */
 export function ScrollSection({
   children,
-  innerRef,
+  scrollRef,
+  contentRef,
 }: {
   children?: ReactNode;
-  innerRef?: Ref<HTMLDivElement>;
+  scrollRef?: Ref<HTMLDivElement>;
+  contentRef?: Ref<HTMLDivElement>;
 }) {
   return (
     <Layout disabledOn={['mxs', 'ms']}>
-      <div ref={innerRef} className={styles.inner}>
+      <div ref={scrollRef} className={styles.inner}>
         <div className={styles.gutter} />
-        <div className={styles.content}>{children}</div>
+        <div ref={contentRef} className={styles.content}>
+          {children}
+        </div>
         <div className={styles.gutter} />
       </div>
     </Layout>

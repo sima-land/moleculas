@@ -18,7 +18,7 @@ import { TextButton } from '@sima-land/ui-nucleons/text-button';
 import { Layout } from '@sima-land/ui-nucleons/layout';
 import { Button } from '@sima-land/ui-nucleons/button';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
-import { mixed } from '../__mocks__';
+import { videos } from '../__mocks__';
 
 export default {
   title: 'common/MediaLayout',
@@ -28,7 +28,7 @@ export default {
   },
 };
 
-export function WithProduct() {
+export function ManyVideos() {
   const [targetIndex, setTargetIndex] = useState(0);
 
   return (
@@ -54,7 +54,7 @@ export function WithProduct() {
 
           <MediaMain>
             <MediaContent
-              items={mixed}
+              items={videos}
               targetIndex={targetIndex}
               onChangeTargetIndex={setTargetIndex}
             />
@@ -62,31 +62,17 @@ export function WithProduct() {
 
           <MediaAside>
             <Thumbnails targetIndex={targetIndex}>
-              {mixed.map((item, index) => (
-                <Fragment key={index}>
-                  {item.type === '360' && (
-                    <Thumbnail
-                      type='icon-360'
-                      checked={targetIndex === index}
-                      onClick={() => setTargetIndex(index)}
-                    />
-                  )}
-                  {item.type === 'video' && (
-                    <Thumbnail
-                      type='icon-video'
-                      checked={targetIndex === index}
-                      onClick={() => setTargetIndex(index)}
-                    />
-                  )}
-                  {item.type === 'image' && (
-                    <Thumbnail
-                      type='preview-image'
-                      src={item.data.src}
-                      checked={targetIndex === index}
-                      onClick={() => setTargetIndex(index)}
-                    />
-                  )}
-                </Fragment>
+              {videos.map((item, index) => (
+                <Thumbnail
+                  key={index}
+                  type='preview-video'
+                  src={item.data.thumbnail}
+                  checked={targetIndex === index}
+                  onClick={() => setTargetIndex(index)}
+                  title='Lorem ipsum dolor, sit amet consectetur'
+                  price={65274}
+                  currency='₽'
+                />
               ))}
             </Thumbnails>
           </MediaAside>
@@ -114,4 +100,4 @@ export function WithProduct() {
   );
 }
 
-WithProduct.storyName = 'Футер: товар';
+ManyVideos.storyName = 'Видео';

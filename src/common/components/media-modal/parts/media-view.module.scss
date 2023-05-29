@@ -7,6 +7,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  &.loading {
+    background: colors.$basic-gray4;
+  }
   --all-round-view-size: min(var(--media-width), var(--media-height));
   video,
   .image {
