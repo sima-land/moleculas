@@ -46,27 +46,27 @@ export function SizeM() {
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', maxWidth: '400px' }}>
       {items.map((item, index) => (
-        <Modifier count={23} key={index} content={item} />
+        <Modifier key={index} count={23} markdown content={item} />
       ))}
 
       {items.map((item, index) => (
-        <Modifier count={23} key={index} content={item} crossedOut />
+        <Modifier key={index} count={23} markdown content={item} crossedOut />
       ))}
 
       {items.map((item, index) => (
-        <Modifier count={23} key={index} content={item} active />
+        <Modifier key={index} count={23} markdown content={item} active />
       ))}
 
       {items.map((item, index) => (
-        <Modifier count={23} key={index} content={item} active crossedOut />
+        <Modifier key={index} count={23} markdown content={item} active crossedOut />
       ))}
 
       {items.map((item, index) => (
-        <Modifier count={23} key={index} content={item} disabled />
+        <Modifier key={index} count={23} markdown content={item} disabled />
       ))}
 
       {items.map((item, index) => (
-        <Modifier count={23} key={index} content={item} disabled crossedOut />
+        <Modifier key={index} count={23} markdown content={item} disabled crossedOut />
       ))}
     </div>
   );
@@ -78,27 +78,27 @@ export function SizeS() {
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', maxWidth: '400px' }}>
       {items.map((item, index) => (
-        <Modifier size='s' count={23} key={index} content={item} />
+        <Modifier key={index} size='s' count={23} markdown content={item} />
       ))}
 
       {items.map((item, index) => (
-        <Modifier size='s' count={23} key={index} content={item} crossedOut />
+        <Modifier key={index} size='s' count={23} markdown content={item} crossedOut />
       ))}
 
       {items.map((item, index) => (
-        <Modifier size='s' count={23} key={index} content={item} active />
+        <Modifier key={index} size='s' count={23} markdown content={item} active />
       ))}
 
       {items.map((item, index) => (
-        <Modifier size='s' count={23} key={index} content={item} active crossedOut />
+        <Modifier key={index} size='s' count={23} markdown content={item} active crossedOut />
       ))}
 
       {items.map((item, index) => (
-        <Modifier size='s' count={23} key={index} content={item} disabled />
+        <Modifier key={index} size='s' count={23} markdown content={item} disabled />
       ))}
 
       {items.map((item, index) => (
-        <Modifier size='s' count={23} key={index} content={item} disabled crossedOut />
+        <Modifier key={index} size='s' count={23} markdown content={item} disabled crossedOut />
       ))}
     </div>
   );

@@ -39,6 +39,9 @@ export interface ModifierProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   /** Кол-во. */
   count?: number;
 
+  /** Выводить ли ярлык уценки. */
+  markdown?: boolean;
+
   /** Идентификатор для систем автоматизированного тестирования. */
   'data-testid'?: string;
 }
@@ -62,6 +65,7 @@ export function Modifier({
   content,
   count,
   className,
+  markdown,
   'data-testid': testId = 'modifier',
   ...props
 }: ModifierProps) {
@@ -131,6 +135,8 @@ export function Modifier({
             <line x1='0' y1='100%' x2='100%' y2='0' stroke='var(--modifier-border-color)' />
           </svg>
         )}
+
+        {markdown && <span className={styles.corner}>У</span>}
       </a>
 
       {hint && (

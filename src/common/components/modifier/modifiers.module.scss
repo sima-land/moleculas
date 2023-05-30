@@ -14,8 +14,12 @@
   --modifier-text-color: #{colors.$basic-gray87};
   --modifier-border-width: 1px;
   --modifier-border-color: #{colors.$basic-gray12};
+  --modifier-corner-bg: #{colors.$basic-gray12};
+  --modifier-corner-color: #{colors.$basic-gray87};
   &.active {
     --modifier-border-color: #{colors.$basic-blue};
+    --modifier-corner-color: #fff;
+    --modifier-corner-bg: #{colors.$basic-blue};
   }
   &:hover:not(.disabled) {
     cursor: pointer;
@@ -28,6 +32,8 @@
     --modifier-overlay-color: rgba(0, 0, 0, 0.04);
     --modifier-border-width: 0;
     --modifier-text-color: #{colors.$basic-gray38};
+    --modifier-corner-bg: transparent;
+    --modifier-corner-color: #{colors.$basic-gray38};
   }
   &::after {
     content: '';
@@ -105,6 +111,7 @@
 }
 
 .counter {
+  white-space: nowrap;
   font-weight: 600;
   font-size: 12px;
   line-height: 14px;
@@ -118,4 +125,28 @@
   top: -2px;
   border-radius: 32px;
   z-index: 1;
+}
+
+.corner {
+  font-weight: 600;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  border-bottom-right-radius: inherit;
+  font-size: 12px;
+  line-height: 14px;
+  padding-right: 2px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: var(--modifier-corner-color);
+  background: linear-gradient(
+    to bottom right,
+    transparent 0%,
+    transparent 50%,
+    var(--modifier-corner-bg) 50%,
+    var(--modifier-corner-bg) 100%
+  );
 }
