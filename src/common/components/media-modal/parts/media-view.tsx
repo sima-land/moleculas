@@ -1,10 +1,10 @@
 import React, { VideoHTMLAttributes } from 'react';
 import { ImageOverlay } from '../../../../desktop/components/gallery-modal/components/image-overlay';
-import { AllRoundView } from '../../../../desktop/components/gallery-modal/components/all-round-view';
 import { MediaData } from '../types';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
 import styles from './media-view.module.scss';
 import classNames from 'classnames';
+import { AllRoundView } from './all-round-view';
 
 export interface MediaViewProps {
   media?: MediaData;
