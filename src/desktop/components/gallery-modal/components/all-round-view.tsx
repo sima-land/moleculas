@@ -13,9 +13,11 @@ import TurnRightSVG from '../icons/turn-right.svg';
 export interface AllRoundViewProps {
   photos: string[];
   controls?: boolean;
+  state?: ViewState;
+  onStateChange?: (state: ViewState) => void;
 }
 
-type ViewState = 'default' | 'autoplay' | 'turn-right' | 'turn-left';
+export type ViewState = 'default' | 'autoplay' | 'turn-right' | 'turn-left';
 
 const cx = classNames.bind(styles);
 
@@ -24,11 +26,20 @@ const cx = classNames.bind(styles);
  * @param props Свойства.
  * @return Элемент.
  */
-export const AllRoundView = ({ photos, controls = true }: AllRoundViewProps) => {
+export const AllRoundView = ({
+  photos,
+  controls = true,
+  state: stateProp = 'autoplay',
+  onStateChange,
+}: AllRoundViewProps) => {
   const imageRef = useRef<HTMLImageElement>(null);
   const dragStartRef = useRef<{ position: number; index: number } | null>(null);
 
-  const [state, setState] = useState<ViewState>('autoplay');
+  const [state, setState] = useState<ViewState>(stateProp);
+
+  useEffect(() => onStateChange?.(state), [state]);
+  useEffect(() => setState(stateProp), [stateProp]);
+
   const autoplay = state === 'autoplay';
 
   // eslint-disable-next-line require-jsdoc

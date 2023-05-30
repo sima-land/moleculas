@@ -4,11 +4,25 @@ import { ScrollSection } from './parts/scroll-section';
 import { Thumbnail, ThumbnailProps } from './parts/thumbnail';
 import { Thumbnails, ThumbnailsProps } from './parts/thumbnails';
 import { MediaContentProps, MediaContent } from './parts/media-content';
-import { MediaView } from './parts/media-view';
+import { MediaViewProps, MediaView } from './parts/media-view';
 import { ReviewProps, Review } from './parts/review';
 import { ProductBriefProps, ProductBrief } from './parts/product-brief';
 
-export type { MediaContentProps, ThumbnailProps, ThumbnailsProps, ProductBriefProps, ReviewProps };
+export type {
+  // main content - multiple
+  MediaContentProps,
+
+  // main content - single
+  MediaViewProps,
+
+  // aside content
+  ThumbnailProps,
+  ThumbnailsProps,
+
+  // footer content
+  ReviewProps,
+  ProductBriefProps,
+};
 
 export {
   // layout
