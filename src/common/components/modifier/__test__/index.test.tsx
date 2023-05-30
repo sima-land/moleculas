@@ -68,6 +68,12 @@ describe('Modifier', () => {
 
     expect(queryAllByTestId('hint')).toHaveLength(1);
   });
+
+  it('should handle markdown prop', () => {
+    const { container } = render(<Modifier content={{ type: 'text', text: 'Hi' }} markdown />);
+
+    expect(container.textContent).toContain('У');
+  });
 });
 
 describe('MoreButton', () => {
