@@ -148,21 +148,21 @@ export const videos: MediaVideo[] = [
   {
     type: 'video',
     data: {
-      src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
+      src: 'https://cdn2.static1-sima-land.com/flv/6907296.mp4',
       thumbnail: 'https://loremflickr.com/240/240?random=7',
     },
   },
   {
     type: 'video',
     data: {
-      src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
+      src: 'https://cdn2.static1-sima-land.com/flv/3619217.mp4',
       thumbnail: 'https://loremflickr.com/240/240?random=8',
     },
   },
   {
     type: 'video',
     data: {
-      src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
+      src: 'https://cdn2.static1-sima-land.com/flv/4093038.mp4',
       thumbnail: 'https://loremflickr.com/240/240?random=9',
     },
   },
@@ -176,21 +176,21 @@ export const videos: MediaVideo[] = [
   {
     type: 'video',
     data: {
-      src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
+      src: 'https://cdn2.static1-sima-land.com/flv/6907296.mp4',
       thumbnail: 'https://loremflickr.com/240/240?random=11',
     },
   },
   {
     type: 'video',
     data: {
-      src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
+      src: 'https://cdn2.static1-sima-land.com/flv/3619217.mp4',
       thumbnail: 'https://loremflickr.com/240/240?random=12',
     },
   },
   {
     type: 'video',
     data: {
-      src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
+      src: 'https://cdn2.static1-sima-land.com/flv/4093038.mp4',
       thumbnail: 'https://loremflickr.com/240/240?random=13',
     },
   },
@@ -204,21 +204,21 @@ export const videos: MediaVideo[] = [
   {
     type: 'video',
     data: {
-      src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
+      src: 'https://cdn2.static1-sima-land.com/flv/6907296.mp4',
       thumbnail: 'https://loremflickr.com/240/240?random=15',
     },
   },
   {
     type: 'video',
     data: {
-      src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
+      src: 'https://cdn2.static1-sima-land.com/flv/3619217.mp4',
       thumbnail: 'https://loremflickr.com/240/240?random=16',
     },
   },
   {
     type: 'video',
     data: {
-      src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
+      src: 'https://cdn2.static1-sima-land.com/flv/4093038.mp4',
       thumbnail: 'https://loremflickr.com/240/240?random=17',
     },
   },

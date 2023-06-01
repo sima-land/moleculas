@@ -1,4 +1,4 @@
-import React, { VideoHTMLAttributes } from 'react';
+import React, { useEffect, useRef, VideoHTMLAttributes } from 'react';
 import { ImageOverlay } from '../../../../desktop/components/gallery-modal/components/image-overlay';
 import { MediaData } from '../types';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
@@ -20,6 +20,16 @@ export interface MediaViewProps {
 export function MediaView({ media, loading, videoProps }: MediaViewProps) {
   const desktop = useBreakpoint('xs+');
 
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoSrc = media?.type === 'video' ? media.data.src : null;
+
+  useEffect(() => {
+    // ВАЖНО: при смене src у элемента source видео не меняется автоматически - перезапускаем явно
+    if (videoSrc) {
+      videoRef.current?.load();
+    }
+  }, [loading, videoSrc]);
+
   if (loading) {
     return <div className={classNames(styles.root, styles.loading)}></div>;
   }
@@ -33,7 +43,7 @@ export function MediaView({ media, loading, videoProps }: MediaViewProps) {
       )}
 
       {media?.type === 'video' && (
-        <video autoPlay={false} controls controlsList='nodownload' {...videoProps}>
+        <video autoPlay={false} controls controlsList='nodownload' {...videoProps} ref={videoRef}>
           <source src={media.data.src} />
         </video>
       )}
