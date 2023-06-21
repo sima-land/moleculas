@@ -97,6 +97,27 @@
   background-size: cover;
 }
 
+.image-wrapper {
+  border-radius: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: colors.$basic-gray4;
+  &.fail {
+    --modifier-media-opacity: 0;
+  }
+  > svg {
+    width: calc(48%);
+    height: calc(48%);
+    fill: colors.$basic-gray24;
+  }
+}
+
 .text {
   padding: var(--modifier-padding);
   display: block;

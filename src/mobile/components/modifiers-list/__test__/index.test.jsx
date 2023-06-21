@@ -4,7 +4,7 @@ import { omit } from 'lodash';
 import { ModifiersList } from '..';
 import { ModifierItem } from '../modifier-item';
 import { Link } from '@sima-land/ui-nucleons/link';
-import StatementSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/statement';
+import StatementSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Statement';
 
 describe('<ModifiersList />', () => {
   const items = [

@@ -1,7 +1,16 @@
-import React, { AnchorHTMLAttributes, useEffect, useState } from 'react';
+import React, {
+  ReactEventHandler,
+  AnchorHTMLAttributes,
+  ImgHTMLAttributes,
+  useCallback,
+  useEffect,
+  useState,
+} from 'react';
 import { Hint, useHintFloating, useHintOnHover } from '@sima-land/ui-nucleons/hint';
+import ImageBrokenSVG from '@sima-land/ui-quarks/icons/40x40/Stroked/ImageBroken';
 import classNames from 'classnames/bind';
 import styles from './modifiers.module.scss';
+import { useIsomorphicLayoutEffect } from '@sima-land/ui-nucleons/hooks';
 
 interface TextContent {
   type: 'text';
@@ -112,13 +121,7 @@ export function Modifier({
           <span className={cx('color')} role='banner' style={{ background: content.color }}></span>
         )}
 
-        {content.type === 'image' && (
-          <span
-            className={cx('image')}
-            role='banner'
-            style={{ backgroundImage: `url(${content.src})` }}
-          />
-        )}
+        {content.type === 'image' && <Image src={content.src} />}
 
         {content.type === 'text' && (
           <span ref={refs.setReference} className={cx('text')} {...getReferenceProps()}>
@@ -150,6 +153,34 @@ export function Modifier({
         </Hint>
       )}
     </>
+  );
+}
+
+/**
+ * Картинка с заглушкой в случае ошибки загрузки.
+ * @param props Свойства.
+ * @return Элемент.
+ */
+function Image({ src, onError, ...rest }: ImgHTMLAttributes<HTMLImageElement>) {
+  const [fail, setFail] = useState(false);
+
+  useIsomorphicLayoutEffect(() => {
+    setFail(false);
+  }, [src]);
+
+  const handleError = useCallback<ReactEventHandler<HTMLImageElement>>(
+    event => {
+      setFail(true);
+      onError?.(event);
+    },
+    [onError],
+  );
+
+  return (
+    <span className={cx('image-wrapper', { fail })}>
+      {fail && <ImageBrokenSVG />}
+      <img className={cx('image')} {...rest} src={src} onError={handleError} />
+    </span>
   );
 }
 

@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
 import { ImageOverlay } from '../../../../desktop/components/gallery-modal/components/image-overlay';
-import PlaySVG from '@sima-land/ui-quarks/icons/24x24/Filled/play';
+import PlaySVG from '@sima-land/ui-quarks/icons/24x24/Filled/Play';
 import AllRoundSVG from '../../../../desktop/components/gallery-modal/icons/360.svg';
 import classNames from 'classnames/bind';
 import styles from './thumbnail.module.scss';

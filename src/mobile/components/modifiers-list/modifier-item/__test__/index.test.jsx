@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import { ModifierItem } from '..';
 import { Text } from '@sima-land/ui-nucleons/text';
 import { Price } from '@sima-land/ui-nucleons/price';
-import CheckSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/check';
+import CheckSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Check';
 
 describe('<ModifierItem />', () => {
   const modifier = {

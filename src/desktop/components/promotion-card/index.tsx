@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { PromotionType } from './types';
 import { BannerTitle } from './banner-title';
 import { Estimate } from './estimate';
-import WatchSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/watch';
+import WatchSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/Watch';
 import classNames from 'classnames';
 import styles from './index.module.scss';
 import { PromotionCardPlaceholder } from './placeholder';

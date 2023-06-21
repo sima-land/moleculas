@@ -49,10 +49,11 @@ exports[`select screen parts should works properly 1`] = `
               role="presentation"
               viewBox="0 0 24 24"
               width="24"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"
-                d="M21.678 5.265a1 1 0 01.057 1.413l-12 13a1 1 0 01-1.36.103l-5-4a1 1 0 011.25-1.562l4.272 3.418L20.265 5.322a1 1 0 011.413-.057z"
+                d="M21.678 5.265a1 1 0 0 1 .057 1.413l-12 13a1 1 0 0 1-1.36.103l-5-4a1 1 0 0 1 1.25-1.562l4.272 3.418L20.265 5.322a1 1 0 0 1 1.413-.057Z"
                 fill-rule="evenodd"
               />
             </svg>
