@@ -112,11 +112,23 @@ export function WithGroupOverflow() {
     text: `Вариант №${index + 1}`,
   }));
 
+  const Item = ({ children }: any) => <div style={{ padding: '4px' }}>{children}</div>;
+
   return (
     <Layout>
-      <GroupOverflow tail={data => <MoreButton count={data.hiddenCount} />}>
+      <GroupOverflow
+        gap={0.1}
+        style={{ margin: '-4px' }}
+        tail={data => (
+          <Item>
+            <MoreButton count={data.hiddenCount} />
+          </Item>
+        )}
+      >
         {list.map((item, index) => (
-          <Modifier key={index} content={item} />
+          <Item key={index}>
+            <Modifier content={item} count={22} />
+          </Item>
         ))}
       </GroupOverflow>
     </Layout>
