@@ -2,7 +2,7 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import { ProductInfo, Parts } from '..';
 import { Badge, BadgeProps } from '../../badge';
-import QuickViewSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/quick-view-2';
+import QuickViewSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/QuickView2';
 import { Button } from '@sima-land/ui-nucleons/button';
 
 const normalizePrice = (s: string): string => s.replace(/\s+/g, '').replace(',', '.');

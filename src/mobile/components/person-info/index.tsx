@@ -4,10 +4,10 @@ import { UserAvatar } from '@sima-land/ui-nucleons/avatar/user';
 import { Box } from '@sima-land/ui-nucleons/box';
 import { Text } from '@sima-land/ui-nucleons/text';
 import { InnerBorder } from '@sima-land/ui-nucleons/styling/borders';
-import MailSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/mail';
-import SkypeSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/skype';
-import PhoneSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/phone';
-import MobileSVG from '@sima-land/ui-quarks/icons/24x24/Filled/mobile';
+import MailSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Mail';
+import SkypeSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Skype';
+import PhoneSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Phone';
+import MobileSVG from '@sima-land/ui-quarks/icons/24x24/Filled/Mobile';
 import styles from './person-info.module.scss';
 
 export interface PersonInfoProps {

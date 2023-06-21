@@ -7,8 +7,8 @@ import { MobileLayout } from '@sima-land/ui-nucleons/layout';
 import { Button } from '@sima-land/ui-nucleons/button';
 import { COLORS } from '@sima-land/ui-nucleons/colors';
 import { items } from '../__test__/test-items';
-import FavSVG from '@sima-land/ui-quarks/icons/24x24/Filled/favorite';
-import NotFavSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/favorite';
+import FavSVG from '@sima-land/ui-quarks/icons/24x24/Filled/Favorite';
+import NotFavSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
 
 export default {
   title: 'mobile/ProductSlider',

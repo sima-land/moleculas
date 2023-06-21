@@ -1,8 +1,8 @@
 import React from 'react';
 import { ActionCircles } from '..';
 import { Alert, AlertBody } from '@sima-land/ui-nucleons/alert';
-import StatementSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/statement';
-import ThumbsUpSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/thumbs-up';
+import StatementSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Statement';
+import ThumbsUpSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/ThumbsUp';
 import { BottomBar } from '@sima-land/ui-nucleons/bottom-bar';
 import { CleanButton, CleanGroup } from '@sima-land/ui-nucleons/clean-buttons';
 

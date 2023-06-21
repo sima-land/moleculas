@@ -1,6 +1,6 @@
 import React, { Children, isValidElement } from 'react';
 import { LayoutProps, MobileLayout } from '@sima-land/ui-nucleons/layout';
-import CheckSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/check';
+import CheckSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Check';
 import cn from 'classnames';
 import styles from './select-screen.module.scss';
 

@@ -4,8 +4,8 @@ import { ProductCard } from '..';
 import { ProductInfo, Parts } from '../../../../common/components/product-info';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import { COLORS } from '@sima-land/ui-nucleons/colors';
-import FavSVG from '@sima-land/ui-quarks/icons/24x24/Filled/favorite';
-import NotFavSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/favorite';
+import FavSVG from '@sima-land/ui-quarks/icons/24x24/Filled/Favorite';
+import NotFavSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
 import { Badge, BadgeProps } from '../../../../common/components/badge';
 
 export default {

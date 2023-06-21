@@ -1,10 +1,19 @@
-import React, { HTMLAttributes } from 'react';
-import StarSVG from './star.svg';
-import getDeclination from '@sima-land/ui-nucleons/helpers/get-declination';
+import React, { CSSProperties, HTMLAttributes } from 'react';
+import StarSVG from '@sima-land/ui-quarks/icons/16x16/Filled/Star';
+import { getDeclination } from '@sima-land/ui-nucleons/helpers/get-declination';
 import classNames from 'classnames/bind';
 import styles from './rating-counter.module.scss';
 
 export type RatingCounterSize = 's' | 'm' | 'unset';
+
+export interface RatingCounterStyle extends CSSProperties {
+  '--rating-icon-size'?: string;
+  '--rating-value-size'?: string;
+  '--rating-value-height'?: string;
+  '--rating-count-gutter'?: string;
+  '--rating-count-size'?: string;
+  '--rating-count-height'?: string;
+}
 
 interface CustomProps {
   /**
@@ -21,6 +30,9 @@ interface CustomProps {
 
   /** Нужно ли отключить эффект при наведении. */
   hoverDisabled?: boolean;
+
+  /** Стили корневого элемента. */
+  style?: RatingCounterStyle;
 
   /** Идентификатор для систем автоматизированного тестирования. */
   'data-testid'?: string;

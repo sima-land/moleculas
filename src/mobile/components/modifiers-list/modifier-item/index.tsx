@@ -3,7 +3,7 @@ import classes from './modifier-item.module.scss';
 import classnames from 'classnames/bind';
 import { Price } from '@sima-land/ui-nucleons/price';
 import { Text } from '@sima-land/ui-nucleons/text';
-import CheckSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/check';
+import CheckSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Check';
 import { MODIFIER_TYPE } from '../../../../common/constants';
 import { ModifierType } from '../../../../common/types';
 

@@ -8,7 +8,7 @@ import { ImageOverlay } from '../../../desktop/components/gallery-modal/componen
 import { BadgeList, BadgeListProps } from '../badge-list';
 import { ProductInfoContext } from './utils';
 import { RatingCounter, RatingCounterProps } from '../rating-counter';
-import AdultSVG from '../../icons/eighteen-plus.svg';
+import AdultSVG from '@sima-land/ui-quarks/icons/64x64/Stroked/EighteenPlus';
 import BrokenSVG from '../../icons/image-broken.svg';
 import classnames from 'classnames/bind';
 import styles from './product-info.module.scss';

@@ -6,7 +6,7 @@ import {
   ViewState,
 } from '../../../../desktop/components/gallery-modal/components/all-round-view';
 import { useMounted } from '../utils';
-import TouchSVG from '../../../icons/touch-x.svg';
+import TouchSVG from '@sima-land/ui-quarks/icons/64x64/Colorful/TouchScrollX';
 import styles from './all-round-view.module.scss';
 
 /**

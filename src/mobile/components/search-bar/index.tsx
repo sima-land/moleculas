@@ -5,9 +5,9 @@ import { Dropdown } from '@sima-land/ui-nucleons/dropdown';
 import { DropdownItem } from '@sima-land/ui-nucleons/dropdown-item';
 import { useOutsideClick } from '@sima-land/ui-nucleons/hooks/';
 import on from '@sima-land/ui-nucleons/helpers/on';
-import CrossSVG from '@sima-land/ui-quarks/icons/24x24/Filled/cross';
-import SearchSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/search';
-import MoreVertSVG from '@sima-land/ui-quarks/icons/24x24/Filled/more-vert';
+import CrossSVG from '@sima-land/ui-quarks/icons/24x24/Filled/Cross';
+import SearchSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Search';
+import MoreVertSVG from '@sima-land/ui-quarks/icons/24x24/Filled/MoreVert';
 import classnames from 'classnames/bind';
 import styles from './search-bar.module.scss';
 

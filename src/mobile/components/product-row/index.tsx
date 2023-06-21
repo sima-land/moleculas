@@ -1,14 +1,14 @@
 import React from 'react';
 import styles from './product-row.module.scss';
 import classnames from 'classnames/bind';
-import MoreSVG from '@sima-land/ui-quarks/icons/24x24/Filled/more';
 import { Link } from '@sima-land/ui-nucleons/link';
 import { Price } from '@sima-land/ui-nucleons/price';
 import { Box } from '@sima-land/ui-nucleons/box';
 import { Text } from '@sima-land/ui-nucleons/text';
 import { StrokedSVG } from '@sima-land/ui-nucleons/stroked-svg';
-import FavSVG from '@sima-land/ui-quarks/icons/24x24/Filled/favorite';
-import NotFavSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/favorite';
+import MoreSVG from '@sima-land/ui-quarks/icons/24x24/Filled/More';
+import FavSVG from '@sima-land/ui-quarks/icons/24x24/Filled/Favorite';
+import NotFavSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
 import { COLORS } from '@sima-land/ui-nucleons/colors';
 
 export interface ProductRowProps {

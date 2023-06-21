@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-import SearchSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/search';
+import SearchSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Search';
 import styles from './pseudo-input.module.scss';
 
 export interface PseudoInputProps extends React.HTMLAttributes<HTMLDivElement> {

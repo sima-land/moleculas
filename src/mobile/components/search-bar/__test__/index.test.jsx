@@ -4,7 +4,7 @@ import { createEvent, fireEvent, render } from '@testing-library/react';
 import { mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 import { SearchBar } from '../index';
-import ArrowLeftSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/arrow-left';
+import ArrowLeftSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/ArrowLeft';
 import { DropdownItem } from '@sima-land/ui-nucleons/dropdown-item';
 
 describe('SearchBar', () => {

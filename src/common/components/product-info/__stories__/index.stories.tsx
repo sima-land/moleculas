@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { action } from '@storybook/addon-actions';
 import { ProductInfo, Parts } from '..';
 import { Badge, BadgeProps } from '../../badge';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
-import FavoriteSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/favorite';
-import QuickView2SVG from '@sima-land/ui-quarks/icons/24x24/Stroked/quick-view-2';
-import Camera2SVG from '@sima-land/ui-quarks/icons/24x24/Stroked/camera-2';
-import on from '@sima-land/ui-nucleons/helpers/on';
+import FavoriteSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
+import QuickView2SVG from '@sima-land/ui-quarks/icons/24x24/Stroked/QuickView2';
+import Camera2SVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Camera2';
 
 export default {
   title: 'common/ProductInfo',
@@ -502,45 +501,40 @@ export const Adult = () => (
 
 Adult.storyName = 'Товар для взрослых';
 
-export function TestBrokenImage() {
-  const brokenSrc = 'https://kasjbgakjbsg.asgkjabsghj';
-  const [imageSrc, setImageSrc] = useState(data.imageSrc);
-
-  useEffect(() => {
-    const off = on<KeyboardEvent>(window, 'keydown', e => {
-      if (e.code === 'KeyR') {
-        setImageSrc(src => (src === brokenSrc ? data.imageSrc : brokenSrc));
-      }
-    });
-
-    return off;
-  }, []);
+export function TestImageBroken() {
+  const [broken, setBroken] = useState(false);
+  const imageSrc = broken ? 'http://non-existed-site.com/' : 'https://loremflickr.com/240/240';
 
   return (
-    <div style={{ width: '260px' }}>
-      <ProductInfo>
-        <Parts.Image src={imageSrc} href={data.url}>
-          <Parts.ImageButton
-            icon={FavoriteSVG}
-            hint='Добавить в избранное'
-            data-testid='favorite-button'
-          />
-          <Parts.ImageButton
-            icon={QuickView2SVG}
-            hint='Быстрый просмотр'
-            data-testid='quick-view-button'
-          />
-        </Parts.Image>
+    <>
+      <button onClick={() => setBroken(a => !a)}>{broken ? 'Починить' : 'Сломать'}</button>
 
-        <Parts.Prices
-          price={data.price}
-          oldPrice={data.oldPrice}
-          currencyGrapheme={data.currencyGrapheme}
-        />
+      <div style={{ width: '260px', marginTop: 12 }}>
+        <ProductInfo>
+          <Parts.Image src={imageSrc} href={data.url}>
+            <Parts.ImageButton
+              icon={FavoriteSVG}
+              hint='Добавить в избранное'
+              data-testid='favorite-button'
+            />
+            <Parts.ImageButton
+              icon={QuickView2SVG}
+              hint='Быстрый просмотр'
+              data-testid='quick-view-button'
+            />
+          </Parts.Image>
 
-        <Parts.Title href={data.url}>{data.name}</Parts.Title>
-      </ProductInfo>
-      <p>Нажмите R на клавиатуре чтобы переключить картинку на битую и обратно</p>
-    </div>
+          <Parts.Prices
+            price={data.price}
+            oldPrice={data.oldPrice}
+            currencyGrapheme={data.currencyGrapheme}
+          />
+
+          <Parts.Title href={data.url}>{data.name}</Parts.Title>
+        </ProductInfo>
+      </div>
+    </>
   );
 }
+
+TestImageBroken.storyName = 'Тест: ошибка загрузки картинки';
