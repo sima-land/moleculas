@@ -11,6 +11,7 @@ import {
   Thumbnails,
   Thumbnail,
   MediaContent,
+  MediaView,
 } from '..';
 import { Tabs } from '@sima-land/ui-nucleons/tabs';
 import { TextButton } from '@sima-land/ui-nucleons/text-button';
@@ -51,11 +52,11 @@ export function WithReview() {
           </MediaHeader>
 
           <MediaMain>
-            <MediaContent
-              items={mixed}
-              targetIndex={targetIndex}
-              onChangeTargetIndex={setTargetIndex}
-            />
+            <MediaContent targetIndex={targetIndex} onChangeTargetIndex={setTargetIndex}>
+              {mixed.map((item, index) => (
+                <MediaView key={index} media={item} />
+              ))}
+            </MediaContent>
           </MediaMain>
 
           <MediaAside>

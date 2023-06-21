@@ -47,7 +47,7 @@ export function LoadingMixed() {
           </MediaHeader>
 
           <MediaMain>
-            <MediaContent items={[{ type: 'image', data: { src: '' } }]} loading />
+            <MediaContent loading />
           </MediaMain>
 
           <MediaAside>

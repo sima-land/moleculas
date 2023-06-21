@@ -12,6 +12,7 @@ import {
   Thumbnail,
   ProductBrief,
   MediaContent,
+  MediaView,
 } from '..';
 import { Tabs } from '@sima-land/ui-nucleons/tabs';
 import { TextButton } from '@sima-land/ui-nucleons/text-button';
@@ -53,11 +54,11 @@ export function ManyVideos() {
           </MediaHeader>
 
           <MediaMain>
-            <MediaContent
-              items={videos}
-              targetIndex={targetIndex}
-              onChangeTargetIndex={setTargetIndex}
-            />
+            <MediaContent targetIndex={targetIndex} onChangeTargetIndex={setTargetIndex}>
+              {videos.map((item, index) => (
+                <MediaView key={index} media={item} />
+              ))}
+            </MediaContent>
           </MediaMain>
 
           <MediaAside>
