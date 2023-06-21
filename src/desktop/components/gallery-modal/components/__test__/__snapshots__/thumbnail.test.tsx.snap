@@ -109,9 +109,10 @@ exports[`Thumbnail should render video icon 1`] = `
         height={32}
         viewBox="0 0 24 24"
         width={32}
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M5 19.29V4.71a1 1 0 011.49-.872l12.96 7.29a1 1 0 010 1.744l-12.96 7.29A1 1 0 015 19.29z"
+          d="M5 19.29V4.71a1 1 0 0 1 1.49-.872l12.96 7.29a1 1 0 0 1 0 1.744l-12.96 7.29A1 1 0 0 1 5 19.29Z"
         />
       </svg>
     </ForwardRef(PlaySVG)>

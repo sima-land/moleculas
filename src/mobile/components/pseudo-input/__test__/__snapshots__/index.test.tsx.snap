@@ -12,15 +12,16 @@ exports[`<PseudoInput /> should renders correctly 1`] = `
       height="24"
       viewBox="0 0 24 24"
       width="24"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
         clip-rule="evenodd"
-        d="M3 11a8 8 0 1116 0 8 8 0 01-16 0zm8-6a6 6 0 100 12 6 6 0 000-12z"
+        d="M3 11a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm8-6a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"
         fill-rule="evenodd"
       />
       <path
         clip-rule="evenodd"
-        d="M15.293 15.293a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414l-5-5a1 1 0 010-1.414z"
+        d="M15.293 15.293a1 1 0 0 1 1.414 0l5 5a1 1 0 0 1-1.414 1.414l-5-5a1 1 0 0 1 0-1.414Z"
         fill-rule="evenodd"
       />
     </svg>

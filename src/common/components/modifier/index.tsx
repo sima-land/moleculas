@@ -176,12 +176,11 @@ function Image({ src, onError, ...rest }: ImgHTMLAttributes<HTMLImageElement>) {
     [onError],
   );
 
-  return fail ? (
-    <span className={cx('image-stub')}>
-      <ImageBrokenSVG />
+  return (
+    <span className={cx('image-wrapper', { fail })}>
+      {fail && <ImageBrokenSVG />}
+      <img className={cx('image')} {...rest} src={src} onError={handleError} />
     </span>
-  ) : (
-    <img className={cx('image')} {...rest} src={src} onError={handleError} />
   );
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { act, fireEvent, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Modifier, MoreButton } from '..';
 
@@ -23,9 +23,25 @@ describe('Modifier', () => {
       <Modifier content={{ type: 'image', src: 'https://image.com/234' }} />,
     );
 
-    const image = container.querySelector<HTMLElement>('span[role="banner"]');
+    const image = container.querySelector<HTMLImageElement>('img');
 
-    expect(image?.style.backgroundImage).toBe('url(https://image.com/234)');
+    expect(image?.src).toBe('https://image.com/234');
+  });
+
+  it('should render image stub', () => {
+    const { container } = render(
+      <Modifier content={{ type: 'image', src: 'https://image.com/234' }} />,
+    );
+
+    const image = container.querySelector<HTMLImageElement>('img');
+
+    expect(container.querySelectorAll('svg')).toHaveLength(0);
+
+    act(() => {
+      fireEvent.error(image as any);
+    });
+
+    expect(container.querySelectorAll('svg')).toHaveLength(1);
   });
 
   it('should render counter', () => {
@@ -64,7 +80,9 @@ describe('Modifier', () => {
 
     rerender(<Modifier content={{ type: 'text', text: 'Hello, world!' }} />);
 
-    await userEvent.hover(text as any);
+    await act(async () => {
+      await userEvent.hover(text as any);
+    });
 
     expect(queryAllByTestId('hint')).toHaveLength(1);
   });
