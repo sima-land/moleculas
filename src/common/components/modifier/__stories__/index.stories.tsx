@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Modifier, ModifierContent, MoreButton } from '..';
 import { Expandable } from '@sima-land/ui-nucleons/expandable';
 import { Layout } from '@sima-land/ui-nucleons/layout';
@@ -112,11 +112,23 @@ export function WithGroupOverflow() {
     text: `Вариант №${index + 1}`,
   }));
 
+  const Item = ({ children }: any) => <div style={{ padding: '4px' }}>{children}</div>;
+
   return (
     <Layout>
-      <GroupOverflow tail={data => <MoreButton count={data.hiddenCount} />}>
+      <GroupOverflow
+        gap={0.1}
+        style={{ margin: '-4px' }}
+        tail={data => (
+          <Item>
+            <MoreButton count={data.hiddenCount} />
+          </Item>
+        )}
+      >
         {list.map((item, index) => (
-          <Modifier key={index} content={item} />
+          <Item key={index}>
+            <Modifier content={item} count={22} />
+          </Item>
         ))}
       </GroupOverflow>
     </Layout>
@@ -166,3 +178,27 @@ export function WithCarousel() {
 }
 
 WithCarousel.storyName = 'Вместе с Carousel';
+
+export function TestImageBroken() {
+  const [broken, setBroken] = useState(false);
+  const src = broken ? 'http://non-existed-site.com/' : 'https://loremflickr.com/240/240';
+
+  return (
+    <>
+      <button onClick={() => setBroken(a => !a)}>{broken ? 'Починить' : 'Сломать'}</button>
+
+      <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start', marginTop: 12 }}>
+        <Modifier size='s' content={{ type: 'image', src }} />
+        <Modifier size='m' content={{ type: 'image', src }} />
+
+        <Modifier size='s' active content={{ type: 'image', src }} />
+        <Modifier size='m' active content={{ type: 'image', src }} />
+
+        <Modifier size='s' disabled content={{ type: 'image', src }} />
+        <Modifier size='m' disabled content={{ type: 'image', src }} />
+      </div>
+    </>
+  );
+}
+
+TestImageBroken.storyName = 'Тест: ошибка загрузки картинки';
