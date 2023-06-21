@@ -1,6 +1,8 @@
 import React, {
+  Children,
   CSSProperties,
   HTMLAttributes,
+  isValidElement,
   ReactNode,
   useEffect,
   useMemo,
@@ -12,15 +14,18 @@ import { ArrowButton } from '@sima-land/ui-nucleons/arrow-button';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
 import { useClientRect } from '../utils';
 import { MediaData } from '../types';
-import { MediaView } from './media-view';
+import { MediaView, MediaViewProps } from './media-view';
 import { BSL_IGNORE_ATTR } from '@sima-land/ui-nucleons/_internal/page-scroll-lock';
 import styles from './media-content.module.scss';
 
 export interface MediaContentProps {
-  items: MediaData[];
+  children?: ReactNode;
   targetIndex?: number;
   onChangeTargetIndex?: (newIndex: number) => void;
   loading?: boolean;
+
+  /** @deprecated */
+  items?: MediaData[];
 }
 
 export interface FitSquareProps {
@@ -49,9 +54,16 @@ export function MediaContent(props: MediaContentProps) {
  * @param props Свойства.
  * @return Элемент.
  */
-function MediaCarousel({ items, targetIndex, onChangeTargetIndex, loading }: MediaContentProps) {
+function MediaCarousel({
+  items: itemsProp,
+  children,
+  targetIndex,
+  onChangeTargetIndex,
+  loading,
+}: MediaContentProps) {
   const ref = useRef<HTMLDivElement>(null);
   const area = useClientRect(ref);
+  const items = toViewPropsList(itemsProp, children);
 
   return (
     <div ref={ref} className={styles.carousel}>
@@ -71,10 +83,10 @@ function MediaCarousel({ items, targetIndex, onChangeTargetIndex, loading }: Med
           }
           withControls={false}
           items={items}
-          renderItem={data => (
+          renderItem={(props: MediaViewProps) => (
             <div className={styles['carousel-item']}>
               <FitSquare {...area}>
-                <MediaView media={data} loading={loading} />
+                <MediaView loading={loading} {...props} />
               </FitSquare>
             </div>
           )}
@@ -89,10 +101,17 @@ function MediaCarousel({ items, targetIndex, onChangeTargetIndex, loading }: Med
  * @param props Свойства.
  * @return Элемент.
  */
-function MediaSlider({ items, targetIndex, onChangeTargetIndex, loading }: MediaContentProps) {
+function MediaSlider({
+  items: itemsProp,
+  children,
+  targetIndex,
+  onChangeTargetIndex,
+  loading,
+}: MediaContentProps) {
   const [position, setPosition] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const area = useClientRect(ref);
+  const items = toViewPropsList(itemsProp, children);
   const total = items.length;
   const controls = total > 1;
   const correction = controls ? -(2 * (56 + 24)) : 0;
@@ -119,7 +138,7 @@ function MediaSlider({ items, targetIndex, onChangeTargetIndex, loading }: Media
           )}
 
           <FitSquare width={area.width + correction} height={area.height}>
-            <MediaView media={items[position]} loading={loading} />
+            <MediaView loading={loading} {...items[position]} />
           </FitSquare>
 
           {controls && (
@@ -135,6 +154,25 @@ function MediaSlider({ items, targetIndex, onChangeTargetIndex, loading }: Media
         </>
       )}
     </div>
+  );
+}
+
+/**
+ * Получив пропсы items и children вернет массив пропсов для MediaVuew.
+ * @param items Проп items.
+ * @param children Проп children.
+ * @return Массив пропсов для MediaVuew.
+ */
+function toViewPropsList(
+  items: MediaContentProps['items'],
+  children: MediaContentProps['children'],
+): MediaViewProps[] {
+  return (
+    items?.map(media => ({ media })) ??
+    Children.toArray(children).reduce<MediaViewProps[]>((acc, item) => {
+      isValidElement(item) && item.type === MediaView && acc.push(item.props);
+      return acc;
+    }, [])
   );
 }
 
