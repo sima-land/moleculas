@@ -1,27 +1,44 @@
 import React, { useEffect, useState } from 'react';
 import on from '@sima-land/ui-nucleons/helpers/on';
+import { useIsomorphicLayoutEffect } from '@sima-land/ui-nucleons/hooks';
+
+type Status = 'load' | 'done' | 'fail';
 
 /**
  * Хук, вернет true когда все фото будут загружен.
  * @param srcList Список адресов фото.
  * @return Загружены ли все фото.
  */
-export const useImagesLoad = (srcList: string[]): boolean => {
+export function useImagesLoad(srcList: string[]): Status {
+  const [failed, setFailed] = useState(false);
   const [loadedCount, setLoadedCount] = useState<number>(0);
+
+  useIsomorphicLayoutEffect(() => {
+    setFailed(false);
+  }, srcList);
 
   useEffect(() => {
     srcList.forEach(src => {
       const image = new Image();
 
       image.onload = () => setLoadedCount(c => c + 1);
+      image.onerror = () => setFailed(true);
       image.src = src;
     });
 
     return () => setLoadedCount(0);
   }, srcList);
 
-  return loadedCount === srcList.length;
-};
+  if (loadedCount === srcList.length) {
+    return 'done';
+  }
+
+  if (failed) {
+    return 'fail';
+  }
+
+  return 'load';
+}
 
 /**
  * Хук, вернет размер квадрата вписанного в область окна галереи фото по макетам.

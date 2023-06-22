@@ -2,6 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { AllRoundView } from '../all-round-view';
 import { act } from 'react-dom/test-utils';
+import { useImagesLoad } from '../../utils';
 
 jest.mock('../../utils', () => {
   const original = jest.requireActual('../../utils');
@@ -9,7 +10,7 @@ jest.mock('../../utils', () => {
   return {
     ...original,
     __esModule: true,
-    useImagesLoad: jest.fn(() => true),
+    useImagesLoad: jest.fn(() => 'done'),
   };
 });
 
@@ -39,6 +40,16 @@ describe('AllRoundView', () => {
     const wrapper = mount(<AllRoundView photos={[]} />);
 
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render stub for failed img set', () => {
+    (useImagesLoad as jest.Mock).mockReturnValue('fail');
+
+    const wrapper = mount(<AllRoundView photos={['broken-url']} />);
+
+    expect(wrapper.find(Selectors.image)).toHaveLength(0);
+
+    (useImagesLoad as jest.Mock).mockReturnValue('done');
   });
 
   it('should renders correctly default state', () => {

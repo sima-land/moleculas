@@ -9,6 +9,7 @@ import AllRoundSVG from '../icons/360.svg';
 import PauseSVG from '../icons/pause.svg';
 import TurnLeftSVG from '../icons/turn-left.svg';
 import TurnRightSVG from '../icons/turn-right.svg';
+import BrokenSVG from '../../../../common/icons/image-broken.svg';
 
 export interface AllRoundViewProps {
   photos: string[];
@@ -47,12 +48,13 @@ export const AllRoundView = ({
 
   const [index, setIndex] = useState<number>(0);
   const indexRef = useIdentityRef(index);
-
-  const photosReady = useImagesLoad(photos);
+  const imagesStatus = useImagesLoad(photos);
+  const ready = imagesStatus === 'done';
+  const failed = imagesStatus === 'fail';
 
   // запуск/остановка вращения
   useEffect(() => {
-    if (state !== 'default' && photosReady) {
+    if (state !== 'default' && ready) {
       const timerId = window.setInterval(() => {
         const increment = state === 'turn-left' ? -1 : 1;
 
@@ -61,7 +63,7 @@ export const AllRoundView = ({
 
       return () => window.clearInterval(timerId);
     }
-  }, [state, photosReady]);
+  }, [state, ready]);
 
   // перетаскивание
   useEffect(() => {
@@ -69,7 +71,11 @@ export const AllRoundView = ({
     // eslint-disable-next-line require-jsdoc
     const wrap = (value: number) => (photos.length + value) % photos.length;
 
-    const image = imageRef.current as HTMLImageElement;
+    const image = imageRef.current;
+
+    if (!image) {
+      return;
+    }
 
     const offList = [
       on<PointerEvent>(image, 'pointerdown', e => {
@@ -107,7 +113,7 @@ export const AllRoundView = ({
     ];
 
     return () => offList.forEach(fn => fn());
-  }, [photos.length]);
+  }, [photos.length, failed]);
 
   const HINT = (
     <>
@@ -121,9 +127,12 @@ export const AllRoundView = ({
 
   return (
     <div className={cx('root')}>
-      <img data-testid='gallery-modal:360-current-photo' ref={imageRef} src={photos[index]} />
+      {failed && <BrokenSVG className={cx('stub')} />}
+      {!failed && (
+        <img data-testid='gallery-modal:360-current-photo' ref={imageRef} src={photos[index]} />
+      )}
 
-      {controls && (
+      {!failed && controls && (
         <div className={cx('controls')}>
           <button
             className={cx('control', 'turn')}

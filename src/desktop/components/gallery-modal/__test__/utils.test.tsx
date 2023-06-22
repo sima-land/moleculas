@@ -4,15 +4,39 @@ import { useImagesLoad, useSquareFit } from '../utils';
 
 describe('useImagesLoad', () => {
   const TestComponent = ({ srcList }: { srcList: string[] }) => {
-    const isLoaded = useImagesLoad(srcList);
+    const status = useImagesLoad(srcList);
+    const isLoaded = status === 'done';
+    const isFailed = status === 'fail';
 
-    return <div>{isLoaded ? 'ready' : 'loading'}</div>;
+    return (
+      <div>
+        {isLoaded && 'ready'}
+        {isFailed && 'fail'}
+        {!isLoaded && !isFailed && 'loading'}
+      </div>
+    );
   };
 
-  it('should return boolean', () => {
+  it('should return status', () => {
     const { container } = render(<TestComponent srcList={['a']} />);
 
     expect(container.textContent).toBe('loading');
+  });
+
+  it('should handle error', () => {
+    const callbacks: Array<(...args: any[]) => void> = [];
+
+    jest.spyOn(Image.prototype, 'onerror', 'set').mockImplementation(callback => {
+      callbacks.push(callback);
+    });
+
+    const { container } = render(<TestComponent srcList={['a']} />);
+
+    act(() => {
+      callbacks.forEach(cb => cb({}));
+    });
+
+    expect(container.textContent).toBe('fail');
   });
 
   it('should return true after all images loaded', () => {
