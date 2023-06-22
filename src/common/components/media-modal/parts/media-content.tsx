@@ -158,7 +158,7 @@ function MediaSlider({
 }
 
 /**
- * Получив пропсы items и children вернет массив пропсов для MediaVuew.
+ * Получив пропсы items и children вернет массив пропсов для MediaView.
  * @param items Проп items.
  * @param children Проп children.
  * @return Массив пропсов для MediaVuew.

@@ -91,6 +91,7 @@ export const mixed: MediaData[] = [
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
+      thumbnail: 'https://loremflickr.com/240/240?random=16',
     },
   },
   {
