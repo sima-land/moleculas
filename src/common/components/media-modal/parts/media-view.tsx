@@ -2,9 +2,11 @@ import React, { useEffect, useRef, VideoHTMLAttributes } from 'react';
 import { ImageOverlay } from '../../../../desktop/components/gallery-modal/components/image-overlay';
 import { MediaData } from '../types';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
-import styles from './media-view.module.scss';
 import classNames from 'classnames';
 import { AllRoundView } from './all-round-view';
+import BrokenSVG from '../../../icons/image-broken.svg';
+import styles from './media-view.module.scss';
+import { useImageStub } from '../../../hooks';
 
 export interface MediaViewProps {
   media?: MediaData;
@@ -19,6 +21,15 @@ export interface MediaViewProps {
  */
 export function MediaView({ media, loading, videoProps }: MediaViewProps) {
   const desktop = useBreakpoint('xs+');
+  let imageSrc: string | undefined = undefined;
+
+  if (media?.type === 'image') {
+    imageSrc = media.data.src;
+  } else if (media?.type === 'video') {
+    imageSrc = media.data.thumbnail;
+  }
+
+  const { failed, handleError } = useImageStub(imageSrc);
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const videoSrc = media?.type === 'video' ? media.data.src : null;
@@ -38,7 +49,8 @@ export function MediaView({ media, loading, videoProps }: MediaViewProps) {
     <div className={classNames(styles.root)}>
       {media?.type === 'image' && (
         <ImageOverlay className={styles.image}>
-          <img src={media.data.src} alt={media.data.alt || ''} />
+          {failed && <BrokenSVG />}
+          {!failed && <img src={media.data.src} alt={media.data.alt || ''} onError={handleError} />}
         </ImageOverlay>
       )}
 

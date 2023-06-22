@@ -2,9 +2,11 @@ import React, { createContext, useContext } from 'react';
 import { ImageOverlay } from '../../../../desktop/components/gallery-modal/components/image-overlay';
 import PlaySVG from '@sima-land/ui-quarks/icons/24x24/Filled/Play';
 import AllRoundSVG from '../../../../desktop/components/gallery-modal/icons/360.svg';
-import classNames from 'classnames/bind';
-import styles from './thumbnail.module.scss';
 import { Price } from '@sima-land/ui-nucleons/price';
+import { useImageStub } from '../../../hooks';
+import classNames from 'classnames/bind';
+import BrokenSVG from '../../../icons/image-broken.svg';
+import styles from './thumbnail.module.scss';
 
 export type ThumbnailSize = 's' | 'l';
 
@@ -45,6 +47,8 @@ export function Thumbnail({
   currency,
 }: ThumbnailProps) {
   const { size: sizeFromContext } = useContext(ThumbnailContext);
+  const { failed, handleError } = useImageStub(src);
+
   const size = sizeFromProps ?? sizeFromContext ?? 'l';
 
   const rootClassName = cx(
@@ -70,11 +74,12 @@ export function Thumbnail({
       <span className={cx('content')}>
         {type?.startsWith('preview-') && (
           <ImageOverlay className={cx('image')}>
-            <img src={src} alt={alt} />
+            {failed && <BrokenSVG />}
+            {!failed && <img src={src} alt={alt} onError={handleError} />}
           </ImageOverlay>
         )}
 
-        {type === 'preview-video' && <span className={cx('play')}></span>}
+        {!failed && type === 'preview-video' && <span className={cx('play')}></span>}
 
         {type === 'icon-360' && <AllRoundSVG fill='currentColor' />}
 

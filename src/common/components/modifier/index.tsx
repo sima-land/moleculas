@@ -1,16 +1,9 @@
-import React, {
-  ReactEventHandler,
-  AnchorHTMLAttributes,
-  ImgHTMLAttributes,
-  useCallback,
-  useEffect,
-  useState,
-} from 'react';
+import React, { AnchorHTMLAttributes, ImgHTMLAttributes, useEffect, useState } from 'react';
 import { Hint, useHintFloating, useHintOnHover } from '@sima-land/ui-nucleons/hint';
 import ImageBrokenSVG from '@sima-land/ui-quarks/icons/40x40/Stroked/ImageBroken';
 import classNames from 'classnames/bind';
 import styles from './modifiers.module.scss';
-import { useIsomorphicLayoutEffect } from '@sima-land/ui-nucleons/hooks';
+import { useImageStub } from '../../hooks';
 
 interface TextContent {
   type: 'text';
@@ -162,23 +155,11 @@ export function Modifier({
  * @return Элемент.
  */
 function Image({ src, onError, ...rest }: ImgHTMLAttributes<HTMLImageElement>) {
-  const [fail, setFail] = useState(false);
-
-  useIsomorphicLayoutEffect(() => {
-    setFail(false);
-  }, [src]);
-
-  const handleError = useCallback<ReactEventHandler<HTMLImageElement>>(
-    event => {
-      setFail(true);
-      onError?.(event);
-    },
-    [onError],
-  );
+  const { failed, handleError } = useImageStub(src, onError);
 
   return (
-    <span className={cx('image-wrapper', { fail })}>
-      {fail && <ImageBrokenSVG />}
+    <span className={cx('image-wrapper', { fail: failed })}>
+      {failed && <ImageBrokenSVG />}
       <img className={cx('image')} {...rest} src={src} onError={handleError} />
     </span>
   );
