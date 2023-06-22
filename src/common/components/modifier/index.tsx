@@ -158,7 +158,7 @@ function Image({ src, onError, ...rest }: ImgHTMLAttributes<HTMLImageElement>) {
   const { failed, handleError } = useImageStub(src, onError);
 
   return (
-    <span className={cx('image-wrapper', { fail })}>
+    <span className={cx('image-wrapper', { fail: failed })}>
       {failed && <ImageBrokenSVG />}
       <img className={cx('image')} {...rest} src={src} onError={handleError} />
     </span>
