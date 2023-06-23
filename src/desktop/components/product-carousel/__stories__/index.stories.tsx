@@ -346,3 +346,47 @@ export const FewItems = () => (
 );
 
 FewItems.storyName = 'Мало товаров для прокрутки';
+
+export function CustomItemSize() {
+  return (
+    <div style={{ margin: '40px', width: '400px' }}>
+      <ProductCarousel
+        withHoverCard
+        itemSize='unset'
+        itemProps={{ style: { width: 'calc((400px / 2) - 16px)' } }}
+      >
+        {items.map((item, index) => (
+          <ProductInfo key={index}>
+            <Parts.Image src={item.imageSrc} href={item.url}>
+              <Parts.ImageButton icon={NotFavSVG} hint='Добавить в избранное' />
+            </Parts.Image>
+
+            {item.badges && (
+              <Parts.Badges lineLimit={1}>
+                {item.badges.map((badge, badgeIndex) => (
+                  <Badge key={badgeIndex} {...badge} />
+                ))}
+              </Parts.Badges>
+            )}
+
+            <Parts.Prices
+              price={item.price}
+              oldPrice={item.oldPrice}
+              currencyGrapheme={item.currencyGrapheme}
+            />
+
+            <Parts.Title href={item.url}>{item.name}</Parts.Title>
+
+            <Parts.Footer>
+              <Parts.CartControl stepText='По 5 шт'>
+                <Stepper defaultValue={3} size='s' style={{ width: '122px' }} />
+              </Parts.CartControl>
+            </Parts.Footer>
+          </ProductInfo>
+        ))}
+      </ProductCarousel>
+    </div>
+  );
+}
+
+CustomItemSize.storyName = 'Пример: пользовательский размер элемента';
