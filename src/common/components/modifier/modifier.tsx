@@ -1,56 +1,10 @@
-import React, { AnchorHTMLAttributes, ImgHTMLAttributes, useEffect, useState } from 'react';
+import React, { ImgHTMLAttributes, useEffect, useState } from 'react';
 import { Hint, useHintFloating, useHintOnHover } from '@sima-land/ui-nucleons/hint';
+import { useImageStub } from '../../hooks';
+import { ModifierProps, MoreButtonProps, TextContent } from './types';
 import ImageBrokenSVG from '@sima-land/ui-quarks/icons/40x40/Stroked/ImageBroken';
 import classNames from 'classnames/bind';
-import styles from './modifiers.module.scss';
-import { useImageStub } from '../../hooks';
-
-interface TextContent {
-  type: 'text';
-  text: string;
-}
-
-interface ColorContent {
-  type: 'color';
-  color: string;
-}
-
-interface ImageContent {
-  type: 'image';
-  src: string;
-}
-
-export type ModifierContent = TextContent | ColorContent | ImageContent;
-
-export interface ModifierProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  /** Вывести выбранным. */
-  active?: boolean;
-
-  /** Вывести отключенным. */
-  disabled?: boolean;
-
-  /** Вывести зачеркнутым. */
-  crossedOut?: boolean;
-
-  /** Содержимое. */
-  content: ModifierContent;
-
-  /** Высота по дизайн-гайдам. */
-  size?: 's' | 'm';
-
-  /** Кол-во. */
-  count?: number;
-
-  /** Выводить ли ярлык уценки. */
-  markdown?: boolean;
-
-  /** Идентификатор для систем автоматизированного тестирования. */
-  'data-testid'?: string;
-}
-
-export type MoreButtonProps = Omit<ModifierProps, 'content' | 'crossedOut' | 'active' | 'count'> & {
-  count: number;
-};
+import styles from './modifier.module.scss';
 
 const cx = classNames.bind(styles);
 

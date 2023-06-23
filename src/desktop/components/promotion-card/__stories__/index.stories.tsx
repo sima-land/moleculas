@@ -5,7 +5,7 @@ import { PromotionCard, PromotionCardProps } from '..';
 const demoItems: PromotionCardProps[] = [
   {
     href: 'https://www.sima-land.ru',
-    imageSrc: 'https://picsum.photos/id/10/656/488',
+    imageSrc: 'https://loremflickr.com/656/488?random=1',
     title: '3 уточки по цене 2-х',
     subtitle:
       'При покупке 2-х уточек из акции 3-я в подарок. При покупке 2-х уточек из акции 3-я в подарок',
@@ -14,7 +14,7 @@ const demoItems: PromotionCardProps[] = [
   },
   {
     href: 'https://www.sima-land.ru',
-    imageSrc: 'https://picsum.photos/id/1000/656/488',
+    imageSrc: 'https://loremflickr.com/656/488?random=2',
     title: '-20% на плюшевых кроликов',
     subtitle: 'При покупке товаров из акции от 5 000 ₽ ',
     dueDate: addYears(new Date(), 5),
@@ -23,7 +23,7 @@ const demoItems: PromotionCardProps[] = [
   },
   {
     href: 'https://www.sima-land.ru',
-    imageSrc: 'https://picsum.photos/id/100/328/244',
+    imageSrc: 'https://loremflickr.com/656/488?random=3',
     title: 'Специальные цены на термосы',
     subtitle: 'При покупке от 5 000 ₽',
     dueDate: addDays(new Date(), 7),
@@ -31,7 +31,7 @@ const demoItems: PromotionCardProps[] = [
   },
   {
     href: 'https://www.sima-land.ru',
-    imageSrc: 'https://picsum.photos/id/101/328/244',
+    imageSrc: 'https://loremflickr.com/656/488?random=4',
     title: 'Особые условия заказа: вот прям натурально особые, по другому не скажет',
     subtitle: 'При покупке чего-либо там какие-то условия',
     dueDate: addDays(new Date(), 21),

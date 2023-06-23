@@ -30,7 +30,7 @@ const badges: BadgeProps[] = [
 
 const data = {
   name: 'Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый',
-  imageSrc: 'https://picsum.photos/360',
+  imageSrc: 'https://loremflickr.com/360/360',
   url: 'https://www.sima-land.ru',
   price: 99876543.21,
   oldPrice: 99987654.32,

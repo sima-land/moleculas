@@ -17,7 +17,7 @@ export default {
 export function Primary() {
   return (
     <>
-      <PseudoInput text='Искать туфли' />;
+      <PseudoInput text='Искать туфли' />
     </>
   );
 }
