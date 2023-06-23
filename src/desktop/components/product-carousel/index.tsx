@@ -1,4 +1,5 @@
 import React, {
+  ReactElement,
   Children,
   isValidElement,
   cloneElement,
@@ -7,6 +8,8 @@ import React, {
   useMemo,
   MouseEventHandler,
   Ref,
+  ReactNode,
+  CSSProperties,
 } from 'react';
 import { Carousel } from '@sima-land/ui-nucleons/carousel';
 import { HoverCard } from './hover-card';
@@ -26,17 +29,17 @@ interface ItemSize {
   xl?: 2 | 3 | 4;
 }
 
-export type ItemElement = React.ReactElement<ProductInfoProps, typeof ProductInfo>;
+export type ItemElement = ReactElement<ProductInfoProps>;
 
 export interface ProductCarouselProps {
   /** CSS-класс для корневого элемента. */
   className?: string;
 
   /** Элементы карусели. */
-  children?: ItemElement | ItemElement[];
+  children?: ReactNode;
 
   /** Настройки размера элемента карусели. */
-  itemSize?: ItemSize;
+  itemSize?: ItemSize | 'unset';
 
   /** Сработает при попадании карусели во viewport. */
   onInViewport?: () => void;
@@ -46,18 +49,24 @@ export interface ProductCarouselProps {
 
   /** Нужно ли показывать всплывающую карточку при наведении на элемент карусели. */
   withHoverCard?: boolean;
+
+  /** Предоставит свойства для элемента карусели. */
+  itemProps?: { style?: CSSProperties; className?: string };
 }
 
 const cx = classnames.bind(styles);
 
 // eslint-disable-next-line require-jsdoc
-const getSizeClasses = (size = {}) => [
-  `size-xs-${(size as any).xs || 4}`,
-  `size-s-${(size as any).s || 3}`,
-  `size-m-${(size as any).m || 2}`,
-  `size-l-${(size as any).l || 2}`,
-  `size-xl-${(size as any).xl || 2}`,
-];
+const getSizeClasses = (size: ProductCarouselProps['itemSize']) =>
+  size && size !== 'unset'
+    ? [
+        `size-xs-${size.xs || 4}`,
+        `size-s-${size.s || 3}`,
+        `size-m-${size.m || 2}`,
+        `size-l-${size.l || 2}`,
+        `size-xl-${size.xl || 2}`,
+      ]
+    : [];
 
 /**
  * Карусель рекомендованных товаров.
@@ -66,7 +75,8 @@ const getSizeClasses = (size = {}) => [
  */
 export function ProductCarousel({
   className,
-  itemSize,
+  itemSize = { xs: 4, s: 3, m: 2, l: 2, xl: 2 },
+  itemProps,
   onInViewport,
   onNeedRequest,
   withHoverCard,
@@ -79,13 +89,12 @@ export function ProductCarousel({
   const rootRef = useRef<HTMLDivElement>(null);
   const targetItemRef = useRef<HTMLDivElement | null>(null);
 
-  let items: ItemElement[];
-
-  if (Array.isArray(children)) {
-    items = children;
-  } else {
-    items = children ? [children] : [];
-  }
+  const items = Children.toArray(children).reduce<ItemElement[]>((acc, item) => {
+    if (isValidElement<ProductInfoProps>(item) && item.type === ProductInfo) {
+      acc.push(item);
+    }
+    return acc;
+  }, []);
 
   // вычисляем ширину элемента карусели для позиционирования стрелок
   const firstItemRef = useRef<HTMLDivElement>(null);
@@ -125,10 +134,11 @@ export function ProductCarousel({
             },
           })}
           renderItem={([item, index]: [ItemElement, number], realIndex) => (
-            <ProductCarouselItem
+            <Item
               rootRef={realIndex === 0 ? firstItemRef : undefined}
               withHoverCard={withHoverCard}
-              className={cx(getSizeClasses(itemSize))}
+              className={cx(getSizeClasses(itemSize), itemProps?.className)}
+              style={itemProps?.style}
               onMouseEnter={e => {
                 if (cardShow.allowed()) {
                   targetItemRef.current = e.currentTarget;
@@ -137,7 +147,7 @@ export function ProductCarousel({
               }}
             >
               {item}
-            </ProductCarouselItem>
+            </Item>
           )}
           // длительность прокрутки в Carousel - 320, делаем слегка с запасом
           // @todo после восстановления проверить позицию курсора чтобы показать карточку (если будет критично)
@@ -167,16 +177,18 @@ export function ProductCarousel({
  * Полное содержимое будет выведено во всплывающей карточке.
  * @inheritdoc
  */
-function ProductCarouselItem({
+function Item({
   rootRef,
   className,
   onMouseEnter,
   withHoverCard,
   children,
+  style,
 }: {
   rootRef?: Ref<HTMLDivElement>;
   children: ItemElement;
   className?: string;
+  style?: CSSProperties;
   onMouseEnter?: MouseEventHandler<HTMLDivElement>;
   withHoverCard?: boolean;
 }) {
@@ -186,6 +198,7 @@ function ProductCarouselItem({
       data-testid='product-carousel:item'
       className={cx('item', className)}
       onMouseEnter={onMouseEnter}
+      style={style}
     >
       {cloneElement(children, {
         children: Children.toArray(children.props.children).reduce<any[]>((list, child) => {

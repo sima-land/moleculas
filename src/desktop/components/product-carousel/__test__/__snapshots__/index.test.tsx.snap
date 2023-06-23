@@ -1144,7 +1144,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
               <div
                 className="carousel-items-container"
               >
-                <ProductCarouselItem
+                <Item
                   className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                   onMouseEnter={[Function]}
                   rootRef={
@@ -1196,7 +1196,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                     onMouseEnter={[Function]}
                   >
                     <ProductInfo
-                      key="0"
+                      key=".$0"
                     >
                       <Image
                         href="https://www.sima-land.ru/"
@@ -1274,8 +1274,8 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                       </Title>
                     </ProductInfo>
                   </div>
-                </ProductCarouselItem>
-                <ProductCarouselItem
+                </Item>
+                <Item
                   className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                   onMouseEnter={[Function]}
                 >
@@ -1285,7 +1285,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                     onMouseEnter={[Function]}
                   >
                     <ProductInfo
-                      key="1"
+                      key=".$1"
                     >
                       <Image
                         href="https://www.sima-land.ru/"
@@ -1363,8 +1363,8 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                       </Title>
                     </ProductInfo>
                   </div>
-                </ProductCarouselItem>
-                <ProductCarouselItem
+                </Item>
+                <Item
                   className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                   onMouseEnter={[Function]}
                 >
@@ -1374,7 +1374,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                     onMouseEnter={[Function]}
                   >
                     <ProductInfo
-                      key="2"
+                      key=".$2"
                     >
                       <Image
                         href="https://www.sima-land.ru/"
@@ -1452,8 +1452,8 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                       </Title>
                     </ProductInfo>
                   </div>
-                </ProductCarouselItem>
-                <ProductCarouselItem
+                </Item>
+                <Item
                   className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                   onMouseEnter={[Function]}
                 >
@@ -1463,7 +1463,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                     onMouseEnter={[Function]}
                   >
                     <ProductInfo
-                      key="3"
+                      key=".$3"
                     >
                       <Image
                         href="https://www.sima-land.ru/"
@@ -1541,8 +1541,8 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                       </Title>
                     </ProductInfo>
                   </div>
-                </ProductCarouselItem>
-                <ProductCarouselItem
+                </Item>
+                <Item
                   className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                   onMouseEnter={[Function]}
                 >
@@ -1552,7 +1552,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                     onMouseEnter={[Function]}
                   >
                     <ProductInfo
-                      key="4"
+                      key=".$4"
                     >
                       <Image
                         href="https://www.sima-land.ru/"
@@ -1630,8 +1630,8 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                       </Title>
                     </ProductInfo>
                   </div>
-                </ProductCarouselItem>
-                <ProductCarouselItem
+                </Item>
+                <Item
                   className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                   onMouseEnter={[Function]}
                 >
@@ -1641,7 +1641,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                     onMouseEnter={[Function]}
                   >
                     <ProductInfo
-                      key="5"
+                      key=".$5"
                     >
                       <Image
                         href="https://www.sima-land.ru/"
@@ -1719,8 +1719,8 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                       </Title>
                     </ProductInfo>
                   </div>
-                </ProductCarouselItem>
-                <ProductCarouselItem
+                </Item>
+                <Item
                   className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                   onMouseEnter={[Function]}
                 >
@@ -1730,7 +1730,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                     onMouseEnter={[Function]}
                   >
                     <ProductInfo
-                      key="6"
+                      key=".$6"
                     >
                       <Image
                         href="https://www.sima-land.ru/"
@@ -1808,8 +1808,8 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                       </Title>
                     </ProductInfo>
                   </div>
-                </ProductCarouselItem>
-                <ProductCarouselItem
+                </Item>
+                <Item
                   className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                   onMouseEnter={[Function]}
                 >
@@ -1819,7 +1819,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                     onMouseEnter={[Function]}
                   >
                     <ProductInfo
-                      key="7"
+                      key=".$7"
                     >
                       <Image
                         href="https://www.sima-land.ru/"
@@ -1912,8 +1912,8 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                       </Title>
                     </ProductInfo>
                   </div>
-                </ProductCarouselItem>
-                <ProductCarouselItem
+                </Item>
+                <Item
                   className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                   onMouseEnter={[Function]}
                 >
@@ -1923,7 +1923,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                     onMouseEnter={[Function]}
                   >
                     <ProductInfo
-                      key="8"
+                      key=".$8"
                     >
                       <Image
                         href="https://www.sima-land.ru/"
@@ -2016,8 +2016,8 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                       </Title>
                     </ProductInfo>
                   </div>
-                </ProductCarouselItem>
-                <ProductCarouselItem
+                </Item>
+                <Item
                   className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                   onMouseEnter={[Function]}
                 >
@@ -2027,7 +2027,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                     onMouseEnter={[Function]}
                   >
                     <ProductInfo
-                      key="9"
+                      key=".$9"
                     >
                       <Image
                         href="https://www.sima-land.ru/"
@@ -2105,7 +2105,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
                       </Title>
                     </ProductInfo>
                   </div>
-                </ProductCarouselItem>
+                </Item>
               </div>
             </div>
           </div>
@@ -2769,7 +2769,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
               <div
                 className="carousel-items-container"
               >
-                <ProductCarouselItem
+                <Item
                   className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                   onMouseEnter={[Function]}
                   rootRef={
@@ -2821,7 +2821,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                     onMouseEnter={[Function]}
                   >
                     <ProductInfo
-                      key="0"
+                      key=".$0"
                     >
                       <Image
                         href="https://www.sima-land.ru/"
@@ -2899,8 +2899,8 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                       </Title>
                     </ProductInfo>
                   </div>
-                </ProductCarouselItem>
-                <ProductCarouselItem
+                </Item>
+                <Item
                   className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                   onMouseEnter={[Function]}
                 >
@@ -2910,7 +2910,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                     onMouseEnter={[Function]}
                   >
                     <ProductInfo
-                      key="1"
+                      key=".$1"
                     >
                       <Image
                         href="https://www.sima-land.ru/"
@@ -2988,8 +2988,8 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                       </Title>
                     </ProductInfo>
                   </div>
-                </ProductCarouselItem>
-                <ProductCarouselItem
+                </Item>
+                <Item
                   className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                   onMouseEnter={[Function]}
                 >
@@ -2999,7 +2999,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                     onMouseEnter={[Function]}
                   >
                     <ProductInfo
-                      key="2"
+                      key=".$2"
                     >
                       <Image
                         href="https://www.sima-land.ru/"
@@ -3077,8 +3077,8 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                       </Title>
                     </ProductInfo>
                   </div>
-                </ProductCarouselItem>
-                <ProductCarouselItem
+                </Item>
+                <Item
                   className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                   onMouseEnter={[Function]}
                 >
@@ -3088,7 +3088,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                     onMouseEnter={[Function]}
                   >
                     <ProductInfo
-                      key="3"
+                      key=".$3"
                     >
                       <Image
                         href="https://www.sima-land.ru/"
@@ -3166,8 +3166,8 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                       </Title>
                     </ProductInfo>
                   </div>
-                </ProductCarouselItem>
-                <ProductCarouselItem
+                </Item>
+                <Item
                   className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                   onMouseEnter={[Function]}
                 >
@@ -3177,7 +3177,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                     onMouseEnter={[Function]}
                   >
                     <ProductInfo
-                      key="4"
+                      key=".$4"
                     >
                       <Image
                         href="https://www.sima-land.ru/"
@@ -3255,8 +3255,8 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                       </Title>
                     </ProductInfo>
                   </div>
-                </ProductCarouselItem>
-                <ProductCarouselItem
+                </Item>
+                <Item
                   className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                   onMouseEnter={[Function]}
                 >
@@ -3266,7 +3266,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                     onMouseEnter={[Function]}
                   >
                     <ProductInfo
-                      key="5"
+                      key=".$5"
                     >
                       <Image
                         href="https://www.sima-land.ru/"
@@ -3344,8 +3344,8 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                       </Title>
                     </ProductInfo>
                   </div>
-                </ProductCarouselItem>
-                <ProductCarouselItem
+                </Item>
+                <Item
                   className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                   onMouseEnter={[Function]}
                 >
@@ -3355,7 +3355,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                     onMouseEnter={[Function]}
                   >
                     <ProductInfo
-                      key="6"
+                      key=".$6"
                     >
                       <Image
                         href="https://www.sima-land.ru/"
@@ -3433,8 +3433,8 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                       </Title>
                     </ProductInfo>
                   </div>
-                </ProductCarouselItem>
-                <ProductCarouselItem
+                </Item>
+                <Item
                   className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                   onMouseEnter={[Function]}
                 >
@@ -3444,7 +3444,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                     onMouseEnter={[Function]}
                   >
                     <ProductInfo
-                      key="7"
+                      key=".$7"
                     >
                       <Image
                         href="https://www.sima-land.ru/"
@@ -3537,8 +3537,8 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                       </Title>
                     </ProductInfo>
                   </div>
-                </ProductCarouselItem>
-                <ProductCarouselItem
+                </Item>
+                <Item
                   className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                   onMouseEnter={[Function]}
                 >
@@ -3548,7 +3548,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                     onMouseEnter={[Function]}
                   >
                     <ProductInfo
-                      key="8"
+                      key=".$8"
                     >
                       <Image
                         href="https://www.sima-land.ru/"
@@ -3641,8 +3641,8 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                       </Title>
                     </ProductInfo>
                   </div>
-                </ProductCarouselItem>
-                <ProductCarouselItem
+                </Item>
+                <Item
                   className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
                   onMouseEnter={[Function]}
                 >
@@ -3652,7 +3652,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                     onMouseEnter={[Function]}
                   >
                     <ProductInfo
-                      key="9"
+                      key=".$9"
                     >
                       <Image
                         href="https://www.sima-land.ru/"
@@ -3730,7 +3730,7 @@ exports[`<ProductCarousel /> should set size depend on media query 2`] = `
                       </Title>
                     </ProductInfo>
                   </div>
-                </ProductCarouselItem>
+                </Item>
               </div>
             </div>
           </div>

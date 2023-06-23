@@ -368,6 +368,66 @@ describe('<ProductCarousel />', () => {
       rerender(<TestComponent withContent={false} />);
     }).not.toThrow();
   });
+
+  it('should handle empty object as itemSize and get default size', () => {
+    const { container } = render(
+      <ProductCarousel itemSize={{}}>
+        {items.map((item, index) => (
+          <ProductInfo key={index}>
+            <Parts.Footer>Some text of footer</Parts.Footer>
+          </ProductInfo>
+        ))}
+      </ProductCarousel>,
+    );
+
+    container.querySelectorAll<HTMLElement>('.item').forEach(el => {
+      expect(el.classList).toContain('size-xs-4');
+      expect(el.classList).toContain('size-s-3');
+      expect(el.classList).toContain('size-m-2');
+      expect(el.classList).toContain('size-l-2');
+      expect(el.classList).toContain('size-xl-2');
+    });
+  });
+
+  it('should handle unset as itemSize prop value', () => {
+    const { container } = render(
+      <ProductCarousel itemSize='unset'>
+        {items.map((item, index) => (
+          <ProductInfo key={index}>
+            <Parts.Footer>Some text of footer</Parts.Footer>
+          </ProductInfo>
+        ))}
+      </ProductCarousel>,
+    );
+
+    expect(container.querySelectorAll('.item')).toHaveLength(10);
+
+    container.querySelectorAll<HTMLElement>('.item').forEach(el => {
+      expect(el.className).not.toContain('.size-xs-');
+      expect(el.className).not.toContain('.size-s-');
+      expect(el.className).not.toContain('.size-m-');
+      expect(el.className).not.toContain('.size-l-');
+      expect(el.className).not.toContain('.size-xl-');
+    });
+  });
+
+  it('should ignore not valid children', () => {
+    const { container } = render(
+      <ProductCarousel itemSize='unset'>
+        <ProductInfo>
+          <Parts.Footer>Some text of footer</Parts.Footer>
+        </ProductInfo>
+        <p>Hello</p>
+        <div>World</div>
+        FooBar
+      </ProductCarousel>,
+    );
+
+    expect(container.querySelectorAll('.item')).toHaveLength(1);
+    expect(container.textContent).not.toContain('Hello');
+    expect(container.textContent).not.toContain('World');
+    expect(container.textContent).not.toContain('FooBar');
+  });
 });
 
 describe('intersections', () => {
