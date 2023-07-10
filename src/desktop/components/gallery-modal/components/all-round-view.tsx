@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useIdentityRef } from '@sima-land/ui-nucleons/hooks/identity';
 import { WithHint } from '@sima-land/ui-nucleons/with-hint';
 import on from '@sima-land/ui-nucleons/helpers/on';

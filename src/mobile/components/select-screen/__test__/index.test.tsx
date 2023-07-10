@@ -1,4 +1,3 @@
-import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
 import { SelectScreenLayout, SelectScreenOption } from '..';
 import { Screen } from '@sima-land/ui-nucleons/screen';

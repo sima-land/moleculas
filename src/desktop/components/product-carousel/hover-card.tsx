@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState, RefObject } from 'react';
 import { getOriginCorrection } from '@sima-land/ui-nucleons/with-tooltip/utils';
 import { ProductInfo, ProductInfoProps } from '../../../common/components/product-info';
 import classnames from 'classnames/bind';
@@ -8,7 +8,7 @@ import { BoxShadow } from '@sima-land/ui-nucleons/styling/shadows';
 import { HoverCard as BaseHoverCard } from '../product-card';
 
 export interface HoverCardProps extends ProductInfoProps {
-  targetRef: React.RefObject<HTMLElement | null>;
+  targetRef: RefObject<HTMLElement | null>;
   onMouseLeave?: () => void;
 }
 

@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
 import {
   AllRoundView as BaseAllRoundView,

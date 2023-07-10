@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Modifier, ModifierContent, MoreButton } from '..';
 import { Expandable } from '@sima-land/ui-nucleons/expandable';
 import { Layout } from '@sima-land/ui-nucleons/layout';

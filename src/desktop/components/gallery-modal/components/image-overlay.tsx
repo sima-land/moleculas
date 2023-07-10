@@ -1,8 +1,8 @@
-import React from 'react';
+import type { HTMLAttributes } from 'react';
 import cn from 'classnames';
 import styles from './image-overlay.module.scss';
 
-export type ImageOverlayProps = React.HTMLAttributes<HTMLDivElement>;
+export type ImageOverlayProps = HTMLAttributes<HTMLDivElement>;
 
 /**
  * Полупрозрачный слой над картинкой по дизайн-гайдам.

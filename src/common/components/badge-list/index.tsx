@@ -1,17 +1,17 @@
-import React, { Children, isValidElement, ReactNode } from 'react';
+import { Children, isValidElement, ReactNode, CSSProperties } from 'react';
 import { Badge } from '../badge';
 import classnames from 'classnames/bind';
 import styles from './badge-list.module.scss';
 
 export interface BadgeListProps {
   /** Список данных для шильдиков. */
-  children?: React.ReactNode;
+  children?: ReactNode;
 
   /** CSS-класс корневого элемента. */
   className?: string;
 
   /** Стили корневого элемента. */
-  style?: React.CSSProperties;
+  style?: CSSProperties;
 
   /** Лимит количества строк, не влезающие шильдики будут скрыты. */
   lineLimit?: number;
@@ -27,7 +27,7 @@ const cx = classnames.bind(styles);
 export const BadgeList = ({ children, className, lineLimit, style }: BadgeListProps) => (
   <div
     className={cx('root', className, lineLimit && 'line-limit')}
-    style={lineLimit ? ({ ...style, '--line-limit': lineLimit } as React.CSSProperties) : style}
+    style={lineLimit ? ({ ...style, '--line-limit': lineLimit } as CSSProperties) : style}
   >
     {Children.toArray(children).map((child, index) => {
       switch (true) {

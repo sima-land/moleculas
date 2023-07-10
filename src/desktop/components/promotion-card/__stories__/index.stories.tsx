@@ -1,5 +1,5 @@
 import { addDays, addHours, addYears } from 'date-fns';
-import React from 'react';
+
 import { PromotionCard, PromotionCardProps } from '..';
 
 const demoItems: PromotionCardProps[] = [

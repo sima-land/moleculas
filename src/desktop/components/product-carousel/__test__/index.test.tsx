@@ -1,4 +1,3 @@
-import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
 import { mount, ReactWrapper } from 'enzyme';
 import { act } from 'react-dom/test-utils';

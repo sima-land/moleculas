@@ -1,4 +1,3 @@
-import React from 'react';
 import { shallow } from 'enzyme';
 import { ModifierItem } from '..';
 import { Text } from '@sima-land/ui-nucleons/text';

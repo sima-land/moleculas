@@ -1,10 +1,10 @@
-import React, { Children, isValidElement, useMemo, useRef } from 'react';
+import { Children, isValidElement, ReactElement, useMemo, useRef } from 'react';
 import { useIntersection } from '@sima-land/ui-nucleons/hooks/intersection';
 import { TouchSlider } from '@sima-land/ui-nucleons/touch-slider';
 import { ProductInfo, ProductInfoProps, Parts } from '../../../common/components/product-info';
 import styles from './product-slider.module.scss';
 
-export type ItemElement = React.ReactElement<ProductInfoProps, typeof ProductInfo>;
+export type ItemElement = ReactElement<ProductInfoProps, typeof ProductInfo>;
 
 export interface ProductSliderProps {
   /** Товары. */
@@ -44,7 +44,7 @@ export const ProductSlider = ({ children, onInViewport, onNeedRequest }: Product
     <div ref={rootRef} data-testid='product-slider:root'>
       <TouchSlider>
         <Parts.FooterContext.Provider value={{ className: styles.footer }}>
-          {Children.toArray(children).reduce<React.ReactElement[]>((list, item) => {
+          {Children.toArray(children).reduce<ReactElement[]>((list, item) => {
             isValidElement(item) &&
               item.type === ProductInfo &&
               list.push(

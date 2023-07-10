@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { ReactNode, useState } from 'react';
 import { BadgeList } from '..';
 import { Badge, BadgeProps } from '../../badge';
 import { addMonths } from 'date-fns';
@@ -38,7 +38,7 @@ export default {
   },
 };
 
-const DemoBlock = ({ children }: { children: React.ReactNode }) => (
+const DemoBlock = ({ children }: { children: ReactNode }) => (
   <div style={{ display: 'flex' }}>
     <div style={{ border: '20px solid #ddd', marginBottom: '16px' }}>
       <div style={{ maxWidth: '196px' }}>{children}</div>

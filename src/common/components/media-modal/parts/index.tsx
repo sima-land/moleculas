@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { Layout } from '@sima-land/ui-nucleons/layout';
 import { TabsProps } from '@sima-land/ui-nucleons/tabs';
 import { TextButtonProps } from '@sima-land/ui-nucleons/text-button';

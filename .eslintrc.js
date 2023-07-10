@@ -4,6 +4,13 @@ module.exports = {
   extends: require.resolve('@sima-land/linters/eslint'),
   overrides: [
     {
+      files: ['./**/*.{jsx,tsx}'],
+      rules: {
+        'react/jsx-uses-react': 'off',
+        'react/react-in-jsx-scope': 'off',
+      },
+    },
+    {
       files: ['./**/__stories__/**/*', './**/__stories__/**/*'],
       rules: {
         'no-alert': 'off',

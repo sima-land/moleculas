@@ -1,4 +1,3 @@
-import React from 'react';
 import { ActionCircles } from '..';
 import { Alert, AlertBody } from '@sima-land/ui-nucleons/alert';
 import StatementSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Statement';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { UserAvatar } from '@sima-land/ui-nucleons/avatar/user';
 import { Box } from '@sima-land/ui-nucleons/box';
 import { Text } from '@sima-land/ui-nucleons/text';

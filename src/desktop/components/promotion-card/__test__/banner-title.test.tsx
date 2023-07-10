@@ -1,4 +1,3 @@
-import React from 'react';
 import { mount } from 'enzyme';
 import { BannerTitle, BannerTitleProps } from '../banner-title';
 import { addDays } from 'date-fns';

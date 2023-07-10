@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, ReactNode } from 'react';
+import { MouseEventHandler, ReactNode } from 'react';
 import { Token } from '@sima-land/ui-nucleons/colors';
 import classnames from 'classnames/bind';
 import styles from './action-list.module.scss';

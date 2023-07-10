@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import { AnchorHTMLAttributes, ReactNode, forwardRef } from 'react';
 import { Timer } from '@sima-land/ui-nucleons/timer';
 import classnames from 'classnames/bind';
 import styles from './badge.module.scss';
@@ -8,7 +8,7 @@ export interface BadgeField {
   value: string;
 }
 
-export interface BadgeProps extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'color'> {
+export interface BadgeProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'color'> {
   /** Основной цвет, используется как цвет обводки, иконок и текста. */
   color?: string;
 
@@ -46,7 +46,7 @@ export const Badge = forwardRef<HTMLAnchorElement, BadgeProps>(function Badge(
         ) : (
           // вложенный span нужен для того чтобы объединить `display: inline-flex` и `text-overflow: ellipsis`
           <span className={cx('content')}>
-            {fields.reduce<React.ReactNode[]>((acc, item, i) => {
+            {fields.reduce<ReactNode[]>((acc, item, i) => {
               let result = null;
 
               // на данный момент сочетание иконки с другими элементами не предусмотрено макетами - игнорируем

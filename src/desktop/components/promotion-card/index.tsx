@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { HTMLAttributes, useEffect, useState } from 'react';
 import { PromotionType } from './types';
 import { BannerTitle } from './banner-title';
 import { Estimate } from './estimate';
@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import styles from './index.module.scss';
 import { PromotionCardPlaceholder } from './placeholder';
 
-export interface PromotionCardProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface PromotionCardProps extends HTMLAttributes<HTMLDivElement> {
   /** Ссылка, переход по которой будет произведён при нажатии на карточку. */
   href?: string;
 

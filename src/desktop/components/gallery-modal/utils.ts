@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState, RefObject } from 'react';
 import on from '@sima-land/ui-nucleons/helpers/on';
 import { useIsomorphicLayoutEffect } from '@sima-land/ui-nucleons/hooks';
 
@@ -47,7 +47,7 @@ export function useImagesLoad(srcList: string[]): Status {
  * @return Размер или null.
  */
 export const useSquareFit = (
-  areaRef: React.RefObject<HTMLDivElement | null>,
+  areaRef: RefObject<HTMLDivElement | null>,
   { hasReview }: { hasReview: boolean },
 ) => {
   const [size, setSize] = useState<number | null>(null);

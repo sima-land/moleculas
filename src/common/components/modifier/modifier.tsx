@@ -1,4 +1,4 @@
-import React, { ImgHTMLAttributes, useEffect, useState } from 'react';
+import { ImgHTMLAttributes, useEffect, useState } from 'react';
 import { Hint, useHintFloating, useHintOnHover } from '@sima-land/ui-nucleons/hint';
 import { useImageStub } from '../../hooks';
 import { ModifierProps, MoreButtonProps, TextContent } from './types';

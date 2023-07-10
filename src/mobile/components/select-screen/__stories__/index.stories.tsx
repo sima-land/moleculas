@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { CSSProperties, useState } from 'react';
 import { Screen } from '@sima-land/ui-nucleons/screen';
 import { random } from 'lodash';
 import { SelectScreenLayout, SelectScreenOption } from '..';
@@ -85,7 +85,7 @@ export const SizeXL = () => {
     { shortName: 'EUR', name: 'Единая европейская валюта' },
   ];
 
-  const styles: Record<string, React.CSSProperties> = {
+  const styles: Record<string, CSSProperties> = {
     item: {
       display: 'grid',
       gridTemplateColumns: '48px 1fr',

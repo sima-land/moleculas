@@ -1,5 +1,5 @@
-import React from 'react';
 import { getMonth, getDate, getYear } from 'date-fns';
+import { ReactNode } from 'react';
 
 export interface EstimateProps {
   dueDate: Date;
@@ -35,7 +35,7 @@ const toTimePart = (n: number): string => `${n}`.padStart(2, '0');
 export const Estimate = ({ dueDate }: EstimateProps) => {
   const now = new Date();
 
-  let content: React.ReactNode = null;
+  let content: ReactNode = null;
 
   if (getYear(dueDate) !== getYear(now)) {
     const text = [getDate, (d: Date) => getMonth(d) + 1, getYear]

@@ -1,4 +1,3 @@
-import React from 'react';
 import { PseudoInput } from '..';
 
 export default {

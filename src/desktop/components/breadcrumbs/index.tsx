@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import CSSTransition from 'react-transition-group/CSSTransition';
 import { Plate } from '@sima-land/ui-nucleons/plate';
 import { Link } from '@sima-land/ui-nucleons/link';

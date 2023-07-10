@@ -1,4 +1,3 @@
-import React from 'react';
 import { random } from 'lodash';
 import { ModifierButton, ModifierButtonProps } from '..';
 

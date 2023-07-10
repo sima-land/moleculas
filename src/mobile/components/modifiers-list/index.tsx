@@ -1,9 +1,9 @@
-import React from 'react';
 import { ModifierItem, ModifierItemProps } from './modifier-item';
 import { Link } from '@sima-land/ui-nucleons/link';
 import StatementSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Statement';
 import classes from './modifiers-list.module.scss';
 import classnames from 'classnames/bind';
+import { HTMLAttributes } from 'react';
 
 export interface ModifierListProps {
   /** Массив данных модификаторов. */
@@ -16,10 +16,10 @@ export interface ModifierListProps {
   sizesTableUrl?: string;
 
   /** Свойства блока-обертки. */
-  wrapperProps?: React.HTMLAttributes<HTMLDivElement>;
+  wrapperProps?: HTMLAttributes<HTMLDivElement>;
 
   /** Свойства блока-обертки списка модификаторов. */
-  itemsContainerProps?: React.HTMLAttributes<HTMLDivElement>;
+  itemsContainerProps?: HTMLAttributes<HTMLDivElement>;
 
   /** Обработчик клика на модификатор. */
   onItemClick?: (item: ModifierItemProps) => void;

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Modal } from '@sima-land/ui-nucleons/modal';
 import { MediaLayout, MediaMain, MediaView } from '..';
 import { mixed } from '../__mocks__';

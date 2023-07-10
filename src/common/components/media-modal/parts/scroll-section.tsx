@@ -1,5 +1,5 @@
 import { Layout } from '@sima-land/ui-nucleons/layout';
-import React, { ReactNode, Ref } from 'react';
+import { ReactNode, Ref } from 'react';
 import styles from './scroll-section.module.scss';
 
 /**

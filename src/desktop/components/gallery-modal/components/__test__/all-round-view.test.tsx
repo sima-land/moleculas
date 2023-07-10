@@ -1,4 +1,3 @@
-import React from 'react';
 import { mount } from 'enzyme';
 import { AllRoundView } from '../all-round-view';
 import { act } from 'react-dom/test-utils';

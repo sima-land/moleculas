@@ -1,4 +1,4 @@
-import React, { CSSProperties, forwardRef } from 'react';
+import { CSSProperties, MouseEventHandler, forwardRef } from 'react';
 import { isNumber } from 'lodash';
 import classes from './modifier-button.module.scss';
 import classnames from 'classnames/bind';
@@ -18,7 +18,7 @@ export interface Modifier {
 export interface ModifierButtonProps extends Modifier {
   className?: string;
   style?: CSSProperties;
-  onClick?: React.MouseEventHandler<HTMLDivElement>;
+  onClick?: MouseEventHandler<HTMLDivElement>;
   squared?: boolean;
   'data-testid'?: string;
 }

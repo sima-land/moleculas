@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, SyntheticEvent, CSSProperties } from 'react';
 import { MediaData } from '../types';
 import { DesktopLayout } from '@sima-land/ui-nucleons/layout';
 import { scrollToChild } from '@sima-land/ui-nucleons/helpers/scroll-to-child';
@@ -34,10 +34,10 @@ export interface GalleryModalProps
   onClose?: () => void;
 
   /** Будет вызвана при событиях проигрывания видео. */
-  onVideoEvent?: (event: React.SyntheticEvent<HTMLVideoElement>) => void;
+  onVideoEvent?: (event: SyntheticEvent<HTMLVideoElement>) => void;
 }
 
-interface InnerStyles extends React.CSSProperties {
+interface InnerStyles extends CSSProperties {
   '--square-size'?: string;
   '--all-round-view-size'?: string;
 }
@@ -150,7 +150,7 @@ const Media = ({
   onVideoEvent,
   ...media
 }: MediaData & {
-  onVideoEvent?: (event: React.SyntheticEvent<HTMLVideoElement>) => void;
+  onVideoEvent?: (event: SyntheticEvent<HTMLVideoElement>) => void;
 }) => (
   <div className={cx('media')}>
     {media.type === 'image' && (

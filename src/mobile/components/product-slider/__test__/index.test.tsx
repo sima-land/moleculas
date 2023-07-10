@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '@testing-library/react';
 import { ProductSlider } from '..';
 import { ProductInfo, Parts } from '../../../../common/components/product-info';

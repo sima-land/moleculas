@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { BadgeList } from '..';
 import { Badge, BadgeProps } from '../../badge';
 import { render } from '@testing-library/react';

@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './product-row.module.scss';
 import classnames from 'classnames/bind';
 import { Link } from '@sima-land/ui-nucleons/link';

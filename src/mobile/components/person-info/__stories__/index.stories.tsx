@@ -1,4 +1,3 @@
-import React from 'react';
 import { PersonInfo } from '..';
 import { Screen } from '@sima-land/ui-nucleons/screen';
 

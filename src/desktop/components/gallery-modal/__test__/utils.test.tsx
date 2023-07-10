@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { render, act } from '@testing-library/react';
 import { useImagesLoad, useSquareFit } from '../utils';
 

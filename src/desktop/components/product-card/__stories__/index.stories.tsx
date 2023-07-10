@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { ReactNode, useState } from 'react';
 import { action } from '@storybook/addon-actions';
 import { ProductCard } from '..';
 import { ProductInfo, Parts } from '../../../../common/components/product-info';
@@ -39,7 +39,7 @@ const data = {
   trademark: { name: 'Торговая марка Сима-ленд', url: 'https://www.sima-land.ru' },
 };
 
-const Bootstrap: React.FC = ({ children }) => (
+const Bootstrap = ({ children }: { children?: ReactNode }) => (
   <div style={{ width: '200px', margin: '20px' }}>{children}</div>
 );
 

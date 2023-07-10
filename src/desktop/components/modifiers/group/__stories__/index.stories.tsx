@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import { FC, useState } from 'react';
 import { times } from 'lodash';
 import { ModifiersGroup } from '..';
 import { ModifierButton } from '../../button';

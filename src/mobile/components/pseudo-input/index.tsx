@@ -1,9 +1,9 @@
-import React from 'react';
 import classnames from 'classnames/bind';
 import SearchSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Search';
 import styles from './pseudo-input.module.scss';
+import { HTMLAttributes } from 'react';
 
-export interface PseudoInputProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface PseudoInputProps extends HTMLAttributes<HTMLDivElement> {
   /** Текст, введенный в поле. */
   text?: string;
 }

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ActionList } from '..';
 import { Alert, AlertBody } from '@sima-land/ui-nucleons/alert';
 import { BottomBar } from '@sima-land/ui-nucleons/bottom-bar';

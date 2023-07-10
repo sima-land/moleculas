@@ -1,4 +1,4 @@
-import React, {
+import {
   Children,
   forwardRef,
   isValidElement,
@@ -25,7 +25,7 @@ export interface ModifiersGroupProps {
 }
 
 interface GroupItemProps {
-  children?: React.ReactNode;
+  children?: ReactNode;
   hidden?: boolean;
   invisible?: boolean;
 }
