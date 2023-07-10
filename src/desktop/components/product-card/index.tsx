@@ -1,4 +1,12 @@
-import React, { Children, forwardRef, isValidElement, cloneElement, useState } from 'react';
+import {
+  Children,
+  forwardRef,
+  isValidElement,
+  cloneElement,
+  useState,
+  ReactElement,
+  HTMLAttributes,
+} from 'react';
 import { ProductInfo, ProductInfoProps, Parts } from '../../../common/components/product-info';
 import { Plate, PlateProps } from '@sima-land/ui-nucleons/plate';
 import { useLayer } from '@sima-land/ui-nucleons/helpers/layer';
@@ -6,9 +14,9 @@ import cn from 'classnames';
 import styles from './product-card.module.scss';
 import { ImageProps } from '../../../common/components/product-info/parts';
 
-export type ProductCardChildren = React.ReactElement<ProductInfoProps, typeof ProductInfo>;
+export type ProductCardChildren = ReactElement<ProductInfoProps, typeof ProductInfo>;
 
-export interface ProductCardProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface ProductCardProps extends HTMLAttributes<HTMLDivElement> {
   children: ProductCardChildren;
 }
 

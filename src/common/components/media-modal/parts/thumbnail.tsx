@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react';
+import { createContext, useContext, MouseEventHandler } from 'react';
 import { ImageOverlay } from '../../../../desktop/components/gallery-modal/components/image-overlay';
 import PlaySVG from '@sima-land/ui-quarks/icons/24x24/Filled/Play';
 import AllRoundSVG from '../../../../desktop/components/gallery-modal/icons/360.svg';
@@ -16,7 +16,7 @@ export interface ThumbnailProps {
   src?: string;
   alt?: string;
   checked?: boolean;
-  onClick?: React.MouseEventHandler;
+  onClick?: MouseEventHandler;
   className?: string;
   loading?: boolean;
   title?: string;

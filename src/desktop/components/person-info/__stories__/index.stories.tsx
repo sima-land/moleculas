@@ -1,4 +1,3 @@
-import React from 'react';
 import { PersonInfo } from '..';
 import { Modal } from '@sima-land/ui-nucleons/modal';
 import { CleanButton, CleanGroup } from '@sima-land/ui-nucleons/clean-buttons';

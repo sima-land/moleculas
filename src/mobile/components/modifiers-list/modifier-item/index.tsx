@@ -1,4 +1,3 @@
-import React from 'react';
 import classes from './modifier-item.module.scss';
 import classnames from 'classnames/bind';
 import { Price } from '@sima-land/ui-nucleons/price';
@@ -6,6 +5,7 @@ import { Text } from '@sima-land/ui-nucleons/text';
 import CheckSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Check';
 import { MODIFIER_TYPE } from '../../../../common/constants';
 import { ModifierType } from '../../../../common/types';
+import { MouseEventHandler } from 'react';
 
 export interface ModifierItemProps {
   name: string;
@@ -16,7 +16,7 @@ export interface ModifierItemProps {
   price: number;
   currencyGrapheme?: string;
   additionalText?: string;
-  onClick?: React.MouseEventHandler<HTMLDivElement>;
+  onClick?: MouseEventHandler<HTMLDivElement>;
 }
 
 export const cx = classnames.bind(classes);

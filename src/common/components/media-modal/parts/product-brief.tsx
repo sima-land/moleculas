@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, MouseEventHandler, ReactNode } from 'react';
+import { HTMLAttributes, MouseEventHandler, ReactNode } from 'react';
 import { ImageOverlay } from '../../../../desktop/components/gallery-modal/components/image-overlay';
 import { Price } from '@sima-land/ui-nucleons/price';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { GalleryModal } from '..';
 import { action } from '@storybook/addon-actions';
 import { data } from '../__mocks__';

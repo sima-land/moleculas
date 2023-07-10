@@ -1,4 +1,3 @@
-import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
 import { GalleryModal } from '../gallery-modal';
 import { data } from '../../__mocks__';

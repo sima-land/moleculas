@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import { ProductInfo, Parts } from '..';
 import { Badge, BadgeProps } from '../../badge';

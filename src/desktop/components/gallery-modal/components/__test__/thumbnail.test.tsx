@@ -1,4 +1,3 @@
-import React from 'react';
 import { mount } from 'enzyme';
 import { Thumbnail } from '../thumbnail';
 import { act } from 'react-dom/test-utils';

@@ -1,10 +1,4 @@
-import React, {
-  AnchorHTMLAttributes,
-  Children,
-  forwardRef,
-  isValidElement,
-  ReactNode,
-} from 'react';
+import { AnchorHTMLAttributes, Children, forwardRef, isValidElement, ReactNode } from 'react';
 import {
   InteractiveImageProps,
   InteractiveImageImageProps,

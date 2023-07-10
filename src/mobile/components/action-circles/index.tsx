@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { Link, LinkProps } from '@sima-land/ui-nucleons/link';
 import classnames from 'classnames/bind';
 import styles from './action-circles.module.scss';

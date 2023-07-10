@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { Rating } from '@sima-land/ui-nucleons/rating';
 import classNames from 'classnames/bind';
 import styles from './review.module.scss';

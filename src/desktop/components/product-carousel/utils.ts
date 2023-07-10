@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState, RefObject, DependencyList } from 'react';
 
 /**
  * Возвращает объект работы с флагом, который автоматически возвращается в true через заданный промежуток времени.
@@ -27,10 +27,7 @@ export const useAllowFlag = () => {
  * @param deps Массив зависимостей от которых зависит пересчет.
  * @return Ширина.
  */
-export const useClientWidth = (
-  ref: React.RefObject<HTMLElement | null>,
-  deps: React.DependencyList = [],
-) => {
+export const useClientWidth = (ref: RefObject<HTMLElement | null>, deps: DependencyList = []) => {
   const [width, setWidth] = useState<number | null>(null);
 
   useEffect(() => {

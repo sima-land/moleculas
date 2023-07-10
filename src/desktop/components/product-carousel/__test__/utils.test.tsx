@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { useAllowFlag, useClientWidth } from '../utils';
 import { render, fireEvent, act } from '@testing-library/react';
 

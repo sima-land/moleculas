@@ -1,4 +1,4 @@
-import React, { createRef } from 'react';
+import { createRef } from 'react';
 import ReactDOM from 'react-dom';
 import { createEvent, fireEvent, render } from '@testing-library/react';
 import { mount } from 'enzyme';

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Badge } from '..';
 import { addDays, addMonths } from 'date-fns';
 import { Hint, useHintFloating, useHintOnHover } from '@sima-land/ui-nucleons/hint';

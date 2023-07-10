@@ -1,4 +1,3 @@
-import React from 'react';
 import { ModifiersList } from '..';
 import classes from './modifiers-list.module.scss';
 import items from './items';

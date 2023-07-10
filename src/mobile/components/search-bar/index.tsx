@@ -1,4 +1,14 @@
-import React, { useState, useRef, useEffect, forwardRef, useImperativeHandle } from 'react';
+import {
+  useState,
+  useRef,
+  useEffect,
+  forwardRef,
+  useImperativeHandle,
+  ElementType,
+  MouseEventHandler,
+  ChangeEventHandler,
+  MutableRefObject,
+} from 'react';
 import { throttle } from 'lodash';
 import { COLORS, Token } from '@sima-land/ui-nucleons/colors';
 import { Dropdown } from '@sima-land/ui-nucleons/dropdown';
@@ -15,8 +25,8 @@ export const cx = classnames.bind(styles);
 
 export interface ButtonProps {
   text: string;
-  onClick: React.MouseEventHandler;
-  icon?: React.ElementType;
+  onClick: MouseEventHandler;
+  icon?: ElementType;
   iconColor?: Token;
 }
 
@@ -25,7 +35,7 @@ export interface SearchBarProps {
   value?: string;
 
   /** Вызовется при изменении поискового запроса. */
-  onChange: React.ChangeEventHandler<HTMLInputElement>;
+  onChange: ChangeEventHandler<HTMLInputElement>;
 
   /** Тип клавиатуры. */
   inputMode?: 'none' | 'text' | 'decimal' | 'numeric' | 'tel' | 'search' | 'email' | 'url';
@@ -34,7 +44,7 @@ export interface SearchBarProps {
   placeholder?: string;
 
   /** Вызовется при нажатии на кнопку очистки. */
-  onClear?: React.MouseEventHandler;
+  onClear?: MouseEventHandler;
 
   /** Кнопки(а) после поля. */
   endButtons?: any[]; // @todo: избавиться от any
@@ -52,7 +62,7 @@ export interface SearchBarProps {
   description?: string;
 
   /** Ref для элемента текстового поля. */
-  inputRef?: React.MutableRefObject<HTMLInputElement | null>;
+  inputRef?: MutableRefObject<HTMLInputElement | null>;
 }
 
 /**
@@ -102,7 +112,7 @@ export const SearchBar = ({
   );
 
   // eslint-disable-next-line require-jsdoc
-  const preventFieldBlur: React.MouseEventHandler = e => {
+  const preventFieldBlur: MouseEventHandler = e => {
     if (
       inputRef.current &&
       inputRef.current !== e.target && // не предотвращаем события на самом поле (например выделение текста)

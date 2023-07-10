@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback, ReactNode } from 'react';
+import { useState, useEffect, useRef, useCallback, ReactNode } from 'react';
 import { Link } from '@sima-land/ui-nucleons/link';
 import { Rating } from '@sima-land/ui-nucleons/rating';
 import classnames from 'classnames/bind';

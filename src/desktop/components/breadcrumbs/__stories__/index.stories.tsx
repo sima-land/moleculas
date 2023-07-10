@@ -1,4 +1,3 @@
-import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { Breadcrumbs } from '..';
 import items from '../__test__/test-items';

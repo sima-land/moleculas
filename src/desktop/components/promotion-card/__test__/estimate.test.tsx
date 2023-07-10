@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '@testing-library/react';
 import { Estimate } from '../estimate';
 import { addDays, addYears } from 'date-fns';

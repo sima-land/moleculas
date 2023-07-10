@@ -1,4 +1,3 @@
-import React from 'react';
 import { ReviewInfo } from '../review-info';
 import { fireEvent, render } from '@testing-library/react';
 

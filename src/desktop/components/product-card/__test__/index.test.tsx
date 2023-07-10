@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import { Children } from 'react';
 import { fireEvent, render } from '@testing-library/react';
 import { ProductCard, reduceBaseInfo } from '..';
 import { ProductInfo, Parts } from '../../../../common/components/product-info';

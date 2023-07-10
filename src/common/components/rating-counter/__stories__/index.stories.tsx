@@ -1,4 +1,3 @@
-import React from 'react';
 import { RatingCounter } from '..';
 
 export default {

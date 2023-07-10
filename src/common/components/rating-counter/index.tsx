@@ -1,4 +1,4 @@
-import React, { CSSProperties, HTMLAttributes } from 'react';
+import { CSSProperties, HTMLAttributes } from 'react';
 import StarSVG from '@sima-land/ui-quarks/icons/16x16/Filled/Star';
 import { getDeclination } from '@sima-land/ui-nucleons/helpers/get-declination';
 import classNames from 'classnames/bind';

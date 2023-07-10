@@ -1,4 +1,3 @@
-import React from 'react';
 import { defineSlots } from '@sima-land/ui-nucleons/helpers/define-slots';
 import { ProductInfoProps } from './types';
 import { ProductInfoContext } from './utils';

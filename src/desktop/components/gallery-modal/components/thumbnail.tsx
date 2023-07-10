@@ -1,4 +1,4 @@
-import React from 'react';
+import type { MouseEventHandler } from 'react';
 import { MediaType } from '../types';
 import { ImageOverlay } from './image-overlay';
 import PlaySVG from '@sima-land/ui-quarks/icons/24x24/Filled/Play';
@@ -13,7 +13,7 @@ export interface ThumbnailProps {
   src?: string;
   alt?: string;
   checked?: boolean;
-  onClick?: React.MouseEventHandler;
+  onClick?: MouseEventHandler;
   className?: string;
 }
 

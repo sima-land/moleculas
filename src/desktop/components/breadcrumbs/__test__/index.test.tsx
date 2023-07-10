@@ -1,4 +1,3 @@
-import React from 'react';
 import { Breadcrumbs } from '..';
 import { render, fireEvent, act } from '@testing-library/react';
 import items from './test-items';

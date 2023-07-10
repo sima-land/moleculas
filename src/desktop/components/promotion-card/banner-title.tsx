@@ -1,4 +1,4 @@
-import React from 'react';
+import { ReactNode } from 'react';
 import { PromotionType } from './types';
 import { Timer } from '@sima-land/ui-nucleons/timer';
 import { formatISO } from 'date-fns';
@@ -16,7 +16,7 @@ export interface BannerTitleProps {
  * @return Элемент.
  */
 export const BannerTitle = ({ promotionType, volumeDiscount, dueDate }: BannerTitleProps) => {
-  let content: React.ReactNode = null;
+  let content: ReactNode = null;
 
   switch (promotionType) {
     case '3-by-2':

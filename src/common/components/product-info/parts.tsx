@@ -1,4 +1,11 @@
-import React, { createContext, ReactNode, useContext, useEffect, useState } from 'react';
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+  MouseEventHandler,
+} from 'react';
 import { Link, LinkProps } from '@sima-land/ui-nucleons/link';
 import { HintProps } from '@sima-land/ui-nucleons/hint-deprecated';
 import { Price } from '@sima-land/ui-nucleons/price';
@@ -19,8 +26,8 @@ export interface ImageProps {
   src?: string;
   alt?: string;
   href?: string;
-  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
-  children?: React.ReactNode;
+  onClick?: MouseEventHandler<HTMLAnchorElement>;
+  children?: ReactNode;
   opacity?: number;
 }
 
@@ -40,7 +47,7 @@ const ImageButton = ({
 }: {
   icon: StrokedSVGProps['component'];
   fill?: string;
-  onClick?: React.MouseEventHandler<HTMLDivElement>;
+  onClick?: MouseEventHandler<HTMLDivElement>;
   hint?: string;
   hintDirection?: HintProps['direction'];
   'data-testid'?: string;
@@ -240,7 +247,7 @@ const FooterContext = createContext<{ className?: string }>({
  * @param props Свойства.
  * @return Элемент.
  */
-const Footer: React.FC = ({ children }) => {
+const Footer = ({ children }: { children?: ReactNode }) => {
   const { className = cx('footer') } = useContext(FooterContext);
 
   return (
@@ -261,7 +268,7 @@ const CartControl = ({
   markupText,
   loading,
 }: {
-  children?: React.ReactNode;
+  children?: ReactNode;
   stepText?: string;
   markupText?: string;
   loading?: boolean;

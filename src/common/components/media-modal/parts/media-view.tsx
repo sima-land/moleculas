@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, VideoHTMLAttributes } from 'react';
+import { useEffect, useRef, VideoHTMLAttributes } from 'react';
 import { ImageOverlay } from '../../../../desktop/components/gallery-modal/components/image-overlay';
 import { MediaData } from '../types';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';

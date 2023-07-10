@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { ReactNode, useState } from 'react';
 import { action } from '@storybook/addon-actions';
 import { ProductInfo, Parts } from '..';
 import { Badge, BadgeProps } from '../../badge';
@@ -39,7 +39,7 @@ const data = {
   trademarkUrl: 'https://www.sima-land.ru',
 };
 
-const Bootstrap: React.FC = ({ children }) => (
+const Bootstrap = ({ children }: { children?: ReactNode }) => (
   <div style={{ display: 'flex', alignItems: 'flex-start' }}>
     <div style={{ width: '300px', border: '20px solid #ddd' }}>{children}</div>
     <div style={{ width: '240px', border: '20px solid #ddd', marginLeft: '20px' }}>{children}</div>

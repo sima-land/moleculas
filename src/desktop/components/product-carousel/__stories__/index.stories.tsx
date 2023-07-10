@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, ReactNode } from 'react';
 import { action } from '@storybook/addon-actions';
 import { ProductCarousel } from '..';
 import { ProductInfo, Parts } from '../../../../common/components/product-info';
@@ -28,7 +28,7 @@ const Placeholder = () => (
   <div style={{ borderRadius: 4, background: '#eee', height: 40, margin: '20px 0' }} />
 );
 
-const DemoBlock = ({ children }: { children: React.ReactNode }) => (
+const DemoBlock = ({ children }: { children: ReactNode }) => (
   <DesktopLayout>
     <Placeholder />
     {children}

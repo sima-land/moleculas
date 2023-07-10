@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react';
+import { CSSProperties } from 'react';
 import { InteractiveImage, Parts } from '..';
 import imageSrc from './image.png';
 
