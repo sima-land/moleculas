@@ -1,0 +1,33 @@
+.layout {
+  display: flex;
+  &.flow-vertical {
+    flex-direction: column;
+    justify-content: center;
+    .slot-buttons {
+      display: flex;
+      justify-content: center;
+    }
+    .slot-form {
+      margin-top: 24px;
+    }
+  }
+  &.flow-horizontal {
+    flex-direction: row;
+    justify-content: space-between;
+    .slot-form {
+      margin-left: 16px;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  .submit + .input {
+    margin-left: 16px;
+  }
+}
+
+.input {
+  width: 108px;
+}
