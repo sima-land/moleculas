@@ -175,10 +175,11 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                          d="M2 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -199,9 +200,10 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                          d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
                         />
                       </svg>
                     </button>
@@ -375,10 +377,11 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                          d="M2 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -399,9 +402,10 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                          d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
                         />
                       </svg>
                     </button>
@@ -647,10 +651,11 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                          d="M2 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -671,9 +676,10 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                          d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
                         />
                       </svg>
                     </button>
@@ -847,10 +853,11 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                          d="M2 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -871,9 +878,10 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                          d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
                         />
                       </svg>
                     </button>
@@ -1047,10 +1055,11 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                          d="M2 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -1071,9 +1080,10 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                          d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
                         />
                       </svg>
                     </button>
@@ -1282,10 +1292,11 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                          d="M2 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -1306,9 +1317,10 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                          d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
                         />
                       </svg>
                     </button>
@@ -1482,10 +1494,11 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                          d="M2 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -1506,9 +1519,10 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                          d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
                         />
                       </svg>
                     </button>
@@ -1688,10 +1702,11 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                          d="M2 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -1712,9 +1727,10 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                          d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
                         />
                       </svg>
                     </button>
@@ -1894,10 +1910,11 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                          d="M2 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -1918,9 +1935,10 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                          d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
                         />
                       </svg>
                     </button>
@@ -2094,10 +2112,11 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                          d="M2 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -2118,9 +2137,10 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                          d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
                         />
                       </svg>
                     </button>
@@ -2310,10 +2330,11 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
-                  d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                  d="M2 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
                   fill-rule="evenodd"
                 />
               </svg>
@@ -2334,9 +2355,10 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                  d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
                 />
               </svg>
             </button>
@@ -2510,10 +2532,11 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
-                  d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                  d="M2 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
                   fill-rule="evenodd"
                 />
               </svg>
@@ -2534,9 +2557,10 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                  d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
                 />
               </svg>
             </button>
@@ -2782,10 +2806,11 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
-                  d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                  d="M2 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
                   fill-rule="evenodd"
                 />
               </svg>
@@ -2806,9 +2831,10 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                  d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
                 />
               </svg>
             </button>
@@ -2982,10 +3008,11 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
-                  d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                  d="M2 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
                   fill-rule="evenodd"
                 />
               </svg>
@@ -3006,9 +3033,10 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                  d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
                 />
               </svg>
             </button>
@@ -3182,10 +3210,11 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
-                  d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                  d="M2 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
                   fill-rule="evenodd"
                 />
               </svg>
@@ -3206,9 +3235,10 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                  d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
                 />
               </svg>
             </button>
@@ -3417,10 +3447,11 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
-                  d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                  d="M2 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
                   fill-rule="evenodd"
                 />
               </svg>
@@ -3441,9 +3472,10 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                  d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
                 />
               </svg>
             </button>
@@ -3617,10 +3649,11 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
-                  d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                  d="M2 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
                   fill-rule="evenodd"
                 />
               </svg>
@@ -3641,9 +3674,10 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                  d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
                 />
               </svg>
             </button>
@@ -3823,10 +3857,11 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
-                  d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                  d="M2 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
                   fill-rule="evenodd"
                 />
               </svg>
@@ -3847,9 +3882,10 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                  d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
                 />
               </svg>
             </button>
@@ -4029,10 +4065,11 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
-                  d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                  d="M2 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
                   fill-rule="evenodd"
                 />
               </svg>
@@ -4053,9 +4090,10 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                  d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
                 />
               </svg>
             </button>
@@ -4229,10 +4267,11 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
-                  d="M2 8a1 1 0 011-1h10a1 1 0 110 2H3a1 1 0 01-1-1z"
+                  d="M2 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
                   fill-rule="evenodd"
                 />
               </svg>
@@ -4253,9 +4292,10 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M9 3a1 1 0 00-2 0v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3z"
+                  d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
                 />
               </svg>
             </button>
