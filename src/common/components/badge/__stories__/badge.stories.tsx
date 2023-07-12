@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Badge } from '..';
+import { Badge } from '@sima-land/moleculas/common/components/badge';
 import { addDays, addMonths } from 'date-fns';
 import { Hint, useHintFloating, useHintOnHover } from '@sima-land/ui-nucleons/hint';
 

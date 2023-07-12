@@ -1,5 +1,4 @@
-import { action } from '@storybook/addon-actions';
-import { Breadcrumbs } from '..';
+import { Breadcrumbs } from '@sima-land/moleculas/desktop/components/breadcrumbs';
 import items from '../__test__/test-items';
 
 export default {
@@ -10,16 +9,18 @@ export default {
   },
 };
 
-export const Primary = () => (
-  <>
-    <div style={{ background: '#ddd', height: 32 }} />
-    <Breadcrumbs
-      items={items}
-      onSiblingsPopupOpen={action('popup was opened')}
-      isSiblingActive={s => s.isActive}
-    />
-    <div style={{ background: '#ddd', height: 32 }} />
-  </>
-);
+export function Primary() {
+  return (
+    <>
+      <Breadcrumbs
+        items={items}
+        onSiblingsPopupOpen={() => {
+          console.log('Popup с "соседними" ссылками открылся');
+        }}
+        isSiblingActive={sibling => sibling.isActive}
+      />
+    </>
+  );
+}
 
 Primary.storyName = 'Простой пример';

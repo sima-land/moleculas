@@ -1,4 +1,4 @@
-import { PersonInfo } from '..';
+import { PersonInfo } from '@sima-land/moleculas/mobile/components/person-info';
 import { Screen } from '@sima-land/ui-nucleons/screen';
 
 export default {

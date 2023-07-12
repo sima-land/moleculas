@@ -1,9 +1,9 @@
-import { ActionCircles } from '..';
+import { ActionCircles } from '@sima-land/moleculas/mobile/components/action-circles';
 import { Alert, AlertBody } from '@sima-land/ui-nucleons/alert';
-import StatementSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Statement';
-import ThumbsUpSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/ThumbsUp';
 import { BottomBar } from '@sima-land/ui-nucleons/bottom-bar';
 import { CleanButton, CleanGroup } from '@sima-land/ui-nucleons/clean-buttons';
+import StatementSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Statement';
+import ThumbsUpSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/ThumbsUp';
 
 export default {
   title: 'mobile/ActionCircles',

@@ -1,15 +1,14 @@
-import { useState, ReactNode } from 'react';
-import { action } from '@storybook/addon-actions';
-import { ProductCarousel } from '..';
-import { ProductInfo, Parts } from '../../../../common/components/product-info';
-import { DesktopLayout } from '@sima-land/ui-nucleons/layout';
-import { COLORS } from '@sima-land/ui-nucleons/colors';
+import { ProductCarousel } from '@sima-land/moleculas/desktop/components/product-carousel';
+import { ProductInfo, Parts } from '@sima-land/moleculas/common/components/product-info';
+import { Badge } from '@sima-land/moleculas/common/components/badge';
+import { ReactNode, useState } from 'react';
+import { Layout } from '@sima-land/ui-nucleons/layout';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
-import { Badge } from '../../../../common/components/badge';
+import { Button } from '@sima-land/ui-nucleons/button';
+import { COLORS } from '@sima-land/ui-nucleons/colors';
 import FavSVG from '@sima-land/ui-quarks/icons/24x24/Filled/Favorite';
 import NotFavSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
 import { items } from '../__test__/test-items';
-import { Button } from '@sima-land/ui-nucleons/button';
 
 export default {
   title: 'desktop/ProductCarousel',
@@ -29,11 +28,11 @@ const Placeholder = () => (
 );
 
 const DemoBlock = ({ children }: { children: ReactNode }) => (
-  <DesktopLayout>
+  <Layout>
     <Placeholder />
     {children}
     <Placeholder />
-  </DesktopLayout>
+  </Layout>
 );
 
 export const Primary = () => {
@@ -49,7 +48,7 @@ export const Primary = () => {
               href={item.url}
               onClick={e => {
                 e.preventDefault();
-                action('Клик: ссылка на товар (изображение)')();
+                console.log('Клик: ссылка на товар (изображение)');
               }}
             >
               <Parts.ImageButton
@@ -58,7 +57,7 @@ export const Primary = () => {
                 fill={wished[index] ? COLORS.get('additional-red') : undefined}
                 onClick={() => {
                   toggleWish(s => ({ ...s, [index]: !s[index] }));
-                  action('Клик: добавить в избранное')();
+                  console.log('Клик: добавить в избранное');
                 }}
                 data-testid='favorite-button'
               />
@@ -67,7 +66,7 @@ export const Primary = () => {
             {item.badges && (
               <Parts.Badges lineLimit={1}>
                 {item.badges.map((badge, badgeIndex) => (
-                  <Badge key={badgeIndex} {...badge} onClick={action('Клик: шильдик')} />
+                  <Badge key={badgeIndex} {...badge} onClick={() => console.log('Клик: шильдик')} />
                 ))}
               </Parts.Badges>
             )}
@@ -82,7 +81,7 @@ export const Primary = () => {
               href={item.url}
               onClick={e => {
                 e.preventDefault();
-                action('Клик: ссылка на товар')();
+                console.log('Клик: ссылка на товар');
               }}
             >
               {item.name}
@@ -120,7 +119,7 @@ export const Unavailable = () => {
               href={item.url}
               onClick={e => {
                 e.preventDefault();
-                action('Клик: ссылка на товар (изображение)')();
+                console.log('Клик: ссылка на товар (изображение)');
               }}
             >
               <Parts.ImageButton
@@ -129,7 +128,7 @@ export const Unavailable = () => {
                 fill={wished[index] ? COLORS.get('additional-red') : undefined}
                 onClick={() => {
                   toggleWish(s => ({ ...s, [index]: !s[index] }));
-                  action('Клик: добавить в избранное')();
+                  console.log('Клик: добавить в избранное');
                 }}
                 data-testid='favorite-button'
               />
@@ -138,7 +137,7 @@ export const Unavailable = () => {
             {item.badges && (
               <Parts.Badges lineLimit={1}>
                 {item.badges.map((badge, badgeIndex) => (
-                  <Badge key={badgeIndex} {...badge} onClick={action('Клик: шильдик')} />
+                  <Badge key={badgeIndex} {...badge} onClick={() => console.log('Клик: шильдик')} />
                 ))}
               </Parts.Badges>
             )}
@@ -154,14 +153,16 @@ export const Unavailable = () => {
               href={item.url}
               onClick={e => {
                 e.preventDefault();
-                action('Клик: ссылка на товар')();
+                console.log('Клик: ссылка на товар');
               }}
             >
               {item.name}
             </Parts.Title>
 
             <Parts.Footer>
-              <Parts.WaitListAddButton onClick={action('Клик: добавление в лист ожидания')} />
+              <Parts.WaitListAddButton
+                onClick={() => console.log('Клик: добавление в лист ожидания')}
+              />
             </Parts.Footer>
           </ProductInfo>
         ))}
@@ -182,7 +183,7 @@ export const Adult = () => (
             href={item.url}
             onClick={e => {
               e.preventDefault();
-              action('Клик: ссылка на товар (изображение)')();
+              console.log('Клик: ссылка на товар (изображение)');
             }}
           />
 
@@ -196,14 +197,14 @@ export const Adult = () => (
             href={item.url}
             onClick={e => {
               e.preventDefault();
-              action('Клик: ссылка на товар')();
+              console.log('Клик: ссылка на товар');
             }}
           >
             {item.name}
           </Parts.Title>
 
           <Parts.Footer>
-            <Parts.AdultConfirmButton onClick={action('Клик: подтверждение возраста')} />
+            <Parts.AdultConfirmButton onClick={() => console.log('Клик: подтверждение возраста')} />
           </Parts.Footer>
         </ProductInfo>
       ))}
@@ -231,7 +232,7 @@ export const DeferredData = () => {
               href={item.url}
               onClick={e => {
                 e.preventDefault();
-                action('Клик: ссылка на товар (изображение)')();
+                console.log('Клик: ссылка на товар (изображение)');
               }}
             >
               <Parts.ImageButton
@@ -240,7 +241,7 @@ export const DeferredData = () => {
                 fill={wished[index] ? COLORS.get('additional-red') : undefined}
                 onClick={() => {
                   toggleWish(s => ({ ...s, [index]: !s[index] }));
-                  action('Клик: добавить в избранное')();
+                  console.log('Клик: добавить в избранное');
                 }}
                 data-testid='favorite-button'
               />
@@ -249,7 +250,7 @@ export const DeferredData = () => {
             {item.badges && (
               <Parts.Badges lineLimit={1}>
                 {item.badges.map((badge, badgeIndex) => (
-                  <Badge key={badgeIndex} {...badge} onClick={action('Клик: шильдик')} />
+                  <Badge key={badgeIndex} {...badge} onClick={() => console.log('Клик: шильдик')} />
                 ))}
               </Parts.Badges>
             )}
@@ -264,7 +265,7 @@ export const DeferredData = () => {
               href={item.url}
               onClick={e => {
                 e.preventDefault();
-                action('Клик: ссылка на товар')();
+                console.log('Клик: ссылка на товар');
               }}
             >
               {item.name}
@@ -297,7 +298,7 @@ export const FewItems = () => (
             href={item.url}
             onClick={e => {
               e.preventDefault();
-              action('Клик: ссылка на товар (изображение)')();
+              console.log('Клик: ссылка на товар (изображение)');
             }}
           >
             <Parts.ImageButton
@@ -310,7 +311,7 @@ export const FewItems = () => (
           {item.badges && (
             <Parts.Badges lineLimit={1}>
               {item.badges.map((badge, badgeIndex) => (
-                <Badge key={badgeIndex} {...badge} onClick={action('Клик: шильдик')} />
+                <Badge key={badgeIndex} {...badge} onClick={() => console.log('Клик: шильдик')} />
               ))}
             </Parts.Badges>
           )}
@@ -325,7 +326,7 @@ export const FewItems = () => (
             href={item.url}
             onClick={e => {
               e.preventDefault();
-              action('Клик: ссылка на товар')();
+              console.log('Клик: ссылка на товар');
             }}
           >
             {item.name}

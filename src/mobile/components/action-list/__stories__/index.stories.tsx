@@ -1,4 +1,4 @@
-import { ActionList } from '..';
+import { ActionList } from '@sima-land/moleculas/mobile/components/action-list';
 import { Alert, AlertBody } from '@sima-land/ui-nucleons/alert';
 import { BottomBar } from '@sima-land/ui-nucleons/bottom-bar';
 import { CleanButton, CleanGroup } from '@sima-land/ui-nucleons/clean-buttons';

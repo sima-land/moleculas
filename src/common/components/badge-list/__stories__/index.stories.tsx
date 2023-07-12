@@ -1,8 +1,21 @@
+import { BadgeList } from '@sima-land/moleculas/common/components/badge-list';
+import { Badge, BadgeProps } from '@sima-land/moleculas/common/components/badge';
 import { ReactNode, useState } from 'react';
-import { BadgeList } from '..';
-import { Badge, BadgeProps } from '../../badge';
 import { addMonths } from 'date-fns';
 import { Hint, useHintFloating, useHintFloatingStyle } from '@sima-land/ui-nucleons/hint';
+
+export default {
+  title: 'common/BadgeList',
+  component: BadgeList,
+  parameters: {
+    layout: 'padded',
+    docs: {
+      description: {
+        component: 'Компонент списка шильдиков',
+      },
+    },
+  },
+};
 
 const items: BadgeProps[] = [
   {
@@ -24,19 +37,6 @@ const items: BadgeProps[] = [
     ],
   },
 ];
-
-export default {
-  title: 'common/BadgeList',
-  component: BadgeList,
-  parameters: {
-    layout: 'padded',
-    docs: {
-      description: {
-        component: 'Компонент списка шильдиков',
-      },
-    },
-  },
-};
 
 const DemoBlock = ({ children }: { children: ReactNode }) => (
   <div style={{ display: 'flex' }}>

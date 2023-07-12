@@ -1,14 +1,14 @@
+import { ProductSlider } from '@sima-land/moleculas/mobile/components/product-slider';
 import { ReactNode, useState } from 'react';
-import { action } from '@storybook/addon-actions';
-import { ProductSlider } from '..';
-import { ProductInfo, Parts } from '../../../../common/components/product-info';
-import { Badge } from '../../../../common/components/badge';
+import { ProductInfo, Parts } from '@sima-land/moleculas/common/components/product-info';
+import { Badge } from '@sima-land/moleculas/common/components/badge';
 import { MobileLayout } from '@sima-land/ui-nucleons/layout';
 import { Button } from '@sima-land/ui-nucleons/button';
 import { COLORS } from '@sima-land/ui-nucleons/colors';
-import { items } from '../__test__/test-items';
 import FavSVG from '@sima-land/ui-quarks/icons/24x24/Filled/Favorite';
 import NotFavSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
+import { items } from '../__test__/test-items';
+import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'mobile/ProductSlider',

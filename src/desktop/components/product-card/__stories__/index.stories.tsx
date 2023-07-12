@@ -1,12 +1,11 @@
+import { ProductCard } from '@sima-land/moleculas/desktop/components/product-card';
 import { ReactNode, useState } from 'react';
-import { action } from '@storybook/addon-actions';
-import { ProductCard } from '..';
-import { ProductInfo, Parts } from '../../../../common/components/product-info';
+import { ProductInfo, Parts } from '@sima-land/moleculas/common/components/product-info';
+import { Badge, BadgeProps } from '@sima-land/moleculas/common/components/badge';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import { COLORS } from '@sima-land/ui-nucleons/colors';
 import FavSVG from '@sima-land/ui-quarks/icons/24x24/Filled/Favorite';
 import NotFavSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
-import { Badge, BadgeProps } from '../../../../common/components/badge';
 
 export default {
   title: 'desktop/ProductCard',
@@ -55,7 +54,7 @@ export const Primary = () => {
             href={data.url}
             onClick={e => {
               e.preventDefault();
-              action('Клик: ссылка на товар (изображение)')();
+              console.log('Клик: ссылка на товар (изображение)');
             }}
           >
             <Parts.ImageButton
@@ -64,7 +63,7 @@ export const Primary = () => {
               fill={wished ? COLORS.get('additional-red') : undefined}
               onClick={() => {
                 toggleWish(a => !a);
-                action('Клик: добавить в избранное')();
+                console.log('Клик: добавить в избранное');
               }}
               data-testid='favorite-button'
             />
@@ -73,7 +72,7 @@ export const Primary = () => {
           {data.badges && (
             <Parts.Badges lineLimit={2}>
               {data.badges.map((badge, badgeIndex) => (
-                <Badge key={badgeIndex} {...badge} onClick={action('Клик: шильдик')} />
+                <Badge key={badgeIndex} {...badge} onClick={() => console.log('Клик: шильдик')} />
               ))}
             </Parts.Badges>
           )}
@@ -88,7 +87,7 @@ export const Primary = () => {
             href={data.url}
             onClick={e => {
               e.preventDefault();
-              action('Клик: ссылка на товар')();
+              console.log('Клик: ссылка на товар');
             }}
           >
             {data.name}
@@ -98,7 +97,7 @@ export const Primary = () => {
             href={data.trademark.url}
             onClick={e => {
               e.preventDefault();
-              action('Клик: ссылка на торговую марку')();
+              console.log('Клик: ссылка на торговую марку');
             }}
           >
             {data.trademark.name}
@@ -134,7 +133,7 @@ export const NotEnough = () => {
             href={data.url}
             onClick={e => {
               e.preventDefault();
-              action('Клик: ссылка на товар (изображение)')();
+              console.log('Клик: ссылка на товар (изображение)');
             }}
           >
             <Parts.ImageButton
@@ -143,7 +142,7 @@ export const NotEnough = () => {
               fill={wished ? COLORS.get('additional-red') : undefined}
               onClick={() => {
                 toggleWish(a => !a);
-                action('Клик: добавить в избранное')();
+                console.log('Клик: добавить в избранное');
               }}
               data-testid='favorite-button'
             />
@@ -151,7 +150,7 @@ export const NotEnough = () => {
 
           <Parts.Badges lineLimit={1}>
             {data.badges.map((badge, index) => (
-              <Badge key={index} {...badge} onClick={action('Клик: шильдик')} />
+              <Badge key={index} {...badge} onClick={() => console.log('Клик: шильдик')} />
             ))}
           </Parts.Badges>
 
@@ -166,7 +165,7 @@ export const NotEnough = () => {
             href={data.url}
             onClick={e => {
               e.preventDefault();
-              action('Клик: ссылка на товар')();
+              console.log('Клик: ссылка на товар');
             }}
           >
             {data.name}
@@ -176,7 +175,7 @@ export const NotEnough = () => {
             href={data.trademark.url}
             onClick={e => {
               e.preventDefault();
-              action('Клик: ссылка на торговую марку')();
+              console.log('Клик: ссылка на торговую марку');
             }}
           >
             {data.trademark.name}

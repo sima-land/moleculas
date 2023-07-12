@@ -1,7 +1,10 @@
-import { CSSProperties, useState } from 'react';
+import {
+  SelectScreenLayout,
+  SelectScreenOption,
+} from '@sima-land/moleculas/mobile/components/select-screen';
 import { Screen } from '@sima-land/ui-nucleons/screen';
+import { CSSProperties, useState } from 'react';
 import { random } from 'lodash';
-import { SelectScreenLayout, SelectScreenOption } from '..';
 import { TextField } from '@sima-land/ui-nucleons/text-field';
 import { MobileLayout } from '@sima-land/ui-nucleons/layout';
 

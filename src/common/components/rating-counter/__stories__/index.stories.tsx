@@ -1,4 +1,4 @@
-import { RatingCounter } from '..';
+import { RatingCounter } from '@sima-land/moleculas/common/components/rating-counter';
 
 export default {
   title: 'common/RatingCounter',

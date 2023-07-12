@@ -1,4 +1,3 @@
-import { Modal } from '@sima-land/ui-nucleons/modal';
 import {
   MediaLayout,
   MediaHeader,
@@ -10,7 +9,8 @@ import {
   Thumbnails,
   Thumbnail,
   MediaContent,
-} from '..';
+} from '@sima-land/moleculas/common/components/media-modal';
+import { Modal } from '@sima-land/ui-nucleons/modal';
 import { Tabs } from '@sima-land/ui-nucleons/tabs';
 import { Layout } from '@sima-land/ui-nucleons/layout';
 import { Review } from '../parts/review';
