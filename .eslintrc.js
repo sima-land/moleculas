@@ -10,20 +10,24 @@ module.exports = {
         'react/react-in-jsx-scope': 'off',
       },
     },
+
+    // stories
     {
-      files: ['./**/__stories__/**/*', './**/__stories__/**/*'],
+      files: ['./**/__stories__/**/*'],
       rules: {
         'no-alert': 'off',
+        'no-console': 'off',
         'import/no-anonymous-default-export': 'off',
+        'storybook/no-title-property-in-meta': 'off',
       },
     },
+
+    // тесты и stories
     {
-      files: ['./**/__stories__/**/*', './**/__stories__/**/*', './**/*.test.*', './**/*.test.*'],
+      files: ['./**/__stories__/**/*', './**/*.test.*', './**/*.spec.*'],
       rules: {
         'require-jsdoc': 'off',
         'jsdoc/require-jsdoc': 'off',
-        'react/prop-types': 'off',
-        'import/no-anonymous-default-export': 'off',
       },
     },
   ],
