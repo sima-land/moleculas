@@ -1,4 +1,5 @@
 import { Alert, AlertBody } from '@sima-land/ui-nucleons/alert';
+import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
 import { Layout } from '@sima-land/ui-nucleons/layout';
 import { getPaginationItems, Pagination } from '@sima-land/ui-nucleons/pagination';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
@@ -37,6 +38,36 @@ export function VerticalLayout() {
 }
 
 VerticalLayout.storyName = 'Вертикальная раскладка';
+
+export function ChangeLayout() {
+  const [page, setPage] = useState(1);
+  const desktop = useBreakpoint('xs+');
+
+  return (
+    <Layout>
+      <PaginationControls
+        current={page}
+        total={99}
+        onPageChange={setPage}
+        flow={desktop ? 'horizontal' : 'vertical'}
+      />
+    </Layout>
+  );
+}
+
+ChangeLayout.storyName = 'Смена раскладки по breakpoint';
+
+export function WithoutForm() {
+  const [page, setPage] = useState(1);
+
+  return (
+    <Layout>
+      <PaginationControls withForm={false} current={page} total={6} onPageChange={setPage} />
+    </Layout>
+  );
+}
+
+WithoutForm.storyName = 'Без формы';
 
 export function Customization() {
   const [page, setPage] = useState(1);
