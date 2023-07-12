@@ -1,6 +1,21 @@
+import {
+  PromotionCard,
+  PromotionCardProps,
+} from '@sima-land/moleculas/desktop/components/promotion-card';
 import { addDays, addHours, addYears } from 'date-fns';
 
-import { PromotionCard, PromotionCardProps } from '..';
+export default {
+  title: 'desktop/PromotionCard',
+  component: PromotionCard,
+  parameters: {
+    layout: 'padded',
+    docs: {
+      description: {
+        component: 'Компонент карточки акции',
+      },
+    },
+  },
+};
 
 const demoItems: PromotionCardProps[] = [
   {
@@ -39,42 +54,33 @@ const demoItems: PromotionCardProps[] = [
   },
 ];
 
-export default {
-  title: 'desktop/PromotionCard',
-  component: PromotionCard,
-  parameters: {
-    layout: 'padded',
-    docs: {
-      description: {
-        component: 'Компонент карточки акции',
-      },
-    },
-  },
-};
-
-export const Primary = () => (
-  <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
-    {demoItems.map((props, index) => (
-      <PromotionCard
-        key={index}
-        style={{ width: '320px', margin: '0 32px 32px 0', flexShrink: 0 }}
-        {...props}
-      />
-    ))}
-  </div>
-);
+export function Primary() {
+  return (
+    <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
+      {demoItems.map((props, index) => (
+        <PromotionCard
+          key={index}
+          style={{ width: '320px', margin: '0 32px 32px 0', flexShrink: 0 }}
+          {...props}
+        />
+      ))}
+    </div>
+  );
+}
 
 Primary.storyName = 'Простой пример';
 
-export const Placeholder = () => (
-  <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
-    {demoItems.map((_, index) => (
-      <PromotionCard.Placeholder
-        key={index}
-        style={{ width: '320px', margin: '0 32px 32px 0', flexShrink: 0 }}
-      />
-    ))}
-  </div>
-);
+export function Placeholder() {
+  return (
+    <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
+      {demoItems.map((_, index) => (
+        <PromotionCard.Placeholder
+          key={index}
+          style={{ width: '320px', margin: '0 32px 32px 0', flexShrink: 0 }}
+        />
+      ))}
+    </div>
+  );
+}
 
 Placeholder.storyName = 'Загрузка';

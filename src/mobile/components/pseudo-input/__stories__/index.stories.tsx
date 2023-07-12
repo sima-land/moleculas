@@ -1,4 +1,4 @@
-import { PseudoInput } from '..';
+import { PseudoInput } from '@sima-land/moleculas/mobile/components/pseudo-input';
 
 export default {
   title: 'mobile/PseudoInput',

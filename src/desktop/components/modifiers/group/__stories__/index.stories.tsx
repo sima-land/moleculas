@@ -1,7 +1,7 @@
-import { FC, useState } from 'react';
+import { ModifiersGroup } from '@sima-land/moleculas/desktop/components/modifiers/group';
+import { ModifierButton } from '@sima-land/moleculas/desktop/components/modifiers/button';
+import { ReactNode, useState } from 'react';
 import { times } from 'lodash';
-import { ModifiersGroup } from '..';
-import { ModifierButton } from '../../button';
 import { COLORS } from '@sima-land/ui-nucleons/colors';
 
 export default {
@@ -12,7 +12,7 @@ export default {
   },
 };
 
-const DemoBlock: FC = ({ children }) => {
+const DemoBlock = ({ children }: { children?: ReactNode }) => {
   const Placeholder = () => (
     <div style={{ height: '48px', background: '#eee', borderRadius: '4px' }} />
   );

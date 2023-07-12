@@ -1,6 +1,6 @@
 import { ModifierItemProps } from '../modifier-item';
 
-const withText: ModifierItemProps[] = [
+export const text: ModifierItemProps[] = [
   {
     name: '30 (98-104см)',
     selected: false,
@@ -39,7 +39,7 @@ const withText: ModifierItemProps[] = [
   },
 ];
 
-const withPhoto: ModifierItemProps[] = [
+export const image: ModifierItemProps[] = [
   {
     name: 'Карамельный фраппе',
     selected: false,
@@ -78,7 +78,7 @@ const withPhoto: ModifierItemProps[] = [
   },
 ];
 
-const withColor: ModifierItemProps[] = [
+export const color: ModifierItemProps[] = [
   {
     name: 'белый',
     selected: false,
@@ -116,11 +116,3 @@ const withColor: ModifierItemProps[] = [
     image: 'https://cdn3.static1-sima-land.com/items/2164215/0/140.jpg?v=0',
   },
 ];
-
-const items = {
-  withText,
-  withPhoto,
-  withColor,
-};
-
-export default items;

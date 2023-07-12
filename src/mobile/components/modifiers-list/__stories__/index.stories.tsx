@@ -1,6 +1,6 @@
-import { ModifiersList } from '..';
-import classes from './modifiers-list.module.scss';
-import items from './items';
+import { ModifiersList } from '@sima-land/moleculas/mobile/components/modifiers-list';
+import { CSSProperties } from 'react';
+import { text, color, image } from './items';
 
 export default {
   title: 'mobile/ModifiersList',
@@ -11,44 +11,53 @@ export default {
   },
 };
 
-export const Primary = () => (
-  <>
-    <div className={classes.list}>
-      <ModifiersList items={items.withPhoto} currencyGrapheme='₽' />
-    </div>
-  </>
-);
+const styles: CSSProperties = {
+  width: '320px',
+  background: '#fff',
+};
+
+export function Primary() {
+  return (
+    <>
+      <div style={styles}>
+        <ModifiersList items={image} currencyGrapheme='₽' />
+      </div>
+    </>
+  );
+}
 
 Primary.storyName = 'Простой пример';
 
-export const Colors = () => (
-  <>
-    <div className={classes.list}>
-      <ModifiersList items={items.withColor} currencyGrapheme='₽' />
-    </div>
-  </>
-);
+export function Colors() {
+  return (
+    <>
+      <div style={styles}>
+        <ModifiersList items={color} currencyGrapheme='₽' />
+      </div>
+    </>
+  );
+}
 
 Colors.storyName = 'Модификаторы цвета';
 
-export const Text = () => (
-  <>
-    <div className={classes.list}>
-      <ModifiersList items={items.withText} currencyGrapheme='₽' />
-    </div>
-  </>
-);
+export function Text() {
+  return (
+    <>
+      <div style={styles}>
+        <ModifiersList items={text} currencyGrapheme='₽' />
+      </div>
+    </>
+  );
+}
 
 Text.storyName = 'Текстовые модификаторы';
 
-export const WithSizeTableURL = () => (
-  <div className={classes.list}>
-    <ModifiersList
-      items={[...items.withPhoto, ...items.withColor]}
-      currencyGrapheme='₽'
-      sizesTableUrl='/'
-    />
-  </div>
-);
+export function WithSizeTableURL() {
+  return (
+    <div style={styles}>
+      <ModifiersList items={[...image, ...color]} currencyGrapheme='₽' sizesTableUrl='/' />
+    </div>
+  );
+}
 
 WithSizeTableURL.storyName = 'Ссылка на таблицу размеров';

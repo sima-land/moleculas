@@ -1,8 +1,7 @@
+import { GalleryModal } from '@sima-land/moleculas/desktop/components/gallery-modal';
 import { useState } from 'react';
-import { GalleryModal } from '..';
-import { action } from '@storybook/addon-actions';
-import { data } from '../__mocks__';
 import { Link } from '@sima-land/ui-nucleons/link';
+import { data } from '../__mocks__';
 
 export default {
   title: 'desktop/GalleryModal',
@@ -23,8 +22,12 @@ const longText =
 export const Primary = () => (
   <GalleryModal
     media={data.media}
-    onClose={action('GalleryModal:close')}
-    onVideoEvent={e => action('GalleryModal:video-event')(e.type)}
+    onClose={() => {
+      console.log('Окно закрыто');
+    }}
+    onVideoEvent={event => {
+      console.log(`Событие видео "${event.type}"`);
+    }}
   />
 );
 
@@ -37,14 +40,20 @@ export const WithReview = () => {
     <GalleryModal
       media={data.media}
       onMediaChange={(_, nextIndex) => setIndex(nextIndex)}
-      onClose={action('GalleryModal:close')}
+      onClose={() => {
+        console.log('Окно закрыто');
+      }}
       review={{
         rating: 3.2,
         author: 'Пелагеевская Вероника Сергеевна',
         content: `[${index + 1}] ${index % 2 === 0 ? longText : longText.slice(0, 80)}`,
       }}
-      onGoToReview={() => action('GalleryModal:go-to-review')()}
-      onVideoEvent={e => action('GalleryModal:video-event')(e.type)}
+      onGoToReview={() => {
+        console.log('Нажата кнопка перехода к отзыву');
+      }}
+      onVideoEvent={event => {
+        console.log(`Событие видео "${event.type}"`);
+      }}
     />
   );
 };
@@ -54,14 +63,20 @@ WithReview.storyName = 'С отзывом';
 export const WithReviewShort = () => (
   <GalleryModal
     media={data.media}
-    onClose={action('GalleryModal:close')}
+    onClose={() => {
+      console.log('Окно закрыто');
+    }}
     review={{
       rating: 3.2,
       author: 'Пелагеевская Вероника Сергеевна',
       content: longText.slice(0, 140),
     }}
-    onGoToReview={() => action('GalleryModal:go-to-review')()}
-    onVideoEvent={e => action('GalleryModal:video-event')(e.type)}
+    onGoToReview={() => {
+      console.log('Нажата кнопка перехода к отзыву');
+    }}
+    onVideoEvent={event => {
+      console.log(`Событие видео "${event.type}"`);
+    }}
   />
 );
 
@@ -70,14 +85,20 @@ WithReviewShort.storyName = 'С коротким отзывом';
 export const WithReviewLoading = () => (
   <GalleryModal
     media={data.media}
-    onClose={action('GalleryModal:close')}
+    onClose={() => {
+      console.log('Окно закрыто');
+    }}
     review={{
       rating: 3.2,
       author: 'Пелагеевская Вероника Сергеевна',
       loading: true,
     }}
-    onGoToReview={() => action('GalleryModal:go-to-review')()}
-    onVideoEvent={e => action('GalleryModal:video-event')(e.type)}
+    onGoToReview={() => {
+      console.log('Нажата кнопка перехода к отзыву');
+    }}
+    onVideoEvent={event => {
+      console.log(`Событие видео "${event.type}"`);
+    }}
   />
 );
 
@@ -86,13 +107,19 @@ WithReviewLoading.storyName = 'Загрузка отзыва';
 export const WithReviewEmpty = () => (
   <GalleryModal
     media={data.media}
-    onClose={action('GalleryModal:close')}
+    onClose={() => {
+      console.log('Окно закрыто');
+    }}
     review={{
       rating: 3.2,
       author: 'Пелагеевская Вероника Сергеевна',
     }}
-    onGoToReview={() => action('GalleryModal:go-to-review')()}
-    onVideoEvent={e => action('GalleryModal:video-event')(e.type)}
+    onGoToReview={() => {
+      console.log('Нажата кнопка перехода к отзыву');
+    }}
+    onVideoEvent={event => {
+      console.log(`Событие видео "${event.type}"`);
+    }}
   />
 );
 
@@ -119,15 +146,21 @@ export const WithReviewNotAffect = () => {
   return (
     <GalleryModal
       media={data.media}
-      onClose={action('GalleryModal:close')}
+      onClose={() => {
+        console.log('Окно закрыто');
+      }}
       review={{
         notAffectRating: true,
         rating: 3.2,
         author: 'Пелагеевская Вероника Сергеевна',
         content: markup,
       }}
-      onGoToReview={() => action('GalleryModal:go-to-review')()}
-      onVideoEvent={e => action('GalleryModal:video-event')(e.type)}
+      onGoToReview={() => {
+        console.log('Нажата кнопка перехода к отзыву');
+      }}
+      onVideoEvent={event => {
+        console.log(`Событие видео "${event.type}"`);
+      }}
     />
   );
 };

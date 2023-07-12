@@ -1,5 +1,8 @@
+import {
+  ModifierButton,
+  ModifierButtonProps,
+} from '@sima-land/moleculas/desktop/components/modifiers/button';
 import { random } from 'lodash';
-import { ModifierButton, ModifierButtonProps } from '..';
 
 export default {
   title: 'desktop/ModifierButton',

@@ -1,5 +1,3 @@
-import { Fragment, useState } from 'react';
-import { Modal } from '@sima-land/ui-nucleons/modal';
 import {
   MediaLayout,
   MediaHeader,
@@ -12,7 +10,9 @@ import {
   Thumbnail,
   MediaContent,
   MediaView,
-} from '..';
+} from '@sima-land/moleculas/common/components/media-modal';
+import { Fragment, useState } from 'react';
+import { Modal } from '@sima-land/ui-nucleons/modal';
 import { Tabs } from '@sima-land/ui-nucleons/tabs';
 import { TextButton } from '@sima-land/ui-nucleons/text-button';
 import { Layout } from '@sima-land/ui-nucleons/layout';

@@ -1,5 +1,5 @@
+import { ProductRow, ProductRowProps } from '@sima-land/moleculas/mobile/components/product-row';
 import { ReactNode } from 'react';
-import { ProductRow, ProductRowProps } from '..';
 
 export default {
   title: 'mobile/ProductRow',

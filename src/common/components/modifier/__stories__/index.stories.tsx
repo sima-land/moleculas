@@ -1,5 +1,9 @@
+import {
+  Modifier,
+  ModifierContent,
+  MoreButton,
+} from '@sima-land/moleculas/common/components/modifier';
 import { useState } from 'react';
-import { Modifier, ModifierContent, MoreButton } from '..';
 import { Expandable } from '@sima-land/ui-nucleons/expandable';
 import { Layout } from '@sima-land/ui-nucleons/layout';
 import { Carousel } from '@sima-land/ui-nucleons/carousel';

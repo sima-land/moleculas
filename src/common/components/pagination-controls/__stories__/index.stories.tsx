@@ -1,11 +1,14 @@
-import { Alert, AlertBody } from '@sima-land/ui-nucleons/alert';
-import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
-import { Layout } from '@sima-land/ui-nucleons/layout';
-import { getPaginationItems, Pagination } from '@sima-land/ui-nucleons/pagination';
-import { Stepper } from '@sima-land/ui-nucleons/stepper';
-import { TopBar } from '@sima-land/ui-nucleons/top-bar';
+import {
+  PaginationControls,
+  PageFormInput,
+} from '@sima-land/moleculas/common/components/pagination-controls';
 import { useState } from 'react';
-import { PageFormInput, PaginationControls } from '..';
+import { Pagination, getPaginationItems } from '@sima-land/ui-nucleons/pagination';
+import { Layout } from '@sima-land/ui-nucleons/layout';
+import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
+import { Alert, AlertBody } from '@sima-land/ui-nucleons/alert';
+import { TopBar } from '@sima-land/ui-nucleons/top-bar';
+import { Stepper } from '@sima-land/ui-nucleons/stepper';
 
 export default {
   title: 'common/PaginationControls',

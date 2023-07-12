@@ -1,4 +1,4 @@
-import { PersonInfo } from '..';
+import { PersonInfo } from '@sima-land/moleculas/desktop/components/person-info';
 import { Modal } from '@sima-land/ui-nucleons/modal';
 import { CleanButton, CleanGroup } from '@sima-land/ui-nucleons/clean-buttons';
 

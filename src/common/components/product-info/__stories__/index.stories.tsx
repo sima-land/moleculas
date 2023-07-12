@@ -1,7 +1,6 @@
+import { ProductInfo, Parts } from '@sima-land/moleculas/common/components/product-info';
 import { ReactNode, useState } from 'react';
-import { action } from '@storybook/addon-actions';
-import { ProductInfo, Parts } from '..';
-import { Badge, BadgeProps } from '../../badge';
+import { Badge, BadgeProps } from '@sima-land/moleculas/common/components/badge';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import FavoriteSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
 import QuickView2SVG from '@sima-land/ui-quarks/icons/24x24/Stroked/QuickView2';
@@ -53,18 +52,18 @@ export const Primary = () => (
         <Parts.ImageButton
           icon={FavoriteSVG}
           hint='Добавить в избранное'
-          onClick={action('Клик: добавить в избранное')}
+          onClick={() => alert('Клик: добавить в избранное')}
         />
         <Parts.ImageButton
           icon={QuickView2SVG}
           hint='Быстрый просмотр'
-          onClick={action('Клик: быстрый просмотр')}
+          onClick={() => alert('Клик: быстрый просмотр')}
         />
         <Parts.ImageButton
           icon={Camera2SVG}
           hint='Смотреть фото'
           hintDirection='right'
-          onClick={action('Клик: Смотреть фото')}
+          onClick={() => alert('Клик: Смотреть фото')}
         />
       </Parts.Image>
 
@@ -106,7 +105,7 @@ export const PositionedImageIcons = () => (
         href={data.url}
         onClick={e => {
           e.preventDefault();
-          action('Клик: ссылка на товар (изображение)')();
+          alert('Клик: ссылка на товар (изображение)');
         }}
       >
         <Parts.ImageButton
@@ -114,28 +113,28 @@ export const PositionedImageIcons = () => (
           hintDirection='right'
           position={{ x: 'left', y: 'top' }}
           hint='Добавить в избранное'
-          onClick={action('Клик: добавить в избранное')}
+          onClick={() => alert('Клик: добавить в избранное')}
           data-testid='favorite-button'
         />
         <Parts.ImageButton
           icon={QuickView2SVG}
           position={{ x: 'right', y: 'top' }}
           hint='Быстрый просмотр'
-          onClick={action('Клик: быстрый просмотр')}
+          onClick={() => alert('Клик: быстрый просмотр')}
           data-testid='quick-view-button'
         />
         <Parts.ImageButton
           icon={Camera2SVG}
           position={{ x: 'right', y: 'bottom' }}
           hint='Смотреть фото'
-          onClick={action('Клик: Смотреть фото')}
+          onClick={() => alert('Клик: Смотреть фото')}
           data-testid='photo-button'
         />
       </Parts.Image>
 
       <Parts.Badges lineLimit={1}>
         {data.badges.map((badge, index) => (
-          <Badge key={index} {...badge} onClick={action('Клик: шильдик')} />
+          <Badge key={index} {...badge} onClick={() => alert('Клик: шильдик')} />
         ))}
       </Parts.Badges>
 
@@ -149,7 +148,7 @@ export const PositionedImageIcons = () => (
         href={data.url}
         onClick={e => {
           e.preventDefault();
-          action('Клик: ссылка на товар')();
+          alert('Клик: ссылка на товар');
         }}
       >
         {data.name}
@@ -174,26 +173,26 @@ export const CartLoading = () => (
         href={data.url}
         onClick={e => {
           e.preventDefault();
-          action('Клик: ссылка на товар (изображение)')();
+          alert('Клик: ссылка на товар (изображение)');
         }}
       >
         <Parts.ImageButton
           icon={FavoriteSVG}
           hint='Добавить в избранное'
-          onClick={action('Клик: добавить в избранное')}
+          onClick={() => alert('Клик: добавить в избранное')}
           data-testid='favorite-button'
         />
         <Parts.ImageButton
           icon={QuickView2SVG}
           hint='Быстрый просмотр'
-          onClick={action('Клик: быстрый просмотр')}
+          onClick={() => alert('Клик: быстрый просмотр')}
           data-testid='quick-view-button'
         />
       </Parts.Image>
 
       <Parts.Badges lineLimit={1}>
         {data.badges.map((badge, index) => (
-          <Badge key={index} {...badge} onClick={action('Клик: шильдик')} />
+          <Badge key={index} {...badge} onClick={() => alert('Клик: шильдик')} />
         ))}
       </Parts.Badges>
 
@@ -207,7 +206,7 @@ export const CartLoading = () => (
         href={data.url}
         onClick={e => {
           e.preventDefault();
-          action('Клик: ссылка на товар')();
+          alert('Клик: ссылка на товар');
         }}
       >
         {data.name}
@@ -217,7 +216,7 @@ export const CartLoading = () => (
         href={data.trademarkUrl}
         onClick={e => {
           e.preventDefault();
-          action('Клик: ссылка на торговую марку')();
+          alert('Клик: ссылка на торговую марку');
         }}
       >
         {data.trademarkName}
@@ -240,26 +239,26 @@ export const NotEnough = () => (
         href={data.url}
         onClick={e => {
           e.preventDefault();
-          action('Клик: ссылка на товар (изображение)')();
+          alert('Клик: ссылка на товар (изображение)');
         }}
       >
         <Parts.ImageButton
           icon={FavoriteSVG}
           hint='Добавить в избранное'
-          onClick={action('Клик: добавить в избранное')}
+          onClick={() => alert('Клик: добавить в избранное')}
           data-testid='favorite-button'
         />
         <Parts.ImageButton
           icon={QuickView2SVG}
           hint='Быстрый просмотр'
-          onClick={action('Клик: быстрый просмотр')}
+          onClick={() => alert('Клик: быстрый просмотр')}
           data-testid='quick-view-button'
         />
       </Parts.Image>
 
       <Parts.Badges lineLimit={1}>
         {data.badges.map((badge, index) => (
-          <Badge key={index} {...badge} onClick={action('Клик: шильдик')} />
+          <Badge key={index} {...badge} onClick={() => alert('Клик: шильдик')} />
         ))}
       </Parts.Badges>
 
@@ -274,7 +273,7 @@ export const NotEnough = () => (
         href={data.url}
         onClick={e => {
           e.preventDefault();
-          action('Клик: ссылка на товар')();
+          alert('Клик: ссылка на товар');
         }}
       >
         {data.name}
@@ -284,7 +283,7 @@ export const NotEnough = () => (
         href={data.trademarkUrl}
         onClick={e => {
           e.preventDefault();
-          action('Клик: ссылка на торговую марку')();
+          alert('Клик: ссылка на торговую марку');
         }}
       >
         {data.trademarkName}
@@ -307,26 +306,26 @@ export const NotEnoughWaited = () => (
         href={data.url}
         onClick={e => {
           e.preventDefault();
-          action('Клик: ссылка на товар (изображение)')();
+          alert('Клик: ссылка на товар (изображение)');
         }}
       >
         <Parts.ImageButton
           icon={FavoriteSVG}
           hint='Добавить в избранное'
-          onClick={action('Клик: добавить в избранное')}
+          onClick={() => alert('Клик: добавить в избранное')}
           data-testid='favorite-button'
         />
         <Parts.ImageButton
           icon={QuickView2SVG}
           hint='Быстрый просмотр'
-          onClick={action('Клик: быстрый просмотр')}
+          onClick={() => alert('Клик: быстрый просмотр')}
           data-testid='quick-view-button'
         />
       </Parts.Image>
 
       <Parts.Badges lineLimit={1}>
         {data.badges.map((badge, index) => (
-          <Badge key={index} {...badge} onClick={action('Клик: шильдик')} />
+          <Badge key={index} {...badge} onClick={() => alert('Клик: шильдик')} />
         ))}
       </Parts.Badges>
 
@@ -341,7 +340,7 @@ export const NotEnoughWaited = () => (
         href={data.url}
         onClick={e => {
           e.preventDefault();
-          action('Клик: ссылка на товар')();
+          alert('Клик: ссылка на товар');
         }}
       >
         {data.name}
@@ -351,7 +350,7 @@ export const NotEnoughWaited = () => (
         href={data.trademarkUrl}
         onClick={e => {
           e.preventDefault();
-          action('Клик: ссылка на торговую марку')();
+          alert('Клик: ссылка на торговую марку');
         }}
       >
         {data.trademarkName}
@@ -362,7 +361,7 @@ export const NotEnoughWaited = () => (
           href='https://sima-land.ru/'
           onClick={e => {
             e.preventDefault();
-            action('Клик: ссылка на лист сравнения')();
+            alert('Клик: ссылка на лист сравнения');
           }}
         />
       </Parts.Footer>
@@ -380,26 +379,26 @@ export const Unavailable = () => (
         href={data.url}
         onClick={e => {
           e.preventDefault();
-          action('Клик: ссылка на товар (изображение)')();
+          alert('Клик: ссылка на товар (изображение)');
         }}
       >
         <Parts.ImageButton
           icon={FavoriteSVG}
           hint='Добавить в избранное'
-          onClick={action('Клик: добавить в избранное')}
+          onClick={() => alert('Клик: добавить в избранное')}
           data-testid='favorite-button'
         />
         <Parts.ImageButton
           icon={QuickView2SVG}
           hint='Быстрый просмотр'
-          onClick={action('Клик: быстрый просмотр')}
+          onClick={() => alert('Клик: быстрый просмотр')}
           data-testid='quick-view-button'
         />
       </Parts.Image>
 
       <Parts.Badges lineLimit={1}>
         {data.badges.map((badge, index) => (
-          <Badge key={index} {...badge} onClick={action('Клик: шильдик')} />
+          <Badge key={index} {...badge} onClick={() => alert('Клик: шильдик')} />
         ))}
       </Parts.Badges>
 
@@ -414,7 +413,7 @@ export const Unavailable = () => (
         href={data.url}
         onClick={e => {
           e.preventDefault();
-          action('Клик: ссылка на товар')();
+          alert('Клик: ссылка на товар');
         }}
       >
         {data.name}
@@ -424,7 +423,7 @@ export const Unavailable = () => (
         href={data.trademarkUrl}
         onClick={e => {
           e.preventDefault();
-          action('Клик: ссылка на торговую марку')();
+          alert('Клик: ссылка на торговую марку');
         }}
       >
         {data.trademarkName}
@@ -443,26 +442,26 @@ export const Adult = () => (
         href={data.url}
         onClick={e => {
           e.preventDefault();
-          action('Клик: ссылка на товар (изображение)')();
+          alert('Клик: ссылка на товар (изображение)');
         }}
       >
         <Parts.ImageButton
           icon={FavoriteSVG}
           hint='Добавить в избранное'
-          onClick={action('Клик: добавить в избранное')}
+          onClick={() => alert('Клик: добавить в избранное')}
           data-testid='favorite-button'
         />
         <Parts.ImageButton
           icon={QuickView2SVG}
           hint='Быстрый просмотр'
-          onClick={action('Клик: быстрый просмотр')}
+          onClick={() => alert('Клик: быстрый просмотр')}
           data-testid='quick-view-button'
         />
       </Parts.Image>
 
       <Parts.Badges lineLimit={1}>
         {data.badges.map((badge, index) => (
-          <Badge key={index} {...badge} onClick={action('Клик: шильдик')} />
+          <Badge key={index} {...badge} onClick={() => alert('Клик: шильдик')} />
         ))}
       </Parts.Badges>
 
@@ -476,7 +475,7 @@ export const Adult = () => (
         href={data.url}
         onClick={e => {
           e.preventDefault();
-          action('Клик: ссылка на товар')();
+          alert('Клик: ссылка на товар');
         }}
       >
         {data.name}
@@ -486,7 +485,7 @@ export const Adult = () => (
         href={data.trademarkUrl}
         onClick={e => {
           e.preventDefault();
-          action('Клик: ссылка на торговую марку')();
+          alert('Клик: ссылка на торговую марку');
         }}
       >
         {data.trademarkName}
