@@ -6,7 +6,6 @@ import type {
 } from './types';
 import { InteractiveImage, Parts } from './interactive-image';
 
-/** @deprecated */
 export type {
   InteractiveImageStyle,
   InteractiveImageProps,
@@ -14,5 +13,4 @@ export type {
   InteractiveImagePointProps,
 };
 
-/** @deprecated */
 export { InteractiveImage, Parts };

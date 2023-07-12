@@ -1,5 +1,5 @@
+import { InteractiveImage, Parts } from '@sima-land/moleculas/common/components/interactive-image';
 import { CSSProperties } from 'react';
-import { InteractiveImage, Parts } from '..';
 import imageSrc from './image.png';
 
 export default {

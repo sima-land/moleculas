@@ -9,7 +9,6 @@ import styles from './interactive-image.module.scss';
 
 const cx = classNames.bind(styles);
 
-/** @deprecated */
 export const InteractiveImage = forwardRef<HTMLDivElement, InteractiveImageProps>(
   ({ children, 'data-testid': testId, className, dotSize, ...rest }, ref) => {
     const rootClassName = cx(
@@ -97,5 +96,4 @@ const Point = forwardRef<HTMLAnchorElement, InteractiveImagePointProps>(
   ),
 );
 
-/** @deprecated */
 export const Parts = { ImageAnchor, Image, Point } as const;
