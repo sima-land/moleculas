@@ -25,6 +25,7 @@ export function PaginationControls({
   flow = 'horizontal',
   Buttons = PageButtons,
   Form = PageForm,
+  withForm = total >= 7,
   className,
   ...restProps
 }: PaginationControlsProps) {
@@ -40,9 +41,12 @@ export function PaginationControls({
       <div className={cx('slot-buttons')}>
         <Buttons current={current} total={total} onPageChange={handlePageChange} />
       </div>
-      <div className={cx('slot-form')}>
-        <Form current={current} total={total} onPageChange={handlePageChange} />
-      </div>
+
+      {withForm && (
+        <div className={cx('slot-form')}>
+          <Form current={current} total={total} onPageChange={handlePageChange} />
+        </div>
+      )}
     </div>
   );
 }
