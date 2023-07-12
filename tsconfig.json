@@ -1,17 +1,11 @@
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "target": "es2015",
-    "module": "commonjs",
-    "allowJs": true,
-    "jsx": "react-jsx",
-    "outDir": "./build/",
-    "rootDir": "./src/",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "plugins": [{ "name": "typescript-plugin-css-modules" }]
+    "paths": {
+      // ВАЖНО: только для storybook
+      "@sima-land/moleculas/*": ["./src/*"]
+    }
   },
-  "include": ["./src/**/*"],
-  "exclude": ["build", "node_modules"]
+  "include": ["./src"],
+  "exclude": ["node_modules"]
 }

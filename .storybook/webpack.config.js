@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('node:path');
 const svgrOptions = require('../svgr.config');
 
 module.exports = ({ config }) => {
@@ -15,6 +15,13 @@ module.exports = ({ config }) => {
 
   return {
     ...config,
+    resolve: {
+      ...config.resolve,
+      alias: {
+        ...config.resolve.alias,
+        '@sima-land/moleculas': path.resolve(__dirname, '..', 'src/'),
+      },
+    },
     module: {
       ...config.module,
       rules: [
@@ -44,7 +51,7 @@ module.exports = ({ config }) => {
           ],
         },
 
-        // svg as react components
+        // svg as react components (@todo удалить когда все иконки будут браться из кварков)
         {
           test: /\.svg$/,
           use: [
