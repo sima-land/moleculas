@@ -10,7 +10,7 @@ declare module '*.module.scss' {
 
 // svg как react-компоненты
 declare module '*.svg' {
-  const content: React.FC<React.SVGProps<SVGSVGElement>>;
+  const content: React.ElementType<React.SVGProps<SVGSVGElement>>;
   export default content;
 }
 
