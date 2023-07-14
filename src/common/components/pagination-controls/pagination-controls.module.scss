@@ -15,13 +15,14 @@
     flex-direction: row;
     justify-content: space-between;
     .slot-form {
-      margin-left: 16px;
+      margin-left: 40px;
     }
   }
 }
 
 .form {
   display: flex;
+  align-items: center;
   justify-content: center;
   .submit + .input {
     margin-left: 16px;

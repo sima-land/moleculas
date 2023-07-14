@@ -3,7 +3,6 @@ import type { PaginationControlsProps } from './types';
 import { Input, InputProps } from '@sima-land/ui-nucleons/input';
 import { Pagination } from '@sima-land/ui-nucleons/pagination';
 import { TextButton, TextButtonProps } from '@sima-land/ui-nucleons/text-button';
-import { COLORS } from '@sima-land/ui-nucleons/colors';
 import SearchSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Search';
 import classNames from 'classnames/bind';
 import styles from './pagination-controls.module.scss';
@@ -102,8 +101,20 @@ export function PageForm({ total, onPageChange }: any) {
 
   return (
     <form onSubmit={handleSubmit} className={cx('form')}>
-      <PageFormSubmit type='submit' />
-      <PageFormInput value={value} onChange={handleChange} />
+      <PageFormSubmit type='submit' color={value ? 'basic-blue' : 'basic-gray87'} />
+      <PageFormInput
+        value={value}
+        onChange={handleChange}
+        adornmentEnd={
+          <TextButton
+            type='submit'
+            onMouseDown={event => event.preventDefault()}
+            color='basic-gray38'
+          >
+            <SearchSVG fill='currentColor' />
+          </TextButton>
+        }
+      />
     </form>
   );
 }
@@ -131,13 +142,5 @@ export function PageFormSubmit({ className, ...restProps }: TextButtonProps) {
  * @return Элемент.
  */
 export function PageFormInput({ className, ...restProps }: InputProps) {
-  return (
-    <Input
-      placeholder='1-999'
-      size='m'
-      adornmentEnd={<SearchSVG fill={COLORS.get('basic-gray38')} />}
-      {...restProps}
-      className={cx('input', className)}
-    />
-  );
+  return <Input size='m' {...restProps} className={cx('input', className)} />;
 }
