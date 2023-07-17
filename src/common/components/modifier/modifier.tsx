@@ -58,7 +58,8 @@ export function Modifier({
     return () => observer.disconnect();
   }, [(content as TextContent).text]);
 
-  const canStrike = content.type !== 'color' || !disabled;
+  // ВАЖНО: по дизайн-гайдам disabled не может быть перечеркнут
+  const canStrike = !disabled;
 
   return (
     <>

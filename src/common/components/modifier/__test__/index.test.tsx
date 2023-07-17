@@ -98,7 +98,7 @@ describe('Modifier', () => {
     expect(container.querySelectorAll('svg.cross')).toHaveLength(1);
   });
 
-  it('should not render strike line when icon when color modifier disabled and crossed out', () => {
+  it('should not render strike line when icon when modifier disabled and crossed out', () => {
     const { container } = render(
       <Modifier content={{ type: 'color', color: '#000' }} disabled crossedOut />,
     );
