@@ -62,21 +62,21 @@ export function SizeM() {
         ))}
       </Container>
 
-      <h4>crossedOut</h4>
+      <h4>Crossed out</h4>
       <Container>
         {items.map((item, index) => (
           <Modifier key={index} count={23} markdown content={item} crossedOut />
         ))}
       </Container>
 
-      <h4>active</h4>
+      <h4>Active</h4>
       <Container>
         {items.map((item, index) => (
           <Modifier key={index} count={23} markdown content={item} active />
         ))}
       </Container>
 
-      <h4>active + crossedOut</h4>
+      <h4>Active + crossed out</h4>
       <Container>
         {items.map((item, index) => (
           <Modifier key={index} count={23} markdown content={item} active crossedOut />
@@ -90,7 +90,7 @@ export function SizeM() {
         ))}
       </Container>
 
-      <h4>Disabled + crossedOut</h4>
+      <h4>Disabled + crossed out</h4>
       <Container>
         {items.map((item, index) => (
           <Modifier key={index} count={23} markdown content={item} disabled crossedOut />
@@ -118,7 +118,7 @@ export function SizeS() {
         ))}
       </Container>
 
-      <h4>crossedOut</h4>
+      <h4>Crossed out</h4>
       <Container>
         {items.map((item, index) => (
           <Modifier key={index} size='s' count={23} markdown content={item} crossedOut />
@@ -132,7 +132,7 @@ export function SizeS() {
         ))}
       </Container>
 
-      <h4>Active + crossedOut</h4>
+      <h4>Active + crossed out</h4>
       <Container>
         {items.map((item, index) => (
           <Modifier key={index} size='s' count={23} markdown content={item} active crossedOut />
@@ -146,7 +146,7 @@ export function SizeS() {
         ))}
       </Container>
 
-      <h4>Disabled + crossedOut</h4>
+      <h4>Disabled + crossed out</h4>
       <Container>
         {items.map((item, index) => (
           <Modifier key={index} size='s' count={23} markdown content={item} disabled crossedOut />

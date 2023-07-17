@@ -1,7 +1,7 @@
-import { useState, useCallback, FormEventHandler, ChangeEventHandler } from 'react';
+import { useState, useCallback, FormEventHandler, ChangeEventHandler, useMemo } from 'react';
 import type { PaginationControlsProps } from './types';
 import { Input, InputProps } from '@sima-land/ui-nucleons/input';
-import { Pagination } from '@sima-land/ui-nucleons/pagination';
+import { Pagination, validatePaginationState } from '@sima-land/ui-nucleons/pagination';
 import { TextButton, TextButtonProps } from '@sima-land/ui-nucleons/text-button';
 import SearchSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Search';
 import classNames from 'classnames/bind';
@@ -16,18 +16,24 @@ const cx = classNames.bind(styles);
  */
 export function PaginationControls({
   // data props
-  current = 1,
-  total = 1,
+  current: currentProp,
+  total: totalProp,
   onPageChange,
 
   // view props
   flow = 'horizontal',
   Buttons = PageButtons,
   Form = PageForm,
-  withForm = total >= 7,
+  withForm: withFormProp,
   className,
   ...restProps
 }: PaginationControlsProps) {
+  const { current, total } = useMemo(
+    () => validatePaginationState({ current: currentProp, total: totalProp }),
+    [currentProp, totalProp],
+  );
+  const withForm = withFormProp ?? total >= 7;
+
   const handlePageChange = useCallback(
     (page: number) => {
       onPageChange?.(Math.max(1, Math.min(total, page)));
