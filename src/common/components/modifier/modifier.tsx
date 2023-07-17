@@ -102,6 +102,7 @@ export function Modifier({
         {markdown && <span className={styles.corner}>У</span>}
       </a>
 
+      {/* @todo добавить возможность отключать */}
       {hint && (
         <Hint
           open={open}
