@@ -91,6 +91,21 @@ describe('Modifier', () => {
 
     expect(container.textContent).toContain('У');
   });
+
+  it('should render cross icon when color modifier disabled', () => {
+    const { container } = render(<Modifier content={{ type: 'color', color: '#000' }} disabled />);
+
+    expect(container.querySelectorAll('svg.cross')).toHaveLength(1);
+  });
+
+  it('should not render strike line when icon when color modifier disabled and crossed out', () => {
+    const { container } = render(
+      <Modifier content={{ type: 'color', color: '#000' }} disabled crossedOut />,
+    );
+
+    expect(container.querySelectorAll('svg.cross')).toHaveLength(1);
+    expect(container.querySelectorAll('svg.diagonal')).toHaveLength(0);
+  });
 });
 
 describe('MoreButton', () => {

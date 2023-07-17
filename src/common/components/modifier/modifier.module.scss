@@ -118,6 +118,15 @@
   }
 }
 
+.color {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .cross {
+    fill: colors.$basic-gray24;
+  }
+}
+
 .text {
   padding: var(--modifier-padding);
   display: block;

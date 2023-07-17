@@ -3,6 +3,7 @@ import { Hint, useHintFloating, useHintOnHover } from '@sima-land/ui-nucleons/hi
 import { useImageStub } from '../../hooks';
 import { ModifierProps, MoreButtonProps, TextContent } from './types';
 import ImageBrokenSVG from '@sima-land/ui-quarks/icons/40x40/Stroked/ImageBroken';
+import CrossSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Cross';
 import classNames from 'classnames/bind';
 import styles from './modifier.module.scss';
 
@@ -57,6 +58,8 @@ export function Modifier({
     return () => observer.disconnect();
   }, [(content as TextContent).text]);
 
+  const canStrike = content.type !== 'color' || !disabled;
+
   return (
     <>
       <a
@@ -65,7 +68,9 @@ export function Modifier({
         data-testid={testId}
       >
         {content.type === 'color' && (
-          <span className={cx('color')} role='banner' style={{ background: content.color }}></span>
+          <span className={cx('color')} role='banner' style={{ background: content.color }}>
+            {disabled && <CrossSVG className={cx('cross')} />}
+          </span>
         )}
 
         {content.type === 'image' && <Image src={content.src} />}
@@ -80,9 +85,16 @@ export function Modifier({
           <span className={cx('counter')}>{count > 99 ? '99+' : count}</span>
         )}
 
-        {crossedOut && (
+        {canStrike && crossedOut && (
           <svg width='100%' height='100%' className={cx('diagonal')}>
-            <line x1='0' y1='100%' x2='100%' y2='0' stroke='var(--modifier-border-color)' />
+            <line
+              x1='0'
+              y1='100%'
+              x2='100%'
+              y2='0'
+              stroke='var(--modifier-border-color)'
+              strokeWidth={2}
+            />
           </svg>
         )}
 
