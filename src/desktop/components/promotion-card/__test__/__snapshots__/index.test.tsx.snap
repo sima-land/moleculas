@@ -79,7 +79,6 @@ exports[`<PromotionCard /> should handle "promotionType" prop 1`] = `
                 height={16}
                 viewBox="0 0 16 16"
                 width={16}
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M9.778 8H8V6.222a.889.889 0 0 0-1.778 0V8.89c0 .49.398.889.89.889h2.666a.889.889 0 1 0 0-1.778Z"
@@ -183,7 +182,6 @@ exports[`<PromotionCard /> should renders correctly 1`] = `
                 height={16}
                 viewBox="0 0 16 16"
                 width={16}
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M9.778 8H8V6.222a.889.889 0 0 0-1.778 0V8.89c0 .49.398.889.89.889h2.666a.889.889 0 1 0 0-1.778Z"

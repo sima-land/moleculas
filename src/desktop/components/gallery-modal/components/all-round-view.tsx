@@ -5,10 +5,10 @@ import on from '@sima-land/ui-nucleons/helpers/on';
 import { useImagesLoad } from '../utils';
 import classNames from 'classnames/bind';
 import styles from './all-round-view.module.scss';
-import AllRoundSVG from '../icons/360.svg';
-import PauseSVG from '../icons/pause.svg';
-import TurnLeftSVG from '../icons/turn-left.svg';
-import TurnRightSVG from '../icons/turn-right.svg';
+import AllRoundSVG from '@sima-land/ui-quarks/icons/40x40/Filled/Round360';
+import PauseSVG from '@sima-land/ui-quarks/icons/40x40/Filled/Pause';
+import TurnLeftSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/Arrows/TurnLeft';
+import TurnRightSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/Arrows/TurnRight';
 import BrokenSVG from '../../../../common/icons/image-broken.svg';
 
 export interface AllRoundViewProps {
