@@ -33,7 +33,7 @@
   },
   "peerDependencies": {
     "@sima-land/ui-nucleons": "^45.0.0-alpha.6",
-    "@sima-land/ui-quarks": "^4.4.0",
+    "@sima-land/ui-quarks": "^4.5.0",
     "react": ">=17"
   },
   "devDependencies": {

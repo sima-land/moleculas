@@ -48,7 +48,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     stroke-width="3px"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -59,7 +58,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     height="24"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -78,7 +76,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     stroke-width="3px"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -102,7 +99,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     height="24"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -175,7 +171,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
@@ -200,7 +195,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
@@ -257,7 +251,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     stroke-width="3px"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -268,7 +261,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     height="24"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -287,7 +279,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     stroke-width="3px"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -311,7 +302,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     height="24"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -377,7 +367,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
@@ -402,7 +391,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
@@ -459,7 +447,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     stroke-width="3px"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -470,7 +457,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     height="24"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -489,7 +475,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     stroke-width="3px"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -513,7 +498,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     height="24"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -651,7 +635,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
@@ -676,7 +659,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
@@ -733,7 +715,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     stroke-width="3px"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -744,7 +725,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     height="24"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -763,7 +743,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     stroke-width="3px"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -787,7 +766,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     height="24"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -853,7 +831,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
@@ -878,7 +855,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
@@ -935,7 +911,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     stroke-width="3px"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -946,7 +921,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     height="24"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -965,7 +939,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     stroke-width="3px"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -989,7 +962,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     height="24"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -1055,7 +1027,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
@@ -1080,7 +1051,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
@@ -1137,7 +1107,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     stroke-width="3px"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -1148,7 +1117,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     height="24"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -1167,7 +1135,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     stroke-width="3px"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -1191,7 +1158,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     height="24"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -1292,7 +1258,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
@@ -1317,7 +1282,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
@@ -1374,7 +1338,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     stroke-width="3px"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -1385,7 +1348,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     height="24"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -1404,7 +1366,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     stroke-width="3px"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -1428,7 +1389,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     height="24"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -1494,7 +1454,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
@@ -1519,7 +1478,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
@@ -1576,7 +1534,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     stroke-width="3px"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -1587,7 +1544,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     height="24"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -1606,7 +1562,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     stroke-width="3px"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -1630,7 +1585,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     height="24"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -1702,7 +1656,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
@@ -1727,7 +1680,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
@@ -1784,7 +1736,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     stroke-width="3px"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -1795,7 +1746,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     height="24"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -1814,7 +1764,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     stroke-width="3px"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -1838,7 +1787,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     height="24"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -1910,7 +1858,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
@@ -1935,7 +1882,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
@@ -1992,7 +1938,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     stroke-width="3px"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -2003,7 +1948,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     height="24"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -2022,7 +1966,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     stroke-width="3px"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -2046,7 +1989,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                     height="24"
                     viewBox="0 0 24 24"
                     width="24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -2112,7 +2054,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           clip-rule="evenodd"
@@ -2137,7 +2078,6 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
                         height="16"
                         viewBox="0 0 16 16"
                         width="16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
@@ -2203,7 +2143,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             stroke-width="3px"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -2214,7 +2153,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             height="24"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -2233,7 +2171,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             stroke-width="3px"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
@@ -2257,7 +2194,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             height="24"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
@@ -2330,7 +2266,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -2355,7 +2290,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
@@ -2412,7 +2346,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             stroke-width="3px"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -2423,7 +2356,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             height="24"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -2442,7 +2374,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             stroke-width="3px"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
@@ -2466,7 +2397,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             height="24"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
@@ -2532,7 +2462,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -2557,7 +2486,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
@@ -2614,7 +2542,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             stroke-width="3px"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -2625,7 +2552,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             height="24"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -2644,7 +2570,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             stroke-width="3px"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
@@ -2668,7 +2593,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             height="24"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
@@ -2806,7 +2730,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -2831,7 +2754,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
@@ -2888,7 +2810,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             stroke-width="3px"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -2899,7 +2820,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             height="24"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -2918,7 +2838,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             stroke-width="3px"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
@@ -2942,7 +2861,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             height="24"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
@@ -3008,7 +2926,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -3033,7 +2950,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
@@ -3090,7 +3006,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             stroke-width="3px"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -3101,7 +3016,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             height="24"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -3120,7 +3034,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             stroke-width="3px"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
@@ -3144,7 +3057,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             height="24"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
@@ -3210,7 +3122,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -3235,7 +3146,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
@@ -3292,7 +3202,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             stroke-width="3px"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -3303,7 +3212,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             height="24"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -3322,7 +3230,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             stroke-width="3px"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
@@ -3346,7 +3253,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             height="24"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
@@ -3447,7 +3353,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -3472,7 +3377,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
@@ -3529,7 +3433,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             stroke-width="3px"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -3540,7 +3443,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             height="24"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -3559,7 +3461,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             stroke-width="3px"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
@@ -3583,7 +3484,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             height="24"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
@@ -3649,7 +3549,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -3674,7 +3573,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
@@ -3731,7 +3629,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             stroke-width="3px"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -3742,7 +3639,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             height="24"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -3761,7 +3657,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             stroke-width="3px"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
@@ -3785,7 +3680,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             height="24"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
@@ -3857,7 +3751,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -3882,7 +3775,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
@@ -3939,7 +3831,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             stroke-width="3px"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -3950,7 +3841,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             height="24"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -3969,7 +3859,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             stroke-width="3px"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
@@ -3993,7 +3882,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             height="24"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
@@ -4065,7 +3953,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -4090,7 +3977,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
@@ -4147,7 +4033,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             stroke-width="3px"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -4158,7 +4043,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             height="24"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
@@ -4177,7 +4061,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             stroke-width="3px"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
@@ -4201,7 +4084,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
             height="24"
             viewBox="0 0 24 24"
             width="24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
@@ -4267,7 +4149,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -4292,7 +4173,6 @@ exports[`<ProductSlider /> should renders correctly 2`] = `
                 height="16"
                 viewBox="0 0 16 16"
                 width="16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M9 3a1 1 0 0 0-2 0v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3Z"
