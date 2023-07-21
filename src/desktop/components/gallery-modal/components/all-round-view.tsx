@@ -9,7 +9,7 @@ import AllRoundSVG from '@sima-land/ui-quarks/icons/40x40/Filled/Round360';
 import PauseSVG from '@sima-land/ui-quarks/icons/40x40/Filled/Pause';
 import TurnLeftSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/Arrows/TurnLeft';
 import TurnRightSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/Arrows/TurnRight';
-import BrokenSVG from '../../../../common/icons/image-broken.svg';
+import { ImgStub } from '../../../../common/components/img-stub';
 
 export interface AllRoundViewProps {
   photos: string[];
@@ -127,7 +127,7 @@ export const AllRoundView = ({
 
   return (
     <div className={cx('root')}>
-      {failed && <BrokenSVG className={cx('stub')} />}
+      {failed && <ImgStub className={cx('stub')} />}
       {!failed && (
         <img data-testid='gallery-modal:360-current-photo' ref={imageRef} src={photos[index]} />
       )}

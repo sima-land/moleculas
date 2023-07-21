@@ -5,8 +5,8 @@ import AllRoundSVG from '@sima-land/ui-quarks/icons/40x40/Filled/Round360';
 import { Price } from '@sima-land/ui-nucleons/price';
 import { useImageStub } from '../../../hooks';
 import classNames from 'classnames/bind';
-import BrokenSVG from '../../../icons/image-broken.svg';
 import styles from './thumbnail.module.scss';
+import { ImgStub } from '../../img-stub';
 
 export type ThumbnailSize = 's' | 'l';
 
@@ -74,7 +74,7 @@ export function Thumbnail({
       <span className={cx('content')}>
         {type?.startsWith('preview-') && (
           <ImageOverlay className={cx('image')}>
-            {failed && <BrokenSVG />}
+            {failed && <ImgStub className={cx('stub')} />}
             {!failed && <img src={src} alt={alt} onError={handleError} />}
           </ImageOverlay>
         )}

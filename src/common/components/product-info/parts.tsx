@@ -16,7 +16,7 @@ import { BadgeList, BadgeListProps } from '../badge-list';
 import { ProductInfoContext } from './utils';
 import { RatingCounter, RatingCounterProps } from '../rating-counter';
 import AdultSVG from '@sima-land/ui-quarks/icons/64x64/Stroked/EighteenPlus';
-import BrokenSVG from '../../icons/image-broken.svg';
+import { ImgStub } from '../img-stub';
 import classnames from 'classnames/bind';
 import styles from './product-info.module.scss';
 
@@ -127,7 +127,7 @@ const Image = ({ src, alt, href, onClick, children, opacity }: ImageProps) => {
               style={{ opacity: typeof opacity === 'number' ? opacity : defaultOpacity }}
               data-testid='product-info:image'
             />
-            {broken && <BrokenSVG className={cx('broken-icon')} />}
+            {broken && <ImgStub className={cx('broken-icon')} />}
           </a>
 
           {children && <div className={cx('image-buttons')}>{children}</div>}
