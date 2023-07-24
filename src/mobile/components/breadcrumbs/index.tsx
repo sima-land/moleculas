@@ -1,5 +1,4 @@
 import { Link } from '@sima-land/ui-nucleons/link';
-
 import styles from './breadcrumbs.module.scss';
 
 export interface BreadcrumbsProps {

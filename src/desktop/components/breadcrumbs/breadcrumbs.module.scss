@@ -30,6 +30,8 @@ $line-gutter: 12px;
 }
 
 .toggle-icon {
+  fill: colors.$basic-gray87;
+  opacity: 0.3;
   display: block;
   cursor: pointer;
   &.close {
