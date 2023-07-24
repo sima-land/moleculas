@@ -4,9 +4,9 @@ import { MediaData } from '../types';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
 import classNames from 'classnames';
 import { AllRoundView } from './all-round-view';
-import BrokenSVG from '../../../icons/image-broken.svg';
 import styles from './media-view.module.scss';
 import { useImageStub } from '../../../hooks';
+import { ImgStub } from '../../img-stub';
 
 export interface MediaViewProps {
   media?: MediaData;
@@ -49,7 +49,7 @@ export function MediaView({ media, loading, videoProps }: MediaViewProps) {
     <div className={classNames(styles.root)}>
       {media?.type === 'image' && (
         <ImageOverlay className={styles.image}>
-          {failed && <BrokenSVG />}
+          {failed && <ImgStub className={styles.stub} />}
           {!failed && <img src={media.data.src} alt={media.data.alt || ''} onError={handleError} />}
         </ImageOverlay>
       )}
