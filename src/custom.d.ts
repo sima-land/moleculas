@@ -8,12 +8,6 @@ declare module '*.module.scss' {
   export default classes;
 }
 
-// svg как react-компоненты
-declare module '*.svg' {
-  const content: React.ElementType<React.SVGProps<SVGSVGElement>>;
-  export default content;
-}
-
 // изображения
 declare module '*.jpg' {
   export default string;

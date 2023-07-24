@@ -5,7 +5,7 @@ import { Link } from '@sima-land/ui-nucleons/link';
 import { times } from 'lodash';
 import classnames from 'classnames/bind';
 import styles from './breadcrumbs.module.scss';
-import DownSVG from './square-arrow-down.svg';
+import DownSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/Arrows/DownSquare';
 import on from '@sima-land/ui-nucleons/helpers/on';
 
 export interface Sibling {
