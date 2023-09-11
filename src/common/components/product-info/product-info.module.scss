@@ -216,10 +216,10 @@
 .text-button {
   font-size: 16px;
   line-height: 24px;
-  font-weight: 500;
+  font-weight: 600;
   &:hover,
   &:active {
-    font-weight: 500;
+    font-weight: 600;
   }
   @include breakpoints.down('ml') {
     font-size: 14px;
@@ -230,7 +230,7 @@
 .wait-list-added-text {
   font-size: 16px;
   line-height: 24px;
-  font-weight: 500;
+  font-weight: 600;
   color: colors.$basic-gray24;
   @include breakpoints.down('ml') {
     font-size: 14px;
