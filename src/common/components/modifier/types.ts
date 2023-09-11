@@ -17,7 +17,7 @@ export interface ImageContent {
 
 export type ModifierContent = TextContent | ColorContent | ImageContent;
 
-export interface ModifierProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface ModifierProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'content'> {
   /** Вывести выбранным. */
   active?: boolean;
 

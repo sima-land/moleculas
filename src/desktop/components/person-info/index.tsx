@@ -1,4 +1,4 @@
-import { UserAvatar } from '@sima-land/ui-nucleons/avatar/user';
+import { Avatar, getUserAvatarProps } from '@sima-land/ui-nucleons/avatar';
 import { Box } from '@sima-land/ui-nucleons/box';
 import { Text } from '@sima-land/ui-nucleons/text';
 import { Link } from '@sima-land/ui-nucleons/link';
@@ -7,6 +7,9 @@ import classnames from 'classnames/bind';
 import styles from './person-info.module.scss';
 
 interface PersonInfoProps {
+  /** Идентификатор. */
+  personId?: number;
+
   /** Имя. */
   name: string;
 
@@ -60,6 +63,7 @@ const cx = classnames.bind(styles);
  * @return Элемент.
  */
 export function PersonInfo({
+  personId,
   name,
   appointment,
   photoUrl,
@@ -75,7 +79,7 @@ export function PersonInfo({
   return (
     <div className={cx('main')}>
       <Box marginBottom={6}>
-        <UserAvatar title={name} imageUrl={photoUrl} size={104} />
+        <Avatar {...getUserAvatarProps({ id: personId, name, image: photoUrl })} />
       </Box>
 
       <Box marginBottom={1}>

@@ -1,6 +1,6 @@
 import { AnchorHTMLAttributes, ReactNode } from 'react';
 import classnames from 'classnames/bind';
-import { UserAvatar } from '@sima-land/ui-nucleons/avatar/user';
+import { Avatar, getUserAvatarProps } from '@sima-land/ui-nucleons/avatar';
 import { Box } from '@sima-land/ui-nucleons/box';
 import { Text } from '@sima-land/ui-nucleons/text';
 import { InnerBorder } from '@sima-land/ui-nucleons/styling/borders';
@@ -11,6 +11,9 @@ import MobileSVG from '@sima-land/ui-quarks/icons/24x24/Filled/Mobile';
 import styles from './person-info.module.scss';
 
 export interface PersonInfoProps {
+  /** Идентификатор. */
+  personId?: number;
+
   /** Специализация. */
   appointment?: string;
 
@@ -50,6 +53,7 @@ const cx = classnames.bind(styles);
  * @return Элемент.
  */
 export function PersonInfo({
+  personId,
   name,
   appointment,
   photoUrl,
@@ -63,12 +67,8 @@ export function PersonInfo({
 }: PersonInfoProps) {
   return (
     <>
-      {/* @todo заменить на 1 аватар после обновления нуклонов */}
-      <div className={cx('avatar', 'small')}>
-        <UserAvatar size={64} title={name} imageUrl={photoUrl} />
-      </div>
-      <div className={cx('avatar', 'big')}>
-        <UserAvatar size={104} title={name} imageUrl={photoUrl} />
+      <div className={cx('avatar')}>
+        <Avatar {...getUserAvatarProps({ id: personId, name, image: photoUrl })} />
       </div>
 
       <span className={cx('name')}>{name}</span>

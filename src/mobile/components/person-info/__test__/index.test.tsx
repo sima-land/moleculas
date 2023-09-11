@@ -20,7 +20,7 @@ describe('PersonInfo', () => {
 
     const { queryAllByTestId, container } = render(<PersonInfo {...person} />);
 
-    expect(queryAllByTestId('avatar')).toHaveLength(2);
+    expect(queryAllByTestId('avatar')).toHaveLength(1);
     expect(container.textContent).toContain('Иванов Денис Геннадьевич');
     expect(container.textContent).toContain('Менеджер по игрушке');
     expect(container.textContent).toContain('Профиль организатора');
