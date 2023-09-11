@@ -7,6 +7,7 @@ import { ReactEventHandler, useCallback, useState } from 'react';
  * @param onError Обработчик ошибки.
  * @return Управление состоянием.
  * @todo Переименовать в useImageError?
+ * @todo Объединить с тем что есть в AllRoundView!
  */
 export function useImageStub(src?: string, onError?: ReactEventHandler<HTMLImageElement>) {
   const [failed, setFailed] = useState(false);

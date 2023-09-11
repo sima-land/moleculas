@@ -24,7 +24,7 @@ export interface ThumbnailProps {
  */
 export const Thumbnail = ({ type, src, alt, checked, onClick, className }: ThumbnailProps) => (
   <button
-    className={cx('root', type !== 'image' && 'iconic', checked && 'checked', className)}
+    className={cx('root', type !== 'image' && 'iconic', { checked }, className)}
     onClick={onClick}
     data-testid='gallery-modal:thumbnail'
   >
