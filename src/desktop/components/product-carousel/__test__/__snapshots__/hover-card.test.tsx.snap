@@ -1,124 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<HoverCard /> should renders hidden 1`] = `
-<HoverCard
-  targetRef={
-    {
-      "current": null,
-    }
-  }
->
-  <ForwardRef
-    className="root hidden rounds-sm__all shadow-z4"
-    onMouseLeave={[Function]}
-    style={
-      {
-        "padding": "16px 16px 24px 16px",
-      }
-    }
-  >
-    <ForwardRef(Plate)
-      className="card root hidden rounds-sm__all shadow-z4"
-      data-testid="product-card:hover-card"
-      onMouseLeave={[Function]}
-      rounds="m"
-      shadow="z4"
-      style={
-        {
-          "padding": "16px 16px 24px 16px",
-          "zIndex": 1,
-        }
-      }
-    >
-      <div
-        className="root card root hidden rounds-sm__all shadow-z4 shadow-z4 rounds-md__all"
-        data-testid="product-card:hover-card"
-        onMouseLeave={[Function]}
-        style={
-          {
-            "padding": "16px 16px 24px 16px",
-            "zIndex": 1,
-          }
-        }
-      >
-        <ProductInfo />
-      </div>
-    </ForwardRef(Plate)>
-  </ForwardRef>
-</HoverCard>
+<div>
+  <div
+    class="root card root hidden rounds-sm__all shadow-z4 shadow-z4 rounds-md__all"
+    data-testid="product-card:hover-card"
+    style="padding: 16px 16px 24px 16px; z-index: 1;"
+  />
+</div>
 `;
 
 exports[`<HoverCard /> should renders with positioning 1`] = `
-[
+<div>
   <div>
     Target
-  </div>,
-  <HoverCard
-    targetRef={
-      {
-        "current": <div>
-          Target
-        </div>,
-      }
-    }
+  </div>
+  <div
+    class="root card root rounds-sm__all shadow-z4 shadow-z4 rounds-md__all"
+    data-testid="product-card:hover-card"
+    style="padding: 16px 16px 24px 16px; z-index: 1; left: -16px; top: -16px; width: 32px;"
   >
-    <ForwardRef
-      className="root rounds-sm__all shadow-z4"
-      onMouseLeave={[Function]}
-      style={
-        {
-          "padding": "16px 16px 24px 16px",
-        }
-      }
+    <a
+      class="link link line-clamp basic-gray87"
+      data-testid="product-info:name-link"
+      href="https://foo.bar"
     >
-      <ForwardRef(Plate)
-        className="card root rounds-sm__all shadow-z4"
-        data-testid="product-card:hover-card"
-        onMouseLeave={[Function]}
-        rounds="m"
-        shadow="z4"
-        style={
-          {
-            "padding": "16px 16px 24px 16px",
-            "zIndex": 1,
-          }
-        }
-      >
-        <div
-          className="root card root rounds-sm__all shadow-z4 shadow-z4 rounds-md__all"
-          data-testid="product-card:hover-card"
-          onMouseLeave={[Function]}
-          style={
-            {
-              "padding": "16px 16px 24px 16px",
-              "zIndex": 1,
-            }
-          }
-        >
-          <ProductInfo>
-            <Title
-              href="https://foo.bar"
-              key=".0"
-            >
-              <ForwardRef(Link)
-                className="link line-clamp"
-                color="basic-gray87"
-                data-testid="product-info:name-link"
-                href="https://foo.bar"
-              >
-                <a
-                  className="link link line-clamp basic-gray87"
-                  data-testid="product-info:name-link"
-                  href="https://foo.bar"
-                >
-                  Ножницы портновские, 10, 26 см, цвет чёрный
-                </a>
-              </ForwardRef(Link)>
-            </Title>
-          </ProductInfo>
-        </div>
-      </ForwardRef(Plate)>
-    </ForwardRef>
-  </HoverCard>,
-]
+      Ножницы портновские, 10, 26 см, цвет чёрный
+    </a>
+  </div>
+</div>
 `;

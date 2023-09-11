@@ -1,17 +1,14 @@
 import { createRef } from 'react';
-import { mount } from 'enzyme';
-import { act } from 'react-dom/test-utils';
+import { fireEvent, render } from '@testing-library/react';
 import { HoverCard } from '../hover-card';
 import { Parts } from '../../../../common/components/product-info';
 
 describe('<HoverCard />', () => {
   it('should renders hidden', () => {
-    const wrapper = mount(<HoverCard targetRef={createRef()} />);
+    const { container, getByTestId } = render(<HoverCard targetRef={createRef()} />);
 
-    expect(wrapper).toMatchSnapshot();
-    expect(wrapper.find('div[data-testid="product-card:hover-card"]').hasClass('hidden')).toBe(
-      true,
-    );
+    expect(container).toMatchSnapshot();
+    expect(getByTestId('product-card:hover-card').classList.contains('hidden')).toBe(true);
   });
 
   it('should renders with positioning', () => {
@@ -29,7 +26,7 @@ describe('<HoverCard />', () => {
       markupText: 'Комплектация + 50 ₽ при покупке до 20 шт',
     };
 
-    const wrapper = mount(
+    const { container, getByTestId } = render(
       <>
         <div ref={targetRef}>Target</div>
 
@@ -39,11 +36,9 @@ describe('<HoverCard />', () => {
       </>,
     );
 
-    expect(wrapper).toMatchSnapshot();
-    expect(wrapper.find('a[data-testid="product-info:name-link"]').text()).toBe(itemInfo.name);
-    expect(wrapper.find('div[data-testid="product-card:hover-card"]').hasClass('hidden')).toBe(
-      false,
-    );
+    expect(container).toMatchSnapshot();
+    expect(getByTestId('product-info:name-link').textContent).toBe(itemInfo.name);
+    expect(getByTestId('product-card:hover-card').classList.contains('hidden')).toBe(false);
   });
 
   it('should handle mouseleave', () => {
@@ -51,7 +46,7 @@ describe('<HoverCard />', () => {
 
     const targetRef = createRef<HTMLDivElement>();
 
-    const wrapper = mount(
+    const { getByTestId } = render(
       <>
         <div ref={targetRef}>Target</div>
 
@@ -61,10 +56,7 @@ describe('<HoverCard />', () => {
 
     expect(spy).toHaveBeenCalledTimes(0);
 
-    act(() => {
-      wrapper.find('div[data-testid="product-card:hover-card"]').simulate('mouseleave');
-    });
-    wrapper.update();
+    fireEvent.mouseLeave(getByTestId('product-card:hover-card'));
 
     expect(spy).toHaveBeenCalledTimes(1);
   });

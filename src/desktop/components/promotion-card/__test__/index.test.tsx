@@ -1,4 +1,4 @@
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react';
 import { PromotionCard } from '..';
 
 describe('<PromotionCard />', () => {
@@ -8,7 +8,7 @@ describe('<PromotionCard />', () => {
   });
 
   it('should renders correctly', () => {
-    const wrapper = mount(
+    const { container, queryAllByTestId } = render(
       <PromotionCard
         title='Hello, world!'
         subtitle='Foo, bar, baz...'
@@ -17,12 +17,12 @@ describe('<PromotionCard />', () => {
       />,
     );
 
-    expect(wrapper).toMatchSnapshot();
-    expect(wrapper.find('[data-testid="promotion-card"]')).toHaveLength(1);
+    expect(container).toMatchSnapshot();
+    expect(queryAllByTestId('promotion-card')).toHaveLength(1);
   });
 
   it('should handle "promotionType" prop', () => {
-    const wrapper = mount(
+    const { container, queryAllByTestId } = render(
       <PromotionCard
         title='Hello, world!'
         subtitle='Foo, bar, baz...'
@@ -33,15 +33,15 @@ describe('<PromotionCard />', () => {
       />,
     );
 
-    expect(wrapper).toMatchSnapshot();
-    expect(wrapper.find('[data-testid="promotion-card:postfix"]')).toHaveLength(1);
-    expect(wrapper.find('[data-testid="promotion-card:banner-discount"]')).toHaveLength(1);
+    expect(container).toMatchSnapshot();
+    expect(queryAllByTestId('promotion-card:postfix')).toHaveLength(1);
+    expect(queryAllByTestId('promotion-card:banner-discount')).toHaveLength(1);
   });
 
   it('should have placeholder component property', () => {
-    const wrapper = mount(<PromotionCard.Placeholder />);
+    const { container, queryAllByTestId } = render(<PromotionCard.Placeholder />);
 
-    expect(wrapper).toMatchSnapshot();
-    expect(wrapper.find('[data-testid="promotion-card:placeholder"]')).toHaveLength(1);
+    expect(container).toMatchSnapshot();
+    expect(queryAllByTestId('promotion-card:placeholder')).toHaveLength(1);
   });
 });
