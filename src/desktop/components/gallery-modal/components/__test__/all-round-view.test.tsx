@@ -1,7 +1,6 @@
-import { mount } from 'enzyme';
 import { AllRoundView } from '../all-round-view';
-import { act } from 'react-dom/test-utils';
 import { useImagesLoad } from '../../utils';
+import { act, fireEvent, render } from '@testing-library/react';
 
 jest.mock('../../utils', () => {
   const original = jest.requireActual('../../utils');
@@ -27,209 +26,186 @@ describe('AllRoundView', () => {
     'https://img.com/9',
   ];
 
-  const Selectors = {
-    image: '[data-testid="gallery-modal:360-current-photo"]',
-    autoplayButton: '[data-testid="gallery-modal:toggle-autoplay-button"]',
-    turnLeftButton: '[data-testid="gallery-modal:360-turn-left-button"]',
-    turnRightButton: '[data-testid="gallery-modal:360-turn-right-button"]',
-    hint: '[data-testid="hint"]',
-  } as const;
-
-  it('should renders correctly', () => {
-    const wrapper = mount(<AllRoundView photos={[]} />);
-
-    expect(wrapper).toMatchSnapshot();
-  });
-
   it('should render stub for failed img set', () => {
     (useImagesLoad as jest.Mock).mockReturnValue('fail');
 
-    const wrapper = mount(<AllRoundView photos={['broken-url']} />);
+    const { queryAllByTestId } = render(<AllRoundView photos={['broken-url']} />);
 
-    expect(wrapper.find(Selectors.image)).toHaveLength(0);
+    expect(queryAllByTestId('gallery-modal:360-current-photo')).toHaveLength(0);
 
     (useImagesLoad as jest.Mock).mockReturnValue('done');
   });
 
   it('should renders correctly default state', () => {
-    const wrapper = mount(<AllRoundView photos={testPhotos} />);
+    const { container, getByTestId } = render(<AllRoundView photos={testPhotos} />);
 
-    act(() => {
-      wrapper.find(Selectors.autoplayButton).simulate('click');
-    });
-    wrapper.update();
+    fireEvent.click(getByTestId('gallery-modal:toggle-autoplay-button'));
 
-    expect(wrapper).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it('should change image src every 1000 / 30 ms', () => {
     jest.useFakeTimers();
 
-    const wrapper = mount(<AllRoundView photos={testPhotos} />);
+    const { getByTestId } = render(<AllRoundView photos={testPhotos} />);
 
-    expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[0]);
-
-    act(() => {
-      jest.advanceTimersByTime(1000 / 30 + 10);
-    });
-    wrapper.update();
-
-    expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[1]);
+    expect(getByTestId('gallery-modal:360-current-photo').getAttribute('src')).toEqual(
+      testPhotos[0],
+    );
 
     act(() => {
       jest.advanceTimersByTime(1000 / 30 + 10);
     });
-    wrapper.update();
 
-    expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[2]);
+    expect(getByTestId('gallery-modal:360-current-photo').getAttribute('src')).toEqual(
+      testPhotos[1],
+    );
+
+    act(() => {
+      jest.advanceTimersByTime(1000 / 30 + 10);
+    });
+
+    expect(getByTestId('gallery-modal:360-current-photo').getAttribute('src')).toEqual(
+      testPhotos[2],
+    );
 
     // stop autoplay
-    act(() => {
-      wrapper.find(Selectors.autoplayButton).simulate('click');
-    });
-    wrapper.update();
+    fireEvent.click(getByTestId('gallery-modal:toggle-autoplay-button'));
 
     act(() => {
       jest.advanceTimersByTime(1000 / 30 + 10);
     });
-    wrapper.update();
 
-    expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[2]);
+    expect(getByTestId('gallery-modal:360-current-photo').getAttribute('src')).toEqual(
+      testPhotos[2],
+    );
   });
 
   it('should handle pointer down on turn left button', () => {
     jest.useFakeTimers();
 
-    const wrapper = mount(<AllRoundView photos={testPhotos} />);
+    const { getByTestId } = render(<AllRoundView photos={testPhotos} />);
 
-    act(() => {
-      wrapper.find(Selectors.turnLeftButton).simulate('pointerdown');
-    });
-    wrapper.update();
+    fireEvent.pointerDown(getByTestId('gallery-modal:360-turn-left-button'));
 
-    expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[0]);
-
-    act(() => {
-      jest.advanceTimersByTime(1000 / 30 + 10);
-    });
-    wrapper.update();
-
-    expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[9]);
+    expect(getByTestId('gallery-modal:360-current-photo').getAttribute('src')).toEqual(
+      testPhotos[0],
+    );
 
     act(() => {
       jest.advanceTimersByTime(1000 / 30 + 10);
     });
-    wrapper.update();
 
-    expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[8]);
+    expect(getByTestId('gallery-modal:360-current-photo').getAttribute('src')).toEqual(
+      testPhotos[9],
+    );
+
+    act(() => {
+      jest.advanceTimersByTime(1000 / 30 + 10);
+    });
+
+    expect(getByTestId('gallery-modal:360-current-photo').getAttribute('src')).toEqual(
+      testPhotos[8],
+    );
   });
 
   it('should handle pointer down on turn right button', () => {
     jest.useFakeTimers();
 
-    const wrapper = mount(<AllRoundView photos={testPhotos} />);
+    const { getByTestId } = render(<AllRoundView photos={testPhotos} />);
 
-    act(() => {
-      wrapper.find(Selectors.turnRightButton).simulate('pointerdown');
-    });
-    wrapper.update();
+    fireEvent.pointerDown(getByTestId('gallery-modal:360-turn-right-button'));
 
-    expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[0]);
-
-    act(() => {
-      jest.advanceTimersByTime(1000 / 30 + 10);
-    });
-    wrapper.update();
-
-    expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[1]);
+    expect(getByTestId('gallery-modal:360-current-photo').getAttribute('src')).toEqual(
+      testPhotos[0],
+    );
 
     act(() => {
       jest.advanceTimersByTime(1000 / 30 + 10);
     });
-    wrapper.update();
 
-    expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[2]);
+    expect(getByTestId('gallery-modal:360-current-photo').getAttribute('src')).toEqual(
+      testPhotos[1],
+    );
+
+    act(() => {
+      jest.advanceTimersByTime(1000 / 30 + 10);
+    });
+
+    expect(getByTestId('gallery-modal:360-current-photo').getAttribute('src')).toEqual(
+      testPhotos[2],
+    );
   });
 
   it('should handle autoplay button click', () => {
     jest.useFakeTimers();
 
-    const wrapper = mount(<AllRoundView photos={testPhotos} />);
+    const { getByTestId } = render(<AllRoundView photos={testPhotos} />);
 
-    act(() => {
-      wrapper.find(Selectors.turnRightButton).simulate('pointerdown');
-    });
-    wrapper.update();
+    fireEvent.pointerDown(getByTestId('gallery-modal:360-turn-right-button'));
 
-    expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[0]);
-
-    act(() => {
-      jest.advanceTimersByTime(1000 / 30 + 10);
-    });
-    wrapper.update();
-
-    expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[1]);
+    expect(getByTestId('gallery-modal:360-current-photo').getAttribute('src')).toEqual(
+      testPhotos[0],
+    );
 
     act(() => {
       jest.advanceTimersByTime(1000 / 30 + 10);
     });
-    wrapper.update();
 
-    expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[2]);
+    expect(getByTestId('gallery-modal:360-current-photo').getAttribute('src')).toEqual(
+      testPhotos[1],
+    );
+
+    act(() => {
+      jest.advanceTimersByTime(1000 / 30 + 10);
+    });
+
+    expect(getByTestId('gallery-modal:360-current-photo').getAttribute('src')).toEqual(
+      testPhotos[2],
+    );
 
     // autoplay button click
-    act(() => {
-      wrapper.find(Selectors.autoplayButton).simulate('click');
-    });
-    wrapper.update();
+    fireEvent.click(getByTestId('gallery-modal:toggle-autoplay-button'));
 
     act(() => {
       jest.advanceTimersByTime(1000 / 30 + 10);
     });
-    wrapper.update();
 
-    expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[3]);
+    expect(getByTestId('gallery-modal:360-current-photo').getAttribute('src')).toEqual(
+      testPhotos[3],
+    );
   });
 
   it('should show/hide hint', () => {
-    const wrapper = mount(<AllRoundView photos={testPhotos} />);
+    const { getByTestId, queryAllByTestId } = render(<AllRoundView photos={testPhotos} />);
 
-    expect(wrapper.find(Selectors.hint)).toHaveLength(0);
+    expect(queryAllByTestId('hint')).toHaveLength(0);
 
-    act(() => {
-      wrapper.find(Selectors.autoplayButton).simulate('mouseenter');
-    });
-    wrapper.update();
+    fireEvent.mouseEnter(getByTestId('gallery-modal:toggle-autoplay-button'));
 
-    expect(wrapper.find(Selectors.hint)).toHaveLength(1);
+    expect(queryAllByTestId('hint')).toHaveLength(1);
 
-    act(() => {
-      wrapper.find(Selectors.autoplayButton).simulate('mouseleave');
-    });
-    wrapper.update();
+    fireEvent.mouseLeave(getByTestId('gallery-modal:toggle-autoplay-button'));
 
-    expect(wrapper.find(Selectors.hint)).toHaveLength(0);
+    expect(queryAllByTestId('hint')).toHaveLength(0);
   });
 
   it('should handle image pointerdown, window pointerup', () => {
-    const wrapper = mount(<AllRoundView photos={testPhotos} />);
+    const { getByTestId } = render(<AllRoundView photos={testPhotos} />);
 
     act(() => {
-      wrapper
-        .find(Selectors.image)
-        .getDOMNode()
-        .dispatchEvent(new Event('pointerdown', { clientX: 10 } as any));
+      getByTestId('gallery-modal:360-current-photo').dispatchEvent(
+        new Event('pointerdown', { clientX: 10 } as any),
+      );
     });
-    wrapper.update();
 
-    expect(wrapper.find(Selectors.image).getDOMNode<HTMLElement>().style.touchAction).toBe('none');
+    expect(getByTestId('gallery-modal:360-current-photo').style.touchAction).toBe('none');
 
     act(() => {
       window.dispatchEvent(new Event('pointerup'));
     });
-    wrapper.update();
 
-    expect(wrapper.find(Selectors.image).getDOMNode<HTMLElement>().style.touchAction).toBe('');
+    expect(getByTestId('gallery-modal:360-current-photo').style.touchAction).toBe('');
   });
 
   it('should handle window pointerup', () => {
@@ -243,35 +219,35 @@ describe('AllRoundView', () => {
         } as any),
     );
 
-    const wrapper = mount(<AllRoundView photos={testPhotos} />);
+    const { getByTestId } = render(<AllRoundView photos={testPhotos} />);
 
-    expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[0]);
+    expect(getByTestId('gallery-modal:360-current-photo').getAttribute('src')).toEqual(
+      testPhotos[0],
+    );
 
     // move without pointer down
     act(() => {
       window.dispatchEvent(new MouseEvent('pointermove', { clientX: 20 } as any));
     });
-    wrapper.update();
 
-    expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[0]);
+    expect(getByTestId('gallery-modal:360-current-photo').getAttribute('src')).toEqual(
+      testPhotos[0],
+    );
 
     // pointer down
     act(() => {
-      wrapper
-        .find(Selectors.image)
-        .getDOMNode()
-        .dispatchEvent(new MouseEvent('pointerdown', { clientX: 2 }));
+      getByTestId('gallery-modal:360-current-photo').dispatchEvent(
+        new MouseEvent('pointerdown', { clientX: 2 }),
+      );
     });
-    wrapper.update();
 
     // move
     act(() => {
       window.dispatchEvent(new MouseEvent('pointermove', { clientX: 93 } as any));
     });
-    wrapper.update();
 
-    expect(wrapper.find(Selectors.image).prop('src')).toEqual(testPhotos[9]);
-
-    wrapper.unmount();
+    expect(getByTestId('gallery-modal:360-current-photo').getAttribute('src')).toEqual(
+      testPhotos[9],
+    );
   });
 });

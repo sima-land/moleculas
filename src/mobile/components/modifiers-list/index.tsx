@@ -1,9 +1,9 @@
+import { HTMLAttributes } from 'react';
 import { ModifierItem, ModifierItemProps } from './modifier-item';
 import { Link } from '@sima-land/ui-nucleons/link';
 import StatementSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Statement';
-import classes from './modifiers-list.module.scss';
 import classnames from 'classnames/bind';
-import { HTMLAttributes } from 'react';
+import styles from './modifiers-list.module.scss';
 
 export interface ModifierListProps {
   /** Массив данных модификаторов. */
@@ -25,42 +25,44 @@ export interface ModifierListProps {
   onItemClick?: (item: ModifierItemProps) => void;
 }
 
-const cx = classnames.bind(classes);
+const cx = classnames.bind(styles);
 
 /**
  * Компонент списка модификаторов.
  * @param props Свойства.
  * @return Элемент.
  */
-export const ModifiersList = ({
+export function ModifiersList({
   items,
   currencyGrapheme,
   sizesTableUrl,
   wrapperProps,
   itemsContainerProps,
   onItemClick,
-}: ModifierListProps) => (
-  <div {...wrapperProps}>
-    {sizesTableUrl && (
-      <div className={cx('sizes-table-wrapper')}>
-        <Link className={cx('sizes-table-link')} href={sizesTableUrl}>
-          Таблица размеров
-          <StatementSVG role='presentation' className={cx('sizes-table-icon')} />
-        </Link>
-      </div>
-    )}
+}: ModifierListProps) {
+  return (
+    <div {...wrapperProps}>
+      {sizesTableUrl && (
+        <div className={cx('sizes-table-wrapper')}>
+          <Link className={cx('sizes-table-link')} href={sizesTableUrl}>
+            Таблица размеров
+            <StatementSVG role='presentation' className={cx('sizes-table-icon')} />
+          </Link>
+        </div>
+      )}
 
-    {Array.isArray(items) && (
-      <div {...itemsContainerProps}>
-        {items.map((item, index) => (
-          <ModifierItem
-            key={index}
-            {...item}
-            onClick={() => onItemClick && onItemClick(item)}
-            currencyGrapheme={currencyGrapheme}
-          />
-        ))}
-      </div>
-    )}
-  </div>
-);
+      {Array.isArray(items) && (
+        <div {...itemsContainerProps}>
+          {items.map((item, index) => (
+            <ModifierItem
+              key={index}
+              {...item}
+              onClick={() => onItemClick && onItemClick(item)}
+              currencyGrapheme={currencyGrapheme}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
