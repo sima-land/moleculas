@@ -494,3249 +494,839 @@ exports[`<ProductCarousel /> should renders correctly withhout children 1`] = `
 `;
 
 exports[`<ProductCarousel /> should set size depend on media query 1`] = `
-<ProductCarousel>
+<div>
   <div
-    className="root"
+    class="root"
     data-testid="product-carousel:root"
   >
-    <Carousel
-      controlProps={
-        {
-          "size": "s",
-          "style": {
-            "top": "0px",
-            "zIndex": 2,
-          },
-        }
-      }
-      draggable={false}
-      items={
-        [
-          [
-            <ProductInfo>
-              <Image
-                href="https://www.sima-land.ru/"
-                src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
-              />
-              <Prices
-                currencyGrapheme="₽"
-                price={261}
-              />
-              <Title
+    <div
+      class="carousel-wrapper"
+    >
+      <div
+        class="draggable-container full-size"
+      >
+        <div
+          class="draggable"
+          style="transform: translate3d(0px, 0px, 0px);"
+        >
+          <div
+            class="carousel-items-container"
+          >
+            <div
+              class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
+              data-testid="product-carousel:item"
+            >
+              <span
+                class="root image-overlay"
+              >
+                <a
+                  class="image-link"
+                  data-testid="product-info:image-link"
+                  href="https://www.sima-land.ru/"
+                >
+                  <img
+                    class="image"
+                    data-testid="product-info:image"
+                    src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
+                  />
+                </a>
+              </span>
+              <div
+                class="prices height-limit"
+                data-testid="product-info:prices"
+              >
+                <span
+                  class="root price"
+                  data-testid="product-info:price"
+                >
+                  261 ₽
+                </span>
+              </div>
+              <a
+                class="link link line-clamp basic-gray87"
+                data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
                 Ножницы портновские, 19 см, цвет чёрный
-              </Title>
-            </ProductInfo>,
-            0,
-          ],
-          [
-            <ProductInfo>
-              <Image
-                href="https://www.sima-land.ru/"
-                src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
-              />
-              <Prices
-                currencyGrapheme="₽"
-                price={495}
-              />
-              <Title
+              </a>
+            </div>
+            <div
+              class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
+              data-testid="product-carousel:item"
+            >
+              <span
+                class="root image-overlay"
+              >
+                <a
+                  class="image-link"
+                  data-testid="product-info:image-link"
+                  href="https://www.sima-land.ru/"
+                >
+                  <img
+                    class="image"
+                    data-testid="product-info:image"
+                    src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
+                  />
+                </a>
+              </span>
+              <div
+                class="prices height-limit"
+                data-testid="product-info:prices"
+              >
+                <span
+                  class="root price"
+                  data-testid="product-info:price"
+                >
+                  495 ₽
+                </span>
+              </div>
+              <a
+                class="link link line-clamp basic-gray87"
+                data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
                 Ткань тюлевая, ширина 300 см, сетка
-              </Title>
-            </ProductInfo>,
-            1,
-          ],
-          [
-            <ProductInfo>
-              <Image
-                href="https://www.sima-land.ru/"
-                src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
-              />
-              <Prices
-                currencyGrapheme="₽"
-                price={238}
-              />
-              <Title
+              </a>
+            </div>
+            <div
+              class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
+              data-testid="product-carousel:item"
+            >
+              <span
+                class="root image-overlay"
+              >
+                <a
+                  class="image-link"
+                  data-testid="product-info:image-link"
+                  href="https://www.sima-land.ru/"
+                >
+                  <img
+                    class="image"
+                    data-testid="product-info:image"
+                    src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
+                  />
+                </a>
+              </span>
+              <div
+                class="prices height-limit"
+                data-testid="product-info:prices"
+              >
+                <span
+                  class="root price"
+                  data-testid="product-info:price"
+                >
+                  238 ₽
+                </span>
+              </div>
+              <a
+                class="link link line-clamp basic-gray87"
+                data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
                 Ножницы портновские, 21,5 см, цвет чёрный/голубой
-              </Title>
-            </ProductInfo>,
-            2,
-          ],
-          [
-            <ProductInfo>
-              <Image
-                href="https://www.sima-land.ru/"
-                src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
-              />
-              <Prices
-                currencyGrapheme="₽"
-                price={171}
-              />
-              <Title
+              </a>
+            </div>
+            <div
+              class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
+              data-testid="product-carousel:item"
+            >
+              <span
+                class="root image-overlay"
+              >
+                <a
+                  class="image-link"
+                  data-testid="product-info:image-link"
+                  href="https://www.sima-land.ru/"
+                >
+                  <img
+                    class="image"
+                    data-testid="product-info:image"
+                    src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+                  />
+                </a>
+              </span>
+              <div
+                class="prices height-limit"
+                data-testid="product-info:prices"
+              >
+                <span
+                  class="root price"
+                  data-testid="product-info:price"
+                >
+                  171 ₽
+                </span>
+              </div>
+              <a
+                class="link link line-clamp basic-gray87"
+                data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
                 Ножницы портновские, 23 см, цвет МИКС
-              </Title>
-            </ProductInfo>,
-            3,
-          ],
-          [
-            <ProductInfo>
-              <Image
-                href="https://www.sima-land.ru/"
-                src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
-              />
-              <Prices
-                currencyGrapheme="₽"
-                price={483}
-              />
-              <Title
+              </a>
+            </div>
+            <div
+              class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
+              data-testid="product-carousel:item"
+            >
+              <span
+                class="root image-overlay"
+              >
+                <a
+                  class="image-link"
+                  data-testid="product-info:image-link"
+                  href="https://www.sima-land.ru/"
+                >
+                  <img
+                    class="image"
+                    data-testid="product-info:image"
+                    src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
+                  />
+                </a>
+              </span>
+              <div
+                class="prices height-limit"
+                data-testid="product-info:prices"
+              >
+                <span
+                  class="root price"
+                  data-testid="product-info:price"
+                >
+                  483 ₽
+                </span>
+              </div>
+              <a
+                class="link link line-clamp basic-gray87"
+                data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
                 Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный
-              </Title>
-            </ProductInfo>,
-            4,
-          ],
-          [
-            <ProductInfo>
-              <Image
-                href="https://www.sima-land.ru/"
-                src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
-              />
-              <Prices
-                currencyGrapheme="₽"
-                price={988}
-              />
-              <Title
+              </a>
+            </div>
+            <div
+              class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
+              data-testid="product-carousel:item"
+            >
+              <span
+                class="root image-overlay"
+              >
+                <a
+                  class="image-link"
+                  data-testid="product-info:image-link"
+                  href="https://www.sima-land.ru/"
+                >
+                  <img
+                    class="image"
+                    data-testid="product-info:image"
+                    src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
+                  />
+                </a>
+              </span>
+              <div
+                class="prices height-limit"
+                data-testid="product-info:prices"
+              >
+                <span
+                  class="root price"
+                  data-testid="product-info:price"
+                >
+                  988 ₽
+                </span>
+              </div>
+              <a
+                class="link link line-clamp basic-gray87"
+                data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
                 Ножницы портновские, 22,5 см, цвет чёрный
-              </Title>
-            </ProductInfo>,
-            5,
-          ],
-          [
-            <ProductInfo>
-              <Image
-                href="https://www.sima-land.ru/"
-                src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
-              />
-              <Prices
-                currencyGrapheme="₽"
-                price={619}
-              />
-              <Title
+              </a>
+            </div>
+            <div
+              class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
+              data-testid="product-carousel:item"
+            >
+              <span
+                class="root image-overlay"
+              >
+                <a
+                  class="image-link"
+                  data-testid="product-info:image-link"
+                  href="https://www.sima-land.ru/"
+                >
+                  <img
+                    class="image"
+                    data-testid="product-info:image"
+                    src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
+                  />
+                </a>
+              </span>
+              <div
+                class="prices height-limit"
+                data-testid="product-info:prices"
+              >
+                <span
+                  class="root price"
+                  data-testid="product-info:price"
+                >
+                  619 ₽
+                </span>
+              </div>
+              <a
+                class="link link line-clamp basic-gray87"
+                data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
                 Ножницы портновские, 22 см, цвет серебряный
-              </Title>
-            </ProductInfo>,
-            6,
-          ],
-          [
-            <ProductInfo>
-              <Image
-                href="https://www.sima-land.ru/"
-                src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
-              />
-              <Prices
-                currencyGrapheme="₽"
-                oldPrice={595}
-                price={539}
-              />
-              <Title
+              </a>
+            </div>
+            <div
+              class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
+              data-testid="product-carousel:item"
+            >
+              <span
+                class="root image-overlay"
+              >
+                <a
+                  class="image-link"
+                  data-testid="product-info:image-link"
+                  href="https://www.sima-land.ru/"
+                >
+                  <img
+                    class="image"
+                    data-testid="product-info:image"
+                    src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
+                  />
+                </a>
+              </span>
+              <div
+                class="prices height-limit"
+                data-testid="product-info:prices"
+              >
+                <span
+                  class="root price"
+                  data-testid="product-info:price"
+                >
+                  539 ₽
+                </span>
+                <span
+                  class="root old-price crossed-out"
+                  data-testid="product-info:old-price"
+                >
+                  595 ₽
+                </span>
+              </div>
+              <a
+                class="link link line-clamp basic-gray87"
+                data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
                 Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный
-              </Title>
-            </ProductInfo>,
-            7,
-          ],
-          [
-            <ProductInfo>
-              <Image
-                href="https://www.sima-land.ru/"
-                src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
-              />
-              <Prices
-                currencyGrapheme="₽"
-                oldPrice={717}
-                price={599}
-              />
-              <Title
+              </a>
+            </div>
+            <div
+              class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
+              data-testid="product-carousel:item"
+            >
+              <span
+                class="root image-overlay"
+              >
+                <a
+                  class="image-link"
+                  data-testid="product-info:image-link"
+                  href="https://www.sima-land.ru/"
+                >
+                  <img
+                    class="image"
+                    data-testid="product-info:image"
+                    src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
+                  />
+                </a>
+              </span>
+              <div
+                class="prices height-limit"
+                data-testid="product-info:prices"
+              >
+                <span
+                  class="root price"
+                  data-testid="product-info:price"
+                >
+                  599 ₽
+                </span>
+                <span
+                  class="root old-price crossed-out"
+                  data-testid="product-info:old-price"
+                >
+                  717 ₽
+                </span>
+              </div>
+              <a
+                class="link link line-clamp basic-gray87"
+                data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
                 Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый
-              </Title>
-            </ProductInfo>,
-            8,
-          ],
-          [
-            <ProductInfo>
-              <Image
-                href="https://www.sima-land.ru/"
-                src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
-              />
-              <Prices
-                currencyGrapheme="₽"
-                price={253}
-              />
-              <Title
+              </a>
+            </div>
+            <div
+              class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
+              data-testid="product-carousel:item"
+            >
+              <span
+                class="root image-overlay"
+              >
+                <a
+                  class="image-link"
+                  data-testid="product-info:image-link"
+                  href="https://www.sima-land.ru/"
+                >
+                  <img
+                    class="image"
+                    data-testid="product-info:image"
+                    src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
+                  />
+                </a>
+              </span>
+              <div
+                class="prices height-limit"
+                data-testid="product-info:prices"
+              >
+                <span
+                  class="root price"
+                  data-testid="product-info:price"
+                >
+                  253 ₽
+                </span>
+              </div>
+              <a
+                class="link link line-clamp basic-gray87"
+                data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
                 Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный
-              </Title>
-            </ProductInfo>,
-            9,
-          ],
-        ]
-      }
-      onChangeTargetIndex={[Function]}
-      renderItem={[Function]}
-      step={3}
-    >
-      <div
-        className="carousel-wrapper"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <Draggable
-          active={false}
-          axis="x"
-          containerProps={
-            {
-              "className": "full-size",
-              "ref": {
-                "current": <div
-                  class="draggable-container full-size"
-                >
-                  <div
-                    class="draggable"
-                    style="transform: translate3d(0px, 0px, 0px);"
-                  >
-                    <div
-                      class="carousel-items-container"
-                    >
-                      <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            261 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ножницы портновские, 19 см, цвет чёрный
-                        </a>
-                      </div>
-                      <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            495 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ткань тюлевая, ширина 300 см, сетка
-                        </a>
-                      </div>
-                      <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            238 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ножницы портновские, 21,5 см, цвет чёрный/голубой
-                        </a>
-                      </div>
-                      <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            171 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ножницы портновские, 23 см, цвет МИКС
-                        </a>
-                      </div>
-                      <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            483 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный
-                        </a>
-                      </div>
-                      <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            988 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ножницы портновские, 22,5 см, цвет чёрный
-                        </a>
-                      </div>
-                      <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            619 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ножницы портновские, 22 см, цвет серебряный
-                        </a>
-                      </div>
-                      <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            539 ₽
-                          </span>
-                          <span
-                            class="root old-price crossed-out"
-                            data-testid="product-info:old-price"
-                          >
-                            595 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный
-                        </a>
-                      </div>
-                      <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            599 ₽
-                          </span>
-                          <span
-                            class="root old-price crossed-out"
-                            data-testid="product-info:old-price"
-                          >
-                            717 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый
-                        </a>
-                      </div>
-                      <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            253 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>,
-              },
-            }
-          }
-          onDragEnd={[Function]}
-          onDragMove={[Function]}
-          onDragStart={[Function]}
-          takeControl={[Function]}
-          transitionDuration={320}
-        >
-          <div
-            className="draggable-container full-size"
-            onClickCapture={[Function]}
-            onMouseDown={[Function]}
-            onTouchStart={[Function]}
-          >
-            <div
-              className="draggable"
-              style={
-                {
-                  "transform": "translate3d(0px, 0px, 0px)",
-                  "transition": "",
-                }
-              }
-            >
-              <div
-                className="carousel-items-container"
-              >
-                <Item
-                  className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                  onMouseEnter={[Function]}
-                  rootRef={
-                    {
-                      "current": <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            261 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ножницы портновские, 19 см, цвет чёрный
-                        </a>
-                      </div>,
-                    }
-                  }
-                >
-                  <div
-                    className="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                    data-testid="product-carousel:item"
-                    onMouseEnter={[Function]}
-                  >
-                    <ProductInfo
-                      key=".$0"
-                    >
-                      <Image
-                        href="https://www.sima-land.ru/"
-                        key=".$.0"
-                        src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
-                      >
-                        <ImageOverlay
-                          className="image-overlay"
-                        >
-                          <span
-                            className="root image-overlay"
-                          >
-                            <a
-                              className="image-link"
-                              data-testid="product-info:image-link"
-                              href="https://www.sima-land.ru/"
-                            >
-                              <img
-                                className="image"
-                                data-testid="product-info:image"
-                                onError={[Function]}
-                                src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
-                                style={
-                                  {
-                                    "opacity": undefined,
-                                  }
-                                }
-                              />
-                            </a>
-                          </span>
-                        </ImageOverlay>
-                      </Image>
-                      <Prices
-                        currencyGrapheme="₽"
-                        key=".$.1"
-                        price={261}
-                      >
-                        <div
-                          className="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <Price
-                            className="price"
-                            currencyGrapheme="₽"
-                            data-testid="product-info:price"
-                            value={261}
-                          >
-                            <span
-                              className="root price"
-                              data-testid="product-info:price"
-                            >
-                              261 ₽
-                            </span>
-                          </Price>
-                        </div>
-                      </Prices>
-                      <Title
-                        href="https://www.sima-land.ru/"
-                        key=".$.2"
-                      >
-                        <ForwardRef(Link)
-                          className="link line-clamp"
-                          color="basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          <a
-                            className="link link line-clamp basic-gray87"
-                            data-testid="product-info:name-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            Ножницы портновские, 19 см, цвет чёрный
-                          </a>
-                        </ForwardRef(Link)>
-                      </Title>
-                    </ProductInfo>
-                  </div>
-                </Item>
-                <Item
-                  className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                  onMouseEnter={[Function]}
-                >
-                  <div
-                    className="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                    data-testid="product-carousel:item"
-                    onMouseEnter={[Function]}
-                  >
-                    <ProductInfo
-                      key=".$1"
-                    >
-                      <Image
-                        href="https://www.sima-land.ru/"
-                        key=".$.0"
-                        src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
-                      >
-                        <ImageOverlay
-                          className="image-overlay"
-                        >
-                          <span
-                            className="root image-overlay"
-                          >
-                            <a
-                              className="image-link"
-                              data-testid="product-info:image-link"
-                              href="https://www.sima-land.ru/"
-                            >
-                              <img
-                                className="image"
-                                data-testid="product-info:image"
-                                onError={[Function]}
-                                src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
-                                style={
-                                  {
-                                    "opacity": undefined,
-                                  }
-                                }
-                              />
-                            </a>
-                          </span>
-                        </ImageOverlay>
-                      </Image>
-                      <Prices
-                        currencyGrapheme="₽"
-                        key=".$.1"
-                        price={495}
-                      >
-                        <div
-                          className="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <Price
-                            className="price"
-                            currencyGrapheme="₽"
-                            data-testid="product-info:price"
-                            value={495}
-                          >
-                            <span
-                              className="root price"
-                              data-testid="product-info:price"
-                            >
-                              495 ₽
-                            </span>
-                          </Price>
-                        </div>
-                      </Prices>
-                      <Title
-                        href="https://www.sima-land.ru/"
-                        key=".$.2"
-                      >
-                        <ForwardRef(Link)
-                          className="link line-clamp"
-                          color="basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          <a
-                            className="link link line-clamp basic-gray87"
-                            data-testid="product-info:name-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            Ткань тюлевая, ширина 300 см, сетка
-                          </a>
-                        </ForwardRef(Link)>
-                      </Title>
-                    </ProductInfo>
-                  </div>
-                </Item>
-                <Item
-                  className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                  onMouseEnter={[Function]}
-                >
-                  <div
-                    className="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                    data-testid="product-carousel:item"
-                    onMouseEnter={[Function]}
-                  >
-                    <ProductInfo
-                      key=".$2"
-                    >
-                      <Image
-                        href="https://www.sima-land.ru/"
-                        key=".$.0"
-                        src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
-                      >
-                        <ImageOverlay
-                          className="image-overlay"
-                        >
-                          <span
-                            className="root image-overlay"
-                          >
-                            <a
-                              className="image-link"
-                              data-testid="product-info:image-link"
-                              href="https://www.sima-land.ru/"
-                            >
-                              <img
-                                className="image"
-                                data-testid="product-info:image"
-                                onError={[Function]}
-                                src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
-                                style={
-                                  {
-                                    "opacity": undefined,
-                                  }
-                                }
-                              />
-                            </a>
-                          </span>
-                        </ImageOverlay>
-                      </Image>
-                      <Prices
-                        currencyGrapheme="₽"
-                        key=".$.1"
-                        price={238}
-                      >
-                        <div
-                          className="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <Price
-                            className="price"
-                            currencyGrapheme="₽"
-                            data-testid="product-info:price"
-                            value={238}
-                          >
-                            <span
-                              className="root price"
-                              data-testid="product-info:price"
-                            >
-                              238 ₽
-                            </span>
-                          </Price>
-                        </div>
-                      </Prices>
-                      <Title
-                        href="https://www.sima-land.ru/"
-                        key=".$.2"
-                      >
-                        <ForwardRef(Link)
-                          className="link line-clamp"
-                          color="basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          <a
-                            className="link link line-clamp basic-gray87"
-                            data-testid="product-info:name-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            Ножницы портновские, 21,5 см, цвет чёрный/голубой
-                          </a>
-                        </ForwardRef(Link)>
-                      </Title>
-                    </ProductInfo>
-                  </div>
-                </Item>
-                <Item
-                  className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                  onMouseEnter={[Function]}
-                >
-                  <div
-                    className="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                    data-testid="product-carousel:item"
-                    onMouseEnter={[Function]}
-                  >
-                    <ProductInfo
-                      key=".$3"
-                    >
-                      <Image
-                        href="https://www.sima-land.ru/"
-                        key=".$.0"
-                        src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
-                      >
-                        <ImageOverlay
-                          className="image-overlay"
-                        >
-                          <span
-                            className="root image-overlay"
-                          >
-                            <a
-                              className="image-link"
-                              data-testid="product-info:image-link"
-                              href="https://www.sima-land.ru/"
-                            >
-                              <img
-                                className="image"
-                                data-testid="product-info:image"
-                                onError={[Function]}
-                                src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
-                                style={
-                                  {
-                                    "opacity": undefined,
-                                  }
-                                }
-                              />
-                            </a>
-                          </span>
-                        </ImageOverlay>
-                      </Image>
-                      <Prices
-                        currencyGrapheme="₽"
-                        key=".$.1"
-                        price={171}
-                      >
-                        <div
-                          className="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <Price
-                            className="price"
-                            currencyGrapheme="₽"
-                            data-testid="product-info:price"
-                            value={171}
-                          >
-                            <span
-                              className="root price"
-                              data-testid="product-info:price"
-                            >
-                              171 ₽
-                            </span>
-                          </Price>
-                        </div>
-                      </Prices>
-                      <Title
-                        href="https://www.sima-land.ru/"
-                        key=".$.2"
-                      >
-                        <ForwardRef(Link)
-                          className="link line-clamp"
-                          color="basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          <a
-                            className="link link line-clamp basic-gray87"
-                            data-testid="product-info:name-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            Ножницы портновские, 23 см, цвет МИКС
-                          </a>
-                        </ForwardRef(Link)>
-                      </Title>
-                    </ProductInfo>
-                  </div>
-                </Item>
-                <Item
-                  className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                  onMouseEnter={[Function]}
-                >
-                  <div
-                    className="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                    data-testid="product-carousel:item"
-                    onMouseEnter={[Function]}
-                  >
-                    <ProductInfo
-                      key=".$4"
-                    >
-                      <Image
-                        href="https://www.sima-land.ru/"
-                        key=".$.0"
-                        src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
-                      >
-                        <ImageOverlay
-                          className="image-overlay"
-                        >
-                          <span
-                            className="root image-overlay"
-                          >
-                            <a
-                              className="image-link"
-                              data-testid="product-info:image-link"
-                              href="https://www.sima-land.ru/"
-                            >
-                              <img
-                                className="image"
-                                data-testid="product-info:image"
-                                onError={[Function]}
-                                src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
-                                style={
-                                  {
-                                    "opacity": undefined,
-                                  }
-                                }
-                              />
-                            </a>
-                          </span>
-                        </ImageOverlay>
-                      </Image>
-                      <Prices
-                        currencyGrapheme="₽"
-                        key=".$.1"
-                        price={483}
-                      >
-                        <div
-                          className="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <Price
-                            className="price"
-                            currencyGrapheme="₽"
-                            data-testid="product-info:price"
-                            value={483}
-                          >
-                            <span
-                              className="root price"
-                              data-testid="product-info:price"
-                            >
-                              483 ₽
-                            </span>
-                          </Price>
-                        </div>
-                      </Prices>
-                      <Title
-                        href="https://www.sima-land.ru/"
-                        key=".$.2"
-                      >
-                        <ForwardRef(Link)
-                          className="link line-clamp"
-                          color="basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          <a
-                            className="link link line-clamp basic-gray87"
-                            data-testid="product-info:name-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный
-                          </a>
-                        </ForwardRef(Link)>
-                      </Title>
-                    </ProductInfo>
-                  </div>
-                </Item>
-                <Item
-                  className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                  onMouseEnter={[Function]}
-                >
-                  <div
-                    className="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                    data-testid="product-carousel:item"
-                    onMouseEnter={[Function]}
-                  >
-                    <ProductInfo
-                      key=".$5"
-                    >
-                      <Image
-                        href="https://www.sima-land.ru/"
-                        key=".$.0"
-                        src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
-                      >
-                        <ImageOverlay
-                          className="image-overlay"
-                        >
-                          <span
-                            className="root image-overlay"
-                          >
-                            <a
-                              className="image-link"
-                              data-testid="product-info:image-link"
-                              href="https://www.sima-land.ru/"
-                            >
-                              <img
-                                className="image"
-                                data-testid="product-info:image"
-                                onError={[Function]}
-                                src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
-                                style={
-                                  {
-                                    "opacity": undefined,
-                                  }
-                                }
-                              />
-                            </a>
-                          </span>
-                        </ImageOverlay>
-                      </Image>
-                      <Prices
-                        currencyGrapheme="₽"
-                        key=".$.1"
-                        price={988}
-                      >
-                        <div
-                          className="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <Price
-                            className="price"
-                            currencyGrapheme="₽"
-                            data-testid="product-info:price"
-                            value={988}
-                          >
-                            <span
-                              className="root price"
-                              data-testid="product-info:price"
-                            >
-                              988 ₽
-                            </span>
-                          </Price>
-                        </div>
-                      </Prices>
-                      <Title
-                        href="https://www.sima-land.ru/"
-                        key=".$.2"
-                      >
-                        <ForwardRef(Link)
-                          className="link line-clamp"
-                          color="basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          <a
-                            className="link link line-clamp basic-gray87"
-                            data-testid="product-info:name-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            Ножницы портновские, 22,5 см, цвет чёрный
-                          </a>
-                        </ForwardRef(Link)>
-                      </Title>
-                    </ProductInfo>
-                  </div>
-                </Item>
-                <Item
-                  className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                  onMouseEnter={[Function]}
-                >
-                  <div
-                    className="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                    data-testid="product-carousel:item"
-                    onMouseEnter={[Function]}
-                  >
-                    <ProductInfo
-                      key=".$6"
-                    >
-                      <Image
-                        href="https://www.sima-land.ru/"
-                        key=".$.0"
-                        src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
-                      >
-                        <ImageOverlay
-                          className="image-overlay"
-                        >
-                          <span
-                            className="root image-overlay"
-                          >
-                            <a
-                              className="image-link"
-                              data-testid="product-info:image-link"
-                              href="https://www.sima-land.ru/"
-                            >
-                              <img
-                                className="image"
-                                data-testid="product-info:image"
-                                onError={[Function]}
-                                src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
-                                style={
-                                  {
-                                    "opacity": undefined,
-                                  }
-                                }
-                              />
-                            </a>
-                          </span>
-                        </ImageOverlay>
-                      </Image>
-                      <Prices
-                        currencyGrapheme="₽"
-                        key=".$.1"
-                        price={619}
-                      >
-                        <div
-                          className="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <Price
-                            className="price"
-                            currencyGrapheme="₽"
-                            data-testid="product-info:price"
-                            value={619}
-                          >
-                            <span
-                              className="root price"
-                              data-testid="product-info:price"
-                            >
-                              619 ₽
-                            </span>
-                          </Price>
-                        </div>
-                      </Prices>
-                      <Title
-                        href="https://www.sima-land.ru/"
-                        key=".$.2"
-                      >
-                        <ForwardRef(Link)
-                          className="link line-clamp"
-                          color="basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          <a
-                            className="link link line-clamp basic-gray87"
-                            data-testid="product-info:name-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            Ножницы портновские, 22 см, цвет серебряный
-                          </a>
-                        </ForwardRef(Link)>
-                      </Title>
-                    </ProductInfo>
-                  </div>
-                </Item>
-                <Item
-                  className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                  onMouseEnter={[Function]}
-                >
-                  <div
-                    className="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                    data-testid="product-carousel:item"
-                    onMouseEnter={[Function]}
-                  >
-                    <ProductInfo
-                      key=".$7"
-                    >
-                      <Image
-                        href="https://www.sima-land.ru/"
-                        key=".$.0"
-                        src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
-                      >
-                        <ImageOverlay
-                          className="image-overlay"
-                        >
-                          <span
-                            className="root image-overlay"
-                          >
-                            <a
-                              className="image-link"
-                              data-testid="product-info:image-link"
-                              href="https://www.sima-land.ru/"
-                            >
-                              <img
-                                className="image"
-                                data-testid="product-info:image"
-                                onError={[Function]}
-                                src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
-                                style={
-                                  {
-                                    "opacity": undefined,
-                                  }
-                                }
-                              />
-                            </a>
-                          </span>
-                        </ImageOverlay>
-                      </Image>
-                      <Prices
-                        currencyGrapheme="₽"
-                        key=".$.1"
-                        oldPrice={595}
-                        price={539}
-                      >
-                        <div
-                          className="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <Price
-                            className="price"
-                            currencyGrapheme="₽"
-                            data-testid="product-info:price"
-                            value={539}
-                          >
-                            <span
-                              className="root price"
-                              data-testid="product-info:price"
-                            >
-                              539 ₽
-                            </span>
-                          </Price>
-                          <Price
-                            className="old-price"
-                            crossedOut={true}
-                            currencyGrapheme="₽"
-                            data-testid="product-info:old-price"
-                            value={595}
-                          >
-                            <span
-                              className="root old-price crossed-out"
-                              data-testid="product-info:old-price"
-                            >
-                              595 ₽
-                            </span>
-                          </Price>
-                        </div>
-                      </Prices>
-                      <Title
-                        href="https://www.sima-land.ru/"
-                        key=".$.2"
-                      >
-                        <ForwardRef(Link)
-                          className="link line-clamp"
-                          color="basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          <a
-                            className="link link line-clamp basic-gray87"
-                            data-testid="product-info:name-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный
-                          </a>
-                        </ForwardRef(Link)>
-                      </Title>
-                    </ProductInfo>
-                  </div>
-                </Item>
-                <Item
-                  className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                  onMouseEnter={[Function]}
-                >
-                  <div
-                    className="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                    data-testid="product-carousel:item"
-                    onMouseEnter={[Function]}
-                  >
-                    <ProductInfo
-                      key=".$8"
-                    >
-                      <Image
-                        href="https://www.sima-land.ru/"
-                        key=".$.0"
-                        src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
-                      >
-                        <ImageOverlay
-                          className="image-overlay"
-                        >
-                          <span
-                            className="root image-overlay"
-                          >
-                            <a
-                              className="image-link"
-                              data-testid="product-info:image-link"
-                              href="https://www.sima-land.ru/"
-                            >
-                              <img
-                                className="image"
-                                data-testid="product-info:image"
-                                onError={[Function]}
-                                src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
-                                style={
-                                  {
-                                    "opacity": undefined,
-                                  }
-                                }
-                              />
-                            </a>
-                          </span>
-                        </ImageOverlay>
-                      </Image>
-                      <Prices
-                        currencyGrapheme="₽"
-                        key=".$.1"
-                        oldPrice={717}
-                        price={599}
-                      >
-                        <div
-                          className="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <Price
-                            className="price"
-                            currencyGrapheme="₽"
-                            data-testid="product-info:price"
-                            value={599}
-                          >
-                            <span
-                              className="root price"
-                              data-testid="product-info:price"
-                            >
-                              599 ₽
-                            </span>
-                          </Price>
-                          <Price
-                            className="old-price"
-                            crossedOut={true}
-                            currencyGrapheme="₽"
-                            data-testid="product-info:old-price"
-                            value={717}
-                          >
-                            <span
-                              className="root old-price crossed-out"
-                              data-testid="product-info:old-price"
-                            >
-                              717 ₽
-                            </span>
-                          </Price>
-                        </div>
-                      </Prices>
-                      <Title
-                        href="https://www.sima-land.ru/"
-                        key=".$.2"
-                      >
-                        <ForwardRef(Link)
-                          className="link line-clamp"
-                          color="basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          <a
-                            className="link link line-clamp basic-gray87"
-                            data-testid="product-info:name-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый
-                          </a>
-                        </ForwardRef(Link)>
-                      </Title>
-                    </ProductInfo>
-                  </div>
-                </Item>
-                <Item
-                  className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                  onMouseEnter={[Function]}
-                >
-                  <div
-                    className="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                    data-testid="product-carousel:item"
-                    onMouseEnter={[Function]}
-                  >
-                    <ProductInfo
-                      key=".$9"
-                    >
-                      <Image
-                        href="https://www.sima-land.ru/"
-                        key=".$.0"
-                        src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
-                      >
-                        <ImageOverlay
-                          className="image-overlay"
-                        >
-                          <span
-                            className="root image-overlay"
-                          >
-                            <a
-                              className="image-link"
-                              data-testid="product-info:image-link"
-                              href="https://www.sima-land.ru/"
-                            >
-                              <img
-                                className="image"
-                                data-testid="product-info:image"
-                                onError={[Function]}
-                                src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
-                                style={
-                                  {
-                                    "opacity": undefined,
-                                  }
-                                }
-                              />
-                            </a>
-                          </span>
-                        </ImageOverlay>
-                      </Image>
-                      <Prices
-                        currencyGrapheme="₽"
-                        key=".$.1"
-                        price={253}
-                      >
-                        <div
-                          className="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <Price
-                            className="price"
-                            currencyGrapheme="₽"
-                            data-testid="product-info:price"
-                            value={253}
-                          >
-                            <span
-                              className="root price"
-                              data-testid="product-info:price"
-                            >
-                              253 ₽
-                            </span>
-                          </Price>
-                        </div>
-                      </Prices>
-                      <Title
-                        href="https://www.sima-land.ru/"
-                        key=".$.2"
-                      >
-                        <ForwardRef(Link)
-                          className="link line-clamp"
-                          color="basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          <a
-                            className="link link line-clamp basic-gray87"
-                            data-testid="product-info:name-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный
-                          </a>
-                        </ForwardRef(Link)>
-                      </Title>
-                    </ProductInfo>
-                  </div>
-                </Item>
-              </div>
+              </a>
             </div>
           </div>
-        </Draggable>
+        </div>
       </div>
-    </Carousel>
+    </div>
   </div>
-</ProductCarousel>
+</div>
 `;
 
 exports[`<ProductCarousel /> should set size depend on media query 2`] = `
-<ProductCarousel
-  title="Hello!"
->
+<div>
   <div
-    className="root"
+    class="root"
     data-testid="product-carousel:root"
   >
-    <Carousel
-      controlProps={
-        {
-          "size": "l",
-          "style": {
-            "top": "0px",
-            "zIndex": 2,
-          },
-        }
-      }
-      draggable={false}
-      items={
-        [
-          [
-            <ProductInfo>
-              <Image
-                href="https://www.sima-land.ru/"
-                src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
-              />
-              <Prices
-                currencyGrapheme="₽"
-                price={261}
-              />
-              <Title
+    <div
+      class="carousel-wrapper"
+    >
+      <div
+        class="draggable-container full-size"
+      >
+        <div
+          class="draggable"
+          style="transform: translate3d(0px, 0px, 0px);"
+        >
+          <div
+            class="carousel-items-container"
+          >
+            <div
+              class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
+              data-testid="product-carousel:item"
+            >
+              <span
+                class="root image-overlay"
+              >
+                <a
+                  class="image-link"
+                  data-testid="product-info:image-link"
+                  href="https://www.sima-land.ru/"
+                >
+                  <img
+                    class="image"
+                    data-testid="product-info:image"
+                    src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
+                  />
+                </a>
+              </span>
+              <div
+                class="prices height-limit"
+                data-testid="product-info:prices"
+              >
+                <span
+                  class="root price"
+                  data-testid="product-info:price"
+                >
+                  261 ₽
+                </span>
+              </div>
+              <a
+                class="link link line-clamp basic-gray87"
+                data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
                 Ножницы портновские, 19 см, цвет чёрный
-              </Title>
-            </ProductInfo>,
-            0,
-          ],
-          [
-            <ProductInfo>
-              <Image
-                href="https://www.sima-land.ru/"
-                src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
-              />
-              <Prices
-                currencyGrapheme="₽"
-                price={495}
-              />
-              <Title
+              </a>
+            </div>
+            <div
+              class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
+              data-testid="product-carousel:item"
+            >
+              <span
+                class="root image-overlay"
+              >
+                <a
+                  class="image-link"
+                  data-testid="product-info:image-link"
+                  href="https://www.sima-land.ru/"
+                >
+                  <img
+                    class="image"
+                    data-testid="product-info:image"
+                    src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
+                  />
+                </a>
+              </span>
+              <div
+                class="prices height-limit"
+                data-testid="product-info:prices"
+              >
+                <span
+                  class="root price"
+                  data-testid="product-info:price"
+                >
+                  495 ₽
+                </span>
+              </div>
+              <a
+                class="link link line-clamp basic-gray87"
+                data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
                 Ткань тюлевая, ширина 300 см, сетка
-              </Title>
-            </ProductInfo>,
-            1,
-          ],
-          [
-            <ProductInfo>
-              <Image
-                href="https://www.sima-land.ru/"
-                src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
-              />
-              <Prices
-                currencyGrapheme="₽"
-                price={238}
-              />
-              <Title
+              </a>
+            </div>
+            <div
+              class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
+              data-testid="product-carousel:item"
+            >
+              <span
+                class="root image-overlay"
+              >
+                <a
+                  class="image-link"
+                  data-testid="product-info:image-link"
+                  href="https://www.sima-land.ru/"
+                >
+                  <img
+                    class="image"
+                    data-testid="product-info:image"
+                    src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
+                  />
+                </a>
+              </span>
+              <div
+                class="prices height-limit"
+                data-testid="product-info:prices"
+              >
+                <span
+                  class="root price"
+                  data-testid="product-info:price"
+                >
+                  238 ₽
+                </span>
+              </div>
+              <a
+                class="link link line-clamp basic-gray87"
+                data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
                 Ножницы портновские, 21,5 см, цвет чёрный/голубой
-              </Title>
-            </ProductInfo>,
-            2,
-          ],
-          [
-            <ProductInfo>
-              <Image
-                href="https://www.sima-land.ru/"
-                src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
-              />
-              <Prices
-                currencyGrapheme="₽"
-                price={171}
-              />
-              <Title
+              </a>
+            </div>
+            <div
+              class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
+              data-testid="product-carousel:item"
+            >
+              <span
+                class="root image-overlay"
+              >
+                <a
+                  class="image-link"
+                  data-testid="product-info:image-link"
+                  href="https://www.sima-land.ru/"
+                >
+                  <img
+                    class="image"
+                    data-testid="product-info:image"
+                    src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+                  />
+                </a>
+              </span>
+              <div
+                class="prices height-limit"
+                data-testid="product-info:prices"
+              >
+                <span
+                  class="root price"
+                  data-testid="product-info:price"
+                >
+                  171 ₽
+                </span>
+              </div>
+              <a
+                class="link link line-clamp basic-gray87"
+                data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
                 Ножницы портновские, 23 см, цвет МИКС
-              </Title>
-            </ProductInfo>,
-            3,
-          ],
-          [
-            <ProductInfo>
-              <Image
-                href="https://www.sima-land.ru/"
-                src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
-              />
-              <Prices
-                currencyGrapheme="₽"
-                price={483}
-              />
-              <Title
+              </a>
+            </div>
+            <div
+              class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
+              data-testid="product-carousel:item"
+            >
+              <span
+                class="root image-overlay"
+              >
+                <a
+                  class="image-link"
+                  data-testid="product-info:image-link"
+                  href="https://www.sima-land.ru/"
+                >
+                  <img
+                    class="image"
+                    data-testid="product-info:image"
+                    src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
+                  />
+                </a>
+              </span>
+              <div
+                class="prices height-limit"
+                data-testid="product-info:prices"
+              >
+                <span
+                  class="root price"
+                  data-testid="product-info:price"
+                >
+                  483 ₽
+                </span>
+              </div>
+              <a
+                class="link link line-clamp basic-gray87"
+                data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
                 Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный
-              </Title>
-            </ProductInfo>,
-            4,
-          ],
-          [
-            <ProductInfo>
-              <Image
-                href="https://www.sima-land.ru/"
-                src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
-              />
-              <Prices
-                currencyGrapheme="₽"
-                price={988}
-              />
-              <Title
+              </a>
+            </div>
+            <div
+              class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
+              data-testid="product-carousel:item"
+            >
+              <span
+                class="root image-overlay"
+              >
+                <a
+                  class="image-link"
+                  data-testid="product-info:image-link"
+                  href="https://www.sima-land.ru/"
+                >
+                  <img
+                    class="image"
+                    data-testid="product-info:image"
+                    src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
+                  />
+                </a>
+              </span>
+              <div
+                class="prices height-limit"
+                data-testid="product-info:prices"
+              >
+                <span
+                  class="root price"
+                  data-testid="product-info:price"
+                >
+                  988 ₽
+                </span>
+              </div>
+              <a
+                class="link link line-clamp basic-gray87"
+                data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
                 Ножницы портновские, 22,5 см, цвет чёрный
-              </Title>
-            </ProductInfo>,
-            5,
-          ],
-          [
-            <ProductInfo>
-              <Image
-                href="https://www.sima-land.ru/"
-                src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
-              />
-              <Prices
-                currencyGrapheme="₽"
-                price={619}
-              />
-              <Title
+              </a>
+            </div>
+            <div
+              class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
+              data-testid="product-carousel:item"
+            >
+              <span
+                class="root image-overlay"
+              >
+                <a
+                  class="image-link"
+                  data-testid="product-info:image-link"
+                  href="https://www.sima-land.ru/"
+                >
+                  <img
+                    class="image"
+                    data-testid="product-info:image"
+                    src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
+                  />
+                </a>
+              </span>
+              <div
+                class="prices height-limit"
+                data-testid="product-info:prices"
+              >
+                <span
+                  class="root price"
+                  data-testid="product-info:price"
+                >
+                  619 ₽
+                </span>
+              </div>
+              <a
+                class="link link line-clamp basic-gray87"
+                data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
                 Ножницы портновские, 22 см, цвет серебряный
-              </Title>
-            </ProductInfo>,
-            6,
-          ],
-          [
-            <ProductInfo>
-              <Image
-                href="https://www.sima-land.ru/"
-                src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
-              />
-              <Prices
-                currencyGrapheme="₽"
-                oldPrice={595}
-                price={539}
-              />
-              <Title
+              </a>
+            </div>
+            <div
+              class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
+              data-testid="product-carousel:item"
+            >
+              <span
+                class="root image-overlay"
+              >
+                <a
+                  class="image-link"
+                  data-testid="product-info:image-link"
+                  href="https://www.sima-land.ru/"
+                >
+                  <img
+                    class="image"
+                    data-testid="product-info:image"
+                    src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
+                  />
+                </a>
+              </span>
+              <div
+                class="prices height-limit"
+                data-testid="product-info:prices"
+              >
+                <span
+                  class="root price"
+                  data-testid="product-info:price"
+                >
+                  539 ₽
+                </span>
+                <span
+                  class="root old-price crossed-out"
+                  data-testid="product-info:old-price"
+                >
+                  595 ₽
+                </span>
+              </div>
+              <a
+                class="link link line-clamp basic-gray87"
+                data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
                 Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный
-              </Title>
-            </ProductInfo>,
-            7,
-          ],
-          [
-            <ProductInfo>
-              <Image
-                href="https://www.sima-land.ru/"
-                src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
-              />
-              <Prices
-                currencyGrapheme="₽"
-                oldPrice={717}
-                price={599}
-              />
-              <Title
+              </a>
+            </div>
+            <div
+              class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
+              data-testid="product-carousel:item"
+            >
+              <span
+                class="root image-overlay"
+              >
+                <a
+                  class="image-link"
+                  data-testid="product-info:image-link"
+                  href="https://www.sima-land.ru/"
+                >
+                  <img
+                    class="image"
+                    data-testid="product-info:image"
+                    src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
+                  />
+                </a>
+              </span>
+              <div
+                class="prices height-limit"
+                data-testid="product-info:prices"
+              >
+                <span
+                  class="root price"
+                  data-testid="product-info:price"
+                >
+                  599 ₽
+                </span>
+                <span
+                  class="root old-price crossed-out"
+                  data-testid="product-info:old-price"
+                >
+                  717 ₽
+                </span>
+              </div>
+              <a
+                class="link link line-clamp basic-gray87"
+                data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
                 Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый
-              </Title>
-            </ProductInfo>,
-            8,
-          ],
-          [
-            <ProductInfo>
-              <Image
-                href="https://www.sima-land.ru/"
-                src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
-              />
-              <Prices
-                currencyGrapheme="₽"
-                price={253}
-              />
-              <Title
+              </a>
+            </div>
+            <div
+              class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
+              data-testid="product-carousel:item"
+            >
+              <span
+                class="root image-overlay"
+              >
+                <a
+                  class="image-link"
+                  data-testid="product-info:image-link"
+                  href="https://www.sima-land.ru/"
+                >
+                  <img
+                    class="image"
+                    data-testid="product-info:image"
+                    src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
+                  />
+                </a>
+              </span>
+              <div
+                class="prices height-limit"
+                data-testid="product-info:prices"
+              >
+                <span
+                  class="root price"
+                  data-testid="product-info:price"
+                >
+                  253 ₽
+                </span>
+              </div>
+              <a
+                class="link link line-clamp basic-gray87"
+                data-testid="product-info:name-link"
                 href="https://www.sima-land.ru/"
               >
                 Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный
-              </Title>
-            </ProductInfo>,
-            9,
-          ],
-        ]
-      }
-      onChangeTargetIndex={[Function]}
-      renderItem={[Function]}
-      step={3}
-    >
-      <div
-        className="carousel-wrapper"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <Draggable
-          active={false}
-          axis="x"
-          containerProps={
-            {
-              "className": "full-size",
-              "ref": {
-                "current": <div
-                  class="draggable-container full-size"
-                >
-                  <div
-                    class="draggable"
-                    style="transform: translate3d(0px, 0px, 0px);"
-                  >
-                    <div
-                      class="carousel-items-container"
-                    >
-                      <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            261 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ножницы портновские, 19 см, цвет чёрный
-                        </a>
-                      </div>
-                      <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            495 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ткань тюлевая, ширина 300 см, сетка
-                        </a>
-                      </div>
-                      <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            238 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ножницы портновские, 21,5 см, цвет чёрный/голубой
-                        </a>
-                      </div>
-                      <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            171 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ножницы портновские, 23 см, цвет МИКС
-                        </a>
-                      </div>
-                      <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            483 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный
-                        </a>
-                      </div>
-                      <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            988 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ножницы портновские, 22,5 см, цвет чёрный
-                        </a>
-                      </div>
-                      <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            619 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ножницы портновские, 22 см, цвет серебряный
-                        </a>
-                      </div>
-                      <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            539 ₽
-                          </span>
-                          <span
-                            class="root old-price crossed-out"
-                            data-testid="product-info:old-price"
-                          >
-                            595 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный
-                        </a>
-                      </div>
-                      <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            599 ₽
-                          </span>
-                          <span
-                            class="root old-price crossed-out"
-                            data-testid="product-info:old-price"
-                          >
-                            717 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый
-                        </a>
-                      </div>
-                      <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            253 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>,
-              },
-            }
-          }
-          onDragEnd={[Function]}
-          onDragMove={[Function]}
-          onDragStart={[Function]}
-          takeControl={[Function]}
-          transitionDuration={320}
-        >
-          <div
-            className="draggable-container full-size"
-            onClickCapture={[Function]}
-            onMouseDown={[Function]}
-            onTouchStart={[Function]}
-          >
-            <div
-              className="draggable"
-              style={
-                {
-                  "transform": "translate3d(0px, 0px, 0px)",
-                  "transition": "",
-                }
-              }
-            >
-              <div
-                className="carousel-items-container"
-              >
-                <Item
-                  className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                  onMouseEnter={[Function]}
-                  rootRef={
-                    {
-                      "current": <div
-                        class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                        data-testid="product-carousel:item"
-                      >
-                        <span
-                          class="root image-overlay"
-                        >
-                          <a
-                            class="image-link"
-                            data-testid="product-info:image-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            <img
-                              class="image"
-                              data-testid="product-info:image"
-                              src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
-                            />
-                          </a>
-                        </span>
-                        <div
-                          class="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <span
-                            class="root price"
-                            data-testid="product-info:price"
-                          >
-                            261 ₽
-                          </span>
-                        </div>
-                        <a
-                          class="link link line-clamp basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          Ножницы портновские, 19 см, цвет чёрный
-                        </a>
-                      </div>,
-                    }
-                  }
-                >
-                  <div
-                    className="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                    data-testid="product-carousel:item"
-                    onMouseEnter={[Function]}
-                  >
-                    <ProductInfo
-                      key=".$0"
-                    >
-                      <Image
-                        href="https://www.sima-land.ru/"
-                        key=".$.0"
-                        src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
-                      >
-                        <ImageOverlay
-                          className="image-overlay"
-                        >
-                          <span
-                            className="root image-overlay"
-                          >
-                            <a
-                              className="image-link"
-                              data-testid="product-info:image-link"
-                              href="https://www.sima-land.ru/"
-                            >
-                              <img
-                                className="image"
-                                data-testid="product-info:image"
-                                onError={[Function]}
-                                src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
-                                style={
-                                  {
-                                    "opacity": undefined,
-                                  }
-                                }
-                              />
-                            </a>
-                          </span>
-                        </ImageOverlay>
-                      </Image>
-                      <Prices
-                        currencyGrapheme="₽"
-                        key=".$.1"
-                        price={261}
-                      >
-                        <div
-                          className="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <Price
-                            className="price"
-                            currencyGrapheme="₽"
-                            data-testid="product-info:price"
-                            value={261}
-                          >
-                            <span
-                              className="root price"
-                              data-testid="product-info:price"
-                            >
-                              261 ₽
-                            </span>
-                          </Price>
-                        </div>
-                      </Prices>
-                      <Title
-                        href="https://www.sima-land.ru/"
-                        key=".$.2"
-                      >
-                        <ForwardRef(Link)
-                          className="link line-clamp"
-                          color="basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          <a
-                            className="link link line-clamp basic-gray87"
-                            data-testid="product-info:name-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            Ножницы портновские, 19 см, цвет чёрный
-                          </a>
-                        </ForwardRef(Link)>
-                      </Title>
-                    </ProductInfo>
-                  </div>
-                </Item>
-                <Item
-                  className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                  onMouseEnter={[Function]}
-                >
-                  <div
-                    className="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                    data-testid="product-carousel:item"
-                    onMouseEnter={[Function]}
-                  >
-                    <ProductInfo
-                      key=".$1"
-                    >
-                      <Image
-                        href="https://www.sima-land.ru/"
-                        key=".$.0"
-                        src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
-                      >
-                        <ImageOverlay
-                          className="image-overlay"
-                        >
-                          <span
-                            className="root image-overlay"
-                          >
-                            <a
-                              className="image-link"
-                              data-testid="product-info:image-link"
-                              href="https://www.sima-land.ru/"
-                            >
-                              <img
-                                className="image"
-                                data-testid="product-info:image"
-                                onError={[Function]}
-                                src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
-                                style={
-                                  {
-                                    "opacity": undefined,
-                                  }
-                                }
-                              />
-                            </a>
-                          </span>
-                        </ImageOverlay>
-                      </Image>
-                      <Prices
-                        currencyGrapheme="₽"
-                        key=".$.1"
-                        price={495}
-                      >
-                        <div
-                          className="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <Price
-                            className="price"
-                            currencyGrapheme="₽"
-                            data-testid="product-info:price"
-                            value={495}
-                          >
-                            <span
-                              className="root price"
-                              data-testid="product-info:price"
-                            >
-                              495 ₽
-                            </span>
-                          </Price>
-                        </div>
-                      </Prices>
-                      <Title
-                        href="https://www.sima-land.ru/"
-                        key=".$.2"
-                      >
-                        <ForwardRef(Link)
-                          className="link line-clamp"
-                          color="basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          <a
-                            className="link link line-clamp basic-gray87"
-                            data-testid="product-info:name-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            Ткань тюлевая, ширина 300 см, сетка
-                          </a>
-                        </ForwardRef(Link)>
-                      </Title>
-                    </ProductInfo>
-                  </div>
-                </Item>
-                <Item
-                  className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                  onMouseEnter={[Function]}
-                >
-                  <div
-                    className="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                    data-testid="product-carousel:item"
-                    onMouseEnter={[Function]}
-                  >
-                    <ProductInfo
-                      key=".$2"
-                    >
-                      <Image
-                        href="https://www.sima-land.ru/"
-                        key=".$.0"
-                        src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
-                      >
-                        <ImageOverlay
-                          className="image-overlay"
-                        >
-                          <span
-                            className="root image-overlay"
-                          >
-                            <a
-                              className="image-link"
-                              data-testid="product-info:image-link"
-                              href="https://www.sima-land.ru/"
-                            >
-                              <img
-                                className="image"
-                                data-testid="product-info:image"
-                                onError={[Function]}
-                                src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
-                                style={
-                                  {
-                                    "opacity": undefined,
-                                  }
-                                }
-                              />
-                            </a>
-                          </span>
-                        </ImageOverlay>
-                      </Image>
-                      <Prices
-                        currencyGrapheme="₽"
-                        key=".$.1"
-                        price={238}
-                      >
-                        <div
-                          className="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <Price
-                            className="price"
-                            currencyGrapheme="₽"
-                            data-testid="product-info:price"
-                            value={238}
-                          >
-                            <span
-                              className="root price"
-                              data-testid="product-info:price"
-                            >
-                              238 ₽
-                            </span>
-                          </Price>
-                        </div>
-                      </Prices>
-                      <Title
-                        href="https://www.sima-land.ru/"
-                        key=".$.2"
-                      >
-                        <ForwardRef(Link)
-                          className="link line-clamp"
-                          color="basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          <a
-                            className="link link line-clamp basic-gray87"
-                            data-testid="product-info:name-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            Ножницы портновские, 21,5 см, цвет чёрный/голубой
-                          </a>
-                        </ForwardRef(Link)>
-                      </Title>
-                    </ProductInfo>
-                  </div>
-                </Item>
-                <Item
-                  className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                  onMouseEnter={[Function]}
-                >
-                  <div
-                    className="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                    data-testid="product-carousel:item"
-                    onMouseEnter={[Function]}
-                  >
-                    <ProductInfo
-                      key=".$3"
-                    >
-                      <Image
-                        href="https://www.sima-land.ru/"
-                        key=".$.0"
-                        src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
-                      >
-                        <ImageOverlay
-                          className="image-overlay"
-                        >
-                          <span
-                            className="root image-overlay"
-                          >
-                            <a
-                              className="image-link"
-                              data-testid="product-info:image-link"
-                              href="https://www.sima-land.ru/"
-                            >
-                              <img
-                                className="image"
-                                data-testid="product-info:image"
-                                onError={[Function]}
-                                src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
-                                style={
-                                  {
-                                    "opacity": undefined,
-                                  }
-                                }
-                              />
-                            </a>
-                          </span>
-                        </ImageOverlay>
-                      </Image>
-                      <Prices
-                        currencyGrapheme="₽"
-                        key=".$.1"
-                        price={171}
-                      >
-                        <div
-                          className="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <Price
-                            className="price"
-                            currencyGrapheme="₽"
-                            data-testid="product-info:price"
-                            value={171}
-                          >
-                            <span
-                              className="root price"
-                              data-testid="product-info:price"
-                            >
-                              171 ₽
-                            </span>
-                          </Price>
-                        </div>
-                      </Prices>
-                      <Title
-                        href="https://www.sima-land.ru/"
-                        key=".$.2"
-                      >
-                        <ForwardRef(Link)
-                          className="link line-clamp"
-                          color="basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          <a
-                            className="link link line-clamp basic-gray87"
-                            data-testid="product-info:name-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            Ножницы портновские, 23 см, цвет МИКС
-                          </a>
-                        </ForwardRef(Link)>
-                      </Title>
-                    </ProductInfo>
-                  </div>
-                </Item>
-                <Item
-                  className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                  onMouseEnter={[Function]}
-                >
-                  <div
-                    className="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                    data-testid="product-carousel:item"
-                    onMouseEnter={[Function]}
-                  >
-                    <ProductInfo
-                      key=".$4"
-                    >
-                      <Image
-                        href="https://www.sima-land.ru/"
-                        key=".$.0"
-                        src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
-                      >
-                        <ImageOverlay
-                          className="image-overlay"
-                        >
-                          <span
-                            className="root image-overlay"
-                          >
-                            <a
-                              className="image-link"
-                              data-testid="product-info:image-link"
-                              href="https://www.sima-land.ru/"
-                            >
-                              <img
-                                className="image"
-                                data-testid="product-info:image"
-                                onError={[Function]}
-                                src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
-                                style={
-                                  {
-                                    "opacity": undefined,
-                                  }
-                                }
-                              />
-                            </a>
-                          </span>
-                        </ImageOverlay>
-                      </Image>
-                      <Prices
-                        currencyGrapheme="₽"
-                        key=".$.1"
-                        price={483}
-                      >
-                        <div
-                          className="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <Price
-                            className="price"
-                            currencyGrapheme="₽"
-                            data-testid="product-info:price"
-                            value={483}
-                          >
-                            <span
-                              className="root price"
-                              data-testid="product-info:price"
-                            >
-                              483 ₽
-                            </span>
-                          </Price>
-                        </div>
-                      </Prices>
-                      <Title
-                        href="https://www.sima-land.ru/"
-                        key=".$.2"
-                      >
-                        <ForwardRef(Link)
-                          className="link line-clamp"
-                          color="basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          <a
-                            className="link link line-clamp basic-gray87"
-                            data-testid="product-info:name-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            Ножницы портновские, одинаковые кольца, 23 см, цвет чёрный
-                          </a>
-                        </ForwardRef(Link)>
-                      </Title>
-                    </ProductInfo>
-                  </div>
-                </Item>
-                <Item
-                  className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                  onMouseEnter={[Function]}
-                >
-                  <div
-                    className="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                    data-testid="product-carousel:item"
-                    onMouseEnter={[Function]}
-                  >
-                    <ProductInfo
-                      key=".$5"
-                    >
-                      <Image
-                        href="https://www.sima-land.ru/"
-                        key=".$.0"
-                        src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
-                      >
-                        <ImageOverlay
-                          className="image-overlay"
-                        >
-                          <span
-                            className="root image-overlay"
-                          >
-                            <a
-                              className="image-link"
-                              data-testid="product-info:image-link"
-                              href="https://www.sima-land.ru/"
-                            >
-                              <img
-                                className="image"
-                                data-testid="product-info:image"
-                                onError={[Function]}
-                                src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
-                                style={
-                                  {
-                                    "opacity": undefined,
-                                  }
-                                }
-                              />
-                            </a>
-                          </span>
-                        </ImageOverlay>
-                      </Image>
-                      <Prices
-                        currencyGrapheme="₽"
-                        key=".$.1"
-                        price={988}
-                      >
-                        <div
-                          className="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <Price
-                            className="price"
-                            currencyGrapheme="₽"
-                            data-testid="product-info:price"
-                            value={988}
-                          >
-                            <span
-                              className="root price"
-                              data-testid="product-info:price"
-                            >
-                              988 ₽
-                            </span>
-                          </Price>
-                        </div>
-                      </Prices>
-                      <Title
-                        href="https://www.sima-land.ru/"
-                        key=".$.2"
-                      >
-                        <ForwardRef(Link)
-                          className="link line-clamp"
-                          color="basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          <a
-                            className="link link line-clamp basic-gray87"
-                            data-testid="product-info:name-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            Ножницы портновские, 22,5 см, цвет чёрный
-                          </a>
-                        </ForwardRef(Link)>
-                      </Title>
-                    </ProductInfo>
-                  </div>
-                </Item>
-                <Item
-                  className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                  onMouseEnter={[Function]}
-                >
-                  <div
-                    className="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                    data-testid="product-carousel:item"
-                    onMouseEnter={[Function]}
-                  >
-                    <ProductInfo
-                      key=".$6"
-                    >
-                      <Image
-                        href="https://www.sima-land.ru/"
-                        key=".$.0"
-                        src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
-                      >
-                        <ImageOverlay
-                          className="image-overlay"
-                        >
-                          <span
-                            className="root image-overlay"
-                          >
-                            <a
-                              className="image-link"
-                              data-testid="product-info:image-link"
-                              href="https://www.sima-land.ru/"
-                            >
-                              <img
-                                className="image"
-                                data-testid="product-info:image"
-                                onError={[Function]}
-                                src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
-                                style={
-                                  {
-                                    "opacity": undefined,
-                                  }
-                                }
-                              />
-                            </a>
-                          </span>
-                        </ImageOverlay>
-                      </Image>
-                      <Prices
-                        currencyGrapheme="₽"
-                        key=".$.1"
-                        price={619}
-                      >
-                        <div
-                          className="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <Price
-                            className="price"
-                            currencyGrapheme="₽"
-                            data-testid="product-info:price"
-                            value={619}
-                          >
-                            <span
-                              className="root price"
-                              data-testid="product-info:price"
-                            >
-                              619 ₽
-                            </span>
-                          </Price>
-                        </div>
-                      </Prices>
-                      <Title
-                        href="https://www.sima-land.ru/"
-                        key=".$.2"
-                      >
-                        <ForwardRef(Link)
-                          className="link line-clamp"
-                          color="basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          <a
-                            className="link link line-clamp basic-gray87"
-                            data-testid="product-info:name-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            Ножницы портновские, 22 см, цвет серебряный
-                          </a>
-                        </ForwardRef(Link)>
-                      </Title>
-                    </ProductInfo>
-                  </div>
-                </Item>
-                <Item
-                  className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                  onMouseEnter={[Function]}
-                >
-                  <div
-                    className="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                    data-testid="product-carousel:item"
-                    onMouseEnter={[Function]}
-                  >
-                    <ProductInfo
-                      key=".$7"
-                    >
-                      <Image
-                        href="https://www.sima-land.ru/"
-                        key=".$.0"
-                        src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
-                      >
-                        <ImageOverlay
-                          className="image-overlay"
-                        >
-                          <span
-                            className="root image-overlay"
-                          >
-                            <a
-                              className="image-link"
-                              data-testid="product-info:image-link"
-                              href="https://www.sima-land.ru/"
-                            >
-                              <img
-                                className="image"
-                                data-testid="product-info:image"
-                                onError={[Function]}
-                                src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
-                                style={
-                                  {
-                                    "opacity": undefined,
-                                  }
-                                }
-                              />
-                            </a>
-                          </span>
-                        </ImageOverlay>
-                      </Image>
-                      <Prices
-                        currencyGrapheme="₽"
-                        key=".$.1"
-                        oldPrice={595}
-                        price={539}
-                      >
-                        <div
-                          className="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <Price
-                            className="price"
-                            currencyGrapheme="₽"
-                            data-testid="product-info:price"
-                            value={539}
-                          >
-                            <span
-                              className="root price"
-                              data-testid="product-info:price"
-                            >
-                              539 ₽
-                            </span>
-                          </Price>
-                          <Price
-                            className="old-price"
-                            crossedOut={true}
-                            currencyGrapheme="₽"
-                            data-testid="product-info:old-price"
-                            value={595}
-                          >
-                            <span
-                              className="root old-price crossed-out"
-                              data-testid="product-info:old-price"
-                            >
-                              595 ₽
-                            </span>
-                          </Price>
-                        </div>
-                      </Prices>
-                      <Title
-                        href="https://www.sima-land.ru/"
-                        key=".$.2"
-                      >
-                        <ForwardRef(Link)
-                          className="link line-clamp"
-                          color="basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          <a
-                            className="link link line-clamp basic-gray87"
-                            data-testid="product-info:name-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            Ножницы портновские, с увеличенным углом наклона, 27 см, цвет чёрный
-                          </a>
-                        </ForwardRef(Link)>
-                      </Title>
-                    </ProductInfo>
-                  </div>
-                </Item>
-                <Item
-                  className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                  onMouseEnter={[Function]}
-                >
-                  <div
-                    className="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                    data-testid="product-carousel:item"
-                    onMouseEnter={[Function]}
-                  >
-                    <ProductInfo
-                      key=".$8"
-                    >
-                      <Image
-                        href="https://www.sima-land.ru/"
-                        key=".$.0"
-                        src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
-                      >
-                        <ImageOverlay
-                          className="image-overlay"
-                        >
-                          <span
-                            className="root image-overlay"
-                          >
-                            <a
-                              className="image-link"
-                              data-testid="product-info:image-link"
-                              href="https://www.sima-land.ru/"
-                            >
-                              <img
-                                className="image"
-                                data-testid="product-info:image"
-                                onError={[Function]}
-                                src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
-                                style={
-                                  {
-                                    "opacity": undefined,
-                                  }
-                                }
-                              />
-                            </a>
-                          </span>
-                        </ImageOverlay>
-                      </Image>
-                      <Prices
-                        currencyGrapheme="₽"
-                        key=".$.1"
-                        oldPrice={717}
-                        price={599}
-                      >
-                        <div
-                          className="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <Price
-                            className="price"
-                            currencyGrapheme="₽"
-                            data-testid="product-info:price"
-                            value={599}
-                          >
-                            <span
-                              className="root price"
-                              data-testid="product-info:price"
-                            >
-                              599 ₽
-                            </span>
-                          </Price>
-                          <Price
-                            className="old-price"
-                            crossedOut={true}
-                            currencyGrapheme="₽"
-                            data-testid="product-info:old-price"
-                            value={717}
-                          >
-                            <span
-                              className="root old-price crossed-out"
-                              data-testid="product-info:old-price"
-                            >
-                              717 ₽
-                            </span>
-                          </Price>
-                        </div>
-                      </Prices>
-                      <Title
-                        href="https://www.sima-land.ru/"
-                        key=".$.2"
-                      >
-                        <ForwardRef(Link)
-                          className="link line-clamp"
-                          color="basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          <a
-                            className="link link line-clamp basic-gray87"
-                            data-testid="product-info:name-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый
-                          </a>
-                        </ForwardRef(Link)>
-                      </Title>
-                    </ProductInfo>
-                  </div>
-                </Item>
-                <Item
-                  className="size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                  onMouseEnter={[Function]}
-                >
-                  <div
-                    className="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
-                    data-testid="product-carousel:item"
-                    onMouseEnter={[Function]}
-                  >
-                    <ProductInfo
-                      key=".$9"
-                    >
-                      <Image
-                        href="https://www.sima-land.ru/"
-                        key=".$.0"
-                        src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
-                      >
-                        <ImageOverlay
-                          className="image-overlay"
-                        >
-                          <span
-                            className="root image-overlay"
-                          >
-                            <a
-                              className="image-link"
-                              data-testid="product-info:image-link"
-                              href="https://www.sima-land.ru/"
-                            >
-                              <img
-                                className="image"
-                                data-testid="product-info:image"
-                                onError={[Function]}
-                                src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
-                                style={
-                                  {
-                                    "opacity": undefined,
-                                  }
-                                }
-                              />
-                            </a>
-                          </span>
-                        </ImageOverlay>
-                      </Image>
-                      <Prices
-                        currencyGrapheme="₽"
-                        key=".$.1"
-                        price={253}
-                      >
-                        <div
-                          className="prices height-limit"
-                          data-testid="product-info:prices"
-                        >
-                          <Price
-                            className="price"
-                            currencyGrapheme="₽"
-                            data-testid="product-info:price"
-                            value={253}
-                          >
-                            <span
-                              className="root price"
-                              data-testid="product-info:price"
-                            >
-                              253 ₽
-                            </span>
-                          </Price>
-                        </div>
-                      </Prices>
-                      <Title
-                        href="https://www.sima-land.ru/"
-                        key=".$.2"
-                      >
-                        <ForwardRef(Link)
-                          className="link line-clamp"
-                          color="basic-gray87"
-                          data-testid="product-info:name-link"
-                          href="https://www.sima-land.ru/"
-                        >
-                          <a
-                            className="link link line-clamp basic-gray87"
-                            data-testid="product-info:name-link"
-                            href="https://www.sima-land.ru/"
-                          >
-                            Ножницы портновские, скошенное лезвие, 15 см, цвет серебряный
-                          </a>
-                        </ForwardRef(Link)>
-                      </Title>
-                    </ProductInfo>
-                  </div>
-                </Item>
-              </div>
+              </a>
             </div>
           </div>
-        </Draggable>
+        </div>
       </div>
-    </Carousel>
+    </div>
   </div>
-</ProductCarousel>
+</div>
 `;

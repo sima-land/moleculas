@@ -2,7 +2,6 @@ module.exports = {
   globalSetup: './.jest/global-setup.js',
   testEnvironment: 'jsdom',
   setupFiles: ['./.jest/setup.js'],
-  snapshotSerializers: ['enzyme-to-json/serializer'],
   testPathIgnorePatterns: ['<rootDir>/.yarn-cache/', '<rootDir>/node_modules/'],
   modulePathIgnorePatterns: ['<rootDir>/.yarn-cache/', '<rootDir>/build/'],
   transform: {

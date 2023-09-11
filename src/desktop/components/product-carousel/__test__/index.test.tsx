@@ -1,15 +1,40 @@
 import { fireEvent, render } from '@testing-library/react';
-import { mount, ReactWrapper } from 'enzyme';
-import { act } from 'react-dom/test-utils';
 import { ProductCarousel } from '..';
 import { items } from './test-items';
 import { useMedia } from '@sima-land/ui-nucleons/hooks/media';
-import { HoverCard } from '../hover-card';
-import { Carousel } from '@sima-land/ui-nucleons/carousel';
 import { Parts, ProductInfo } from '../../../../common/components/product-info';
 import { LayerProvider } from '@sima-land/ui-nucleons/helpers/layer';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import { IntersectionMock } from '@sima-land/ui-nucleons/hooks/intersection/test-utils';
+
+function setBoundingClientRect(
+  element: Element,
+  { x = 0, y = 0, width = 0, height = 0 }: DOMRectInit,
+) {
+  const rect: DOMRect = {
+    x,
+    y,
+    width,
+    height,
+    get top() {
+      return y;
+    },
+    get right() {
+      return x + width;
+    },
+    get bottom() {
+      return y + height;
+    },
+    get left() {
+      return x;
+    },
+    toJSON() {
+      return JSON.stringify(rect);
+    },
+  };
+
+  jest.spyOn(element, 'getBoundingClientRect').mockImplementation(() => rect);
+}
 
 jest.mock('@sima-land/ui-nucleons/hooks/media', () => {
   const original = jest.requireActual('@sima-land/ui-nucleons/hooks/media');
@@ -24,6 +49,8 @@ jest.mock('@sima-land/ui-nucleons/hooks/media', () => {
 });
 
 describe('<ProductCarousel />', () => {
+  const hoverCardItemNameSelector =
+    '[data-testid="product-card:hover-card"] [data-testid="product-info:name-link"]';
   it('should renders correctly', () => {
     const spies = {
       imageClick: jest.fn(),
@@ -124,21 +151,8 @@ describe('<ProductCarousel />', () => {
     expect(container).toMatchSnapshot();
   });
 
-  const Find = {
-    hoverCard: (wrapper: ReactWrapper) =>
-      wrapper.find('div[data-testid="product-card:hover-card"]'),
-    hoverCardItemName: (wrapper: ReactWrapper) =>
-      wrapper
-        .find(HoverCard)
-        .find(HoverCard)
-        .find(ProductInfo)
-        .find('a[data-testid="product-info:name-link"]')
-        .text(),
-    item: (wrapper: ReactWrapper) => wrapper.find('[data-testid="product-carousel:item"]'),
-  };
-
   it('should set size depend on media query', () => {
-    const wrapper = mount(
+    const { container, rerender } = render(
       <ProductCarousel>
         {items.map((item, index) => (
           <ProductInfo key={index}>
@@ -156,18 +170,33 @@ describe('<ProductCarousel />', () => {
       </ProductCarousel>,
     );
 
-    expect(wrapper).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
 
-    act(() => {
-      (useMedia as any).__flag = true;
-      wrapper.setProps({ title: 'Hello!' });
-    });
+    (useMedia as any).__flag = true;
 
-    expect(wrapper).toMatchSnapshot();
+    rerender(
+      <ProductCarousel>
+        {items.map((item, index) => (
+          <ProductInfo key={index}>
+            <Parts.Image src={item.imageSrc} href={item.url} />
+
+            <Parts.Prices
+              price={item.price}
+              oldPrice={item.oldPrice}
+              currencyGrapheme={item.currencyGrapheme}
+            />
+
+            <Parts.Title href={item.url}>{item.name}</Parts.Title>
+          </ProductInfo>
+        ))}
+      </ProductCarousel>,
+    );
+
+    expect(container).toMatchSnapshot();
   });
 
   it('should handle item mouseenter event', () => {
-    const wrapper = mount(
+    const { container, getAllByTestId } = render(
       <ProductCarousel itemSize={{ xs: 3 }} className='additional-class' withHoverCard>
         {items.map((item, index) => (
           <ProductInfo key={index}>
@@ -185,16 +214,13 @@ describe('<ProductCarousel />', () => {
       </ProductCarousel>,
     );
 
-    act(() => {
-      Find.item(wrapper).at(0).simulate('mouseenter');
-    });
-    wrapper.update();
+    fireEvent.mouseEnter(getAllByTestId('product-carousel:item')[0]);
 
-    expect(Find.hoverCardItemName(wrapper)).toBe(items[0].name);
+    expect(container.querySelector(hoverCardItemNameSelector)?.textContent).toBe(items[0].name);
   });
 
   it('should handle hover card mouseleave', () => {
-    const wrapper = mount(
+    const { container, getByTestId, getAllByTestId, queryAllByTestId } = render(
       <ProductCarousel itemSize={{ xs: 3 }} className='additional-class' withHoverCard>
         {items.map((item, index) => (
           <ProductInfo key={index}>
@@ -212,27 +238,21 @@ describe('<ProductCarousel />', () => {
       </ProductCarousel>,
     );
 
-    act(() => {
-      Find.item(wrapper).at(0).simulate('mouseenter');
-    });
-    wrapper.update();
+    fireEvent.mouseEnter(getAllByTestId('product-carousel:item')[0]);
 
-    expect(Find.hoverCardItemName(wrapper)).toBe(items[0].name);
+    expect(container.querySelector(hoverCardItemNameSelector)?.textContent).toBe(items[0].name);
 
-    act(() => {
-      (Find.hoverCard(wrapper).prop('onMouseLeave') as any)();
-    });
-    wrapper.update();
+    fireEvent.mouseLeave(getByTestId('product-card:hover-card'));
 
-    expect(Find.hoverCard(wrapper)).toHaveLength(0);
+    expect(queryAllByTestId('product-card:hover-card')).toHaveLength(0);
   });
 
   it('should handle carousel slide', () => {
     jest.useFakeTimers();
 
-    const wrapper = mount(
+    const { container, rerender, queryAllByTestId, getAllByTestId } = render(
       <ProductCarousel itemSize={{ xs: 3 }} withHoverCard>
-        {items.map((item, index) => (
+        {items.slice(0, 5).map((item, index) => (
           <ProductInfo key={index}>
             <Parts.Image src={item.imageSrc} href={item.url} />
 
@@ -248,28 +268,49 @@ describe('<ProductCarousel />', () => {
       </ProductCarousel>,
     );
 
-    act(() => {
-      (wrapper.find(Carousel).prop('onChangeTargetIndex') as any)();
+    setBoundingClientRect(container.querySelector('.draggable-container') as any, {
+      width: 100,
+      height: 20,
     });
-    wrapper.update();
-
-    expect(Find.hoverCard(wrapper)).toHaveLength(0);
-
-    act(() => {
-      Find.item(wrapper).at(0).simulate('mouseenter');
+    [...container.querySelectorAll('.carousel-items-container > *')].forEach((item, index) => {
+      setBoundingClientRect(item, {
+        x: index * 30,
+        y: 0,
+        width: 30,
+        height: 20,
+      });
     });
-    wrapper.update();
+    rerender(
+      <ProductCarousel itemSize={{ xs: 3 }} withHoverCard>
+        {items.slice(0, 5).map((item, index) => (
+          <ProductInfo key={index}>
+            <Parts.Image src={item.imageSrc} href={item.url} />
 
-    expect(Find.hoverCard(wrapper)).toHaveLength(0);
+            <Parts.Prices
+              price={item.price}
+              oldPrice={item.oldPrice}
+              currencyGrapheme={item.currencyGrapheme}
+            />
+
+            <Parts.Title href={item.url}>{item.name}</Parts.Title>
+          </ProductInfo>
+        ))}
+      </ProductCarousel>,
+    );
+
+    fireEvent.click(getAllByTestId('arrow-button')[1]);
+
+    expect(queryAllByTestId('product-card:hover-card')).toHaveLength(0);
+
+    fireEvent.mouseEnter(getAllByTestId('product-carousel:item')[0]);
+
+    expect(queryAllByTestId('product-card:hover-card')).toHaveLength(0);
 
     jest.advanceTimersByTime(400);
 
-    act(() => {
-      Find.item(wrapper).at(0).simulate('mouseenter');
-    });
-    wrapper.update();
+    fireEvent.mouseEnter(getAllByTestId('product-carousel:item')[0]);
 
-    expect(Find.hoverCardItemName(wrapper)).toBe(items[0].name);
+    expect(container.querySelector(hoverCardItemNameSelector)?.textContent).toBe(items[0].name);
   });
 
   it('should handle layer', () => {
