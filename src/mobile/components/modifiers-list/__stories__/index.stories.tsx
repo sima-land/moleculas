@@ -55,7 +55,11 @@ Text.storyName = 'Текстовые модификаторы';
 export function WithSizeTableURL() {
   return (
     <div style={styles}>
-      <ModifiersList items={[...image, ...color]} currencyGrapheme='₽' sizesTableUrl='/' />
+      <ModifiersList
+        items={[...image, ...color]}
+        currencyGrapheme='₽'
+        sizesTableUrl='https://sima-land.ru'
+      />
     </div>
   );
 }
