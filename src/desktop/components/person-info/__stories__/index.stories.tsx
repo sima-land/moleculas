@@ -19,6 +19,7 @@ export function Primary() {
     <Modal size='s'>
       <Modal.Body>
         <PersonInfo
+          personId={123}
           name='Марина Михайловская'
           appointment='Менеджер по игрушке'
           email='example@email.com'
@@ -46,6 +47,7 @@ export function ArbitraryLink() {
     <Modal size='s'>
       <Modal.Body>
         <PersonInfo
+          personId={123}
           photoUrl='https://picsum.photos/id/342/200/200'
           name='Сёмин Денис Геннадьевич (ежедневная отгрузка из Екатеринбурга)'
           appointment='Менеджер по игрушке'

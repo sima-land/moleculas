@@ -16,6 +16,7 @@ export default {
 
 export function Primary() {
   const person = {
+    personId: 123,
     name: 'Марина Михайловская',
     appointment: 'Менеджер по игрушке',
     email: 'mari-mikh@email.com',
@@ -40,6 +41,7 @@ Primary.storyName = 'Простой пример';
 
 export function WithArbitraryLink() {
   const person = {
+    personId: 123,
     name: 'Сёмин Денис Геннадьевич (ежедневная отгрузка из Екатеринбурга)',
     appointment: 'Менеджер по игрушке',
     email: 'example@email.com',

@@ -10,7 +10,7 @@ export const useAllowFlag = () => {
 
   const allowed = useCallback(() => ref.current, []);
 
-  const disallowFor = useCallback(timeout => {
+  const disallowFor = useCallback((timeout: number) => {
     window.clearTimeout(timerIdRef.current);
     ref.current = false;
     timerIdRef.current = window.setTimeout(() => (ref.current = true), timeout);

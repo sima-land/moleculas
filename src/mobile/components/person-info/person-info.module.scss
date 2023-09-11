@@ -4,17 +4,10 @@
   display: flex;
   justify-content: center;
   margin-top: 8px;
-  &.big {
-    display: none;
-  }
+  --avatar-size: 64px;
   @media (min-width: 721px) {
+    --avatar-size: 104px;
     margin-top: 56px;
-    &.small {
-      display: none;
-    }
-    &.big {
-      display: flex;
-    }
   }
 }
 
