@@ -1,8 +1,8 @@
 module.exports = {
-  core: {
-    builder: 'webpack5',
-  },
   stories: ['./index.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+
+  staticDirs: [{ from: './assets', to: '/assets' }],
+
   addons: [
     '@storybook/addon-actions',
     '@storybook/addon-backgrounds',
@@ -12,12 +12,11 @@ module.exports = {
       name: '@storybook/addon-docs',
       options: {
         transcludeMarkdown: true,
-        sourceLoaderOptions: {
-          injectStoryParameters: false,
-        },
       },
     },
+    '@storybook/addon-mdx-gfm',
   ],
+
   typescript: {
     check: false,
     checkOptions: {},
@@ -26,5 +25,14 @@ module.exports = {
       shouldExtractLiteralValuesFromEnum: true,
       propFilter: prop => !prop.parent || !/node_modules/.test(prop.parent.fileName),
     },
+  },
+
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
+  },
+
+  docs: {
+    autodocs: true,
   },
 };

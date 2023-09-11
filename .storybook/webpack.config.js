@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc, jsdoc/require-jsdoc */
 const path = require('node:path');
 
 module.exports = ({ config }) => ({
@@ -14,14 +15,14 @@ module.exports = ({ config }) => ({
     rules: [
       ...config.module.rules,
 
-      // regular scss
+      // scss
       {
         test: /\.scss$/,
         exclude: /\.module\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
 
-      // css-modules
+      // css-модули
       {
         test: /\.module\.(css|scss)$/,
         use: [
