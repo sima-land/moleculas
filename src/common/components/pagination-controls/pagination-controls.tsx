@@ -2,8 +2,7 @@ import { useState, useCallback, FormEventHandler, ChangeEventHandler, useMemo } 
 import type { PaginationControlsProps } from './types';
 import { Input, InputProps } from '@sima-land/ui-nucleons/input';
 import { Pagination, validatePaginationState } from '@sima-land/ui-nucleons/pagination';
-import { TextButton, TextButtonProps } from '@sima-land/ui-nucleons/text-button';
-import SearchSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Search';
+import RightSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/Arrows/Right';
 import classNames from 'classnames/bind';
 import styles from './pagination-controls.module.scss';
 
@@ -42,7 +41,7 @@ export function PaginationControls({
   );
 
   return (
-    <div className={cx('layout', `flow-${flow}`, className)} {...restProps}>
+    <div className={cx('layout', flow !== 'unset' && `flow-${flow}`, className)} {...restProps}>
       <div className={cx('slot-buttons')}>
         <Buttons current={current} total={total} onPageChange={handlePageChange} />
       </div>
@@ -107,38 +106,22 @@ export function PageForm({ total, onPageChange }: any) {
 
   return (
     <form onSubmit={handleSubmit} className={cx('form')}>
-      <PageFormSubmit type='submit' color={value ? 'basic-blue' : 'basic-gray87'} />
+      <span className={cx('label')}>К странице</span>
       <PageFormInput
         value={value}
         onChange={handleChange}
         adornmentEnd={
-          <TextButton
+          <button
+            disabled={value.length === 0}
             type='submit'
+            className={cx('submit')}
             onMouseDown={event => event.preventDefault()}
-            color='basic-gray38'
           >
-            <SearchSVG fill='currentColor' />
-          </TextButton>
+            <RightSVG fill='currentColor' />
+          </button>
         }
       />
     </form>
-  );
-}
-
-/**
- * Кнопка отправки формы страницы. Только стилизует TextButton.
- * @param props Свойства.
- * @return Элемент.
- */
-export function PageFormSubmit({ className, ...restProps }: TextButtonProps) {
-  return (
-    <TextButton
-      size='s'
-      color='basic-gray87'
-      children='Перейти на страницу'
-      {...restProps}
-      className={cx('submit', className)}
-    />
   );
 }
 
