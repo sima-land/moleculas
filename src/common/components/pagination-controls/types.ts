@@ -9,7 +9,7 @@ export interface PaginationData {
 export interface PaginationControlsProps
   extends Partial<PaginationData>,
     HTMLAttributes<HTMLDivElement> {
-  flow?: 'horizontal' | 'vertical';
+  flow?: 'horizontal' | 'vertical' | 'unset';
   withForm?: boolean;
   Buttons?: ComponentType<{
     total: number;

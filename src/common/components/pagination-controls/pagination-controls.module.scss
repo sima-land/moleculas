@@ -1,3 +1,6 @@
+@use 'node_modules/@sima-land/ui-nucleons/colors';
+@use 'node_modules/@sima-land/ui-nucleons/utils';
+
 .layout {
   display: flex;
   &.flow-vertical {
@@ -24,11 +27,44 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  .submit + .input {
-    margin-left: 16px;
+  .label + .input {
+    margin-left: 8px;
   }
 }
 
+.label {
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 24px;
+  color: colors.$basic-gray38;
+}
+
 .input {
-  width: 108px;
+  width: 100px;
+}
+
+.input .submit {
+  margin: -4px -8px;
+}
+
+.submit {
+  @include utils.reset-button;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: colors.$basic-gray87;
+  color: #fff;
+  border-radius: 4px;
+  &:hover {
+    cursor: pointer;
+  }
+  &:disabled {
+    background: colors.$basic-gray8;
+    color: colors.$basic-gray24;
+  }
+  &:focus-visible {
+    @include utils.focus-visible-style;
+  }
 }

@@ -1,9 +1,2 @@
 export type { PaginationData, PaginationControlsProps } from './types';
-
-export {
-  PaginationControls,
-  PageButtons,
-  PageForm,
-  PageFormSubmit,
-  PageFormInput,
-} from './pagination-controls';
+export { PaginationControls, PageButtons, PageForm, PageFormInput } from './pagination-controls';
