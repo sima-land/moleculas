@@ -1,4 +1,5 @@
 import {
+  MediaArea,
   MediaLayout,
   MediaMain,
   MediaView,
@@ -23,21 +24,9 @@ export function OnlyVideo() {
       <Modal.Body>
         <MediaLayout>
           <MediaMain>
-            <div
-              style={
-                {
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  '--media-width': '100%',
-                  '--media-height': '100%',
-                } as any
-              }
-            >
+            <MediaArea>
               <MediaView media={media} />
-            </div>
+            </MediaArea>
           </MediaMain>
         </MediaLayout>
       </Modal.Body>

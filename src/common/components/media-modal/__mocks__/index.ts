@@ -1,4 +1,10 @@
 import { MediaData, MediaVideo } from '../types';
+import armchair from './thumbnails/armchair.jpg';
+import cup from './thumbnails/cup.jpg';
+import plant from './thumbnails/plant.jpg';
+import stump from './thumbnails/stump.jpg';
+import table from './thumbnails/table.jpg';
+import vase from './thumbnails/vase.jpg';
 
 export const mixed: MediaData[] = [
   {
@@ -91,49 +97,48 @@ export const mixed: MediaData[] = [
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
-      thumbnail: 'https://loremflickr.com/240/240?random=16',
     },
   },
   {
     type: 'image',
     data: {
-      alt: 'Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1',
-      src: 'https://loremflickr.com/240/240?random=1',
+      alt: 'Стул',
+      src: armchair,
     },
   },
   {
     type: 'image',
     data: {
-      alt: 'Фото из отзыва, не квадратное',
-      src: 'https://loremflickr.com/240/240?random=2',
+      alt: 'Чашка',
+      src: cup,
     },
   },
   {
     type: 'image',
     data: {
-      alt: 'Сапоги детские MINAKU, цвет синий, размер 31 - Фото 2',
-      src: 'https://loremflickr.com/240/240?random=3',
+      alt: 'Растение',
+      src: plant,
     },
   },
   {
     type: 'image',
     data: {
-      alt: 'Сапоги детские MINAKU, цвет синий, размер 31 - Фото 3',
-      src: 'https://loremflickr.com/240/240?random=4',
+      alt: 'Пень',
+      src: stump,
     },
   },
   {
     type: 'image',
     data: {
-      alt: 'Сапоги детские MINAKU, цвет синий, размер 31 - Фото 4',
-      src: 'https://loremflickr.com/240/240?random=5',
+      alt: 'Стол',
+      src: table,
     },
   },
   {
     type: 'image',
     data: {
-      alt: 'Сапоги детские MINAKU, цвет синий, размер 31 - Фото 5',
-      src: 'https://loremflickr.com/240/240?random=6',
+      alt: 'Ваза',
+      src: vase,
     },
   },
 ];
@@ -143,42 +148,42 @@ export const videos: MediaVideo[] = [
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
-      thumbnail: 'https://loremflickr.com/240/240?random=6',
+      thumbnail: armchair,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/6907296.mp4',
-      thumbnail: 'https://loremflickr.com/240/240?random=7',
+      thumbnail: cup,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/3619217.mp4',
-      thumbnail: 'https://loremflickr.com/240/240?random=8',
+      thumbnail: plant,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/4093038.mp4',
-      thumbnail: 'https://loremflickr.com/240/240?random=9',
+      thumbnail: stump,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
-      thumbnail: 'https://loremflickr.com/240/240?random=10',
+      thumbnail: table,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/6907296.mp4',
-      thumbnail: 'https://loremflickr.com/240/240?random=11',
+      thumbnail: vase,
     },
   },
   {

@@ -5,12 +5,12 @@ import {
   MediaAside,
   MediaFooter,
   HeaderLayout,
-  Preset,
-  MediaContent,
+  MediaGallery,
   MediaView,
   Thumbnails,
   Thumbnail,
   ProductBrief,
+  Preset,
 } from '@sima-land/moleculas/common/components/media-modal';
 import { Fragment, useState } from 'react';
 import { Modal } from '@sima-land/ui-nucleons/modal';
@@ -71,11 +71,11 @@ export function TestImagesBroken() {
           </MediaHeader>
 
           <MediaMain>
-            <MediaContent targetIndex={targetIndex} onChangeTargetIndex={setTargetIndex}>
+            <MediaGallery targetIndex={targetIndex} onChangeTargetIndex={setTargetIndex}>
               {mixed.map(processMedia).map((item, index) => (
                 <MediaView key={index} media={item} />
               ))}
-            </MediaContent>
+            </MediaGallery>
           </MediaMain>
 
           <MediaAside>
@@ -120,7 +120,9 @@ export function TestImagesBroken() {
                 currency='₽'
                 footer={
                   <>
-                    <Button size='s'>В корзину</Button>
+                    <Button viewType='success' size='s'>
+                      В корзине
+                    </Button>
                     <Stepper size='s' defaultValue={1} />
                   </>
                 }

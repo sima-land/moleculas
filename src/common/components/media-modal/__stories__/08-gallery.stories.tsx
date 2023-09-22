@@ -4,19 +4,13 @@ import {
   MediaMain,
   MediaAside,
   MediaFooter,
-  Preset,
-  HeaderLayout,
   Thumbnails,
   Thumbnail,
-  MediaContent,
+  MediaGallery,
   MediaView,
 } from '@sima-land/moleculas/common/components/media-modal';
 import { Fragment, useState } from 'react';
 import { Modal } from '@sima-land/ui-nucleons/modal';
-import { Tabs } from '@sima-land/ui-nucleons/tabs';
-import { TextButton } from '@sima-land/ui-nucleons/text-button';
-import { Layout } from '@sima-land/ui-nucleons/layout';
-import { Review } from '../parts/review';
 import { mixed } from '../__mocks__';
 
 export default {
@@ -27,8 +21,15 @@ export default {
   },
 };
 
-export function WithReview() {
+export function ExampleGallery() {
   const [targetIndex, setTargetIndex] = useState(0);
+
+  const styles = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    background: 'rgb(33, 33, 33, 0.24)',
+  };
 
   return (
     <Modal size='fullscreen' footerStub={false} withScrollDisable>
@@ -36,27 +37,15 @@ export function WithReview() {
       <Modal.Body>
         <MediaLayout>
           <MediaHeader>
-            <HeaderLayout>
-              <HeaderLayout.Tabs>
-                <Tabs {...Preset.headerTabs()}>
-                  <Tabs.Item name='Фото' />
-                  <Tabs.Item name='Видео' />
-                  <Tabs.Item name='360' />
-                  <Tabs.Item name='Фото покупателей' selected />
-                </Tabs>
-              </HeaderLayout.Tabs>
-              <HeaderLayout.Button>
-                <TextButton {...Preset.headerButton()} />
-              </HeaderLayout.Button>
-            </HeaderLayout>
+            <div style={{ ...styles, width: '100%', height: '40px' }}>Header</div>
           </MediaHeader>
 
           <MediaMain>
-            <MediaContent targetIndex={targetIndex} onChangeTargetIndex={setTargetIndex}>
+            <MediaGallery targetIndex={targetIndex} onChangeTargetIndex={setTargetIndex}>
               {mixed.map((item, index) => (
                 <MediaView key={index} media={item} />
               ))}
-            </MediaContent>
+            </MediaGallery>
           </MediaMain>
 
           <MediaAside>
@@ -91,19 +80,7 @@ export function WithReview() {
           </MediaAside>
 
           <MediaFooter>
-            <Layout disabledOn={['xs', 's', 'm', 'l', 'xl']}>
-              <Review
-                rating={4}
-                author='Пелагеевская Вероника Сергеевна'
-                button={<TextButton size='s'>Перейти к отзыву</TextButton>}
-              >
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus tempora tenetur
-                sapiente quisquam. Repellendus labore enim dicta natus sunt, saepe ab rem nostrum
-                architecto, veritatis porro at harum, est tempora molestiae excepturi? Neque
-                excepturi temporibus omnis veniam delectus libero adipisci ipsam quibusdam, nesciunt
-                facilis ea quae facere commodi placeat architecto.
-              </Review>
-            </Layout>
+            <div style={{ ...styles, width: '100%', height: '100px' }}>Footer</div>
           </MediaFooter>
         </MediaLayout>
       </Modal.Body>
@@ -111,4 +88,4 @@ export function WithReview() {
   );
 }
 
-WithReview.storyName = 'Футер: отзыв';
+ExampleGallery.storyName = 'Галерея';

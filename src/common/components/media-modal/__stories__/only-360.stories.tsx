@@ -1,4 +1,5 @@
 import {
+  MediaArea,
   MediaLayout,
   MediaMain,
   MediaView,
@@ -23,7 +24,9 @@ export function Only360() {
       <Modal.Body>
         <MediaLayout>
           <MediaMain>
-            <MediaView media={media} />
+            <MediaArea>
+              <MediaView media={media} />
+            </MediaArea>
           </MediaMain>
         </MediaLayout>
       </Modal.Body>

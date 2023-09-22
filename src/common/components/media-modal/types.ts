@@ -5,7 +5,7 @@ export interface MediaShape<T extends string, D extends Record<string, any>> {
   data: D;
 }
 
-export type MediaImage = MediaShape<'image', { src: string; alt?: string }>;
+export type MediaImage = MediaShape<'image', { src: string; alt?: string; thumbnail?: string }>;
 
 export type MediaVideo = MediaShape<'video', { src: string; thumbnail?: string }>;
 

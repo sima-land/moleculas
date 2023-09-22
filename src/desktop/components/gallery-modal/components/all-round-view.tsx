@@ -79,6 +79,7 @@ export const AllRoundView = ({
 
     const offList = [
       on<PointerEvent>(image, 'pointerdown', e => {
+        document.activeElement instanceof HTMLElement && document.activeElement.blur();
         e.preventDefault();
         setState('default');
 

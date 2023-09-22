@@ -1,16 +1,16 @@
 @use 'node_modules/@sima-land/ui-nucleons/colors';
 
 .root {
-  width: var(--media-width, 320px);
-  height: var(--media-height, 240px);
   position: absolute;
+  width: var(--media-view-width, 320px);
+  height: var(--media-view-height, 240px);
   display: flex;
   align-items: center;
   justify-content: center;
   &.loading {
     background: colors.$basic-gray4;
   }
-  --all-round-view-size: min(var(--media-width), var(--media-height));
+  --all-round-view-size: min(var(--media-view-width, 320px), var(--media-view-height, 240px));
   video,
   .image {
     position: absolute;

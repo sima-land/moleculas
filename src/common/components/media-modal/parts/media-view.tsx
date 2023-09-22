@@ -1,25 +1,29 @@
-import { useEffect, useRef, VideoHTMLAttributes } from 'react';
+import { CSSProperties, useEffect, useRef, VideoHTMLAttributes } from 'react';
 import { ImageOverlay } from '../../../../desktop/components/gallery-modal/components/image-overlay';
 import { MediaData } from '../types';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
-import classNames from 'classnames';
 import { AllRoundView } from './all-round-view';
-import styles from './media-view.module.scss';
 import { useImageStub } from '../../../hooks';
 import { ImgStub } from '../../img-stub';
+import classNames from 'classnames/bind';
+import styles from './media-view.module.scss';
 
 export interface MediaViewProps {
   media?: MediaData;
   loading?: boolean;
   videoProps?: VideoHTMLAttributes<HTMLVideoElement>;
+  style?: CSSProperties;
+  className?: string;
 }
+
+const cx = classNames.bind(styles);
 
 /**
  * Отображает медиа-контент - 360, видео или изображение.
  * @param props Свойства.
  * @return Элемент.
  */
-export function MediaView({ media, loading, videoProps }: MediaViewProps) {
+export function MediaView({ media, loading, videoProps, style, className }: MediaViewProps) {
   const desktop = useBreakpoint('xs+');
   let imageSrc: string | undefined = undefined;
 
@@ -42,13 +46,13 @@ export function MediaView({ media, loading, videoProps }: MediaViewProps) {
   }, [loading, videoSrc]);
 
   if (loading) {
-    return <div className={classNames(styles.root, styles.loading)}></div>;
+    return <div className={cx('root', 'loading')}></div>;
   }
 
   return (
-    <div className={classNames(styles.root)}>
+    <div className={cx('root', className)} style={style}>
       {media?.type === 'image' && (
-        <ImageOverlay className={styles.image}>
+        <ImageOverlay className={cx('image')}>
           {failed && <ImgStub className={styles.stub} />}
           {!failed && <img src={media.data.src} alt={media.data.alt || ''} onError={handleError} />}
         </ImageOverlay>
