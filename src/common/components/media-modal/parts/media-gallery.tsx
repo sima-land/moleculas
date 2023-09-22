@@ -28,8 +28,9 @@ export function MediaGallery({
 }: MediaGalleryProps) {
   const desktop = useBreakpoint('xs+');
   const mounted = useMounted();
-  const ref = useRef<HTMLDivElement>(null);
-  const rect = useClientRect(ref);
+  const slideRef = useRef<HTMLDivElement>(null);
+  const areaRef = useRef<HTMLDivElement>(null);
+  const areaRect = useClientRect(areaRef);
 
   const items = toViewPropsList(children);
   const total = items.length;
@@ -58,8 +59,25 @@ export function MediaGallery({
         {...{
           ...(!desktop &&
             getSwipeProps({
-              onSwipeLeft: moveBackward,
-              onSwipeRight: moveForward,
+              onSwipeMove: ({ distanceX }) => {
+                if (!slideRef.current) {
+                  return;
+                }
+
+                slideRef.current.style.setProperty(
+                  'transform',
+                  `translate3d(${distanceX}px, 0, 0)`,
+                );
+              },
+              onSwipeEnd: () => {
+                if (!slideRef.current) {
+                  return;
+                }
+
+                slideRef.current.style.setProperty('transform', `translate3d(0, 0, 0)`);
+              },
+              onSwipeLeftEnd: moveBackward,
+              onSwipeRightEnd: moveForward,
             })),
         }}
       >
@@ -67,18 +85,18 @@ export function MediaGallery({
           <ArrowButton className={cx('button')} direction='left' onClick={moveBackward} />
         )}
         <div
-          ref={ref}
+          ref={areaRef}
           className={cx('area')}
           style={
-            rect.ready
+            areaRect.ready
               ? ({
-                  '--media-view-width': `${rect.width}px`,
-                  '--media-view-height': `${rect.height}px`,
+                  '--media-view-width': `${areaRect.width}px`,
+                  '--media-view-height': `${areaRect.height}px`,
                 } as any)
               : undefined
           }
         >
-          {mounted && <MediaView {...target} />}
+          {mounted && <MediaView rootRef={slideRef} {...target} />}
         </div>
 
         {desktop && (
@@ -107,29 +125,59 @@ function toViewPropsList(children: MediaGalleryProps['children']): MediaViewProp
  * @return Пропсы.
  */
 function getSwipeProps({
-  onSwipeLeft,
-  onSwipeRight,
+  onSwipeMove,
+  onSwipeEnd,
+  onSwipeLeftEnd,
+  onSwipeRightEnd,
 }: {
-  onSwipeLeft?: VoidFunction;
-  onSwipeRight?: VoidFunction;
+  onSwipeMove?: (event: { startX: number; distanceX: number }) => void;
+  onSwipeEnd?: VoidFunction;
+  onSwipeLeftEnd?: VoidFunction;
+  onSwipeRightEnd?: VoidFunction;
 } = {}): HTMLAttributes<HTMLElement> {
-  let start = 0;
+  let startX = 0;
+  let capture = false;
 
   return {
     onPointerDown: event => {
-      start = event.clientX;
+      event.preventDefault();
+
+      if (document.activeElement instanceof HTMLElement) {
+        document.activeElement.blur();
+      }
+
+      startX = event.clientX;
+      capture = true;
     },
+
+    onPointerMove: event => {
+      if (!capture) {
+        return;
+      }
+
+      onSwipeMove?.({ startX, distanceX: event.clientX - startX });
+    },
+
     onPointerUp: event => {
-      const finish = event.clientX;
-      const diff = finish - start;
-
-      if (diff > 0) {
-        onSwipeLeft?.();
+      if (!capture) {
+        return;
       }
 
-      if (diff < 0) {
-        onSwipeRight?.();
+      const diff = event.clientX - startX;
+
+      if (Math.abs(diff) > 64) {
+        if (diff > 0) {
+          onSwipeLeftEnd?.();
+        }
+
+        if (diff < 0) {
+          onSwipeRightEnd?.();
+        }
       }
+
+      onSwipeEnd?.();
+
+      capture = false;
     },
   };
 }
