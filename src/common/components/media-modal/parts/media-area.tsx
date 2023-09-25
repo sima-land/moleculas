@@ -23,8 +23,10 @@ export function MediaArea({ children }: { children?: ReactNode }) {
       style={
         rect.ready
           ? ({
-              '--media-view-width': `${rect.width}px`,
-              '--media-view-height': `${rect.height}px`,
+              '--media-gallery-width': `${rect.width}px`,
+              '--media-gallery-height': `${rect.height}px`,
+              '--media-view-width': `var(--media-gallery-width)`,
+              '--media-view-height': `var(--media-gallery-height)`,
             } as any)
           : undefined
       }

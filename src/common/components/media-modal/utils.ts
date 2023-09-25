@@ -68,7 +68,7 @@ export function useClientRect(ref: RefObject<HTMLElement>) {
     height: 0,
   }));
 
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     if (ref.current) {
       const element = ref.current;
 

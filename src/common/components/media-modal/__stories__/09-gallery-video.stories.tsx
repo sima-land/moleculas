@@ -8,6 +8,8 @@ import {
   Thumbnail,
   MediaGallery,
   MediaView,
+  MediaArea,
+  MediaSlide,
 } from '@sima-land/moleculas/common/components/media-modal';
 import { useState } from 'react';
 import { Modal } from '@sima-land/ui-nucleons/modal';
@@ -41,11 +43,15 @@ export function ExampleGalleryVideo() {
           </MediaHeader>
 
           <MediaMain>
-            <MediaGallery targetIndex={targetIndex} onChangeTargetIndex={setTargetIndex}>
-              {videos.map((item, index) => (
-                <MediaView key={index} media={item} />
-              ))}
-            </MediaGallery>
+            <MediaArea>
+              <MediaGallery targetIndex={targetIndex} onChangeTargetIndex={setTargetIndex}>
+                {videos.map((item, index) => (
+                  <MediaSlide key={index}>
+                    <MediaView media={item} />
+                  </MediaSlide>
+                ))}
+              </MediaGallery>
+            </MediaArea>
           </MediaMain>
 
           <MediaAside>

@@ -1,7 +1,6 @@
 @use 'node_modules/@sima-land/ui-nucleons/colors';
 
 .root {
-  position: relative;
   width: var(--media-gallery-width, 320px);
   height: var(--media-gallery-height, 240px);
   display: flex;

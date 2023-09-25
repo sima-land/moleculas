@@ -1,5 +1,6 @@
 import {
   Children,
+  CSSProperties,
   HTMLAttributes,
   isValidElement,
   ReactElement,
@@ -13,7 +14,14 @@ import { useMounted } from '../utils';
 import classNames from 'classnames/bind';
 import styles from './media-gallery.module.scss';
 
+export interface MediaGalleryStyle extends CSSProperties {
+  '--media-gallery-width'?: string;
+  '--media-gallery-height'?: string;
+}
+
 export interface MediaGalleryProps {
+  style?: MediaGalleryStyle;
+  className?: string;
   children: ReactNode;
   targetIndex?: number;
   onChangeTargetIndex?: (newIndex: number) => void;
@@ -52,6 +60,8 @@ const LoopUtil = {
  * @return Элемент.
  */
 export function MediaGallery({
+  className,
+  style,
   children,
   targetIndex = 0,
   onChangeTargetIndex,
@@ -146,7 +156,7 @@ export function MediaGallery({
   useEffect(() => init(), [init]);
 
   return (
-    <div className={cx('root')} {...getProps()}>
+    <div className={cx('root', className)} style={style} {...getProps()}>
       {mounted && (
         <>
           <div ref={slidesRef} className={cx('slides')}>

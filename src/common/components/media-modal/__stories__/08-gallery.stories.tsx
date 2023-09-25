@@ -9,10 +9,12 @@ import {
   MediaGallery,
   MediaView,
   MediaSlide,
+  MediaArea,
 } from '@sima-land/moleculas/common/components/media-modal';
-import { CSSProperties, Fragment, useState } from 'react';
+import { CSSProperties, Fragment, useRef, useState } from 'react';
 import { Modal } from '@sima-land/ui-nucleons/modal';
 import { mixed } from '../__mocks__';
+import { usePageScrollLock } from '@sima-land/ui-nucleons/_internal/page-scroll-lock';
 
 export default {
   title: 'common/MediaLayout',
@@ -25,13 +27,16 @@ export default {
 export function ExampleCleanGallery() {
   const [targetIndex, setTargetIndex] = useState(0);
 
+  const ref = useRef<HTMLDivElement>(null);
+  usePageScrollLock(ref);
+
   const styles = {
     root: {
-      padding: '40px',
+      position: 'fixed',
       display: 'flex',
       justifyContent: 'center',
-      '--media-gallery-width': '600px',
-      '--media-gallery-height': '400px',
+      '--media-gallery-width': '100vw',
+      '--media-gallery-height': '100vh',
       '--media-view-width': 'var(--media-gallery-width)',
       '--media-view-height': 'var(--media-gallery-height)',
     } as any,
@@ -46,12 +51,11 @@ export function ExampleCleanGallery() {
   };
 
   return (
-    <div style={styles.root}>
+    <div ref={ref} style={styles.root}>
       <div style={{ background: '#000' }}>
         <MediaGallery targetIndex={targetIndex} onChangeTargetIndex={setTargetIndex}>
           {mixed.map((item, index) => (
             <MediaSlide key={index}>
-              {/* <div style={styles.item}>Item #{index}</div> */}
               <MediaView media={item} />
             </MediaSlide>
           ))}
@@ -81,13 +85,19 @@ export function ExampleGallery() {
           </MediaHeader>
 
           <MediaMain>
-            <MediaGallery targetIndex={targetIndex} onChangeTargetIndex={setTargetIndex}>
-              {mixed.map((item, index) => (
-                <MediaSlide key={index}>
-                  <MediaView media={item} />
-                </MediaSlide>
-              ))}
-            </MediaGallery>
+            <MediaArea>
+              <MediaGallery
+                targetIndex={targetIndex}
+                onChangeTargetIndex={setTargetIndex}
+                style={{ position: 'absolute' }}
+              >
+                {mixed.map((item, index) => (
+                  <MediaSlide key={index}>
+                    <MediaView media={item} />
+                  </MediaSlide>
+                ))}
+              </MediaGallery>
+            </MediaArea>
           </MediaMain>
 
           <MediaAside>
