@@ -5,7 +5,6 @@ import {
   MediaAside,
   MediaFooter,
   HeaderLayout,
-  MediaGallery,
   MediaView,
   Thumbnails,
   Thumbnail,
@@ -20,6 +19,7 @@ import { Layout } from '@sima-land/ui-nucleons/layout';
 import { Button } from '@sima-land/ui-nucleons/button';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import { MediaData } from '../types';
+import { MediaGallery, MediaSlide } from '../../media-gallery';
 
 export default {
   title: 'common/MediaLayout',
@@ -73,7 +73,9 @@ export function TestImagesBroken() {
           <MediaMain>
             <MediaGallery targetIndex={targetIndex} onChangeTargetIndex={setTargetIndex}>
               {mixed.map(processMedia).map((item, index) => (
-                <MediaView key={index} media={item} />
+                <MediaSlide key={index}>
+                  <MediaView media={item} />
+                </MediaSlide>
               ))}
             </MediaGallery>
           </MediaMain>
