@@ -18,6 +18,8 @@ export default {
 const styles = {
   root: {
     position: 'fixed',
+    top: 0,
+    left: 0,
     background: '#000',
     overflow: 'hidden',
     '--media-gallery-width': '100vw',
