@@ -1,10 +1,16 @@
 import { MediaData, MediaVideo } from '../types';
-import armchair from './thumbnails/armchair.jpg';
-import cup from './thumbnails/cup.jpg';
-import plant from './thumbnails/plant.jpg';
-import stump from './thumbnails/stump.jpg';
-import table from './thumbnails/table.jpg';
-import vase from './thumbnails/vase.jpg';
+import armchair from './images/armchair.jpg';
+import cup from './images/cup.jpg';
+import plant from './images/plant.jpg';
+import stump from './images/stump.jpg';
+import table from './images/table.jpg';
+import vase from './images/vase.jpg';
+import armchairThumbnail from './thumbnails/armchair.jpg';
+import cupThumbnail from './thumbnails/cup.jpg';
+import plantThumbnail from './thumbnails/plant.jpg';
+import stumpThumbnail from './thumbnails/stump.jpg';
+import tableThumbnail from './thumbnails/table.jpg';
+import vaseThumbnail from './thumbnails/vase.jpg';
 
 export const mixed: MediaData[] = [
   {
@@ -104,6 +110,7 @@ export const mixed: MediaData[] = [
     data: {
       alt: 'Стул',
       src: armchair,
+      thumbnail: armchairThumbnail,
     },
   },
   {
@@ -111,6 +118,7 @@ export const mixed: MediaData[] = [
     data: {
       alt: 'Чашка',
       src: cup,
+      thumbnail: cupThumbnail,
     },
   },
   {
@@ -118,6 +126,7 @@ export const mixed: MediaData[] = [
     data: {
       alt: 'Растение',
       src: plant,
+      thumbnail: plantThumbnail,
     },
   },
   {
@@ -125,6 +134,7 @@ export const mixed: MediaData[] = [
     data: {
       alt: 'Пень',
       src: stump,
+      thumbnail: stumpThumbnail,
     },
   },
   {
@@ -132,6 +142,7 @@ export const mixed: MediaData[] = [
     data: {
       alt: 'Стол',
       src: table,
+      thumbnail: tableThumbnail,
     },
   },
   {
@@ -139,6 +150,7 @@ export const mixed: MediaData[] = [
     data: {
       alt: 'Ваза',
       src: vase,
+      thumbnail: vaseThumbnail,
     },
   },
 ];

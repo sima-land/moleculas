@@ -4,7 +4,7 @@ import { TabsProps } from '@sima-land/ui-nucleons/tabs';
 import { TextButtonProps } from '@sima-land/ui-nucleons/text-button';
 import { defineSlots } from '@sima-land/ui-nucleons/helpers/define-slots';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
-import { useMounted } from '../utils';
+import { useMounted } from '../../../../common/hooks';
 import { ScrollSection } from './scroll-section';
 import LeftSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/Arrows/Left';
 import styles from './parts.module.scss';

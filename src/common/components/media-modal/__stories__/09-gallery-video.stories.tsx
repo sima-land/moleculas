@@ -6,11 +6,10 @@ import {
   MediaFooter,
   Thumbnails,
   Thumbnail,
-  MediaGallery,
   MediaView,
   MediaArea,
-  MediaSlide,
 } from '@sima-land/moleculas/common/components/media-modal';
+import { MediaGallery, MediaSlide } from '../../media-gallery';
 import { useState } from 'react';
 import { Modal } from '@sima-land/ui-nucleons/modal';
 import { videos } from '../__mocks__';
