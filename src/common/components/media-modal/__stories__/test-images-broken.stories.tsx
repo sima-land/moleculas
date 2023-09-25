@@ -120,10 +120,14 @@ export function TestImagesBroken() {
                 currency='₽'
                 footer={
                   <>
-                    <Button viewType='success' size='s'>
+                    <Button size='s' viewType='success' style={{ width: '128px' }}>
                       В корзине
                     </Button>
-                    <Stepper size='s' defaultValue={1} />
+                    <Stepper
+                      size='s'
+                      defaultValue={1}
+                      style={{ width: '128px', marginLeft: '12px' }}
+                    />
                   </>
                 }
               />

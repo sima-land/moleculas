@@ -1,20 +1,40 @@
 import { Children, HTMLAttributes, isValidElement, ReactNode, useCallback, useRef } from 'react';
-import { MediaView, MediaViewProps } from './media-view';
-import { MediaArea } from './media-area';
-import { useClientRect, useMounted } from '../utils';
-import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
-import { ArrowButton } from '@sima-land/ui-nucleons/arrow-button';
+import { useMounted } from '../utils';
 import classNames from 'classnames/bind';
 import styles from './media-gallery.module.scss';
 
 export interface MediaGalleryProps {
-  children?: ReactNode;
+  children: ReactNode;
   targetIndex?: number;
   onChangeTargetIndex?: (newIndex: number) => void;
   loading?: boolean;
 }
 
 const cx = classNames.bind(styles);
+
+const LoopUtil = {
+  /**
+   * Возвращает индекс предыдущего элемента.
+   * @param current Текущий индекс.
+   * @param total Всего.
+   * @return Индекс.
+   */
+  getPrevIndex(current: number, total: number) {
+    const nextIndex = current - 1;
+    return nextIndex < 0 ? total - 1 : nextIndex;
+  },
+
+  /**
+   * Возвращает индекс следующего элемента.
+   * @param current Текущий индекс.
+   * @param total Всего.
+   * @return Индекс.
+   */
+  getNextIndex(current: number, total: number) {
+    const nextIndex = current + 1;
+    return nextIndex >= total ? 0 : nextIndex;
+  },
+} as const;
 
 /**
  * Отображает медиа-контент в контексте модального окна.
@@ -26,97 +46,92 @@ export function MediaGallery({
   targetIndex = 0,
   onChangeTargetIndex,
 }: MediaGalleryProps) {
-  const desktop = useBreakpoint('xs+');
   const mounted = useMounted();
-  const slideRef = useRef<HTMLDivElement>(null);
-  const areaRef = useRef<HTMLDivElement>(null);
-  const areaRect = useClientRect(areaRef);
+  const slidesRef = useRef<HTMLDivElement>(null);
 
-  const items = toViewPropsList(children);
+  const items = Children.toArray(children).filter(
+    item => isValidElement(item) && item.type === MediaSlide,
+  );
+
   const total = items.length;
-  const target = items[targetIndex];
 
   const moveBackward = useCallback(() => {
-    const nextIndex = targetIndex - 1;
-
-    onChangeTargetIndex?.(nextIndex < 0 ? total - 1 : nextIndex);
+    onChangeTargetIndex?.(LoopUtil.getPrevIndex(targetIndex, total));
   }, [total, targetIndex, onChangeTargetIndex]);
 
   const moveForward = useCallback(() => {
-    const nextIndex = targetIndex + 1;
-
-    onChangeTargetIndex?.(nextIndex >= total ? 0 : nextIndex);
+    onChangeTargetIndex?.(LoopUtil.getNextIndex(targetIndex, total));
   }, [total, targetIndex, onChangeTargetIndex]);
 
-  if (!target) {
-    return null;
-  }
+  const target = items[targetIndex];
+
+  const next = items[LoopUtil.getNextIndex(targetIndex, total)];
+  const prev = items[LoopUtil.getPrevIndex(targetIndex, total)];
 
   return (
-    <MediaArea>
-      <div
-        className={cx('inner')}
-        {...{
-          ...(!desktop &&
-            getSwipeProps({
-              onSwipeMove: ({ distanceX }) => {
-                if (!slideRef.current) {
-                  return;
-                }
-
-                slideRef.current.style.setProperty(
-                  'transform',
-                  `translate3d(${distanceX}px, 0, 0)`,
-                );
-              },
-              onSwipeEnd: () => {
-                if (!slideRef.current) {
-                  return;
-                }
-
-                slideRef.current.style.setProperty('transform', `translate3d(0, 0, 0)`);
-              },
-              onSwipeLeftEnd: moveBackward,
-              onSwipeRightEnd: moveForward,
-            })),
-        }}
-      >
-        {desktop && (
-          <ArrowButton className={cx('button')} direction='left' onClick={moveBackward} />
-        )}
-        <div
-          ref={areaRef}
-          className={cx('area')}
-          style={
-            areaRect.ready
-              ? ({
-                  '--media-view-width': `${areaRect.width}px`,
-                  '--media-view-height': `${areaRect.height}px`,
-                } as any)
-              : undefined
+    <div
+      className={cx('root')}
+      {...getSwipeProps({
+        onSwipeStart: () => {
+          if (!slidesRef.current) {
+            return;
           }
-        >
-          {mounted && <MediaView rootRef={slideRef} {...target} />}
-        </div>
 
-        {desktop && (
-          <ArrowButton className={cx('button')} direction='right' onClick={moveForward} />
-        )}
-      </div>
-    </MediaArea>
+          slidesRef.current.classList.remove(cx('transition'));
+        },
+        onSwipeMove: ({ distanceX }) => {
+          if (!slidesRef.current) {
+            return;
+          }
+
+          slidesRef.current.style.setProperty('transform', `translate3d(${distanceX}px, 0, 0)`);
+        },
+        onSwipeEnd: ({ distanceX }) => {
+          const slides = slidesRef.current;
+
+          if (!slides) {
+            return;
+          }
+
+          slides.style.setProperty(
+            'transform',
+            distanceX > 0
+              ? `translate3d(calc(${distanceX}px - var(--media-gallery-width)), 0, 0)`
+              : `translate3d(calc(${distanceX}px + var(--media-gallery-width)), 0, 0)`,
+          );
+
+          // ВАЖНО: здесь должны быть именно два requestAnimationFrame, один внутри другого
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              slides.classList.add(cx('transition'));
+              slides.style.setProperty('transform', `translate3d(0px, 0, 0)`);
+            });
+          });
+        },
+        onSwipeLeftEnd: moveBackward,
+        onSwipeRightEnd: moveForward,
+      })}
+    >
+      {mounted && (
+        <>
+          <div ref={slidesRef} className={cx('slides')}>
+            {prev && <div className={cx('slide', 'prev')}>{prev}</div>}
+            {target && <div className={cx('slide', 'current')}>{target}</div>}
+            {next && <div className={cx('slide', 'next')}>{next}</div>}
+          </div>
+        </>
+      )}
+    </div>
   );
 }
 
 /**
- * Получив пропсы items и children вернет массив пропсов для MediaView.
- * @param children Проп children.
- * @return Массив пропсов для MediaView.
+ * Слот слайда галереи.
+ * @param props Свойства.
+ * @return Элемент.
  */
-function toViewPropsList(children: MediaGalleryProps['children']): MediaViewProps[] {
-  return Children.toArray(children).reduce<MediaViewProps[]>((acc, item) => {
-    isValidElement(item) && item.type === MediaView && acc.push(item.props);
-    return acc;
-  }, []);
+export function MediaSlide({ children }: { children?: ReactNode }) {
+  return <>{children}</>;
 }
 
 /**
@@ -125,13 +140,15 @@ function toViewPropsList(children: MediaGalleryProps['children']): MediaViewProp
  * @return Пропсы.
  */
 function getSwipeProps({
+  onSwipeStart,
   onSwipeMove,
   onSwipeEnd,
   onSwipeLeftEnd,
   onSwipeRightEnd,
 }: {
+  onSwipeStart?: VoidFunction;
   onSwipeMove?: (event: { startX: number; distanceX: number }) => void;
-  onSwipeEnd?: VoidFunction;
+  onSwipeEnd?: (event: { startX: number; distanceX: number }) => void;
   onSwipeLeftEnd?: VoidFunction;
   onSwipeRightEnd?: VoidFunction;
 } = {}): HTMLAttributes<HTMLElement> {
@@ -145,6 +162,8 @@ function getSwipeProps({
       if (document.activeElement instanceof HTMLElement) {
         document.activeElement.blur();
       }
+
+      onSwipeStart?.();
 
       startX = event.clientX;
       capture = true;
@@ -173,9 +192,9 @@ function getSwipeProps({
         if (diff < 0) {
           onSwipeRightEnd?.();
         }
-      }
 
-      onSwipeEnd?.();
+        onSwipeEnd?.({ startX, distanceX: diff });
+      }
 
       capture = false;
     },

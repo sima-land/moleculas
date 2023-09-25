@@ -8,8 +8,9 @@ import {
   Thumbnail,
   MediaGallery,
   MediaView,
+  MediaSlide,
 } from '@sima-land/moleculas/common/components/media-modal';
-import { Fragment, useState } from 'react';
+import { CSSProperties, Fragment, useState } from 'react';
 import { Modal } from '@sima-land/ui-nucleons/modal';
 import { mixed } from '../__mocks__';
 
@@ -21,10 +22,49 @@ export default {
   },
 };
 
-export function ExampleGallery() {
+export function ExampleCleanGallery() {
   const [targetIndex, setTargetIndex] = useState(0);
 
   const styles = {
+    root: {
+      padding: '40px',
+      display: 'flex',
+      justifyContent: 'center',
+      '--media-gallery-width': '600px',
+      '--media-gallery-height': '400px',
+      '--media-view-width': 'var(--media-gallery-width)',
+      '--media-view-height': 'var(--media-gallery-height)',
+    } as any,
+    item: {
+      width: 'var(--media-gallery-width)',
+      height: 'var(--media-gallery-height)',
+      background: '#ddd',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    } satisfies CSSProperties,
+  };
+
+  return (
+    <div style={styles.root}>
+      <div style={{ background: '#000' }}>
+        <MediaGallery targetIndex={targetIndex} onChangeTargetIndex={setTargetIndex}>
+          {mixed.map((item, index) => (
+            <MediaSlide key={index}>
+              {/* <div style={styles.item}>Item #{index}</div> */}
+              <MediaView media={item} />
+            </MediaSlide>
+          ))}
+        </MediaGallery>
+      </div>
+    </div>
+  );
+}
+
+export function ExampleGallery() {
+  const [targetIndex, setTargetIndex] = useState(0);
+
+  const style = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -37,13 +77,15 @@ export function ExampleGallery() {
       <Modal.Body>
         <MediaLayout>
           <MediaHeader>
-            <div style={{ ...styles, width: '100%', height: '40px' }}>Header</div>
+            <div style={{ ...style, width: '100%', height: '40px' }}>Header</div>
           </MediaHeader>
 
           <MediaMain>
             <MediaGallery targetIndex={targetIndex} onChangeTargetIndex={setTargetIndex}>
               {mixed.map((item, index) => (
-                <MediaView key={index} media={item} />
+                <MediaSlide key={index}>
+                  <MediaView media={item} />
+                </MediaSlide>
               ))}
             </MediaGallery>
           </MediaMain>
@@ -80,7 +122,7 @@ export function ExampleGallery() {
           </MediaAside>
 
           <MediaFooter>
-            <div style={{ ...styles, width: '100%', height: '100px' }}>Footer</div>
+            <div style={{ ...style, width: '100%', height: '100px' }}>Footer</div>
           </MediaFooter>
         </MediaLayout>
       </Modal.Body>
