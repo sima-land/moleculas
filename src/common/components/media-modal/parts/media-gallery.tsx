@@ -1,4 +1,14 @@
-import { Children, HTMLAttributes, isValidElement, ReactNode, useCallback, useRef } from 'react';
+import {
+  Children,
+  HTMLAttributes,
+  isValidElement,
+  ReactElement,
+  ReactNode,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+} from 'react';
 import { useMounted } from '../utils';
 import classNames from 'classnames/bind';
 import styles from './media-gallery.module.scss';
@@ -51,27 +61,38 @@ export function MediaGallery({
 
   const items = Children.toArray(children).filter(
     item => isValidElement(item) && item.type === MediaSlide,
-  );
+  ) as ReactElement[];
 
   const total = items.length;
 
+  const totalRef = useRef(total);
+  totalRef.current = total;
+
+  const targetIndexRef = useRef(targetIndex);
+  targetIndexRef.current = targetIndex;
+
+  const onChangeTargetIndexRef = useRef(onChangeTargetIndex);
+  onChangeTargetIndexRef.current = onChangeTargetIndex;
+
   const moveBackward = useCallback(() => {
-    onChangeTargetIndex?.(LoopUtil.getPrevIndex(targetIndex, total));
-  }, [total, targetIndex, onChangeTargetIndex]);
+    onChangeTargetIndexRef.current?.(
+      LoopUtil.getPrevIndex(targetIndexRef.current, totalRef.current),
+    );
+  }, []);
 
   const moveForward = useCallback(() => {
-    onChangeTargetIndex?.(LoopUtil.getNextIndex(targetIndex, total));
-  }, [total, targetIndex, onChangeTargetIndex]);
+    onChangeTargetIndexRef.current?.(
+      LoopUtil.getNextIndex(targetIndexRef.current, totalRef.current),
+    );
+  }, []);
 
   const target = items[targetIndex];
-
   const next = items[LoopUtil.getNextIndex(targetIndex, total)];
   const prev = items[LoopUtil.getPrevIndex(targetIndex, total)];
 
-  return (
-    <div
-      className={cx('root')}
-      {...getSwipeProps({
+  const { init, getProps } = useMemo(
+    () =>
+      createSwipe({
         onSwipeStart: () => {
           if (!slidesRef.current) {
             return;
@@ -86,19 +107,28 @@ export function MediaGallery({
 
           slidesRef.current.style.setProperty('transform', `translate3d(${distanceX}px, 0, 0)`);
         },
-        onSwipeEnd: ({ distanceX }) => {
+        onSwipeEnd: ({ distanceX, isLeft, isRight }) => {
           const slides = slidesRef.current;
 
           if (!slides) {
             return;
           }
 
-          slides.style.setProperty(
-            'transform',
-            distanceX > 0
-              ? `translate3d(calc(${distanceX}px - var(--media-gallery-width)), 0, 0)`
-              : `translate3d(calc(${distanceX}px + var(--media-gallery-width)), 0, 0)`,
-          );
+          if (isLeft) {
+            slides.style.setProperty(
+              'transform',
+              `translate3d(calc(${distanceX}px - var(--media-gallery-width)), 0, 0)`,
+            );
+            moveBackward();
+          }
+
+          if (isRight) {
+            slides.style.setProperty(
+              'transform',
+              `translate3d(calc(${distanceX}px + var(--media-gallery-width)), 0, 0)`,
+            );
+            moveForward();
+          }
 
           // ВАЖНО: здесь должны быть именно два requestAnimationFrame, один внутри другого
           requestAnimationFrame(() => {
@@ -108,16 +138,33 @@ export function MediaGallery({
             });
           });
         },
-        onSwipeLeftEnd: moveBackward,
-        onSwipeRightEnd: moveForward,
-      })}
-    >
+      }),
+    [moveBackward, moveBackward],
+  );
+
+  useEffect(() => init(), [init]);
+
+  return (
+    <div className={cx('root')} {...getProps()}>
       {mounted && (
         <>
           <div ref={slidesRef} className={cx('slides')}>
-            {prev && <div className={cx('slide', 'prev')}>{prev}</div>}
-            {target && <div className={cx('slide', 'current')}>{target}</div>}
-            {next && <div className={cx('slide', 'next')}>{next}</div>}
+            {/* ВАЖНО: прокидываем key чтобы предотвратить размонтирование слайдов */}
+            {prev && (
+              <div key={prev.key} className={cx('slide', 'prev')}>
+                {prev}
+              </div>
+            )}
+            {target && (
+              <div key={target.key} className={cx('slide', 'current')}>
+                {target}
+              </div>
+            )}
+            {next && (
+              <div key={next.key} className={cx('slide', 'next')}>
+                {next}
+              </div>
+            )}
           </div>
         </>
       )}
@@ -139,23 +186,25 @@ export function MediaSlide({ children }: { children?: ReactNode }) {
  * @param props Свойства.
  * @return Пропсы.
  */
-function getSwipeProps({
+function createSwipe({
   onSwipeStart,
   onSwipeMove,
   onSwipeEnd,
-  onSwipeLeftEnd,
-  onSwipeRightEnd,
 }: {
   onSwipeStart?: VoidFunction;
   onSwipeMove?: (event: { startX: number; distanceX: number }) => void;
-  onSwipeEnd?: (event: { startX: number; distanceX: number }) => void;
-  onSwipeLeftEnd?: VoidFunction;
-  onSwipeRightEnd?: VoidFunction;
-} = {}): HTMLAttributes<HTMLElement> {
+  onSwipeEnd?: (event: {
+    startX: number;
+    distanceX: number;
+    isLeft: boolean;
+    isRight: boolean;
+  }) => void;
+} = {}): { getProps: () => HTMLAttributes<HTMLElement>; init: () => VoidFunction } {
   let startX = 0;
   let capture = false;
 
-  return {
+  // eslint-disable-next-line require-jsdoc
+  const getProps: () => HTMLAttributes<HTMLElement> = () => ({
     onPointerDown: event => {
       event.preventDefault();
 
@@ -168,35 +217,45 @@ function getSwipeProps({
       startX = event.clientX;
       capture = true;
     },
+  });
 
-    onPointerMove: event => {
+  // eslint-disable-next-line require-jsdoc
+  const init = () => {
+    // eslint-disable-next-line require-jsdoc
+    const onPointerMove = (event: PointerEvent) => {
       if (!capture) {
         return;
       }
 
       onSwipeMove?.({ startX, distanceX: event.clientX - startX });
-    },
+    };
 
-    onPointerUp: event => {
+    // eslint-disable-next-line require-jsdoc
+    const onPointerUp = (event: PointerEvent) => {
       if (!capture) {
         return;
       }
 
       const diff = event.clientX - startX;
 
-      if (Math.abs(diff) > 64) {
-        if (diff > 0) {
-          onSwipeLeftEnd?.();
-        }
-
-        if (diff < 0) {
-          onSwipeRightEnd?.();
-        }
-
-        onSwipeEnd?.({ startX, distanceX: diff });
-      }
+      onSwipeEnd?.({
+        startX,
+        distanceX: diff,
+        isLeft: Math.abs(diff) > 64 && diff > 0,
+        isRight: Math.abs(diff) > 64 && diff < 0,
+      });
 
       capture = false;
-    },
+    };
+
+    window.addEventListener('pointermove', onPointerMove);
+    window.addEventListener('pointerup', onPointerUp);
+
+    return () => {
+      window.removeEventListener('pointermove', onPointerMove);
+      window.removeEventListener('pointerup', onPointerUp);
+    };
   };
+
+  return { init, getProps };
 }

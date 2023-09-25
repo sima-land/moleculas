@@ -1,3 +1,4 @@
+import { useIsomorphicLayoutEffect } from '@sima-land/ui-nucleons/hooks';
 import { useIdentityRef } from '@sima-land/ui-nucleons/hooks/identity';
 import { RefObject, useEffect, useState } from 'react';
 
@@ -101,7 +102,7 @@ export function useClientRect(ref: RefObject<HTMLElement>) {
 export function useMounted() {
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     setMounted(true);
     return () => setMounted(false);
   }, []);
