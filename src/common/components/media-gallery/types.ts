@@ -11,5 +11,4 @@ export interface MediaGalleryProps {
   children: ReactNode;
   targetIndex?: number;
   onChangeTargetIndex?: (newIndex: number) => void;
-  loading?: boolean;
 }

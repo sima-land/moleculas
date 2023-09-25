@@ -17,7 +17,7 @@ import styles from './media-gallery.module.scss';
 const cx = classNames.bind(styles);
 
 /**
- * Блок просмотра медиа.
+ * Блок просмотра медиа (фото/видео) с возможностью прокрутки с помощью свайпа.
  * @param props Свойства.
  * @return Элемент.
  */
