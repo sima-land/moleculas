@@ -160,42 +160,42 @@ export const videos: MediaVideo[] = [
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
-      thumbnail: armchair,
+      thumbnail: armchairThumbnail,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/6907296.mp4',
-      thumbnail: cup,
+      thumbnail: cupThumbnail,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/3619217.mp4',
-      thumbnail: plant,
+      thumbnail: plantThumbnail,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/4093038.mp4',
-      thumbnail: stump,
+      thumbnail: stumpThumbnail,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
-      thumbnail: table,
+      thumbnail: tableThumbnail,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/6907296.mp4',
-      thumbnail: vase,
+      thumbnail: vaseThumbnail,
     },
   },
   {

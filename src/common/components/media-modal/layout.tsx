@@ -39,6 +39,8 @@ export function MediaLayout({ children }: ContainerProps) {
     '--vh': `${vh}px` ?? '1vh',
     '--media-gallery-width': `${mainRect.width}px`,
     '--media-gallery-height': `${mainRect.height}px`,
+    '--media-view-width': `var(--media-gallery-width)`,
+    '--media-view-height': `var(--media-gallery-height)`,
   } as CSSProperties;
 
   return (

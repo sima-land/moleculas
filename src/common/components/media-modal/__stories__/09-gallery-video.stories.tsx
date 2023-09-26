@@ -8,10 +8,14 @@ import {
   Thumbnail,
   MediaView,
   MediaArea,
+  MediaAreaAside,
+  MediaAreaMain,
 } from '@sima-land/moleculas/common/components/media-modal';
 import { MediaGallery, MediaSlide } from '../../media-gallery';
 import { useState } from 'react';
 import { Modal } from '@sima-land/ui-nucleons/modal';
+import { ArrowButton } from '@sima-land/ui-nucleons/arrow-button';
+import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
 import { videos } from '../__mocks__';
 
 export default {
@@ -23,6 +27,8 @@ export default {
 };
 
 export function ExampleGalleryVideo() {
+  const desktop = useBreakpoint('xs+');
+
   const [targetIndex, setTargetIndex] = useState(0);
 
   const styles = {
@@ -43,13 +49,41 @@ export function ExampleGalleryVideo() {
 
           <MediaMain>
             <MediaArea>
-              <MediaGallery targetIndex={targetIndex} onChangeTargetIndex={setTargetIndex}>
-                {videos.map((item, index) => (
-                  <MediaSlide key={index}>
-                    <MediaView media={item} />
-                  </MediaSlide>
-                ))}
-              </MediaGallery>
+              {!desktop && (
+                <MediaGallery
+                  targetIndex={targetIndex}
+                  onChangeTargetIndex={setTargetIndex}
+                  style={{ position: 'absolute' }}
+                >
+                  {videos.map((item, index) => (
+                    <MediaSlide key={index}>
+                      <MediaView media={item} />
+                    </MediaSlide>
+                  ))}
+                </MediaGallery>
+              )}
+
+              {desktop && (
+                <>
+                  <MediaAreaAside>
+                    <ArrowButton
+                      direction='left'
+                      onClick={() => setTargetIndex(n => Math.max(0, n - 1))}
+                    />
+                  </MediaAreaAside>
+
+                  <MediaAreaMain>
+                    <MediaView media={videos[targetIndex]} />
+                  </MediaAreaMain>
+
+                  <MediaAreaAside>
+                    <ArrowButton
+                      direction='right'
+                      onClick={() => setTargetIndex(n => Math.min(videos.length - 1, n + 1))}
+                    />
+                  </MediaAreaAside>
+                </>
+              )}
             </MediaArea>
           </MediaMain>
 

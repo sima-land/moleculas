@@ -8,10 +8,14 @@ import {
   Thumbnail,
   MediaView,
   MediaArea,
+  MediaAreaMain,
+  MediaAreaAside,
 } from '@sima-land/moleculas/common/components/media-modal';
 import { MediaGallery, MediaSlide } from '@sima-land/moleculas/common/components/media-gallery';
 import { Fragment, useState } from 'react';
 import { Modal } from '@sima-land/ui-nucleons/modal';
+import { ArrowButton } from '@sima-land/ui-nucleons/arrow-button';
+import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
 import { mixed } from '../__mocks__';
 
 export default {
@@ -23,6 +27,8 @@ export default {
 };
 
 export function ExampleGallery() {
+  const desktop = useBreakpoint('xs+');
+
   const [targetIndex, setTargetIndex] = useState(0);
 
   const style = {
@@ -43,17 +49,37 @@ export function ExampleGallery() {
 
           <MediaMain>
             <MediaArea>
-              <MediaGallery
-                targetIndex={targetIndex}
-                onChangeTargetIndex={setTargetIndex}
-                style={{ position: 'absolute' }}
-              >
-                {mixed.map((item, index) => (
-                  <MediaSlide key={index}>
-                    <MediaView media={item} />
-                  </MediaSlide>
-                ))}
-              </MediaGallery>
+              {!desktop && (
+                <MediaGallery targetIndex={targetIndex} onChangeTargetIndex={setTargetIndex}>
+                  {mixed.map((item, index) => (
+                    <MediaSlide key={index}>
+                      <MediaView media={item} />
+                    </MediaSlide>
+                  ))}
+                </MediaGallery>
+              )}
+
+              {desktop && (
+                <>
+                  <MediaAreaAside>
+                    <ArrowButton
+                      direction='left'
+                      onClick={() => setTargetIndex(n => Math.max(0, n - 1))}
+                    />
+                  </MediaAreaAside>
+
+                  <MediaAreaMain>
+                    <MediaView media={mixed[targetIndex]} />
+                  </MediaAreaMain>
+
+                  <MediaAreaAside>
+                    <ArrowButton
+                      direction='right'
+                      onClick={() => setTargetIndex(n => Math.min(mixed.length - 1, n + 1))}
+                    />
+                  </MediaAreaAside>
+                </>
+              )}
             </MediaArea>
           </MediaMain>
 

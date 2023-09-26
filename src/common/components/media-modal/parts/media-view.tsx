@@ -8,12 +8,17 @@ import { ImgStub } from '../../img-stub';
 import classNames from 'classnames/bind';
 import styles from './media-view.module.scss';
 
+export interface MediaViewStyle extends CSSProperties {
+  '--media-view-width'?: string;
+  '--media-view-height'?: string;
+}
+
 export interface MediaViewProps {
   rootRef?: Ref<HTMLDivElement>;
   media?: MediaData;
   loading?: boolean;
   videoProps?: VideoHTMLAttributes<HTMLVideoElement>;
-  style?: CSSProperties;
+  style?: MediaViewStyle;
   className?: string;
 }
 
