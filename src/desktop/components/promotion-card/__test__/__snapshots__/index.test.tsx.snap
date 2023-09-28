@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<PromotionCard /> should handle "promotionType" prop 1`] = `
+exports[`PromotionCard should handle "promotionType" prop 1`] = `
 <div>
   <div
     class="root"
@@ -88,7 +88,7 @@ exports[`<PromotionCard /> should handle "promotionType" prop 1`] = `
 </div>
 `;
 
-exports[`<PromotionCard /> should have placeholder component property 1`] = `
+exports[`PromotionCard should have placeholder component property 1`] = `
 <div>
   <div
     data-testid="promotion-card:placeholder"
@@ -106,7 +106,7 @@ exports[`<PromotionCard /> should have placeholder component property 1`] = `
 </div>
 `;
 
-exports[`<PromotionCard /> should renders correctly 1`] = `
+exports[`PromotionCard should renders correctly 1`] = `
 <div>
   <div
     class="root"

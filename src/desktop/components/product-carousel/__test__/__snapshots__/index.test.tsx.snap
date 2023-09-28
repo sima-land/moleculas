@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ProductCarousel /> should renders correctly 1`] = `
+exports[`ProductCarousel should renders correctly 1`] = `
 <div>
   <div
     class="root"
@@ -419,7 +419,7 @@ exports[`<ProductCarousel /> should renders correctly 1`] = `
 </div>
 `;
 
-exports[`<ProductCarousel /> should renders correctly with only one item 1`] = `
+exports[`ProductCarousel should renders correctly with only one item 1`] = `
 <div>
   <div
     class="root"
@@ -484,7 +484,7 @@ exports[`<ProductCarousel /> should renders correctly with only one item 1`] = `
 </div>
 `;
 
-exports[`<ProductCarousel /> should renders correctly withhout children 1`] = `
+exports[`ProductCarousel should renders correctly withhout children 1`] = `
 <div>
   <div
     class="root"
@@ -493,7 +493,7 @@ exports[`<ProductCarousel /> should renders correctly withhout children 1`] = `
 </div>
 `;
 
-exports[`<ProductCarousel /> should set size depend on media query 1`] = `
+exports[`ProductCarousel should set size depend on media query 1`] = `
 <div>
   <div
     class="root"
@@ -912,7 +912,7 @@ exports[`<ProductCarousel /> should set size depend on media query 1`] = `
 </div>
 `;
 
-exports[`<ProductCarousel /> should set size depend on media query 2`] = `
+exports[`ProductCarousel should set size depend on media query 2`] = `
 <div>
   <div
     class="root"

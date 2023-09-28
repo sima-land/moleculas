@@ -48,7 +48,7 @@ jest.mock('@sima-land/ui-nucleons/hooks/media', () => {
   };
 });
 
-describe('<ProductCarousel />', () => {
+describe('ProductCarousel', () => {
   const hoverCardItemNameSelector =
     '[data-testid="product-card:hover-card"] [data-testid="product-info:name-link"]';
   it('should renders correctly', () => {

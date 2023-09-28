@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Breadcrumbs /> should renders correctly 1`] = `
+exports[`Breadcrumbs should renders correctly 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>

@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import { Estimate } from '../estimate';
 import { addDays, addYears } from 'date-fns';
 
-describe('<Estimate />', () => {
+describe('Estimate', () => {
   beforeEach(() => {
     jest.useFakeTimers();
     jest.setSystemTime(new Date('2021-01-01T09:00:00'));

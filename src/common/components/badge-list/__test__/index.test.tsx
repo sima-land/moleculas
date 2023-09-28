@@ -10,7 +10,7 @@ const badges: BadgeProps[] = [
   { color: '#00b8d4', fields: [{ type: 'text', value: 'Акция' }] },
 ];
 
-describe('<BadgeList />', () => {
+describe('BadgeList', () => {
   it('renders correctly', () => {
     const { container, getAllByTestId } = render(
       <BadgeList className='test'>

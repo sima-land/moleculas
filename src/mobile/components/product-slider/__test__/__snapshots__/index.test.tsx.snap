@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ProductSlider /> should renders correctly 1`] = `
+exports[`ProductSlider should renders correctly 1`] = `
 <div>
   <div
     data-testid="product-slider:root"
@@ -2108,7 +2108,7 @@ exports[`<ProductSlider /> should renders correctly 1`] = `
 </div>
 `;
 
-exports[`<ProductSlider /> should renders correctly 2`] = `
+exports[`ProductSlider should renders correctly 2`] = `
 [
   <div
     class="item"

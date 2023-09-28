@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { PromotionCard } from '..';
 
-describe('<PromotionCard />', () => {
+describe('PromotionCard', () => {
   beforeEach(() => {
     jest.useFakeTimers();
     jest.setSystemTime(new Date('2021-01-01T09:00:00'));

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Badge /> should renders correctly 1`] = `
+exports[`Badge should renders correctly 1`] = `
 <div>
   <a
     class="root interactive"
@@ -17,7 +17,7 @@ exports[`<Badge /> should renders correctly 1`] = `
 </div>
 `;
 
-exports[`<Badge /> should renders correctly 2`] = `
+exports[`Badge should renders correctly 2`] = `
 <div>
   <a
     class="root icon-only interactive"
@@ -34,7 +34,7 @@ exports[`<Badge /> should renders correctly 2`] = `
 </div>
 `;
 
-exports[`<Badge /> should renders correctly 3`] = `
+exports[`Badge should renders correctly 3`] = `
 <div>
   <a
     class="root interactive"
@@ -51,7 +51,7 @@ exports[`<Badge /> should renders correctly 3`] = `
 </div>
 `;
 
-exports[`<Badge /> should renders correctly 4`] = `
+exports[`Badge should renders correctly 4`] = `
 <div>
   <a
     class="root interactive"
@@ -70,7 +70,7 @@ exports[`<Badge /> should renders correctly 4`] = `
 </div>
 `;
 
-exports[`<Badge /> should renders correctly 5`] = `
+exports[`Badge should renders correctly 5`] = `
 <div>
   <a
     class="root"

@@ -8,7 +8,7 @@ import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import { Badge } from '../../../../common/components/badge';
 import { IntersectionMock } from '@sima-land/ui-nucleons/hooks/intersection/test-utils';
 
-describe('<ProductSlider />', () => {
+describe('ProductSlider', () => {
   it('should renders correctly', () => {
     const spies = {
       imageClick: jest.fn(),
