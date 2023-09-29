@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import { BannerTitle, BannerTitleProps } from '../banner-title';
 import { addDays } from 'date-fns';
 
-describe('<BannerTitle />', () => {
+describe('BannerTitle', () => {
   beforeEach(() => {
     jest.useFakeTimers();
     jest.setSystemTime(new Date('2021-01-01T09:00:00'));

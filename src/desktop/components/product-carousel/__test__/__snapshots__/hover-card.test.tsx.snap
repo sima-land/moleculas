@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<HoverCard /> should renders hidden 1`] = `
+exports[`HoverCard should renders hidden 1`] = `
 <div>
   <div
     class="root card root hidden rounds-sm__all shadow-z4 shadow-z4 rounds-md__all"
@@ -10,7 +10,7 @@ exports[`<HoverCard /> should renders hidden 1`] = `
 </div>
 `;
 
-exports[`<HoverCard /> should renders with positioning 1`] = `
+exports[`HoverCard should renders with positioning 1`] = `
 <div>
   <div>
     Target

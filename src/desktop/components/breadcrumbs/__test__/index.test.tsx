@@ -2,7 +2,7 @@ import { Breadcrumbs } from '..';
 import { render, fireEvent, act } from '@testing-library/react';
 import items from './test-items';
 
-describe('<Breadcrumbs />', () => {
+describe('Breadcrumbs', () => {
   it('should renders correctly', () => {
     const wrapper = render(<Breadcrumbs items={items} />);
 

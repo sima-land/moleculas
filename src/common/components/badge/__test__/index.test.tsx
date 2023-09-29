@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import { Badge, BadgeProps } from '..';
 import { addDays, addMonths } from 'date-fns';
 
-describe('<Badge />', () => {
+describe('Badge', () => {
   beforeEach(() => {
     jest.useFakeTimers();
     jest.setSystemTime(new Date('2021-01-01T09:00:00'));

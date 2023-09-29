@@ -3,7 +3,7 @@ import { fireEvent, render } from '@testing-library/react';
 import { HoverCard } from '../hover-card';
 import { Parts } from '../../../../common/components/product-info';
 
-describe('<HoverCard />', () => {
+describe('HoverCard', () => {
   it('should renders hidden', () => {
     const { container, getByTestId } = render(<HoverCard targetRef={createRef()} />);
 
