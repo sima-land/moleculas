@@ -1,5 +1,4 @@
 import { CSSProperties, Ref, useEffect, useRef, VideoHTMLAttributes } from 'react';
-import { ImageOverlay } from '../../../../desktop/components/gallery-modal/components/image-overlay';
 import { MediaData } from '../types';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
 import { AllRoundView } from './all-round-view';
@@ -65,10 +64,10 @@ export function MediaView({
   return (
     <div ref={rootRef} className={cx('root', className)} style={style}>
       {media?.type === 'image' && (
-        <ImageOverlay className={cx('image')}>
+        <div className={cx('image')}>
           {failed && <ImgStub className={styles.stub} />}
           {!failed && <img src={media.data.src} alt={media.data.alt || ''} onError={handleError} />}
-        </ImageOverlay>
+        </div>
       )}
 
       {media?.type === 'video' && (

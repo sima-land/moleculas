@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useIdentityRef } from '@sima-land/ui-nucleons/hooks/identity';
 import { WithHint } from '@sima-land/ui-nucleons/with-hint';
-import on from '@sima-land/ui-nucleons/helpers/on';
+import { on } from '@sima-land/ui-nucleons/helpers/on';
 import { useImagesLoad } from '../utils';
 import classNames from 'classnames/bind';
 import styles from './all-round-view.module.scss';
@@ -79,8 +79,14 @@ export const AllRoundView = ({
 
     const offList = [
       on<PointerEvent>(image, 'pointerdown', e => {
-        document.activeElement instanceof HTMLElement && document.activeElement.blur();
         e.preventDefault();
+        e.stopPropagation();
+
+        // ВАЖНО: preventDefault предотвращает расфокусировку полей ввода - форсируем
+        if (document.activeElement instanceof HTMLElement) {
+          document.activeElement.blur();
+        }
+
         setState('default');
 
         const imageLeft = image.getBoundingClientRect().left;

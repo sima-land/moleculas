@@ -115,7 +115,7 @@ export function MediaGallery({
     [moveBackward, moveBackward],
   );
 
-  useEffect(() => init(), [init]);
+  useEffect(init, [init]);
 
   return (
     <div className={cx('root', className)} style={style} {...getProps()}>
@@ -129,7 +129,7 @@ export function MediaGallery({
               </div>
             )}
             {target && (
-              <div key={target.key} className={cx('slide', 'current')}>
+              <div key={target.key} className={cx('slide')}>
                 {target}
               </div>
             )}
