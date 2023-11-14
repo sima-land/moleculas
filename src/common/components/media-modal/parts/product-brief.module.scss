@@ -40,13 +40,6 @@
 
 .footer {
   display: flex;
-  > * {
-    width: 128px;
-    --stepper-width: 128px;
-  }
-  > *:last-child {
-    margin-left: 8px;
-  }
 }
 
 .size-s {

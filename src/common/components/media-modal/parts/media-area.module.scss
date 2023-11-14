@@ -1,0 +1,21 @@
+.root {
+  position: relative;
+  flex-grow: 1;
+  height: max(50vh, 240px);
+  display: flex;
+}
+
+.aside + .main,
+.main + .aside {
+  margin-left: 24px;
+}
+
+.main {
+  flex-grow: 1;
+  position: relative;
+}
+
+.aside {
+  display: flex;
+  align-items: center;
+}

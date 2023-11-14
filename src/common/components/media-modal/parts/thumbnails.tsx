@@ -1,6 +1,7 @@
 import { useRef, ReactNode, useEffect } from 'react';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
-import { Range, useMounted } from '../utils';
+import { Range } from '../utils';
+import { useMounted } from '../../../../common/hooks';
 import { ScrollSection } from './scroll-section';
 import { ThumbnailContext, ThumbnailSize } from './thumbnail';
 import classNames from 'classnames/bind';

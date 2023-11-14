@@ -1,0 +1,35 @@
+@use 'node_modules/@sima-land/ui-nucleons/colors';
+
+.root {
+  width: var(--media-gallery-width, 320px);
+  height: var(--media-gallery-height, 240px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slides {
+  position: relative;
+}
+
+.slide {
+  width: var(--media-gallery-width, 320px);
+  height: var(--media-gallery-height, 240px);
+}
+
+.slide.prev {
+  position: absolute;
+  left: -100%;
+  top: 0;
+}
+
+.slide.next {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+.transition {
+  transition: transform 0.3s ease-in-out;
+}

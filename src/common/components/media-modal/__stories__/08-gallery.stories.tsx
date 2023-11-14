@@ -4,21 +4,18 @@ import {
   MediaMain,
   MediaAside,
   MediaFooter,
-  Preset,
-  HeaderLayout,
   Thumbnails,
   Thumbnail,
-  ProductBrief,
-  MediaContent,
   MediaView,
+  MediaArea,
+  MediaAreaMain,
+  MediaAreaAside,
 } from '@sima-land/moleculas/common/components/media-modal';
+import { MediaGallery, MediaSlide } from '@sima-land/moleculas/common/components/media-gallery';
 import { Fragment, useState } from 'react';
 import { Modal } from '@sima-land/ui-nucleons/modal';
-import { Tabs } from '@sima-land/ui-nucleons/tabs';
-import { TextButton } from '@sima-land/ui-nucleons/text-button';
-import { Layout } from '@sima-land/ui-nucleons/layout';
-import { Button } from '@sima-land/ui-nucleons/button';
-import { Stepper } from '@sima-land/ui-nucleons/stepper';
+import { ArrowButton } from '@sima-land/ui-nucleons/arrow-button';
+import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
 import { mixed } from '../__mocks__';
 
 export default {
@@ -29,8 +26,17 @@ export default {
   },
 };
 
-export function WithProduct() {
+export function ExampleGallery() {
+  const desktop = useBreakpoint('xs+');
+
   const [targetIndex, setTargetIndex] = useState(0);
+
+  const style = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    background: 'rgb(33, 33, 33, 0.24)',
+  };
 
   return (
     <Modal size='fullscreen' footerStub={false} withScrollDisable>
@@ -38,27 +44,43 @@ export function WithProduct() {
       <Modal.Body>
         <MediaLayout>
           <MediaHeader>
-            <HeaderLayout>
-              <HeaderLayout.Tabs>
-                <Tabs {...Preset.headerTabs()}>
-                  <Tabs.Item name='Фото' />
-                  <Tabs.Item name='Видео' selected />
-                  <Tabs.Item name='360' />
-                  <Tabs.Item name='Фото покупателей' />
-                </Tabs>
-              </HeaderLayout.Tabs>
-              <HeaderLayout.Button>
-                <TextButton {...Preset.headerButton()} />
-              </HeaderLayout.Button>
-            </HeaderLayout>
+            <div style={{ ...style, width: '100%', height: '40px' }}>Header</div>
           </MediaHeader>
 
           <MediaMain>
-            <MediaContent targetIndex={targetIndex} onChangeTargetIndex={setTargetIndex}>
-              {mixed.map((item, index) => (
-                <MediaView key={index} media={item} />
-              ))}
-            </MediaContent>
+            <MediaArea>
+              {!desktop && (
+                <MediaGallery targetIndex={targetIndex} onChangeTargetIndex={setTargetIndex}>
+                  {mixed.map((item, index) => (
+                    <MediaSlide key={index}>
+                      <MediaView media={item} />
+                    </MediaSlide>
+                  ))}
+                </MediaGallery>
+              )}
+
+              {desktop && (
+                <>
+                  <MediaAreaAside>
+                    <ArrowButton
+                      direction='left'
+                      onClick={() => setTargetIndex(n => Math.max(0, n - 1))}
+                    />
+                  </MediaAreaAside>
+
+                  <MediaAreaMain>
+                    <MediaView media={mixed[targetIndex]} />
+                  </MediaAreaMain>
+
+                  <MediaAreaAside>
+                    <ArrowButton
+                      direction='right'
+                      onClick={() => setTargetIndex(n => Math.min(mixed.length - 1, n + 1))}
+                    />
+                  </MediaAreaAside>
+                </>
+              )}
+            </MediaArea>
           </MediaMain>
 
           <MediaAside>
@@ -82,7 +104,7 @@ export function WithProduct() {
                   {item.type === 'image' && (
                     <Thumbnail
                       type='preview-image'
-                      src={item.data.src}
+                      src={item.data.thumbnail}
                       checked={targetIndex === index}
                       onClick={() => setTargetIndex(index)}
                     />
@@ -93,21 +115,7 @@ export function WithProduct() {
           </MediaAside>
 
           <MediaFooter>
-            <Layout disabledOn={['xs', 's', 'm', 'l', 'xl']}>
-              <ProductBrief
-                href='https://sima-land.ru'
-                imageSrc='https://loremflickr.com/240/320'
-                title='Игровая приставка Sony PlayStation 5 Digital 3,5 ГГц модифицированная'
-                price={60235}
-                currency='₽'
-                footer={
-                  <>
-                    <Button size='s'>В корзину</Button>
-                    <Stepper size='s' defaultValue={1} />
-                  </>
-                }
-              />
-            </Layout>
+            <div style={{ ...style, width: '100%', height: '100px' }}>Footer</div>
           </MediaFooter>
         </MediaLayout>
       </Modal.Body>
@@ -115,4 +123,4 @@ export function WithProduct() {
   );
 }
 
-WithProduct.storyName = 'Футер: товар';
+ExampleGallery.storyName = 'Галерея';

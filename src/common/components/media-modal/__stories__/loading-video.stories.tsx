@@ -8,8 +8,8 @@ import {
   HeaderLayout,
   Thumbnails,
   Thumbnail,
-  MediaView,
   ProductBrief,
+  MediaView,
 } from '@sima-land/moleculas/common/components/media-modal';
 import { Modal } from '@sima-land/ui-nucleons/modal';
 import { Tabs } from '@sima-land/ui-nucleons/tabs';

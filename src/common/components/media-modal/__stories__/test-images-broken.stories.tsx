@@ -5,12 +5,11 @@ import {
   MediaAside,
   MediaFooter,
   HeaderLayout,
-  Preset,
-  MediaContent,
   MediaView,
   Thumbnails,
   Thumbnail,
   ProductBrief,
+  Preset,
 } from '@sima-land/moleculas/common/components/media-modal';
 import { Fragment, useState } from 'react';
 import { Modal } from '@sima-land/ui-nucleons/modal';
@@ -20,6 +19,7 @@ import { Layout } from '@sima-land/ui-nucleons/layout';
 import { Button } from '@sima-land/ui-nucleons/button';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import { MediaData } from '../types';
+import { MediaGallery, MediaSlide } from '../../media-gallery';
 
 export default {
   title: 'common/MediaLayout',
@@ -71,11 +71,13 @@ export function TestImagesBroken() {
           </MediaHeader>
 
           <MediaMain>
-            <MediaContent targetIndex={targetIndex} onChangeTargetIndex={setTargetIndex}>
+            <MediaGallery targetIndex={targetIndex} onChangeTargetIndex={setTargetIndex}>
               {mixed.map(processMedia).map((item, index) => (
-                <MediaView key={index} media={item} />
+                <MediaSlide key={index}>
+                  <MediaView media={item} />
+                </MediaSlide>
               ))}
-            </MediaContent>
+            </MediaGallery>
           </MediaMain>
 
           <MediaAside>
@@ -120,8 +122,14 @@ export function TestImagesBroken() {
                 currency='₽'
                 footer={
                   <>
-                    <Button size='s'>В корзину</Button>
-                    <Stepper size='s' defaultValue={1} />
+                    <Button size='s' viewType='success' style={{ width: '128px' }}>
+                      В корзине
+                    </Button>
+                    <Stepper
+                      size='s'
+                      defaultValue={1}
+                      style={{ width: '128px', marginLeft: '12px' }}
+                    />
                   </>
                 }
               />

@@ -37,27 +37,29 @@ export function MediaLayout({ children }: ContainerProps) {
 
   const mainStyle = {
     '--vh': `${vh}px` ?? '1vh',
-    '--media-width': `${mainRect.width}px`,
-    '--media-height': `${mainRect.height}px`,
+    '--media-gallery-width': `${mainRect.width}px`,
+    '--media-gallery-height': `${mainRect.height}px`,
+    '--media-view-width': `var(--media-gallery-width)`,
+    '--media-view-height': `var(--media-gallery-height)`,
   } as CSSProperties;
 
   return (
-    <div className={styles.layout}>
+    <div className={cx('layout')}>
       {header && (
-        <Layout disabledOn={mobile} className={styles.header}>
+        <Layout disabledOn={mobile} className={cx('header')}>
           {header}
         </Layout>
       )}
 
-      <Layout disabledOn={mobile} className={styles.body}>
-        {aside && <div className={styles.aside}>{aside}</div>}
-        <div ref={mainRef} className={styles.main} style={mainStyle}>
+      <Layout disabledOn={mobile} className={cx('body')}>
+        {aside && <div className={cx('aside')}>{aside}</div>}
+        <div ref={mainRef} className={cx('main')} style={mainStyle}>
           {main}
         </div>
       </Layout>
 
       {footer && (
-        <Layout disabledOn={mobile} className={styles.footer}>
+        <Layout disabledOn={mobile} className={cx('footer')}>
           <div className={cx('footer-inner', aside && 'with-aside')}>{footer}</div>
         </Layout>
       )}

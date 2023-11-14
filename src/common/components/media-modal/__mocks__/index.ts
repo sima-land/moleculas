@@ -1,4 +1,16 @@
 import { MediaData, MediaVideo } from '../types';
+import armchair from './images/armchair.jpg';
+import cup from './images/cup.jpg';
+import plant from './images/plant.jpg';
+import stump from './images/stump.jpg';
+import table from './images/table.jpg';
+import vase from './images/vase.jpg';
+import armchairThumbnail from './thumbnails/armchair.jpg';
+import cupThumbnail from './thumbnails/cup.jpg';
+import plantThumbnail from './thumbnails/plant.jpg';
+import stumpThumbnail from './thumbnails/stump.jpg';
+import tableThumbnail from './thumbnails/table.jpg';
+import vaseThumbnail from './thumbnails/vase.jpg';
 
 export const mixed: MediaData[] = [
   {
@@ -91,49 +103,54 @@ export const mixed: MediaData[] = [
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
-      thumbnail: 'https://loremflickr.com/240/240?random=16',
     },
   },
   {
     type: 'image',
     data: {
-      alt: 'Сапоги детские MINAKU, цвет синий, размер 31 - Фото 1',
-      src: 'https://loremflickr.com/240/240?random=1',
+      alt: 'Стул',
+      src: armchair,
+      thumbnail: armchairThumbnail,
     },
   },
   {
     type: 'image',
     data: {
-      alt: 'Фото из отзыва, не квадратное',
-      src: 'https://loremflickr.com/240/240?random=2',
+      alt: 'Чашка',
+      src: cup,
+      thumbnail: cupThumbnail,
     },
   },
   {
     type: 'image',
     data: {
-      alt: 'Сапоги детские MINAKU, цвет синий, размер 31 - Фото 2',
-      src: 'https://loremflickr.com/240/240?random=3',
+      alt: 'Растение',
+      src: plant,
+      thumbnail: plantThumbnail,
     },
   },
   {
     type: 'image',
     data: {
-      alt: 'Сапоги детские MINAKU, цвет синий, размер 31 - Фото 3',
-      src: 'https://loremflickr.com/240/240?random=4',
+      alt: 'Пень',
+      src: stump,
+      thumbnail: stumpThumbnail,
     },
   },
   {
     type: 'image',
     data: {
-      alt: 'Сапоги детские MINAKU, цвет синий, размер 31 - Фото 4',
-      src: 'https://loremflickr.com/240/240?random=5',
+      alt: 'Стол',
+      src: table,
+      thumbnail: tableThumbnail,
     },
   },
   {
     type: 'image',
     data: {
-      alt: 'Сапоги детские MINAKU, цвет синий, размер 31 - Фото 5',
-      src: 'https://loremflickr.com/240/240?random=6',
+      alt: 'Ваза',
+      src: vase,
+      thumbnail: vaseThumbnail,
     },
   },
 ];
@@ -143,42 +160,42 @@ export const videos: MediaVideo[] = [
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
-      thumbnail: 'https://loremflickr.com/240/240?random=6',
+      thumbnail: armchairThumbnail,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/6907296.mp4',
-      thumbnail: 'https://loremflickr.com/240/240?random=7',
+      thumbnail: cupThumbnail,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/3619217.mp4',
-      thumbnail: 'https://loremflickr.com/240/240?random=8',
+      thumbnail: plantThumbnail,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/4093038.mp4',
-      thumbnail: 'https://loremflickr.com/240/240?random=9',
+      thumbnail: stumpThumbnail,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
-      thumbnail: 'https://loremflickr.com/240/240?random=10',
+      thumbnail: tableThumbnail,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/6907296.mp4',
-      thumbnail: 'https://loremflickr.com/240/240?random=11',
+      thumbnail: vaseThumbnail,
     },
   },
   {
