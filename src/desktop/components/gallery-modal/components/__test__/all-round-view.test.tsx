@@ -1,6 +1,7 @@
 import { AllRoundView } from '../all-round-view';
 import { useImagesLoad } from '../../utils';
 import { act, fireEvent, render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 jest.mock('../../utils', () => {
   const original = jest.requireActual('../../utils');
@@ -13,6 +14,9 @@ jest.mock('../../utils', () => {
 });
 
 describe('AllRoundView', () => {
+  afterEach(() => {
+    jest.useRealTimers();
+  });
   const testPhotos = [
     'https://img.com/0',
     'https://img.com/1',
@@ -249,5 +253,61 @@ describe('AllRoundView', () => {
     expect(getByTestId('gallery-modal:360-current-photo').getAttribute('src')).toEqual(
       testPhotos[9],
     );
+  });
+
+  it('should blur active element on pointer down', async () => {
+    const { getByTestId } = render(
+      <>
+        <input type='text' data-testid='test-input' />
+        <AllRoundView
+          photos={[
+            'http://images.com/1',
+            'http://images.com/2',
+            'http://images.com/3',
+            'http://images.com/4',
+            'http://images.com/5',
+          ]}
+        />
+      </>,
+    );
+
+    await userEvent.click(getByTestId('test-input'));
+
+    expect(document.activeElement === getByTestId('test-input')).toBe(true);
+
+    fireEvent.pointerDown(getByTestId('gallery-modal:360-current-photo'));
+
+    expect(document.activeElement === document.body).toBe(true);
+  });
+
+  it('should not throw on pointerdown when document.activeElement is null', () => {
+    const { getByTestId } = render(
+      <>
+        <AllRoundView
+          photos={[
+            'http://images.com/1',
+            'http://images.com/2',
+            'http://images.com/3',
+            'http://images.com/4',
+            'http://images.com/5',
+          ]}
+        />
+      </>,
+    );
+
+    const descriptor = Object.getOwnPropertyDescriptor(Document.prototype, 'activeElement');
+
+    if (!descriptor) {
+      throw Error('No descriptor for Document.prototype.activeElement');
+    }
+
+    Object.defineProperty(document, 'activeElement', { value: null });
+    expect(document.activeElement === null).toBe(true);
+
+    expect(() => {
+      fireEvent.pointerDown(getByTestId('gallery-modal:360-current-photo'));
+    }).not.toThrow();
+
+    Object.defineProperty(Document.prototype, 'activeElement', descriptor);
   });
 });
