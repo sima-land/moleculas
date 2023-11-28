@@ -14,7 +14,7 @@ exports[`Breadcrumbs should renders correctly 1`] = `
           data-testid="breadcrumb"
         >
           <a
-            class="link basic-gray87"
+            class="link breadcrumb-name basic-gray87"
             data-testid="anchor"
             href="/root_path"
           >
@@ -26,156 +26,174 @@ exports[`Breadcrumbs should renders correctly 1`] = `
           data-testid="breadcrumb"
         >
           <a
-            class="link basic-gray87"
+            class="link breadcrumb-name with-siblings basic-gray87"
             data-testid="anchor"
             href="/first_level_path"
           >
             First Level
           </a>
-          <svg
+          <span
             class="toggle-icon"
             data-testid="breadcrumb:siblings-opener"
-            fill="none"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
           >
-            <path
-              d="M4 6L8 10L12 6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+            <svg
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M4 6L8 10L12 6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
         </div>
         <div
           class="breadcrumb"
           data-testid="breadcrumb"
         >
           <a
-            class="link basic-gray87"
+            class="link breadcrumb-name with-siblings basic-gray87"
             data-testid="anchor"
             href="/second_level_path"
           >
             Second Level very long title here
           </a>
-          <svg
+          <span
             class="toggle-icon"
             data-testid="breadcrumb:siblings-opener"
-            fill="none"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
           >
-            <path
-              d="M4 6L8 10L12 6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+            <svg
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M4 6L8 10L12 6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
         </div>
         <div
           class="breadcrumb"
           data-testid="breadcrumb"
         >
           <a
-            class="link basic-gray87"
+            class="link breadcrumb-name with-siblings basic-gray87"
             data-testid="anchor"
             href="/third_level_path"
           >
             Third Level
           </a>
-          <svg
+          <span
             class="toggle-icon"
             data-testid="breadcrumb:siblings-opener"
-            fill="none"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
           >
-            <path
-              d="M4 6L8 10L12 6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+            <svg
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M4 6L8 10L12 6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
         </div>
         <div
           class="breadcrumb"
           data-testid="breadcrumb"
         >
           <a
-            class="link basic-gray87"
+            class="link breadcrumb-name with-siblings basic-gray87"
             data-testid="anchor"
             href="/first_level_path"
           >
             Fourth Level
           </a>
-          <svg
+          <span
             class="toggle-icon"
             data-testid="breadcrumb:siblings-opener"
-            fill="none"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
           >
-            <path
-              d="M4 6L8 10L12 6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+            <svg
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M4 6L8 10L12 6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
         </div>
         <div
           class="breadcrumb"
           data-testid="breadcrumb"
         >
           <a
-            class="link basic-gray87"
+            class="link breadcrumb-name with-siblings basic-gray87"
             data-testid="anchor"
             href="/fifth_level_path"
           >
             Fifth Level
           </a>
-          <svg
+          <span
             class="toggle-icon"
             data-testid="breadcrumb:siblings-opener"
-            fill="none"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
           >
-            <path
-              d="M4 6L8 10L12 6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+            <svg
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M4 6L8 10L12 6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
         </div>
         <div
           class="breadcrumb"
           data-testid="breadcrumb"
         >
           <a
-            class="link basic-gray87"
+            class="link breadcrumb-name with-siblings basic-gray87"
             data-testid="anchor"
             href="/sixth_level_path"
           >
             Sixth Level
           </a>
-          <svg
+          <span
             class="toggle-icon"
             data-testid="breadcrumb:siblings-opener"
-            fill="none"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
           >
-            <path
-              d="M4 6L8 10L12 6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+            <svg
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M4 6L8 10L12 6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
         </div>
       </nav>
     </div>
@@ -190,7 +208,7 @@ exports[`Breadcrumbs should renders correctly 1`] = `
         data-testid="breadcrumb"
       >
         <a
-          class="link basic-gray87"
+          class="link breadcrumb-name basic-gray87"
           data-testid="anchor"
           href="/root_path"
         >
@@ -202,156 +220,174 @@ exports[`Breadcrumbs should renders correctly 1`] = `
         data-testid="breadcrumb"
       >
         <a
-          class="link basic-gray87"
+          class="link breadcrumb-name with-siblings basic-gray87"
           data-testid="anchor"
           href="/first_level_path"
         >
           First Level
         </a>
-        <svg
+        <span
           class="toggle-icon"
           data-testid="breadcrumb:siblings-opener"
-          fill="none"
-          height="16"
-          viewBox="0 0 16 16"
-          width="16"
         >
-          <path
-            d="M4 6L8 10L12 6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+          <svg
+            fill="none"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M4 6L8 10L12 6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
       </div>
       <div
         class="breadcrumb"
         data-testid="breadcrumb"
       >
         <a
-          class="link basic-gray87"
+          class="link breadcrumb-name with-siblings basic-gray87"
           data-testid="anchor"
           href="/second_level_path"
         >
           Second Level very long title here
         </a>
-        <svg
+        <span
           class="toggle-icon"
           data-testid="breadcrumb:siblings-opener"
-          fill="none"
-          height="16"
-          viewBox="0 0 16 16"
-          width="16"
         >
-          <path
-            d="M4 6L8 10L12 6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+          <svg
+            fill="none"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M4 6L8 10L12 6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
       </div>
       <div
         class="breadcrumb"
         data-testid="breadcrumb"
       >
         <a
-          class="link basic-gray87"
+          class="link breadcrumb-name with-siblings basic-gray87"
           data-testid="anchor"
           href="/third_level_path"
         >
           Third Level
         </a>
-        <svg
+        <span
           class="toggle-icon"
           data-testid="breadcrumb:siblings-opener"
-          fill="none"
-          height="16"
-          viewBox="0 0 16 16"
-          width="16"
         >
-          <path
-            d="M4 6L8 10L12 6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+          <svg
+            fill="none"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M4 6L8 10L12 6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
       </div>
       <div
         class="breadcrumb"
         data-testid="breadcrumb"
       >
         <a
-          class="link basic-gray87"
+          class="link breadcrumb-name with-siblings basic-gray87"
           data-testid="anchor"
           href="/first_level_path"
         >
           Fourth Level
         </a>
-        <svg
+        <span
           class="toggle-icon"
           data-testid="breadcrumb:siblings-opener"
-          fill="none"
-          height="16"
-          viewBox="0 0 16 16"
-          width="16"
         >
-          <path
-            d="M4 6L8 10L12 6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+          <svg
+            fill="none"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M4 6L8 10L12 6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
       </div>
       <div
         class="breadcrumb"
         data-testid="breadcrumb"
       >
         <a
-          class="link basic-gray87"
+          class="link breadcrumb-name with-siblings basic-gray87"
           data-testid="anchor"
           href="/fifth_level_path"
         >
           Fifth Level
         </a>
-        <svg
+        <span
           class="toggle-icon"
           data-testid="breadcrumb:siblings-opener"
-          fill="none"
-          height="16"
-          viewBox="0 0 16 16"
-          width="16"
         >
-          <path
-            d="M4 6L8 10L12 6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+          <svg
+            fill="none"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M4 6L8 10L12 6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
       </div>
       <div
         class="breadcrumb"
         data-testid="breadcrumb"
       >
         <a
-          class="link basic-gray87"
+          class="link breadcrumb-name with-siblings basic-gray87"
           data-testid="anchor"
           href="/sixth_level_path"
         >
           Sixth Level
         </a>
-        <svg
+        <span
           class="toggle-icon"
           data-testid="breadcrumb:siblings-opener"
-          fill="none"
-          height="16"
-          viewBox="0 0 16 16"
-          width="16"
         >
-          <path
-            d="M4 6L8 10L12 6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+          <svg
+            fill="none"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M4 6L8 10L12 6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
       </div>
     </nav>
   </div>,
