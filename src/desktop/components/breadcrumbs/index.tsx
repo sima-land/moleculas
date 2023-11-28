@@ -1,11 +1,10 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, SVGAttributes } from 'react';
 import CSSTransition from 'react-transition-group/CSSTransition';
 import { Plate } from '@sima-land/ui-nucleons/plate';
 import { Link } from '@sima-land/ui-nucleons/link';
 import { times } from 'lodash';
 import classnames from 'classnames/bind';
 import styles from './breadcrumbs.module.scss';
-import DownSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/Arrows/DownSquare';
 import on from '@sima-land/ui-nucleons/helpers/on';
 
 export interface Sibling {
@@ -36,6 +35,15 @@ export interface BreadcrumbsProps {
 }
 
 const cx = classnames.bind(styles);
+
+/** @inheritdoc */
+function DownSVG(props: SVGAttributes<SVGSVGElement>) {
+  return (
+    <svg width='16' height='16' viewBox='0 0 16 16' fill='none' {...props}>
+      <path d='M4 6L8 10L12 6' strokeLinecap='round' strokeLinejoin='round' />
+    </svg>
+  );
+}
 
 /**
  * Список "хлебных крошек".
