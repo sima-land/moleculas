@@ -25,11 +25,31 @@ $line-gutter: 12px;
   &:not(:last-child)::after {
     content: '/';
     display: block;
-    margin: 0 16px;
+    margin: 0 8px;
+  }
+}
+
+.breadcrumb-name {
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -4px;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+  }
+  &.with-siblings::before {
+    right: -2px;
+  }
+  &:not(.with-siblings)::before {
+    right: -8px;
   }
 }
 
 .toggle-icon {
+  position: relative;
   margin-left: 2px;
   stroke: colors.$basic-gray87;
   display: block;
@@ -37,6 +57,18 @@ $line-gutter: 12px;
   &.close {
     transform: scaleY(-1);
     stroke: colors.$basic-gray38;
+  }
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -4px;
+    bottom: -4px;
+    left: 0;
+    right: -8px;
+  }
+  > svg {
+    display: block;
   }
 }
 

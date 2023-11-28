@@ -94,7 +94,12 @@ const Breadcrumb = ({
   }, [withPopup]);
 
   const selfName = (
-    <Link color='basic-gray87' href={data.url} pseudo={!data.url}>
+    <Link
+      color='basic-gray87'
+      href={data.url}
+      pseudo={!data.url}
+      className={cx('breadcrumb-name', data.siblings && 'with-siblings')}
+    >
       {data.name}
     </Link>
   );
@@ -105,14 +110,16 @@ const Breadcrumb = ({
 
       {data.siblings && (
         <>
-          <DownSVG
+          <span
             data-testid='breadcrumb:siblings-opener'
             className={cx('toggle-icon')}
             onClick={() => {
               togglePopup(true);
               onSiblingsPopupOpen();
             }}
-          />
+          >
+            <DownSVG />
+          </span>
 
           <CSSTransition
             in={withPopup}
@@ -128,11 +135,13 @@ const Breadcrumb = ({
             <Plate ref={popupRef} shadow='z3' rounds='m' className={cx('popup')}>
               <div className={cx('popup-header')}>
                 {selfName}
-                <DownSVG
+                <span
                   data-testid='breadcrumb:siblings-closer'
                   className={cx('toggle-icon', 'close')}
                   onClick={() => togglePopup(false)}
-                />
+                >
+                  <DownSVG />
+                </span>
               </div>
 
               <ul className={cx('siblings')}>
