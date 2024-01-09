@@ -1,6 +1,6 @@
 import { Children } from 'react';
 import { fireEvent, render } from '@testing-library/react';
-import { ProductCard, reduceBaseInfo } from '..';
+import { ProductCard, reduceBaseInfo } from '../product-card';
 import { ProductInfo, Parts } from '../../../../common/components/product-info';
 import { Button } from '@sima-land/ui-nucleons/button';
 import { LayerProvider } from '@sima-land/ui-nucleons/helpers/layer';
