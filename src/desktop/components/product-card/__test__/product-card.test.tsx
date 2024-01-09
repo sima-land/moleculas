@@ -1,6 +1,6 @@
 import { Children } from 'react';
 import { fireEvent, render } from '@testing-library/react';
-import { ProductCard, reduceBaseInfo } from '../product-card';
+import { ProductCard, reduceBaseInfo, reduceHoverInfo } from '../product-card';
 import { ProductInfo, Parts } from '../../../../common/components/product-info';
 import { Button } from '@sima-land/ui-nucleons/button';
 import { LayerProvider } from '@sima-land/ui-nucleons/helpers/layer';
@@ -127,5 +127,19 @@ describe('reduceBaseInfo', () => {
     );
 
     expect(Children.toArray(result.props.children)).toEqual([]);
+  });
+});
+
+describe('reduceHoverInfo', () => {
+  it('should handle not valid react elements', () => {
+    expect(() => {
+      reduceHoverInfo(
+        <ProductInfo>
+          some string
+          {null}
+          {false}
+        </ProductInfo>,
+      );
+    }).not.toThrow();
   });
 });
