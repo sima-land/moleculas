@@ -1,5 +1,5 @@
 import { Children, forwardRef, isValidElement, cloneElement, useState } from 'react';
-import { ProductCardChildren, ProductCardProps } from './types';
+import { ProductCardChildren, ProductCardProps, ReduceBaseInfoOptions } from './types';
 import { Parts } from '../../../common/components/product-info';
 import { Plate, PlateProps } from '@sima-land/ui-nucleons/plate';
 import { useLayer } from '@sima-land/ui-nucleons/helpers/layer';
@@ -62,13 +62,7 @@ export const HoverCard = forwardRef<HTMLDivElement | null, PlateProps>((props, r
  */
 export function reduceBaseInfo(
   element: ProductCardChildren,
-  {
-    hideImageButtons = true,
-    hideFooter = true,
-  }: {
-    hideImageButtons?: boolean;
-    hideFooter?: boolean;
-  } = {},
+  { hideImageButtons = true, hideFooter = true }: ReduceBaseInfoOptions = {},
 ) {
   return cloneElement(element, {
     children: Children.map(element.props.children, child => {
@@ -76,9 +70,14 @@ export function reduceBaseInfo(
 
       if (isValidElement(child)) {
         switch (true) {
-          // игнорируем кнопки-иконки на изображении
+          // игнорируем или фильтруем кнопки-иконки на изображении
           case Boolean(child.type === Parts.Image && hideImageButtons):
-            result = cloneElement<any>(child, { children: undefined });
+            result = cloneElement<any>(child, {
+              children:
+                typeof hideImageButtons === 'function'
+                  ? Children.toArray(child.props.children).filter(hideImageButtons)
+                  : undefined,
+            });
             break;
 
           // игнорируем футер

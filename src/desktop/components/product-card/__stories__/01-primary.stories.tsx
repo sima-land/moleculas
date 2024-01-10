@@ -3,6 +3,7 @@ import { ProductInfo, Parts } from '@sima-land/moleculas/common/components/produ
 import { Badge, BadgeProps } from '@sima-land/moleculas/common/components/badge';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import FavSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
+import ComparisonAddSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/ComparisonAdd';
 import cupSrc from './cup.jpg';
 
 export default {
@@ -28,7 +29,14 @@ export function Primary() {
 
   return (
     <div style={{ width: '200px', margin: '32px' }}>
-      <ProductCard reduceBaseInfo={elem => reduceBaseInfo(elem, { hideImageButtons: false })}>
+      <ProductCard
+        // Определение контента который будет выведен без наведения (по умолчанию фильтруется)
+        reduceBaseInfo={elem =>
+          reduceBaseInfo(elem, {
+            hideImageButtons: btn => (btn as any)?.props?.icon === FavSVG,
+          })
+        }
+      >
         <ProductInfo>
           {/* Изображение */}
           <Parts.Image src={cupSrc} href='https://www.sima-land.ru'>
@@ -37,6 +45,12 @@ export function Primary() {
               position={{ x: 'left', y: 'top' }}
               hint='Добавить в избранное'
               hintDirection='right'
+            />
+            <Parts.ImageButton
+              icon={ComparisonAddSVG}
+              position={{ x: 'right', y: 'top' }}
+              hint='Добавить в сравнение'
+              hintDirection='left'
             />
           </Parts.Image>
 

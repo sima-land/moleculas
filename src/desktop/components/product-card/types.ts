@@ -14,3 +14,12 @@ export interface ProductCardProps extends HTMLAttributes<HTMLDivElement> {
   /** Получив содержимое должен вернуть то что будет выведено во всплывающей карточке. */
   reduceHoverInfo?: (children: ProductCardChildren) => ReactNode;
 }
+
+/** Опции фильтрации содержимого карточки без наведения. */
+export interface ReduceBaseInfoOptions {
+  /** Надо ли скрыть кнопки на картинке. При передаче функции она будет применена для каждого дочернего элемента внутри картинки как фильтр. */
+  hideImageButtons?: boolean | ((element: ReactNode) => boolean);
+
+  /** Надо ли скрыть футер. */
+  hideFooter?: boolean;
+}

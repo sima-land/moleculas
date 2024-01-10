@@ -1,4 +1,4 @@
-import { Children } from 'react';
+import { Children, isValidElement } from 'react';
 import { fireEvent, render } from '@testing-library/react';
 import { ProductCard, reduceBaseInfo, reduceHoverInfo } from '../product-card';
 import { ProductInfo, Parts } from '../../../../common/components/product-info';
@@ -127,6 +127,27 @@ describe('reduceBaseInfo', () => {
     );
 
     expect(Children.toArray(result.props.children)).toEqual([]);
+  });
+
+  it('should handle function as "hideImageButtons" option', () => {
+    const jsx = (
+      <ProductInfo>
+        <Parts.Image>
+          some string
+          <span>excluded</span>
+          <article>survivor</article>
+        </Parts.Image>
+      </ProductInfo>
+    );
+
+    const result = reduceBaseInfo(jsx, {
+      hideImageButtons: value => isValidElement(value) && value.type === 'article',
+    });
+
+    const { container } = render(result);
+
+    expect(container.querySelectorAll('article')).toHaveLength(1);
+    expect(container.textContent).toBe('survivor');
   });
 });
 
