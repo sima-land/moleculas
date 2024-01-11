@@ -1,7 +1,7 @@
 import { createRef } from 'react';
 import { fireEvent, render } from '@testing-library/react';
 import { HoverCard } from '../hover-card';
-import { Parts } from '../../../../common/components/product-info';
+import { Parts, ProductInfo } from '../../../../common/components/product-info';
 
 describe('HoverCard', () => {
   it('should renders hidden', () => {
@@ -31,7 +31,9 @@ describe('HoverCard', () => {
         <div ref={targetRef}>Target</div>
 
         <HoverCard targetRef={targetRef}>
-          <Parts.Title href='https://foo.bar'>{itemInfo.name}</Parts.Title>
+          <ProductInfo>
+            <Parts.Title href='https://foo.bar'>{itemInfo.name}</Parts.Title>
+          </ProductInfo>
         </HoverCard>
       </>,
     );

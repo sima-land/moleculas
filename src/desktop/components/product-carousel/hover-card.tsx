@@ -1,16 +1,11 @@
-import { useLayoutEffect, useRef, useState, RefObject } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
+import { HoverCardProps } from './types';
 import { getOriginCorrection } from '@sima-land/ui-nucleons/with-tooltip/utils';
-import { ProductInfo, ProductInfoProps } from '../../../common/components/product-info';
-import classnames from 'classnames/bind';
-import styles from './hover-card.module.scss';
 import { SmallRounds } from '@sima-land/ui-nucleons/styling/shapes';
 import { BoxShadow } from '@sima-land/ui-nucleons/styling/shadows';
 import { HoverCard as BaseHoverCard } from '../product-card';
-
-export interface HoverCardProps extends ProductInfoProps {
-  targetRef: RefObject<HTMLElement | null>;
-  onMouseLeave?: () => void;
-}
+import classnames from 'classnames/bind';
+import styles from './hover-card.module.scss';
 
 const cx = classnames.bind(styles);
 
@@ -19,7 +14,7 @@ const cx = classnames.bind(styles);
  * @param props Свойства компонента.
  * @return Элемент.
  */
-export const HoverCard = ({ targetRef, onMouseLeave, ...productInfoProps }: HoverCardProps) => {
+export function HoverCard({ targetRef, onMouseLeave, children }: HoverCardProps) {
   const rootRef = useRef<HTMLDivElement>(null);
   const [ready, setReady] = useState<boolean>(false);
 
@@ -47,7 +42,7 @@ export const HoverCard = ({ targetRef, onMouseLeave, ...productInfoProps }: Hove
         onMouseLeave && onMouseLeave();
       }}
     >
-      <ProductInfo {...productInfoProps} />
+      {children}
     </BaseHoverCard>
   );
-};
+}
