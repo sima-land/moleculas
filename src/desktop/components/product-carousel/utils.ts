@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState, RefObject, DependencyList } f
  * Возвращает объект работы с флагом, который автоматически возвращается в true через заданный промежуток времени.
  * @return Объект работы с флагом.
  */
-export const useAllowFlag = () => {
+export function useAllowFlag() {
   const ref = useRef(true);
   const timerIdRef = useRef<number>();
 
@@ -19,7 +19,7 @@ export const useAllowFlag = () => {
   const controlRef = useRef({ allowed, disallowFor });
 
   return controlRef.current;
-};
+}
 
 /**
  * Возвращает ширину дочернего элемента.
@@ -27,7 +27,7 @@ export const useAllowFlag = () => {
  * @param deps Массив зависимостей от которых зависит пересчет.
  * @return Ширина.
  */
-export const useClientWidth = (ref: RefObject<HTMLElement | null>, deps: DependencyList = []) => {
+export function useClientWidth(ref: RefObject<HTMLElement | null>, deps: DependencyList = []) {
   const [width, setWidth] = useState<number | null>(null);
 
   useEffect(() => {
@@ -41,12 +41,12 @@ export const useClientWidth = (ref: RefObject<HTMLElement | null>, deps: Depende
       setWidth(element.clientWidth);
     });
 
-    observer.observe(ref.current);
+    observer.observe(element);
 
     setWidth(element.clientWidth);
 
-    return observer.disconnect();
+    return () => observer.disconnect();
   }, [ref, ...deps]);
 
   return width;
-};
+}

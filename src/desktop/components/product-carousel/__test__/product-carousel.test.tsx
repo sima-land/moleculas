@@ -1,5 +1,5 @@
 import { fireEvent, render } from '@testing-library/react';
-import { ProductCarousel } from '..';
+import { ProductCarousel } from '../product-carousel';
 import { items } from './test-items';
 import { useMedia } from '@sima-land/ui-nucleons/hooks/media';
 import { Parts, ProductInfo } from '../../../../common/components/product-info';

@@ -14,6 +14,7 @@ const cx = classNames.bind(styles);
  * @return Элемент.
  */
 export function ProductCard({
+  // @todo не совсем правильно заставлять работать с внутренностями реакта - надо придумать что-то более простое
   reduceBaseInfo: reduceBaseInfoProp = reduceBaseInfo,
   reduceHoverInfo: reduceHoverInfoProp = reduceHoverInfo,
   children,

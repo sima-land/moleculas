@@ -1,8 +1,6 @@
 import {
-  ReactElement,
   Children,
   isValidElement,
-  cloneElement,
   useRef,
   useState,
   useMemo,
@@ -16,43 +14,13 @@ import { HoverCard } from './hover-card';
 import { useAllowFlag, useClientWidth } from './utils';
 import { useIntersection } from '@sima-land/ui-nucleons/hooks/intersection';
 import { useMedia } from '@sima-land/ui-nucleons/hooks/media';
-import { ProductInfo, ProductInfoProps, Parts } from '../../../common/components/product-info';
+import { ProductInfo, ProductInfoProps } from '../../../common/components/product-info';
+import { useLayer } from '@sima-land/ui-nucleons/helpers/layer';
+import { reduceBaseInfo, reduceHoverInfo } from '../product-card';
+import { ProductCardChildren } from '../product-card/types';
+import { ProductCarouselProps } from './types';
 import classnames from 'classnames/bind';
 import styles from './product-carousel.module.scss';
-import { useLayer } from '@sima-land/ui-nucleons/helpers/layer';
-
-interface ItemSize {
-  xs?: 2 | 3 | 4;
-  s?: 2 | 3 | 4;
-  m?: 2 | 3 | 4;
-  l?: 2 | 3 | 4;
-  xl?: 2 | 3 | 4;
-}
-
-export type ItemElement = ReactElement<ProductInfoProps>;
-
-export interface ProductCarouselProps {
-  /** CSS-класс для корневого элемента. */
-  className?: string;
-
-  /** Элементы карусели. */
-  children?: ReactNode;
-
-  /** Настройки размера элемента карусели. */
-  itemSize?: ItemSize | 'unset';
-
-  /** Сработает при попадании карусели во viewport. */
-  onInViewport?: () => void;
-
-  /** Сработает при попадании карусели в область достаточно близкую к viewport'у. */
-  onNeedRequest?: () => void;
-
-  /** Нужно ли показывать всплывающую карточку при наведении на элемент карусели. */
-  withHoverCard?: boolean;
-
-  /** Предоставит свойства для элемента карусели. */
-  itemProps?: { style?: CSSProperties; className?: string };
-}
 
 const cx = classnames.bind(styles);
 
@@ -81,6 +49,10 @@ export function ProductCarousel({
   onNeedRequest,
   withHoverCard,
   children,
+
+  // @todo не совсем правильно заставлять работать с внутренностями реакта - надо придумать что-то более простое
+  reduceBaseInfo: reduceBaseInfoProp = withHoverCard ? reduceBaseInfo : element => element,
+  reduceHoverInfo: reduceHoverInfoProp = reduceHoverInfo,
 }: ProductCarouselProps) {
   const layer = useLayer();
   const [activeItemIndex, setActiveItemIndex] = useState<number | null>(null);
@@ -89,9 +61,9 @@ export function ProductCarousel({
   const rootRef = useRef<HTMLDivElement>(null);
   const targetItemRef = useRef<HTMLDivElement | null>(null);
 
-  const items = Children.toArray(children).reduce<ItemElement[]>((acc, item) => {
+  const items = Children.toArray(children).reduce<ProductCardChildren[]>((acc, item) => {
     if (isValidElement<ProductInfoProps>(item) && item.type === ProductInfo) {
-      acc.push(item);
+      acc.push(item as any);
     }
     return acc;
   }, []);
@@ -116,27 +88,34 @@ export function ProductCarousel({
   });
 
   return (
-    <div ref={rootRef} className={cx('root', className)} data-testid='product-carousel:root'>
+    <div
+      ref={rootRef}
+      className={cx('root', className)}
+      data-testid='product-carousel:root'
+      onMouseLeave={() => setActiveItemIndex(null)}
+    >
       {items.length > 0 && (
         <Carousel
           step={3}
           draggable={false}
           // докидываем индекс чтобы позже брать актуальные данные из списка по нему
           items={items.map((item, index) => [item, index])}
-          {...(itemWidth !== null && {
-            withControls: undefined, // автоматически скрываем стрелки если все товары влезли (по дизайн-гайдам)
-            controlProps: {
-              size: needBigArrows ? 'l' : 's',
-              style: {
-                zIndex: layer + 2, // чтобы кнопки были над HoverCard
-                top: `${itemWidth / 2}px`,
-              },
-            },
-          })}
-          renderItem={([item, index]: [ItemElement, number], realIndex) => (
-            <Item
+          // ВАЖНО: скрываем кнопки ТОЛЬКО пока itemWidth не вычислен
+          withControls={itemWidth !== null ? undefined : false}
+          controlProps={
+            itemWidth !== null
+              ? {
+                  size: needBigArrows ? 'l' : 's',
+                  style: {
+                    zIndex: layer + 2, // чтобы кнопки были над HoverCard
+                    top: `${itemWidth / 2}px`,
+                  },
+                }
+              : undefined
+          }
+          renderItem={([item, index]: [ProductCardChildren, number], realIndex) => (
+            <CarouselItem
               rootRef={realIndex === 0 ? firstItemRef : undefined}
-              withHoverCard={withHoverCard}
               className={cx(getSizeClasses(itemSize), itemProps?.className)}
               style={itemProps?.style}
               onMouseEnter={e => {
@@ -146,8 +125,8 @@ export function ProductCarousel({
                 }
               }}
             >
-              {item}
-            </Item>
+              {reduceBaseInfoProp(item)}
+            </CarouselItem>
           )}
           // длительность прокрутки в Carousel - 320, делаем слегка с запасом
           // @todo после восстановления проверить позицию курсора чтобы показать карточку (если будет критично)
@@ -166,7 +145,9 @@ export function ProductCarousel({
             targetRef={targetItemRef}
             onMouseLeave={() => setActiveItemIndex(null)}
             {...item.props}
-          />
+          >
+            {reduceHoverInfoProp(item)}
+          </HoverCard>
         ))}
     </div>
   );
@@ -177,20 +158,18 @@ export function ProductCarousel({
  * Полное содержимое будет выведено во всплывающей карточке.
  * @inheritdoc
  */
-function Item({
+function CarouselItem({
   rootRef,
   className,
   onMouseEnter,
-  withHoverCard,
   children,
   style,
 }: {
   rootRef?: Ref<HTMLDivElement>;
-  children: ItemElement;
+  children: ReactNode;
   className?: string;
   style?: CSSProperties;
   onMouseEnter?: MouseEventHandler<HTMLDivElement>;
-  withHoverCard?: boolean;
 }) {
   return (
     <div
@@ -200,32 +179,7 @@ function Item({
       onMouseEnter={onMouseEnter}
       style={style}
     >
-      {cloneElement(children, {
-        children: Children.toArray(children.props.children).reduce<any[]>((list, child) => {
-          if (isValidElement<any>(child)) {
-            switch (child.type) {
-              case Parts.Image: {
-                // иконки у картинки скрываем если есть HoverCard
-                list.push(withHoverCard ? cloneElement(child, { children: undefined }) : child);
-                break;
-              }
-
-              case Parts.Footer:
-                // футер не выводим если есть HoverCard
-                !withHoverCard && list.push(child);
-                break;
-
-              default: {
-                // остальное выводим как есть
-                list.push(child);
-                break;
-              }
-            }
-          }
-
-          return list;
-        }, []),
-      })}
+      {children}
     </div>
   );
 }
