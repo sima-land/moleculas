@@ -1,6 +1,8 @@
 import { ActionCircles } from '@sima-land/moleculas/mobile/components/action-circles';
+import { useState } from 'react';
 import { Alert, AlertBody } from '@sima-land/ui-nucleons/alert';
 import { BottomBar } from '@sima-land/ui-nucleons/bottom-bar';
+import { Button } from '@sima-land/ui-nucleons/button';
 import { CleanButton, CleanGroup } from '@sima-land/ui-nucleons/clean-buttons';
 import StatementSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Statement';
 import ThumbsUpSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/ThumbsUp';
@@ -14,33 +16,37 @@ export default {
 };
 
 export function Primary() {
-  const onClose = () => {
-    alert('Пока что закрывать не будем.');
-  };
+  const [open, setOpen] = useState(false);
 
   return (
-    <Alert onClose={onClose}>
-      <AlertBody>
-        <ActionCircles>
-          <ActionCircles.Item
-            title='Оформить претензию'
-            icon={<StatementSVG />}
-            href='https://www.sima-land.ru'
-          />
-          <ActionCircles.Item
-            title='Оставить отзыв'
-            icon={<ThumbsUpSVG />}
-            onClick={() => alert('Отлично, кнопка работает!')}
-          />
-        </ActionCircles>
-      </AlertBody>
+    <>
+      <Button onClick={() => setOpen(true)}>Показать</Button>
 
-      <BottomBar divided>
-        <CleanGroup>
-          <CleanButton onClick={onClose}>Закрыть</CleanButton>
-        </CleanGroup>
-      </BottomBar>
-    </Alert>
+      {open && (
+        <Alert onClose={() => setOpen(false)}>
+          <AlertBody>
+            <ActionCircles>
+              <ActionCircles.Item
+                title='Оформить претензию'
+                icon={<StatementSVG />}
+                href='https://www.sima-land.ru'
+              />
+              <ActionCircles.Item
+                title='Оставить отзыв'
+                icon={<ThumbsUpSVG />}
+                onClick={() => alert('Отлично, кнопка работает!')}
+              />
+            </ActionCircles>
+          </AlertBody>
+
+          <BottomBar divided>
+            <CleanGroup>
+              <CleanButton onClick={() => setOpen(false)}>Закрыть</CleanButton>
+            </CleanGroup>
+          </BottomBar>
+        </Alert>
+      )}
+    </>
   );
 }
 

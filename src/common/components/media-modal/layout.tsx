@@ -1,5 +1,5 @@
 import { CSSProperties, ReactNode, useRef, useState } from 'react';
-import { defineSlots } from '@sima-land/ui-nucleons/helpers/define-slots';
+import { defineSlots } from '@sima-land/ui-nucleons/helpers';
 import { Breakpoint, Layout } from '@sima-land/ui-nucleons/layout';
 import { useClientRect, useVisualViewport } from './utils';
 import classNames from 'classnames/bind';

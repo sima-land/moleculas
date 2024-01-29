@@ -1,20 +1,20 @@
 import { useState, useRef, useEffect, SyntheticEvent, CSSProperties } from 'react';
 import { MediaData } from '../types';
 import { DesktopLayout } from '@sima-land/ui-nucleons/layout';
-import { scrollToChild } from '@sima-land/ui-nucleons/helpers/scroll-to-child';
-import { Modal, ModalProps } from '@sima-land/ui-nucleons/modal';
+import { scrollToChild } from '@sima-land/ui-nucleons/helpers';
+import { Modal, ModalBody } from '@sima-land/ui-nucleons/modal';
 import { ArrowButton } from '@sima-land/ui-nucleons/arrow-button';
 import { AllRoundView } from './all-round-view';
 import { ReviewInfo, ReviewInfoProps } from './review-info';
 import { ImageOverlay } from './image-overlay';
 import { Thumbnail } from './thumbnail';
-import { useIdentityRef } from '@sima-land/ui-nucleons/hooks/identity';
+import { useIdentityRef } from '@sima-land/ui-nucleons/hooks';
 import { useSquareFit } from '../utils';
 import classNames from 'classnames/bind';
 import styles from './gallery-modal.module.scss';
+import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
 
-export interface GalleryModalProps
-  extends Pick<ModalProps, 'withScrollDisable' | 'scrollDisableOptions'> {
+export interface GalleryModalProps {
   /** Список медиа. */
   media: MediaData[];
 
@@ -56,8 +56,6 @@ export const GalleryModal = ({
   onClose,
   onGoToReview,
   onMediaChange,
-  withScrollDisable,
-  scrollDisableOptions,
   onVideoEvent,
 }: GalleryModalProps) => {
   const [currentIndex, setCurrent] = useState<number>(defaultMediaIndex);
@@ -86,9 +84,9 @@ export const GalleryModal = ({
     : {};
 
   return (
-    <Modal size='fullscreen' onClose={onClose} {...{ withScrollDisable, scrollDisableOptions }}>
-      <Modal.Header onClose={onClose} />
-      <Modal.Body>
+    <Modal size='fullscreen' onClose={onClose}>
+      <TopBar buttons={navigationButtons({ onClose })} />
+      <ModalBody style={{ position: 'relative' }}>
         <DesktopLayout className={cx('root')} ref={rootRef} style={style}>
           <div className={cx('main')}>
             <div className={cx('thumbnails')} ref={thumbnailsRef}>
@@ -136,7 +134,7 @@ export const GalleryModal = ({
             {review && <ReviewInfo {...review} onGoToReview={onGoToReview} />}
           </div>
         )}
-      </Modal.Body>
+      </ModalBody>
     </Modal>
   );
 };

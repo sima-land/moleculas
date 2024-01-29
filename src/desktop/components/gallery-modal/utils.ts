@@ -1,5 +1,5 @@
 import { useEffect, useState, RefObject } from 'react';
-import on from '@sima-land/ui-nucleons/helpers/on';
+import { on } from '@sima-land/ui-nucleons/helpers';
 import { useIsomorphicLayoutEffect } from '@sima-land/ui-nucleons/hooks';
 
 type Status = 'load' | 'done' | 'fail';

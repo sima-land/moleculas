@@ -1,6 +1,6 @@
 import { fireEvent, render } from '@testing-library/react';
 import { SelectScreenLayout, SelectScreenOption } from '..';
-import { Screen } from '@sima-land/ui-nucleons/screen';
+import { Modal, ModalBody } from '@sima-land/ui-nucleons/modal';
 
 describe('select screen parts', () => {
   it('should works properly', () => {
@@ -8,8 +8,8 @@ describe('select screen parts', () => {
     const spy = jest.fn();
 
     const { container, getAllByTestId } = render(
-      <Screen>
-        <Screen.Body>
+      <Modal>
+        <ModalBody>
           <SelectScreenLayout style={{ padding: '16px 0' }}>
             {items.map((item, id) => (
               <SelectScreenOption key={id} selected={item === 'Bar'} onClick={spy}>
@@ -17,8 +17,8 @@ describe('select screen parts', () => {
               </SelectScreenOption>
             ))}
           </SelectScreenLayout>
-        </Screen.Body>
-      </Screen>,
+        </ModalBody>
+      </Modal>,
     );
 
     expect(container).toMatchSnapshot();

@@ -1,11 +1,13 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "paths": {
       // ВАЖНО: только для storybook
-      "@sima-land/moleculas/*": ["./src/*"]
-    }
+      "@sima-land/moleculas/*": ["./src/*"],
+    },
   },
   "include": ["./src"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
 }

@@ -5,7 +5,8 @@ import {
   MediaAside,
   MediaFooter,
 } from '@sima-land/moleculas/common/components/media-modal';
-import { Modal } from '@sima-land/ui-nucleons/modal';
+import { Modal, ModalBody, getResponsiveModalProps } from '@sima-land/ui-nucleons/modal';
+import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
 
 export default {
   title: 'common/MediaLayout',
@@ -23,9 +24,9 @@ export function Areas() {
   };
 
   return (
-    <Modal size='fullscreen' footerStub={false}>
-      <Modal.Header onClose={() => void 0} />
-      <Modal.Body>
+    <Modal {...getResponsiveModalProps({ size: 'fullscreen' })}>
+      <TopBar size='unset' buttons={navigationButtons({ onClose: () => void 0 })} />
+      <ModalBody>
         <MediaLayout>
           <MediaHeader>
             <div style={{ ...styles, width: '100%', height: '40px' }}>Header</div>
@@ -45,7 +46,7 @@ export function Areas() {
             <div style={{ ...styles, width: '100%', height: '100px' }}>Footer</div>
           </MediaFooter>
         </MediaLayout>
-      </Modal.Body>
+      </ModalBody>
     </Modal>
   );
 }

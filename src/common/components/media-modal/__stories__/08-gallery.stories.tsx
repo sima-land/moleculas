@@ -13,9 +13,10 @@ import {
 } from '@sima-land/moleculas/common/components/media-modal';
 import { MediaGallery, MediaSlide } from '@sima-land/moleculas/common/components/media-gallery';
 import { Fragment, useState } from 'react';
-import { Modal } from '@sima-land/ui-nucleons/modal';
+import { Modal, ModalBody, getResponsiveModalProps } from '@sima-land/ui-nucleons/modal';
+import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
 import { ArrowButton } from '@sima-land/ui-nucleons/arrow-button';
-import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
+import { useBreakpoint } from '@sima-land/ui-nucleons/hooks';
 import { mixed } from '../__mocks__';
 
 export default {
@@ -39,9 +40,9 @@ export function ExampleGallery() {
   };
 
   return (
-    <Modal size='fullscreen' footerStub={false} withScrollDisable>
-      <Modal.Header onClose={() => void 0} />
-      <Modal.Body>
+    <Modal {...getResponsiveModalProps({ size: 'fullscreen' })}>
+      <TopBar size='unset' buttons={navigationButtons({ onClose: () => void 0 })} />
+      <ModalBody withScrollDisable>
         <MediaLayout>
           <MediaHeader>
             <div style={{ ...style, width: '100%', height: '40px' }}>Header</div>
@@ -118,7 +119,7 @@ export function ExampleGallery() {
             <div style={{ ...style, width: '100%', height: '100px' }}>Footer</div>
           </MediaFooter>
         </MediaLayout>
-      </Modal.Body>
+      </ModalBody>
     </Modal>
   );
 }

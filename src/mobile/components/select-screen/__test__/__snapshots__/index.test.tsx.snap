@@ -15,55 +15,103 @@ exports[`SelectScreenOption should handle size prop 1`] = `
 exports[`select screen parts should works properly 1`] = `
 <div>
   <div
-    class="root"
-    data-testid="screen"
-    style="z-index: 300; --vh: 7.68px;"
+    class="root overlay size-m rounds-m"
+    data-testid="modal-overlay"
+    style="z-index: 100;"
   >
     <div
-      class="body"
-      data-testid="screen:body"
+      class="modal modal-layout"
+      data-testid="modal"
     >
       <div
-        class="layout mobile disabled-mxs disabled-ms"
-        style="padding: 16px 0px;"
+        class="root body"
+        data-overlayscrollbars="host"
+        data-testid="modal-body"
       >
         <div
-          class="container"
+          class="os-size-observer"
         >
-          <button
-            class="item size-m"
-            data-testid="select-screen:option"
-            type="button"
+          <div
+            class="os-size-observer-listener"
+          />
+        </div>
+        <div
+          class=""
+          data-overlayscrollbars-padding=""
+          style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; top: 0px; left: 0px; width: calc(100% + 0px);"
+        >
+          <div
+            data-overlayscrollbars-viewport=""
+            style="padding: 0px 0px 0px 0px;"
           >
-            Foo
-          </button>
-          <button
-            class="item size-m"
-            data-testid="select-screen:option"
-            type="button"
-          >
-            Bar
-            <svg
-              class="icon"
-              height="24"
-              role="presentation"
-              viewBox="0 0 24 24"
-              width="24"
+            <div
+              class="layout mobile disabled-mxs disabled-ms"
+              style="padding: 16px 0px;"
             >
-              <path
-                clip-rule="evenodd"
-                d="M21.678 5.265a1 1 0 0 1 .057 1.413l-12 13a1 1 0 0 1-1.36.103l-5-4a1 1 0 0 1 1.25-1.562l4.272 3.418L20.265 5.322a1 1 0 0 1 1.413-.057Z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
-          <button
-            class="item size-m"
-            data-testid="select-screen:option"
-            type="button"
+              <div
+                class="container"
+              >
+                <button
+                  class="item size-m"
+                  data-testid="select-screen:option"
+                  type="button"
+                >
+                  Foo
+                </button>
+                <button
+                  class="item size-m"
+                  data-testid="select-screen:option"
+                  type="button"
+                >
+                  Bar
+                  <svg
+                    class="icon"
+                    height="24"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M21.678 5.265a1 1 0 0 1 .057 1.413l-12 13a1 1 0 0 1-1.36.103l-5-4a1 1 0 0 1 1.25-1.562l4.272 3.418L20.265 5.322a1 1 0 0 1 1.413-.057Z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="item size-m"
+                  data-testid="select-screen:option"
+                  type="button"
+                >
+                  Baz
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="os-scrollbar os-scrollbar-horizontal os-scrollbar-transitionless os-no-css-vars theme os-scrollbar-auto-hide os-scrollbar-handle-interactive os-scrollbar-cornerless os-scrollbar-unusable"
+        >
+          <div
+            class="os-scrollbar-track"
           >
-            Baz
-          </button>
+            <div
+              class="os-scrollbar-handle"
+              style="width: 0.000%; transform: translateX(0.000%);"
+            />
+          </div>
+        </div>
+        <div
+          class="os-scrollbar os-scrollbar-vertical os-scrollbar-transitionless os-no-css-vars theme os-scrollbar-auto-hide os-scrollbar-handle-interactive os-scrollbar-cornerless os-scrollbar-unusable"
+        >
+          <div
+            class="os-scrollbar-track"
+          >
+            <div
+              class="os-scrollbar-handle"
+              style="height: 0.000%; transform: translateY(0.000%);"
+            />
+          </div>
         </div>
       </div>
     </div>

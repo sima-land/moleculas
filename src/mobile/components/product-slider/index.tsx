@@ -1,5 +1,5 @@
 import { Children, isValidElement, ReactElement, useMemo, useRef } from 'react';
-import { useIntersection } from '@sima-land/ui-nucleons/hooks/intersection';
+import { useIntersection } from '@sima-land/ui-nucleons/hooks';
 import { TouchSlider } from '@sima-land/ui-nucleons/touch-slider';
 import { ProductInfo, ProductInfoProps, Parts } from '../../../common/components/product-info';
 import styles from './product-slider.module.scss';

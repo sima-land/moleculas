@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
-import { useIdentityRef } from '@sima-land/ui-nucleons/hooks/identity';
-import { WithHint } from '@sima-land/ui-nucleons/with-hint';
-import { on } from '@sima-land/ui-nucleons/helpers/on';
+import { useIdentityRef } from '@sima-land/ui-nucleons/hooks';
+import { on } from '@sima-land/ui-nucleons/helpers';
 import { useImagesLoad } from '../utils';
 import classNames from 'classnames/bind';
 import styles from './all-round-view.module.scss';
@@ -10,6 +9,7 @@ import PauseSVG from '@sima-land/ui-quarks/icons/40x40/Filled/Pause';
 import TurnLeftSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/Arrows/TurnLeft';
 import TurnRightSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/Arrows/TurnRight';
 import { ImgStub } from '../../../../common/components/img-stub';
+import { Hint, useHintFloating, useHintOnHover } from '@sima-land/ui-nucleons/hint';
 
 export interface AllRoundViewProps {
   photos: string[];
@@ -122,15 +122,14 @@ export const AllRoundView = ({
     return () => offList.forEach(fn => fn());
   }, [photos.length, failed]);
 
-  const HINT = (
-    <>
-      Вы можете вращать товар,
-      <br />
-      зажав левую кнопку
-      <br />
-      мыши на фотографии
-    </>
-  );
+  // состояние
+  const [open, setOpen] = useState<boolean>(false);
+
+  // позиционирование
+  const { refs, ...floating } = useHintFloating({ open, onOpenChange: setOpen });
+
+  // пользовательское взаимодействие
+  const { getReferenceProps, getFloatingProps } = useHintOnHover(floating);
 
   return (
     <div className={cx('root')}>
@@ -152,23 +151,34 @@ export const AllRoundView = ({
             <TurnRightSVG />
           </button>
 
-          <WithHint hint={HINT}>
-            {(ref, toggleHint) => (
-              <button
-                ref={ref as any}
-                className={cx('control', 'primary', autoplay && 'pause')}
-                onClick={() => {
-                  setState(s => (s === 'autoplay' ? 'default' : 'autoplay'));
-                  toggleHint(false);
-                }}
-                onMouseEnter={() => autoplay && toggleHint(true)}
-                onMouseLeave={() => toggleHint(false)}
-                data-testid='gallery-modal:toggle-autoplay-button'
-              >
-                {autoplay ? <PauseSVG /> : <AllRoundSVG />}
-              </button>
-            )}
-          </WithHint>
+          <button
+            ref={refs.setReference}
+            {...getReferenceProps()}
+            className={cx('control', 'primary', autoplay && 'pause')}
+            onClick={() => {
+              setState(s => (s === 'autoplay' ? 'default' : 'autoplay'));
+            }}
+            data-testid='gallery-modal:toggle-autoplay-button'
+          >
+            {autoplay ? <PauseSVG /> : <AllRoundSVG />}
+          </button>
+
+          {autoplay && (
+            <Hint
+              open={open}
+              hintRef={refs.setFloating}
+              arrowRef={refs.setArrow}
+              {...getFloatingProps()}
+            >
+              <>
+                Вы можете вращать товар,
+                <br />
+                зажав левую кнопку
+                <br />
+                мыши на фотографии
+              </>
+            </Hint>
+          )}
 
           <button
             className={cx('control', 'turn')}

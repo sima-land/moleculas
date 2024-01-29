@@ -3,9 +3,9 @@ import CSSTransition from 'react-transition-group/CSSTransition';
 import { Plate } from '@sima-land/ui-nucleons/plate';
 import { Link } from '@sima-land/ui-nucleons/link';
 import { times } from 'lodash';
+import { on } from '@sima-land/ui-nucleons/helpers';
 import classnames from 'classnames/bind';
 import styles from './breadcrumbs.module.scss';
-import on from '@sima-land/ui-nucleons/helpers/on';
 
 export interface Sibling {
   name: string;

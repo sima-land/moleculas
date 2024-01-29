@@ -7,10 +7,9 @@ import {
   MouseEventHandler,
 } from 'react';
 import { Link, LinkProps } from '@sima-land/ui-nucleons/link';
-import { HintProps } from '@sima-land/ui-nucleons/hint-deprecated';
+import { Hint, useHintFloating, useHintOnHover } from '@sima-land/ui-nucleons/hint';
 import { Price } from '@sima-land/ui-nucleons/price';
 import { StrokedSVG, StrokedSVGProps } from '@sima-land/ui-nucleons/stroked-svg';
-import { WithHint } from '@sima-land/ui-nucleons/with-hint';
 import { ImageOverlay } from '../../../desktop/components/gallery-modal/components/image-overlay';
 import { BadgeList, BadgeListProps } from '../badge-list';
 import { ProductInfoContext } from './utils';
@@ -49,16 +48,15 @@ const ImageButton = ({
   fill?: string;
   onClick?: MouseEventHandler<HTMLDivElement>;
   hint?: string;
-  hintDirection?: HintProps['direction'];
+  hintDirection?: 'top' | 'left' | 'bottom' | 'right';
   'data-testid'?: string;
   position?: {
     x: 'left' | 'right';
     y: 'top' | 'bottom';
   };
 }) => {
-  const commonProps: StrokedSVGProps & { 'data-testid'?: string } = {
+  const commonProps = {
     role: 'banner',
-    component: icon,
     fill,
     strokeWidth: 1.5,
     className: cx(
@@ -70,19 +68,33 @@ const ImageButton = ({
     'data-testid': testId,
   };
 
-  return hint ? (
-    <WithHint hint={hint} direction={hintDirection}>
-      {(ref, toggle) => (
-        <StrokedSVG
-          {...commonProps}
-          ref={ref as any}
-          onMouseEnter={() => toggle(true)}
-          onMouseLeave={() => toggle(false)}
-        />
+  // состояние
+  const [open, setOpen] = useState<boolean>(false);
+
+  // позиционирование
+  const { refs, ...floating } = useHintFloating({
+    open,
+    onOpenChange: setOpen,
+    placement: hintDirection,
+  });
+
+  // пользовательское взаимодействие
+  const { getReferenceProps, getFloatingProps } = useHintOnHover(floating);
+
+  return (
+    <>
+      <StrokedSVG ref={refs.setReference} component={icon} {...getReferenceProps(commonProps)} />
+      {hint && (
+        <Hint
+          open={open}
+          hintRef={refs.setFloating}
+          arrowRef={refs.setArrow}
+          {...getFloatingProps()}
+        >
+          {hint}
+        </Hint>
       )}
-    </WithHint>
-  ) : (
-    <StrokedSVG {...commonProps} />
+    </>
   );
 };
 

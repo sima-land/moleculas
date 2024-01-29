@@ -3,7 +3,7 @@ import classnames from 'classnames/bind';
 import { Avatar, getUserAvatarProps } from '@sima-land/ui-nucleons/avatar';
 import { Box } from '@sima-land/ui-nucleons/box';
 import { Text } from '@sima-land/ui-nucleons/text';
-import { InnerBorder } from '@sima-land/ui-nucleons/styling/borders';
+import { InnerBorder } from '@sima-land/ui-nucleons/styling';
 import MailSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Mail';
 import SkypeSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Skype';
 import PhoneSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Phone';

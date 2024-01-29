@@ -2,7 +2,7 @@ import { Children, forwardRef, isValidElement, cloneElement, useState } from 're
 import { ProductCardChildren, ProductCardProps, ReduceBaseInfoOptions } from './types';
 import { Parts } from '../../../common/components/product-info';
 import { Plate, PlateProps } from '@sima-land/ui-nucleons/plate';
-import { useLayer } from '@sima-land/ui-nucleons/helpers/layer';
+import { useLayer } from '@sima-land/ui-nucleons/helpers';
 import classNames from 'classnames/bind';
 import styles from './product-card.module.scss';
 

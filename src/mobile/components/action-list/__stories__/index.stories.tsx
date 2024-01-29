@@ -1,6 +1,8 @@
 import { ActionList } from '@sima-land/moleculas/mobile/components/action-list';
+import { useState } from 'react';
 import { Alert, AlertBody } from '@sima-land/ui-nucleons/alert';
 import { BottomBar } from '@sima-land/ui-nucleons/bottom-bar';
+import { Button } from '@sima-land/ui-nucleons/button';
 import { CleanButton, CleanGroup } from '@sima-land/ui-nucleons/clean-buttons';
 
 export default {
@@ -12,42 +14,46 @@ export default {
 };
 
 export function Primary() {
-  const close = () => {
-    alert('Пока что закрывать не будем.');
-  };
+  const [open, setOpen] = useState(false);
 
   const action = () => {
     alert('Заглушка здесь, только и всего.');
   };
 
   return (
-    <Alert onClose={close}>
-      <AlertBody>
-        <ActionList>
-          <ActionList.Item as='anchor' href='https://www.sima-land.ru'>
-            Подробнее
-          </ActionList.Item>
+    <>
+      <Button onClick={() => setOpen(true)}>Показать</Button>
 
-          <ActionList.Item as='button' onClick={action}>
-            Повторить заказ
-          </ActionList.Item>
+      {open && (
+        <Alert onClose={() => setOpen(false)}>
+          <AlertBody>
+            <ActionList>
+              <ActionList.Item as='anchor' href='https://www.sima-land.ru'>
+                Подробнее
+              </ActionList.Item>
 
-          <ActionList.Item as='button' onClick={action}>
-            Что-то третье
-          </ActionList.Item>
+              <ActionList.Item as='button' onClick={action}>
+                Повторить заказ
+              </ActionList.Item>
 
-          <ActionList.Item as='button' color='additional-red' onClick={action}>
-            Отменить заказ
-          </ActionList.Item>
-        </ActionList>
-      </AlertBody>
+              <ActionList.Item as='button' onClick={action}>
+                Что-то третье
+              </ActionList.Item>
 
-      <BottomBar divided>
-        <CleanGroup>
-          <CleanButton onClick={close}>Закрыть</CleanButton>
-        </CleanGroup>
-      </BottomBar>
-    </Alert>
+              <ActionList.Item as='button' color='additional-red' onClick={action}>
+                Отменить заказ
+              </ActionList.Item>
+            </ActionList>
+          </AlertBody>
+
+          <BottomBar divided>
+            <CleanGroup>
+              <CleanButton onClick={() => setOpen(false)}>Закрыть</CleanButton>
+            </CleanGroup>
+          </BottomBar>
+        </Alert>
+      )}
+    </>
   );
 }
 

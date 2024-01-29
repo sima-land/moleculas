@@ -1,5 +1,8 @@
 import { PersonInfo } from '@sima-land/moleculas/mobile/components/person-info';
-import { Screen } from '@sima-land/ui-nucleons/screen';
+import { useState } from 'react';
+import { Button } from '@sima-land/ui-nucleons/button';
+import { Modal, ModalBody } from '@sima-land/ui-nucleons/modal';
+import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
 
 export default {
   title: 'mobile/PersonInfo',
@@ -15,6 +18,8 @@ export default {
 };
 
 export function Primary() {
+  const [open, setOpen] = useState(false);
+
   const person = {
     personId: 123,
     name: 'Марина Михайловская',
@@ -28,18 +33,26 @@ export function Primary() {
   };
 
   return (
-    <Screen>
-      <Screen.Header onClose={() => alert('Пока не будем закрывать, хорошо?')} />
-      <Screen.Body>
-        <PersonInfo {...person} />
-      </Screen.Body>
-    </Screen>
+    <>
+      <Button onClick={() => setOpen(true)}>Показать</Button>
+
+      {open && (
+        <Modal size='fullscreen'>
+          <TopBar buttons={navigationButtons({ onClose: () => setOpen(false) })} />
+          <ModalBody>
+            <PersonInfo {...person} />
+          </ModalBody>
+        </Modal>
+      )}
+    </>
   );
 }
 
 Primary.storyName = 'Простой пример';
 
 export function WithArbitraryLink() {
+  const [open, setOpen] = useState(false);
+
   const person = {
     personId: 123,
     name: 'Сёмин Денис Геннадьевич (ежедневная отгрузка из Екатеринбурга)',
@@ -57,12 +70,18 @@ export function WithArbitraryLink() {
   };
 
   return (
-    <Screen>
-      <Screen.Header onClose={() => alert('Пока не будем закрывать, хорошо?')} />
-      <Screen.Body>
-        <PersonInfo {...person} />
-      </Screen.Body>
-    </Screen>
+    <>
+      <Button onClick={() => setOpen(true)}>Показать</Button>
+
+      {open && (
+        <Modal size='fullscreen'>
+          <TopBar buttons={navigationButtons({ onClose: () => setOpen(false) })} />
+          <ModalBody>
+            <PersonInfo {...person} />
+          </ModalBody>
+        </Modal>
+      )}
+    </>
   );
 }
 

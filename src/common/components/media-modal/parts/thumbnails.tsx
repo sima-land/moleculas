@@ -1,5 +1,5 @@
 import { useRef, ReactNode, useEffect } from 'react';
-import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
+import { useBreakpoint } from '@sima-land/ui-nucleons/hooks';
 import { Range } from '../utils';
 import { useMounted } from '../../../../common/hooks';
 import { ScrollSection } from './scroll-section';
