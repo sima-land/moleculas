@@ -1,7 +1,7 @@
 import { HTMLAttributes, MouseEventHandler, ReactNode } from 'react';
 import { ImageOverlay } from '../../../../desktop/components/gallery-modal/components/image-overlay';
 import { Price } from '@sima-land/ui-nucleons/price';
-import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
+import { useBreakpoint } from '@sima-land/ui-nucleons/hooks';
 import { useImageStub } from '../../../hooks';
 import classNames from 'classnames/bind';
 import styles from './product-brief.module.scss';

@@ -1,4 +1,4 @@
-import { defineSlots } from '@sima-land/ui-nucleons/helpers/define-slots';
+import { defineSlots } from '@sima-land/ui-nucleons/helpers';
 import { ProductInfoProps } from './types';
 import { ProductInfoContext } from './utils';
 import { Parts } from './parts';

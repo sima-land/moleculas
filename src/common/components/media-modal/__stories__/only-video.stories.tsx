@@ -4,7 +4,8 @@ import {
   MediaMain,
   MediaView,
 } from '@sima-land/moleculas/common/components/media-modal';
-import { Modal } from '@sima-land/ui-nucleons/modal';
+import { Modal, ModalBody, getResponsiveModalProps } from '@sima-land/ui-nucleons/modal';
+import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
 import { mixed } from '../__mocks__';
 
 export default {
@@ -19,9 +20,9 @@ export function OnlyVideo() {
   const media = mixed.filter(item => item.type === 'video')[0];
 
   return (
-    <Modal size='fullscreen' footerStub={false} withScrollDisable>
-      <Modal.Header onClose={() => void 0} />
-      <Modal.Body>
+    <Modal {...getResponsiveModalProps({ size: 'fullscreen' })}>
+      <TopBar size='unset' buttons={navigationButtons({ onClose: () => void 0 })} />
+      <ModalBody withScrollDisable>
         <MediaLayout>
           <MediaMain>
             <MediaArea>
@@ -29,7 +30,7 @@ export function OnlyVideo() {
             </MediaArea>
           </MediaMain>
         </MediaLayout>
-      </Modal.Body>
+      </ModalBody>
     </Modal>
   );
 }

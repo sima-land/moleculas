@@ -1,6 +1,6 @@
 import { CSSProperties, Ref, useEffect, useRef, VideoHTMLAttributes } from 'react';
 import { MediaData } from '../types';
-import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
+import { useBreakpoint } from '@sima-land/ui-nucleons/hooks';
 import { AllRoundView } from './all-round-view';
 import { useImageStub } from '../../../hooks';
 import { ImgStub } from '../../img-stub';

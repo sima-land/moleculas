@@ -2,7 +2,7 @@ import { Avatar, getUserAvatarProps } from '@sima-land/ui-nucleons/avatar';
 import { Box } from '@sima-land/ui-nucleons/box';
 import { Text } from '@sima-land/ui-nucleons/text';
 import { Link } from '@sima-land/ui-nucleons/link';
-import { ModalProps } from '@sima-land/ui-nucleons/modal';
+import { ModalBodyProps } from '@sima-land/ui-nucleons/modal';
 import classnames from 'classnames/bind';
 import styles from './person-info.module.scss';
 
@@ -49,10 +49,10 @@ export interface PersonModalProps extends PersonInfoProps {
   onClose: () => void;
 
   /** Нужно ли блокировать прокрутку пока открыто окно. */
-  withScrollDisable?: ModalProps['withScrollDisable'];
+  withScrollDisable?: ModalBodyProps['withScrollDisable'];
 
   /** Опции блокировки прокрутки. */
-  scrollDisableOptions?: ModalProps['scrollDisableOptions'];
+  scrollDisableOptions?: ModalBodyProps['scrollDisableOptions'];
 }
 
 const cx = classnames.bind(styles);

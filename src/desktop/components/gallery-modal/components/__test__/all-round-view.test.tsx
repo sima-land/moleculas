@@ -17,6 +17,7 @@ describe('AllRoundView', () => {
   afterEach(() => {
     jest.useRealTimers();
   });
+
   const testPhotos = [
     'https://img.com/0',
     'https://img.com/1',
@@ -220,7 +221,7 @@ describe('AllRoundView', () => {
       () =>
         ({
           left: 0,
-        } as any),
+        }) as any,
     );
 
     const { getByTestId } = render(<AllRoundView photos={testPhotos} />);

@@ -1,11 +1,10 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import { HoverCardProps } from './types';
-import { getOriginCorrection } from '@sima-land/ui-nucleons/with-tooltip/utils';
-import { SmallRounds } from '@sima-land/ui-nucleons/styling/shapes';
-import { BoxShadow } from '@sima-land/ui-nucleons/styling/shadows';
+import { SmallRounds, BoxShadow } from '@sima-land/ui-nucleons/styling';
 import { HoverCard as BaseHoverCard } from '../product-card';
 import classnames from 'classnames/bind';
 import styles from './hover-card.module.scss';
+import { getPositionedParentOffset } from '@sima-land/ui-nucleons/helpers';
 
 const cx = classnames.bind(styles);
 
@@ -22,7 +21,7 @@ export function HoverCard({ targetRef, onMouseLeave, children }: HoverCardProps)
     if (targetRef.current && rootRef.current) {
       const element = rootRef.current;
       const rect = targetRef.current.getBoundingClientRect();
-      const correction = getOriginCorrection(rootRef.current);
+      const correction = getPositionedParentOffset(rootRef.current);
 
       element.style.left = `${correction.x + rect.left - 16}px`;
       element.style.top = `${correction.y + rect.top - 16}px`;

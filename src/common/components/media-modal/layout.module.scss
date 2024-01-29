@@ -4,7 +4,7 @@
 .layout {
   display: flex;
   flex-direction: column;
-  min-height: calc((100 * var(--vh, 1vh)) - var(--modal-header-height));
+  min-height: #{calc(100 * var(--vh, 1vh) - var(--top-bar-height, 0))};
 }
 
 .body {

@@ -6,7 +6,7 @@ import QuickView2SVG from '@sima-land/ui-quarks/icons/24x24/Stroked/QuickView2';
 import { items } from './test-items';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import { Badge } from '../../../../common/components/badge';
-import { IntersectionMock } from '@sima-land/ui-nucleons/hooks/intersection/test-utils';
+import { IntersectionMock } from '@sima-land/ui-nucleons/hooks/use-intersection/test-utils';
 
 describe('ProductSlider', () => {
   it('should renders correctly', () => {

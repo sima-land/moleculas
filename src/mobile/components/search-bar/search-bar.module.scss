@@ -1,4 +1,4 @@
-@import 'node_modules/@sima-land/ui-nucleons/colors';
+@use 'node_modules/@sima-land/ui-nucleons/colors';
 
 .root {
   display: flex;
@@ -10,7 +10,7 @@
   flex-grow: 1;
   margin: 8px 0;
   width: 100%;
-  background-color: $basic-gray4;
+  background-color: colors.$basic-gray4;
   border-radius: 8px;
   padding: 0 12px;
   &:focus-within {
@@ -57,14 +57,14 @@
     display: none;
   }
   &::placeholder {
-    color: $basic-gray38;
+    color: colors.$basic-gray38;
   }
 }
 
 .description-container {
   line-height: 24px;
   font-size: 16px;
-  color: $basic-gray38;
+  color: colors.$basic-gray38;
   width: 100%;
   max-width: 50%;
   display: flex;
@@ -122,7 +122,7 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: $basic-blue;
+  color: colors.$basic-blue;
   cursor: pointer;
   display: flex;
   align-items: center;

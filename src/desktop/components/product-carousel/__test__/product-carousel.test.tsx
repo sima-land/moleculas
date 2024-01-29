@@ -1,11 +1,11 @@
-import { fireEvent, render } from '@testing-library/react';
+import { act, fireEvent, render } from '@testing-library/react';
 import { ProductCarousel } from '../product-carousel';
 import { items } from './test-items';
-import { useMedia } from '@sima-land/ui-nucleons/hooks/media';
+import { MatchMediaContext } from '@sima-land/ui-nucleons/context';
 import { Parts, ProductInfo } from '../../../../common/components/product-info';
-import { LayerProvider } from '@sima-land/ui-nucleons/helpers/layer';
+import { LayerProvider } from '@sima-land/ui-nucleons/helpers';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
-import { IntersectionMock } from '@sima-land/ui-nucleons/hooks/intersection/test-utils';
+import { IntersectionMock } from '@sima-land/ui-nucleons/hooks/use-intersection/test-utils';
 
 function setBoundingClientRect(
   element: Element,
@@ -35,18 +35,6 @@ function setBoundingClientRect(
 
   jest.spyOn(element, 'getBoundingClientRect').mockImplementation(() => rect);
 }
-
-jest.mock('@sima-land/ui-nucleons/hooks/media', () => {
-  const original = jest.requireActual('@sima-land/ui-nucleons/hooks/media');
-
-  const fakeUseMedia = (): boolean => Boolean((fakeUseMedia as any).__flag);
-
-  return {
-    ...original,
-    __esModule: true,
-    useMedia: fakeUseMedia,
-  };
-});
 
 describe('ProductCarousel', () => {
   const hoverCardItemNameSelector =
@@ -152,44 +140,63 @@ describe('ProductCarousel', () => {
   });
 
   it('should set size depend on media query', () => {
+    let matches = false;
+
+    const fakeMql = {
+      get matches() {
+        return matches;
+      },
+      addEventListener: jest.fn(),
+      removeEventListener: jest.fn(),
+    } as unknown as MediaQueryList;
+
+    const fakeMatchMedia = () => fakeMql;
+
     const { container, rerender } = render(
-      <ProductCarousel>
-        {items.map((item, index) => (
-          <ProductInfo key={index}>
-            <Parts.Image src={item.imageSrc} href={item.url} />
+      <MatchMediaContext.Provider value={{ matchMedia: fakeMatchMedia }}>
+        <ProductCarousel>
+          {items.map((item, index) => (
+            <ProductInfo key={index}>
+              <Parts.Image src={item.imageSrc} href={item.url} />
 
-            <Parts.Prices
-              price={item.price}
-              oldPrice={item.oldPrice}
-              currencyGrapheme={item.currencyGrapheme}
-            />
+              <Parts.Prices
+                price={item.price}
+                oldPrice={item.oldPrice}
+                currencyGrapheme={item.currencyGrapheme}
+              />
 
-            <Parts.Title href={item.url}>{item.name}</Parts.Title>
-          </ProductInfo>
-        ))}
-      </ProductCarousel>,
+              <Parts.Title href={item.url}>{item.name}</Parts.Title>
+            </ProductInfo>
+          ))}
+        </ProductCarousel>
+      </MatchMediaContext.Provider>,
     );
 
     expect(container).toMatchSnapshot();
 
-    (useMedia as any).__flag = true;
+    act(() => {
+      matches = true;
+      (fakeMql.addEventListener as jest.Mock).mock.calls[0][1]({ type: 'change', matches: true });
+    });
 
     rerender(
-      <ProductCarousel>
-        {items.map((item, index) => (
-          <ProductInfo key={index}>
-            <Parts.Image src={item.imageSrc} href={item.url} />
+      <MatchMediaContext.Provider value={{ matchMedia: fakeMatchMedia }}>
+        <ProductCarousel>
+          {items.map((item, index) => (
+            <ProductInfo key={index}>
+              <Parts.Image src={item.imageSrc} href={item.url} />
 
-            <Parts.Prices
-              price={item.price}
-              oldPrice={item.oldPrice}
-              currencyGrapheme={item.currencyGrapheme}
-            />
+              <Parts.Prices
+                price={item.price}
+                oldPrice={item.oldPrice}
+                currencyGrapheme={item.currencyGrapheme}
+              />
 
-            <Parts.Title href={item.url}>{item.name}</Parts.Title>
-          </ProductInfo>
-        ))}
-      </ProductCarousel>,
+              <Parts.Title href={item.url}>{item.name}</Parts.Title>
+            </ProductInfo>
+          ))}
+        </ProductCarousel>
+      </MatchMediaContext.Provider>,
     );
 
     expect(container).toMatchSnapshot();

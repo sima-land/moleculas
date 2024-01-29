@@ -3,8 +3,8 @@ import { Link } from '@sima-land/ui-nucleons/link';
 import { Rating } from '@sima-land/ui-nucleons/rating';
 import classnames from 'classnames/bind';
 import styles from './review-info.module.scss';
-import on from '@sima-land/ui-nucleons/helpers/on';
-import { BoxShadow } from '@sima-land/ui-nucleons/styling/shadows';
+import { on } from '@sima-land/ui-nucleons/helpers';
+import { BoxShadow } from '@sima-land/ui-nucleons/styling';
 import { CustomScrollbar } from '@sima-land/ui-nucleons/_internal/custom-scrollbar';
 
 export interface ReviewInfoProps {

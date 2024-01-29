@@ -1,5 +1,6 @@
 import { PersonInfo } from '@sima-land/moleculas/desktop/components/person-info';
-import { Modal } from '@sima-land/ui-nucleons/modal';
+import { Modal, ModalBody } from '@sima-land/ui-nucleons/modal';
+import { BottomBar } from '@sima-land/ui-nucleons/bottom-bar';
 import { CleanButton, CleanGroup } from '@sima-land/ui-nucleons/clean-buttons';
 
 export default {
@@ -17,7 +18,7 @@ export default {
 export function Primary() {
   return (
     <Modal size='s'>
-      <Modal.Body>
+      <ModalBody>
         <PersonInfo
           personId={123}
           name='Марина Михайловская'
@@ -29,13 +30,13 @@ export function Primary() {
           secondPhoneHref='tel:+79005554433'
           secondPhoneText='+7 (900) 555-44-33'
         />
-      </Modal.Body>
+      </ModalBody>
 
-      <Modal.Footer divided>
+      <BottomBar divided>
         <CleanGroup>
           <CleanButton>Закрыть</CleanButton>
         </CleanGroup>
-      </Modal.Footer>
+      </BottomBar>
     </Modal>
   );
 }
@@ -45,7 +46,7 @@ Primary.storyName = 'Простой пример';
 export function ArbitraryLink() {
   return (
     <Modal size='s'>
-      <Modal.Body>
+      <ModalBody>
         <PersonInfo
           personId={123}
           photoUrl='https://picsum.photos/id/342/200/200'
@@ -76,13 +77,13 @@ export function ArbitraryLink() {
             href: 'test',
           }}
         />
-      </Modal.Body>
+      </ModalBody>
 
-      <Modal.Footer divided>
+      <BottomBar divided>
         <CleanGroup>
           <CleanButton>Закрыть</CleanButton>
         </CleanGroup>
-      </Modal.Footer>
+      </BottomBar>
     </Modal>
   );
 }

@@ -2,8 +2,8 @@
 
 .root {
   position: absolute;
-  top: -1000px;
-  left: -1000px;
+  top: -9999px;
+  left: -9999px;
   opacity: 1;
   visibility: visible;
   &.hidden {

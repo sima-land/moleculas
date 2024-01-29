@@ -1,16 +1,18 @@
 @use 'node_modules/@sima-land/ui-nucleons/colors';
 @use 'node_modules/@sima-land/ui-nucleons/breakpoints';
+@use 'node_modules/@sima-land/ui-nucleons/shadows';
 @use './variables';
-@import 'node_modules/@sima-land/ui-nucleons/styling/shadows.module';
 
 .root {
   background: #fff;
   border-radius: 8px;
-  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
-  @extend .shadow-z3;
+  transition:
+    transform 0.2s ease-out,
+    box-shadow 0.2s ease-out;
+  @include shadows.box-shadow('z3');
   &:hover {
     transform: translateY(-8px);
-    @extend .shadow-z4;
+    @include shadows.box-shadow('z4');
     .image {
       transform: scale(1.05);
     }

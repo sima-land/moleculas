@@ -2,11 +2,12 @@ import {
   SelectScreenLayout,
   SelectScreenOption,
 } from '@sima-land/moleculas/mobile/components/select-screen';
-import { Screen } from '@sima-land/ui-nucleons/screen';
+import { Modal, ModalBody } from '@sima-land/ui-nucleons/modal';
 import { CSSProperties, useState } from 'react';
 import { random } from 'lodash';
-import { TextField } from '@sima-land/ui-nucleons/text-field';
+import { Input } from '@sima-land/ui-nucleons/input';
 import { MobileLayout } from '@sima-land/ui-nucleons/layout';
+import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
 
 export default {
   title: 'mobile/SelectScreenLayout',
@@ -32,29 +33,34 @@ export const Primary = () => {
     'Ленинский',
   ];
 
-  const [opened, toggleScreen] = useState<boolean>(false);
+  const [opened, toggleModal] = useState<boolean>(false);
   const [selectedId, selectItem] = useState<number>(random(0, items.length));
 
   return (
     <>
       <MobileLayout style={{ padding: '16px 0' }}>
-        <TextField
-          variant='mobile'
+        <Input
           style={{ width: '100%' }}
-          label='Район (нажмите чтобы выбрать)'
+          label='Район'
           value={items[selectedId]}
-          onClick={e => {
-            e.preventDefault();
-            toggleScreen(true);
+          rootProps={{
+            onClick: e => {
+              e.preventDefault();
+              toggleModal(true);
+            },
           }}
         />
       </MobileLayout>
 
       {opened && (
-        <Screen>
-          <Screen.Header divided title='Район' onBack={() => toggleScreen(false)} />
+        <Modal size='fullscreen'>
+          <TopBar
+            divided
+            title='Район'
+            buttons={navigationButtons({ onBack: () => toggleModal(false) })}
+          />
 
-          <Screen.Body>
+          <ModalBody>
             <SelectScreenLayout style={{ padding: '16px 0' }}>
               {items.map((item, id) => (
                 <SelectScreenOption
@@ -62,15 +68,15 @@ export const Primary = () => {
                   selected={id === selectedId}
                   onClick={() => {
                     selectItem(id);
-                    toggleScreen(false);
+                    toggleModal(false);
                   }}
                 >
                   {item}
                 </SelectScreenOption>
               ))}
             </SelectScreenLayout>
-          </Screen.Body>
-        </Screen>
+          </ModalBody>
+        </Modal>
       )}
     </>
   );
@@ -79,7 +85,7 @@ export const Primary = () => {
 Primary.storyName = 'Простой пример';
 
 export const SizeXL = () => {
-  const [opened, toggleScreen] = useState<boolean>(false);
+  const [opened, toggleModal] = useState<boolean>(false);
   const [selectedId, selectItem] = useState<number>(0);
 
   const items: Array<{ name: string; shortName: string }> = [
@@ -121,23 +127,28 @@ export const SizeXL = () => {
   return (
     <>
       <MobileLayout style={{ padding: '16px 0' }}>
-        <TextField
-          variant='mobile'
+        <Input
           style={{ width: '100%' }}
-          label='Валюта (нажмите чтобы выбрать)'
+          label='Район (нажмите чтобы выбрать)'
           value={items[selectedId].name}
-          onClick={e => {
-            e.preventDefault();
-            toggleScreen(true);
+          rootProps={{
+            onClick: e => {
+              e.preventDefault();
+              toggleModal(true);
+            },
           }}
         />
       </MobileLayout>
 
       {opened && (
-        <Screen>
-          <Screen.Header divided title='Валюта' onBack={() => toggleScreen(false)} />
+        <Modal size='fullscreen'>
+          <TopBar
+            divided
+            title='Район'
+            buttons={navigationButtons({ onBack: () => toggleModal(false) })}
+          />
 
-          <Screen.Body>
+          <ModalBody>
             <SelectScreenLayout style={{ padding: '16px 0' }}>
               {items.map((item, id) => (
                 <SelectScreenOption
@@ -146,7 +157,7 @@ export const SizeXL = () => {
                   selected={id === selectedId}
                   onClick={() => {
                     selectItem(id);
-                    toggleScreen(false);
+                    toggleModal(false);
                   }}
                 >
                   <div style={styles.item}>
@@ -157,8 +168,8 @@ export const SizeXL = () => {
                 </SelectScreenOption>
               ))}
             </SelectScreenLayout>
-          </Screen.Body>
-        </Screen>
+          </ModalBody>
+        </Modal>
       )}
     </>
   );

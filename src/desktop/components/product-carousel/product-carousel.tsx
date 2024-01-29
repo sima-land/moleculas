@@ -12,10 +12,9 @@ import {
 import { Carousel } from '@sima-land/ui-nucleons/carousel';
 import { HoverCard } from './hover-card';
 import { useAllowFlag, useClientWidth } from './utils';
-import { useIntersection } from '@sima-land/ui-nucleons/hooks/intersection';
-import { useMedia } from '@sima-land/ui-nucleons/hooks/media';
+import { useIntersection, useMedia } from '@sima-land/ui-nucleons/hooks';
 import { ProductInfo, ProductInfoProps } from '../../../common/components/product-info';
-import { useLayer } from '@sima-land/ui-nucleons/helpers/layer';
+import { useLayer } from '@sima-land/ui-nucleons/helpers';
 import { reduceBaseInfo, reduceHoverInfo } from '../product-card';
 import { ProductCardChildren } from '../product-card/types';
 import { ProductCarouselProps } from './types';

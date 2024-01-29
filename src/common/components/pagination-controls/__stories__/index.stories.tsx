@@ -1,7 +1,7 @@
 import { PaginationControls } from '@sima-land/moleculas/common/components/pagination-controls';
 import { useState } from 'react';
 import { Layout } from '@sima-land/ui-nucleons/layout';
-import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
+import { useBreakpoint } from '@sima-land/ui-nucleons/hooks';
 
 export default {
   title: 'common/PaginationControls',

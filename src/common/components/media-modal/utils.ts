@@ -1,8 +1,7 @@
-import { useIsomorphicLayoutEffect } from '@sima-land/ui-nucleons/hooks';
-import { useIdentityRef } from '@sima-land/ui-nucleons/hooks/identity';
+import { useIsomorphicLayoutEffect, useIdentityRef } from '@sima-land/ui-nucleons/hooks';
 import { RefObject, useEffect, useState } from 'react';
 
-export interface Range {
+export interface IRange {
   start: number;
   finish: number;
 }
@@ -14,7 +13,7 @@ export class Range {
    * @param el Элемент.
    * @return Диапазон.
    */
-  static fromRectVertical(el: Element): Range {
+  static fromRectVertical(el: Element): IRange {
     const rect = el.getBoundingClientRect();
 
     return {
@@ -28,7 +27,7 @@ export class Range {
    * @param el Элемент.
    * @return Диапазон.
    */
-  static fromRectHorizontal(el: Element): Range {
+  static fromRectHorizontal(el: Element): IRange {
     const rect = el.getBoundingClientRect();
 
     return {
@@ -43,7 +42,7 @@ export class Range {
    * @param target Диапазон.
    * @return Расстояние.
    */
-  static getShiftDistance(range: Range, target: Range) {
+  static getShiftDistance(range: IRange, target: IRange) {
     let result = 0;
 
     if (target.finish > range.finish) {

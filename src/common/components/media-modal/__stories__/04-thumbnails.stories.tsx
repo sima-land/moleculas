@@ -8,8 +8,9 @@ import {
   Thumbnail,
 } from '@sima-land/moleculas/common/components/media-modal';
 import { Fragment, useState } from 'react';
-import { Modal } from '@sima-land/ui-nucleons/modal';
-import { useBreakpoint } from '@sima-land/ui-nucleons/hooks/breakpoint';
+import { Modal, ModalBody, getResponsiveModalProps } from '@sima-land/ui-nucleons/modal';
+import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
+import { useBreakpoint } from '@sima-land/ui-nucleons/hooks';
 import { mixed } from '../__mocks__';
 
 export default {
@@ -62,9 +63,9 @@ export function ExampleThumbnails() {
   );
 
   return (
-    <Modal size='fullscreen' footerStub={false}>
-      <Modal.Header onClose={() => void 0} />
-      <Modal.Body>
+    <Modal {...getResponsiveModalProps({ size: 'fullscreen' })}>
+      <TopBar size='unset' buttons={navigationButtons({ onClose: () => void 0 })} />
+      <ModalBody>
         <MediaLayout>
           <MediaHeader>
             <div style={{ ...styles, width: '100%', height: '40px' }}>Header</div>
@@ -88,7 +89,7 @@ export function ExampleThumbnails() {
             )}
           </MediaFooter>
         </MediaLayout>
-      </Modal.Body>
+      </ModalBody>
     </Modal>
   );
 }
