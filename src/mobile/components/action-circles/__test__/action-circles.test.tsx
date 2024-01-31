@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { ActionCircles } from '..';
+import { ActionCircles } from '../action-circles';
 
 describe('ActionCircles', () => {
   it('should handle circles', () => {

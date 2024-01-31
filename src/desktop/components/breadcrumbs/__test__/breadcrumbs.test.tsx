@@ -1,4 +1,4 @@
-import { Breadcrumbs } from '..';
+import { Breadcrumbs } from '../breadcrumbs';
 import { render, fireEvent, act } from '@testing-library/react';
 import items from './test-items';
 
