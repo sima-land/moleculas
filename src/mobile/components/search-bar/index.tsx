@@ -9,7 +9,6 @@ import {
   ChangeEventHandler,
   MutableRefObject,
 } from 'react';
-import { throttle } from 'lodash';
 import { COLORS, Token } from '@sima-land/ui-nucleons/colors';
 import { Dropdown } from '@sima-land/ui-nucleons/dropdown';
 import { DropdownItem } from '@sima-land/ui-nucleons/dropdown-item';
@@ -100,14 +99,7 @@ export const SearchBar = ({
   });
 
   useEffect(
-    () =>
-      needHideEndButtons
-        ? on(
-            window,
-            'resize',
-            throttle(() => toggleDropdown(false), 500),
-          )
-        : undefined,
+    () => (needHideEndButtons ? on(window, 'resize', () => toggleDropdown(false)) : undefined),
     [needHideEndButtons],
   );
 

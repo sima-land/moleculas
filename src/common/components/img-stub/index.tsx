@@ -1,4 +1,5 @@
-import { CSSProperties, HTMLAttributes } from 'react';
+import type { CSSProperties, HTMLAttributes } from 'react';
+import type { WithTestId } from '@sima-land/ui-nucleons/types';
 import RepeatSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Repeat';
 import classNames from 'classnames/bind';
 import styles from './img-stub.module.scss';
@@ -7,7 +8,7 @@ export interface ImgStubStyle extends CSSProperties {
   '--img-stub-size'?: string;
 }
 
-export interface ImgStubProps extends Omit<HTMLAttributes<HTMLDivElement>, 'style'> {
+export interface ImgStubProps extends Omit<HTMLAttributes<HTMLDivElement>, 'style'>, WithTestId {
   style?: ImgStubStyle;
 }
 

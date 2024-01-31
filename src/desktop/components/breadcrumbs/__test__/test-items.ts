@@ -1,4 +1,4 @@
-import { Breadcrumb } from '..';
+import type { Breadcrumb } from '..';
 
 const items: Breadcrumb[] = [
   {

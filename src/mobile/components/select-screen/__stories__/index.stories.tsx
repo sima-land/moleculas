@@ -4,7 +4,6 @@ import {
 } from '@sima-land/moleculas/mobile/components/select-screen';
 import { Modal, ModalBody } from '@sima-land/ui-nucleons/modal';
 import { CSSProperties, useState } from 'react';
-import { random } from 'lodash';
 import { Input } from '@sima-land/ui-nucleons/input';
 import { MobileLayout } from '@sima-land/ui-nucleons/layout';
 import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
@@ -34,7 +33,7 @@ export const Primary = () => {
   ];
 
   const [opened, toggleModal] = useState<boolean>(false);
-  const [selectedId, selectItem] = useState<number>(random(0, items.length));
+  const [selectedId, selectItem] = useState<number>(1);
 
   return (
     <>
