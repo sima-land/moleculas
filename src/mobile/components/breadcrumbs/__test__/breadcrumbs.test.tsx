@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { Breadcrumbs } from '..';
+import { Breadcrumbs } from '../breadcrumbs';
 
 describe('Breadcrumbs', () => {
   it('should renders correctly', () => {

@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { PersonInfo } from '..';
+import { PersonInfo } from '../person-info';
 
 describe('PersonInfo', () => {
   it('should renders correctly', () => {

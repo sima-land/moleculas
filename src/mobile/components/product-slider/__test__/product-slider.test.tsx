@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { ProductSlider } from '..';
+import { ProductSlider } from '../product-slider';
 import { ProductInfo, Parts } from '../../../../common/components/product-info';
 import FavoriteSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
 import QuickView2SVG from '@sima-land/ui-quarks/icons/24x24/Stroked/QuickView2';

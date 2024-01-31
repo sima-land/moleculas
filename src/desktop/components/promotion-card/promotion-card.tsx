@@ -4,7 +4,7 @@ import { BannerTitle } from './banner-title';
 import { Estimate } from './estimate';
 import WatchSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/Watch';
 import classNames from 'classnames';
-import styles from './index.module.scss';
+import styles from './promotion-card.module.scss';
 import { PromotionCardPlaceholder } from './placeholder';
 
 export interface PromotionCardProps extends HTMLAttributes<HTMLDivElement> {
@@ -114,4 +114,5 @@ export const PromotionCard = ({
   );
 };
 
+/** @deprecated Лучше использовать прямой импорт PromotionCardPlaceholder. */
 PromotionCard.Placeholder = PromotionCardPlaceholder;

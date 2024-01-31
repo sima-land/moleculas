@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { ActionList } from '..';
+import { ActionList } from '../action-list';
 
 describe('ActionList', () => {
   it('should render items properly', () => {
