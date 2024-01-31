@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { RatingCounter } from '..';
+import { RatingCounter } from '../rating-counter';
 
 describe('Rating', () => {
   it('should renders properly', () => {

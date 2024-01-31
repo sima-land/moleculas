@@ -1,6 +1,6 @@
 import { createRef } from 'react';
 import { render } from '@testing-library/react';
-import { Badge, BadgeProps } from '..';
+import { Badge, BadgeProps } from '../badge';
 import { addDays, addMonths } from 'date-fns';
 
 describe('Badge', () => {
