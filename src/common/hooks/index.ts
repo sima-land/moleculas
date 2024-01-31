@@ -2,6 +2,21 @@ import { useIsomorphicLayoutEffect } from '@sima-land/ui-nucleons/hooks';
 import { ReactEventHandler, useCallback, useState } from 'react';
 
 /**
+ * Возвращает true если компонент смонтирован.
+ * @return True если компонент смонтирован.
+ */
+export function useMounted() {
+  const [mounted, setMounted] = useState(false);
+
+  useIsomorphicLayoutEffect(() => {
+    setMounted(true);
+    return () => setMounted(false);
+  }, []);
+
+  return mounted;
+}
+
+/**
  * Хук состояния ошибки загрузки изображения.
  * @param src Ссылка на картинку.
  * @param onError Обработчик ошибки.
@@ -25,19 +40,4 @@ export function useImageStub(src?: string, onError?: ReactEventHandler<HTMLImage
   );
 
   return { failed, setFailed, handleError };
-}
-
-/**
- * Возвращает true если компонент смонтирован.
- * @return True если компонент смонтирован.
- */
-export function useMounted() {
-  const [mounted, setMounted] = useState(false);
-
-  useIsomorphicLayoutEffect(() => {
-    setMounted(true);
-    return () => setMounted(false);
-  }, []);
-
-  return mounted;
 }

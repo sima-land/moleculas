@@ -2,7 +2,6 @@ import { useEffect, useState, useRef, SVGAttributes } from 'react';
 import CSSTransition from 'react-transition-group/CSSTransition';
 import { Plate } from '@sima-land/ui-nucleons/plate';
 import { Link } from '@sima-land/ui-nucleons/link';
-import { times } from 'lodash';
 import { on } from '@sima-land/ui-nucleons/helpers';
 import classnames from 'classnames/bind';
 import styles from './breadcrumbs.module.scss';
@@ -147,9 +146,11 @@ const Breadcrumb = ({
               <ul className={cx('siblings')}>
                 {data.siblings.state === 'fetching' && (
                   <>
-                    {times(8).map(index => (
-                      <div key={index} className={cx('sibling-placeholder')} />
-                    ))}
+                    {Array(8)
+                      .fill(0)
+                      .map((zero, index) => (
+                        <div key={index} className={cx('sibling-placeholder')} />
+                      ))}
                   </>
                 )}
 

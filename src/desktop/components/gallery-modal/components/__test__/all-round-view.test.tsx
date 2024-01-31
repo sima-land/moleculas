@@ -1,21 +1,45 @@
 import { AllRoundView } from '../all-round-view';
-import { useImagesLoad } from '../../utils';
 import { act, fireEvent, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-jest.mock('../../utils', () => {
-  const original = jest.requireActual('../../utils');
-
-  return {
-    ...original,
-    __esModule: true,
-    useImagesLoad: jest.fn(() => 'done'),
-  };
-});
-
 describe('AllRoundView', () => {
+  const ImageDescriptor = Object.getOwnPropertyDescriptor(window, 'Image');
+
+  const imageStore: {
+    callbacks: {
+      load: Array<(event: Event) => void>;
+      error: Array<(error: unknown) => void>;
+    };
+  } = {
+    callbacks: {
+      load: [],
+      error: [],
+    },
+  };
+
+  beforeAll(() => {
+    Object.defineProperty(window, 'Image', {
+      value: class ImageMock {
+        set onload(value: (event: Event) => void) {
+          imageStore.callbacks.load.push(value);
+        }
+        set onerror(value: (error: unknown) => void) {
+          imageStore.callbacks.error.push(value);
+        }
+      },
+    });
+  });
+
+  afterAll(() => {
+    if (ImageDescriptor) {
+      Object.defineProperty(window, 'Image', ImageDescriptor);
+    }
+  });
+
   afterEach(() => {
     jest.useRealTimers();
+    imageStore.callbacks.load.length = 0;
+    imageStore.callbacks.error.length = 0;
   });
 
   const testPhotos = [
@@ -32,13 +56,14 @@ describe('AllRoundView', () => {
   ];
 
   it('should render stub for failed img set', () => {
-    (useImagesLoad as jest.Mock).mockReturnValue('fail');
+    const { container, queryAllByTestId } = render(<AllRoundView photos={['broken-url']} />);
 
-    const { queryAllByTestId } = render(<AllRoundView photos={['broken-url']} />);
+    act(() => {
+      imageStore.callbacks.error.forEach(fn => fn('Fake error'));
+    });
 
     expect(queryAllByTestId('gallery-modal:360-current-photo')).toHaveLength(0);
-
-    (useImagesLoad as jest.Mock).mockReturnValue('done');
+    expect(container.querySelectorAll('.stub')).toHaveLength(1);
   });
 
   it('should renders correctly default state', () => {
@@ -53,6 +78,10 @@ describe('AllRoundView', () => {
     jest.useFakeTimers();
 
     const { getByTestId } = render(<AllRoundView photos={testPhotos} />);
+
+    act(() => {
+      imageStore.callbacks.load.forEach(fn => fn(new Event('load')));
+    });
 
     expect(getByTestId('gallery-modal:360-current-photo').getAttribute('src')).toEqual(
       testPhotos[0],
@@ -91,6 +120,10 @@ describe('AllRoundView', () => {
 
     const { getByTestId } = render(<AllRoundView photos={testPhotos} />);
 
+    act(() => {
+      imageStore.callbacks.load.forEach(fn => fn(new Event('load')));
+    });
+
     fireEvent.pointerDown(getByTestId('gallery-modal:360-turn-left-button'));
 
     expect(getByTestId('gallery-modal:360-current-photo').getAttribute('src')).toEqual(
@@ -119,6 +152,10 @@ describe('AllRoundView', () => {
 
     const { getByTestId } = render(<AllRoundView photos={testPhotos} />);
 
+    act(() => {
+      imageStore.callbacks.load.forEach(fn => fn(new Event('load')));
+    });
+
     fireEvent.pointerDown(getByTestId('gallery-modal:360-turn-right-button'));
 
     expect(getByTestId('gallery-modal:360-current-photo').getAttribute('src')).toEqual(
@@ -146,6 +183,10 @@ describe('AllRoundView', () => {
     jest.useFakeTimers();
 
     const { getByTestId } = render(<AllRoundView photos={testPhotos} />);
+
+    act(() => {
+      imageStore.callbacks.load.forEach(fn => fn(new Event('load')));
+    });
 
     fireEvent.pointerDown(getByTestId('gallery-modal:360-turn-right-button'));
 
