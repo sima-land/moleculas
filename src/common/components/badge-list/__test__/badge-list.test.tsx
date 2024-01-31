@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { BadgeList } from '..';
+import { BadgeList } from '../badge-list';
 import { Badge, BadgeProps } from '../../badge';
 import { render } from '@testing-library/react';
 

@@ -1,6 +1,6 @@
 import { act, fireEvent, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { Modifier, MoreButton } from '..';
+import { Modifier, MoreButton } from '../modifier';
 
 describe('Modifier', () => {
   it('should render text', () => {

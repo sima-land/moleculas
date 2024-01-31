@@ -1,6 +1,6 @@
 import { createRef } from 'react';
 import { render } from '@testing-library/react';
-import { InteractiveImage, Parts } from '..';
+import { InteractiveImage, Parts } from '../interactive-image';
 
 describe('InteractiveImage', () => {
   it('should handle props', () => {
