@@ -28,12 +28,15 @@ export function ActionList({ children }: ActionsListProps) {
   return <div className={cx('list')}>{children}</div>;
 }
 
+/** @deprecated Стоит использовать прямой импорт ActionListItem. */
+ActionList.Item = ActionListItem;
+
 /**
  * Элемент списка действий.
  * @param props Свойства.
  * @return Элемент.
  */
-ActionList.Item = function ActionListItem({
+export function ActionListItem({
   children,
   as = 'button',
   href,
@@ -57,4 +60,4 @@ ActionList.Item = function ActionListItem({
       </button>
     );
   }
-};
+}
