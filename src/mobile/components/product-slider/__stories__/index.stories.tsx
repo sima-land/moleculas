@@ -8,7 +8,6 @@ import { COLORS } from '@sima-land/ui-nucleons/colors';
 import FavSVG from '@sima-land/ui-quarks/icons/24x24/Filled/Favorite';
 import NotFavSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
 import { items } from '../__test__/test-items';
-import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'mobile/ProductSlider',
@@ -55,20 +54,12 @@ export const Primary = () => {
       <ProductSlider>
         {items.map((item, index) => (
           <ProductInfo key={index}>
-            <Parts.Image
-              src={item.imageSrc}
-              href={item.url}
-              onClick={e => {
-                e.preventDefault();
-                action('Клик: ссылка на товар (изображение)')();
-              }}
-            >
+            <Parts.Image src={item.imageSrc} href={item.url}>
               <Parts.ImageButton
                 icon={wished[index] ? FavSVG : NotFavSVG}
                 fill={wished[index] ? COLORS.get('additional-red') : undefined}
                 onClick={() => {
                   toggleWish(s => ({ ...s, [index]: !s[index] }));
-                  action('Клик: добавить в избранное')();
                 }}
                 data-testid='favorite-button'
               />
@@ -77,7 +68,11 @@ export const Primary = () => {
             {item.badges && (
               <Parts.Badges lineLimit={1}>
                 {item.badges.map((badge, badgeIndex) => (
-                  <Badge key={badgeIndex} {...badge} onClick={action('Клик: шильдик')} />
+                  <Badge
+                    key={badgeIndex}
+                    {...badge}
+                    onClick={() => alert('Вы попали мышкой по шильдику!')}
+                  />
                 ))}
               </Parts.Badges>
             )}
@@ -88,18 +83,10 @@ export const Primary = () => {
               currencyGrapheme={item.currencyGrapheme}
             />
 
-            <Parts.Title
-              href={item.url}
-              onClick={e => {
-                e.preventDefault();
-                action('Клик: ссылка на товар')();
-              }}
-            >
-              {item.name}
-            </Parts.Title>
+            <Parts.Title href={item.url}>{item.name}</Parts.Title>
 
             <Parts.Footer>
-              <Button size='s' onClick={action('Клик: добавление в коризну')}>
+              <Button size='s' onClick={() => alert('Представим что товар добавлен в корзину...')}>
                 В корзину
               </Button>
             </Parts.Footer>
@@ -117,14 +104,7 @@ export const Unavailable = () => (
     <ProductSlider>
       {items.map((item, index) => (
         <ProductInfo key={index} restriction='unavailable'>
-          <Parts.Image
-            src={item.imageSrc}
-            href={item.url}
-            onClick={e => {
-              e.preventDefault();
-              action('Клик: ссылка на товар (изображение)')();
-            }}
-          />
+          <Parts.Image src={item.imageSrc} href={item.url} />
 
           <Parts.Prices
             price={item.price}
@@ -133,18 +113,12 @@ export const Unavailable = () => (
             unavailableReason='Товара нет в наличии'
           />
 
-          <Parts.Title
-            href={item.url}
-            onClick={e => {
-              e.preventDefault();
-              action('Клик: ссылка на товар')();
-            }}
-          >
-            {item.name}
-          </Parts.Title>
+          <Parts.Title href={item.url}>{item.name}</Parts.Title>
 
           <Parts.Footer>
-            <Parts.WaitListAddButton onClick={action('Клик: добавление в лист ожидания')} />
+            <Parts.WaitListAddButton
+              onClick={() => alert('Представим добавление в лист ожидания...')}
+            />
           </Parts.Footer>
         </ProductInfo>
       ))}
@@ -159,14 +133,7 @@ export const Adult = () => (
     <ProductSlider>
       {items.map((item, index) => (
         <ProductInfo key={index} restriction='adult'>
-          <Parts.Image
-            src={item.imageSrc}
-            href={item.url}
-            onClick={e => {
-              e.preventDefault();
-              action('Клик: ссылка на товар (изображение)')();
-            }}
-          />
+          <Parts.Image src={item.imageSrc} href={item.url} />
 
           <Parts.Prices
             price={item.price}
@@ -174,18 +141,10 @@ export const Adult = () => (
             currencyGrapheme={item.currencyGrapheme}
           />
 
-          <Parts.Title
-            href={item.url}
-            onClick={e => {
-              e.preventDefault();
-              action('Клик: ссылка на товар')();
-            }}
-          >
-            {item.name}
-          </Parts.Title>
+          <Parts.Title href={item.url}>{item.name}</Parts.Title>
 
           <Parts.Footer>
-            <Parts.AdultConfirmButton onClick={action('Клик: подтверждение возраста')} />
+            <Parts.AdultConfirmButton onClick={() => 'Поверим на слово =)'} />
           </Parts.Footer>
         </ProductInfo>
       ))}
