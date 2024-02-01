@@ -13,7 +13,7 @@
     "build": "npm run build:clean && npm run build:scripts && npm run build:assets && npm run build:package",
     "build:clean": "rm -rf build",
     "build:scripts": "tsc --project tsconfig.build.json",
-    "build:assets": "node scripts/build-assets.js",
+    "build:assets": "node scripts/build-assets.mjs",
     "build:package": "cd build && npm pkg delete scripts.prepare && cd ..",
     "type-check": "tsc -p . --noEmit",
     "lint": "npm run lint:scripts && npm run lint:styles",
