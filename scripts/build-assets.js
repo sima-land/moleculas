@@ -1,9 +1,9 @@
-/* eslint-disable require-jsdoc */
+/* eslint-disable require-jsdoc, jsdoc/require-jsdoc */
 const copyfiles = require('copyfiles');
 
-async function main () {
-  const copy = (p, o = {}) => new Promise(r => copyfiles(p, o, r));
+const copy = (p, o = {}) => new Promise(r => copyfiles(p, o, r));
 
+async function main() {
   // копируем остальные файлы из исходников т.к. tsc прогнал только скрипты
   await copy(['./src/**/*', 'build'], {
     up: 1,

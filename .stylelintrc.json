@@ -1,0 +1,4 @@
+{
+  "extends": "@sima-land/linters/stylelint",
+  "ignoreFiles": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"]
+}

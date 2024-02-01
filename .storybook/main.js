@@ -4,7 +4,6 @@ module.exports = {
   staticDirs: [{ from: './assets', to: '/assets' }],
 
   addons: [
-    '@storybook/addon-actions',
     '@storybook/addon-backgrounds',
     '@storybook/addon-storysource',
     '@storybook/addon-viewport',
@@ -34,5 +33,9 @@ module.exports = {
 
   docs: {
     autodocs: true,
+  },
+
+  core: {
+    disableTelemetry: true,
   },
 };

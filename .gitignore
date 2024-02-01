@@ -28,3 +28,6 @@ build-storybook
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# npm pack default output
+sima-land-moleculas-0.0.0.tgz
