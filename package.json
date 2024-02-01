@@ -1,5 +1,6 @@
 {
   "name": "@sima-land/moleculas",
+  "type": "commonjs",
   "version": "0.0.0",
   "repository": "ssh://git@github.com:sima-land/moleculas.git",
   "author": "www.sima-land.ru team",
