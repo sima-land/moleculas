@@ -18,13 +18,13 @@ module.exports = ({ config }) => ({
       // scss
       {
         test: /\.scss$/,
-        exclude: /\.module\.scss$/,
+        exclude: /\.(module|m)\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
 
       // css-модули
       {
-        test: /\.module\.(css|scss)$/,
+        test: /\.(module|m)\.(css|scss)$/,
         use: [
           'style-loader',
           {
