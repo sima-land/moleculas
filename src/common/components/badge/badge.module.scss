@@ -54,7 +54,7 @@ $icon-size: 14px;
   color: var(--badge-color, #aaa);
 
   // ВАЖНО: используем border т.к. на Safari box-shadow пропадает при уменьшении масштаба
-  border: 1px solid var(--badge-color, #aaa);
+  border: 1px solid var(--badge-border-color, var(--badge-color, #aaa));
 }
 
 .coloring-fill {
