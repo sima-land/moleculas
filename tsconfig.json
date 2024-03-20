@@ -8,6 +8,11 @@
       "@sima-land/moleculas/*": ["./src/*"],
     },
   },
-  "include": ["./src"],
+  "include": [
+    "./src",
+
+    // ВАЖНО: только для storybook
+    "./.storybook/utils.tsx",
+  ],
   "exclude": ["node_modules"],
 }

@@ -2,39 +2,80 @@ $badge-size: 20px;
 $icon-size: 14px;
 
 .root {
-  --badge-color: #aaa;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   height: $badge-size;
-  color: var(--badge-color);
-
-  // используем border т.к. на Safari box-shadow пропадает при уменьшении масштаба
-  border: 1px solid var(--badge-color);
-  padding: 0 5px; // учитываем border
   font-weight: bold;
   font-size: 12px;
   line-height: 16px;
   max-width: 100%;
   min-width: $badge-size;
   text-decoration: none;
-  &.interactive:hover {
-    cursor: pointer;
-    opacity: 0.72;
+}
+
+.padding-x-default {
+  // ВАЖНО: учитываем border
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.padding-x-pill {
+  // ВАЖНО: учитываем border
+  padding-left: 7px;
+  padding-right: 8px;
+}
+
+.shape-round {
+  border-radius: 4px;
+}
+
+.shape-pill {
+  border-radius: 99999px;
+}
+
+.with-hover-effect:hover {
+  position: relative;
+  cursor: pointer;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    opacity: 0.16;
   }
-  &.icon-only {
-    width: $badge-size;
-    padding: 0;
-  }
-  .content {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .icon {
-    display: inline-block;
-    width: $icon-size;
-    height: $icon-size;
-    line-height: $icon-size;
-  }
+}
+
+.coloring-outline {
+  color: var(--badge-color, #aaa);
+
+  // ВАЖНО: используем border т.к. на Safari box-shadow пропадает при уменьшении масштаба
+  border: 1px solid var(--badge-color, #aaa);
+}
+
+.coloring-fill {
+  background: var(--badge-color, #aaa);
+  color: var(--badge-text-color, #fff);
+}
+
+.icon-only {
+  width: $badge-size;
+}
+
+// содержимое
+.content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.icon {
+  display: inline-block;
+  width: $icon-size;
+  height: $icon-size;
+  line-height: $icon-size;
 }

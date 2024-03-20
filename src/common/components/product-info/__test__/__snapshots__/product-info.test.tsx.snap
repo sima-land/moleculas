@@ -348,7 +348,7 @@ exports[`ProductInfo regular content should match snapshot 1`] = `
       class="item"
     >
       <a
-        class="root"
+        class="root padding-x-default coloring-outline"
         data-testid="badge"
         style="--badge-color: #b52ea8;"
       >
@@ -363,7 +363,7 @@ exports[`ProductInfo regular content should match snapshot 1`] = `
       class="item"
     >
       <a
-        class="root"
+        class="root padding-x-default coloring-outline"
         data-testid="badge"
         style="--badge-color: #ff7200;"
       >
@@ -378,7 +378,7 @@ exports[`ProductInfo regular content should match snapshot 1`] = `
       class="item"
     >
       <a
-        class="root"
+        class="root padding-x-default coloring-outline"
         data-testid="badge"
         style="--badge-color: #2962ff;"
       >
@@ -393,7 +393,7 @@ exports[`ProductInfo regular content should match snapshot 1`] = `
       class="item"
     >
       <a
-        class="root"
+        class="root padding-x-default coloring-outline"
         data-testid="badge"
         style="--badge-color: #00b8d4;"
       >

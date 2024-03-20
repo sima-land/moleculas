@@ -3,7 +3,7 @@
 exports[`Badge should renders correctly 1`] = `
 <div>
   <a
-    class="root interactive"
+    class="root with-hover-effect padding-x-default coloring-outline"
     data-testid="badge"
     href="https://sima-land.ru"
     style="--badge-color: #00b8d4;"
@@ -20,7 +20,7 @@ exports[`Badge should renders correctly 1`] = `
 exports[`Badge should renders correctly 2`] = `
 <div>
   <a
-    class="root icon-only interactive"
+    class="root icon-only with-hover-effect coloring-outline"
     data-testid="badge"
     href="https://sima-land.ru"
     style="--badge-color: #ff7200;"
@@ -37,7 +37,7 @@ exports[`Badge should renders correctly 2`] = `
 exports[`Badge should renders correctly 3`] = `
 <div>
   <a
-    class="root interactive"
+    class="root with-hover-effect padding-x-default coloring-outline"
     data-testid="badge"
     href="https://sima-land.ru"
     style="--badge-color: #b52ea8;"
@@ -54,7 +54,7 @@ exports[`Badge should renders correctly 3`] = `
 exports[`Badge should renders correctly 4`] = `
 <div>
   <a
-    class="root interactive"
+    class="root with-hover-effect padding-x-default coloring-outline"
     data-testid="badge"
     href="https://sima-land.ru"
     style="--badge-color: #b52ea8;"
@@ -73,7 +73,7 @@ exports[`Badge should renders correctly 4`] = `
 exports[`Badge should renders correctly 5`] = `
 <div>
   <a
-    class="root"
+    class="root padding-x-default coloring-outline"
     data-testid="badge"
     style="--badge-color: #607d8b;"
   >
