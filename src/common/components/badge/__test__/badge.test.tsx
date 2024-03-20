@@ -1,12 +1,98 @@
 import { createRef } from 'react';
 import { render } from '@testing-library/react';
-import { Badge, BadgeProps } from '../badge';
+import { Badge, BadgeProps } from '..';
 import { addDays, addMonths } from 'date-fns';
 
 describe('Badge', () => {
   beforeEach(() => {
     jest.useFakeTimers();
     jest.setSystemTime(new Date('2021-01-01T09:00:00'));
+  });
+
+  it('should handle "shape" prop', () => {
+    const { rerender, getByTestId } = render(
+      <Badge
+        href='https://www.ya.ru'
+        color='#000'
+        fields={[{ type: 'text', value: 'Some text' }]}
+      />,
+    );
+
+    expect(getByTestId('badge').classList.contains('shape-round')).toBe(false);
+    expect(getByTestId('badge').classList.contains('shape-pill')).toBe(false);
+
+    rerender(
+      <Badge
+        href='https://www.ya.ru'
+        color='#000'
+        fields={[{ type: 'text', value: 'Some text' }]}
+        shape='round'
+      />,
+    );
+
+    expect(getByTestId('badge').classList.contains('shape-round')).toBe(true);
+    expect(getByTestId('badge').classList.contains('shape-pill')).toBe(false);
+
+    rerender(
+      <Badge
+        href='https://www.ya.ru'
+        color='#000'
+        fields={[{ type: 'text', value: 'Some text' }]}
+        shape='pill'
+      />,
+    );
+
+    expect(getByTestId('badge').classList.contains('shape-round')).toBe(false);
+    expect(getByTestId('badge').classList.contains('shape-pill')).toBe(true);
+  });
+
+  it('should handle "coloring" prop', () => {
+    const { rerender, getByTestId } = render(
+      <Badge
+        href='https://www.ya.ru'
+        color='#000'
+        fields={[{ type: 'text', value: 'Some text' }]}
+      />,
+    );
+
+    expect(getByTestId('badge').classList.contains('coloring-outline')).toBe(true);
+    expect(getByTestId('badge').classList.contains('coloring-fill')).toBe(false);
+
+    rerender(
+      <Badge
+        href='https://www.ya.ru'
+        color='#000'
+        fields={[{ type: 'text', value: 'Some text' }]}
+        coloring='outline'
+      />,
+    );
+
+    expect(getByTestId('badge').classList.contains('coloring-outline')).toBe(true);
+    expect(getByTestId('badge').classList.contains('coloring-fill')).toBe(false);
+
+    rerender(
+      <Badge
+        href='https://www.ya.ru'
+        color='#000'
+        fields={[{ type: 'text', value: 'Some text' }]}
+        coloring='fill'
+      />,
+    );
+
+    expect(getByTestId('badge').classList.contains('coloring-outline')).toBe(false);
+    expect(getByTestId('badge').classList.contains('coloring-fill')).toBe(true);
+
+    rerender(
+      <Badge
+        href='https://www.ya.ru'
+        color='#000'
+        fields={[{ type: 'text', value: 'Some text' }]}
+        coloring='unset'
+      />,
+    );
+
+    expect(getByTestId('badge').classList.contains('coloring-outline')).toBe(false);
+    expect(getByTestId('badge').classList.contains('coloring-fill')).toBe(false);
   });
 
   it('should renders correctly', () => {

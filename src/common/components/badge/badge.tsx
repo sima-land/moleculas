@@ -1,23 +1,8 @@
-import { AnchorHTMLAttributes, ReactNode, forwardRef } from 'react';
+import { ReactNode, forwardRef } from 'react';
+import type { BadgeProps, BadgeStyle } from './types';
 import { Timer } from '@sima-land/ui-nucleons/timer';
 import classnames from 'classnames/bind';
 import styles from './badge.module.scss';
-
-export interface BadgeField {
-  type: 'text' | 'timer' | 'svg-url';
-  value: string;
-}
-
-export interface BadgeProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'color'> {
-  /** Основной цвет, используется как цвет обводки, иконок и текста. */
-  color?: string;
-
-  /** Содержимое шильдика. */
-  fields: Array<BadgeField>;
-
-  /** Идентификатор для систем автоматизированного тестирования. */
-  'data-testid'?: string;
-}
 
 const cx = classnames.bind(styles);
 
@@ -27,10 +12,39 @@ const cx = classnames.bind(styles);
  * @return Элемент.
  */
 export const Badge = forwardRef<HTMLAnchorElement, BadgeProps>(function Badge(
-  { className, color, fields, href, style, 'data-testid': testId = 'badge', ...restProps },
+  {
+    className,
+    color,
+    coloring = 'outline',
+    fields,
+    href,
+    style,
+    shape = 'unset',
+    withHoverEffect = Boolean(href),
+    'data-testid': testId = 'badge',
+    ...restProps
+  },
   ref,
 ) {
   const iconOnly = fields.length === 1 && fields[0].type === 'svg-url';
+
+  const rootClassName = cx(
+    'root',
+    iconOnly && 'icon-only',
+    withHoverEffect && 'with-hover-effect',
+    shape === 'round' && 'shape-round',
+    shape === 'pill' && 'shape-pill',
+    shape !== 'pill' && !iconOnly && 'padding-x-default',
+    shape === 'pill' && !iconOnly && 'padding-x-pill',
+    coloring === 'outline' && 'coloring-outline',
+    coloring === 'fill' && 'coloring-fill',
+    className,
+  );
+
+  const rootStyle: BadgeStyle = {
+    '--badge-color': color,
+    ...style,
+  };
 
   return (
     <a
@@ -38,8 +52,8 @@ export const Badge = forwardRef<HTMLAnchorElement, BadgeProps>(function Badge(
       {...restProps}
       data-testid={testId}
       href={href}
-      style={{ ...style, '--badge-color': color } as any}
-      className={cx('root', iconOnly && 'icon-only', href && 'interactive', className)}
+      style={rootStyle}
+      className={rootClassName}
       children={
         iconOnly ? (
           <img className={cx('icon')} src={fields[0].value} alt='' />
