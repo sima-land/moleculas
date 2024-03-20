@@ -8,6 +8,7 @@ export interface BadgeField {
 export interface BadgeStyle extends CSSProperties {
   '--badge-color'?: string;
   '--badge-text-color'?: string;
+  '--badge-border-color'?: string;
 }
 
 export interface BadgeProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'color'> {
