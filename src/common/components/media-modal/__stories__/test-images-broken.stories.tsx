@@ -17,7 +17,6 @@ import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
 import { Tabs } from '@sima-land/ui-nucleons/tabs';
 import { mixed } from '../__mocks__';
 import { Layout } from '@sima-land/ui-nucleons/layout';
-import { Button } from '@sima-land/ui-nucleons/button';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import { MediaData } from '../types';
 import { MediaGallery, MediaSlide } from '../../media-gallery';
@@ -124,14 +123,7 @@ export function TestImagesBroken() {
                 currency='₽'
                 footer={
                   <>
-                    <Button size='s' viewType='success' style={{ width: '128px' }}>
-                      В корзине
-                    </Button>
-                    <Stepper
-                      size='s'
-                      defaultValue={1}
-                      style={{ width: '128px', marginLeft: '12px' }}
-                    />
+                    <Stepper size='s' defaultValue={1} style={{ width: '122px' }} />
                   </>
                 }
               />
