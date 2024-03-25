@@ -38,6 +38,10 @@
   font-weight: 600;
 }
 
+.title + .price {
+  margin-top: 4px;
+}
+
 .footer {
   display: flex;
 }
@@ -73,7 +77,7 @@
 
 .size-l {
   column-gap: 16px;
-  row-gap: 16px;
+  row-gap: 12px;
   grid-template-columns: 112px 1fr;
   .image {
     width: 112px;

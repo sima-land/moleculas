@@ -36,7 +36,7 @@ export function ExampleGalleryVideo() {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    background: 'rgb(33, 33, 33, 0.24)',
+    background: 'rgb(33, 33, 33, 0.16)',
   };
 
   return (

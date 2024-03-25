@@ -11,6 +11,7 @@ export interface ProductBriefProps extends HTMLAttributes<HTMLDivElement> {
   size?: 's' | 'l';
   title?: string;
   price?: string | number;
+  priceReplacer?: ReactNode;
   currency?: string;
   footer?: ReactNode;
   href?: string;
@@ -31,6 +32,7 @@ export function ProductBrief({
   imageSrc,
   title,
   price,
+  priceReplacer,
   currency,
   footer,
   className,
@@ -42,6 +44,7 @@ export function ProductBrief({
   const desktop = useBreakpoint('xs+');
   const { failed, handleError } = useImageStub(imageSrc);
   const size = sizeProp ?? desktop ? 'l' : 's';
+  const priceDefined = typeof price === 'number' || typeof price === 'string';
 
   if (loading) {
     return <ProductBriefSkeleton size={size} />;
@@ -60,7 +63,11 @@ export function ProductBrief({
         <a className={styles.title} href={href} onClick={onLinkClick}>
           {title}
         </a>
-        {price && <Price className={styles.price} value={price} currencyGrapheme={currency} />}
+        {(priceDefined || priceReplacer) && (
+          <div className={styles.price}>
+            {priceDefined ? <Price value={price} currencyGrapheme={currency} /> : priceReplacer}
+          </div>
+        )}
       </div>
 
       {footer && <div className={styles.footer}>{footer}</div>}

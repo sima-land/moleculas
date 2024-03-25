@@ -24,7 +24,7 @@ export function ExampleFooterProduct() {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    background: 'rgb(33, 33, 33, 0.24)',
+    background: 'rgb(33, 33, 33, 0.16)',
   };
 
   return (
@@ -54,7 +54,11 @@ export function ExampleFooterProduct() {
                 title='Игровая приставка Sony PlayStation 5 Digital 3,5 ГГц модифицированная'
                 price={60235}
                 currency='₽'
-                footer={<Button size='s'>В корзину</Button>}
+                footer={
+                  <Button size='s' style={{ width: '122px' }}>
+                    В корзину
+                  </Button>
+                }
               />
             </Layout>
           </MediaFooter>
