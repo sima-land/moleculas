@@ -1,4 +1,4 @@
-import { HTMLAttributes, MouseEventHandler, ReactNode } from 'react';
+import { HTMLAttributes, ImgHTMLAttributes, MouseEventHandler, ReactNode } from 'react';
 import { ImageOverlay } from '../../../../desktop/components/gallery-modal/components/image-overlay';
 import { Price } from '@sima-land/ui-nucleons/price';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks';
@@ -17,6 +17,7 @@ export interface ProductBriefProps extends HTMLAttributes<HTMLDivElement> {
   href?: string;
   onLinkClick?: MouseEventHandler<HTMLAnchorElement>;
   imageSrc?: string;
+  imageProps?: ImgHTMLAttributes<HTMLImageElement>;
   loading?: boolean;
 }
 
@@ -30,6 +31,7 @@ const cx = classNames.bind(styles);
 export function ProductBrief({
   size: sizeProp,
   imageSrc,
+  imageProps,
   title,
   price,
   priceReplacer,
@@ -55,7 +57,7 @@ export function ProductBrief({
       <a className={styles.image} href={href} onClick={onLinkClick}>
         <ImageOverlay className={styles.overlay}>
           {failed && <ImgStub className={styles.stub} />}
-          {!failed && <img src={imageSrc} onError={handleError} />}
+          {!failed && <img src={imageSrc} {...imageProps} onError={handleError} />}
         </ImageOverlay>
       </a>
 
