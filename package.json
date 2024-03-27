@@ -73,7 +73,7 @@
     "webpack": "^5.64.4"
   },
   "peerDependencies": {
-    "@sima-land/ui-nucleons": "^45.0.0-alpha.12",
+    "@sima-land/ui-nucleons": "^45.0.0-alpha.13",
     "@sima-land/ui-quarks": "^4.6.0",
     "react": "^17.0 || ^18.0"
   }
