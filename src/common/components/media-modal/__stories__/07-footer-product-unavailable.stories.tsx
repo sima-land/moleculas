@@ -55,6 +55,7 @@ export function ExampleFooterProductUnavailable() {
               <ProductBrief
                 href='https://sima-land.ru'
                 imageSrc={vase}
+                imageProps={{ style: { opacity: 0.44 } }}
                 title='Игровая приставка Sony PlayStation 5 Digital 3,5 ГГц модифицированная'
                 priceReplacer={
                   <>
