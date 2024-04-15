@@ -1,0 +1,109 @@
+@use 'node_modules/@sima-land/ui-nucleons/colors';
+
+.root {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.root .item {
+  margin-bottom: 12px;
+}
+
+// ВАЖНО: именно after чтобы при переносе выглядело правильно
+.root .item:not(:last-child)::after {
+  content: '/';
+  display: block;
+  margin: 0 8px;
+}
+
+.inner {
+  position: relative;
+  display: flex;
+}
+
+.name {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.icon {
+  flex-shrink: 0;
+  flex-grow: 0;
+  display: block;
+  margin-left: 2px;
+  stroke: currentColor;
+}
+
+.dropdown {
+  min-width: 180px;
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  padding: 16px;
+  z-index: 2;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.dropdown .name {
+  margin-bottom: 16px;
+}
+
+.dropdown .icon {
+  transform: scaleY(-1);
+  stroke: colors.$basic-gray38;
+}
+
+.dropdown-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.sibling {
+  display: block;
+}
+
+.dropdown-body > .sibling + .sibling {
+  margin-top: 12px;
+}
+
+.stub {
+  border-radius: 4px;
+  height: 12px;
+  background: colors.$basic-gray4;
+}
+
+.stubs > .stub + .stub {
+  margin-top: 12px;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
