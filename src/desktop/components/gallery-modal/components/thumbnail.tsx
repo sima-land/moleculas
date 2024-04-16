@@ -4,7 +4,7 @@ import { ImageOverlay } from './image-overlay';
 import PlaySVG from '@sima-land/ui-quarks/icons/24x24/Filled/Play';
 import classNames from 'classnames/bind';
 import styles from './thumbnail.module.scss';
-import AllRoundSVG from '@sima-land/ui-quarks/icons/40x40/Filled/Round360';
+import AllRoundSVG from '@sima-land/ui-quarks/icons/40x40/Filled/Viewing360Perspective';
 
 const cx = classNames.bind(styles);
 

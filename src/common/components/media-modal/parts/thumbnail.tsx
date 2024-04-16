@@ -1,7 +1,7 @@
 import { createContext, useContext, MouseEventHandler } from 'react';
 import { ImageOverlay } from '../../../../desktop/components/gallery-modal/components/image-overlay';
 import PlaySVG from '@sima-land/ui-quarks/icons/24x24/Filled/Play';
-import AllRoundSVG from '@sima-land/ui-quarks/icons/40x40/Filled/Round360';
+import AllRoundSVG from '@sima-land/ui-quarks/icons/40x40/Filled/Viewing360Perspective';
 import { Price } from '@sima-land/ui-nucleons/price';
 import { useImageStub } from '../../../hooks';
 import classNames from 'classnames/bind';

@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import { ProductSlider } from '../product-slider';
 import { ProductInfo, Parts } from '../../../../common/components/product-info';
 import FavoriteSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
-import QuickView2SVG from '@sima-land/ui-quarks/icons/24x24/Stroked/QuickView2';
+import QuickView2SVG from '@sima-land/ui-quarks/icons/24x24/Stroked/MagnifierPlus';
 import { items } from './test-items';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import { Badge } from '../../../../common/components/badge';

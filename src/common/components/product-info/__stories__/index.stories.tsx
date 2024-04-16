@@ -3,8 +3,8 @@ import { ReactNode, useState } from 'react';
 import { Badge, BadgeProps } from '@sima-land/moleculas/common/components/badge';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import FavoriteSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
-import QuickView2SVG from '@sima-land/ui-quarks/icons/24x24/Stroked/QuickView2';
-import Camera2SVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Camera2';
+import QuickView2SVG from '@sima-land/ui-quarks/icons/24x24/Stroked/MagnifierPlus';
+import Camera2SVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Camera';
 
 export default {
   title: 'common/ProductInfo',

@@ -6,7 +6,7 @@ import { defineSlots } from '@sima-land/ui-nucleons/helpers';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks';
 import { useMounted } from '../../../../common/hooks';
 import { ScrollSection } from './scroll-section';
-import LeftSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/Arrows/Left';
+import LeftSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/ArrowExpandLeft';
 import styles from './parts.module.scss';
 
 export const Preset = {
