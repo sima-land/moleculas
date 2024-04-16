@@ -29,13 +29,13 @@ export function Primary() {
           <BreadcrumbsItem.Body>Шины и Диски</BreadcrumbsItem.Body>
           <BreadcrumbsItem.Dropdown>
             <BreadcrumbsItem.Sibling href='#'>Какой-то текст здесь 1</BreadcrumbsItem.Sibling>
-            <BreadcrumbsItem.Sibling disabled>Какой-то текст здесь 2</BreadcrumbsItem.Sibling>
+            <BreadcrumbsItem.Sibling disabled>Шины и Диски</BreadcrumbsItem.Sibling>
+            <BreadcrumbsItem.Sibling href='#'>Какой-то текст здесь 2</BreadcrumbsItem.Sibling>
             <BreadcrumbsItem.Sibling href='#'>Какой-то текст здесь 3</BreadcrumbsItem.Sibling>
             <BreadcrumbsItem.Sibling href='#'>Какой-то текст здесь 4</BreadcrumbsItem.Sibling>
-            <BreadcrumbsItem.Sibling disabled>Какой-то текст здесь 5</BreadcrumbsItem.Sibling>
+            <BreadcrumbsItem.Sibling href='#'>Какой-то текст здесь 5</BreadcrumbsItem.Sibling>
             <BreadcrumbsItem.Sibling href='#'>Какой-то текст здесь 6</BreadcrumbsItem.Sibling>
             <BreadcrumbsItem.Sibling href='#'>Какой-то текст здесь 7</BreadcrumbsItem.Sibling>
-            <BreadcrumbsItem.Sibling href='#'>Какой-то текст здесь 8</BreadcrumbsItem.Sibling>
           </BreadcrumbsItem.Dropdown>
         </BreadcrumbsItem>
 
