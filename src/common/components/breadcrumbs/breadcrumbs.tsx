@@ -117,6 +117,7 @@ export function BreadcrumbsItemDropdown({
     <>
       {loading ? (
         <div className={styles.stubs}>
+          {/* ВАЖНО: по гайдам нужно именно 8 штук */}
           <div className={styles.stub} />
           <div className={styles.stub} />
           <div className={styles.stub} />
