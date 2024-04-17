@@ -270,14 +270,7 @@ exports[`GalleryModal should renders 1`] = `
                       width="24"
                     >
                       <path
-                        clip-rule="evenodd"
-                        d="M11.707 3.293a1 1 0 0 1 0 1.414L4.414 12l7.293 7.293a1 1 0 0 1-1.414 1.414l-8-8a1 1 0 0 1 0-1.414l8-8a1 1 0 0 1 1.414 0Z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        clip-rule="evenodd"
-                        d="M3 12a1 1 0 0 1 1-1h17a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Z"
-                        fill-rule="evenodd"
+                        d="M11.707 4.707a1 1 0 0 0-1.414-1.414l-8 8a1 1 0 0 0 0 1.414l8 8a1 1 0 0 0 1.414-1.414L5.414 13H21a1 1 0 1 0 0-2H5.414l6.293-6.293Z"
                       />
                     </svg>
                   </button>
@@ -294,14 +287,7 @@ exports[`GalleryModal should renders 1`] = `
                       width="24"
                     >
                       <path
-                        clip-rule="evenodd"
-                        d="M11.253 3.336a1 1 0 0 1 1.411-.083l9 8a1 1 0 0 1 0 1.494l-9 8a1 1 0 0 1-1.328-1.494L19.495 12l-8.16-7.253a1 1 0 0 1-.082-1.411Z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        clip-rule="evenodd"
-                        d="M2 12a1 1 0 0 1 1-1h17a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
-                        fill-rule="evenodd"
+                        d="M12.664 3.253a1 1 0 0 0-1.328 1.494L18.37 11H3a1 1 0 1 0 0 2h15.37l-7.034 6.253a1 1 0 0 0 1.328 1.494l9-8a1 1 0 0 0 0-1.494l-9-8Z"
                       />
                     </svg>
                   </button>
@@ -614,14 +600,7 @@ exports[`GalleryModal should renders with review footer 1`] = `
                       width="24"
                     >
                       <path
-                        clip-rule="evenodd"
-                        d="M11.707 3.293a1 1 0 0 1 0 1.414L4.414 12l7.293 7.293a1 1 0 0 1-1.414 1.414l-8-8a1 1 0 0 1 0-1.414l8-8a1 1 0 0 1 1.414 0Z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        clip-rule="evenodd"
-                        d="M3 12a1 1 0 0 1 1-1h17a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Z"
-                        fill-rule="evenodd"
+                        d="M11.707 4.707a1 1 0 0 0-1.414-1.414l-8 8a1 1 0 0 0 0 1.414l8 8a1 1 0 0 0 1.414-1.414L5.414 13H21a1 1 0 1 0 0-2H5.414l6.293-6.293Z"
                       />
                     </svg>
                   </button>
@@ -638,14 +617,7 @@ exports[`GalleryModal should renders with review footer 1`] = `
                       width="24"
                     >
                       <path
-                        clip-rule="evenodd"
-                        d="M11.253 3.336a1 1 0 0 1 1.411-.083l9 8a1 1 0 0 1 0 1.494l-9 8a1 1 0 0 1-1.328-1.494L19.495 12l-8.16-7.253a1 1 0 0 1-.082-1.411Z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        clip-rule="evenodd"
-                        d="M2 12a1 1 0 0 1 1-1h17a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
-                        fill-rule="evenodd"
+                        d="M12.664 3.253a1 1 0 0 0-1.328 1.494L18.37 11H3a1 1 0 1 0 0 2h15.37l-7.034 6.253a1 1 0 0 0 1.328 1.494l9-8a1 1 0 0 0 0-1.494l-9-8Z"
                       />
                     </svg>
                   </button>
@@ -981,14 +953,7 @@ exports[`GalleryModal should renders with review footer 2`] = `
                       width="24"
                     >
                       <path
-                        clip-rule="evenodd"
-                        d="M11.707 3.293a1 1 0 0 1 0 1.414L4.414 12l7.293 7.293a1 1 0 0 1-1.414 1.414l-8-8a1 1 0 0 1 0-1.414l8-8a1 1 0 0 1 1.414 0Z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        clip-rule="evenodd"
-                        d="M3 12a1 1 0 0 1 1-1h17a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Z"
-                        fill-rule="evenodd"
+                        d="M11.707 4.707a1 1 0 0 0-1.414-1.414l-8 8a1 1 0 0 0 0 1.414l8 8a1 1 0 0 0 1.414-1.414L5.414 13H21a1 1 0 1 0 0-2H5.414l6.293-6.293Z"
                       />
                     </svg>
                   </button>
@@ -1005,14 +970,7 @@ exports[`GalleryModal should renders with review footer 2`] = `
                       width="24"
                     >
                       <path
-                        clip-rule="evenodd"
-                        d="M11.253 3.336a1 1 0 0 1 1.411-.083l9 8a1 1 0 0 1 0 1.494l-9 8a1 1 0 0 1-1.328-1.494L19.495 12l-8.16-7.253a1 1 0 0 1-.082-1.411Z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        clip-rule="evenodd"
-                        d="M2 12a1 1 0 0 1 1-1h17a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
-                        fill-rule="evenodd"
+                        d="M12.664 3.253a1 1 0 0 0-1.328 1.494L18.37 11H3a1 1 0 1 0 0 2h15.37l-7.034 6.253a1 1 0 0 0 1.328 1.494l9-8a1 1 0 0 0 0-1.494l-9-8Z"
                       />
                     </svg>
                   </button>
@@ -1347,14 +1305,7 @@ exports[`GalleryModal should renders with review footer 3`] = `
                       width="24"
                     >
                       <path
-                        clip-rule="evenodd"
-                        d="M11.707 3.293a1 1 0 0 1 0 1.414L4.414 12l7.293 7.293a1 1 0 0 1-1.414 1.414l-8-8a1 1 0 0 1 0-1.414l8-8a1 1 0 0 1 1.414 0Z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        clip-rule="evenodd"
-                        d="M3 12a1 1 0 0 1 1-1h17a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Z"
-                        fill-rule="evenodd"
+                        d="M11.707 4.707a1 1 0 0 0-1.414-1.414l-8 8a1 1 0 0 0 0 1.414l8 8a1 1 0 0 0 1.414-1.414L5.414 13H21a1 1 0 1 0 0-2H5.414l6.293-6.293Z"
                       />
                     </svg>
                   </button>
@@ -1371,14 +1322,7 @@ exports[`GalleryModal should renders with review footer 3`] = `
                       width="24"
                     >
                       <path
-                        clip-rule="evenodd"
-                        d="M11.253 3.336a1 1 0 0 1 1.411-.083l9 8a1 1 0 0 1 0 1.494l-9 8a1 1 0 0 1-1.328-1.494L19.495 12l-8.16-7.253a1 1 0 0 1-.082-1.411Z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        clip-rule="evenodd"
-                        d="M2 12a1 1 0 0 1 1-1h17a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
-                        fill-rule="evenodd"
+                        d="M12.664 3.253a1 1 0 0 0-1.328 1.494L18.37 11H3a1 1 0 1 0 0 2h15.37l-7.034 6.253a1 1 0 0 0 1.328 1.494l9-8a1 1 0 0 0 0-1.494l-9-8Z"
                       />
                     </svg>
                   </button>
@@ -1713,14 +1657,7 @@ exports[`GalleryModal should renders with review footer 4`] = `
                       width="24"
                     >
                       <path
-                        clip-rule="evenodd"
-                        d="M11.707 3.293a1 1 0 0 1 0 1.414L4.414 12l7.293 7.293a1 1 0 0 1-1.414 1.414l-8-8a1 1 0 0 1 0-1.414l8-8a1 1 0 0 1 1.414 0Z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        clip-rule="evenodd"
-                        d="M3 12a1 1 0 0 1 1-1h17a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Z"
-                        fill-rule="evenodd"
+                        d="M11.707 4.707a1 1 0 0 0-1.414-1.414l-8 8a1 1 0 0 0 0 1.414l8 8a1 1 0 0 0 1.414-1.414L5.414 13H21a1 1 0 1 0 0-2H5.414l6.293-6.293Z"
                       />
                     </svg>
                   </button>
@@ -1737,14 +1674,7 @@ exports[`GalleryModal should renders with review footer 4`] = `
                       width="24"
                     >
                       <path
-                        clip-rule="evenodd"
-                        d="M11.253 3.336a1 1 0 0 1 1.411-.083l9 8a1 1 0 0 1 0 1.494l-9 8a1 1 0 0 1-1.328-1.494L19.495 12l-8.16-7.253a1 1 0 0 1-.082-1.411Z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        clip-rule="evenodd"
-                        d="M2 12a1 1 0 0 1 1-1h17a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
-                        fill-rule="evenodd"
+                        d="M12.664 3.253a1 1 0 0 0-1.328 1.494L18.37 11H3a1 1 0 1 0 0 2h15.37l-7.034 6.253a1 1 0 0 0 1.328 1.494l9-8a1 1 0 0 0 0-1.494l-9-8Z"
                       />
                     </svg>
                   </button>
@@ -2079,14 +2009,7 @@ exports[`GalleryModal should renders with review footer 5`] = `
                       width="24"
                     >
                       <path
-                        clip-rule="evenodd"
-                        d="M11.707 3.293a1 1 0 0 1 0 1.414L4.414 12l7.293 7.293a1 1 0 0 1-1.414 1.414l-8-8a1 1 0 0 1 0-1.414l8-8a1 1 0 0 1 1.414 0Z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        clip-rule="evenodd"
-                        d="M3 12a1 1 0 0 1 1-1h17a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Z"
-                        fill-rule="evenodd"
+                        d="M11.707 4.707a1 1 0 0 0-1.414-1.414l-8 8a1 1 0 0 0 0 1.414l8 8a1 1 0 0 0 1.414-1.414L5.414 13H21a1 1 0 1 0 0-2H5.414l6.293-6.293Z"
                       />
                     </svg>
                   </button>
@@ -2103,14 +2026,7 @@ exports[`GalleryModal should renders with review footer 5`] = `
                       width="24"
                     >
                       <path
-                        clip-rule="evenodd"
-                        d="M11.253 3.336a1 1 0 0 1 1.411-.083l9 8a1 1 0 0 1 0 1.494l-9 8a1 1 0 0 1-1.328-1.494L19.495 12l-8.16-7.253a1 1 0 0 1-.082-1.411Z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        clip-rule="evenodd"
-                        d="M2 12a1 1 0 0 1 1-1h17a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
-                        fill-rule="evenodd"
+                        d="M12.664 3.253a1 1 0 0 0-1.328 1.494L18.37 11H3a1 1 0 1 0 0 2h15.37l-7.034 6.253a1 1 0 0 0 1.328 1.494l9-8a1 1 0 0 0 0-1.494l-9-8Z"
                       />
                     </svg>
                   </button>
@@ -2648,14 +2564,7 @@ exports[`GalleryModal should renders without media alt text 1`] = `
                       width="24"
                     >
                       <path
-                        clip-rule="evenodd"
-                        d="M11.707 3.293a1 1 0 0 1 0 1.414L4.414 12l7.293 7.293a1 1 0 0 1-1.414 1.414l-8-8a1 1 0 0 1 0-1.414l8-8a1 1 0 0 1 1.414 0Z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        clip-rule="evenodd"
-                        d="M3 12a1 1 0 0 1 1-1h17a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Z"
-                        fill-rule="evenodd"
+                        d="M11.707 4.707a1 1 0 0 0-1.414-1.414l-8 8a1 1 0 0 0 0 1.414l8 8a1 1 0 0 0 1.414-1.414L5.414 13H21a1 1 0 1 0 0-2H5.414l6.293-6.293Z"
                       />
                     </svg>
                   </button>
@@ -2672,14 +2581,7 @@ exports[`GalleryModal should renders without media alt text 1`] = `
                       width="24"
                     >
                       <path
-                        clip-rule="evenodd"
-                        d="M11.253 3.336a1 1 0 0 1 1.411-.083l9 8a1 1 0 0 1 0 1.494l-9 8a1 1 0 0 1-1.328-1.494L19.495 12l-8.16-7.253a1 1 0 0 1-.082-1.411Z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        clip-rule="evenodd"
-                        d="M2 12a1 1 0 0 1 1-1h17a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"
-                        fill-rule="evenodd"
+                        d="M12.664 3.253a1 1 0 0 0-1.328 1.494L18.37 11H3a1 1 0 1 0 0 2h15.37l-7.034 6.253a1 1 0 0 0 1.328 1.494l9-8a1 1 0 0 0 0-1.494l-9-8Z"
                       />
                     </svg>
                   </button>

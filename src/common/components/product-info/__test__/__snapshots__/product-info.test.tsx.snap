@@ -89,20 +89,12 @@ exports[`ProductInfo regular content positioned image icon-buttons 1`] = `
           width="24"
         >
           <path
-            clip-rule="evenodd"
-            d="M3 11.5a8.5 8.5 0 1 1 17 0 8.5 8.5 0 0 1-17 0ZM11.5 5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Z"
-            fill-rule="evenodd"
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
           />
           <path
             clip-rule="evenodd"
-            d="M16.293 16.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1-1.414 1.414l-4-4a1 1 0 0 1 0-1.414Z"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
             fill-rule="evenodd"
-          />
-          <path
-            d="M10.5 9a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V9Z"
-          />
-          <path
-            d="M9 12.5a1 1 0 1 1 0-2h5a1 1 0 1 1 0 2H9Z"
           />
         </svg>
         <svg
@@ -112,20 +104,12 @@ exports[`ProductInfo regular content positioned image icon-buttons 1`] = `
           width="24"
         >
           <path
-            clip-rule="evenodd"
-            d="M3 11.5a8.5 8.5 0 1 1 17 0 8.5 8.5 0 0 1-17 0ZM11.5 5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Z"
-            fill-rule="evenodd"
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
           />
           <path
             clip-rule="evenodd"
-            d="M16.293 16.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1-1.414 1.414l-4-4a1 1 0 0 1 0-1.414Z"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
             fill-rule="evenodd"
-          />
-          <path
-            d="M10.5 9a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V9Z"
-          />
-          <path
-            d="M9 12.5a1 1 0 1 1 0-2h5a1 1 0 1 1 0 2H9Z"
           />
         </svg>
       </div>
@@ -143,20 +127,12 @@ exports[`ProductInfo regular content positioned image icon-buttons 1`] = `
           width="24"
         >
           <path
-            clip-rule="evenodd"
-            d="M3 11.5a8.5 8.5 0 1 1 17 0 8.5 8.5 0 0 1-17 0ZM11.5 5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Z"
-            fill-rule="evenodd"
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
           />
           <path
             clip-rule="evenodd"
-            d="M16.293 16.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1-1.414 1.414l-4-4a1 1 0 0 1 0-1.414Z"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
             fill-rule="evenodd"
-          />
-          <path
-            d="M10.5 9a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V9Z"
-          />
-          <path
-            d="M9 12.5a1 1 0 1 1 0-2h5a1 1 0 1 1 0 2H9Z"
           />
         </svg>
         <svg
@@ -166,20 +142,12 @@ exports[`ProductInfo regular content positioned image icon-buttons 1`] = `
           width="24"
         >
           <path
-            clip-rule="evenodd"
-            d="M3 11.5a8.5 8.5 0 1 1 17 0 8.5 8.5 0 0 1-17 0ZM11.5 5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Z"
-            fill-rule="evenodd"
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
           />
           <path
             clip-rule="evenodd"
-            d="M16.293 16.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1-1.414 1.414l-4-4a1 1 0 0 1 0-1.414Z"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
             fill-rule="evenodd"
-          />
-          <path
-            d="M10.5 9a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V9Z"
-          />
-          <path
-            d="M9 12.5a1 1 0 1 1 0-2h5a1 1 0 1 1 0 2H9Z"
           />
         </svg>
       </div>
@@ -245,20 +213,12 @@ exports[`ProductInfo regular content should match snapshot 1`] = `
           width="24"
         >
           <path
-            clip-rule="evenodd"
-            d="M3 11.5a8.5 8.5 0 1 1 17 0 8.5 8.5 0 0 1-17 0ZM11.5 5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Z"
-            fill-rule="evenodd"
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
           />
           <path
             clip-rule="evenodd"
-            d="M16.293 16.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1-1.414 1.414l-4-4a1 1 0 0 1 0-1.414Z"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
             fill-rule="evenodd"
-          />
-          <path
-            d="M10.5 9a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V9Z"
-          />
-          <path
-            d="M9 12.5a1 1 0 1 1 0-2h5a1 1 0 1 1 0 2H9Z"
           />
         </svg>
         <svg
@@ -268,20 +228,12 @@ exports[`ProductInfo regular content should match snapshot 1`] = `
           width="24"
         >
           <path
-            clip-rule="evenodd"
-            d="M3 11.5a8.5 8.5 0 1 1 17 0 8.5 8.5 0 0 1-17 0ZM11.5 5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Z"
-            fill-rule="evenodd"
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
           />
           <path
             clip-rule="evenodd"
-            d="M16.293 16.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1-1.414 1.414l-4-4a1 1 0 0 1 0-1.414Z"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
             fill-rule="evenodd"
-          />
-          <path
-            d="M10.5 9a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V9Z"
-          />
-          <path
-            d="M9 12.5a1 1 0 1 1 0-2h5a1 1 0 1 1 0 2H9Z"
           />
         </svg>
       </div>
@@ -299,20 +251,12 @@ exports[`ProductInfo regular content should match snapshot 1`] = `
           width="24"
         >
           <path
-            clip-rule="evenodd"
-            d="M3 11.5a8.5 8.5 0 1 1 17 0 8.5 8.5 0 0 1-17 0ZM11.5 5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Z"
-            fill-rule="evenodd"
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
           />
           <path
             clip-rule="evenodd"
-            d="M16.293 16.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1-1.414 1.414l-4-4a1 1 0 0 1 0-1.414Z"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
             fill-rule="evenodd"
-          />
-          <path
-            d="M10.5 9a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V9Z"
-          />
-          <path
-            d="M9 12.5a1 1 0 1 1 0-2h5a1 1 0 1 1 0 2H9Z"
           />
         </svg>
         <svg
@@ -322,20 +266,12 @@ exports[`ProductInfo regular content should match snapshot 1`] = `
           width="24"
         >
           <path
-            clip-rule="evenodd"
-            d="M3 11.5a8.5 8.5 0 1 1 17 0 8.5 8.5 0 0 1-17 0ZM11.5 5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Z"
-            fill-rule="evenodd"
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
           />
           <path
             clip-rule="evenodd"
-            d="M16.293 16.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1-1.414 1.414l-4-4a1 1 0 0 1 0-1.414Z"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
             fill-rule="evenodd"
-          />
-          <path
-            d="M10.5 9a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V9Z"
-          />
-          <path
-            d="M9 12.5a1 1 0 1 1 0-2h5a1 1 0 1 1 0 2H9Z"
           />
         </svg>
       </div>
