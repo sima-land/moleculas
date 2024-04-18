@@ -1,6 +1,6 @@
 import type { HTMLAttributes } from 'react';
 import cn from 'classnames';
-import styles from './image-overlay.module.scss';
+import styles from './image-overlay.m.scss';
 
 export type ImageOverlayProps = HTMLAttributes<HTMLDivElement>;
 

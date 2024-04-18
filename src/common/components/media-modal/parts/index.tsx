@@ -7,7 +7,7 @@ import { useBreakpoint } from '@sima-land/ui-nucleons/hooks';
 import { useMounted } from '../../../../common/hooks';
 import { ScrollSection } from './scroll-section';
 import LeftSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/ArrowExpandLeft';
-import styles from './parts.module.scss';
+import styles from './parts.m.scss';
 
 export const Preset = {
   headerTabs: (userProps?: TabsProps): TabsProps => ({

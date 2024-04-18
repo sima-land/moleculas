@@ -5,7 +5,7 @@ import {
   InteractiveImagePointProps,
 } from './types';
 import classNames from 'classnames/bind';
-import styles from './interactive-image.module.scss';
+import styles from './interactive-image.m.scss';
 
 const cx = classNames.bind(styles);
 

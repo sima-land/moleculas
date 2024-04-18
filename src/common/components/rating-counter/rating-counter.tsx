@@ -2,7 +2,7 @@ import { CSSProperties, HTMLAttributes } from 'react';
 import StarSVG from '@sima-land/ui-quarks/icons/16x16/Filled/Star';
 import { getDeclination } from '@sima-land/ui-nucleons/helpers';
 import classNames from 'classnames/bind';
-import styles from './rating-counter.module.scss';
+import styles from './rating-counter.m.scss';
 
 export type RatingCounterSize = 's' | 'm' | 'unset';
 

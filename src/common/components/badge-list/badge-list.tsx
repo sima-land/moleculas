@@ -1,7 +1,7 @@
 import { Children, isValidElement, ReactNode, CSSProperties } from 'react';
 import { Badge } from '../badge';
 import classnames from 'classnames/bind';
-import styles from './badge-list.module.scss';
+import styles from './badge-list.m.scss';
 
 export interface BadgeListProps {
   /** Список данных для шильдиков. */

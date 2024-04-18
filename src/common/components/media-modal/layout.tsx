@@ -3,7 +3,7 @@ import { defineSlots } from '@sima-land/ui-nucleons/helpers';
 import { Breakpoint, Layout } from '@sima-land/ui-nucleons/layout';
 import { useClientRect, useVisualViewport } from './utils';
 import classNames from 'classnames/bind';
-import styles from './layout.module.scss';
+import styles from './layout.m.scss';
 
 interface ContainerProps {
   /** Содержимое. */

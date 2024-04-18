@@ -1,5 +1,5 @@
 import { HTMLAttributes } from 'react';
-import styles from './placeholder.module.scss';
+import styles from './placeholder.m.scss';
 import cn from 'classnames';
 
 export interface PromotionCardPlaceholderProps extends HTMLAttributes<HTMLDivElement> {}

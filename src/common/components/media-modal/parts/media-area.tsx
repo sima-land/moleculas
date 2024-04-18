@@ -2,7 +2,7 @@ import { Layout } from '@sima-land/ui-nucleons/layout';
 import { CSSProperties, ReactNode, useRef } from 'react';
 import { useClientRect } from '../utils';
 import classNames from 'classnames/bind';
-import styles from './media-area.module.scss';
+import styles from './media-area.m.scss';
 
 const cx = classNames.bind(styles);
 

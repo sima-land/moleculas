@@ -6,7 +6,7 @@ import { defineSlots } from '@sima-land/ui-nucleons/helpers';
 import { useOutsideClick } from '@sima-land/ui-nucleons/hooks';
 import { CSSTransition } from 'react-transition-group';
 import classNames from 'classnames';
-import styles from './breadcrumbs.module.scss';
+import styles from './breadcrumbs.m.scss';
 
 /**
  * Список "хлебных крошек".

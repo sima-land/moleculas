@@ -4,7 +4,7 @@ import { Text } from '@sima-land/ui-nucleons/text';
 import { Link } from '@sima-land/ui-nucleons/link';
 import { ModalBodyProps } from '@sima-land/ui-nucleons/modal';
 import classnames from 'classnames/bind';
-import styles from './person-info.module.scss';
+import styles from './person-info.m.scss';
 
 interface PersonInfoProps {
   /** Идентификатор. */

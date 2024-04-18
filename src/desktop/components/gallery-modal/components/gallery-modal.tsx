@@ -11,7 +11,7 @@ import { Thumbnail } from './thumbnail';
 import { useIdentityRef } from '@sima-land/ui-nucleons/hooks';
 import { useSquareFit } from '../utils';
 import classNames from 'classnames/bind';
-import styles from './gallery-modal.module.scss';
+import styles from './gallery-modal.m.scss';
 import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
 
 export interface GalleryModalProps {

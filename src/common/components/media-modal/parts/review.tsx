@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { Rating } from '@sima-land/ui-nucleons/rating';
 import classNames from 'classnames/bind';
-import styles from './review.module.scss';
+import styles from './review.m.scss';
 
 export interface ReviewProps {
   rating?: number;

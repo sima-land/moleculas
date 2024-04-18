@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes, Children, isValidElement } from 'react';
 import { LayoutProps, MobileLayout } from '@sima-land/ui-nucleons/layout';
 import CheckSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Check';
 import cn from 'classnames';
-import styles from './select-screen.module.scss';
+import styles from './select-screen.m.scss';
 
 export type OptionSize = 's' | 'm' | 'l' | 'xl';
 

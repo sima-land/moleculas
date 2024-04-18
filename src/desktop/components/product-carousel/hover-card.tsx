@@ -3,7 +3,7 @@ import { HoverCardProps } from './types';
 import { SmallRounds, BoxShadow } from '@sima-land/ui-nucleons/styling';
 import { HoverCard as BaseHoverCard } from '../product-card';
 import classnames from 'classnames/bind';
-import styles from './hover-card.module.scss';
+import styles from './hover-card.m.scss';
 import { getPositionedParentOffset } from '@sima-land/ui-nucleons/helpers';
 
 const cx = classnames.bind(styles);

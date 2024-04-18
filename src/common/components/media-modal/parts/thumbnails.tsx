@@ -5,7 +5,7 @@ import { useMounted } from '../../../../common/hooks';
 import { ScrollSection } from './scroll-section';
 import { ThumbnailContext, ThumbnailSize } from './thumbnail';
 import classNames from 'classnames/bind';
-import styles from './thumbnails.module.scss';
+import styles from './thumbnails.m.scss';
 
 export interface ThumbnailsProps {
   size?: ThumbnailSize;

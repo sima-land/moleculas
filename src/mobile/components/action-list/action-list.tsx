@@ -1,7 +1,7 @@
 import { MouseEventHandler, ReactNode } from 'react';
 import { Token } from '@sima-land/ui-nucleons/colors';
 import classnames from 'classnames/bind';
-import styles from './action-list.module.scss';
+import styles from './action-list.m.scss';
 
 export interface ActionsListProps {
   /** Кнопки. */
