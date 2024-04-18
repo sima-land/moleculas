@@ -1,7 +1,7 @@
 import { Layout } from '@sima-land/ui-nucleons/layout';
 import { ReactNode, Ref } from 'react';
 import { BSL_IGNORE_ATTR } from '@sima-land/ui-nucleons/_internal/page-scroll-lock';
-import styles from './scroll-section.module.scss';
+import styles from './scroll-section.m.scss';
 
 /**
  * Секция с прокруткой по горизонтали по дизайн-гайдам.

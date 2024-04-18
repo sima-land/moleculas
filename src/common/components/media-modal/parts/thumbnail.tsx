@@ -5,7 +5,7 @@ import AllRoundSVG from '@sima-land/ui-quarks/icons/40x40/Filled/Viewing360Persp
 import { Price } from '@sima-land/ui-nucleons/price';
 import { useImageStub } from '../../../hooks';
 import classNames from 'classnames/bind';
-import styles from './thumbnail.module.scss';
+import styles from './thumbnail.m.scss';
 import { ImgStub } from '../../img-stub';
 
 export type ThumbnailSize = 's' | 'l';

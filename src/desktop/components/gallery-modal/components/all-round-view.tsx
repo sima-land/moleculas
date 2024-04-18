@@ -3,7 +3,7 @@ import { useIdentityRef } from '@sima-land/ui-nucleons/hooks';
 import { on } from '@sima-land/ui-nucleons/helpers';
 import { useImagesLoad } from '../utils';
 import classNames from 'classnames/bind';
-import styles from './all-round-view.module.scss';
+import styles from './all-round-view.m.scss';
 import AllRoundSVG from '@sima-land/ui-quarks/icons/40x40/Filled/Viewing360Perspective';
 import PauseSVG from '@sima-land/ui-quarks/icons/40x40/Filled/Pause';
 import TurnLeftSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/ArrowTurnLeft';

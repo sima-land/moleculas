@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { Link, LinkProps } from '@sima-land/ui-nucleons/link';
 import classnames from 'classnames/bind';
-import styles from './action-circles.module.scss';
+import styles from './action-circles.m.scss';
 
 export interface ActionCirclesProps {
   /** Кнопки. */

@@ -4,7 +4,7 @@ import { Input, InputProps } from '@sima-land/ui-nucleons/input';
 import { Pagination, validatePaginationState } from '@sima-land/ui-nucleons/pagination';
 import RightSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/ArrowExpandRight';
 import classNames from 'classnames/bind';
-import styles from './pagination-controls.module.scss';
+import styles from './pagination-controls.m.scss';
 
 const cx = classNames.bind(styles);
 

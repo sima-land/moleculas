@@ -4,7 +4,7 @@ import { Plate } from '@sima-land/ui-nucleons/plate';
 import { Link } from '@sima-land/ui-nucleons/link';
 import { on } from '@sima-land/ui-nucleons/helpers';
 import classnames from 'classnames/bind';
-import styles from './breadcrumbs.module.scss';
+import styles from './breadcrumbs.m.scss';
 
 /** @deprecated */
 export interface Sibling {

@@ -5,7 +5,7 @@ import { AllRoundView } from './all-round-view';
 import { useImageStub } from '../../../hooks';
 import { ImgStub } from '../../img-stub';
 import classNames from 'classnames/bind';
-import styles from './media-view.module.scss';
+import styles from './media-view.m.scss';
 
 export interface MediaViewStyle extends CSSProperties {
   '--media-view-width'?: string;

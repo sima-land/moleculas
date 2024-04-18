@@ -4,7 +4,7 @@ import { Parts } from '../../../common/components/product-info';
 import { Plate, PlateProps } from '@sima-land/ui-nucleons/plate';
 import { useLayer } from '@sima-land/ui-nucleons/helpers';
 import classNames from 'classnames/bind';
-import styles from './product-card.module.scss';
+import styles from './product-card.m.scss';
 
 const cx = classNames.bind(styles);
 

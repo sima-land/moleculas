@@ -4,7 +4,7 @@ import { Price } from '@sima-land/ui-nucleons/price';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks';
 import { useImageStub } from '../../../hooks';
 import classNames from 'classnames/bind';
-import styles from './product-brief.module.scss';
+import styles from './product-brief.m.scss';
 import { ImgStub } from '../../img-stub';
 
 export interface ProductBriefProps extends HTMLAttributes<HTMLDivElement> {

@@ -4,7 +4,7 @@ import { BannerTitle } from './banner-title';
 import { Estimate } from './estimate';
 import WatchSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/Watch';
 import classNames from 'classnames';
-import styles from './promotion-card.module.scss';
+import styles from './promotion-card.m.scss';
 import { PromotionCardPlaceholder } from './placeholder';
 
 export interface PromotionCardProps extends HTMLAttributes<HTMLDivElement> {

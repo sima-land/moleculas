@@ -19,7 +19,7 @@ import { reduceBaseInfo, reduceHoverInfo } from '../product-card';
 import { ProductCardChildren } from '../product-card/types';
 import { ProductCarouselProps } from './types';
 import classnames from 'classnames/bind';
-import styles from './product-carousel.module.scss';
+import styles from './product-carousel.m.scss';
 
 const cx = classnames.bind(styles);
 

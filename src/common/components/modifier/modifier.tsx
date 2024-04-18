@@ -5,7 +5,7 @@ import { ModifierProps, MoreButtonProps, TextContent } from './types';
 import ImageBrokenSVG from '@sima-land/ui-quarks/icons/40x40/Stroked/ImageBroken';
 import CrossSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Cross';
 import classNames from 'classnames/bind';
-import styles from './modifier.module.scss';
+import styles from './modifier.m.scss';
 
 const cx = classNames.bind(styles);
 

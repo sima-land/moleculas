@@ -8,7 +8,7 @@ import MailSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Mail';
 import SkypeSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/LogoSkype';
 import PhoneSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Phone';
 import MobileSVG from '@sima-land/ui-quarks/icons/24x24/Filled/Mobile';
-import styles from './person-info.module.scss';
+import styles from './person-info.m.scss';
 
 export interface PersonInfoProps {
   /** Идентификатор. */

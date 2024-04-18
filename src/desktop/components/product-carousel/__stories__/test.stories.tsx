@@ -8,7 +8,7 @@ import FavSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
 import ComparisonAddSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/ComparisonAdd';
 import { items } from '../__test__/test-items';
 import classNames from 'classnames';
-import styles from './test.module.scss';
+import styles from './test.m.scss';
 
 export default {
   title: 'desktop/ProductCarousel',

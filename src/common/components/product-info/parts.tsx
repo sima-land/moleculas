@@ -17,7 +17,7 @@ import { RatingCounter, RatingCounterProps } from '../rating-counter';
 import AdultSVG from '@sima-land/ui-quarks/icons/64x64/Stroked/EighteenPlus';
 import { ImgStub } from '../img-stub';
 import classnames from 'classnames/bind';
-import styles from './product-info.module.scss';
+import styles from './product-info.m.scss';
 
 const cx = classnames.bind(styles);
 

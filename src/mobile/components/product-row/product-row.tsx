@@ -1,4 +1,4 @@
-import styles from './product-row.module.scss';
+import styles from './product-row.m.scss';
 import classnames from 'classnames/bind';
 import { Link } from '@sima-land/ui-nucleons/link';
 import { Price } from '@sima-land/ui-nucleons/price';

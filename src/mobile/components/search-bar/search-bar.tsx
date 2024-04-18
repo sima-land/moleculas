@@ -18,7 +18,7 @@ import CrossSVG from '@sima-land/ui-quarks/icons/24x24/Filled/CircleCross';
 import SearchSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Magnifier';
 import MoreVertSVG from '@sima-land/ui-quarks/icons/24x24/Filled/MoreVert';
 import classnames from 'classnames/bind';
-import styles from './search-bar.module.scss';
+import styles from './search-bar.m.scss';
 
 export const cx = classnames.bind(styles);
 

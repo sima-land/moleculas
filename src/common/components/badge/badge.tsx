@@ -2,7 +2,7 @@ import { ReactNode, forwardRef } from 'react';
 import type { BadgeProps, BadgeStyle } from './types';
 import { Timer } from '@sima-land/ui-nucleons/timer';
 import classnames from 'classnames/bind';
-import styles from './badge.module.scss';
+import styles from './badge.m.scss';
 
 const cx = classnames.bind(styles);
 

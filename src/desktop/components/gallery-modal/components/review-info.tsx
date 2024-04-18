@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback, ReactNode } from 'react';
 import { Link } from '@sima-land/ui-nucleons/link';
 import { Rating } from '@sima-land/ui-nucleons/rating';
 import classnames from 'classnames/bind';
-import styles from './review-info.module.scss';
+import styles from './review-info.m.scss';
 import { on } from '@sima-land/ui-nucleons/helpers';
 import { BoxShadow } from '@sima-land/ui-nucleons/styling';
 import { CustomScrollbar } from '@sima-land/ui-nucleons/_internal/custom-scrollbar';

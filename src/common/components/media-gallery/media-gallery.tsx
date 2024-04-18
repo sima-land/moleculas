@@ -12,7 +12,7 @@ import { useMounted } from '../../hooks';
 import { MediaGalleryProps } from './types';
 import { createSwipe, LoopUtil } from './utils';
 import classNames from 'classnames/bind';
-import styles from './media-gallery.module.scss';
+import styles from './media-gallery.m.scss';
 
 const cx = classNames.bind(styles);
 
