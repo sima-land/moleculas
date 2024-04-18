@@ -5,12 +5,16 @@ import plant from './images/plant.jpg';
 import stump from './images/stump.jpg';
 import table from './images/table.jpg';
 import vase from './images/vase.jpg';
-import armchairThumbnail from './thumbnails/armchair.jpg';
-import cupThumbnail from './thumbnails/cup.jpg';
-import plantThumbnail from './thumbnails/plant.jpg';
-import stumpThumbnail from './thumbnails/stump.jpg';
-import tableThumbnail from './thumbnails/table.jpg';
-import vaseThumbnail from './thumbnails/vase.jpg';
+import thumbnailArmchair from './thumbnails/armchair.jpg';
+import thumbnailCup from './thumbnails/cup.jpg';
+import thumbnailPlant from './thumbnails/plant.jpg';
+import thumbnailStump from './thumbnails/stump.jpg';
+import thumbnailTable from './thumbnails/table.jpg';
+import thumbnailVase from './thumbnails/vase.jpg';
+import thumbnailVideo3404953 from './thumbnails/video3404953.jpg';
+import thumbnailVideo3619217 from './thumbnails/video3619217.jpg';
+import thumbnailVideo4093038 from './thumbnails/video4093038.jpg';
+import thumbnailVideo6907296 from './thumbnails/video6907296.jpg';
 
 export const mixed: MediaData[] = [
   {
@@ -110,7 +114,7 @@ export const mixed: MediaData[] = [
     data: {
       alt: 'Стул',
       src: armchair,
-      thumbnail: armchairThumbnail,
+      thumbnail: thumbnailArmchair,
     },
   },
   {
@@ -118,7 +122,7 @@ export const mixed: MediaData[] = [
     data: {
       alt: 'Чашка',
       src: cup,
-      thumbnail: cupThumbnail,
+      thumbnail: thumbnailCup,
     },
   },
   {
@@ -126,7 +130,7 @@ export const mixed: MediaData[] = [
     data: {
       alt: 'Растение',
       src: plant,
-      thumbnail: plantThumbnail,
+      thumbnail: thumbnailPlant,
     },
   },
   {
@@ -134,7 +138,7 @@ export const mixed: MediaData[] = [
     data: {
       alt: 'Пень',
       src: stump,
-      thumbnail: stumpThumbnail,
+      thumbnail: thumbnailStump,
     },
   },
   {
@@ -142,7 +146,7 @@ export const mixed: MediaData[] = [
     data: {
       alt: 'Стол',
       src: table,
-      thumbnail: tableThumbnail,
+      thumbnail: thumbnailTable,
     },
   },
   {
@@ -150,7 +154,7 @@ export const mixed: MediaData[] = [
     data: {
       alt: 'Ваза',
       src: vase,
-      thumbnail: vaseThumbnail,
+      thumbnail: thumbnailVase,
     },
   },
 ];
@@ -159,85 +163,85 @@ export const videos: MediaVideo[] = [
   {
     type: 'video',
     data: {
-      src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
-      thumbnail: armchairThumbnail,
-    },
-  },
-  {
-    type: 'video',
-    data: {
       src: 'https://cdn2.static1-sima-land.com/flv/6907296.mp4',
-      thumbnail: cupThumbnail,
+      thumbnail: thumbnailVideo6907296,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/3619217.mp4',
-      thumbnail: plantThumbnail,
+      thumbnail: thumbnailVideo3619217,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/4093038.mp4',
-      thumbnail: stumpThumbnail,
+      thumbnail: thumbnailVideo4093038,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
-      thumbnail: tableThumbnail,
+      thumbnail: thumbnailVideo3404953,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/6907296.mp4',
-      thumbnail: vaseThumbnail,
+      thumbnail: thumbnailVideo6907296,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/3619217.mp4',
-      thumbnail: 'https://loremflickr.com/240/240?random=12',
+      thumbnail: thumbnailVideo3619217,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/4093038.mp4',
-      thumbnail: 'https://loremflickr.com/240/240?random=13',
+      thumbnail: thumbnailVideo4093038,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
-      thumbnail: 'https://loremflickr.com/240/240?random=14',
+      thumbnail: thumbnailVideo3404953,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/6907296.mp4',
-      thumbnail: 'https://loremflickr.com/240/240?random=15',
+      thumbnail: thumbnailVideo6907296,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/3619217.mp4',
-      thumbnail: 'https://loremflickr.com/240/240?random=16',
+      thumbnail: thumbnailVideo3619217,
     },
   },
   {
     type: 'video',
     data: {
       src: 'https://cdn2.static1-sima-land.com/flv/4093038.mp4',
-      thumbnail: 'https://loremflickr.com/240/240?random=17',
+      thumbnail: thumbnailVideo4093038,
+    },
+  },
+  {
+    type: 'video',
+    data: {
+      src: 'https://cdn2.static1-sima-land.com/flv/3404953.mp4',
+      thumbnail: thumbnailVideo3404953,
     },
   },
 ];

@@ -5,6 +5,7 @@ import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import FavoriteSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
 import QuickView2SVG from '@sima-land/ui-quarks/icons/24x24/Stroked/MagnifierPlus';
 import Camera2SVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Camera';
+import strawberries from './strawberries.jpg';
 
 export default {
   title: 'common/ProductInfo',
@@ -28,7 +29,7 @@ const badges: BadgeProps[] = [
 
 const data = {
   name: 'Ножницы портновские, с прорезиненной ручкой, 20 см, цвет чёрный/серый',
-  imageSrc: 'https://loremflickr.com/240/360',
+  imageSrc: strawberries,
   url: 'https://www.sima-land.ru',
   price: 99876543.21,
   oldPrice: 99987654.32,
@@ -502,7 +503,7 @@ Adult.storyName = 'Товар для взрослых';
 
 export function TestImageBroken() {
   const [broken, setBroken] = useState(false);
-  const imageSrc = broken ? 'http://non-existed-site.com/' : 'https://loremflickr.com/240/240';
+  const imageSrc = broken ? 'http://non-existed-site.com/' : strawberries;
 
   return (
     <>

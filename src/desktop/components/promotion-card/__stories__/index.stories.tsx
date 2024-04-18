@@ -3,6 +3,10 @@ import {
   PromotionCardProps,
 } from '@sima-land/moleculas/desktop/components/promotion-card';
 import { addDays, addHours, addYears } from 'date-fns';
+import cactus from './cactus.jpg';
+import cherry from './cherry.jpg';
+import phone from './phone.jpg';
+import cone from './ice-cream-cone.jpg';
 
 export default {
   title: 'desktop/PromotionCard',
@@ -20,7 +24,7 @@ export default {
 const demoItems: PromotionCardProps[] = [
   {
     href: 'https://www.sima-land.ru',
-    imageSrc: 'https://loremflickr.com/656/488?random=1',
+    imageSrc: cactus,
     title: '3 уточки по цене 2-х',
     subtitle:
       'При покупке 2-х уточек из акции 3-я в подарок. При покупке 2-х уточек из акции 3-я в подарок',
@@ -29,7 +33,7 @@ const demoItems: PromotionCardProps[] = [
   },
   {
     href: 'https://www.sima-land.ru',
-    imageSrc: 'https://loremflickr.com/656/488?random=2',
+    imageSrc: cherry,
     title: '-20% на плюшевых кроликов',
     subtitle: 'При покупке товаров из акции от 5 000 ₽ ',
     dueDate: addYears(new Date(), 5),
@@ -38,7 +42,7 @@ const demoItems: PromotionCardProps[] = [
   },
   {
     href: 'https://www.sima-land.ru',
-    imageSrc: 'https://loremflickr.com/656/488?random=3',
+    imageSrc: phone,
     title: 'Специальные цены на термосы',
     subtitle: 'При покупке от 5 000 ₽',
     dueDate: addDays(new Date(), 7),
@@ -46,7 +50,7 @@ const demoItems: PromotionCardProps[] = [
   },
   {
     href: 'https://www.sima-land.ru',
-    imageSrc: 'https://loremflickr.com/656/488?random=4',
+    imageSrc: cone,
     title: 'Особые условия заказа: вот прям натурально особые, по другому не скажет',
     subtitle: 'При покупке чего-либо там какие-то условия',
     dueDate: addDays(new Date(), 21),

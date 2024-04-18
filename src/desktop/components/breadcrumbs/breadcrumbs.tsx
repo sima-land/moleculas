@@ -6,12 +6,14 @@ import { on } from '@sima-land/ui-nucleons/helpers';
 import classnames from 'classnames/bind';
 import styles from './breadcrumbs.module.scss';
 
+/** @deprecated */
 export interface Sibling {
   name: string;
   url?: string;
   [key: string]: any;
 }
 
+/** @deprecated */
 export interface Breadcrumb extends Sibling {
   siblings?: {
     state: 'initial' | 'fetching' | 'ready';
@@ -19,6 +21,7 @@ export interface Breadcrumb extends Sibling {
   };
 }
 
+/** @deprecated */
 export interface BreadcrumbsProps {
   /** Список хлебных крошек. */
   items: Breadcrumb[];
@@ -48,6 +51,7 @@ function DownSVG(props: SVGAttributes<SVGSVGElement>) {
  * Список "хлебных крошек".
  * @param props Свойства.
  * @return Элемент.
+ * @deprecated
  */
 export const Breadcrumbs = ({
   items,

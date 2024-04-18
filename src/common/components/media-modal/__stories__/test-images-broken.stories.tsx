@@ -20,6 +20,7 @@ import { Layout } from '@sima-land/ui-nucleons/layout';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import { MediaData } from '../types';
 import { MediaGallery, MediaSlide } from '../../media-gallery';
+import plant from '../__mocks__/images/plant.jpg';
 
 export default {
   title: 'common/MediaLayout',
@@ -117,7 +118,7 @@ export function TestImagesBroken() {
             <Layout disabledOn={['xs', 's', 'm', 'l', 'xl']}>
               <ProductBrief
                 href='https://sima-land.ru'
-                imageSrc={processSrc('https://loremflickr.com/240/320')}
+                imageSrc={processSrc(plant)}
                 title='Игровая приставка Sony PlayStation 5 Digital 3,5 ГГц модифицированная'
                 price={60235}
                 currency='₽'
