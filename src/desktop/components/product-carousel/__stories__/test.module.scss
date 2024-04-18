@@ -1,0 +1,13 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.item:not(:hover) .icon {
+  opacity: 0;
+}

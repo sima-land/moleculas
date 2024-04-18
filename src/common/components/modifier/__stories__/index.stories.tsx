@@ -8,6 +8,7 @@ import { Expandable } from '@sima-land/ui-nucleons/expandable';
 import { Layout } from '@sima-land/ui-nucleons/layout';
 import { Carousel } from '@sima-land/ui-nucleons/carousel';
 import { GroupOverflow } from '@sima-land/ui-nucleons/group-overflow';
+import headphones from './headphones.jpg';
 
 export default {
   title: 'common/Modifier',
@@ -24,7 +25,7 @@ const items: ModifierContent[] = [
   },
   {
     type: 'image',
-    src: 'https://loremflickr.com/200/200',
+    src: headphones,
   },
   {
     type: 'text',
@@ -233,7 +234,7 @@ WithCarousel.storyName = 'Вместе с Carousel';
 
 export function TestImageBroken() {
   const [broken, setBroken] = useState(false);
-  const src = broken ? 'http://non-existed-site.com/' : 'https://loremflickr.com/240/240';
+  const src = broken ? 'http://non-existed-site.com/' : headphones;
 
   return (
     <>
