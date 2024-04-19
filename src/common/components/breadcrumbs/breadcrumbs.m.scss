@@ -47,6 +47,10 @@
   stroke: currentColor;
 }
 
+.icon:hover {
+  cursor: pointer;
+}
+
 .dropdown {
   min-width: 180px;
   position: absolute;
