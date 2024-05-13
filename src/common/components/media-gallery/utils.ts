@@ -25,7 +25,7 @@ export const LoopUtil = {
 } as const;
 
 /**
- * Получив пропсы items и children вернет массив пропсов для MediaView.
+ * Создает объект управления свайпом.
  * @param props Свойства.
  * @return Пропсы.
  */
