@@ -41,7 +41,7 @@ exports[`select screen parts should works properly 1`] = `
           style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; top: 0px; left: 0px; width: calc(100% + 0px);"
         >
           <div
-            data-overlayscrollbars-viewport=""
+            data-overlayscrollbars-viewport="overflowXHidden overflowYHidden"
             style="padding: 0px 0px 0px 0px;"
           >
             <div
@@ -90,7 +90,7 @@ exports[`select screen parts should works properly 1`] = `
           </div>
         </div>
         <div
-          class="os-scrollbar os-scrollbar-horizontal os-scrollbar-transitionless os-no-css-vars theme os-scrollbar-auto-hide os-scrollbar-handle-interactive os-scrollbar-cornerless os-scrollbar-unusable"
+          class="os-scrollbar os-scrollbar-horizontal theme os-scrollbar-auto-hide os-scrollbar-handle-interactive os-scrollbar-cornerless os-scrollbar-unusable"
         >
           <div
             class="os-scrollbar-track"
@@ -102,7 +102,7 @@ exports[`select screen parts should works properly 1`] = `
           </div>
         </div>
         <div
-          class="os-scrollbar os-scrollbar-vertical os-scrollbar-transitionless os-no-css-vars theme os-scrollbar-auto-hide os-scrollbar-handle-interactive os-scrollbar-cornerless os-scrollbar-unusable"
+          class="os-scrollbar os-scrollbar-vertical theme os-scrollbar-auto-hide os-scrollbar-handle-interactive os-scrollbar-cornerless os-scrollbar-unusable"
         >
           <div
             class="os-scrollbar-track"
