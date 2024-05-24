@@ -23,9 +23,16 @@ const styles = {
   } satisfies CSSProperties,
 };
 
-export function Primary() {
-  const images = [camera, flacon, coffee, clock, gamepad];
+const images = [
+  // ссылки на картинки
+  camera,
+  flacon,
+  coffee,
+  clock,
+  gamepad,
+];
 
+export function Primary() {
   return (
     <>
       <HoverSlider>

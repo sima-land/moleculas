@@ -1,0 +1,22 @@
+@use 'node_modules/@sima-land/ui-nucleons/colors';
+
+.nav {
+  padding: 2px;
+  display: flex;
+}
+
+.nav-item {
+  flex-grow: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: colors.$basic-gray38;
+  opacity: 0.32;
+}
+
+.nav-item + .nav-item {
+  margin-left: 4px;
+}
+
+.nav-item-active {
+  opacity: 1;
+}

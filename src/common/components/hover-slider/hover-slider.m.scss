@@ -3,8 +3,8 @@
 
 .root {
   position: relative;
-  width: 320px;
-  height: 320px;
+  width: var(--hover-slider-width, 320px);
+  height: var(--hover-slider-height, 320px);
 }
 
 .list {
@@ -28,28 +28,9 @@
 }
 
 .nav {
-  padding: 2px;
   position: absolute;
-  display: flex;
-  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
   pointer-events: none;
-}
-
-.nav-item {
-  flex-grow: 1;
-  height: 4px;
-  border-radius: 2px;
-  background: colors.$basic-gray38;
-  opacity: 0.32;
-}
-
-.nav-item + .nav-item {
-  margin-left: 4px;
-}
-
-.nav-item-active {
-  opacity: 1;
 }
