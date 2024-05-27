@@ -110,7 +110,7 @@ export function HoverSlider({
 
         {afterList}
 
-        {withNav && (
+        {withNav && slideIds.length > 1 && (
           <HoverSliderNav current={activeIndex} total={slideIds.length} className={styles.nav} />
         )}
       </div>
