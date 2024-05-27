@@ -35,7 +35,7 @@ export interface ImageProps {
  * @param props Свойства.
  * @return Элемент.
  */
-const ImageButton = ({
+function ImageButton({
   icon,
   fill,
   onClick,
@@ -54,7 +54,7 @@ const ImageButton = ({
     x: 'left' | 'right';
     y: 'top' | 'bottom';
   };
-}) => {
+}) {
   const commonProps = {
     role: 'banner',
     fill,
@@ -96,14 +96,14 @@ const ImageButton = ({
       )}
     </>
   );
-};
+}
 
 /**
  * Слот - изображение товара.
  * @param props Свойства.
  * @return Элемент.
  */
-const Image = ({ src, alt, href, onClick, children, opacity }: ImageProps) => {
+function Image({ src, alt, href, onClick, children, opacity }: ImageProps) {
   const { restriction } = useContext(ProductInfoContext);
   const defaultOpacity = restriction ? 0.4 : undefined;
   const [broken, setBroken] = useState(false);
@@ -147,21 +147,23 @@ const Image = ({ src, alt, href, onClick, children, opacity }: ImageProps) => {
       )}
     </ImageOverlay>
   );
-};
+}
 
 /**
  * Слот для вывода шильдиков.
  * @param props Свойства.
  * @return Элемент.
  */
-const Badges = (props: BadgeListProps) => <BadgeList className={cx('badges')} {...props} />;
+function Badges(props: BadgeListProps) {
+  return <BadgeList className={cx('badges')} {...props} />;
+}
 
 /**
  * Слот для вывода цен.
  * @param props Свойства.
  * @return Элемент.
  */
-const Prices = ({
+function Prices({
   price,
   oldPrice,
   currencyGrapheme,
@@ -171,7 +173,7 @@ const Prices = ({
   oldPrice?: number;
   currencyGrapheme?: string;
   unavailableReason?: string;
-}) => {
+}) {
   const { restriction } = useContext(ProductInfoContext);
 
   return (
@@ -203,14 +205,14 @@ const Prices = ({
       {restriction === 'unavailable' && unavailableReason}
     </div>
   );
-};
+}
 
 /**
  * Слот для вывода ссылки - названия товара.
  * @param props Свойства.
  * @return Элемент.
  */
-const Title = ({ children, href, onClick }: Pick<LinkProps, 'children' | 'href' | 'onClick'>) => {
+function Title({ children, href, onClick }: Pick<LinkProps, 'children' | 'href' | 'onClick'>) {
   const { restriction } = useContext(ProductInfoContext);
 
   return restriction === 'adult' ? (
@@ -228,27 +230,29 @@ const Title = ({ children, href, onClick }: Pick<LinkProps, 'children' | 'href' 
       {children}
     </Link>
   );
-};
+}
 
 /**
  * Слот для вывода ссылки торговой марки.
  * @param props Свойства.
  * @return Элемент.
  */
-const TrademarkLink = ({
+function TrademarkLink({
   href,
   children,
   onClick,
-}: Pick<LinkProps, 'href' | 'children' | 'onClick'>) => (
-  <Link
-    className={cx('trademark-link')}
-    href={href}
-    children={children}
-    onClick={onClick}
-    color='basic-blue'
-    data-testid='product-info:trademark-link'
-  />
-);
+}: Pick<LinkProps, 'href' | 'children' | 'onClick'>) {
+  return (
+    <Link
+      className={cx('trademark-link')}
+      href={href}
+      children={children}
+      onClick={onClick}
+      color='basic-blue'
+      data-testid='product-info:trademark-link'
+    />
+  );
+}
 
 const FooterContext = createContext<{ className?: string }>({
   className: undefined,
@@ -259,7 +263,7 @@ const FooterContext = createContext<{ className?: string }>({
  * @param props Свойства.
  * @return Элемент.
  */
-const Footer = ({ children }: { children?: ReactNode }) => {
+function Footer({ children }: { children?: ReactNode }) {
   const { className = cx('footer') } = useContext(FooterContext);
 
   return (
@@ -267,14 +271,14 @@ const Footer = ({ children }: { children?: ReactNode }) => {
       {children}
     </div>
   );
-};
+}
 
 /**
  * Блок управления корзиной.
  * @param props Свойства.
  * @return Элемент.
  */
-const CartControl = ({
+function CartControl({
   children,
   stepText,
   markupText,
@@ -284,76 +288,84 @@ const CartControl = ({
   stepText?: string;
   markupText?: string;
   loading?: boolean;
-}) => (
-  <div className={cx('control-wrapper', { loading })}>
-    <div className={cx('control')}>{!loading && children}</div>
+}) {
+  return (
+    <div className={cx('control-wrapper', { loading })}>
+      <div className={cx('control')}>{!loading && children}</div>
 
-    {(loading || stepText) && (
-      <div className={cx('unit-text')} data-testid='product-info:cart-step'>
-        {!loading && stepText}
-      </div>
-    )}
+      {(loading || stepText) && (
+        <div className={cx('unit-text')} data-testid='product-info:cart-step'>
+          {!loading && stepText}
+        </div>
+      )}
 
-    {!loading && markupText && (
-      <div className={cx('bottom-text')} data-testid='product-info:cart-info'>
-        {markupText}
-      </div>
-    )}
-  </div>
-);
+      {!loading && markupText && (
+        <div className={cx('bottom-text')} data-testid='product-info:cart-info'>
+          {markupText}
+        </div>
+      )}
+    </div>
+  );
+}
 
 /**
  * Кнопка "подтвердить".
  * @param props Свойства.
  * @return Элемент.
  */
-const AdultConfirmButton = ({ className, ...props }: LinkProps) => (
-  <Link
-    {...props}
-    pseudo
-    color='basic-blue'
-    className={cx('text-button', className)}
-    data-testid='product-info:adult-confirm-button'
-  >
-    Подтвердить
-  </Link>
-);
+function AdultConfirmButton({ className, ...props }: LinkProps) {
+  return (
+    <Link
+      {...props}
+      pseudo
+      color='basic-blue'
+      className={cx('text-button', className)}
+      data-testid='product-info:adult-confirm-button'
+    >
+      Подтвердить
+    </Link>
+  );
+}
 
 /**
  * Кнопка "В лист ожидания".
  * @param props Свойства.
  * @return Элемент.
  */
-const WaitListAddButton = ({ className, ...props }: LinkProps) => (
-  <Link
-    {...props}
-    pseudo
-    color='basic-blue'
-    className={cx('text-button', className)}
-    data-testid='product-info:wait-list-add-button'
-  >
-    В лист ожидания
-  </Link>
-);
+function WaitListAddButton({ className, ...props }: LinkProps) {
+  return (
+    <Link
+      {...props}
+      pseudo
+      color='basic-blue'
+      className={cx('text-button', className)}
+      data-testid='product-info:wait-list-add-button'
+    >
+      В лист ожидания
+    </Link>
+  );
+}
 
 /**
  * Текст со ссылкой "Товар добавлен в лист ожидания".
  * @param props Свойства.
  * @return Элемент.
  */
-const WaitListAddedLink = ({ className, ...props }: LinkProps) => (
-  <span className={cx('wait-list-added-text')}>
-    Товар добавлен в{' '}
-    <Link
-      {...props}
-      color='basic-blue'
-      className={cx('text-button', className)}
-      data-testid='product-info:wait-list-added-link'
-    >
-      лист{'\u00A0'}ожидания
-    </Link>
-  </span>
-);
+function WaitListAddedLink({ className, ...props }: LinkProps) {
+  return (
+    <span className={cx('wait-list-added-text')}>
+      Товар добавлен в{' '}
+      <Link
+        {...props}
+        color='basic-blue'
+        className={cx('text-button', className)}
+        data-testid='product-info:wait-list-added-link'
+      >
+        лист{'\u00A0'}ожидания
+      </Link>
+    </span>
+  );
+}
 
 /**
  * Дополнительный контент после заголовка.
@@ -385,8 +397,8 @@ export const Parts = {
   RatingCounter: CustomRatingCounter,
 
   // компоненты-слоты и компоненты-запчасти, предназначенные для вывода футера (вcё что ниже ссылки на торговую марку)
-  Footer,
   FooterContext,
+  Footer,
   CartControl,
   AdultConfirmButton,
   WaitListAddButton,

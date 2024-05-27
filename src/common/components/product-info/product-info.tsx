@@ -16,17 +16,17 @@ export const UNAVAILABLE_REASON = {
  * @param props Свойства.
  * @return Элемент.
  */
-export const ProductInfo = ({ restriction, children }: ProductInfoProps) => {
+export function ProductInfo({ restriction, children }: ProductInfoProps) {
   const { image, badges, prices, title, trademark, footer, secondaryInfo, ratingCounter } =
     defineSlots(children, {
       image: Parts.Image,
       badges: Parts.Badges,
       prices: Parts.Prices,
       title: Parts.Title,
-      trademark: Parts.TrademarkLink,
-      footer: Parts.Footer,
       secondaryInfo: Parts.SecondaryInfo,
+      trademark: Parts.TrademarkLink,
       ratingCounter: Parts.RatingCounter,
+      footer: Parts.Footer,
     });
 
   return (
@@ -41,6 +41,6 @@ export const ProductInfo = ({ restriction, children }: ProductInfoProps) => {
       {footer}
     </ProductInfoContext.Provider>
   );
-};
+}
 
 export { Parts };
