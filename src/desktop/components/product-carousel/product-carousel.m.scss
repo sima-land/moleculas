@@ -18,12 +18,6 @@ $gutter: 32px;
   width: 100%;
 }
 
-.title {
-  font-size: 24px;
-  font-weight: 600;
-  margin: 0 0 32px;
-}
-
 .item {
   flex-shrink: 0;
   &:not(:last-child) {

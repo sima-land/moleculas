@@ -1,5 +1,4 @@
 import { ProductCarousel } from '@sima-land/moleculas/desktop/components/product-carousel';
-import { reduceBaseInfo } from '@sima-land/moleculas/desktop/components/product-card';
 import { ProductInfo, Parts } from '@sima-land/moleculas/common/components/product-info';
 import { Badge } from '@sima-land/moleculas/common/components/badge';
 import { ReactNode, useState } from 'react';
@@ -38,14 +37,7 @@ const DemoBlock = ({ children }: { children: ReactNode }) => (
 export function Primary() {
   return (
     <DemoBlock>
-      <ProductCarousel
-        withHoverCard
-        reduceBaseInfo={elem =>
-          reduceBaseInfo(elem, {
-            hideImageButtons: btn => FavSVG === (btn as any)?.props?.icon,
-          })
-        }
-      >
+      <ProductCarousel>
         {items.map((item, index) => (
           <ProductInfo key={index}>
             <Parts.Image src={item.imageSrc} href={item.url}>
@@ -101,14 +93,7 @@ Primary.storyName = 'Простой пример';
 export function Unavailable() {
   return (
     <DemoBlock>
-      <ProductCarousel
-        withHoverCard
-        reduceBaseInfo={elem =>
-          reduceBaseInfo(elem, {
-            hideImageButtons: btn => FavSVG === (btn as any)?.props?.icon,
-          })
-        }
-      >
+      <ProductCarousel>
         {items.map((item, index) => (
           <ProductInfo key={index} restriction='unavailable'>
             <Parts.Image src={item.imageSrc} href={item.url}>
@@ -152,14 +137,7 @@ Unavailable.storyName = 'Нет в наличии';
 export function Adult() {
   return (
     <DemoBlock>
-      <ProductCarousel
-        withHoverCard
-        reduceBaseInfo={elem =>
-          reduceBaseInfo(elem, {
-            hideImageButtons: btn => FavSVG === (btn as any)?.props?.icon,
-          })
-        }
-      >
+      <ProductCarousel>
         {items.map((item, index) => (
           <ProductInfo key={index} restriction='adult'>
             <Parts.Image src={item.imageSrc} href={item.url}>
@@ -200,14 +178,7 @@ export function DeferredData() {
         Загрузить
       </Button>
 
-      <ProductCarousel
-        withHoverCard
-        reduceBaseInfo={elem =>
-          reduceBaseInfo(elem, {
-            hideImageButtons: btn => FavSVG === (btn as any)?.props?.icon,
-          })
-        }
-      >
+      <ProductCarousel>
         {(ready ? items : []).map((item, index) => (
           <ProductInfo key={index}>
             <Parts.Image
@@ -270,14 +241,7 @@ DeferredData.storyName = 'Тест: загрузка после mount';
 export function FewItems() {
   return (
     <DemoBlock>
-      <ProductCarousel
-        withHoverCard
-        reduceBaseInfo={elem =>
-          reduceBaseInfo(elem, {
-            hideImageButtons: btn => FavSVG === (btn as any)?.props?.icon,
-          })
-        }
-      >
+      <ProductCarousel>
         {items.slice(0, 4).map((item, index) => (
           <ProductInfo key={index}>
             <Parts.Image
@@ -341,12 +305,6 @@ export function CustomItemSize() {
   return (
     <div style={{ margin: '40px', width: '400px' }}>
       <ProductCarousel
-        withHoverCard
-        reduceBaseInfo={elem =>
-          reduceBaseInfo(elem, {
-            hideImageButtons: btn => FavSVG === (btn as any)?.props?.icon,
-          })
-        }
         itemSize='unset'
         itemProps={{ style: { width: 'calc((400px / 2) - 16px)' } }}
       >

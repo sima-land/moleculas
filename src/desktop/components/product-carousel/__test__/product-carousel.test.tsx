@@ -4,7 +4,6 @@ import { items } from './test-items';
 import { MatchMediaContext } from '@sima-land/ui-nucleons/context';
 import { Parts, ProductInfo } from '../../../../common/components/product-info';
 import { LayerProvider } from '@sima-land/ui-nucleons/helpers';
-import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import { IntersectionMock } from '@sima-land/ui-nucleons/hooks/use-intersection/test-utils';
 
 function setBoundingClientRect(
@@ -37,8 +36,6 @@ function setBoundingClientRect(
 }
 
 describe('ProductCarousel', () => {
-  const hoverCardItemNameSelector =
-    '[data-testid="product-card:hover-card"] [data-testid="product-info:name-link"]';
   it('should renders correctly', () => {
     const spies = {
       imageClick: jest.fn(),
@@ -88,20 +85,6 @@ describe('ProductCarousel', () => {
     expect(getAllByTestId('product-carousel:item').at(0)?.textContent).toBe('');
   });
 
-  it('should render footer of carousel item only when hover card disabled', () => {
-    const { getAllByTestId } = render(
-      <ProductCarousel withHoverCard={false}>
-        {items.map((item, index) => (
-          <ProductInfo key={index}>
-            <Parts.Footer>Some text of footer</Parts.Footer>
-          </ProductInfo>
-        ))}
-      </ProductCarousel>,
-    );
-
-    expect(getAllByTestId('product-carousel:item').at(0)?.textContent).toBe('Some text of footer');
-  });
-
   it('should renders correctly with only one item', () => {
     const spies = {
       imageClick: jest.fn(),
@@ -133,7 +116,7 @@ describe('ProductCarousel', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should renders correctly withhout children', () => {
+  it('should renders correctly without children', () => {
     const { container } = render(<ProductCarousel />);
 
     expect(container).toMatchSnapshot();
@@ -202,128 +185,10 @@ describe('ProductCarousel', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should handle item mouseenter event', () => {
-    const { container, getAllByTestId } = render(
-      <ProductCarousel itemSize={{ xs: 3 }} className='additional-class' withHoverCard>
-        {items.map((item, index) => (
-          <ProductInfo key={index}>
-            <Parts.Image src={item.imageSrc} href={item.url} />
-
-            <Parts.Prices
-              price={item.price}
-              oldPrice={item.oldPrice}
-              currencyGrapheme={item.currencyGrapheme}
-            />
-
-            <Parts.Title href={item.url}>{item.name}</Parts.Title>
-          </ProductInfo>
-        ))}
-      </ProductCarousel>,
-    );
-
-    fireEvent.mouseEnter(getAllByTestId('product-carousel:item')[0]);
-
-    expect(container.querySelector(hoverCardItemNameSelector)?.textContent).toBe(items[0].name);
-  });
-
-  it('should handle hover card mouseleave', () => {
-    const { container, getByTestId, getAllByTestId, queryAllByTestId } = render(
-      <ProductCarousel itemSize={{ xs: 3 }} className='additional-class' withHoverCard>
-        {items.map((item, index) => (
-          <ProductInfo key={index}>
-            <Parts.Image src={item.imageSrc} href={item.url} />
-
-            <Parts.Prices
-              price={item.price}
-              oldPrice={item.oldPrice}
-              currencyGrapheme={item.currencyGrapheme}
-            />
-
-            <Parts.Title href={item.url}>{item.name}</Parts.Title>
-          </ProductInfo>
-        ))}
-      </ProductCarousel>,
-    );
-
-    fireEvent.mouseEnter(getAllByTestId('product-carousel:item')[0]);
-
-    expect(container.querySelector(hoverCardItemNameSelector)?.textContent).toBe(items[0].name);
-
-    fireEvent.mouseLeave(getByTestId('product-card:hover-card'));
-
-    expect(queryAllByTestId('product-card:hover-card')).toHaveLength(0);
-  });
-
-  it('should handle carousel slide', () => {
-    jest.useFakeTimers();
-
-    const { container, rerender, queryAllByTestId, getAllByTestId } = render(
-      <ProductCarousel itemSize={{ xs: 3 }} withHoverCard>
-        {items.slice(0, 5).map((item, index) => (
-          <ProductInfo key={index}>
-            <Parts.Image src={item.imageSrc} href={item.url} />
-
-            <Parts.Prices
-              price={item.price}
-              oldPrice={item.oldPrice}
-              currencyGrapheme={item.currencyGrapheme}
-            />
-
-            <Parts.Title href={item.url}>{item.name}</Parts.Title>
-          </ProductInfo>
-        ))}
-      </ProductCarousel>,
-    );
-
-    setBoundingClientRect(container.querySelector('.draggable-container') as any, {
-      width: 100,
-      height: 20,
-    });
-    [...container.querySelectorAll('.carousel-items-container > *')].forEach((item, index) => {
-      setBoundingClientRect(item, {
-        x: index * 30,
-        y: 0,
-        width: 30,
-        height: 20,
-      });
-    });
-    rerender(
-      <ProductCarousel itemSize={{ xs: 3 }} withHoverCard>
-        {items.slice(0, 5).map((item, index) => (
-          <ProductInfo key={index}>
-            <Parts.Image src={item.imageSrc} href={item.url} />
-
-            <Parts.Prices
-              price={item.price}
-              oldPrice={item.oldPrice}
-              currencyGrapheme={item.currencyGrapheme}
-            />
-
-            <Parts.Title href={item.url}>{item.name}</Parts.Title>
-          </ProductInfo>
-        ))}
-      </ProductCarousel>,
-    );
-
-    fireEvent.click(getAllByTestId('arrow-button')[1]);
-
-    expect(queryAllByTestId('product-card:hover-card')).toHaveLength(0);
-
-    fireEvent.mouseEnter(getAllByTestId('product-carousel:item')[0]);
-
-    expect(queryAllByTestId('product-card:hover-card')).toHaveLength(0);
-
-    jest.advanceTimersByTime(400);
-
-    fireEvent.mouseEnter(getAllByTestId('product-carousel:item')[0]);
-
-    expect(container.querySelector(hoverCardItemNameSelector)?.textContent).toBe(items[0].name);
-  });
-
   it('should handle layer', () => {
-    const { container, getByTestId, getAllByTestId } = render(
+    const { rerender, container, getAllByTestId, queryAllByTestId } = render(
       <LayerProvider value={20}>
-        <ProductCarousel itemSize={{ xs: 3 }} withHoverCard>
+        <ProductCarousel itemSize={{ xs: 3 }}>
           {items.map((item, index) => (
             <ProductInfo key={index}>
               <Parts.Image src={item.imageSrc} href={item.url} />
@@ -341,79 +206,45 @@ describe('ProductCarousel', () => {
       </LayerProvider>,
     );
 
-    const viewportEl = container.querySelector('.draggable-container.full-size') as HTMLElement;
-    const itemsEls = getAllByTestId('product-carousel:item');
-
-    jest.spyOn(viewportEl, 'getBoundingClientRect').mockReturnValue({
-      top: 0,
-      left: 0,
-      bottom: 0,
-      right: 400,
-      x: 0,
-      y: 0,
-      width: 400,
-      height: 0,
-      toJSON() {
-        return '';
-      },
+    setBoundingClientRect(container.querySelector('.draggable-container') as any, {
+      width: 100,
+      height: 20,
     });
-    jest.spyOn(itemsEls[itemsEls.length - 1], 'getBoundingClientRect').mockReturnValue({
-      top: 0,
-      left: 0,
-      bottom: 0,
-      right: 500,
-      x: 0,
-      y: 0,
-      width: 500,
-      height: 0,
-      toJSON() {
-        return '';
-      },
+    [...container.querySelectorAll('.carousel-items-container > *')].forEach((item, index) => {
+      setBoundingClientRect(item, {
+        x: index * 30,
+        y: 0,
+        width: 30,
+        height: 20,
+      });
     });
+    rerender(
+      <LayerProvider value={20}>
+        <ProductCarousel itemSize={{ xs: 3 }}>
+          {items.map((item, index) => (
+            <ProductInfo key={index}>
+              <Parts.Image src={item.imageSrc} href={item.url} />
 
-    fireEvent.mouseEnter(getAllByTestId('product-carousel:item')[0]);
+              <Parts.Prices
+                price={item.price}
+                oldPrice={item.oldPrice}
+                currencyGrapheme={item.currencyGrapheme}
+              />
+
+              <Parts.Title href={item.url}>{item.name}</Parts.Title>
+            </ProductInfo>
+          ))}
+        </ProductCarousel>
+      </LayerProvider>,
+    );
+
     fireEvent.resize(window);
 
-    expect(getByTestId('product-card:hover-card').style.zIndex).toBe('21');
+    expect(queryAllByTestId('arrow-button')).toHaveLength(2);
+
     getAllByTestId('arrow-button').forEach(button => {
       expect(button.style.zIndex).toBe('22');
     });
-  });
-
-  it('should handle removing content when hover card is shown', () => {
-    const TestComponent = ({ withContent }: { withContent?: boolean }) => (
-      <ProductCarousel withHoverCard>
-        {(withContent ? items : []).map((item, index) => (
-          <ProductInfo key={index}>
-            <Parts.Image src={item.imageSrc} href={item.url} />
-
-            <Parts.Prices
-              price={item.price}
-              oldPrice={item.oldPrice}
-              currencyGrapheme={item.currencyGrapheme}
-            />
-
-            <Parts.Title href={item.url}>{item.name}</Parts.Title>
-
-            <Parts.Footer>
-              <Parts.CartControl stepText='По 5 шт'>
-                <Stepper defaultValue={3} size='s' style={{ width: '122px' }} />
-              </Parts.CartControl>
-            </Parts.Footer>
-          </ProductInfo>
-        ))}
-      </ProductCarousel>
-    );
-
-    const { queryAllByTestId, getAllByTestId, rerender } = render(<TestComponent withContent />);
-
-    expect(queryAllByTestId('product-card:hover-card')).toHaveLength(0);
-    fireEvent.mouseEnter(getAllByTestId('product-carousel:item')[0]);
-    expect(queryAllByTestId('product-card:hover-card')).toHaveLength(1);
-
-    expect(() => {
-      rerender(<TestComponent withContent={false} />);
-    }).not.toThrow();
   });
 
   it('should handle empty object as itemSize and get default size', () => {

@@ -484,7 +484,7 @@ exports[`ProductCarousel should renders correctly with only one item 1`] = `
 </div>
 `;
 
-exports[`ProductCarousel should renders correctly withhout children 1`] = `
+exports[`ProductCarousel should renders correctly without children 1`] = `
 <div>
   <div
     class="root"

@@ -1,22 +1,9 @@
-import {
-  Children,
-  isValidElement,
-  useRef,
-  useState,
-  useMemo,
-  MouseEventHandler,
-  Ref,
-  ReactNode,
-  CSSProperties,
-} from 'react';
+import { Children, isValidElement, useRef, useMemo, Ref, ReactNode, CSSProperties } from 'react';
 import { Carousel } from '@sima-land/ui-nucleons/carousel';
-import { HoverCard } from './hover-card';
-import { useAllowFlag, useClientWidth } from './utils';
+import { useClientWidth } from './utils';
 import { useIntersection, useMedia } from '@sima-land/ui-nucleons/hooks';
 import { ProductInfo, ProductInfoProps } from '../../../common/components/product-info';
 import { useLayer } from '@sima-land/ui-nucleons/helpers';
-import { reduceBaseInfo, reduceHoverInfo } from '../product-card';
-import { ProductCardChildren } from '../product-card/types';
 import { ProductCarouselProps } from './types';
 import classnames from 'classnames/bind';
 import styles from './product-carousel.m.scss';
@@ -46,23 +33,15 @@ export function ProductCarousel({
   itemProps,
   onInViewport,
   onNeedRequest,
-  withHoverCard,
   children,
-
-  // @todo не совсем правильно заставлять работать с внутренностями реакта - надо придумать что-то более простое
-  reduceBaseInfo: reduceBaseInfoProp = withHoverCard ? reduceBaseInfo : element => element,
-  reduceHoverInfo: reduceHoverInfoProp = reduceHoverInfo,
 }: ProductCarouselProps) {
   const layer = useLayer();
-  const [activeItemIndex, setActiveItemIndex] = useState<number | null>(null);
-  const cardShow = useAllowFlag();
   const needBigArrows = useMedia('(min-width: 1600px)');
   const rootRef = useRef<HTMLDivElement>(null);
-  const targetItemRef = useRef<HTMLDivElement | null>(null);
 
-  const items = Children.toArray(children).reduce<ProductCardChildren[]>((acc, item) => {
+  const items = Children.toArray(children).reduce<ReactNode[]>((acc, item) => {
     if (isValidElement<ProductInfoProps>(item) && item.type === ProductInfo) {
-      acc.push(item as any);
+      acc.push(item);
     }
     return acc;
   }, []);
@@ -87,18 +66,12 @@ export function ProductCarousel({
   });
 
   return (
-    <div
-      ref={rootRef}
-      className={cx('root', className)}
-      data-testid='product-carousel:root'
-      onMouseLeave={() => setActiveItemIndex(null)}
-    >
+    <div ref={rootRef} className={cx('root', className)} data-testid='product-carousel:root'>
       {items.length > 0 && (
         <Carousel
           step={3}
           draggable={false}
-          // докидываем индекс чтобы позже брать актуальные данные из списка по нему
-          items={items.map((item, index) => [item, index])}
+          items={items}
           // ВАЖНО: скрываем кнопки ТОЛЬКО пока itemWidth не вычислен
           withControls={itemWidth !== null ? undefined : false}
           controlProps={
@@ -112,42 +85,17 @@ export function ProductCarousel({
                 }
               : undefined
           }
-          renderItem={([item, index]: [ProductCardChildren, number], realIndex) => (
+          renderItem={(item: ReactNode, realIndex) => (
             <CarouselItem
               rootRef={realIndex === 0 ? firstItemRef : undefined}
               className={cx(getSizeClasses(itemSize), itemProps?.className)}
               style={itemProps?.style}
-              onMouseEnter={e => {
-                if (cardShow.allowed()) {
-                  targetItemRef.current = e.currentTarget;
-                  setActiveItemIndex(index);
-                }
-              }}
             >
-              {reduceBaseInfoProp(item)}
+              {item}
             </CarouselItem>
           )}
-          // длительность прокрутки в Carousel - 320, делаем слегка с запасом
-          // @todo после восстановления проверить позицию курсора чтобы показать карточку (если будет критично)
-          onChangeTargetIndex={() => cardShow.disallowFor(360)}
         />
       )}
-
-      {/* ВАЖНО: выводим всплывающую карточку отдельно так как у карусели overflow:hidden */}
-      {/* ВАЖНО: чтобы размонтировать всплывающую карточку строго каждый раз используем массив и key */}
-      {withHoverCard &&
-        activeItemIndex !== null &&
-        items[activeItemIndex] &&
-        [items[activeItemIndex]].map(item => (
-          <HoverCard
-            key={activeItemIndex}
-            targetRef={targetItemRef}
-            onMouseLeave={() => setActiveItemIndex(null)}
-            {...item.props}
-          >
-            {reduceHoverInfoProp(item)}
-          </HoverCard>
-        ))}
     </div>
   );
 }
@@ -160,7 +108,6 @@ export function ProductCarousel({
 function CarouselItem({
   rootRef,
   className,
-  onMouseEnter,
   children,
   style,
 }: {
@@ -168,14 +115,12 @@ function CarouselItem({
   children: ReactNode;
   className?: string;
   style?: CSSProperties;
-  onMouseEnter?: MouseEventHandler<HTMLDivElement>;
 }) {
   return (
     <div
       ref={rootRef}
       data-testid='product-carousel:item'
       className={cx('item', className)}
-      onMouseEnter={onMouseEnter}
       style={style}
     >
       {children}
