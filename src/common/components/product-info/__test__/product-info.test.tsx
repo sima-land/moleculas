@@ -1,5 +1,6 @@
 import { render, fireEvent } from '@testing-library/react';
-import { ProductInfo, Parts } from '../product-info';
+import { ProductInfo } from '../product-info';
+import { Parts } from '../parts';
 import { Badge, BadgeProps } from '../../badge';
 import QuickViewSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/MagnifierPlus';
 import { Button } from '@sima-land/ui-nucleons/button';

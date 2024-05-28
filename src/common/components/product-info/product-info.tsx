@@ -1,9 +1,7 @@
-import { defineSlots } from '@sima-land/ui-nucleons/helpers';
-import { ProductInfoProps } from './types';
+import type { ProductInfoProps } from './types';
 import { ProductInfoContext } from './utils';
 import { Parts } from './parts';
-
-export type { ProductInfoProps };
+import { defineSlots } from '@sima-land/ui-nucleons/helpers';
 
 export const UNAVAILABLE_REASON = {
   notEnough: 'Нет в наличии',
@@ -42,5 +40,3 @@ export function ProductInfo({ restriction, children }: ProductInfoProps) {
     </ProductInfoContext.Provider>
   );
 }
-
-export { Parts };
