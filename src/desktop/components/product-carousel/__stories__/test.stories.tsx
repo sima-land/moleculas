@@ -45,7 +45,7 @@ export function Tests() {
   return (
     <DemoBlock>
       <Parts.FooterContext.Provider value={{ className: styles.footer }}>
-        <ProductCarousel withHoverCard={false} itemProps={{ className: styles.item }}>
+        <ProductCarousel itemProps={{ className: styles.item }}>
           {items.map((item, index) => (
             <ProductInfo key={index}>
               <Parts.Image src={item.imageSrc} href={item.url}>

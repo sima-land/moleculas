@@ -1,25 +1,4 @@
-import { useCallback, useEffect, useRef, useState, RefObject, DependencyList } from 'react';
-
-/**
- * Возвращает объект работы с флагом, который автоматически возвращается в true через заданный промежуток времени.
- * @return Объект работы с флагом.
- */
-export function useAllowFlag() {
-  const ref = useRef(true);
-  const timerIdRef = useRef<number>();
-
-  const allowed = useCallback(() => ref.current, []);
-
-  const disallowFor = useCallback((timeout: number) => {
-    window.clearTimeout(timerIdRef.current);
-    ref.current = false;
-    timerIdRef.current = window.setTimeout(() => (ref.current = true), timeout);
-  }, []);
-
-  const controlRef = useRef({ allowed, disallowFor });
-
-  return controlRef.current;
-}
+import { useEffect, useState, RefObject, DependencyList } from 'react';
 
 /**
  * Возвращает ширину дочернего элемента.

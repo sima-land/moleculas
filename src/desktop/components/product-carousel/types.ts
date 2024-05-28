@@ -1,5 +1,4 @@
 import type { CSSProperties, ReactNode, RefObject } from 'react';
-import type { ProductCardProps } from '../product-card';
 
 export interface ItemSize {
   xs?: 2 | 3 | 4;
@@ -9,8 +8,7 @@ export interface ItemSize {
   xl?: 2 | 3 | 4;
 }
 
-export interface ProductCarouselProps
-  extends Pick<ProductCardProps, 'reduceBaseInfo' | 'reduceHoverInfo'> {
+export interface ProductCarouselProps {
   /** CSS-класс для корневого элемента. */
   className?: string;
 
@@ -25,9 +23,6 @@ export interface ProductCarouselProps
 
   /** Сработает при попадании карусели в область достаточно близкую к viewport'у. */
   onNeedRequest?: () => void;
-
-  /** Нужно ли показывать всплывающую карточку при наведении на элемент карусели. */
-  withHoverCard?: boolean;
 
   /** Предоставит свойства для элемента карусели. */
   itemProps?: { style?: CSSProperties; className?: string };
