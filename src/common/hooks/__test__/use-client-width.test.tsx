@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
 import { useRef } from 'react';
-import { useClientWidth } from '../utils';
+import { useClientWidth } from '../use-client-width';
 import { render, act } from '@testing-library/react';
 
 describe('useClientWidth', () => {

@@ -1,5 +1,5 @@
 import { useLayoutEffect } from 'react';
-import { useMounted } from '..';
+import { useMounted } from '../use-mounted';
 import { render } from '@testing-library/react';
 
 describe('useMounted', () => {
