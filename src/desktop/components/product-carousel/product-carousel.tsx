@@ -1,6 +1,6 @@
 import { Children, isValidElement, useRef, useMemo, Ref, ReactNode, CSSProperties } from 'react';
 import { Carousel } from '@sima-land/ui-nucleons/carousel';
-import { useClientWidth } from './utils';
+import { useClientWidth } from '../../../common/hooks';
 import { useIntersection, useMedia } from '@sima-land/ui-nucleons/hooks';
 import { ProductInfo, ProductInfoProps } from '../../../common/components/product-info';
 import { useLayer } from '@sima-land/ui-nucleons/helpers';
