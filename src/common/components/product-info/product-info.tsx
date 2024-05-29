@@ -14,7 +14,13 @@ export const UNAVAILABLE_REASON = {
  * @param props Свойства.
  * @return Элемент.
  */
-export function ProductInfo({ restriction, children }: ProductInfoProps) {
+export function ProductInfo({ strict = true, restriction, children }: ProductInfoProps) {
+  if (!strict) {
+    return (
+      <ProductInfoContext.Provider value={{ restriction }}>{children}</ProductInfoContext.Provider>
+    );
+  }
+
   const { image, badges, prices, title, trademark, footer, secondaryInfo, ratingCounter } =
     defineSlots(children, {
       image: Parts.Image,

@@ -1,0 +1,13 @@
+@use 'node_modules/@sima-land/ui-nucleons/colors';
+@use 'node_modules/@sima-land/ui-nucleons/breakpoints';
+
+.root {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: colors.$basic-gray24;
+  @include breakpoints.down('ml') {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

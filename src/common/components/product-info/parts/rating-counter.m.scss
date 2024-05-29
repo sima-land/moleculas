@@ -1,0 +1,12 @@
+@use 'node_modules/@sima-land/ui-nucleons/breakpoints';
+@use '../../rating-counter/rating-counter-util';
+
+.root {
+  margin-top: 8px;
+  @include breakpoints.down('mm') {
+    @include rating-counter-util.size-s;
+  }
+  @include breakpoints.up('mm') {
+    @include rating-counter-util.size-m;
+  }
+}

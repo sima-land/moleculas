@@ -1,0 +1,28 @@
+.root {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+
+  // чтобы старая цена скрывалась если не влазит
+  &.height-limit {
+    height: 24px;
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+}
+
+.price {
+  font-size: inherit;
+  line-height: inherit;
+  margin-right: 8px;
+}
+
+.old-price {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}

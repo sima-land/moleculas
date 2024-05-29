@@ -1,0 +1,8 @@
+@use 'node_modules/@sima-land/ui-nucleons/colors';
+
+.root {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  color: colors.$basic-gray38;
+}

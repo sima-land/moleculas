@@ -1,0 +1,56 @@
+@use 'node_modules/@sima-land/ui-nucleons/colors';
+@use 'node_modules/@sima-land/ui-nucleons/breakpoints';
+
+.image-button {
+  width: 24px;
+  height: 24px;
+  display: block;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  position: absolute;
+  --gutter: 8px;
+  right: var(--gutter);
+  cursor: pointer;
+  &:not(.positioned) {
+    &:nth-child(1) {
+      top: var(--gutter);
+    }
+    &:nth-child(2) {
+      bottom: var(--gutter);
+    }
+    &:nth-child(3) {
+      top: var(--gutter);
+      left: var(--gutter);
+    }
+    &:nth-child(3) {
+      top: var(--gutter);
+      left: var(--gutter);
+    }
+  }
+  &.left-top {
+    left: var(--gutter);
+    top: var(--gutter);
+  }
+  &.left-bottom {
+    left: var(--gutter);
+    bottom: var(--gutter);
+  }
+  &.right-top {
+    right: var(--gutter);
+    top: var(--gutter);
+  }
+  &.right-bottom {
+    right: var(--gutter);
+    bottom: var(--gutter);
+  }
+  &:nth-child(n + 5) {
+    display: none;
+  }
+  &:hover {
+    fill: colors.$basic-gray54;
+  }
+  @include breakpoints.down('ml') {
+    --gutter: 4px;
+  }
+}

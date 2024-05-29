@@ -1,0 +1,15 @@
+@use 'node_modules/@sima-land/ui-nucleons/breakpoints';
+
+.text-button {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  &:hover,
+  &:active {
+    font-weight: 600;
+  }
+  @include breakpoints.down('ml') {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
