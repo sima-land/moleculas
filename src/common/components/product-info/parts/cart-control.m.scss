@@ -1,0 +1,41 @@
+@use 'node_modules/@sima-land/ui-nucleons/colors';
+
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  &.loading {
+    .main {
+      background: colors.$basic-gray4;
+      border-radius: 4px;
+    }
+    .aside::before {
+      content: '';
+      display: block;
+      background: colors.$basic-gray4;
+      border-radius: 4px;
+      width: 48px;
+      height: 16px;
+    }
+  }
+}
+
+.main {
+  width: 122px;
+  height: 40px;
+  margin-right: 16px;
+}
+
+.aside {
+  padding-top: 12px; // чтобы при переносе на следующую строку правильно отступил от кнопки
+  font-size: 12px;
+  line-height: 16px;
+  color: colors.$basic-gray38;
+}
+
+.footer {
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 16px;
+  color: colors.$basic-gray38;
+}

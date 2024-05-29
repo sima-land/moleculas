@@ -105,7 +105,7 @@ exports[`ProductSlider should renders correctly 1`] = `
               </div>
             </span>
             <div
-              class="prices height-limit"
+              class="root height-limit"
               data-testid="product-info:prices"
             >
               <span
@@ -116,14 +116,14 @@ exports[`ProductSlider should renders correctly 1`] = `
               </span>
             </div>
             <a
-              class="link link line-clamp basic-gray87"
+              class="link root line-clamp basic-gray87"
               data-testid="product-info:name-link"
               href=""
             >
               Ножницы портновские, 19 см, цвет чёрный
             </a>
             <a
-              class="link trademark-link basic-blue"
+              class="link root basic-blue"
               data-testid="product-info:trademark-link"
               href="https://sima-land.ru"
             >
@@ -134,10 +134,10 @@ exports[`ProductSlider should renders correctly 1`] = `
               data-testid="product-info:footer"
             >
               <div
-                class="control-wrapper"
+                class="root"
               >
                 <div
-                  class="control"
+                  class="main"
                 >
                   <div
                     class="root size-s"
@@ -188,13 +188,13 @@ exports[`ProductSlider should renders correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="unit-text"
+                  class="aside"
                   data-testid="product-info:cart-step"
                 >
                   По 5 шт
                 </div>
                 <div
-                  class="bottom-text"
+                  class="footer"
                   data-testid="product-info:cart-info"
                 >
                   Комплектация + 50 ₽ при покупке до 20 шт
@@ -292,7 +292,7 @@ exports[`ProductSlider should renders correctly 1`] = `
               </div>
             </span>
             <div
-              class="prices height-limit"
+              class="root height-limit"
               data-testid="product-info:prices"
             >
               <span
@@ -303,7 +303,7 @@ exports[`ProductSlider should renders correctly 1`] = `
               </span>
             </div>
             <a
-              class="link link line-clamp basic-gray87"
+              class="link root line-clamp basic-gray87"
               data-testid="product-info:name-link"
               href=""
             >
@@ -314,10 +314,10 @@ exports[`ProductSlider should renders correctly 1`] = `
               data-testid="product-info:footer"
             >
               <div
-                class="control-wrapper"
+                class="root"
               >
                 <div
-                  class="control"
+                  class="main"
                 >
                   <div
                     class="root size-s"
@@ -368,13 +368,13 @@ exports[`ProductSlider should renders correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="unit-text"
+                  class="aside"
                   data-testid="product-info:cart-step"
                 >
                   По 5 шт
                 </div>
                 <div
-                  class="bottom-text"
+                  class="footer"
                   data-testid="product-info:cart-info"
                 >
                   Комплектация + 50 ₽ при покупке до 20 шт
@@ -537,7 +537,7 @@ exports[`ProductSlider should renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="prices height-limit"
+              class="root height-limit"
               data-testid="product-info:prices"
             >
               <span
@@ -548,14 +548,14 @@ exports[`ProductSlider should renders correctly 1`] = `
               </span>
             </div>
             <a
-              class="link link line-clamp basic-gray87"
+              class="link root line-clamp basic-gray87"
               data-testid="product-info:name-link"
               href=""
             >
               Ножницы портновские, 21,5 см, цвет чёрный/голубой
             </a>
             <a
-              class="link trademark-link basic-blue"
+              class="link root basic-blue"
               data-testid="product-info:trademark-link"
               href="https://sima-land.ru"
             >
@@ -566,10 +566,10 @@ exports[`ProductSlider should renders correctly 1`] = `
               data-testid="product-info:footer"
             >
               <div
-                class="control-wrapper"
+                class="root"
               >
                 <div
-                  class="control"
+                  class="main"
                 >
                   <div
                     class="root size-s"
@@ -620,13 +620,13 @@ exports[`ProductSlider should renders correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="unit-text"
+                  class="aside"
                   data-testid="product-info:cart-step"
                 >
                   По 5 шт
                 </div>
                 <div
-                  class="bottom-text"
+                  class="footer"
                   data-testid="product-info:cart-info"
                 >
                   Комплектация + 50 ₽ при покупке до 20 шт
@@ -724,7 +724,7 @@ exports[`ProductSlider should renders correctly 1`] = `
               </div>
             </span>
             <div
-              class="prices height-limit"
+              class="root height-limit"
               data-testid="product-info:prices"
             >
               <span
@@ -735,7 +735,7 @@ exports[`ProductSlider should renders correctly 1`] = `
               </span>
             </div>
             <a
-              class="link link line-clamp basic-gray87"
+              class="link root line-clamp basic-gray87"
               data-testid="product-info:name-link"
               href=""
             >
@@ -746,10 +746,10 @@ exports[`ProductSlider should renders correctly 1`] = `
               data-testid="product-info:footer"
             >
               <div
-                class="control-wrapper"
+                class="root"
               >
                 <div
-                  class="control"
+                  class="main"
                 >
                   <div
                     class="root size-s"
@@ -800,13 +800,13 @@ exports[`ProductSlider should renders correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="unit-text"
+                  class="aside"
                   data-testid="product-info:cart-step"
                 >
                   По 5 шт
                 </div>
                 <div
-                  class="bottom-text"
+                  class="footer"
                   data-testid="product-info:cart-info"
                 >
                   Комплектация + 50 ₽ при покупке до 20 шт
@@ -904,7 +904,7 @@ exports[`ProductSlider should renders correctly 1`] = `
               </div>
             </span>
             <div
-              class="prices height-limit"
+              class="root height-limit"
               data-testid="product-info:prices"
             >
               <span
@@ -915,7 +915,7 @@ exports[`ProductSlider should renders correctly 1`] = `
               </span>
             </div>
             <a
-              class="link link line-clamp basic-gray87"
+              class="link root line-clamp basic-gray87"
               data-testid="product-info:name-link"
               href=""
             >
@@ -926,10 +926,10 @@ exports[`ProductSlider should renders correctly 1`] = `
               data-testid="product-info:footer"
             >
               <div
-                class="control-wrapper"
+                class="root"
               >
                 <div
-                  class="control"
+                  class="main"
                 >
                   <div
                     class="root size-s"
@@ -980,13 +980,13 @@ exports[`ProductSlider should renders correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="unit-text"
+                  class="aside"
                   data-testid="product-info:cart-step"
                 >
                   По 5 шт
                 </div>
                 <div
-                  class="bottom-text"
+                  class="footer"
                   data-testid="product-info:cart-info"
                 >
                   Комплектация + 50 ₽ при покупке до 20 шт
@@ -1119,7 +1119,7 @@ exports[`ProductSlider should renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="prices height-limit"
+              class="root height-limit"
               data-testid="product-info:prices"
             >
               <span
@@ -1130,7 +1130,7 @@ exports[`ProductSlider should renders correctly 1`] = `
               </span>
             </div>
             <a
-              class="link link line-clamp basic-gray87"
+              class="link root line-clamp basic-gray87"
               data-testid="product-info:name-link"
               href=""
             >
@@ -1141,10 +1141,10 @@ exports[`ProductSlider should renders correctly 1`] = `
               data-testid="product-info:footer"
             >
               <div
-                class="control-wrapper"
+                class="root"
               >
                 <div
-                  class="control"
+                  class="main"
                 >
                   <div
                     class="root size-s"
@@ -1195,13 +1195,13 @@ exports[`ProductSlider should renders correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="unit-text"
+                  class="aside"
                   data-testid="product-info:cart-step"
                 >
                   По 5 шт
                 </div>
                 <div
-                  class="bottom-text"
+                  class="footer"
                   data-testid="product-info:cart-info"
                 >
                   Комплектация + 50 ₽ при покупке до 20 шт
@@ -1299,7 +1299,7 @@ exports[`ProductSlider should renders correctly 1`] = `
               </div>
             </span>
             <div
-              class="prices height-limit"
+              class="root height-limit"
               data-testid="product-info:prices"
             >
               <span
@@ -1310,7 +1310,7 @@ exports[`ProductSlider should renders correctly 1`] = `
               </span>
             </div>
             <a
-              class="link link line-clamp basic-gray87"
+              class="link root line-clamp basic-gray87"
               data-testid="product-info:name-link"
               href=""
             >
@@ -1321,10 +1321,10 @@ exports[`ProductSlider should renders correctly 1`] = `
               data-testid="product-info:footer"
             >
               <div
-                class="control-wrapper"
+                class="root"
               >
                 <div
-                  class="control"
+                  class="main"
                 >
                   <div
                     class="root size-s"
@@ -1375,13 +1375,13 @@ exports[`ProductSlider should renders correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="unit-text"
+                  class="aside"
                   data-testid="product-info:cart-step"
                 >
                   По 5 шт
                 </div>
                 <div
-                  class="bottom-text"
+                  class="footer"
                   data-testid="product-info:cart-info"
                 >
                   Комплектация + 50 ₽ при покупке до 20 шт
@@ -1479,7 +1479,7 @@ exports[`ProductSlider should renders correctly 1`] = `
               </div>
             </span>
             <div
-              class="prices height-limit"
+              class="root height-limit"
               data-testid="product-info:prices"
             >
               <span
@@ -1496,7 +1496,7 @@ exports[`ProductSlider should renders correctly 1`] = `
               </span>
             </div>
             <a
-              class="link link line-clamp basic-gray87"
+              class="link root line-clamp basic-gray87"
               data-testid="product-info:name-link"
               href=""
             >
@@ -1507,10 +1507,10 @@ exports[`ProductSlider should renders correctly 1`] = `
               data-testid="product-info:footer"
             >
               <div
-                class="control-wrapper"
+                class="root"
               >
                 <div
-                  class="control"
+                  class="main"
                 >
                   <div
                     class="root size-s"
@@ -1561,13 +1561,13 @@ exports[`ProductSlider should renders correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="unit-text"
+                  class="aside"
                   data-testid="product-info:cart-step"
                 >
                   По 5 шт
                 </div>
                 <div
-                  class="bottom-text"
+                  class="footer"
                   data-testid="product-info:cart-info"
                 >
                   Комплектация + 50 ₽ при покупке до 20 шт
@@ -1665,7 +1665,7 @@ exports[`ProductSlider should renders correctly 1`] = `
               </div>
             </span>
             <div
-              class="prices height-limit"
+              class="root height-limit"
               data-testid="product-info:prices"
             >
               <span
@@ -1682,7 +1682,7 @@ exports[`ProductSlider should renders correctly 1`] = `
               </span>
             </div>
             <a
-              class="link link line-clamp basic-gray87"
+              class="link root line-clamp basic-gray87"
               data-testid="product-info:name-link"
               href=""
             >
@@ -1693,10 +1693,10 @@ exports[`ProductSlider should renders correctly 1`] = `
               data-testid="product-info:footer"
             >
               <div
-                class="control-wrapper"
+                class="root"
               >
                 <div
-                  class="control"
+                  class="main"
                 >
                   <div
                     class="root size-s"
@@ -1747,13 +1747,13 @@ exports[`ProductSlider should renders correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="unit-text"
+                  class="aside"
                   data-testid="product-info:cart-step"
                 >
                   По 5 шт
                 </div>
                 <div
-                  class="bottom-text"
+                  class="footer"
                   data-testid="product-info:cart-info"
                 >
                   Комплектация + 50 ₽ при покупке до 20 шт
@@ -1851,7 +1851,7 @@ exports[`ProductSlider should renders correctly 1`] = `
               </div>
             </span>
             <div
-              class="prices height-limit"
+              class="root height-limit"
               data-testid="product-info:prices"
             >
               <span
@@ -1862,7 +1862,7 @@ exports[`ProductSlider should renders correctly 1`] = `
               </span>
             </div>
             <a
-              class="link link line-clamp basic-gray87"
+              class="link root line-clamp basic-gray87"
               data-testid="product-info:name-link"
               href=""
             >
@@ -1873,10 +1873,10 @@ exports[`ProductSlider should renders correctly 1`] = `
               data-testid="product-info:footer"
             >
               <div
-                class="control-wrapper"
+                class="root"
               >
                 <div
-                  class="control"
+                  class="main"
                 >
                   <div
                     class="root size-s"
@@ -1927,13 +1927,13 @@ exports[`ProductSlider should renders correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="unit-text"
+                  class="aside"
                   data-testid="product-info:cart-step"
                 >
                   По 5 шт
                 </div>
                 <div
-                  class="bottom-text"
+                  class="footer"
                   data-testid="product-info:cart-info"
                 >
                   Комплектация + 50 ₽ при покупке до 20 шт
@@ -2040,7 +2040,7 @@ exports[`ProductSlider should renders correctly 2`] = `
       </div>
     </span>
     <div
-      class="prices height-limit"
+      class="root height-limit"
       data-testid="product-info:prices"
     >
       <span
@@ -2051,14 +2051,14 @@ exports[`ProductSlider should renders correctly 2`] = `
       </span>
     </div>
     <a
-      class="link link line-clamp basic-gray87"
+      class="link root line-clamp basic-gray87"
       data-testid="product-info:name-link"
       href=""
     >
       Ножницы портновские, 19 см, цвет чёрный
     </a>
     <a
-      class="link trademark-link basic-blue"
+      class="link root basic-blue"
       data-testid="product-info:trademark-link"
       href="https://sima-land.ru"
     >
@@ -2069,10 +2069,10 @@ exports[`ProductSlider should renders correctly 2`] = `
       data-testid="product-info:footer"
     >
       <div
-        class="control-wrapper"
+        class="root"
       >
         <div
-          class="control"
+          class="main"
         >
           <div
             class="root size-s"
@@ -2123,13 +2123,13 @@ exports[`ProductSlider should renders correctly 2`] = `
           </div>
         </div>
         <div
-          class="unit-text"
+          class="aside"
           data-testid="product-info:cart-step"
         >
           По 5 шт
         </div>
         <div
-          class="bottom-text"
+          class="footer"
           data-testid="product-info:cart-info"
         >
           Комплектация + 50 ₽ при покупке до 20 шт
@@ -2227,7 +2227,7 @@ exports[`ProductSlider should renders correctly 2`] = `
       </div>
     </span>
     <div
-      class="prices height-limit"
+      class="root height-limit"
       data-testid="product-info:prices"
     >
       <span
@@ -2238,7 +2238,7 @@ exports[`ProductSlider should renders correctly 2`] = `
       </span>
     </div>
     <a
-      class="link link line-clamp basic-gray87"
+      class="link root line-clamp basic-gray87"
       data-testid="product-info:name-link"
       href=""
     >
@@ -2249,10 +2249,10 @@ exports[`ProductSlider should renders correctly 2`] = `
       data-testid="product-info:footer"
     >
       <div
-        class="control-wrapper"
+        class="root"
       >
         <div
-          class="control"
+          class="main"
         >
           <div
             class="root size-s"
@@ -2303,13 +2303,13 @@ exports[`ProductSlider should renders correctly 2`] = `
           </div>
         </div>
         <div
-          class="unit-text"
+          class="aside"
           data-testid="product-info:cart-step"
         >
           По 5 шт
         </div>
         <div
-          class="bottom-text"
+          class="footer"
           data-testid="product-info:cart-info"
         >
           Комплектация + 50 ₽ при покупке до 20 шт
@@ -2472,7 +2472,7 @@ exports[`ProductSlider should renders correctly 2`] = `
       </div>
     </div>
     <div
-      class="prices height-limit"
+      class="root height-limit"
       data-testid="product-info:prices"
     >
       <span
@@ -2483,14 +2483,14 @@ exports[`ProductSlider should renders correctly 2`] = `
       </span>
     </div>
     <a
-      class="link link line-clamp basic-gray87"
+      class="link root line-clamp basic-gray87"
       data-testid="product-info:name-link"
       href=""
     >
       Ножницы портновские, 21,5 см, цвет чёрный/голубой
     </a>
     <a
-      class="link trademark-link basic-blue"
+      class="link root basic-blue"
       data-testid="product-info:trademark-link"
       href="https://sima-land.ru"
     >
@@ -2501,10 +2501,10 @@ exports[`ProductSlider should renders correctly 2`] = `
       data-testid="product-info:footer"
     >
       <div
-        class="control-wrapper"
+        class="root"
       >
         <div
-          class="control"
+          class="main"
         >
           <div
             class="root size-s"
@@ -2555,13 +2555,13 @@ exports[`ProductSlider should renders correctly 2`] = `
           </div>
         </div>
         <div
-          class="unit-text"
+          class="aside"
           data-testid="product-info:cart-step"
         >
           По 5 шт
         </div>
         <div
-          class="bottom-text"
+          class="footer"
           data-testid="product-info:cart-info"
         >
           Комплектация + 50 ₽ при покупке до 20 шт
@@ -2659,7 +2659,7 @@ exports[`ProductSlider should renders correctly 2`] = `
       </div>
     </span>
     <div
-      class="prices height-limit"
+      class="root height-limit"
       data-testid="product-info:prices"
     >
       <span
@@ -2670,7 +2670,7 @@ exports[`ProductSlider should renders correctly 2`] = `
       </span>
     </div>
     <a
-      class="link link line-clamp basic-gray87"
+      class="link root line-clamp basic-gray87"
       data-testid="product-info:name-link"
       href=""
     >
@@ -2681,10 +2681,10 @@ exports[`ProductSlider should renders correctly 2`] = `
       data-testid="product-info:footer"
     >
       <div
-        class="control-wrapper"
+        class="root"
       >
         <div
-          class="control"
+          class="main"
         >
           <div
             class="root size-s"
@@ -2735,13 +2735,13 @@ exports[`ProductSlider should renders correctly 2`] = `
           </div>
         </div>
         <div
-          class="unit-text"
+          class="aside"
           data-testid="product-info:cart-step"
         >
           По 5 шт
         </div>
         <div
-          class="bottom-text"
+          class="footer"
           data-testid="product-info:cart-info"
         >
           Комплектация + 50 ₽ при покупке до 20 шт
@@ -2839,7 +2839,7 @@ exports[`ProductSlider should renders correctly 2`] = `
       </div>
     </span>
     <div
-      class="prices height-limit"
+      class="root height-limit"
       data-testid="product-info:prices"
     >
       <span
@@ -2850,7 +2850,7 @@ exports[`ProductSlider should renders correctly 2`] = `
       </span>
     </div>
     <a
-      class="link link line-clamp basic-gray87"
+      class="link root line-clamp basic-gray87"
       data-testid="product-info:name-link"
       href=""
     >
@@ -2861,10 +2861,10 @@ exports[`ProductSlider should renders correctly 2`] = `
       data-testid="product-info:footer"
     >
       <div
-        class="control-wrapper"
+        class="root"
       >
         <div
-          class="control"
+          class="main"
         >
           <div
             class="root size-s"
@@ -2915,13 +2915,13 @@ exports[`ProductSlider should renders correctly 2`] = `
           </div>
         </div>
         <div
-          class="unit-text"
+          class="aside"
           data-testid="product-info:cart-step"
         >
           По 5 шт
         </div>
         <div
-          class="bottom-text"
+          class="footer"
           data-testid="product-info:cart-info"
         >
           Комплектация + 50 ₽ при покупке до 20 шт
@@ -3054,7 +3054,7 @@ exports[`ProductSlider should renders correctly 2`] = `
       </div>
     </div>
     <div
-      class="prices height-limit"
+      class="root height-limit"
       data-testid="product-info:prices"
     >
       <span
@@ -3065,7 +3065,7 @@ exports[`ProductSlider should renders correctly 2`] = `
       </span>
     </div>
     <a
-      class="link link line-clamp basic-gray87"
+      class="link root line-clamp basic-gray87"
       data-testid="product-info:name-link"
       href=""
     >
@@ -3076,10 +3076,10 @@ exports[`ProductSlider should renders correctly 2`] = `
       data-testid="product-info:footer"
     >
       <div
-        class="control-wrapper"
+        class="root"
       >
         <div
-          class="control"
+          class="main"
         >
           <div
             class="root size-s"
@@ -3130,13 +3130,13 @@ exports[`ProductSlider should renders correctly 2`] = `
           </div>
         </div>
         <div
-          class="unit-text"
+          class="aside"
           data-testid="product-info:cart-step"
         >
           По 5 шт
         </div>
         <div
-          class="bottom-text"
+          class="footer"
           data-testid="product-info:cart-info"
         >
           Комплектация + 50 ₽ при покупке до 20 шт
@@ -3234,7 +3234,7 @@ exports[`ProductSlider should renders correctly 2`] = `
       </div>
     </span>
     <div
-      class="prices height-limit"
+      class="root height-limit"
       data-testid="product-info:prices"
     >
       <span
@@ -3245,7 +3245,7 @@ exports[`ProductSlider should renders correctly 2`] = `
       </span>
     </div>
     <a
-      class="link link line-clamp basic-gray87"
+      class="link root line-clamp basic-gray87"
       data-testid="product-info:name-link"
       href=""
     >
@@ -3256,10 +3256,10 @@ exports[`ProductSlider should renders correctly 2`] = `
       data-testid="product-info:footer"
     >
       <div
-        class="control-wrapper"
+        class="root"
       >
         <div
-          class="control"
+          class="main"
         >
           <div
             class="root size-s"
@@ -3310,13 +3310,13 @@ exports[`ProductSlider should renders correctly 2`] = `
           </div>
         </div>
         <div
-          class="unit-text"
+          class="aside"
           data-testid="product-info:cart-step"
         >
           По 5 шт
         </div>
         <div
-          class="bottom-text"
+          class="footer"
           data-testid="product-info:cart-info"
         >
           Комплектация + 50 ₽ при покупке до 20 шт
@@ -3414,7 +3414,7 @@ exports[`ProductSlider should renders correctly 2`] = `
       </div>
     </span>
     <div
-      class="prices height-limit"
+      class="root height-limit"
       data-testid="product-info:prices"
     >
       <span
@@ -3431,7 +3431,7 @@ exports[`ProductSlider should renders correctly 2`] = `
       </span>
     </div>
     <a
-      class="link link line-clamp basic-gray87"
+      class="link root line-clamp basic-gray87"
       data-testid="product-info:name-link"
       href=""
     >
@@ -3442,10 +3442,10 @@ exports[`ProductSlider should renders correctly 2`] = `
       data-testid="product-info:footer"
     >
       <div
-        class="control-wrapper"
+        class="root"
       >
         <div
-          class="control"
+          class="main"
         >
           <div
             class="root size-s"
@@ -3496,13 +3496,13 @@ exports[`ProductSlider should renders correctly 2`] = `
           </div>
         </div>
         <div
-          class="unit-text"
+          class="aside"
           data-testid="product-info:cart-step"
         >
           По 5 шт
         </div>
         <div
-          class="bottom-text"
+          class="footer"
           data-testid="product-info:cart-info"
         >
           Комплектация + 50 ₽ при покупке до 20 шт
@@ -3600,7 +3600,7 @@ exports[`ProductSlider should renders correctly 2`] = `
       </div>
     </span>
     <div
-      class="prices height-limit"
+      class="root height-limit"
       data-testid="product-info:prices"
     >
       <span
@@ -3617,7 +3617,7 @@ exports[`ProductSlider should renders correctly 2`] = `
       </span>
     </div>
     <a
-      class="link link line-clamp basic-gray87"
+      class="link root line-clamp basic-gray87"
       data-testid="product-info:name-link"
       href=""
     >
@@ -3628,10 +3628,10 @@ exports[`ProductSlider should renders correctly 2`] = `
       data-testid="product-info:footer"
     >
       <div
-        class="control-wrapper"
+        class="root"
       >
         <div
-          class="control"
+          class="main"
         >
           <div
             class="root size-s"
@@ -3682,13 +3682,13 @@ exports[`ProductSlider should renders correctly 2`] = `
           </div>
         </div>
         <div
-          class="unit-text"
+          class="aside"
           data-testid="product-info:cart-step"
         >
           По 5 шт
         </div>
         <div
-          class="bottom-text"
+          class="footer"
           data-testid="product-info:cart-info"
         >
           Комплектация + 50 ₽ при покупке до 20 шт
@@ -3786,7 +3786,7 @@ exports[`ProductSlider should renders correctly 2`] = `
       </div>
     </span>
     <div
-      class="prices height-limit"
+      class="root height-limit"
       data-testid="product-info:prices"
     >
       <span
@@ -3797,7 +3797,7 @@ exports[`ProductSlider should renders correctly 2`] = `
       </span>
     </div>
     <a
-      class="link link line-clamp basic-gray87"
+      class="link root line-clamp basic-gray87"
       data-testid="product-info:name-link"
       href=""
     >
@@ -3808,10 +3808,10 @@ exports[`ProductSlider should renders correctly 2`] = `
       data-testid="product-info:footer"
     >
       <div
-        class="control-wrapper"
+        class="root"
       >
         <div
-          class="control"
+          class="main"
         >
           <div
             class="root size-s"
@@ -3862,13 +3862,13 @@ exports[`ProductSlider should renders correctly 2`] = `
           </div>
         </div>
         <div
-          class="unit-text"
+          class="aside"
           data-testid="product-info:cart-step"
         >
           По 5 шт
         </div>
         <div
-          class="bottom-text"
+          class="footer"
           data-testid="product-info:cart-info"
         >
           Комплектация + 50 ₽ при покупке до 20 шт

@@ -4,6 +4,7 @@ import { Parts } from '../parts';
 import { Badge, BadgeProps } from '../../badge';
 import QuickViewSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/MagnifierPlus';
 import { Button } from '@sima-land/ui-nucleons/button';
+import { Stepper } from '@sima-land/ui-nucleons/stepper';
 
 const normalizePrice = (s: string): string => s.replace(/\s+/g, '').replace(',', '.');
 
@@ -429,5 +430,57 @@ describe('ProductInfo', () => {
     fireEvent.error(getByTestId('product-info:adult-image'));
     expect(container.querySelectorAll('.broken-icon')).toHaveLength(0);
     expect(getByTestId('product-info:adult-image').classList.contains('broken')).toBe(true);
+  });
+
+  it('should allow place random children when strict is false', () => {
+    const { container } = render(
+      <ProductInfo strict={false}>
+        <Parts.Title href='https://my-site.com'>My product!</Parts.Title>
+        <Parts.Image src='https://my-site.com/images/1' href='https://my-site.com' />
+        <div>My custom child element!</div>
+      </ProductInfo>,
+    );
+
+    expect(container.textContent).toBe('My product!My custom child element!');
+  });
+
+  it('should render loading cart control', () => {
+    const { container, rerender } = render(
+      <ProductInfo strict={false}>
+        <Parts.Image src='https://my-site.com/images/1' href='https://my-site.com' />
+        <Parts.Title href='https://my-site.com'>My product!</Parts.Title>
+        <Parts.Footer>
+          <Parts.CartControl
+            loading
+            stepText='По 5 шт'
+            markupText='Комплектация + 50 ₽ при покупке до 20 шт'
+          >
+            <Stepper defaultValue={5} size='s' />
+          </Parts.CartControl>
+        </Parts.Footer>
+      </ProductInfo>,
+    );
+
+    expect(container.textContent).toBe('My product!');
+
+    rerender(
+      <ProductInfo strict={false}>
+        <Parts.Image src='https://my-site.com/images/1' href='https://my-site.com' />
+        <Parts.Title href='https://my-site.com'>My product!</Parts.Title>
+        <Parts.Footer>
+          <Parts.CartControl
+            loading={false}
+            stepText='По 5 шт'
+            markupText='Комплектация + 50 ₽ при покупке до 20 шт'
+          >
+            <Stepper defaultValue={5} size='s' />
+          </Parts.CartControl>
+        </Parts.Footer>
+      </ProductInfo>,
+    );
+
+    expect(container.textContent).toBe(
+      'My product!По 5 штКомплектация + 50 ₽ при покупке до 20 шт',
+    );
   });
 });

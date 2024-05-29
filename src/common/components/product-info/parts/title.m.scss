@@ -1,0 +1,23 @@
+@use 'node_modules/@sima-land/ui-nucleons/colors';
+
+.root {
+  max-width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  &.line-clamp {
+    overflow: hidden;
+    word-break: break-word;
+    max-height: 40px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.adult-placeholder {
+  display: block;
+  max-width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  color: colors.$basic-gray87;
+}

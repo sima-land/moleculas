@@ -24,7 +24,7 @@ exports[`ProductInfo adult content should match snapshot 1`] = `
     </svg>
   </span>
   <div
-    class="prices height-limit"
+    class="root height-limit"
     data-testid="product-info:prices"
   >
     <span
@@ -35,13 +35,13 @@ exports[`ProductInfo adult content should match snapshot 1`] = `
     </span>
   </div>
   <span
-    class="adult-info"
+    class="adult-placeholder"
     data-testid="product-info:adult-warning"
   >
     Подтвердите, что вы старше 18 лет, чтобы посмотреть товар.
   </span>
   <div
-    class="footer"
+    class="root"
     data-testid="product-info:footer"
   >
     <a
@@ -154,7 +154,7 @@ exports[`ProductInfo regular content positioned image icon-buttons 1`] = `
     </div>
   </span>
   <div
-    class="prices height-limit"
+    class="root height-limit"
     data-testid="product-info:prices"
   >
     <span
@@ -171,7 +171,7 @@ exports[`ProductInfo regular content positioned image icon-buttons 1`] = `
     </span>
   </div>
   <a
-    class="link link line-clamp basic-gray87"
+    class="link root line-clamp basic-gray87"
     data-testid="product-info:name-link"
     href="https://www.products.com/some-product"
   >
@@ -342,7 +342,7 @@ exports[`ProductInfo regular content should match snapshot 1`] = `
     </div>
   </div>
   <div
-    class="prices height-limit"
+    class="root height-limit"
     data-testid="product-info:prices"
   >
     <span
@@ -359,26 +359,26 @@ exports[`ProductInfo regular content should match snapshot 1`] = `
     </span>
   </div>
   <a
-    class="link link line-clamp basic-gray87"
+    class="link root line-clamp basic-gray87"
     data-testid="product-info:name-link"
     href="https://www.products.com/some-product"
   >
     Some product
   </a>
   <div
-    class="secondary-info"
+    class="root"
   >
     Арт. 123456
   </div>
   <a
-    class="link trademark-link basic-blue"
+    class="link root basic-blue"
     data-testid="product-info:trademark-link"
     href="https://www.test-trademark.ru/"
   >
     Test Trademark
   </a>
   <div
-    class="root size-unset hover-disabled rating"
+    class="root size-unset hover-disabled root"
     data-testid="rating-counter"
   >
     <svg
@@ -403,14 +403,14 @@ exports[`ProductInfo regular content should match snapshot 1`] = `
     </span>
   </div>
   <div
-    class="footer"
+    class="root"
     data-testid="product-info:footer"
   >
     <div
-      class="control-wrapper"
+      class="root"
     >
       <div
-        class="control"
+        class="main"
       >
         <button
           class="root size-s view-primary"
@@ -420,13 +420,13 @@ exports[`ProductInfo regular content should match snapshot 1`] = `
         </button>
       </div>
       <div
-        class="unit-text"
+        class="aside"
         data-testid="product-info:cart-step"
       >
         По 7 шт
       </div>
       <div
-        class="bottom-text"
+        class="footer"
         data-testid="product-info:cart-info"
       >
         Комплектация + 50 ₽ при покупке до 20 шт
