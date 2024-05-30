@@ -1,0 +1,62 @@
+@use 'node_modules/@sima-land/ui-nucleons/colors';
+
+.root {
+  position: relative;
+  width: var(--product-image-width, 200px);
+  height: var(--product-image-height, 200px);
+  overflow: hidden;
+}
+
+.overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--product-image-overlay-color, rgba(0, 0, 0, 0.04));
+
+  // ВАЖНО: чтобы можно было сохранять фото с помощью контекстного меню
+  pointer-events: none;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  max-width: 100%;
+  object-fit: var(--product-image-object-fit, contain);
+}
+
+.adult {
+  opacity: 0.2;
+
+  // ВАЖНО: чтобы нельзя было сохранить с помощью ПКМ
+  pointer-events: none;
+  user-select: none;
+
+  // @todo на больших изображениях blur(24px) не будет скрывать изображение также как на маленьких
+  filter: blur(24px);
+}
+
+.broken-stub {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.adult-icon {
+  display: block;
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: colors.$basic-gray38;
+}

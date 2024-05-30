@@ -34,7 +34,7 @@ export function HoverSlider({
     const list = listRef.current;
     const root = rootRef.current;
 
-    if (!root || !list) {
+    if (!root || !list || slideIds.length < 2) {
       return;
     }
 
@@ -68,7 +68,7 @@ export function HoverSlider({
   useEffect(() => {
     const list = listRef.current;
 
-    if (!list) {
+    if (!list || slideIds.length < 2) {
       return;
     }
 
@@ -85,7 +85,7 @@ export function HoverSlider({
     return () => {
       off.forEach(fn => fn());
     };
-  }, []);
+  }, [slideIds.length]);
 
   const contextValue = useMemo<HoverSliderContextValue>(
     () => ({
