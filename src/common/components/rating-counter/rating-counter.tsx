@@ -71,7 +71,7 @@ export function RatingCounter({
     >
       <StarSVG className={cx('star')} />
 
-      {value > 0 && <span className={cx('value')}>{String(value).replace('.', ',')}</span>}
+      {value > 0 && <span className={cx('value')}>{value}</span>}
 
       <span className={cx('count')}>
         {reviewCount > 0
