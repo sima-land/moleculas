@@ -33,8 +33,11 @@ export function ProductInfoImage({
 
   const adult = restriction === 'adult';
 
-  // @todo сделать не через inline style
-  const opacity = restriction && !adult ? 0.4 : undefined;
+  const rootClassName = classNames(
+    styles.link,
+    restriction && !adult && styles.unavailable,
+    anchorProps?.className,
+  );
 
   return (
     <ProductInfoMedia {...restProps}>
@@ -42,18 +45,18 @@ export function ProductInfoImage({
         {...anchorProps}
         data-testid='product-image-link'
         href={adult ? undefined : href}
-        className={classNames(styles.link, anchorProps?.className)}
+        className={rootClassName}
       >
         {Array.isArray(src) ? (
           <HoverSlider className={styles.slider}>
             {src.map((item, index) => (
               <HoverSliderItem key={index}>
-                <ProductImage src={item} style={{ opacity }} />
+                <ProductImage src={item} className={styles.image} />
               </HoverSliderItem>
             ))}
           </HoverSlider>
         ) : (
-          <ProductImage src={src} className={styles.image} style={{ opacity }} />
+          <ProductImage src={src} className={styles.image} />
         )}
       </a>
 

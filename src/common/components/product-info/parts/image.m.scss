@@ -9,11 +9,13 @@
   height: 100%;
 }
 
+.unavailable .image {
+  opacity: 0.4;
+}
+
 .slider {
   --hover-slider-width: 100%;
   --hover-slider-height: 100%;
-  --product-image-width: 100%;
-  --product-image-height: 100%;
 }
 
 .image {

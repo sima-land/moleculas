@@ -6,7 +6,7 @@ describe('Rating', () => {
     const { container, queryAllByTestId } = render(<RatingCounter value={3.2} reviewCount={54} />);
 
     expect(queryAllByTestId('rating-counter')).toHaveLength(1);
-    expect(container.textContent).toContain('3,2');
+    expect(container.textContent).toContain('3.2');
     expect(container.textContent).toContain('54 отзыва');
   });
 

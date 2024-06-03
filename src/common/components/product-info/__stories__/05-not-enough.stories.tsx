@@ -2,6 +2,7 @@ import { ProductInfo, Parts } from '@sima-land/moleculas/common/components/produ
 import { Badge } from '@sima-land/moleculas/common/components/badge';
 import FavoriteSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
 import MagnifierPlusSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/MagnifierPlus';
+import ComparisonAddSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/ComparisonAdd';
 import strawberries from './images/strawberries.jpg';
 
 export default {
@@ -19,21 +20,27 @@ export function NotEnough() {
         <Parts.Image src={strawberries} href='https://www.sima-land.ru'>
           <Parts.ImageButton
             icon={FavoriteSVG}
-            position={{ x: 'right', y: 'top' }}
+            position={{ x: 'left', y: 'top' }}
             hint='Добавить в избранное'
+            hintDirection='right'
           />
           <Parts.ImageButton
             icon={MagnifierPlusSVG}
-            position={{ x: 'right', y: 'bottom' }}
+            position={{ x: 'right', y: 'top' }}
             hint='Быстрый просмотр'
+          />
+          <Parts.ImageButton
+            icon={ComparisonAddSVG}
+            position={{ x: 'right', y: 'bottom' }}
+            hint='Сравнить'
           />
         </Parts.Image>
 
         <Parts.Badges lineLimit={1}>
-          <Badge color='#b52ea8' fields={[{ type: 'text', value: '-56%' }]} />
-          <Badge color='#ff7200' fields={[{ type: 'text', value: '3 по цене 2' }]} />
-          <Badge color='#2962ff' fields={[{ type: 'text', value: 'Товар месяца' }]} />
-          <Badge color='#00b8d4' fields={[{ type: 'text', value: 'Акция' }]} />
+          <Badge shape='round' color='#b52ea8' fields={[{ type: 'text', value: '-56%' }]} />
+          <Badge shape='round' color='#ff7200' fields={[{ type: 'text', value: '3 по цене 2' }]} />
+          <Badge shape='round' color='#2962ff' fields={[{ type: 'text', value: 'Товар месяца' }]} />
+          <Badge shape='round' color='#00b8d4' fields={[{ type: 'text', value: 'Акция' }]} />
         </Parts.Badges>
 
         <Parts.Prices
