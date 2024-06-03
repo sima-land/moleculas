@@ -7,6 +7,10 @@ import EighteenPlusSVG from '@sima-land/ui-quarks/icons/64x64/Stroked/EighteenPl
 import classNames from 'classnames';
 import styles from './product-image.m.scss';
 
+const defaultAdultContent = <EighteenPlusSVG className={styles['adult-icon']} />;
+
+const defaultStubContent = <ImgStub className={styles['broken-stub']} />;
+
 /**
  * Изображение товара.
  * Добавляет наложение поверх по гайдам.
@@ -17,15 +21,16 @@ import styles from './product-image.m.scss';
  */
 export function ProductImage({
   src,
-  alt,
+  alt = '',
   style,
   className,
   rootRef,
   imageRef,
   imageProps,
   adult: adultFromProps,
-  adultContent = <EighteenPlusSVG className={styles['adult-icon']} />,
-  stubContent = <ImgStub className={styles['broken-stub']} />,
+  adultContent = defaultAdultContent,
+  stubContent = defaultStubContent,
+  'data-testid': testId = 'product-image',
   ...restProps
 }: ProductImageProps) {
   const { adult: adultFromContext } = useContext(ProductImageContext);
@@ -39,6 +44,7 @@ export function ProductImage({
       ref={rootRef}
       style={style}
       className={classNames(styles.root, !failed && styles.overlay, className)}
+      data-testid={testId}
     >
       <img
         {...imageProps}

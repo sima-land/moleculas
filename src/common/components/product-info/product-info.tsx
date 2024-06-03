@@ -2,6 +2,7 @@ import type { ProductInfoProps } from './types';
 import { ProductInfoContext } from './utils';
 import { Parts } from './parts';
 import { defineSlots } from '@sima-land/ui-nucleons/helpers';
+import { ProductImageContext } from '../product-image';
 
 export const UNAVAILABLE_REASON = {
   notEnough: 'Нет в наличии',
@@ -10,7 +11,7 @@ export const UNAVAILABLE_REASON = {
 } as const;
 
 /**
- * Блок информации о товаре по дизайн-гайдам.
+ * Блок информации о товаре.
  * @param props Свойства.
  * @return Элемент.
  */
@@ -21,8 +22,9 @@ export function ProductInfo({ strict = true, restriction, children }: ProductInf
     );
   }
 
-  const { image, badges, prices, title, trademark, footer, secondaryInfo, ratingCounter } =
+  const { media, image, badges, prices, title, trademark, footer, secondaryInfo, ratingCounter } =
     defineSlots(children, {
+      media: Parts.Media,
       image: Parts.Image,
       badges: Parts.Badges,
       prices: Parts.Prices,
@@ -33,15 +35,26 @@ export function ProductInfo({ strict = true, restriction, children }: ProductInf
       footer: Parts.Footer,
     });
 
+  const adult = restriction === 'adult';
+
   return (
     <ProductInfoContext.Provider value={{ restriction }}>
-      {image}
-      {restriction !== 'adult' && badges}
+      <ProductImageContext.Provider value={{ adult }}>
+        {image ?? media}
+      </ProductImageContext.Provider>
+
+      {!adult && badges}
+
       {prices}
+
       {title}
-      {restriction !== 'adult' && secondaryInfo}
+
+      {!adult && secondaryInfo}
+
       {!restriction && trademark}
-      {restriction !== 'adult' && ratingCounter}
+
+      {!adult && ratingCounter}
+
       {footer}
     </ProductInfoContext.Provider>
   );

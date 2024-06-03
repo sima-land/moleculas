@@ -9,20 +9,11 @@ import styles from './footer.m.scss';
  * @param props Свойства.
  * @return Элемент.
  */
-export function ProductInfoFooter({
-  children,
-  className,
-  'data-testid': testId = 'product-info:footer',
-  ...restProps
-}: ProductInfoFooterProps) {
+export function ProductInfoFooter({ children, className, ...restProps }: ProductInfoFooterProps) {
   const { className: classNameFromContext } = useContext(ProductInfoFooterContext);
 
   return (
-    <div
-      className={classNameFromContext ?? classNames(styles.root, className)}
-      data-testid={testId}
-      {...restProps}
-    >
+    <div className={classNameFromContext ?? classNames(styles.root, className)} {...restProps}>
       {children}
     </div>
   );

@@ -1,71 +1,22 @@
 @use 'node_modules/@sima-land/ui-nucleons/colors';
 
-.image-overlay {
-  position: relative;
-  max-width: 100%;
-  margin-bottom: 8px;
-  overflow: hidden;
-
-  // формируем соотношение сторон 1 / 1
-  &::before {
-    content: '';
-    display: block;
-    padding-top: 100%;
-    pointer-events: none;
-  }
-}
-
-.image-link {
+.link {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
-  display: block;
   width: 100%;
   height: 100%;
+}
+
+.slider {
+  --hover-slider-width: 100%;
+  --hover-slider-height: 100%;
+  --product-image-width: 100%;
+  --product-image-height: 100%;
 }
 
 .image {
-  display: block;
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
-  &.broken {
-    display: none;
-  }
-  &.adult {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.2;
-    filter: blur(24px);
-    pointer-events: none;
-  }
-}
-
-.adult-icon {
-  position: absolute;
-  width: 40%;
-  height: 40%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  fill: colors.$basic-gray38;
-}
-
-.broken-icon {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.image-buttons {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  > * {
-    pointer-events: all;
-  }
+  --product-image-width: 100%;
+  --product-image-height: 100%;
 }

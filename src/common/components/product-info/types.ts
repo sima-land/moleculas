@@ -1,5 +1,4 @@
 import type { LinkProps } from '@sima-land/ui-nucleons/link';
-import type { WithTestId } from '@sima-land/ui-nucleons/types';
 import type { HTMLAttributes, ReactNode, Ref } from 'react';
 
 export type ProductInfoRestriction = 'adult' | 'unavailable';
@@ -25,4 +24,4 @@ export interface ProductInfoWaitListAddedLinkProps extends LinkProps {
   rootProps?: HTMLAttributes<HTMLSpanElement>;
 }
 
-export interface ProductInfoFooterProps extends HTMLAttributes<HTMLDivElement>, WithTestId {}
+export interface ProductInfoFooterProps extends HTMLAttributes<HTMLDivElement> {}

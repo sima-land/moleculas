@@ -1,4 +1,5 @@
-import { ProductImage } from './image';
+import { ProductInfoMedia } from './media';
+import { ProductInfoImage } from './image';
 import { ImageButton } from './image-button';
 import { ProductInfoBadges } from './badges';
 import { ProductInfoPrices } from './prices';
@@ -15,7 +16,8 @@ import { AdultConfirmButton } from './adult-confirm-button';
 
 export const Parts = {
   // основные компоненты-слоты и компоненты-запчасти
-  Image: ProductImage,
+  Media: ProductInfoMedia,
+  Image: ProductInfoImage,
   ImageButton,
   Badges: ProductInfoBadges,
   Prices: ProductInfoPrices,

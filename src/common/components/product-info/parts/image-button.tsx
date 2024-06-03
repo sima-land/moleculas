@@ -35,7 +35,6 @@ export function ImageButton({
     strokeWidth: 1.5,
     className: classNames(
       styles['image-button'],
-      position && styles.positioned,
       position && styles[`${position.x}-${position.y}`],
     ),
     onClick,

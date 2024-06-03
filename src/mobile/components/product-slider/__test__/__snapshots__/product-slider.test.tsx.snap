@@ -19,91 +19,92 @@ exports[`ProductSlider should renders correctly 1`] = `
             class="item"
             data-testid="product-slider:item"
           >
-            <span
-              class="root image-overlay"
+            <div
+              class="root ratio"
             >
               <a
-                class="image-link"
-                data-testid="product-info:image-link"
+                class="link"
+                data-testid="product-image-link"
                 href=""
               >
-                <img
-                  class="image"
-                  data-testid="product-info:image"
-                  src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
-                />
+                <div
+                  class="root overlay image"
+                  data-testid="product-image"
+                >
+                  <img
+                    alt=""
+                    class="image"
+                    src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
+                  />
+                </div>
               </a>
               <div
-                class="image-buttons"
+                class="root image-button"
+                data-testid="favorite-button"
+                role="banner"
               >
-                <div
-                  class="root image-button"
-                  data-testid="favorite-button"
-                  role="banner"
+                <svg
+                  class="stroke"
+                  height="24"
+                  stroke="#f5f5f5"
+                  stroke-width="3px"
+                  viewBox="0 0 24 24"
+                  width="24"
                 >
-                  <svg
-                    class="stroke"
-                    height="24"
-                    stroke="#f5f5f5"
-                    stroke-width="3px"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-                    />
-                  </svg>
-                  <svg
-                    class="svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="root image-button"
-                  data-testid="quick-view-button"
-                  role="banner"
+                  <path
+                    d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+                  />
+                </svg>
+                <svg
+                  class="svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
                 >
-                  <svg
-                    class="stroke"
-                    height="24"
-                    stroke="#f5f5f5"
-                    stroke-width="3px"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                  <svg
-                    class="svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
+                  <path
+                    d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+                  />
+                </svg>
               </div>
-            </span>
+              <div
+                class="root image-button"
+                data-testid="quick-view-button"
+                role="banner"
+              >
+                <svg
+                  class="stroke"
+                  height="24"
+                  stroke="#f5f5f5"
+                  stroke-width="3px"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                <svg
+                  class="svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
             <div
               class="root height-limit"
               data-testid="product-info:prices"
@@ -131,7 +132,6 @@ exports[`ProductSlider should renders correctly 1`] = `
             </a>
             <div
               class="footer"
-              data-testid="product-info:footer"
             >
               <div
                 class="root"
@@ -206,91 +206,92 @@ exports[`ProductSlider should renders correctly 1`] = `
             class="item"
             data-testid="product-slider:item"
           >
-            <span
-              class="root image-overlay"
+            <div
+              class="root ratio"
             >
               <a
-                class="image-link"
-                data-testid="product-info:image-link"
+                class="link"
+                data-testid="product-image-link"
                 href=""
               >
-                <img
-                  class="image"
-                  data-testid="product-info:image"
-                  src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
-                />
+                <div
+                  class="root overlay image"
+                  data-testid="product-image"
+                >
+                  <img
+                    alt=""
+                    class="image"
+                    src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+                  />
+                </div>
               </a>
               <div
-                class="image-buttons"
+                class="root image-button"
+                data-testid="favorite-button"
+                role="banner"
               >
-                <div
-                  class="root image-button"
-                  data-testid="favorite-button"
-                  role="banner"
+                <svg
+                  class="stroke"
+                  height="24"
+                  stroke="#f5f5f5"
+                  stroke-width="3px"
+                  viewBox="0 0 24 24"
+                  width="24"
                 >
-                  <svg
-                    class="stroke"
-                    height="24"
-                    stroke="#f5f5f5"
-                    stroke-width="3px"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-                    />
-                  </svg>
-                  <svg
-                    class="svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="root image-button"
-                  data-testid="quick-view-button"
-                  role="banner"
+                  <path
+                    d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+                  />
+                </svg>
+                <svg
+                  class="svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
                 >
-                  <svg
-                    class="stroke"
-                    height="24"
-                    stroke="#f5f5f5"
-                    stroke-width="3px"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                  <svg
-                    class="svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
+                  <path
+                    d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+                  />
+                </svg>
               </div>
-            </span>
+              <div
+                class="root image-button"
+                data-testid="quick-view-button"
+                role="banner"
+              >
+                <svg
+                  class="stroke"
+                  height="24"
+                  stroke="#f5f5f5"
+                  stroke-width="3px"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                <svg
+                  class="svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
             <div
               class="root height-limit"
               data-testid="product-info:prices"
@@ -311,7 +312,6 @@ exports[`ProductSlider should renders correctly 1`] = `
             </a>
             <div
               class="footer"
-              data-testid="product-info:footer"
             >
               <div
                 class="root"
@@ -386,91 +386,92 @@ exports[`ProductSlider should renders correctly 1`] = `
             class="item"
             data-testid="product-slider:item"
           >
-            <span
-              class="root image-overlay"
+            <div
+              class="root ratio"
             >
               <a
-                class="image-link"
-                data-testid="product-info:image-link"
+                class="link"
+                data-testid="product-image-link"
                 href=""
               >
-                <img
-                  class="image"
-                  data-testid="product-info:image"
-                  src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
-                />
+                <div
+                  class="root overlay image"
+                  data-testid="product-image"
+                >
+                  <img
+                    alt=""
+                    class="image"
+                    src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
+                  />
+                </div>
               </a>
               <div
-                class="image-buttons"
+                class="root image-button"
+                data-testid="favorite-button"
+                role="banner"
               >
-                <div
-                  class="root image-button"
-                  data-testid="favorite-button"
-                  role="banner"
+                <svg
+                  class="stroke"
+                  height="24"
+                  stroke="#f5f5f5"
+                  stroke-width="3px"
+                  viewBox="0 0 24 24"
+                  width="24"
                 >
-                  <svg
-                    class="stroke"
-                    height="24"
-                    stroke="#f5f5f5"
-                    stroke-width="3px"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-                    />
-                  </svg>
-                  <svg
-                    class="svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="root image-button"
-                  data-testid="quick-view-button"
-                  role="banner"
+                  <path
+                    d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+                  />
+                </svg>
+                <svg
+                  class="svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
                 >
-                  <svg
-                    class="stroke"
-                    height="24"
-                    stroke="#f5f5f5"
-                    stroke-width="3px"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                  <svg
-                    class="svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
+                  <path
+                    d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+                  />
+                </svg>
               </div>
-            </span>
+              <div
+                class="root image-button"
+                data-testid="quick-view-button"
+                role="banner"
+              >
+                <svg
+                  class="stroke"
+                  height="24"
+                  stroke="#f5f5f5"
+                  stroke-width="3px"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                <svg
+                  class="svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
             <div
               class="root badges line-limit"
               style="--line-limit: 1;"
@@ -563,7 +564,6 @@ exports[`ProductSlider should renders correctly 1`] = `
             </a>
             <div
               class="footer"
-              data-testid="product-info:footer"
             >
               <div
                 class="root"
@@ -638,91 +638,92 @@ exports[`ProductSlider should renders correctly 1`] = `
             class="item"
             data-testid="product-slider:item"
           >
-            <span
-              class="root image-overlay"
+            <div
+              class="root ratio"
             >
               <a
-                class="image-link"
-                data-testid="product-info:image-link"
+                class="link"
+                data-testid="product-image-link"
                 href=""
               >
-                <img
-                  class="image"
-                  data-testid="product-info:image"
-                  src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
-                />
+                <div
+                  class="root overlay image"
+                  data-testid="product-image"
+                >
+                  <img
+                    alt=""
+                    class="image"
+                    src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+                  />
+                </div>
               </a>
               <div
-                class="image-buttons"
+                class="root image-button"
+                data-testid="favorite-button"
+                role="banner"
               >
-                <div
-                  class="root image-button"
-                  data-testid="favorite-button"
-                  role="banner"
+                <svg
+                  class="stroke"
+                  height="24"
+                  stroke="#f5f5f5"
+                  stroke-width="3px"
+                  viewBox="0 0 24 24"
+                  width="24"
                 >
-                  <svg
-                    class="stroke"
-                    height="24"
-                    stroke="#f5f5f5"
-                    stroke-width="3px"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-                    />
-                  </svg>
-                  <svg
-                    class="svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="root image-button"
-                  data-testid="quick-view-button"
-                  role="banner"
+                  <path
+                    d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+                  />
+                </svg>
+                <svg
+                  class="svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
                 >
-                  <svg
-                    class="stroke"
-                    height="24"
-                    stroke="#f5f5f5"
-                    stroke-width="3px"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                  <svg
-                    class="svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
+                  <path
+                    d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+                  />
+                </svg>
               </div>
-            </span>
+              <div
+                class="root image-button"
+                data-testid="quick-view-button"
+                role="banner"
+              >
+                <svg
+                  class="stroke"
+                  height="24"
+                  stroke="#f5f5f5"
+                  stroke-width="3px"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                <svg
+                  class="svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
             <div
               class="root height-limit"
               data-testid="product-info:prices"
@@ -743,7 +744,6 @@ exports[`ProductSlider should renders correctly 1`] = `
             </a>
             <div
               class="footer"
-              data-testid="product-info:footer"
             >
               <div
                 class="root"
@@ -818,91 +818,92 @@ exports[`ProductSlider should renders correctly 1`] = `
             class="item"
             data-testid="product-slider:item"
           >
-            <span
-              class="root image-overlay"
+            <div
+              class="root ratio"
             >
               <a
-                class="image-link"
-                data-testid="product-info:image-link"
+                class="link"
+                data-testid="product-image-link"
                 href=""
               >
-                <img
-                  class="image"
-                  data-testid="product-info:image"
-                  src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
-                />
+                <div
+                  class="root overlay image"
+                  data-testid="product-image"
+                >
+                  <img
+                    alt=""
+                    class="image"
+                    src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
+                  />
+                </div>
               </a>
               <div
-                class="image-buttons"
+                class="root image-button"
+                data-testid="favorite-button"
+                role="banner"
               >
-                <div
-                  class="root image-button"
-                  data-testid="favorite-button"
-                  role="banner"
+                <svg
+                  class="stroke"
+                  height="24"
+                  stroke="#f5f5f5"
+                  stroke-width="3px"
+                  viewBox="0 0 24 24"
+                  width="24"
                 >
-                  <svg
-                    class="stroke"
-                    height="24"
-                    stroke="#f5f5f5"
-                    stroke-width="3px"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-                    />
-                  </svg>
-                  <svg
-                    class="svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="root image-button"
-                  data-testid="quick-view-button"
-                  role="banner"
+                  <path
+                    d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+                  />
+                </svg>
+                <svg
+                  class="svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
                 >
-                  <svg
-                    class="stroke"
-                    height="24"
-                    stroke="#f5f5f5"
-                    stroke-width="3px"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                  <svg
-                    class="svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
+                  <path
+                    d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+                  />
+                </svg>
               </div>
-            </span>
+              <div
+                class="root image-button"
+                data-testid="quick-view-button"
+                role="banner"
+              >
+                <svg
+                  class="stroke"
+                  height="24"
+                  stroke="#f5f5f5"
+                  stroke-width="3px"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                <svg
+                  class="svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
             <div
               class="root height-limit"
               data-testid="product-info:prices"
@@ -923,7 +924,6 @@ exports[`ProductSlider should renders correctly 1`] = `
             </a>
             <div
               class="footer"
-              data-testid="product-info:footer"
             >
               <div
                 class="root"
@@ -998,91 +998,92 @@ exports[`ProductSlider should renders correctly 1`] = `
             class="item"
             data-testid="product-slider:item"
           >
-            <span
-              class="root image-overlay"
+            <div
+              class="root ratio"
             >
               <a
-                class="image-link"
-                data-testid="product-info:image-link"
+                class="link"
+                data-testid="product-image-link"
                 href=""
               >
-                <img
-                  class="image"
-                  data-testid="product-info:image"
-                  src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
-                />
+                <div
+                  class="root overlay image"
+                  data-testid="product-image"
+                >
+                  <img
+                    alt=""
+                    class="image"
+                    src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
+                  />
+                </div>
               </a>
               <div
-                class="image-buttons"
+                class="root image-button"
+                data-testid="favorite-button"
+                role="banner"
               >
-                <div
-                  class="root image-button"
-                  data-testid="favorite-button"
-                  role="banner"
+                <svg
+                  class="stroke"
+                  height="24"
+                  stroke="#f5f5f5"
+                  stroke-width="3px"
+                  viewBox="0 0 24 24"
+                  width="24"
                 >
-                  <svg
-                    class="stroke"
-                    height="24"
-                    stroke="#f5f5f5"
-                    stroke-width="3px"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-                    />
-                  </svg>
-                  <svg
-                    class="svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="root image-button"
-                  data-testid="quick-view-button"
-                  role="banner"
+                  <path
+                    d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+                  />
+                </svg>
+                <svg
+                  class="svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
                 >
-                  <svg
-                    class="stroke"
-                    height="24"
-                    stroke="#f5f5f5"
-                    stroke-width="3px"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                  <svg
-                    class="svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
+                  <path
+                    d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+                  />
+                </svg>
               </div>
-            </span>
+              <div
+                class="root image-button"
+                data-testid="quick-view-button"
+                role="banner"
+              >
+                <svg
+                  class="stroke"
+                  height="24"
+                  stroke="#f5f5f5"
+                  stroke-width="3px"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                <svg
+                  class="svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
             <div
               class="root badges line-limit"
               style="--line-limit: 1;"
@@ -1138,7 +1139,6 @@ exports[`ProductSlider should renders correctly 1`] = `
             </a>
             <div
               class="footer"
-              data-testid="product-info:footer"
             >
               <div
                 class="root"
@@ -1213,91 +1213,92 @@ exports[`ProductSlider should renders correctly 1`] = `
             class="item"
             data-testid="product-slider:item"
           >
-            <span
-              class="root image-overlay"
+            <div
+              class="root ratio"
             >
               <a
-                class="image-link"
-                data-testid="product-info:image-link"
+                class="link"
+                data-testid="product-image-link"
                 href=""
               >
-                <img
-                  class="image"
-                  data-testid="product-info:image"
-                  src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
-                />
+                <div
+                  class="root overlay image"
+                  data-testid="product-image"
+                >
+                  <img
+                    alt=""
+                    class="image"
+                    src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
+                  />
+                </div>
               </a>
               <div
-                class="image-buttons"
+                class="root image-button"
+                data-testid="favorite-button"
+                role="banner"
               >
-                <div
-                  class="root image-button"
-                  data-testid="favorite-button"
-                  role="banner"
+                <svg
+                  class="stroke"
+                  height="24"
+                  stroke="#f5f5f5"
+                  stroke-width="3px"
+                  viewBox="0 0 24 24"
+                  width="24"
                 >
-                  <svg
-                    class="stroke"
-                    height="24"
-                    stroke="#f5f5f5"
-                    stroke-width="3px"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-                    />
-                  </svg>
-                  <svg
-                    class="svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="root image-button"
-                  data-testid="quick-view-button"
-                  role="banner"
+                  <path
+                    d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+                  />
+                </svg>
+                <svg
+                  class="svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
                 >
-                  <svg
-                    class="stroke"
-                    height="24"
-                    stroke="#f5f5f5"
-                    stroke-width="3px"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                  <svg
-                    class="svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
+                  <path
+                    d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+                  />
+                </svg>
               </div>
-            </span>
+              <div
+                class="root image-button"
+                data-testid="quick-view-button"
+                role="banner"
+              >
+                <svg
+                  class="stroke"
+                  height="24"
+                  stroke="#f5f5f5"
+                  stroke-width="3px"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                <svg
+                  class="svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
             <div
               class="root height-limit"
               data-testid="product-info:prices"
@@ -1318,7 +1319,6 @@ exports[`ProductSlider should renders correctly 1`] = `
             </a>
             <div
               class="footer"
-              data-testid="product-info:footer"
             >
               <div
                 class="root"
@@ -1393,91 +1393,92 @@ exports[`ProductSlider should renders correctly 1`] = `
             class="item"
             data-testid="product-slider:item"
           >
-            <span
-              class="root image-overlay"
+            <div
+              class="root ratio"
             >
               <a
-                class="image-link"
-                data-testid="product-info:image-link"
+                class="link"
+                data-testid="product-image-link"
                 href=""
               >
-                <img
-                  class="image"
-                  data-testid="product-info:image"
-                  src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
-                />
+                <div
+                  class="root overlay image"
+                  data-testid="product-image"
+                >
+                  <img
+                    alt=""
+                    class="image"
+                    src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
+                  />
+                </div>
               </a>
               <div
-                class="image-buttons"
+                class="root image-button"
+                data-testid="favorite-button"
+                role="banner"
               >
-                <div
-                  class="root image-button"
-                  data-testid="favorite-button"
-                  role="banner"
+                <svg
+                  class="stroke"
+                  height="24"
+                  stroke="#f5f5f5"
+                  stroke-width="3px"
+                  viewBox="0 0 24 24"
+                  width="24"
                 >
-                  <svg
-                    class="stroke"
-                    height="24"
-                    stroke="#f5f5f5"
-                    stroke-width="3px"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-                    />
-                  </svg>
-                  <svg
-                    class="svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="root image-button"
-                  data-testid="quick-view-button"
-                  role="banner"
+                  <path
+                    d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+                  />
+                </svg>
+                <svg
+                  class="svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
                 >
-                  <svg
-                    class="stroke"
-                    height="24"
-                    stroke="#f5f5f5"
-                    stroke-width="3px"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                  <svg
-                    class="svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
+                  <path
+                    d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+                  />
+                </svg>
               </div>
-            </span>
+              <div
+                class="root image-button"
+                data-testid="quick-view-button"
+                role="banner"
+              >
+                <svg
+                  class="stroke"
+                  height="24"
+                  stroke="#f5f5f5"
+                  stroke-width="3px"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                <svg
+                  class="svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
             <div
               class="root height-limit"
               data-testid="product-info:prices"
@@ -1504,7 +1505,6 @@ exports[`ProductSlider should renders correctly 1`] = `
             </a>
             <div
               class="footer"
-              data-testid="product-info:footer"
             >
               <div
                 class="root"
@@ -1579,91 +1579,92 @@ exports[`ProductSlider should renders correctly 1`] = `
             class="item"
             data-testid="product-slider:item"
           >
-            <span
-              class="root image-overlay"
+            <div
+              class="root ratio"
             >
               <a
-                class="image-link"
-                data-testid="product-info:image-link"
+                class="link"
+                data-testid="product-image-link"
                 href=""
               >
-                <img
-                  class="image"
-                  data-testid="product-info:image"
-                  src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
-                />
+                <div
+                  class="root overlay image"
+                  data-testid="product-image"
+                >
+                  <img
+                    alt=""
+                    class="image"
+                    src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
+                  />
+                </div>
               </a>
               <div
-                class="image-buttons"
+                class="root image-button"
+                data-testid="favorite-button"
+                role="banner"
               >
-                <div
-                  class="root image-button"
-                  data-testid="favorite-button"
-                  role="banner"
+                <svg
+                  class="stroke"
+                  height="24"
+                  stroke="#f5f5f5"
+                  stroke-width="3px"
+                  viewBox="0 0 24 24"
+                  width="24"
                 >
-                  <svg
-                    class="stroke"
-                    height="24"
-                    stroke="#f5f5f5"
-                    stroke-width="3px"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-                    />
-                  </svg>
-                  <svg
-                    class="svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="root image-button"
-                  data-testid="quick-view-button"
-                  role="banner"
+                  <path
+                    d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+                  />
+                </svg>
+                <svg
+                  class="svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
                 >
-                  <svg
-                    class="stroke"
-                    height="24"
-                    stroke="#f5f5f5"
-                    stroke-width="3px"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                  <svg
-                    class="svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
+                  <path
+                    d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+                  />
+                </svg>
               </div>
-            </span>
+              <div
+                class="root image-button"
+                data-testid="quick-view-button"
+                role="banner"
+              >
+                <svg
+                  class="stroke"
+                  height="24"
+                  stroke="#f5f5f5"
+                  stroke-width="3px"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                <svg
+                  class="svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
             <div
               class="root height-limit"
               data-testid="product-info:prices"
@@ -1690,7 +1691,6 @@ exports[`ProductSlider should renders correctly 1`] = `
             </a>
             <div
               class="footer"
-              data-testid="product-info:footer"
             >
               <div
                 class="root"
@@ -1765,91 +1765,92 @@ exports[`ProductSlider should renders correctly 1`] = `
             class="item"
             data-testid="product-slider:item"
           >
-            <span
-              class="root image-overlay"
+            <div
+              class="root ratio"
             >
               <a
-                class="image-link"
-                data-testid="product-info:image-link"
+                class="link"
+                data-testid="product-image-link"
                 href=""
               >
-                <img
-                  class="image"
-                  data-testid="product-info:image"
-                  src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
-                />
+                <div
+                  class="root overlay image"
+                  data-testid="product-image"
+                >
+                  <img
+                    alt=""
+                    class="image"
+                    src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
+                  />
+                </div>
               </a>
               <div
-                class="image-buttons"
+                class="root image-button"
+                data-testid="favorite-button"
+                role="banner"
               >
-                <div
-                  class="root image-button"
-                  data-testid="favorite-button"
-                  role="banner"
+                <svg
+                  class="stroke"
+                  height="24"
+                  stroke="#f5f5f5"
+                  stroke-width="3px"
+                  viewBox="0 0 24 24"
+                  width="24"
                 >
-                  <svg
-                    class="stroke"
-                    height="24"
-                    stroke="#f5f5f5"
-                    stroke-width="3px"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-                    />
-                  </svg>
-                  <svg
-                    class="svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="root image-button"
-                  data-testid="quick-view-button"
-                  role="banner"
+                  <path
+                    d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+                  />
+                </svg>
+                <svg
+                  class="svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
                 >
-                  <svg
-                    class="stroke"
-                    height="24"
-                    stroke="#f5f5f5"
-                    stroke-width="3px"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                  <svg
-                    class="svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path
-                      d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
+                  <path
+                    d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+                  />
+                </svg>
               </div>
-            </span>
+              <div
+                class="root image-button"
+                data-testid="quick-view-button"
+                role="banner"
+              >
+                <svg
+                  class="stroke"
+                  height="24"
+                  stroke="#f5f5f5"
+                  stroke-width="3px"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                <svg
+                  class="svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
             <div
               class="root height-limit"
               data-testid="product-info:prices"
@@ -1870,7 +1871,6 @@ exports[`ProductSlider should renders correctly 1`] = `
             </a>
             <div
               class="footer"
-              data-testid="product-info:footer"
             >
               <div
                 class="root"
@@ -1954,91 +1954,92 @@ exports[`ProductSlider should renders correctly 2`] = `
     class="item"
     data-testid="product-slider:item"
   >
-    <span
-      class="root image-overlay"
+    <div
+      class="root ratio"
     >
       <a
-        class="image-link"
-        data-testid="product-info:image-link"
+        class="link"
+        data-testid="product-image-link"
         href=""
       >
-        <img
-          class="image"
-          data-testid="product-info:image"
-          src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
-        />
+        <div
+          class="root overlay image"
+          data-testid="product-image"
+        >
+          <img
+            alt=""
+            class="image"
+            src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
+          />
+        </div>
       </a>
       <div
-        class="image-buttons"
+        class="root image-button"
+        data-testid="favorite-button"
+        role="banner"
       >
-        <div
-          class="root image-button"
-          data-testid="favorite-button"
-          role="banner"
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
         >
-          <svg
-            class="stroke"
-            height="24"
-            stroke="#f5f5f5"
-            stroke-width="3px"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-            />
-          </svg>
-          <svg
-            class="svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-            />
-          </svg>
-        </div>
-        <div
-          class="root image-button"
-          data-testid="quick-view-button"
-          role="banner"
+          <path
+            d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
         >
-          <svg
-            class="stroke"
-            height="24"
-            stroke="#f5f5f5"
-            stroke-width="3px"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-          <svg
-            class="svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
+          <path
+            d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+          />
+        </svg>
       </div>
-    </span>
+      <div
+        class="root image-button"
+        data-testid="quick-view-button"
+        role="banner"
+      >
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
     <div
       class="root height-limit"
       data-testid="product-info:prices"
@@ -2066,7 +2067,6 @@ exports[`ProductSlider should renders correctly 2`] = `
     </a>
     <div
       class="footer"
-      data-testid="product-info:footer"
     >
       <div
         class="root"
@@ -2141,91 +2141,92 @@ exports[`ProductSlider should renders correctly 2`] = `
     class="item"
     data-testid="product-slider:item"
   >
-    <span
-      class="root image-overlay"
+    <div
+      class="root ratio"
     >
       <a
-        class="image-link"
-        data-testid="product-info:image-link"
+        class="link"
+        data-testid="product-image-link"
         href=""
       >
-        <img
-          class="image"
-          data-testid="product-info:image"
-          src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
-        />
+        <div
+          class="root overlay image"
+          data-testid="product-image"
+        >
+          <img
+            alt=""
+            class="image"
+            src="https://cdn3.static1-sima-land.com/items/2300382/0/280.jpg?v=1594121798"
+          />
+        </div>
       </a>
       <div
-        class="image-buttons"
+        class="root image-button"
+        data-testid="favorite-button"
+        role="banner"
       >
-        <div
-          class="root image-button"
-          data-testid="favorite-button"
-          role="banner"
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
         >
-          <svg
-            class="stroke"
-            height="24"
-            stroke="#f5f5f5"
-            stroke-width="3px"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-            />
-          </svg>
-          <svg
-            class="svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-            />
-          </svg>
-        </div>
-        <div
-          class="root image-button"
-          data-testid="quick-view-button"
-          role="banner"
+          <path
+            d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
         >
-          <svg
-            class="stroke"
-            height="24"
-            stroke="#f5f5f5"
-            stroke-width="3px"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-          <svg
-            class="svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
+          <path
+            d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+          />
+        </svg>
       </div>
-    </span>
+      <div
+        class="root image-button"
+        data-testid="quick-view-button"
+        role="banner"
+      >
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
     <div
       class="root height-limit"
       data-testid="product-info:prices"
@@ -2246,7 +2247,6 @@ exports[`ProductSlider should renders correctly 2`] = `
     </a>
     <div
       class="footer"
-      data-testid="product-info:footer"
     >
       <div
         class="root"
@@ -2321,91 +2321,92 @@ exports[`ProductSlider should renders correctly 2`] = `
     class="item"
     data-testid="product-slider:item"
   >
-    <span
-      class="root image-overlay"
+    <div
+      class="root ratio"
     >
       <a
-        class="image-link"
-        data-testid="product-info:image-link"
+        class="link"
+        data-testid="product-image-link"
         href=""
       >
-        <img
-          class="image"
-          data-testid="product-info:image"
-          src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
-        />
+        <div
+          class="root overlay image"
+          data-testid="product-image"
+        >
+          <img
+            alt=""
+            class="image"
+            src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
+          />
+        </div>
       </a>
       <div
-        class="image-buttons"
+        class="root image-button"
+        data-testid="favorite-button"
+        role="banner"
       >
-        <div
-          class="root image-button"
-          data-testid="favorite-button"
-          role="banner"
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
         >
-          <svg
-            class="stroke"
-            height="24"
-            stroke="#f5f5f5"
-            stroke-width="3px"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-            />
-          </svg>
-          <svg
-            class="svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-            />
-          </svg>
-        </div>
-        <div
-          class="root image-button"
-          data-testid="quick-view-button"
-          role="banner"
+          <path
+            d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
         >
-          <svg
-            class="stroke"
-            height="24"
-            stroke="#f5f5f5"
-            stroke-width="3px"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-          <svg
-            class="svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
+          <path
+            d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+          />
+        </svg>
       </div>
-    </span>
+      <div
+        class="root image-button"
+        data-testid="quick-view-button"
+        role="banner"
+      >
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
     <div
       class="root badges line-limit"
       style="--line-limit: 1;"
@@ -2498,7 +2499,6 @@ exports[`ProductSlider should renders correctly 2`] = `
     </a>
     <div
       class="footer"
-      data-testid="product-info:footer"
     >
       <div
         class="root"
@@ -2573,91 +2573,92 @@ exports[`ProductSlider should renders correctly 2`] = `
     class="item"
     data-testid="product-slider:item"
   >
-    <span
-      class="root image-overlay"
+    <div
+      class="root ratio"
     >
       <a
-        class="image-link"
-        data-testid="product-info:image-link"
+        class="link"
+        data-testid="product-image-link"
         href=""
       >
-        <img
-          class="image"
-          data-testid="product-info:image"
-          src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
-        />
+        <div
+          class="root overlay image"
+          data-testid="product-image"
+        >
+          <img
+            alt=""
+            class="image"
+            src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+          />
+        </div>
       </a>
       <div
-        class="image-buttons"
+        class="root image-button"
+        data-testid="favorite-button"
+        role="banner"
       >
-        <div
-          class="root image-button"
-          data-testid="favorite-button"
-          role="banner"
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
         >
-          <svg
-            class="stroke"
-            height="24"
-            stroke="#f5f5f5"
-            stroke-width="3px"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-            />
-          </svg>
-          <svg
-            class="svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-            />
-          </svg>
-        </div>
-        <div
-          class="root image-button"
-          data-testid="quick-view-button"
-          role="banner"
+          <path
+            d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
         >
-          <svg
-            class="stroke"
-            height="24"
-            stroke="#f5f5f5"
-            stroke-width="3px"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-          <svg
-            class="svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
+          <path
+            d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+          />
+        </svg>
       </div>
-    </span>
+      <div
+        class="root image-button"
+        data-testid="quick-view-button"
+        role="banner"
+      >
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
     <div
       class="root height-limit"
       data-testid="product-info:prices"
@@ -2678,7 +2679,6 @@ exports[`ProductSlider should renders correctly 2`] = `
     </a>
     <div
       class="footer"
-      data-testid="product-info:footer"
     >
       <div
         class="root"
@@ -2753,91 +2753,92 @@ exports[`ProductSlider should renders correctly 2`] = `
     class="item"
     data-testid="product-slider:item"
   >
-    <span
-      class="root image-overlay"
+    <div
+      class="root ratio"
     >
       <a
-        class="image-link"
-        data-testid="product-info:image-link"
+        class="link"
+        data-testid="product-image-link"
         href=""
       >
-        <img
-          class="image"
-          data-testid="product-info:image"
-          src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
-        />
+        <div
+          class="root overlay image"
+          data-testid="product-image"
+        >
+          <img
+            alt=""
+            class="image"
+            src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
+          />
+        </div>
       </a>
       <div
-        class="image-buttons"
+        class="root image-button"
+        data-testid="favorite-button"
+        role="banner"
       >
-        <div
-          class="root image-button"
-          data-testid="favorite-button"
-          role="banner"
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
         >
-          <svg
-            class="stroke"
-            height="24"
-            stroke="#f5f5f5"
-            stroke-width="3px"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-            />
-          </svg>
-          <svg
-            class="svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-            />
-          </svg>
-        </div>
-        <div
-          class="root image-button"
-          data-testid="quick-view-button"
-          role="banner"
+          <path
+            d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
         >
-          <svg
-            class="stroke"
-            height="24"
-            stroke="#f5f5f5"
-            stroke-width="3px"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-          <svg
-            class="svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
+          <path
+            d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+          />
+        </svg>
       </div>
-    </span>
+      <div
+        class="root image-button"
+        data-testid="quick-view-button"
+        role="banner"
+      >
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
     <div
       class="root height-limit"
       data-testid="product-info:prices"
@@ -2858,7 +2859,6 @@ exports[`ProductSlider should renders correctly 2`] = `
     </a>
     <div
       class="footer"
-      data-testid="product-info:footer"
     >
       <div
         class="root"
@@ -2933,91 +2933,92 @@ exports[`ProductSlider should renders correctly 2`] = `
     class="item"
     data-testid="product-slider:item"
   >
-    <span
-      class="root image-overlay"
+    <div
+      class="root ratio"
     >
       <a
-        class="image-link"
-        data-testid="product-info:image-link"
+        class="link"
+        data-testid="product-image-link"
         href=""
       >
-        <img
-          class="image"
-          data-testid="product-info:image"
-          src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
-        />
+        <div
+          class="root overlay image"
+          data-testid="product-image"
+        >
+          <img
+            alt=""
+            class="image"
+            src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
+          />
+        </div>
       </a>
       <div
-        class="image-buttons"
+        class="root image-button"
+        data-testid="favorite-button"
+        role="banner"
       >
-        <div
-          class="root image-button"
-          data-testid="favorite-button"
-          role="banner"
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
         >
-          <svg
-            class="stroke"
-            height="24"
-            stroke="#f5f5f5"
-            stroke-width="3px"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-            />
-          </svg>
-          <svg
-            class="svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-            />
-          </svg>
-        </div>
-        <div
-          class="root image-button"
-          data-testid="quick-view-button"
-          role="banner"
+          <path
+            d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
         >
-          <svg
-            class="stroke"
-            height="24"
-            stroke="#f5f5f5"
-            stroke-width="3px"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-          <svg
-            class="svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
+          <path
+            d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+          />
+        </svg>
       </div>
-    </span>
+      <div
+        class="root image-button"
+        data-testid="quick-view-button"
+        role="banner"
+      >
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
     <div
       class="root badges line-limit"
       style="--line-limit: 1;"
@@ -3073,7 +3074,6 @@ exports[`ProductSlider should renders correctly 2`] = `
     </a>
     <div
       class="footer"
-      data-testid="product-info:footer"
     >
       <div
         class="root"
@@ -3148,91 +3148,92 @@ exports[`ProductSlider should renders correctly 2`] = `
     class="item"
     data-testid="product-slider:item"
   >
-    <span
-      class="root image-overlay"
+    <div
+      class="root ratio"
     >
       <a
-        class="image-link"
-        data-testid="product-info:image-link"
+        class="link"
+        data-testid="product-image-link"
         href=""
       >
-        <img
-          class="image"
-          data-testid="product-info:image"
-          src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
-        />
+        <div
+          class="root overlay image"
+          data-testid="product-image"
+        >
+          <img
+            alt=""
+            class="image"
+            src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
+          />
+        </div>
       </a>
       <div
-        class="image-buttons"
+        class="root image-button"
+        data-testid="favorite-button"
+        role="banner"
       >
-        <div
-          class="root image-button"
-          data-testid="favorite-button"
-          role="banner"
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
         >
-          <svg
-            class="stroke"
-            height="24"
-            stroke="#f5f5f5"
-            stroke-width="3px"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-            />
-          </svg>
-          <svg
-            class="svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-            />
-          </svg>
-        </div>
-        <div
-          class="root image-button"
-          data-testid="quick-view-button"
-          role="banner"
+          <path
+            d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
         >
-          <svg
-            class="stroke"
-            height="24"
-            stroke="#f5f5f5"
-            stroke-width="3px"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-          <svg
-            class="svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
+          <path
+            d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+          />
+        </svg>
       </div>
-    </span>
+      <div
+        class="root image-button"
+        data-testid="quick-view-button"
+        role="banner"
+      >
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
     <div
       class="root height-limit"
       data-testid="product-info:prices"
@@ -3253,7 +3254,6 @@ exports[`ProductSlider should renders correctly 2`] = `
     </a>
     <div
       class="footer"
-      data-testid="product-info:footer"
     >
       <div
         class="root"
@@ -3328,91 +3328,92 @@ exports[`ProductSlider should renders correctly 2`] = `
     class="item"
     data-testid="product-slider:item"
   >
-    <span
-      class="root image-overlay"
+    <div
+      class="root ratio"
     >
       <a
-        class="image-link"
-        data-testid="product-info:image-link"
+        class="link"
+        data-testid="product-image-link"
         href=""
       >
-        <img
-          class="image"
-          data-testid="product-info:image"
-          src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
-        />
+        <div
+          class="root overlay image"
+          data-testid="product-image"
+        >
+          <img
+            alt=""
+            class="image"
+            src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
+          />
+        </div>
       </a>
       <div
-        class="image-buttons"
+        class="root image-button"
+        data-testid="favorite-button"
+        role="banner"
       >
-        <div
-          class="root image-button"
-          data-testid="favorite-button"
-          role="banner"
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
         >
-          <svg
-            class="stroke"
-            height="24"
-            stroke="#f5f5f5"
-            stroke-width="3px"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-            />
-          </svg>
-          <svg
-            class="svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-            />
-          </svg>
-        </div>
-        <div
-          class="root image-button"
-          data-testid="quick-view-button"
-          role="banner"
+          <path
+            d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
         >
-          <svg
-            class="stroke"
-            height="24"
-            stroke="#f5f5f5"
-            stroke-width="3px"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-          <svg
-            class="svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
+          <path
+            d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+          />
+        </svg>
       </div>
-    </span>
+      <div
+        class="root image-button"
+        data-testid="quick-view-button"
+        role="banner"
+      >
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
     <div
       class="root height-limit"
       data-testid="product-info:prices"
@@ -3439,7 +3440,6 @@ exports[`ProductSlider should renders correctly 2`] = `
     </a>
     <div
       class="footer"
-      data-testid="product-info:footer"
     >
       <div
         class="root"
@@ -3514,91 +3514,92 @@ exports[`ProductSlider should renders correctly 2`] = `
     class="item"
     data-testid="product-slider:item"
   >
-    <span
-      class="root image-overlay"
+    <div
+      class="root ratio"
     >
       <a
-        class="image-link"
-        data-testid="product-info:image-link"
+        class="link"
+        data-testid="product-image-link"
         href=""
       >
-        <img
-          class="image"
-          data-testid="product-info:image"
-          src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
-        />
+        <div
+          class="root overlay image"
+          data-testid="product-image"
+        >
+          <img
+            alt=""
+            class="image"
+            src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
+          />
+        </div>
       </a>
       <div
-        class="image-buttons"
+        class="root image-button"
+        data-testid="favorite-button"
+        role="banner"
       >
-        <div
-          class="root image-button"
-          data-testid="favorite-button"
-          role="banner"
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
         >
-          <svg
-            class="stroke"
-            height="24"
-            stroke="#f5f5f5"
-            stroke-width="3px"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-            />
-          </svg>
-          <svg
-            class="svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-            />
-          </svg>
-        </div>
-        <div
-          class="root image-button"
-          data-testid="quick-view-button"
-          role="banner"
+          <path
+            d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
         >
-          <svg
-            class="stroke"
-            height="24"
-            stroke="#f5f5f5"
-            stroke-width="3px"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-          <svg
-            class="svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
+          <path
+            d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+          />
+        </svg>
       </div>
-    </span>
+      <div
+        class="root image-button"
+        data-testid="quick-view-button"
+        role="banner"
+      >
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
     <div
       class="root height-limit"
       data-testid="product-info:prices"
@@ -3625,7 +3626,6 @@ exports[`ProductSlider should renders correctly 2`] = `
     </a>
     <div
       class="footer"
-      data-testid="product-info:footer"
     >
       <div
         class="root"
@@ -3700,91 +3700,92 @@ exports[`ProductSlider should renders correctly 2`] = `
     class="item"
     data-testid="product-slider:item"
   >
-    <span
-      class="root image-overlay"
+    <div
+      class="root ratio"
     >
       <a
-        class="image-link"
-        data-testid="product-info:image-link"
+        class="link"
+        data-testid="product-image-link"
         href=""
       >
-        <img
-          class="image"
-          data-testid="product-info:image"
-          src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
-        />
+        <div
+          class="root overlay image"
+          data-testid="product-image"
+        >
+          <img
+            alt=""
+            class="image"
+            src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
+          />
+        </div>
       </a>
       <div
-        class="image-buttons"
+        class="root image-button"
+        data-testid="favorite-button"
+        role="banner"
       >
-        <div
-          class="root image-button"
-          data-testid="favorite-button"
-          role="banner"
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
         >
-          <svg
-            class="stroke"
-            height="24"
-            stroke="#f5f5f5"
-            stroke-width="3px"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-            />
-          </svg>
-          <svg
-            class="svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
-            />
-          </svg>
-        </div>
-        <div
-          class="root image-button"
-          data-testid="quick-view-button"
-          role="banner"
+          <path
+            d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
         >
-          <svg
-            class="stroke"
-            height="24"
-            stroke="#f5f5f5"
-            stroke-width="3px"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-          <svg
-            class="svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
+          <path
+            d="M19.657 4.01C17.018 2.174 13.76 3.031 12 5.132c-1.759-2.1-5.018-2.968-7.657-1.122-1.4.98-2.279 2.632-2.339 4.376-.14 3.958 3.299 7.13 8.547 11.996l.1.091c.76.704 1.93.704 2.689-.01l.11-.102c5.248-4.855 8.676-8.027 8.546-11.985-.06-1.734-.94-3.386-2.339-4.366ZM12.1 18.862l-.1.102-.1-.102C7.142 14.466 4.003 11.559 4.003 8.61c0-2.04 1.5-3.57 3.499-3.57 1.22 0 2.415.634 3.122 1.593.333.451.817.814 1.378.814.564 0 1.05-.367 1.385-.821.702-.955 1.894-1.586 3.111-1.586 2 0 3.5 1.53 3.5 3.57 0 2.947-3.14 5.855-7.898 10.25Z"
+          />
+        </svg>
       </div>
-    </span>
+      <div
+        class="root image-button"
+        data-testid="quick-view-button"
+        role="banner"
+      >
+        <svg
+          class="stroke"
+          height="24"
+          stroke="#f5f5f5"
+          stroke-width="3px"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+        <svg
+          class="svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            d="M10.5 9a1 1 0 1 1 2 0v1.5H14a1 1 0 1 1 0 2h-1.5V14a1 1 0 1 1-2 0v-1.5H9a1 1 0 1 1 0-2h1.5V9Z"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M11.5 3a8.5 8.5 0 1 0 5.262 15.176l3.53 3.531a1 1 0 0 0 1.415-1.414l-3.531-3.531A8.5 8.5 0 0 0 11.5 3ZM5 11.5a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
     <div
       class="root height-limit"
       data-testid="product-info:prices"
@@ -3805,7 +3806,6 @@ exports[`ProductSlider should renders correctly 2`] = `
     </a>
     <div
       class="footer"
-      data-testid="product-info:footer"
     >
       <div
         class="root"

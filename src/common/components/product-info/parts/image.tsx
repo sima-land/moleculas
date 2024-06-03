@@ -1,69 +1,64 @@
-import { ReactNode, useContext, useEffect, useState, MouseEventHandler } from 'react';
-import { ImageOverlay } from '../../../../desktop/components/gallery-modal/components/image-overlay';
+import { AnchorHTMLAttributes, useContext } from 'react';
+import { ProductImage } from '../../product-image';
+import { HoverSlider, HoverSliderItem } from '../../hover-slider';
 import { ProductInfoContext } from '../utils';
-import { ImgStub } from '../../img-stub';
-import EighteenPlusSVG from '@sima-land/ui-quarks/icons/64x64/Stroked/EighteenPlus';
-import classNames from 'classnames/bind';
+import { ProductInfoMedia, ProductInfoMediaProps } from './media';
+import classNames from 'classnames';
 import styles from './image.m.scss';
 
-const cx = classNames.bind(styles);
+export interface ProductInfoImageProps extends ProductInfoMediaProps {
+  /** Ссылка на картинку или список ссылок для вывода слайдера. */
+  src?: string | string[];
 
-export interface ImageProps {
-  src?: string;
-  alt?: string;
+  /** Ссылка на товар. */
   href?: string;
-  onClick?: MouseEventHandler<HTMLAnchorElement>;
-  children?: ReactNode;
-  opacity?: number;
+
+  /** Прочие атрибуты элемента-ссылки. */
+  anchorProps?: AnchorHTMLAttributes<HTMLAnchorElement>;
 }
 
 /**
- * Слот - изображение товара.
+ * Картинки товара.
  * @param props Свойства.
  * @return Элемент.
  */
-export function ProductImage({ src, alt, href, onClick, children, opacity }: ImageProps) {
+export function ProductInfoImage({
+  src,
+  href,
+  children,
+  anchorProps,
+  ...restProps
+}: ProductInfoImageProps) {
   const { restriction } = useContext(ProductInfoContext);
-  const defaultOpacity = restriction ? 0.4 : undefined;
-  const [broken, setBroken] = useState(false);
 
-  useEffect(() => setBroken(false), [src]);
+  const adult = restriction === 'adult';
+
+  // @todo сделать не через inline style
+  const opacity = restriction && !adult ? 0.4 : undefined;
 
   return (
-    <ImageOverlay className={cx('image-overlay')}>
-      {restriction === 'adult' ? (
-        <>
-          <img
-            onError={() => setBroken(true)}
-            alt={alt}
-            src={src}
-            className={cx('image', 'adult', { broken })}
-            data-testid='product-info:adult-image'
-          />
-          <EighteenPlusSVG className={cx('adult-icon')} />
-        </>
-      ) : (
-        <>
-          <a
-            href={href}
-            className={cx('image-link')}
-            onClick={onClick}
-            data-testid='product-info:image-link'
-          >
-            <img
-              onError={() => setBroken(true)}
-              alt={alt}
-              src={src}
-              className={cx('image', { broken })}
-              style={{ opacity: typeof opacity === 'number' ? opacity : defaultOpacity }}
-              data-testid='product-info:image'
-            />
-            {broken && <ImgStub className={cx('broken-icon')} />}
-          </a>
+    <ProductInfoMedia {...restProps}>
+      <a
+        {...anchorProps}
+        data-testid='product-image-link'
+        href={adult ? undefined : href}
+        className={classNames(styles.link, anchorProps?.className)}
+      >
+        {Array.isArray(src) ? (
+          <HoverSlider className={styles.slider}>
+            {src.map((item, index) => (
+              <HoverSliderItem key={index}>
+                <ProductImage src={item} style={{ opacity }} />
+              </HoverSliderItem>
+            ))}
+          </HoverSlider>
+        ) : (
+          <ProductImage src={src} className={styles.image} style={{ opacity }} />
+        )}
+      </a>
 
-          {children && <div className={cx('image-buttons')}>{children}</div>}
-        </>
-      )}
-    </ImageOverlay>
+      {/* ВАЖНО: выводим children за пределами ссылки чтобы клики по кнопкам не вызывали переход по ссылке */}
+      {!adult && <>{children}</>}
+    </ProductInfoMedia>
   );
 }
