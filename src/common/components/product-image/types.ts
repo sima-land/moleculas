@@ -1,3 +1,4 @@
+import { WithTestId } from '@sima-land/ui-nucleons/types';
 import type { CSSProperties, HTMLAttributes, ImgHTMLAttributes, ReactNode, Ref } from 'react';
 
 export interface ProductImageStyle extends CSSProperties {
@@ -7,7 +8,7 @@ export interface ProductImageStyle extends CSSProperties {
   '--product-image-overlay-color'?: string;
 }
 
-export interface ProductImageProps extends HTMLAttributes<HTMLDivElement> {
+export interface ProductImageProps extends HTMLAttributes<HTMLDivElement>, WithTestId {
   /** Источник изображения. */
   src?: string;
 

@@ -9,48 +9,32 @@
   outline: 0;
   background: transparent;
   position: absolute;
-  --gutter: 8px;
-  right: var(--gutter);
-  cursor: pointer;
-  &:not(.positioned) {
-    &:nth-child(1) {
-      top: var(--gutter);
-    }
-    &:nth-child(2) {
-      bottom: var(--gutter);
-    }
-    &:nth-child(3) {
-      top: var(--gutter);
-      left: var(--gutter);
-    }
-    &:nth-child(3) {
-      top: var(--gutter);
-      left: var(--gutter);
-    }
-  }
-  &.left-top {
-    left: var(--gutter);
-    top: var(--gutter);
-  }
-  &.left-bottom {
-    left: var(--gutter);
-    bottom: var(--gutter);
-  }
-  &.right-top {
-    right: var(--gutter);
-    top: var(--gutter);
-  }
-  &.right-bottom {
-    right: var(--gutter);
-    bottom: var(--gutter);
-  }
-  &:nth-child(n + 5) {
-    display: none;
-  }
   &:hover {
+    cursor: pointer;
     fill: colors.$basic-gray54;
   }
-  @include breakpoints.down('ml') {
-    --gutter: 4px;
-  }
+}
+
+.left-top {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+}
+
+.left-bottom {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+}
+
+.right-top {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+
+.right-bottom {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
 }

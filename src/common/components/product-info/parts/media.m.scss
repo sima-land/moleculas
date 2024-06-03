@@ -1,0 +1,10 @@
+.root {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.ratio {
+  padding-bottom: calc((var(--product-info-media-ratio, 1)) * 100%);
+}

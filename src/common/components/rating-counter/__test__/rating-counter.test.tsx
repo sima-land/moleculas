@@ -24,4 +24,10 @@ describe('Rating', () => {
     expect(queryAllByTestId('rating-counter')).toHaveLength(0);
     expect(queryAllByTestId('my-rating-counter')).toHaveLength(1);
   });
+
+  it('should handle "hoverDisabled" prop', () => {
+    const { getByTestId } = render(<RatingCounter value={1} reviewCount={2} hoverDisabled />);
+
+    expect(getByTestId('rating-counter').classList.contains('hover-disabled')).toBe(true);
+  });
 });

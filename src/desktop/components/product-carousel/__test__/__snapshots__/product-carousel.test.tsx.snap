@@ -23,21 +23,26 @@ exports[`ProductCarousel should renders correctly 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -61,21 +66,26 @@ exports[`ProductCarousel should renders correctly 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -99,21 +109,26 @@ exports[`ProductCarousel should renders correctly 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -137,21 +152,26 @@ exports[`ProductCarousel should renders correctly 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -175,21 +195,26 @@ exports[`ProductCarousel should renders correctly 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -213,21 +238,26 @@ exports[`ProductCarousel should renders correctly 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -251,21 +281,26 @@ exports[`ProductCarousel should renders correctly 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -289,21 +324,26 @@ exports[`ProductCarousel should renders correctly 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -333,21 +373,26 @@ exports[`ProductCarousel should renders correctly 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -377,21 +422,26 @@ exports[`ProductCarousel should renders correctly 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -442,21 +492,26 @@ exports[`ProductCarousel should renders correctly with only one item 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -516,21 +571,26 @@ exports[`ProductCarousel should set size depend on media query 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -554,21 +614,26 @@ exports[`ProductCarousel should set size depend on media query 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -592,21 +657,26 @@ exports[`ProductCarousel should set size depend on media query 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -630,21 +700,26 @@ exports[`ProductCarousel should set size depend on media query 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -668,21 +743,26 @@ exports[`ProductCarousel should set size depend on media query 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -706,21 +786,26 @@ exports[`ProductCarousel should set size depend on media query 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -744,21 +829,26 @@ exports[`ProductCarousel should set size depend on media query 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -782,21 +872,26 @@ exports[`ProductCarousel should set size depend on media query 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -826,21 +921,26 @@ exports[`ProductCarousel should set size depend on media query 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -870,21 +970,26 @@ exports[`ProductCarousel should set size depend on media query 1`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -935,21 +1040,26 @@ exports[`ProductCarousel should set size depend on media query 2`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/3572134/0/280.jpg?v=1594121833"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -973,21 +1083,26 @@ exports[`ProductCarousel should set size depend on media query 2`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/4661073/0/1600.jpg?v=1604914605"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -1011,21 +1126,26 @@ exports[`ProductCarousel should set size depend on media query 2`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/2300383/0/280.jpg?v=1594121773"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -1049,21 +1169,26 @@ exports[`ProductCarousel should set size depend on media query 2`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/1550239/0/280.jpg?v=1600179085"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -1087,21 +1212,26 @@ exports[`ProductCarousel should set size depend on media query 2`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/4002852/0/280.jpg?v=1594121894"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -1125,21 +1255,26 @@ exports[`ProductCarousel should set size depend on media query 2`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/4005918/0/280.jpg?v=1594121898"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -1163,21 +1298,26 @@ exports[`ProductCarousel should set size depend on media query 2`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/2300389/0/280.jpg?v=1594121830"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -1201,21 +1341,26 @@ exports[`ProductCarousel should set size depend on media query 2`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/2117838/0/280.jpg?v=1594121766"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -1245,21 +1390,26 @@ exports[`ProductCarousel should set size depend on media query 2`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/1108673/0/280.jpg?v=1594103956"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
@@ -1289,21 +1439,26 @@ exports[`ProductCarousel should set size depend on media query 2`] = `
               class="item size-xs-4 size-s-3 size-m-2 size-l-2 size-xl-2"
               data-testid="product-carousel:item"
             >
-              <span
-                class="root image-overlay"
+              <div
+                class="root ratio"
               >
                 <a
-                  class="image-link"
-                  data-testid="product-info:image-link"
+                  class="link"
+                  data-testid="product-image-link"
                   href="https://www.sima-land.ru/"
                 >
-                  <img
-                    class="image"
-                    data-testid="product-info:image"
-                    src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
-                  />
+                  <div
+                    class="root overlay image"
+                    data-testid="product-image"
+                  >
+                    <img
+                      alt=""
+                      class="image"
+                      src="https://cdn3.static1-sima-land.com/items/4150936/0/280.jpg?v=1580193932"
+                    />
+                  </div>
                 </a>
-              </span>
+              </div>
               <div
                 class="root height-limit"
                 data-testid="product-info:prices"
