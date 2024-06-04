@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ProductInfoCartControlProps } from '../types';
 import styles from './cart-control.m.scss';
 import classNames from 'classnames';
 
@@ -12,12 +12,7 @@ export function ProductInfoCartControl({
   stepText,
   markupText,
   loading,
-}: {
-  children?: ReactNode;
-  stepText?: string;
-  markupText?: string;
-  loading?: boolean;
-}) {
+}: ProductInfoCartControlProps) {
   return (
     <div className={classNames(styles.root, loading && styles.loading)}>
       <div className={classNames(styles.main)}>{!loading && children}</div>

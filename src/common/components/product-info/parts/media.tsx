@@ -1,19 +1,6 @@
-import type { CSSProperties, HTMLAttributes } from 'react';
-import type { ProductImageStyle } from '../../product-image/types';
+import { ProductInfoMediaProps } from '../types';
 import classNames from 'classnames';
 import styles from './media.m.scss';
-
-export interface ProductInfoMediaStyle extends CSSProperties {
-  '--product-info-media-ratio'?: string;
-}
-
-export interface ProductInfoMediaProps extends HTMLAttributes<HTMLDivElement> {
-  /** Включено ли фиксированное соотношение сторон. */
-  aspectRatio?: boolean;
-
-  /** Стили. */
-  style?: ProductInfoMediaStyle & ProductImageStyle;
-}
 
 /**
  * Слот для вывода медиа-файлов товара.

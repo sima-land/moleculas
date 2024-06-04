@@ -1,5 +1,15 @@
 import type { LinkProps } from '@sima-land/ui-nucleons/link';
-import type { HTMLAttributes, ReactNode, Ref } from 'react';
+import type { StrokedSVGProps } from '@sima-land/ui-nucleons/stroked-svg';
+import type { ProductImageStyle } from '../product-image';
+import type {
+  AnchorHTMLAttributes,
+  CSSProperties,
+  ElementType,
+  HTMLAttributes,
+  ReactNode,
+  Ref,
+  SVGAttributes,
+} from 'react';
 
 export type ProductInfoRestriction = 'adult' | 'unavailable';
 
@@ -14,8 +24,54 @@ export interface ProductInfoProps {
   strict?: boolean;
 }
 
+export interface ProductInfoMediaStyle extends CSSProperties {
+  '--product-info-media-ratio'?: string;
+}
+
+export interface ProductInfoMediaProps extends HTMLAttributes<HTMLDivElement> {
+  /** Включено ли фиксированное соотношение сторон. */
+  aspectRatio?: boolean;
+
+  /** Стили. */
+  style?: ProductInfoMediaStyle & ProductImageStyle;
+}
+
+export interface ProductInfoImageProps extends ProductInfoMediaProps {
+  /** Ссылка на картинку или список ссылок для вывода слайдера. */
+  src?: string | string[];
+
+  /** Ссылка на товар. */
+  href?: string;
+
+  /** Прочие атрибуты элемента-ссылки. */
+  anchorProps?: AnchorHTMLAttributes<HTMLAnchorElement>;
+}
+
+export interface ImageButtonProps extends Omit<StrokedSVGProps, 'component'> {
+  icon: ElementType<SVGAttributes<SVGSVGElement>>;
+
+  /** Задает абсолютное позиционирование. */
+  position?: {
+    x: 'left' | 'right';
+    y: 'top' | 'bottom';
+  };
+
+  /** Хинт. */
+  hint?: ReactNode;
+
+  /** Направление хинта. */
+  hintDirection?: 'top' | 'left' | 'bottom' | 'right';
+}
+
 export interface ProductInfoTitleProps extends LinkProps {
   adultPlaceholder?: ReactNode;
+}
+
+export interface ProductInfoPricesProps {
+  price: number;
+  oldPrice?: number;
+  currencyGrapheme?: string;
+  unavailableReason?: ReactNode;
 }
 
 export interface ProductInfoWaitListAddedLinkProps extends LinkProps {
@@ -25,3 +81,10 @@ export interface ProductInfoWaitListAddedLinkProps extends LinkProps {
 }
 
 export interface ProductInfoFooterProps extends HTMLAttributes<HTMLDivElement> {}
+
+export interface ProductInfoCartControlProps {
+  children?: ReactNode;
+  stepText?: string;
+  markupText?: string;
+  loading?: boolean;
+}

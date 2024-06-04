@@ -1,4 +1,5 @@
-import { type ReactNode, useContext } from 'react';
+import { ProductInfoPricesProps } from '../types';
+import { useContext } from 'react';
 import { ProductInfoContext } from '../utils';
 import { Price } from '@sima-land/ui-nucleons/price';
 import classNames from 'classnames';
@@ -14,12 +15,7 @@ export function ProductInfoPrices({
   oldPrice,
   currencyGrapheme,
   unavailableReason = 'Товар недоступен',
-}: {
-  price: number;
-  oldPrice?: number;
-  currencyGrapheme?: string;
-  unavailableReason?: ReactNode;
-}) {
+}: ProductInfoPricesProps) {
   const { restriction } = useContext(ProductInfoContext);
 
   const rootClassName = classNames(styles.root, {
