@@ -1,21 +1,11 @@
-import { AnchorHTMLAttributes, useContext } from 'react';
+import { ProductInfoImageProps } from '../types';
+import { useContext } from 'react';
 import { ProductImage } from '../../product-image';
 import { HoverSlider, HoverSliderItem } from '../../hover-slider';
 import { ProductInfoContext } from '../utils';
-import { ProductInfoMedia, ProductInfoMediaProps } from './media';
+import { ProductInfoMedia } from './media';
 import classNames from 'classnames';
 import styles from './image.m.scss';
-
-export interface ProductInfoImageProps extends ProductInfoMediaProps {
-  /** Ссылка на картинку или список ссылок для вывода слайдера. */
-  src?: string | string[];
-
-  /** Ссылка на товар. */
-  href?: string;
-
-  /** Прочие атрибуты элемента-ссылки. */
-  anchorProps?: AnchorHTMLAttributes<HTMLAnchorElement>;
-}
 
 /**
  * Картинки товара.

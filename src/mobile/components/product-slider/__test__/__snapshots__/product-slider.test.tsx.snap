@@ -39,7 +39,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 </div>
               </a>
               <div
-                class="root image-button"
+                class="root root"
                 data-testid="favorite-button"
                 role="banner"
               >
@@ -67,7 +67,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 </svg>
               </div>
               <div
-                class="root image-button"
+                class="root root"
                 data-testid="quick-view-button"
                 role="banner"
               >
@@ -226,7 +226,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 </div>
               </a>
               <div
-                class="root image-button"
+                class="root root"
                 data-testid="favorite-button"
                 role="banner"
               >
@@ -254,7 +254,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 </svg>
               </div>
               <div
-                class="root image-button"
+                class="root root"
                 data-testid="quick-view-button"
                 role="banner"
               >
@@ -406,7 +406,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 </div>
               </a>
               <div
-                class="root image-button"
+                class="root root"
                 data-testid="favorite-button"
                 role="banner"
               >
@@ -434,7 +434,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 </svg>
               </div>
               <div
-                class="root image-button"
+                class="root root"
                 data-testid="quick-view-button"
                 role="banner"
               >
@@ -658,7 +658,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 </div>
               </a>
               <div
-                class="root image-button"
+                class="root root"
                 data-testid="favorite-button"
                 role="banner"
               >
@@ -686,7 +686,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 </svg>
               </div>
               <div
-                class="root image-button"
+                class="root root"
                 data-testid="quick-view-button"
                 role="banner"
               >
@@ -838,7 +838,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 </div>
               </a>
               <div
-                class="root image-button"
+                class="root root"
                 data-testid="favorite-button"
                 role="banner"
               >
@@ -866,7 +866,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 </svg>
               </div>
               <div
-                class="root image-button"
+                class="root root"
                 data-testid="quick-view-button"
                 role="banner"
               >
@@ -1018,7 +1018,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 </div>
               </a>
               <div
-                class="root image-button"
+                class="root root"
                 data-testid="favorite-button"
                 role="banner"
               >
@@ -1046,7 +1046,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 </svg>
               </div>
               <div
-                class="root image-button"
+                class="root root"
                 data-testid="quick-view-button"
                 role="banner"
               >
@@ -1233,7 +1233,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 </div>
               </a>
               <div
-                class="root image-button"
+                class="root root"
                 data-testid="favorite-button"
                 role="banner"
               >
@@ -1261,7 +1261,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 </svg>
               </div>
               <div
-                class="root image-button"
+                class="root root"
                 data-testid="quick-view-button"
                 role="banner"
               >
@@ -1413,7 +1413,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 </div>
               </a>
               <div
-                class="root image-button"
+                class="root root"
                 data-testid="favorite-button"
                 role="banner"
               >
@@ -1441,7 +1441,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 </svg>
               </div>
               <div
-                class="root image-button"
+                class="root root"
                 data-testid="quick-view-button"
                 role="banner"
               >
@@ -1599,7 +1599,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 </div>
               </a>
               <div
-                class="root image-button"
+                class="root root"
                 data-testid="favorite-button"
                 role="banner"
               >
@@ -1627,7 +1627,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 </svg>
               </div>
               <div
-                class="root image-button"
+                class="root root"
                 data-testid="quick-view-button"
                 role="banner"
               >
@@ -1785,7 +1785,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 </div>
               </a>
               <div
-                class="root image-button"
+                class="root root"
                 data-testid="favorite-button"
                 role="banner"
               >
@@ -1813,7 +1813,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 </svg>
               </div>
               <div
-                class="root image-button"
+                class="root root"
                 data-testid="quick-view-button"
                 role="banner"
               >
@@ -1974,7 +1974,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         </div>
       </a>
       <div
-        class="root image-button"
+        class="root root"
         data-testid="favorite-button"
         role="banner"
       >
@@ -2002,7 +2002,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         </svg>
       </div>
       <div
-        class="root image-button"
+        class="root root"
         data-testid="quick-view-button"
         role="banner"
       >
@@ -2161,7 +2161,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         </div>
       </a>
       <div
-        class="root image-button"
+        class="root root"
         data-testid="favorite-button"
         role="banner"
       >
@@ -2189,7 +2189,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         </svg>
       </div>
       <div
-        class="root image-button"
+        class="root root"
         data-testid="quick-view-button"
         role="banner"
       >
@@ -2341,7 +2341,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         </div>
       </a>
       <div
-        class="root image-button"
+        class="root root"
         data-testid="favorite-button"
         role="banner"
       >
@@ -2369,7 +2369,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         </svg>
       </div>
       <div
-        class="root image-button"
+        class="root root"
         data-testid="quick-view-button"
         role="banner"
       >
@@ -2593,7 +2593,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         </div>
       </a>
       <div
-        class="root image-button"
+        class="root root"
         data-testid="favorite-button"
         role="banner"
       >
@@ -2621,7 +2621,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         </svg>
       </div>
       <div
-        class="root image-button"
+        class="root root"
         data-testid="quick-view-button"
         role="banner"
       >
@@ -2773,7 +2773,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         </div>
       </a>
       <div
-        class="root image-button"
+        class="root root"
         data-testid="favorite-button"
         role="banner"
       >
@@ -2801,7 +2801,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         </svg>
       </div>
       <div
-        class="root image-button"
+        class="root root"
         data-testid="quick-view-button"
         role="banner"
       >
@@ -2953,7 +2953,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         </div>
       </a>
       <div
-        class="root image-button"
+        class="root root"
         data-testid="favorite-button"
         role="banner"
       >
@@ -2981,7 +2981,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         </svg>
       </div>
       <div
-        class="root image-button"
+        class="root root"
         data-testid="quick-view-button"
         role="banner"
       >
@@ -3168,7 +3168,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         </div>
       </a>
       <div
-        class="root image-button"
+        class="root root"
         data-testid="favorite-button"
         role="banner"
       >
@@ -3196,7 +3196,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         </svg>
       </div>
       <div
-        class="root image-button"
+        class="root root"
         data-testid="quick-view-button"
         role="banner"
       >
@@ -3348,7 +3348,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         </div>
       </a>
       <div
-        class="root image-button"
+        class="root root"
         data-testid="favorite-button"
         role="banner"
       >
@@ -3376,7 +3376,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         </svg>
       </div>
       <div
-        class="root image-button"
+        class="root root"
         data-testid="quick-view-button"
         role="banner"
       >
@@ -3534,7 +3534,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         </div>
       </a>
       <div
-        class="root image-button"
+        class="root root"
         data-testid="favorite-button"
         role="banner"
       >
@@ -3562,7 +3562,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         </svg>
       </div>
       <div
-        class="root image-button"
+        class="root root"
         data-testid="quick-view-button"
         role="banner"
       >
@@ -3720,7 +3720,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         </div>
       </a>
       <div
-        class="root image-button"
+        class="root root"
         data-testid="favorite-button"
         role="banner"
       >
@@ -3748,7 +3748,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         </svg>
       </div>
       <div
-        class="root image-button"
+        class="root root"
         data-testid="quick-view-button"
         role="banner"
       >

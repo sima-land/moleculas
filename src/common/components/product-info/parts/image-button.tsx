@@ -1,7 +1,7 @@
+import { type ImageButtonProps } from '../types';
+import { type StrokedSVGProps, StrokedSVG } from '@sima-land/ui-nucleons/stroked-svg';
 import { Hint, useHintFloating, useHintOnHover } from '@sima-land/ui-nucleons/hint';
-import { StrokedSVG, type StrokedSVGProps } from '@sima-land/ui-nucleons/stroked-svg';
-import { type MouseEventHandler, useState } from 'react';
-import { type WithTestId } from '@sima-land/ui-nucleons/types';
+import { useState } from 'react';
 import classNames from 'classnames';
 import styles from './image-button.m.scss';
 
@@ -12,35 +12,13 @@ import styles from './image-button.m.scss';
  */
 export function ImageButton({
   icon,
-  fill,
-  onClick,
   hint,
   hintDirection = 'left',
   position,
   'data-testid': testId,
-}: WithTestId & {
-  icon: StrokedSVGProps['component'];
-  fill?: string;
-  onClick?: MouseEventHandler<HTMLDivElement>;
-  hint?: string;
-  hintDirection?: 'top' | 'left' | 'bottom' | 'right';
-  position?: {
-    x: 'left' | 'right';
-    y: 'top' | 'bottom';
-  };
-}) {
-  const commonProps: Omit<StrokedSVGProps, 'component'> = {
-    role: 'banner',
-    fill,
-    strokeWidth: 1.5,
-    className: classNames(
-      styles['image-button'],
-      position && styles[`${position.x}-${position.y}`],
-    ),
-    onClick,
-    'data-testid': testId,
-  };
-
+  className,
+  ...restProps
+}: ImageButtonProps) {
   // состояние
   const [open, setOpen] = useState<boolean>(false);
 
@@ -54,9 +32,22 @@ export function ImageButton({
   // пользовательское взаимодействие
   const { getReferenceProps, getFloatingProps } = useHintOnHover(floating);
 
+  const rootProps: Omit<StrokedSVGProps, 'component'> = {
+    role: 'banner',
+    ...restProps,
+    strokeWidth: 1.5,
+    className: classNames(
+      styles.root,
+      position && styles[`${position.x}-${position.y}`],
+      className,
+    ),
+    'data-testid': testId,
+  };
+
   return (
     <>
-      <StrokedSVG ref={refs.setReference} component={icon} {...getReferenceProps(commonProps)} />
+      <StrokedSVG ref={refs.setReference} component={icon} {...getReferenceProps(rootProps)} />
+
       {hint && (
         <Hint
           open={open}

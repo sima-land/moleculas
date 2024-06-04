@@ -1,3 +1,3 @@
-export type { ProductImageProps } from './types';
+export type { ProductImageProps, ProductImageStyle } from './types';
 export { ProductImage } from './product-image';
 export { ProductImageContext } from './utils';
