@@ -28,6 +28,7 @@ const getSizeClasses = (size: ProductCarouselProps['itemSize']) =>
  * @return Элемент.
  */
 export function ProductCarousel({
+  infinite = true,
   className,
   itemSize = { xs: 4, s: 3, m: 2, l: 2, xl: 2 },
   itemProps,
@@ -69,6 +70,7 @@ export function ProductCarousel({
     <div ref={rootRef} className={cx('root', className)} data-testid='product-carousel:root'>
       {items.length > 0 && (
         <Carousel
+          infinite={infinite}
           step={3}
           draggable={false}
           items={items}

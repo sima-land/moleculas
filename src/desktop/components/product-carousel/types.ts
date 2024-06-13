@@ -26,6 +26,9 @@ export interface ProductCarouselProps {
 
   /** Предоставит свойства для элемента карусели. */
   itemProps?: { style?: CSSProperties; className?: string };
+
+  /** Активирует "бесконечную" прокрутку карусели. */
+  infinite?: boolean;
 }
 
 export interface HoverCardProps {
