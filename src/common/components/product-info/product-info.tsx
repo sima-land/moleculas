@@ -8,6 +8,7 @@ export const UNAVAILABLE_REASON = {
   notEnough: 'Нет в наличии',
   unavailableInRegion: 'Товар недоступен в вашем регионе',
   onlyForLegalEntities: 'Товар доступен только для юридических лиц',
+  adult: 'Товар для взрослых',
 } as const;
 
 /**

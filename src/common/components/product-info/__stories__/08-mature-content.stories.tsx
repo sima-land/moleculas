@@ -47,7 +47,7 @@ export function Adult() {
           price={250.48}
           oldPrice={320.96}
           currencyGrapheme='₽'
-          unavailableReason='Товар доступен только для юридических лиц'
+          unavailableReason='Товар для взрослых'
         />
 
         <Parts.Title href='https://www.sima-land.ru'>

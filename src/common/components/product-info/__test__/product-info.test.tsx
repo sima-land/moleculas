@@ -187,7 +187,7 @@ describe('ProductInfo', () => {
 
     expect(queryAllByTestId('product-image')).toHaveLength(1);
     expect(queryAllByTestId('badge')).toHaveLength(0);
-    expect(queryAllByTestId('product-info:price')).toHaveLength(1);
+    expect(queryAllByTestId('product-info:price')).toHaveLength(0);
     expect(queryAllByTestId('product-info:old-price')).toHaveLength(0);
     expect(queryAllByTestId('product-info:name-link')).toHaveLength(0);
     expect(queryAllByTestId('product-info:trademark-link')).toHaveLength(0);

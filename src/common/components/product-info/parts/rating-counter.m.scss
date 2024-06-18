@@ -3,10 +3,5 @@
 
 .root {
   margin-top: 8px;
-  @include breakpoints.down('mm') {
-    @include rating-counter-util.size-s;
-  }
-  @include breakpoints.up('mm') {
-    @include rating-counter-util.size-m;
-  }
+  @include rating-counter-util.size-s;
 }
