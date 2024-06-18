@@ -19,12 +19,12 @@ export function ProductInfoPrices({
   const { restriction } = useContext(ProductInfoContext);
 
   const rootClassName = classNames(styles.root, {
-    [styles['height-limit']]: !restriction || restriction === 'adult',
+    [styles['height-limit']]: !restriction,
   });
 
   return (
     <div className={rootClassName} data-testid='product-info:prices'>
-      {(!restriction || restriction === 'adult') && (
+      {!restriction && (
         <>
           <Price
             value={price}
@@ -45,7 +45,7 @@ export function ProductInfoPrices({
         </>
       )}
 
-      {restriction === 'unavailable' && unavailableReason}
+      {restriction && unavailableReason}
     </div>
   );
 }

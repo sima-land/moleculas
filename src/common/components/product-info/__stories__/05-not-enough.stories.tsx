@@ -47,7 +47,7 @@ export function NotEnough() {
           price={250.48}
           oldPrice={320.96}
           currencyGrapheme='₽'
-          unavailableReason='Товара нет в наличии'
+          unavailableReason='Нет в наличии'
         />
 
         <Parts.Title href='https://www.sima-land.ru'>
