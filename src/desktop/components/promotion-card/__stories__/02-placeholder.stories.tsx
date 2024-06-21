@@ -3,21 +3,16 @@ import {
   PromotionCardProps,
 } from '@sima-land/moleculas/desktop/components/promotion-card';
 import { addDays, addHours, addYears } from 'date-fns';
-import cactus from './cactus.jpg';
-import cherry from './cherry.jpg';
-import phone from './phone.jpg';
-import cone from './ice-cream-cone.jpg';
+import cactus from './images/cactus.jpg';
+import cherry from './images/cherry.jpg';
+import phone from './images/phone.jpg';
+import cone from './images/ice-cream-cone.jpg';
 
 export default {
   title: 'desktop/PromotionCard',
   component: PromotionCard,
   parameters: {
     layout: 'padded',
-    docs: {
-      description: {
-        component: 'Компонент карточки акции',
-      },
-    },
   },
 };
 
@@ -57,22 +52,6 @@ const demoItems: PromotionCardProps[] = [
     postfix: 'Особая акция',
   },
 ];
-
-export function Primary() {
-  return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
-      {demoItems.map((props, index) => (
-        <PromotionCard
-          key={index}
-          style={{ width: '320px', margin: '0 32px 32px 0', flexShrink: 0 }}
-          {...props}
-        />
-      ))}
-    </div>
-  );
-}
-
-Primary.storyName = 'Простой пример';
 
 export function Placeholder() {
   return (

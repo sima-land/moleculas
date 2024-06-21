@@ -25,45 +25,6 @@ function Container({ children }: { children: ReactNode }) {
   return <div style={{ width: '480px', margin: '80px auto' }}>{children}</div>;
 }
 
-export function Primary() {
-  return (
-    <Container>
-      <ProductRow
-        {...productData}
-        onActionsClick={() => alert('Это всего лишь просто пример')}
-        onWishButtonClick={() => alert('Мы учтём, что вам это нравится')}
-      />
-    </Container>
-  );
-}
-
-Primary.storyName = 'Простой пример';
-
-export function Wished() {
-  return (
-    <Container>
-      <ProductRow
-        {...productData}
-        isWished
-        onActionsClick={() => alert('Это всего лишь просто пример')}
-        onWishButtonClick={() => alert('Мы учтём, что вам это нравится')}
-      />
-    </Container>
-  );
-}
-
-Wished.storyName = 'В избранном';
-
-export function InitialCount() {
-  return (
-    <Container>
-      <ProductRow {...productData} initialCount={12} />
-    </Container>
-  );
-}
-
-InitialCount.storyName = 'Было в заказе';
-
 export function MoveOrder() {
   return (
     <Container>

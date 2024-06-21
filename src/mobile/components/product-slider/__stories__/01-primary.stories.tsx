@@ -14,11 +14,6 @@ export default {
   component: ProductSlider,
   parameters: {
     layout: 'fullscreen',
-    docs: {
-      description: {
-        component: 'Компонент слайдера рекомендаций',
-      },
-    },
   },
 };
 
@@ -98,62 +93,3 @@ export function Primary() {
 }
 
 Primary.storyName = 'Простой пример';
-
-export function Unavailable() {
-  return (
-    <Bootstrap>
-      <ProductSlider>
-        {items.map((item, index) => (
-          <ProductInfo key={index} restriction='unavailable'>
-            <Parts.Image src={item.imageSrc} href={item.url} />
-
-            <Parts.Prices
-              price={item.price}
-              oldPrice={item.oldPrice}
-              currencyGrapheme={item.currencyGrapheme}
-              unavailableReason='Товара нет в наличии'
-            />
-
-            <Parts.Title href={item.url}>{item.name}</Parts.Title>
-
-            <Parts.Footer>
-              <Parts.WaitListAddButton
-                onClick={() => alert('Представим добавление в лист ожидания...')}
-              />
-            </Parts.Footer>
-          </ProductInfo>
-        ))}
-      </ProductSlider>
-    </Bootstrap>
-  );
-}
-
-Unavailable.storyName = 'Недоступные товары';
-
-export function Adult() {
-  return (
-    <Bootstrap>
-      <ProductSlider>
-        {items.map((item, index) => (
-          <ProductInfo key={index} restriction='adult'>
-            <Parts.Image src={item.imageSrc} href={item.url} />
-
-            <Parts.Prices
-              price={item.price}
-              oldPrice={item.oldPrice}
-              currencyGrapheme={item.currencyGrapheme}
-            />
-
-            <Parts.Title href={item.url}>{item.name}</Parts.Title>
-
-            <Parts.Footer>
-              <Parts.AdultConfirmButton onClick={() => 'Поверим на слово =)'} />
-            </Parts.Footer>
-          </ProductInfo>
-        ))}
-      </ProductSlider>
-    </Bootstrap>
-  );
-}
-
-Adult.storyName = 'Товары для взрослых';
