@@ -4,15 +4,15 @@ import { Category, breadcrumbs } from './fixture';
 import { Panel } from '@sima-land/ui-nucleons/panel';
 import { Layout } from '@sima-land/ui-nucleons/layout';
 
-export default {
-  title: 'common/Breadcrumbs',
-  component: Breadcrumbs,
+export const meta = {
+  category: 'common/Breadcrumbs',
+  title: 'Обработка событий',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function HandlingEvents() {
+export default function HandlingEvents() {
   const [messages, setMessages] = useState<string[]>(() => []);
 
   const sendMessage = useCallback((item: string) => {
@@ -79,5 +79,3 @@ export function HandlingEvents() {
     </Layout>
   );
 }
-
-HandlingEvents.storyName = 'Обработка событий';

@@ -1,15 +1,15 @@
 import { PaginationControls } from '@sima-land/moleculas/common/components/pagination-controls';
 import { useState } from 'react';
 
-export default {
-  title: 'common/PaginationControls',
-  component: PaginationControls,
+export const meta = {
+  category: 'common/PaginationControls',
+  title: 'Тест: варианты данных',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function TestRanges() {
+export default function TestRanges() {
   const MyPagination = ({ total }: { total: number }) => {
     const [page, setPage] = useState(1);
 
@@ -32,5 +32,3 @@ export function TestRanges() {
     </div>
   );
 }
-
-TestRanges.storyName = 'Тест: варианты данных';

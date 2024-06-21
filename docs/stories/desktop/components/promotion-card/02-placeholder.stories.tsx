@@ -8,9 +8,9 @@ import cherry from './images/cherry.jpg';
 import phone from './images/phone.jpg';
 import cone from './images/ice-cream-cone.jpg';
 
-export default {
-  title: 'desktop/PromotionCard',
-  component: PromotionCard,
+export const meta = {
+  category: 'desktop/PromotionCard',
+  title: 'Загрузка',
   parameters: {
     layout: 'padded',
   },
@@ -53,7 +53,7 @@ const demoItems: PromotionCardProps[] = [
   },
 ];
 
-export function Placeholder() {
+export default function Placeholder() {
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
       {demoItems.map((_, index) => (
@@ -65,5 +65,3 @@ export function Placeholder() {
     </div>
   );
 }
-
-Placeholder.storyName = 'Загрузка';

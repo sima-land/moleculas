@@ -11,14 +11,15 @@ import { Modal, ModalBody, getResponsiveModalProps } from '@sima-land/ui-nucleon
 import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
 import { Tabs } from '@sima-land/ui-nucleons/tabs';
 
-export default {
-  title: 'common/MediaLayout',
+export const meta = {
+  category: 'common/MediaLayout',
+  title: 'Вкладки',
   parameters: {
     layout: 'fullscreen',
   },
 };
 
-export function MediaTabs() {
+export default function MediaTabs() {
   const styles = {
     display: 'flex',
     justifyContent: 'center',
@@ -65,5 +66,3 @@ export function MediaTabs() {
     </Modal>
   );
 }
-
-MediaTabs.storyName = 'Вкладки';

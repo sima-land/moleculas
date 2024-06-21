@@ -19,15 +19,15 @@ import { ArrowButton } from '@sima-land/ui-nucleons/arrow-button';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks';
 import { mixed } from './fixture';
 
-export default {
-  title: 'common/MediaLayout',
-  component: MediaLayout,
+export const meta = {
+  category: 'common/MediaLayout',
+  title: 'Галерея',
   parameters: {
     layout: 'fullscreen',
   },
 };
 
-export function ExampleGallery() {
+export default function ExampleGallery() {
   const desktop = useBreakpoint('xs+');
 
   const [targetIndex, setTargetIndex] = useState(0);
@@ -123,5 +123,3 @@ export function ExampleGallery() {
     </Modal>
   );
 }
-
-ExampleGallery.storyName = 'Галерея';

@@ -5,15 +5,15 @@ import MagnifierPlusSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Magnifier
 import ComparisonAddSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/ComparisonAdd';
 import strawberries from './images/strawberries.jpg';
 
-export default {
-  title: 'common/ProductInfo',
-  component: ProductInfo,
+export const meta = {
+  category: 'common/ProductInfo',
+  title: 'Товар для взрослых',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function Adult() {
+export default function Adult() {
   return (
     <div style={{ width: '200px' }}>
       <ProductInfo restriction='adult'>
@@ -69,5 +69,3 @@ export function Adult() {
     </div>
   );
 }
-
-Adult.storyName = 'Товар для взрослых';

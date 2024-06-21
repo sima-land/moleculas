@@ -11,9 +11,9 @@ import MagnifierPlusSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Magnifier
 import ComparisonAddSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/ComparisonAdd';
 import strawberries from './images/strawberries.jpg';
 
-export default {
-  title: 'common/ProductInfo',
-  component: ProductInfo,
+export const meta = {
+  category: 'common/ProductInfo',
+  title: 'Карусель',
   parameters: {
     layout: 'padded',
   },
@@ -21,7 +21,7 @@ export default {
 
 const items = Array(20).fill(0);
 
-export function WithCarousel() {
+export default function WithCarousel() {
   const ms = useBreakpoint('ms+');
   const mm = useBreakpoint('mm+');
   const xs = useBreakpoint('xs+');
@@ -127,5 +127,3 @@ export function WithCarousel() {
     </Layout>
   );
 }
-
-WithCarousel.storyName = 'Карусель';

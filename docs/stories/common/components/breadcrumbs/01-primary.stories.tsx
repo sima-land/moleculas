@@ -1,14 +1,14 @@
 import { Breadcrumbs, BreadcrumbsItem } from '@sima-land/moleculas/common/components/breadcrumbs';
 
-export default {
-  title: 'common/Breadcrumbs',
-  component: Breadcrumbs,
+export const meta = {
+  category: 'common/Breadcrumbs',
+  title: 'Простой пример',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function Primary() {
+export default function Primary() {
   return (
     <>
       <Breadcrumbs>
@@ -46,5 +46,3 @@ export function Primary() {
     </>
   );
 }
-
-Primary.storyName = 'Простой пример';

@@ -8,15 +8,15 @@ import { Modal, ModalBody, getResponsiveModalProps } from '@sima-land/ui-nucleon
 import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
 import { mixed } from './fixture';
 
-export default {
-  title: 'common/MediaLayout',
-  component: MediaLayout,
+export const meta = {
+  category: 'common/MediaLayout',
+  title: 'Только 360',
   parameters: {
     layout: 'fullscreen',
   },
 };
 
-export function Only360() {
+export default function Only360() {
   const media = mixed.filter(item => item.type === '360')[0];
 
   return (
@@ -34,5 +34,3 @@ export function Only360() {
     </Modal>
   );
 }
-
-Only360.storyName = 'Только 360';

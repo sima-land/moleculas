@@ -2,18 +2,15 @@ import { SearchBar } from '@sima-land/moleculas/mobile/components/search-bar';
 import { useState } from 'react';
 import ArrowLeftSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/ArrowLeft';
 
-export default {
-  title: 'mobile/SearchBar',
-  component: SearchBar,
+export const meta = {
+  category: 'mobile/SearchBar',
+  title: 'С иконками',
   parameters: {
     layout: 'padded',
-    viewport: {
-      defaultViewport: 'iphonex',
-    },
   },
 };
 
-export function Secondary() {
+export default function Secondary() {
   const [value, setValue] = useState<string>('');
 
   return (
@@ -44,5 +41,3 @@ export function Secondary() {
     />
   );
 }
-
-Secondary.storyName = 'С иконками';

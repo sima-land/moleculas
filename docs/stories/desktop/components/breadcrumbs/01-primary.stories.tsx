@@ -1,15 +1,15 @@
 import { Breadcrumbs } from '@sima-land/moleculas/desktop/components/breadcrumbs';
 import { items } from './fixture';
 
-export default {
-  title: 'desktop/Breadcrumbs',
-  component: Breadcrumbs,
+export const meta = {
+  category: 'desktop/Breadcrumbs',
+  title: 'Простой пример',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function Primary() {
+export default function Primary() {
   return (
     <>
       <Breadcrumbs
@@ -22,5 +22,3 @@ export function Primary() {
     </>
   );
 }
-
-Primary.storyName = 'Простой пример';

@@ -2,15 +2,15 @@ import { Badge } from '@sima-land/moleculas/common/components/badge';
 import { useState } from 'react';
 import { Hint, useHintFloating, useHintOnHover } from '@sima-land/ui-nucleons/hint';
 
-export default {
-  title: 'common/Badge',
-  component: Badge,
+export const meta = {
+  category: 'common/Badge',
+  title: 'С хинтом',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function HintsView() {
+export default function HintsView() {
   const [open, setOpen] = useState(false);
   const { refs, ...floating } = useHintFloating({ open, onOpenChange: setOpen });
   const { getReferenceProps, getFloatingProps } = useHintOnHover(floating);
@@ -30,5 +30,3 @@ export function HintsView() {
     </>
   );
 }
-
-HintsView.storyName = 'С хинтом';

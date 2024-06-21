@@ -5,15 +5,15 @@ import MagnifierPlusSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Magnifier
 import ComparisonAddSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/ComparisonAdd';
 import strawberries from './images/strawberries.jpg';
 
-export default {
-  title: 'common/ProductInfo',
-  component: ProductInfo,
+export const meta = {
+  category: 'common/ProductInfo',
+  title: 'Загрузка данных корзины',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function CartLoading() {
+export default function CartLoading() {
   return (
     <div style={{ width: '200px' }}>
       <ProductInfo>
@@ -64,5 +64,3 @@ export function CartLoading() {
     </div>
   );
 }
-
-CartLoading.storyName = 'Загрузка данных корзины';

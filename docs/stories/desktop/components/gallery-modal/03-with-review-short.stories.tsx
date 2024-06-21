@@ -1,9 +1,9 @@
 import { GalleryModal } from '@sima-land/moleculas/desktop/components/gallery-modal';
 import { data } from './fixture';
 
-export default {
-  title: 'desktop/GalleryModal',
-  component: GalleryModal,
+export const meta = {
+  category: 'desktop/GalleryModal',
+  title: 'С коротким отзывом',
   parameters: {
     layout: 'padded',
   },
@@ -12,7 +12,7 @@ export default {
 const shortText =
   'Двухшовная, однотонная, без логотипа, без посторонних запахов. На ребенке(1,5г.) сидит #отлично, на глаза не сползает, а взрослому-мала';
 
-export function WithReviewShort() {
+export default function WithReviewShort() {
   return (
     <GalleryModal
       media={data.media}
@@ -33,5 +33,3 @@ export function WithReviewShort() {
     />
   );
 }
-
-WithReviewShort.storyName = 'С коротким отзывом';

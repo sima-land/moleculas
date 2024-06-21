@@ -3,9 +3,9 @@ import { Badge, BadgeProps } from '@sima-land/moleculas/common/components/badge'
 import { ReactNode } from 'react';
 import { addMonths } from 'date-fns';
 
-export default {
-  title: 'common/BadgeList',
-  component: BadgeList,
+export const meta = {
+  category: 'common/BadgeList',
+  title: 'Простой пример',
   parameters: {
     layout: 'padded',
   },
@@ -40,7 +40,7 @@ const DemoBlock = ({ children }: { children: ReactNode }) => (
   </div>
 );
 
-export function Primary() {
+export default function Primary() {
   return (
     <>
       <DemoBlock>
@@ -69,5 +69,3 @@ export function Primary() {
     </>
   );
 }
-
-Primary.storyName = 'Простой пример';

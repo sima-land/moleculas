@@ -11,14 +11,15 @@ import { Modal, ModalBody, getResponsiveModalProps } from '@sima-land/ui-nucleon
 import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
 import { TextButton } from '@sima-land/ui-nucleons/text-button';
 
-export default {
-  title: 'common/MediaLayout',
+export const meta = {
+  category: 'common/MediaLayout',
+  title: 'Футер с отзывом',
   parameters: {
     layout: 'fullscreen',
   },
 };
 
-export function ExampleFooterReview() {
+export default function ExampleFooterReview() {
   const styles = {
     display: 'flex',
     justifyContent: 'center',
@@ -65,5 +66,3 @@ export function ExampleFooterReview() {
     </Modal>
   );
 }
-
-ExampleFooterReview.storyName = 'Футер с отзывом';

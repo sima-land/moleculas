@@ -12,14 +12,15 @@ import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
 import vase from './thumbnails/vase.jpg';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
 
-export default {
-  title: 'common/MediaLayout',
+export const meta = {
+  category: 'common/MediaLayout',
+  title: 'Футер с товаром в корзине',
   parameters: {
     layout: 'fullscreen',
   },
 };
 
-export function ExampleFooterProductAdded() {
+export default function ExampleFooterProductAdded() {
   const styles = {
     display: 'flex',
     justifyContent: 'center',
@@ -67,5 +68,3 @@ export function ExampleFooterProductAdded() {
     </Modal>
   );
 }
-
-ExampleFooterProductAdded.storyName = 'Футер с товаром в корзине';

@@ -1,5 +1,5 @@
-@use 'node_modules/@sima-land/ui-nucleons/breakpoints';
-@use 'node_modules/@sima-land/ui-nucleons/colors';
+@use 'pkg:@sima-land/ui-nucleons/breakpoints';
+@use 'pkg:@sima-land/ui-nucleons/colors.scss';
 
 .root {
   display: block;

@@ -7,15 +7,15 @@ import { CleanButton, CleanGroup } from '@sima-land/ui-nucleons/clean-buttons';
 import StatementSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Statement';
 import ThumbsUpSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/ThumbsUp';
 
-export default {
-  title: 'mobile/ActionCircles',
-  component: ActionCircles,
+export const meta = {
+  category: 'mobile/ActionCircles',
+  title: 'Простой пример',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function Primary() {
+export default function Primary() {
   const [open, setOpen] = useState(false);
 
   return (
@@ -49,5 +49,3 @@ export function Primary() {
     </>
   );
 }
-
-Primary.storyName = 'Простой пример';

@@ -12,14 +12,15 @@ import { Modal, ModalBody, getResponsiveModalProps } from '@sima-land/ui-nucleon
 import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
 import vase from './thumbnails/vase.jpg';
 
-export default {
-  title: 'common/MediaLayout',
+export const meta = {
+  category: 'common/MediaLayout',
+  title: 'Футер с товаром',
   parameters: {
     layout: 'fullscreen',
   },
 };
 
-export function ExampleFooterProduct() {
+export default function ExampleFooterProduct() {
   const styles = {
     display: 'flex',
     justifyContent: 'center',
@@ -67,5 +68,3 @@ export function ExampleFooterProduct() {
     </Modal>
   );
 }
-
-ExampleFooterProduct.storyName = 'Футер с товаром';

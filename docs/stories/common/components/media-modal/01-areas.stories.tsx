@@ -8,14 +8,15 @@ import {
 import { Modal, ModalBody, getResponsiveModalProps } from '@sima-land/ui-nucleons/modal';
 import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
 
-export default {
-  title: 'common/MediaLayout',
+export const meta = {
+  category: 'common/MediaLayout',
+  title: 'Области',
   parameters: {
     layout: 'fullscreen',
   },
 };
 
-export function Areas() {
+export default function Areas() {
   const styles = {
     display: 'flex',
     justifyContent: 'center',
@@ -50,5 +51,3 @@ export function Areas() {
     </Modal>
   );
 }
-
-Areas.storyName = 'Области';

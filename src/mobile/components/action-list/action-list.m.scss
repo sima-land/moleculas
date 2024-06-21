@@ -1,5 +1,5 @@
-@use 'node_modules/@sima-land/ui-nucleons/colors';
-@use 'node_modules/@sima-land/ui-nucleons/utils';
+@use 'pkg:@sima-land/ui-nucleons/colors.scss';
+@use 'pkg:@sima-land/ui-nucleons/utils';
 
 .circles {
   display: flex;

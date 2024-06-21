@@ -8,9 +8,9 @@ import { Button } from '@sima-land/ui-nucleons/button';
 import FavSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
 import { items } from './fixture';
 
-export default {
-  title: 'desktop/ProductCarousel',
-  component: ProductCarousel,
+export const meta = {
+  category: 'desktop/ProductCarousel',
+  title: 'Тест: загрузка после mount',
   parameters: {
     layout: 'fullscreen',
   },
@@ -28,7 +28,7 @@ const DemoBlock = ({ children }: { children: ReactNode }) => (
   </Layout>
 );
 
-export function DeferredData() {
+export default function DeferredData() {
   const [ready, setReady] = useState<boolean>(false);
 
   return (
@@ -94,5 +94,3 @@ export function DeferredData() {
     </DemoBlock>
   );
 }
-
-DeferredData.storyName = 'Тест: загрузка после mount';

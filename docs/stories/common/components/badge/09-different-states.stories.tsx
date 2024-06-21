@@ -3,15 +3,15 @@ import { Badge, BadgeProps } from '@sima-land/moleculas/common/components/badge'
 import { COLORS } from '@sima-land/ui-nucleons/colors';
 import { useState } from 'react';
 
-export default {
-  title: 'common/Badge',
-  component: Badge,
+export const meta = {
+  category: 'common/Badge',
+  title: 'Различные состояния',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function DifferentStates() {
+export default function DifferentStates() {
   const [shape, setShape] = useState<BadgeProps['shape']>('unset');
   const [color, setColor] = useState<string>(COLORS.get('additional-cyan') ?? '#000');
   const [coloring, setColoring] = useState<BadgeProps['coloring']>('outline');
@@ -113,5 +113,3 @@ export function DifferentStates() {
     </Sandbox>
   );
 }
-
-DifferentStates.storyName = 'Различные состояния';

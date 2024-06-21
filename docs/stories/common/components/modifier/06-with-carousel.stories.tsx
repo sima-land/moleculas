@@ -2,15 +2,15 @@ import { Modifier, ModifierContent } from '@sima-land/moleculas/common/component
 import { Layout } from '@sima-land/ui-nucleons/layout';
 import { Carousel } from '@sima-land/ui-nucleons/carousel';
 
-export default {
-  title: 'common/Modifier',
-  component: Modifier,
+export const meta = {
+  category: 'common/Modifier',
+  title: 'Вместе с Carousel',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function WithCarousel() {
+export default function WithCarousel() {
   const manyItems: ModifierContent[] = [...Array(32).keys()].map(index => ({
     type: 'text',
     text: `Вариант №${index + 1}`,
@@ -28,5 +28,3 @@ export function WithCarousel() {
     </Layout>
   );
 }
-
-WithCarousel.storyName = 'Вместе с Carousel';

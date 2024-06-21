@@ -1,15 +1,15 @@
 import { Badge } from '@sima-land/moleculas/common/components/badge';
 import { addMonths } from 'date-fns';
 
-export default {
-  title: 'common/Badge',
-  component: Badge,
+export const meta = {
+  category: 'common/Badge',
+  title: 'Таймер + текст',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function TimerTextView() {
+export default function TimerTextView() {
   return (
     <>
       <Badge
@@ -32,5 +32,3 @@ export function TimerTextView() {
     </>
   );
 }
-
-TimerTextView.storyName = 'Таймер + текст';

@@ -1,14 +1,14 @@
 import { Badge } from '@sima-land/moleculas/common/components/badge';
 
-export default {
-  title: 'common/Badge',
-  component: Badge,
+export const meta = {
+  category: 'common/Badge',
+  title: 'Текст',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function TextView() {
+export default function TextView() {
   return (
     <Badge
       color='#00b8d4'
@@ -17,5 +17,3 @@ export function TextView() {
     />
   );
 }
-
-TextView.storyName = 'Текст';

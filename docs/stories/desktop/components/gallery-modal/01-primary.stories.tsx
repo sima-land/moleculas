@@ -1,15 +1,15 @@
 import { GalleryModal } from '@sima-land/moleculas/desktop/components/gallery-modal';
 import { data } from './fixture';
 
-export default {
-  title: 'desktop/GalleryModal',
-  component: GalleryModal,
+export const meta = {
+  category: 'desktop/GalleryModal',
+  title: 'Простой пример',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function Primary() {
+export default function Primary() {
   return (
     <GalleryModal
       media={data.media}
@@ -22,5 +22,3 @@ export function Primary() {
     />
   );
 }
-
-Primary.storyName = 'Простой пример';

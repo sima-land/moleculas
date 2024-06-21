@@ -1,9 +1,9 @@
 import { ProductRow, ProductRowProps } from '@sima-land/moleculas/mobile/components/product-row';
 import { ReactNode } from 'react';
 
-export default {
-  title: 'mobile/ProductRow',
-  component: ProductRow,
+export const meta = {
+  category: 'mobile/ProductRow',
+  title: 'Простой пример',
   parameters: {
     layout: 'padded',
   },
@@ -25,7 +25,7 @@ function Container({ children }: { children: ReactNode }) {
   return <div style={{ width: '480px', margin: '80px auto' }}>{children}</div>;
 }
 
-export function Primary() {
+export default function Primary() {
   return (
     <Container>
       <ProductRow
@@ -36,5 +36,3 @@ export function Primary() {
     </Container>
   );
 }
-
-Primary.storyName = 'Простой пример';

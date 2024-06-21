@@ -1,15 +1,15 @@
 import { GalleryModal } from '@sima-land/moleculas/desktop/components/gallery-modal';
 import { data } from './fixture';
 
-export default {
-  title: 'desktop/GalleryModal',
-  component: GalleryModal,
+export const meta = {
+  category: 'desktop/GalleryModal',
+  title: 'Отзыв без текста',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function WithReviewEmpty() {
+export default function WithReviewEmpty() {
   return (
     <GalleryModal
       media={data.media}
@@ -29,5 +29,3 @@ export function WithReviewEmpty() {
     />
   );
 }
-
-WithReviewEmpty.storyName = 'Отзыв без текста';

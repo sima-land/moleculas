@@ -3,15 +3,15 @@ import { useState } from 'react';
 import { Layout } from '@sima-land/ui-nucleons/layout';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks';
 
-export default {
-  title: 'common/PaginationControls',
-  component: PaginationControls,
+export const meta = {
+  category: 'common/PaginationControls',
+  title: 'Смена раскладки по breakpoint',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function ChangeLayout() {
+export default function ChangeLayout() {
   const [page, setPage] = useState(1);
   const desktop = useBreakpoint('xs+');
 
@@ -26,5 +26,3 @@ export function ChangeLayout() {
     </Layout>
   );
 }
-
-ChangeLayout.storyName = 'Смена раскладки по breakpoint';

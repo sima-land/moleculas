@@ -9,9 +9,9 @@ import berries1 from './images/berries1.jpg';
 import berries2 from './images/berries2.jpg';
 import berries3 from './images/berries3.jpg';
 
-export default {
-  title: 'common/ProductInfo',
-  component: ProductInfo,
+export const meta = {
+  category: 'common/ProductInfo',
+  title: 'Слайдер картинок',
   parameters: {
     layout: 'padded',
   },
@@ -25,7 +25,7 @@ const images = [
   berries3,
 ];
 
-export function ImageSlider() {
+export default function ImageSlider() {
   return (
     <div style={{ maxWidth: '200px' }}>
       <ProductInfo>
@@ -81,5 +81,3 @@ export function ImageSlider() {
     </div>
   );
 }
-
-ImageSlider.storyName = 'Слайдер картинок';

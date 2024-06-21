@@ -7,9 +7,9 @@ import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import FavSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
 import { items } from './fixture';
 
-export default {
-  title: 'desktop/ProductCarousel',
-  component: ProductCarousel,
+export const meta = {
+  category: 'desktop/ProductCarousel',
+  title: 'Мало товаров для прокрутки',
   parameters: {
     layout: 'fullscreen',
   },
@@ -27,7 +27,7 @@ const DemoBlock = ({ children }: { children: ReactNode }) => (
   </Layout>
 );
 
-export function FewItems() {
+export default function FewItems() {
   return (
     <DemoBlock>
       <ProductCarousel>
@@ -87,5 +87,3 @@ export function FewItems() {
     </DemoBlock>
   );
 }
-
-FewItems.storyName = 'Мало товаров для прокрутки';

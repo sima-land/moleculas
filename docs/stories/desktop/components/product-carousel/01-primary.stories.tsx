@@ -8,9 +8,9 @@ import FavSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
 import ComparisonAddSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/ComparisonAdd';
 import { items } from './fixture';
 
-export default {
-  title: 'desktop/ProductCarousel',
-  component: ProductCarousel,
+export const meta = {
+  category: 'desktop/ProductCarousel',
+  title: 'Простой пример',
   parameters: {
     layout: 'fullscreen',
   },
@@ -28,7 +28,7 @@ const DemoBlock = ({ children }: { children: ReactNode }) => (
   </Layout>
 );
 
-export function Primary() {
+export default function Primary() {
   return (
     <DemoBlock>
       <ProductCarousel>
@@ -81,5 +81,3 @@ export function Primary() {
     </DemoBlock>
   );
 }
-
-Primary.storyName = 'Простой пример';

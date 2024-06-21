@@ -2,9 +2,9 @@ import { InteractiveImage, Parts } from '@sima-land/moleculas/common/components/
 import { CSSProperties } from 'react';
 import imageSrc from './image.png';
 
-export default {
-  title: 'common/InteractiveImage',
-  component: InteractiveImage,
+export const meta = {
+  category: 'common/InteractiveImage',
+  title: 'Сравнение с обычной картинкой',
   parameters: {
     layout: 'padded',
   },
@@ -23,7 +23,7 @@ const points: TitledPoint[] = [
   { x: 83, y: 69, title: 'Приборы' },
 ];
 
-export function ImageComparison() {
+export default function ImageComparison() {
   const style: CSSProperties = {
     borderRadius: '4px',
     width: '320px',
@@ -48,5 +48,3 @@ export function ImageComparison() {
     </div>
   );
 }
-
-ImageComparison.storyName = 'Сравнение с обычной картинкой';

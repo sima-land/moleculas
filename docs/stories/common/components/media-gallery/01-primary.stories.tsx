@@ -6,9 +6,9 @@ import {
 import { CSSProperties, useState } from 'react';
 import { mixed } from '../media-modal/fixture';
 
-export default {
-  title: 'common/MediaGallery',
-  component: MediaGallery,
+export const meta = {
+  category: 'common/MediaGallery',
+  title: 'Простой пример',
   parameters: {
     layout: 'padded',
   },
@@ -31,7 +31,7 @@ const styles = {
   } satisfies CSSProperties,
 };
 
-export function Primary() {
+export default function Primary() {
   const [index, setIndex] = useState(0);
 
   const items = mixed.filter(item => item.type !== '360').reverse();
@@ -56,5 +56,3 @@ export function Primary() {
     </MediaGallery>
   );
 }
-
-Primary.storyName = 'Простой пример';

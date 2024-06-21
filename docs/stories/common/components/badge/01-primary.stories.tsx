@@ -1,14 +1,14 @@
 import { Badge } from '@sima-land/moleculas/common/components/badge';
 
-export default {
-  title: 'common/Badge',
-  component: Badge,
+export const meta = {
+  category: 'common/Badge',
+  title: 'Простой пример',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function Primary() {
+export default function Primary() {
   return (
     <Badge
       href='https://sima-land.ru'
@@ -17,5 +17,3 @@ export function Primary() {
     />
   );
 }
-
-Primary.storyName = 'Простой пример';

@@ -19,15 +19,15 @@ import { ArrowButton } from '@sima-land/ui-nucleons/arrow-button';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks';
 import { videos } from './fixture';
 
-export default {
-  title: 'common/MediaLayout',
-  component: MediaLayout,
+export const meta = {
+  category: 'common/MediaLayout',
+  title: 'Галерея видео',
   parameters: {
     layout: 'fullscreen',
   },
 };
 
-export function ExampleGalleryVideo() {
+export default function ExampleGalleryVideo() {
   const desktop = useBreakpoint('xs+');
 
   const [targetIndex, setTargetIndex] = useState(0);
@@ -113,5 +113,3 @@ export function ExampleGalleryVideo() {
     </Modal>
   );
 }
-
-ExampleGalleryVideo.storyName = 'Галерея видео';

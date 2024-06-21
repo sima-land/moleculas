@@ -9,9 +9,9 @@ import coffee from './images/coffee.jpg';
 import clock from './images/clock.jpg';
 import gamepad from './images/gamepad.jpg';
 
-export default {
-  title: 'common/HoverSlider',
-  component: HoverSlider,
+export const meta = {
+  category: 'common/HoverSlider',
+  title: 'Контейнер-ссылка и кнопки поверх',
   parameters: {
     layout: 'padded',
   },
@@ -65,7 +65,7 @@ const images = [
   gamepad,
 ];
 
-export function Secondary() {
+export default function Secondary() {
   const getButtonClickHandler = (message: string) => (event: MouseEvent) => {
     event.preventDefault(); // предотвращение перехода по ссылке
     alert(message);
@@ -103,5 +103,3 @@ export function Secondary() {
     </>
   );
 }
-
-Secondary.storyName = 'Контейнер-ссылка и кнопки поверх';

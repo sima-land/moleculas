@@ -1,14 +1,14 @@
 import { Badge } from '@sima-land/moleculas/common/components/badge';
 
-export default {
-  title: 'common/Badge',
-  component: Badge,
+export const meta = {
+  category: 'common/Badge',
+  title: 'Переполнение',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function OverflowView() {
+export default function OverflowView() {
   return (
     <div style={{ maxWidth: 240 }}>
       <Badge
@@ -19,5 +19,3 @@ export function OverflowView() {
     </div>
   );
 }
-
-OverflowView.storyName = 'Переполнение';

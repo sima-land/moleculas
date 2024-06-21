@@ -3,15 +3,15 @@ import { Modal, ModalBody } from '@sima-land/ui-nucleons/modal';
 import { BottomBar } from '@sima-land/ui-nucleons/bottom-bar';
 import { CleanButton, CleanGroup } from '@sima-land/ui-nucleons/clean-buttons';
 
-export default {
-  title: 'desktop/PersonInfo',
-  component: PersonInfo,
+export const meta = {
+  category: 'desktop/PersonInfo',
+  title: 'С длинным именем и ссылкой',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function ArbitraryLink() {
+export default function ArbitraryLink() {
   return (
     <Modal size='s'>
       <ModalBody>
@@ -55,5 +55,3 @@ export function ArbitraryLink() {
     </Modal>
   );
 }
-
-ArbitraryLink.storyName = 'С длинным именем и ссылкой';

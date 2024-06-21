@@ -1,15 +1,15 @@
 import { ProductImage } from '@sima-land/moleculas/common/components/product-image';
 import bowl from './images/bowl.jpg';
 
-export default {
-  title: 'common/ProductImage',
-  component: ProductImage,
+export const meta = {
+  category: 'common/ProductImage',
+  title: 'Размер и заполнение',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function Resize() {
+export default function Resize() {
   return (
     <>
       <ProductImage
@@ -23,5 +23,3 @@ export function Resize() {
     </>
   );
 }
-
-Resize.storyName = 'Размер и заполнение';

@@ -2,9 +2,9 @@ import { HoverSlider, HoverSliderItem } from '@sima-land/moleculas/common/compon
 import { CSSProperties } from 'react';
 import flacon from './images/flacon.jpg';
 
-export default {
-  title: 'common/HoverSlider',
-  component: HoverSlider,
+export const meta = {
+  category: 'common/HoverSlider',
+  title: 'Только один слайд',
   parameters: {
     layout: 'padded',
   },
@@ -26,7 +26,7 @@ const styles = {
   } satisfies CSSProperties,
 };
 
-export function SingleSlide() {
+export default function SingleSlide() {
   return (
     <>
       <HoverSlider>
@@ -37,5 +37,3 @@ export function SingleSlide() {
     </>
   );
 }
-
-SingleSlide.storyName = 'Только один слайд';

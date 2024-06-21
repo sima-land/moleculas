@@ -8,15 +8,15 @@ import { Input } from '@sima-land/ui-nucleons/input';
 import { MobileLayout } from '@sima-land/ui-nucleons/layout';
 import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
 
-export default {
-  title: 'mobile/SelectScreenLayout',
-  component: SelectScreenLayout,
+export const meta = {
+  category: 'mobile/SelectScreenLayout',
+  title: 'Простой пример',
   parameters: {
     layout: 'fullscreen',
   },
 };
 
-export function Primary() {
+export default function Primary() {
   const items: string[] = [
     'Верх-Исетский',
     'Чкаловский',
@@ -75,5 +75,3 @@ export function Primary() {
     </>
   );
 }
-
-Primary.storyName = 'Простой пример';

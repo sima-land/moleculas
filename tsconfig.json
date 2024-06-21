@@ -3,18 +3,6 @@
   "compilerOptions": {
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "paths": {
-      // ВАЖНО: только для storybook
-      "#docs-utils": ["./.storybook/utils.tsx"],
-      "@sima-land/moleculas/*": ["./src/*"],
-    },
   },
-  "include": [
-    "./src",
-    "./docs",
-
-    // ВАЖНО: только для storybook
-    "./.storybook/utils.tsx",
-  ],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "docs"],
 }

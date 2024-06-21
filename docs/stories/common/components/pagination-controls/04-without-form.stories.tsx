@@ -2,14 +2,14 @@ import { PaginationControls } from '@sima-land/moleculas/common/components/pagin
 import { useState } from 'react';
 import { Layout } from '@sima-land/ui-nucleons/layout';
 
-export default {
-  title: 'common/PaginationControls',
-  component: PaginationControls,
+export const meta = {
+  category: 'common/PaginationControls',
+  title: 'Без формы',
   parameters: {
     layout: 'padded',
   },
 };
-export function WithoutForm() {
+export default function WithoutForm() {
   const [page, setPage] = useState(1);
 
   return (
@@ -18,5 +18,3 @@ export function WithoutForm() {
     </Layout>
   );
 }
-
-WithoutForm.storyName = 'Без формы';

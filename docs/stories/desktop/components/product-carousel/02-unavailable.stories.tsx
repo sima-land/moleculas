@@ -6,9 +6,9 @@ import { Layout } from '@sima-land/ui-nucleons/layout';
 import FavSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
 import { items } from './fixture';
 
-export default {
-  title: 'desktop/ProductCarousel',
-  component: ProductCarousel,
+export const meta = {
+  category: 'desktop/ProductCarousel',
+  title: 'Нет в наличии',
   parameters: {
     layout: 'fullscreen',
   },
@@ -26,7 +26,7 @@ const DemoBlock = ({ children }: { children: ReactNode }) => (
   </Layout>
 );
 
-export function Unavailable() {
+export default function Unavailable() {
   return (
     <DemoBlock>
       <ProductCarousel>
@@ -67,5 +67,3 @@ export function Unavailable() {
     </DemoBlock>
   );
 }
-
-Unavailable.storyName = 'Нет в наличии';

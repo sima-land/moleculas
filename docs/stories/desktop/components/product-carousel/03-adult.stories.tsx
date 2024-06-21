@@ -5,9 +5,9 @@ import { Layout } from '@sima-land/ui-nucleons/layout';
 import FavSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
 import { items } from './fixture';
 
-export default {
-  title: 'desktop/ProductCarousel',
-  component: ProductCarousel,
+export const meta = {
+  category: 'desktop/ProductCarousel',
+  title: 'Товары для взрослых',
   parameters: {
     layout: 'fullscreen',
   },
@@ -25,7 +25,7 @@ const DemoBlock = ({ children }: { children: ReactNode }) => (
   </Layout>
 );
 
-export function Adult() {
+export default function Adult() {
   return (
     <DemoBlock>
       <ProductCarousel>
@@ -57,5 +57,3 @@ export function Adult() {
     </DemoBlock>
   );
 }
-
-Adult.storyName = 'Товары для взрослых';
