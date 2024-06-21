@@ -5,11 +5,6 @@ export default {
   component: RatingCounter,
   parameters: {
     layout: 'padded',
-    docs: {
-      description: {
-        component: 'Карточка базовой информации о товаре',
-      },
-    },
   },
 };
 

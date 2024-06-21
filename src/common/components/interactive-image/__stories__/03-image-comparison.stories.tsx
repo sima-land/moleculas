@@ -23,58 +23,6 @@ const points: TitledPoint[] = [
   { x: 83, y: 69, title: 'Приборы' },
 ];
 
-export function Primary() {
-  const style: CSSProperties = {
-    borderRadius: '8px',
-    width: '600px',
-    maxWidth: '100%',
-  };
-
-  const onPointClick = (point: TitledPoint) => {
-    alert(`Клик по точке "${point.title}"`);
-  };
-
-  return (
-    <>
-      <InteractiveImage style={style}>
-        <Parts.Image src={imageSrc} />
-
-        {points.map((point, index) => (
-          <Parts.Point key={index} role='button' {...point} onClick={() => onPointClick(point)} />
-        ))}
-      </InteractiveImage>
-    </>
-  );
-}
-
-Primary.storyName = 'Простой пример';
-
-export function BackgroundAnchor() {
-  const style: CSSProperties = {
-    borderRadius: '8px',
-    width: '600px',
-    maxWidth: '100%',
-  };
-
-  const onPointClick = (dot: TitledPoint) => {
-    alert(`Клик по точке "${dot.title}"`);
-  };
-
-  return (
-    <InteractiveImage style={style}>
-      <Parts.ImageAnchor href='https://sima-land.ru' target='_blank'>
-        <Parts.Image src={imageSrc} />
-      </Parts.ImageAnchor>
-
-      {points.map((dot, index) => (
-        <Parts.Point key={index} role='button' {...dot} onClick={() => onPointClick(dot)} />
-      ))}
-    </InteractiveImage>
-  );
-}
-
-BackgroundAnchor.storyName = 'Картинка-ссылка';
-
 export function ImageComparison() {
   const style: CSSProperties = {
     borderRadius: '4px',

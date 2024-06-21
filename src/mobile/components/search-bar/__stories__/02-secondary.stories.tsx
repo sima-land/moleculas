@@ -7,36 +7,11 @@ export default {
   component: SearchBar,
   parameters: {
     layout: 'padded',
-    docs: {
-      description: {
-        component: 'Компонент Поисковой строки',
-      },
-    },
     viewport: {
       defaultViewport: 'iphonex',
     },
   },
 };
-
-export function Primary() {
-  const [value, setValue] = useState<string>('');
-
-  return (
-    <SearchBar
-      value={value}
-      onChange={e => setValue(e.target.value)}
-      onClear={() => setValue('')}
-      endButtons={[
-        {
-          text: 'Поиск',
-          onClick: () => alert('Сделаем вид что что-то нашли...'),
-        },
-      ]}
-    />
-  );
-}
-
-Primary.storyName = 'Простой пример';
 
 export function Secondary() {
   const [value, setValue] = useState<string>('');
