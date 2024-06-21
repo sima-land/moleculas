@@ -19,21 +19,23 @@ export default {
 const longText =
   'Двухшовная, однотонная, без логотипа, без посторонних запахов. На ребенке(1,5г.) сидит #отлично, на глаза не сползает, а взрослому-мала, уши не закрывает. Возможно, если взрослый будет лысый, то - норм), но если волосы все таки есть, то пиши пропало. Не понравилась, слишком мягкая, не держится на голове, все время съезжает. В результате абсолютно мокрая голова и куча потерянного времени, чтобы постоянно ее поправлять. Под водой крокодил смотрится эпично, очень забавно)) слому-мала, уши не закрывает. Возможно, если взрослый будет лысый, то - норм), но если волосы все таки есть, то пиши пропало. Не понравилась, слишком мягкая, не держится на голове, все время съезжает. В результате абсолютно мокрая голова и куча потерянного времени, чтобы постоянно ее поправлять. Под водой крокодил смотрится эпично, очень забавно)) слому-мала, уши не закрывает. Возможно, если взрослый будет лысый, то - норм), но если волосы все таки есть, то пиши пропало. Не понравилась, слишком мягкая, не держится на голове, все время съезжает. В результате абсолютно мокрая голова и куча потерянного времени, чтобы постоянно ее поправлять. Под водой крокодил смотрится эпично, очень забавно)) слому-мала, уши не закрывает. Возможно, если взрослый будет лысый, то - норм), но если волосы все таки есть, то пиши пропало. Не понравилась, слишком мягкая, не держится на голове, все время съезжает. В результате абсолютно мокрая голова и куча потерянного времени, чтобы постоянно ее поправлять. Под водой крокодил смотрится эпично, очень забавно))';
 
-export const Primary = () => (
-  <GalleryModal
-    media={data.media}
-    onClose={() => {
-      console.log('Окно закрыто');
-    }}
-    onVideoEvent={event => {
-      console.log(`Событие видео "${event.type}"`);
-    }}
-  />
-);
+export function Primary() {
+  return (
+    <GalleryModal
+      media={data.media}
+      onClose={() => {
+        console.log('Окно закрыто');
+      }}
+      onVideoEvent={event => {
+        console.log(`Событие видео "${event.type}"`);
+      }}
+    />
+  );
+}
 
 Primary.storyName = 'Простой пример';
 
-export const WithReview = () => {
+export function WithReview() {
   const [index, setIndex] = useState<number>(0);
 
   return (
@@ -56,76 +58,82 @@ export const WithReview = () => {
       }}
     />
   );
-};
+}
 
 WithReview.storyName = 'С отзывом';
 
-export const WithReviewShort = () => (
-  <GalleryModal
-    media={data.media}
-    onClose={() => {
-      console.log('Окно закрыто');
-    }}
-    review={{
-      rating: 3.2,
-      author: 'Пелагеевская Вероника Сергеевна',
-      content: longText.slice(0, 140),
-    }}
-    onGoToReview={() => {
-      console.log('Нажата кнопка перехода к отзыву');
-    }}
-    onVideoEvent={event => {
-      console.log(`Событие видео "${event.type}"`);
-    }}
-  />
-);
+export function WithReviewShort() {
+  return (
+    <GalleryModal
+      media={data.media}
+      onClose={() => {
+        console.log('Окно закрыто');
+      }}
+      review={{
+        rating: 3.2,
+        author: 'Пелагеевская Вероника Сергеевна',
+        content: longText.slice(0, 140),
+      }}
+      onGoToReview={() => {
+        console.log('Нажата кнопка перехода к отзыву');
+      }}
+      onVideoEvent={event => {
+        console.log(`Событие видео "${event.type}"`);
+      }}
+    />
+  );
+}
 
 WithReviewShort.storyName = 'С коротким отзывом';
 
-export const WithReviewLoading = () => (
-  <GalleryModal
-    media={data.media}
-    onClose={() => {
-      console.log('Окно закрыто');
-    }}
-    review={{
-      rating: 3.2,
-      author: 'Пелагеевская Вероника Сергеевна',
-      loading: true,
-    }}
-    onGoToReview={() => {
-      console.log('Нажата кнопка перехода к отзыву');
-    }}
-    onVideoEvent={event => {
-      console.log(`Событие видео "${event.type}"`);
-    }}
-  />
-);
+export function WithReviewLoading() {
+  return (
+    <GalleryModal
+      media={data.media}
+      onClose={() => {
+        console.log('Окно закрыто');
+      }}
+      review={{
+        rating: 3.2,
+        author: 'Пелагеевская Вероника Сергеевна',
+        loading: true,
+      }}
+      onGoToReview={() => {
+        console.log('Нажата кнопка перехода к отзыву');
+      }}
+      onVideoEvent={event => {
+        console.log(`Событие видео "${event.type}"`);
+      }}
+    />
+  );
+}
 
 WithReviewLoading.storyName = 'Загрузка отзыва';
 
-export const WithReviewEmpty = () => (
-  <GalleryModal
-    media={data.media}
-    onClose={() => {
-      console.log('Окно закрыто');
-    }}
-    review={{
-      rating: 3.2,
-      author: 'Пелагеевская Вероника Сергеевна',
-    }}
-    onGoToReview={() => {
-      console.log('Нажата кнопка перехода к отзыву');
-    }}
-    onVideoEvent={event => {
-      console.log(`Событие видео "${event.type}"`);
-    }}
-  />
-);
+export function WithReviewEmpty() {
+  return (
+    <GalleryModal
+      media={data.media}
+      onClose={() => {
+        console.log('Окно закрыто');
+      }}
+      review={{
+        rating: 3.2,
+        author: 'Пелагеевская Вероника Сергеевна',
+      }}
+      onGoToReview={() => {
+        console.log('Нажата кнопка перехода к отзыву');
+      }}
+      onVideoEvent={event => {
+        console.log(`Событие видео "${event.type}"`);
+      }}
+    />
+  );
+}
 
 WithReviewEmpty.storyName = 'Отзыв без текста';
 
-export const WithReviewNotAffect = () => {
+export function WithReviewNotAffect() {
   const markup = (
     <>
       {longText
@@ -163,6 +171,6 @@ export const WithReviewNotAffect = () => {
       }}
     />
   );
-};
+}
 
 WithReviewNotAffect.storyName = 'Отзыв не влияет на рейтинг';

@@ -46,33 +46,35 @@ const DemoBlock = ({ children }: { children: ReactNode }) => (
   </div>
 );
 
-export const Primary = () => (
-  <>
-    <DemoBlock>
-      <BadgeList lineLimit={3}>
-        {items.map((item, index) => (
-          <Badge key={index} {...item} />
-        ))}
-      </BadgeList>
-    </DemoBlock>
+export function Primary() {
+  return (
+    <>
+      <DemoBlock>
+        <BadgeList lineLimit={3}>
+          {items.map((item, index) => (
+            <Badge key={index} {...item} />
+          ))}
+        </BadgeList>
+      </DemoBlock>
 
-    <DemoBlock>
-      <BadgeList lineLimit={2}>
-        {items.map((item, index) => (
-          <Badge key={index} {...item} />
-        ))}
-      </BadgeList>
-    </DemoBlock>
+      <DemoBlock>
+        <BadgeList lineLimit={2}>
+          {items.map((item, index) => (
+            <Badge key={index} {...item} />
+          ))}
+        </BadgeList>
+      </DemoBlock>
 
-    <DemoBlock>
-      <BadgeList lineLimit={1}>
-        {items.map((item, index) => (
-          <Badge key={index} {...item} />
-        ))}
-      </BadgeList>
-    </DemoBlock>
-  </>
-);
+      <DemoBlock>
+        <BadgeList lineLimit={1}>
+          {items.map((item, index) => (
+            <Badge key={index} {...item} />
+          ))}
+        </BadgeList>
+      </DemoBlock>
+    </>
+  );
+}
 
 Primary.storyName = 'Простой пример';
 
