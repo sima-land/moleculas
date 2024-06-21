@@ -1,6 +1,7 @@
 require('@rushstack/eslint-patch/modern-module-resolution');
 
 module.exports = {
+  root: true,
   extends: require.resolve('@sima-land/linters/eslint'),
   overrides: [
     {
@@ -13,7 +14,7 @@ module.exports = {
 
     // stories
     {
-      files: ['./**/__stories__/**/*'],
+      files: ['./docs/stories/**/*'],
       rules: {
         'no-alert': 'off',
         'no-console': 'off',
@@ -24,7 +25,7 @@ module.exports = {
 
     // тесты и stories
     {
-      files: ['./**/__stories__/**/*', './**/*.test.*', './**/*.spec.*'],
+      files: ['./docs/stories/**/*', './**/*.test.*', './**/*.spec.*'],
       rules: {
         'require-jsdoc': 'off',
         'jsdoc/require-jsdoc': 'off',
