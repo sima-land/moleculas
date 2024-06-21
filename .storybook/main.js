@@ -1,5 +1,5 @@
 module.exports = {
-  stories: ['./index.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['./index.stories.mdx', '../docs/stories/**/*.stories.@(js|jsx|ts|tsx)'],
 
   staticDirs: [{ from: './assets', to: '/assets' }],
 
