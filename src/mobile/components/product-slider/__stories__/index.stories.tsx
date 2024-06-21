@@ -46,7 +46,7 @@ const Bootstrap = ({ children }: { children?: ReactNode }) => (
   </>
 );
 
-export const Primary = () => {
+export function Primary() {
   const [wished, toggleWish] = useState<Record<number, boolean>>({});
 
   return (
@@ -95,61 +95,65 @@ export const Primary = () => {
       </ProductSlider>
     </Bootstrap>
   );
-};
+}
 
 Primary.storyName = 'Простой пример';
 
-export const Unavailable = () => (
-  <Bootstrap>
-    <ProductSlider>
-      {items.map((item, index) => (
-        <ProductInfo key={index} restriction='unavailable'>
-          <Parts.Image src={item.imageSrc} href={item.url} />
+export function Unavailable() {
+  return (
+    <Bootstrap>
+      <ProductSlider>
+        {items.map((item, index) => (
+          <ProductInfo key={index} restriction='unavailable'>
+            <Parts.Image src={item.imageSrc} href={item.url} />
 
-          <Parts.Prices
-            price={item.price}
-            oldPrice={item.oldPrice}
-            currencyGrapheme={item.currencyGrapheme}
-            unavailableReason='Товара нет в наличии'
-          />
-
-          <Parts.Title href={item.url}>{item.name}</Parts.Title>
-
-          <Parts.Footer>
-            <Parts.WaitListAddButton
-              onClick={() => alert('Представим добавление в лист ожидания...')}
+            <Parts.Prices
+              price={item.price}
+              oldPrice={item.oldPrice}
+              currencyGrapheme={item.currencyGrapheme}
+              unavailableReason='Товара нет в наличии'
             />
-          </Parts.Footer>
-        </ProductInfo>
-      ))}
-    </ProductSlider>
-  </Bootstrap>
-);
+
+            <Parts.Title href={item.url}>{item.name}</Parts.Title>
+
+            <Parts.Footer>
+              <Parts.WaitListAddButton
+                onClick={() => alert('Представим добавление в лист ожидания...')}
+              />
+            </Parts.Footer>
+          </ProductInfo>
+        ))}
+      </ProductSlider>
+    </Bootstrap>
+  );
+}
 
 Unavailable.storyName = 'Недоступные товары';
 
-export const Adult = () => (
-  <Bootstrap>
-    <ProductSlider>
-      {items.map((item, index) => (
-        <ProductInfo key={index} restriction='adult'>
-          <Parts.Image src={item.imageSrc} href={item.url} />
+export function Adult() {
+  return (
+    <Bootstrap>
+      <ProductSlider>
+        {items.map((item, index) => (
+          <ProductInfo key={index} restriction='adult'>
+            <Parts.Image src={item.imageSrc} href={item.url} />
 
-          <Parts.Prices
-            price={item.price}
-            oldPrice={item.oldPrice}
-            currencyGrapheme={item.currencyGrapheme}
-          />
+            <Parts.Prices
+              price={item.price}
+              oldPrice={item.oldPrice}
+              currencyGrapheme={item.currencyGrapheme}
+            />
 
-          <Parts.Title href={item.url}>{item.name}</Parts.Title>
+            <Parts.Title href={item.url}>{item.name}</Parts.Title>
 
-          <Parts.Footer>
-            <Parts.AdultConfirmButton onClick={() => 'Поверим на слово =)'} />
-          </Parts.Footer>
-        </ProductInfo>
-      ))}
-    </ProductSlider>
-  </Bootstrap>
-);
+            <Parts.Footer>
+              <Parts.AdultConfirmButton onClick={() => 'Поверим на слово =)'} />
+            </Parts.Footer>
+          </ProductInfo>
+        ))}
+      </ProductSlider>
+    </Bootstrap>
+  );
+}
 
 Adult.storyName = 'Товары для взрослых';

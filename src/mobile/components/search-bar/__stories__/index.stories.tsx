@@ -18,7 +18,7 @@ export default {
   },
 };
 
-export const Primary = () => {
+export function Primary() {
   const [value, setValue] = useState<string>('');
 
   return (
@@ -34,11 +34,11 @@ export const Primary = () => {
       ]}
     />
   );
-};
+}
 
 Primary.storyName = 'Простой пример';
 
-export const Secondary = () => {
+export function Secondary() {
   const [value, setValue] = useState<string>('');
 
   return (
@@ -68,6 +68,6 @@ export const Secondary = () => {
       placeholder='Найти'
     />
   );
-};
+}
 
 Secondary.storyName = 'С иконками';

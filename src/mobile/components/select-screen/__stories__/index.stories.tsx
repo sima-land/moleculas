@@ -21,7 +21,7 @@ export default {
   },
 };
 
-export const Primary = () => {
+export function Primary() {
   const items: string[] = [
     'Верх-Исетский',
     'Чкаловский',
@@ -79,11 +79,11 @@ export const Primary = () => {
       )}
     </>
   );
-};
+}
 
 Primary.storyName = 'Простой пример';
 
-export const SizeXL = () => {
+export function SizeXL() {
   const [opened, toggleModal] = useState<boolean>(false);
   const [selectedId, selectItem] = useState<number>(0);
 
@@ -172,6 +172,6 @@ export const SizeXL = () => {
       )}
     </>
   );
-};
+}
 
 SizeXL.storyName = 'Большие опции';

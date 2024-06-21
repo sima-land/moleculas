@@ -5,6 +5,7 @@
     "moduleResolution": "Bundler",
     "paths": {
       // ВАЖНО: только для storybook
+      "#docs-utils": ["./.storybook/utils.tsx"],
       "@sima-land/moleculas/*": ["./src/*"],
     },
   },
