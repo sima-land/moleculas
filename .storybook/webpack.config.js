@@ -7,6 +7,7 @@ module.exports = ({ config }) => ({
     ...config.resolve,
     alias: {
       ...config.resolve.alias,
+      '#docs-utils$': path.resolve(__dirname, './utils.tsx'),
       '@sima-land/moleculas': path.resolve(__dirname, '..', 'src/'),
     },
   },

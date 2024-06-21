@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Badge, BadgeProps } from '@sima-land/moleculas/common/components/badge';
 import { addDays, addMonths } from 'date-fns';
 import { Hint, useHintFloating, useHintOnHover } from '@sima-land/ui-nucleons/hint';
-import { Sandbox } from '../../../../../.storybook/utils';
+import { Sandbox } from '#docs-utils';
 import { COLORS } from '@sima-land/ui-nucleons/colors';
 
 export default {
