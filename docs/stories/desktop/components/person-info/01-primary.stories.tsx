@@ -3,9 +3,9 @@ import { Modal, ModalBody } from '@sima-land/ui-nucleons/modal';
 import { BottomBar } from '@sima-land/ui-nucleons/bottom-bar';
 import { CleanButton, CleanGroup } from '@sima-land/ui-nucleons/clean-buttons';
 
-export default {
-  title: 'desktop/PersonInfo',
-  component: PersonInfo,
+export const meta = {
+  category: 'desktop/PersonInfo',
+  title: 'Простой пример',
   parameters: {
     parameters: {
       layout: 'padded',
@@ -13,7 +13,7 @@ export default {
   },
 };
 
-export function Primary() {
+export default function Primary() {
   return (
     <Modal size='s'>
       <ModalBody>
@@ -38,5 +38,3 @@ export function Primary() {
     </Modal>
   );
 }
-
-Primary.storyName = 'Простой пример';

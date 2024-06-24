@@ -1,5 +1,5 @@
 import { CSSProperties, ReactNode, useState } from 'react';
-import styles from './utils.m.scss';
+import styles from './docs-utils.m.scss';
 
 interface ControlSelect {
   type: 'select';

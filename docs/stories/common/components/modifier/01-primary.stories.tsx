@@ -1,19 +1,17 @@
 import { Modifier } from '@sima-land/moleculas/common/components/modifier';
 
-export default {
-  title: 'common/Modifier',
-  component: Modifier,
+export const meta = {
+  category: 'common/Modifier',
+  title: 'Простой пример',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function Primary() {
+export default function Primary() {
   return (
     <>
       <Modifier content={{ type: 'text', text: 'Какой-то текст' }} count={17} />
     </>
   );
 }
-
-Primary.storyName = 'Простой пример';

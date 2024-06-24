@@ -2,9 +2,9 @@ import { InteractiveImage, Parts } from '@sima-land/moleculas/common/components/
 import { CSSProperties } from 'react';
 import imageSrc from './image.png';
 
-export default {
-  title: 'common/InteractiveImage',
-  component: InteractiveImage,
+export const meta = {
+  category: 'common/InteractiveImage',
+  title: 'Картинка-ссылка',
   parameters: {
     layout: 'padded',
   },
@@ -23,7 +23,7 @@ const points: TitledPoint[] = [
   { x: 83, y: 69, title: 'Приборы' },
 ];
 
-export function BackgroundAnchor() {
+export default function BackgroundAnchor() {
   const style: CSSProperties = {
     borderRadius: '8px',
     width: '600px',
@@ -46,5 +46,3 @@ export function BackgroundAnchor() {
     </InteractiveImage>
   );
 }
-
-BackgroundAnchor.storyName = 'Картинка-ссылка';

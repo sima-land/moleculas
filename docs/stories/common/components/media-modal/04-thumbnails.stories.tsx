@@ -13,14 +13,15 @@ import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks';
 import { mixed } from './fixture';
 
-export default {
-  title: 'common/MediaLayout',
+export const meta = {
+  category: 'common/MediaLayout',
+  title: 'Превью',
   parameters: {
     layout: 'fullscreen',
   },
 };
 
-export function ExampleThumbnails() {
+export default function ExampleThumbnails() {
   const desktop = useBreakpoint('xs+');
   const [target, setTarget] = useState(0);
 
@@ -93,5 +94,3 @@ export function ExampleThumbnails() {
     </Modal>
   );
 }
-
-ExampleThumbnails.storyName = 'Превью';

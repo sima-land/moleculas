@@ -1,18 +1,15 @@
 import { SearchBar } from '@sima-land/moleculas/mobile/components/search-bar';
 import { useState } from 'react';
 
-export default {
-  title: 'mobile/SearchBar',
-  component: SearchBar,
+export const meta = {
+  category: 'mobile/SearchBar',
+  title: 'Простой пример',
   parameters: {
     layout: 'padded',
-    viewport: {
-      defaultViewport: 'iphonex',
-    },
   },
 };
 
-export function Primary() {
+export default function Primary() {
   const [value, setValue] = useState<string>('');
 
   return (
@@ -29,5 +26,3 @@ export function Primary() {
     />
   );
 }
-
-Primary.storyName = 'Простой пример';

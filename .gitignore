@@ -12,9 +12,6 @@
 # library build
 build
 
-# storybook build
-build-storybook
-
 # misc
 .DS_Store
 .env.local

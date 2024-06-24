@@ -8,9 +8,9 @@ import cherry from './images/cherry.jpg';
 import phone from './images/phone.jpg';
 import cone from './images/ice-cream-cone.jpg';
 
-export default {
-  title: 'desktop/PromotionCard',
-  component: PromotionCard,
+export const meta = {
+  category: 'desktop/PromotionCard',
+  title: 'Простой пример',
   parameters: {
     layout: 'padded',
   },
@@ -53,7 +53,7 @@ const demoItems: PromotionCardProps[] = [
   },
 ];
 
-export function Primary() {
+export default function Primary() {
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
       {demoItems.map((props, index) => (
@@ -66,5 +66,3 @@ export function Primary() {
     </div>
   );
 }
-
-Primary.storyName = 'Простой пример';

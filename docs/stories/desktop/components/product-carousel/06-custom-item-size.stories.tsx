@@ -5,15 +5,15 @@ import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import FavSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
 import { items } from './fixture';
 
-export default {
-  title: 'desktop/ProductCarousel',
-  component: ProductCarousel,
+export const meta = {
+  category: 'desktop/ProductCarousel',
+  title: 'Пример: пользовательский размер элемента',
   parameters: {
     layout: 'fullscreen',
   },
 };
 
-export function CustomItemSize() {
+export default function CustomItemSize() {
   return (
     <div style={{ margin: '40px', width: '400px' }}>
       <ProductCarousel
@@ -58,5 +58,3 @@ export function CustomItemSize() {
     </div>
   );
 }
-
-CustomItemSize.storyName = 'Пример: пользовательский размер элемента';

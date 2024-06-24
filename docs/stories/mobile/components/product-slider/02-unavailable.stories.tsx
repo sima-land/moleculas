@@ -4,9 +4,9 @@ import { ProductInfo, Parts } from '@sima-land/moleculas/common/components/produ
 import { MobileLayout } from '@sima-land/ui-nucleons/layout';
 import { items } from './fixture';
 
-export default {
-  title: 'mobile/ProductSlider',
-  component: ProductSlider,
+export const meta = {
+  category: 'mobile/ProductSlider',
+  title: 'Недоступные товары',
   parameters: {
     layout: 'fullscreen',
   },
@@ -36,7 +36,7 @@ const Bootstrap = ({ children }: { children?: ReactNode }) => (
   </>
 );
 
-export function Unavailable() {
+export default function Unavailable() {
   return (
     <Bootstrap>
       <ProductSlider>
@@ -64,5 +64,3 @@ export function Unavailable() {
     </Bootstrap>
   );
 }
-
-Unavailable.storyName = 'Недоступные товары';

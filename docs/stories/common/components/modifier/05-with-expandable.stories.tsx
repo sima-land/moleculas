@@ -6,15 +6,15 @@ import {
 import { Expandable } from '@sima-land/ui-nucleons/expandable';
 import { Layout } from '@sima-land/ui-nucleons/layout';
 
-export default {
-  title: 'common/Modifier',
-  component: Modifier,
+export const meta = {
+  category: 'common/Modifier',
+  title: 'Вместе с Expandable',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function WithExpandable() {
+export default function WithExpandable() {
   const manyItems: ModifierContent[] = [...Array(32).keys()].map(index => ({
     type: 'text',
     text: `Вариант №${index + 1}`,
@@ -32,5 +32,3 @@ export function WithExpandable() {
     </Layout>
   );
 }
-
-WithExpandable.storyName = 'Вместе с Expandable';

@@ -1,14 +1,14 @@
 import { Badge } from '@sima-land/moleculas/common/components/badge';
 
-export default {
-  title: 'common/Badge',
-  component: Badge,
+export const meta = {
+  category: 'common/Badge',
+  title: 'Иконка',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function IconView() {
+export default function IconView() {
   return (
     <Badge
       color='#ff7200'
@@ -22,5 +22,3 @@ export function IconView() {
     />
   );
 }
-
-IconView.storyName = 'Иконка';

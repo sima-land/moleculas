@@ -1,19 +1,17 @@
 import { ProductImage } from '@sima-land/moleculas/common/components/product-image';
 
-export default {
-  title: 'common/ProductImage',
-  component: ProductImage,
+export const meta = {
+  category: 'common/ProductImage',
+  title: 'Ошибка загрузки',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function Broken() {
+export default function Broken() {
   return (
     <>
       <ProductImage src='/missing.jpg' />
     </>
   );
 }
-
-Broken.storyName = 'Ошибка загрузки';

@@ -8,9 +8,9 @@ import { Input } from '@sima-land/ui-nucleons/input';
 import { MobileLayout } from '@sima-land/ui-nucleons/layout';
 import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
 
-export default {
-  title: 'mobile/SelectScreenLayout',
-  component: SelectScreenLayout,
+export const meta = {
+  category: 'mobile/SelectScreenLayout',
+  title: 'Большие опции',
   parameters: {
     layout: 'fullscreen',
   },
@@ -49,7 +49,7 @@ const styles = {
   } satisfies CSSProperties,
 };
 
-export function SizeXL() {
+export default function SizeXL() {
   const [opened, toggleModal] = useState<boolean>(false);
   const [selectedId, selectItem] = useState<number>(0);
 
@@ -109,5 +109,3 @@ export function SizeXL() {
     </>
   );
 }
-
-SizeXL.storyName = 'Большие опции';

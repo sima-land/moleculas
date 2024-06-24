@@ -1,9 +1,9 @@
 import { Modifier, ModifierContent } from '@sima-land/moleculas/common/components/modifier';
 import headphones from './images/headphones.jpg';
 
-export default {
-  title: 'common/Modifier',
-  component: Modifier,
+export const meta = {
+  category: 'common/Modifier',
+  title: 'Размер M',
   parameters: {
     layout: 'padded',
   },
@@ -32,7 +32,7 @@ const Container = ({ children }: any) => (
   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', maxWidth: '400px' }}>{children}</div>
 );
 
-export function SizeM() {
+export default function SizeM() {
   return (
     <div style={{ maxWidth: '400px' }}>
       <h4>Default</h4>
@@ -79,5 +79,3 @@ export function SizeM() {
     </div>
   );
 }
-
-SizeM.storyName = 'Размер M';

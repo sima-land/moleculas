@@ -2,15 +2,15 @@ import { Modifier } from '@sima-land/moleculas/common/components/modifier';
 import { useState } from 'react';
 import headphones from './images/headphones.jpg';
 
-export default {
-  title: 'common/Modifier',
-  component: Modifier,
+export const meta = {
+  category: 'common/Modifier',
+  title: 'Тест: ошибка загрузки картинки',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function TestImageBroken() {
+export default function TestImageBroken() {
   const [broken, setBroken] = useState(false);
   const src = broken ? 'http://non-existed-site.com/' : headphones;
 
@@ -31,5 +31,3 @@ export function TestImageBroken() {
     </>
   );
 }
-
-TestImageBroken.storyName = 'Тест: ошибка загрузки картинки';

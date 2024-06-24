@@ -12,14 +12,15 @@ import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
 import { Tabs } from '@sima-land/ui-nucleons/tabs';
 import { TextButton } from '@sima-land/ui-nucleons/text-button';
 
-export default {
-  title: 'common/MediaLayout',
+export const meta = {
+  category: 'common/MediaLayout',
+  title: 'Вкладки и кнопка',
   parameters: {
     layout: 'fullscreen',
   },
 };
 
-export function MediaTabsWithButton() {
+export default function MediaTabsWithButton() {
   const styles = {
     display: 'flex',
     justifyContent: 'center',
@@ -67,5 +68,3 @@ export function MediaTabsWithButton() {
     </Modal>
   );
 }
-
-MediaTabsWithButton.storyName = 'Вкладки и кнопка';

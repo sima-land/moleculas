@@ -4,15 +4,15 @@ import { Button } from '@sima-land/ui-nucleons/button';
 import { Modal, ModalBody } from '@sima-land/ui-nucleons/modal';
 import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
 
-export default {
-  title: 'mobile/PersonInfo',
-  component: PersonInfo,
+export const meta = {
+  category: 'mobile/PersonInfo',
+  title: 'Простой пример',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function Primary() {
+export default function Primary() {
   const [open, setOpen] = useState(false);
 
   const person = {
@@ -42,5 +42,3 @@ export function Primary() {
     </>
   );
 }
-
-Primary.storyName = 'Простой пример';

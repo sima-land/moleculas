@@ -8,7 +8,7 @@ const config = {
     '^.+\\.(t|j)sx?$': ['babel-jest', { configFile: './.jest/babel.config.json' }],
 
     // css-модули
-    '\\.(module|m)\\.(css|scss)$': 'jest-css-modules-transform',
+    '\\.(module|m)\\.(css|scss)$': '@krutoo/jest-css-modules-transform',
 
     // обычные стили
     '(?<!(.+\\.(module|m)))(\\.css|\\.scss)$': '<rootDir>/.jest/transforms/empty.js',

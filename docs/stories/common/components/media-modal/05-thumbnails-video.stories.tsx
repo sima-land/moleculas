@@ -13,14 +13,15 @@ import { useState } from 'react';
 import { videos } from './fixture';
 import { useBreakpoint } from '@sima-land/ui-nucleons/hooks';
 
-export default {
-  title: 'common/MediaLayout',
+export const meta = {
+  category: 'common/MediaLayout',
+  title: 'Превью видео',
   parameters: {
     layout: 'fullscreen',
   },
 };
 
-export function ExampleThumbnailsVideo() {
+export default function ExampleThumbnailsVideo() {
   const desktop = useBreakpoint('xs+');
   const [target, setTarget] = useState(0);
 
@@ -79,5 +80,3 @@ export function ExampleThumbnailsVideo() {
     </Modal>
   );
 }
-
-ExampleThumbnailsVideo.storyName = 'Превью видео';

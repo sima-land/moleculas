@@ -4,9 +4,9 @@ import { ProductInfo, Parts } from '@sima-land/moleculas/common/components/produ
 import { MobileLayout } from '@sima-land/ui-nucleons/layout';
 import { items } from './fixture';
 
-export default {
-  title: 'mobile/ProductSlider',
-  component: ProductSlider,
+export const meta = {
+  category: 'mobile/ProductSlider',
+  title: 'Товары для взрослых',
   parameters: {
     layout: 'fullscreen',
   },
@@ -36,7 +36,7 @@ const Bootstrap = ({ children }: { children?: ReactNode }) => (
   </>
 );
 
-export function Adult() {
+export default function Adult() {
   return (
     <Bootstrap>
       <ProductSlider>
@@ -61,5 +61,3 @@ export function Adult() {
     </Bootstrap>
   );
 }
-
-Adult.storyName = 'Товары для взрослых';

@@ -6,15 +6,15 @@ import MagnifierPlusSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Magnifier
 import ComparisonAddSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/ComparisonAdd';
 import strawberries from './images/strawberries.jpg';
 
-export default {
-  title: 'common/ProductInfo',
-  component: ProductInfo,
+export const meta = {
+  category: 'common/ProductInfo',
+  title: 'Простой пример',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function Primary() {
+export default function Primary() {
   return (
     <div style={{ maxWidth: '200px' }}>
       <ProductInfo>
@@ -70,5 +70,3 @@ export function Primary() {
     </div>
   );
 }
-
-Primary.storyName = 'Простой пример';

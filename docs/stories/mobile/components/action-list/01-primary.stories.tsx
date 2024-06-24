@@ -5,15 +5,15 @@ import { BottomBar } from '@sima-land/ui-nucleons/bottom-bar';
 import { Button } from '@sima-land/ui-nucleons/button';
 import { CleanButton, CleanGroup } from '@sima-land/ui-nucleons/clean-buttons';
 
-export default {
-  title: 'mobile/ActionList',
-  component: ActionList,
+export const meta = {
+  category: 'mobile/ActionList',
+  title: 'Простой пример',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function Primary() {
+export default function Primary() {
   const [open, setOpen] = useState(false);
 
   const action = () => {
@@ -56,5 +56,3 @@ export function Primary() {
     </>
   );
 }
-
-Primary.storyName = 'Простой пример';

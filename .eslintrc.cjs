@@ -19,7 +19,6 @@ module.exports = {
         'no-alert': 'off',
         'no-console': 'off',
         'import/no-anonymous-default-export': 'off',
-        'storybook/no-title-property-in-meta': 'off',
       },
     },
 

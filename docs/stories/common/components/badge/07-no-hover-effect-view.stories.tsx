@@ -1,19 +1,17 @@
 import { Badge } from '@sima-land/moleculas/common/components/badge';
 
-export default {
-  title: 'common/Badge',
-  component: Badge,
+export const meta = {
+  category: 'common/Badge',
+  title: 'Без ссылки и hover',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function NoHoverEffectView() {
+export default function NoHoverEffectView() {
   return (
     <>
       <Badge color='#607d8b' fields={[{ type: 'text', value: 'Уценённый товар' }]} />
     </>
   );
 }
-
-NoHoverEffectView.storyName = 'Без ссылки и hover';

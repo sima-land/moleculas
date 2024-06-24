@@ -17,15 +17,15 @@ import { Tabs } from '@sima-land/ui-nucleons/tabs';
 import { Layout } from '@sima-land/ui-nucleons/layout';
 import { TextButton } from '@sima-land/ui-nucleons/text-button';
 
-export default {
-  title: 'common/MediaLayout',
-  component: MediaLayout,
+export const meta = {
+  category: 'common/MediaLayout',
+  title: 'Загрузка',
   parameters: {
     layout: 'fullscreen',
   },
 };
 
-export function LoadingMixed() {
+export default function LoadingMixed() {
   const items = Array(15).fill(0);
 
   return (
@@ -75,5 +75,3 @@ export function LoadingMixed() {
     </Modal>
   );
 }
-
-LoadingMixed.storyName = 'Загрузка';

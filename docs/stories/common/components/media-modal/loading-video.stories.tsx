@@ -16,15 +16,15 @@ import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
 import { Tabs } from '@sima-land/ui-nucleons/tabs';
 import { Layout } from '@sima-land/ui-nucleons/layout';
 
-export default {
-  title: 'common/MediaLayout',
-  component: MediaLayout,
+export const meta = {
+  category: 'common/MediaLayout',
+  title: 'Загрузка видео',
   parameters: {
     layout: 'fullscreen',
   },
 };
 
-export function LoadingVideo() {
+export default function LoadingVideo() {
   const items = Array(15).fill(0);
 
   return (
@@ -67,5 +67,3 @@ export function LoadingVideo() {
     </Modal>
   );
 }
-
-LoadingVideo.storyName = 'Загрузка видео';

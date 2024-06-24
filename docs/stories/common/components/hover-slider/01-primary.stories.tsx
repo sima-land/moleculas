@@ -6,9 +6,9 @@ import coffee from './images/coffee.jpg';
 import clock from './images/clock.jpg';
 import gamepad from './images/gamepad.jpg';
 
-export default {
-  title: 'common/HoverSlider',
-  component: HoverSlider,
+export const meta = {
+  category: 'common/HoverSlider',
+  title: 'Простой пример',
   parameters: {
     layout: 'padded',
   },
@@ -32,7 +32,7 @@ const images = [
   gamepad,
 ];
 
-export function Primary() {
+export default function Primary() {
   return (
     <>
       <HoverSlider>
@@ -45,5 +45,3 @@ export function Primary() {
     </>
   );
 }
-
-Primary.storyName = 'Простой пример';

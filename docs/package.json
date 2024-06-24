@@ -1,0 +1,27 @@
+{
+  "name": "ui-moleculas-docs",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "tsc -p . --noEmit",
+    "dev": "npx --node-options='--import=tsimp/import' rspack serve",
+    "build": "npx --node-options='--import=tsimp/import' rspack"
+  },
+  "dependencies": {
+    "@krutoo/showcase": "^0.0.1",
+    "lorem-ipsum": "^2.0.8",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@mdx-js/loader": "^3.0.1",
+    "@rspack/cli": "^0.7.4",
+    "@rspack/core": "^0.7.4",
+    "css-loader": "^7.1.2",
+    "sass-embedded": "^1.77.5",
+    "sass-loader": "^14.2.1",
+    "tsimp": "^2.0.11",
+    "typescript": "^5.5.2"
+  }
+}

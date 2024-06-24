@@ -5,15 +5,15 @@ import MagnifierPlusSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Magnifier
 import ComparisonAddSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/ComparisonAdd';
 import strawberries from './images/strawberries.jpg';
 
-export default {
-  title: 'common/ProductInfo',
-  component: ProductInfo,
+export const meta = {
+  category: 'common/ProductInfo',
+  title: 'Нет в наличии',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function NotEnough() {
+export default function NotEnough() {
   return (
     <div style={{ width: '200px' }}>
       <ProductInfo restriction='unavailable'>
@@ -69,5 +69,3 @@ export function NotEnough() {
     </div>
   );
 }
-
-NotEnough.storyName = 'Нет в наличии';

@@ -4,9 +4,9 @@ import { useState } from 'react';
 import { addMonths } from 'date-fns';
 import { Hint, useHintFloating, useHintFloatingStyle } from '@sima-land/ui-nucleons/hint';
 
-export default {
-  title: 'common/BadgeList',
-  component: BadgeList,
+export const meta = {
+  category: 'common/BadgeList',
+  title: 'С хинтами',
   parameters: {
     layout: 'padded',
   },
@@ -33,7 +33,7 @@ const items: BadgeProps[] = [
   },
 ];
 
-export function Hints() {
+export default function Hints() {
   const [open, setOpen] = useState(false);
   const { refs, ...floating } = useHintFloating({ open, onOpenChange: setOpen });
   const style = useHintFloatingStyle(floating);
@@ -62,5 +62,3 @@ export function Hints() {
     </>
   );
 }
-
-Hints.storyName = 'С хинтами';

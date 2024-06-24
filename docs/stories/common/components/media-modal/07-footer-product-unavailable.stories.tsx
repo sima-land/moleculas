@@ -14,14 +14,15 @@ import { TextButton } from '@sima-land/ui-nucleons/text-button';
 import { useState } from 'react';
 import CheckSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/Check';
 
-export default {
-  title: 'common/MediaLayout',
+export const meta = {
+  category: 'common/MediaLayout',
+  title: 'Футер с товаром не в наличии',
   parameters: {
     layout: 'fullscreen',
   },
 };
 
-export function ExampleFooterProductUnavailable() {
+export default function ExampleFooterProductUnavailable() {
   const [added, setAdded] = useState(false);
 
   const styles = {
@@ -80,5 +81,3 @@ export function ExampleFooterProductUnavailable() {
     </Modal>
   );
 }
-
-ExampleFooterProductUnavailable.storyName = 'Футер с товаром не в наличии';

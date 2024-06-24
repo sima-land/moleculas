@@ -22,14 +22,15 @@ import { MediaGallery, MediaSlide } from '@sima-land/moleculas/common/components
 import { MediaData } from '@sima-land/moleculas/common/components/media-modal/types';
 import plant from './images/plant.jpg';
 
-export default {
-  title: 'common/MediaLayout',
+export const meta = {
+  category: 'common/MediaLayout',
+  title: 'Тест: ошибка загрузки картинок',
   parameters: {
     layout: 'fullscreen',
   },
 };
 
-export function TestImagesBroken() {
+export default function TestImagesBroken() {
   const [targetIndex, setTargetIndex] = useState(0);
   const [broken, setBroken] = useState(false);
 
@@ -135,5 +136,3 @@ export function TestImagesBroken() {
     </Modal>
   );
 }
-
-TestImagesBroken.storyName = 'Тест: ошибка загрузки картинок';

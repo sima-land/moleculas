@@ -1,9 +1,9 @@
 import { ProductRow, ProductRowProps } from '@sima-land/moleculas/mobile/components/product-row';
 import { ReactNode } from 'react';
 
-export default {
-  title: 'mobile/ProductRow',
-  component: ProductRow,
+export const meta = {
+  category: 'mobile/ProductRow',
+  title: 'Было в заказе',
   parameters: {
     layout: 'padded',
   },
@@ -25,12 +25,10 @@ function Container({ children }: { children: ReactNode }) {
   return <div style={{ width: '480px', margin: '80px auto' }}>{children}</div>;
 }
 
-export function InitialCount() {
+export default function InitialCount() {
   return (
     <Container>
       <ProductRow {...productData} initialCount={12} />
     </Container>
   );
 }
-
-InitialCount.storyName = 'Было в заказе';

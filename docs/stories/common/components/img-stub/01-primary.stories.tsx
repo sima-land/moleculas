@@ -1,20 +1,17 @@
 import { ImgStub } from '@sima-land/moleculas/common/components/img-stub';
 
-export default {
-  title: 'common/ImgStub',
-  component: ImgStub,
-
+export const meta = {
+  category: 'common/ImgStub',
+  title: 'Простой пример',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function Primary() {
+export default function Primary() {
   return (
     <>
       <ImgStub style={{ '--img-stub-size': '320px' }} />
     </>
   );
 }
-
-Primary.storyName = 'Простой пример';

@@ -8,15 +8,15 @@ import { Modal, ModalBody, getResponsiveModalProps } from '@sima-land/ui-nucleon
 import { TopBar, navigationButtons } from '@sima-land/ui-nucleons/top-bar';
 import { mixed } from './fixture';
 
-export default {
-  title: 'common/MediaLayout',
-  component: MediaLayout,
+export const meta = {
+  category: 'common/MediaLayout',
+  title: 'Только видео',
   parameters: {
     layout: 'fullscreen',
   },
 };
 
-export function OnlyVideo() {
+export default function OnlyVideo() {
   const media = mixed.filter(item => item.type === 'video')[0];
 
   return (
@@ -34,5 +34,3 @@ export function OnlyVideo() {
     </Modal>
   );
 }
-
-OnlyVideo.storyName = 'Только видео';

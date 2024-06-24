@@ -1,5 +1,5 @@
-@use 'node_modules/@sima-land/ui-nucleons/breakpoints';
-@use 'node_modules/@sima-land/ui-nucleons/utils';
+@use 'pkg:@sima-land/ui-nucleons/breakpoints';
+@use 'pkg:@sima-land/ui-nucleons/utils';
 
 .layout {
   display: flex;

@@ -6,15 +6,15 @@ import {
 import { Layout } from '@sima-land/ui-nucleons/layout';
 import { GroupOverflow } from '@sima-land/ui-nucleons/group-overflow';
 
-export default {
-  title: 'common/Modifier',
-  component: Modifier,
+export const meta = {
+  category: 'common/Modifier',
+  title: 'Вместе с GroupOverflow',
   parameters: {
     layout: 'padded',
   },
 };
 
-export function WithGroupOverflow() {
+export default function WithGroupOverflow() {
   const list: ModifierContent[] = [...Array(32).keys()].map(index => ({
     type: 'text',
     text: `Вариант №${index + 1}`,
@@ -42,5 +42,3 @@ export function WithGroupOverflow() {
     </Layout>
   );
 }
-
-WithGroupOverflow.storyName = 'Вместе с GroupOverflow';

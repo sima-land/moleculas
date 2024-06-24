@@ -7,9 +7,9 @@ import { CSSProperties, useRef, useState } from 'react';
 import { mixed } from '../media-modal/fixture';
 import { usePageScrollLock } from '@sima-land/ui-nucleons/_internal/page-scroll-lock';
 
-export default {
-  title: 'common/MediaGallery',
-  component: MediaGallery,
+export const meta = {
+  category: 'common/MediaGallery',
+  title: 'На весь экран',
   parameters: {
     layout: 'padded',
   },
@@ -32,7 +32,7 @@ const styles = {
   } satisfies CSSProperties,
 };
 
-export function ExampleFullscreen() {
+export default function ExampleFullscreen() {
   const [index, setIndex] = useState(0);
 
   const ref = useRef<HTMLDivElement>(null);
@@ -63,5 +63,3 @@ export function ExampleFullscreen() {
     </div>
   );
 }
-
-ExampleFullscreen.storyName = 'На весь экран';

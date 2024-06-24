@@ -9,9 +9,9 @@ import FavSVG from '@sima-land/ui-quarks/icons/24x24/Filled/Favorite';
 import NotFavSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
 import { items } from './fixture';
 
-export default {
-  title: 'mobile/ProductSlider',
-  component: ProductSlider,
+export const meta = {
+  category: 'mobile/ProductSlider',
+  title: 'Простой пример',
   parameters: {
     layout: 'fullscreen',
   },
@@ -41,7 +41,7 @@ const Bootstrap = ({ children }: { children?: ReactNode }) => (
   </>
 );
 
-export function Primary() {
+export default function Primary() {
   const [wished, toggleWish] = useState<Record<number, boolean>>({});
 
   return (
@@ -91,5 +91,3 @@ export function Primary() {
     </Bootstrap>
   );
 }
-
-Primary.storyName = 'Простой пример';

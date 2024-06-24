@@ -1,9 +1,9 @@
 import { ProductRow, ProductRowProps } from '@sima-land/moleculas/mobile/components/product-row';
 import { ReactNode } from 'react';
 
-export default {
-  title: 'mobile/ProductRow',
-  component: ProductRow,
+export const meta = {
+  category: 'mobile/ProductRow',
+  title: 'Перемещен в заказ',
   parameters: {
     layout: 'padded',
   },
@@ -25,12 +25,10 @@ function Container({ children }: { children: ReactNode }) {
   return <div style={{ width: '480px', margin: '80px auto' }}>{children}</div>;
 }
 
-export function MoveOrder() {
+export default function MoveOrder() {
   return (
     <Container>
       <ProductRow {...productData} movedOrderId={20304} />
     </Container>
   );
 }
-
-MoveOrder.storyName = 'Перемещен в заказ';
