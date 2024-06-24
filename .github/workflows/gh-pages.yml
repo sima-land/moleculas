@@ -26,7 +26,7 @@ jobs:
       - name: Build docs
         run: |
           NODE_ENV=production npm run build
-        working-directory:
+        working-directory: docs
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
