@@ -1,13 +1,10 @@
 import { AnchorHTMLAttributes, ReactNode } from 'react';
-import classnames from 'classnames/bind';
 import { Avatar, getUserAvatarProps } from '@sima-land/ui-nucleons/avatar';
-import { Box } from '@sima-land/ui-nucleons/box';
-import { Text } from '@sima-land/ui-nucleons/text';
-import { InnerBorder } from '@sima-land/ui-nucleons/styling';
 import MailSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Mail';
 import SkypeSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/LogoSkype';
 import PhoneSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Phone';
 import MobileSVG from '@sima-land/ui-quarks/icons/24x24/Filled/Mobile';
+import classnames from 'classnames/bind';
 import styles from './person-info.m.scss';
 
 export interface PersonInfoProps {
@@ -82,7 +79,7 @@ export function PersonInfo({
         />
       )}
 
-      <div className={cx('items', InnerBorder.bottom)}>
+      <div className={cx('items')}>
         {Boolean(email) && (
           <CommunicateLink
             href={`mailto:${email}`}
@@ -141,17 +138,11 @@ export function CommunicateLink({
   icon?: ReactNode;
 }) {
   return (
-    <a href={href} className={cx('item', InnerBorder.top)}>
-      <Box flex='grow'>
-        <Text size={16} lineHeight={24} color='basic-gray87' weight={600}>
-          {primaryText}
-        </Text>
-        <Box marginTop={1}>
-          <Text size={14} lineHeight={20} color='basic-gray38'>
-            {secondaryText}
-          </Text>
-        </Box>
-      </Box>
+    <a href={href} className={cx('item')}>
+      <div className={cx('item-main-col')}>
+        <div className={cx('item-title')}>{primaryText}</div>
+        <div className={cx('item-description')}>{secondaryText}</div>
+      </div>
       <div className={cx('icon-circle')}>{icon}</div>
     </a>
   );
