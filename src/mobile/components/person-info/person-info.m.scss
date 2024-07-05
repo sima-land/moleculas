@@ -66,6 +66,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: 32px auto 0;
+  box-shadow: inset 0 -1px 0 colors.$basic-gray12;
   @media (min-width: 601px) {
     max-width: calc((100% - #{7 * 16px}) / 8 * 6 + (#{5 * 16px}));
   }
@@ -83,9 +84,32 @@
   width: 100%;
   padding: 16px;
   text-decoration: none;
+  box-shadow: inset 0 1px 0 colors.$basic-gray12;
   @media (min-width: 721px) {
     padding: 16px 0;
   }
+}
+
+.item-main-col {
+  flex-grow: 1;
+}
+
+.item-title {
+  font-size: 16px;
+  line-height: 24px;
+  color: colors.$basic-gray87;
+  font-weight: 600;
+}
+
+.item-description {
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  color: colors.$basic-gray38;
+}
+
+.item-main-col + .icon-circle {
+  margin-left: 16px;
 }
 
 .icon-circle {
