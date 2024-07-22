@@ -18,7 +18,7 @@ export default function Primary() {
   return (
     <div style={{ maxWidth: '200px' }}>
       <ProductInfo>
-        <Parts.Image src={strawberries} href='https://www.sima-land.ru'>
+        <Parts.Image images={[{ src: strawberries }]} href='https://www.sima-land.ru'>
           <Parts.ImageButton
             icon={FavoriteSVG}
             position={{ x: 'left', y: 'top' }}

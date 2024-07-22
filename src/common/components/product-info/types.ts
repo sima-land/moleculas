@@ -1,6 +1,6 @@
 import type { LinkProps } from '@sima-land/ui-nucleons/link';
 import type { StrokedSVGProps } from '@sima-land/ui-nucleons/stroked-svg';
-import type { ProductImageStyle } from '../product-image';
+import type { ProductImageProps, ProductImageStyle } from '../product-image';
 import type { HoverSliderProps } from '../hover-slider/types';
 import type {
   AnchorHTMLAttributes,
@@ -38,11 +38,11 @@ export interface ProductInfoMediaProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export interface ProductInfoImageProps extends ProductInfoMediaProps {
-  /** Ссылка на картинку или список ссылок для вывода слайдера. */
-  src?: string | string[];
-
   /** Ссылка на товар. */
   href?: string;
+
+  /** Картинки. */
+  images?: ProductImageProps[];
 
   /** Прочие атрибуты элемента-ссылки. */
   anchorProps?: AnchorHTMLAttributes<HTMLAnchorElement>;

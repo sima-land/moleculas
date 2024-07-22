@@ -22,7 +22,7 @@ export default function CustomItemSize() {
       >
         {items.map((item, index) => (
           <ProductInfo key={index}>
-            <Parts.Image src={item.imageSrc} href={item.url}>
+            <Parts.Image images={[{ src: item.imageSrc }]} href={item.url}>
               <Parts.ImageButton
                 icon={FavSVG}
                 position={{ x: 'left', y: 'top' }}

@@ -34,7 +34,7 @@ export default function FewItems() {
         {items.slice(0, 4).map((item, index) => (
           <ProductInfo key={index}>
             <Parts.Image
-              src={item.imageSrc}
+              images={[{ src: item.imageSrc }]}
               href={item.url}
               onClick={e => {
                 e.preventDefault();

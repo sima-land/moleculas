@@ -23,7 +23,11 @@ describe('ProductSlider', () => {
       <ProductSlider>
         {items.map((item, index) => (
           <ProductInfo key={index}>
-            <Parts.Image src={item.imageSrc} href={item.url} onClick={spies.imageClick}>
+            <Parts.Image
+              images={[{ src: item.imageSrc }]}
+              href={item.url}
+              onClick={spies.imageClick}
+            >
               <Parts.ImageButton
                 icon={FavoriteSVG}
                 hint='Добавить в избранное'
@@ -98,7 +102,7 @@ describe('intersections', () => {
       <ProductSlider onNeedRequest={spy}>
         {items.map((item, index) => (
           <ProductInfo key={index}>
-            <Parts.Image src={item.imageSrc} href={item.url} />
+            <Parts.Image images={[{ src: item.imageSrc }]} href={item.url} />
 
             <Parts.Prices
               price={item.price}
@@ -130,7 +134,7 @@ describe('intersections', () => {
       <ProductSlider onInViewport={spy}>
         {items.map((item, index) => (
           <ProductInfo key={index}>
-            <Parts.Image src={item.imageSrc} href={item.url} />
+            <Parts.Image images={[{ src: item.imageSrc }]} href={item.url} />
 
             <Parts.Prices
               price={item.price}

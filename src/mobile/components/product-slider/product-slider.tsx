@@ -1,7 +1,8 @@
-import { Children, isValidElement, ReactElement, useMemo, useRef } from 'react';
+import { Children, CSSProperties, isValidElement, ReactElement, useMemo, useRef } from 'react';
 import { useIntersection } from '@sima-land/ui-nucleons/hooks';
 import { TouchSlider } from '@sima-land/ui-nucleons/touch-slider';
 import { ProductInfo, ProductInfoProps, Parts } from '../../../common/components/product-info';
+import classNames from 'classnames';
 import styles from './product-slider.m.scss';
 
 export type ItemElement = ReactElement<ProductInfoProps, typeof ProductInfo>;
@@ -15,6 +16,9 @@ export interface ProductSliderProps {
 
   /** Функция, инициализирующая загрузку рекомендаций. */
   onNeedRequest?: () => void;
+
+  /** Предоставит свойства для элемента . */
+  itemProps?: { style?: CSSProperties; className?: string };
 }
 
 /**
@@ -22,7 +26,12 @@ export interface ProductSliderProps {
  * @param props Свойства.
  * @return Элемент.
  */
-export const ProductSlider = ({ children, onInViewport, onNeedRequest }: ProductSliderProps) => {
+export const ProductSlider = ({
+  children,
+  onInViewport,
+  onNeedRequest,
+  itemProps,
+}: ProductSliderProps) => {
   const rootRef = useRef<HTMLDivElement>(null);
 
   // инициируем загрузку данных, когда компонент почти попал в зону видимости
@@ -48,7 +57,12 @@ export const ProductSlider = ({ children, onInViewport, onNeedRequest }: Product
             isValidElement(item) &&
               item.type === ProductInfo &&
               list.push(
-                <div key={item.key} className={styles.item} data-testid='product-slider:item'>
+                <div
+                  key={item.key}
+                  data-testid='product-slider:item'
+                  {...itemProps}
+                  className={classNames(styles.item, itemProps?.className)}
+                >
                   {item}
                 </div>,
               );

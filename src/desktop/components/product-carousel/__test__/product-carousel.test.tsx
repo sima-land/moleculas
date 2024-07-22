@@ -50,7 +50,11 @@ describe('ProductCarousel', () => {
       <ProductCarousel>
         {items.map((item, index) => (
           <ProductInfo key={index}>
-            <Parts.Image src={item.imageSrc} href={item.url} onClick={spies.imageClick} />
+            <Parts.Image
+              images={[{ src: item.imageSrc }]}
+              href={item.url}
+              onClick={spies.imageClick}
+            />
 
             <Parts.Prices
               price={item.price}
@@ -98,7 +102,11 @@ describe('ProductCarousel', () => {
     const { container } = render(
       <ProductCarousel>
         <ProductInfo>
-          <Parts.Image src={items[0].imageSrc} href={items[0].url} onClick={spies.imageClick} />
+          <Parts.Image
+            images={[{ src: items[0].imageSrc }]}
+            href={items[0].url}
+            onClick={spies.imageClick}
+          />
 
           <Parts.Prices
             price={items[0].price}
@@ -140,7 +148,7 @@ describe('ProductCarousel', () => {
         <ProductCarousel>
           {items.map((item, index) => (
             <ProductInfo key={index}>
-              <Parts.Image src={item.imageSrc} href={item.url} />
+              <Parts.Image images={[{ src: item.imageSrc }]} href={item.url} />
 
               <Parts.Prices
                 price={item.price}
@@ -167,7 +175,7 @@ describe('ProductCarousel', () => {
         <ProductCarousel>
           {items.map((item, index) => (
             <ProductInfo key={index}>
-              <Parts.Image src={item.imageSrc} href={item.url} />
+              <Parts.Image images={[{ src: item.imageSrc }]} href={item.url} />
 
               <Parts.Prices
                 price={item.price}
@@ -191,7 +199,7 @@ describe('ProductCarousel', () => {
         <ProductCarousel itemSize={{ xs: 3 }}>
           {items.map((item, index) => (
             <ProductInfo key={index}>
-              <Parts.Image src={item.imageSrc} href={item.url} />
+              <Parts.Image images={[{ src: item.imageSrc }]} href={item.url} />
 
               <Parts.Prices
                 price={item.price}
@@ -223,7 +231,7 @@ describe('ProductCarousel', () => {
         <ProductCarousel itemSize={{ xs: 3 }}>
           {items.map((item, index) => (
             <ProductInfo key={index}>
-              <Parts.Image src={item.imageSrc} href={item.url} />
+              <Parts.Image images={[{ src: item.imageSrc }]} href={item.url} />
 
               <Parts.Prices
                 price={item.price}
@@ -326,7 +334,7 @@ describe('intersections', () => {
       <ProductCarousel onNeedRequest={spy}>
         {items.map((item, index) => (
           <ProductInfo key={index}>
-            <Parts.Image src={item.imageSrc} href={item.url} />
+            <Parts.Image images={[{ src: item.imageSrc }]} href={item.url} />
 
             <Parts.Prices
               price={item.price}
@@ -358,7 +366,7 @@ describe('intersections', () => {
       <ProductCarousel onInViewport={spy}>
         {items.map((item, index) => (
           <ProductInfo key={index}>
-            <Parts.Image src={item.imageSrc} href={item.url} />
+            <Parts.Image images={[{ src: item.imageSrc }]} href={item.url} />
 
             <Parts.Prices
               price={item.price}
