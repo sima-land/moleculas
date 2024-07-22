@@ -10,6 +10,9 @@ export interface HoverSliderProps extends HTMLAttributes<HTMLDivElement>, WithTe
   /** Нужно ли показывать навигационные элементы. */
   withNav?: boolean;
 
+  /** Свойства HoverSliderNav. */
+  navProps?: Omit<HoverSliderNavProps, 'current' | 'total'>;
+
   /** Контент перед элементом списка. */
   beforeList?: ReactNode;
 

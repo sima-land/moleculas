@@ -140,7 +140,10 @@ describe('ProductInfo', () => {
   it('should hide parts for adult product', () => {
     const { queryAllByTestId } = render(
       <ProductInfo restriction='adult'>
-        <Parts.Image src='/public/test.png' href='https://sima-land.ru/product'>
+        <Parts.Image
+          src={['/public/test1.png', '/public/test2.png']}
+          href='https://sima-land.ru/product'
+        >
           <Parts.ImageButton
             icon={FavoriteSVG}
             position={{ x: 'right', y: 'top' }}

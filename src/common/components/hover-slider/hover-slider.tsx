@@ -15,6 +15,7 @@ import styles from './hover-slider.m.scss';
 export function HoverSlider({
   rootRef: rootRefProp,
   withNav = true,
+  navProps,
   children,
   beforeList,
   afterList,
@@ -107,7 +108,12 @@ export function HoverSlider({
         {afterList}
 
         {withNav && count > 1 && (
-          <HoverSliderNav current={activeIndex} total={count} className={styles.nav} />
+          <HoverSliderNav
+            {...navProps}
+            className={classNames(styles.nav, navProps?.className)}
+            current={activeIndex}
+            total={count}
+          />
         )}
       </div>
     </HoverSliderContext.Provider>

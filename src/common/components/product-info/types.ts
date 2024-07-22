@@ -1,6 +1,7 @@
 import type { LinkProps } from '@sima-land/ui-nucleons/link';
 import type { StrokedSVGProps } from '@sima-land/ui-nucleons/stroked-svg';
 import type { ProductImageStyle } from '../product-image';
+import type { HoverSliderProps } from '../hover-slider/types';
 import type {
   AnchorHTMLAttributes,
   CSSProperties,
@@ -45,6 +46,8 @@ export interface ProductInfoImageProps extends ProductInfoMediaProps {
 
   /** Прочие атрибуты элемента-ссылки. */
   anchorProps?: AnchorHTMLAttributes<HTMLAnchorElement>;
+
+  sliderProps?: HoverSliderProps;
 }
 
 export interface ImageButtonProps extends Omit<StrokedSVGProps, 'component'> {
