@@ -17,6 +17,7 @@ export function ProductInfoImage({
   href,
   children,
   anchorProps,
+  sliderProps,
   ...restProps
 }: ProductInfoImageProps) {
   const { restriction } = useContext(ProductInfoContext);
@@ -29,6 +30,8 @@ export function ProductInfoImage({
     anchorProps?.className,
   );
 
+  const list = Array.isArray(src) ? src : [src];
+
   return (
     <ProductInfoMedia {...restProps}>
       <a
@@ -37,16 +40,20 @@ export function ProductInfoImage({
         href={adult ? undefined : href}
         className={rootClassName}
       >
-        {Array.isArray(src) ? (
-          <HoverSlider className={styles.slider}>
-            {src.map((item, index) => (
+        {list.length > 1 && !adult ? (
+          <HoverSlider
+            withNav={!adult}
+            {...sliderProps}
+            className={classNames(styles.slider, sliderProps?.className)}
+          >
+            {list.map((item, index) => (
               <HoverSliderItem key={index}>
                 <ProductImage src={item} className={styles.image} />
               </HoverSliderItem>
             ))}
           </HoverSlider>
         ) : (
-          <ProductImage src={src} className={styles.image} />
+          <ProductImage src={list[0]} className={styles.image} />
         )}
       </a>
 
