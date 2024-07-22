@@ -1,0 +1,7 @@
+.card {
+  max-width: 200px;
+}
+
+.card:not(:hover) .nav {
+  display: none;
+}

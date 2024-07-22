@@ -32,7 +32,7 @@ export default function Unavailable() {
       <ProductCarousel>
         {items.map((item, index) => (
           <ProductInfo key={index} restriction='unavailable'>
-            <Parts.Image src={item.imageSrc} href={item.url}>
+            <Parts.Image images={[{ src: item.imageSrc }]} href={item.url}>
               <Parts.ImageButton
                 icon={FavSVG}
                 position={{ x: 'left', y: 'top' }}

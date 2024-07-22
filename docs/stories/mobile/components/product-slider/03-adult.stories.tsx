@@ -42,7 +42,7 @@ export default function Adult() {
       <ProductSlider>
         {items.map((item, index) => (
           <ProductInfo key={index} restriction='adult'>
-            <Parts.Image src={item.imageSrc} href={item.url} />
+            <Parts.Image images={[{ src: item.imageSrc }]} href={item.url} />
 
             <Parts.Prices
               price={item.price}

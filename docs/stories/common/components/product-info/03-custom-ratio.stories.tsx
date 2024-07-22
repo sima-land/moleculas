@@ -8,6 +8,7 @@ import berries0 from './images/strawberries.jpg';
 import berries1 from './images/berries1.jpg';
 import berries2 from './images/berries2.jpg';
 import berries3 from './images/berries3.jpg';
+import styles from './styles.m.css';
 
 export const meta = {
   category: 'common/ProductInfo',
@@ -18,20 +19,23 @@ export const meta = {
 };
 
 const images = [
-  // ссылки на картинки
-  berries0,
-  berries1,
-  berries2,
-  berries3,
+  { src: berries0, alt: 'Первая картинка' },
+  { src: berries1, alt: 'Вторая картинка' },
+  { src: berries2, alt: 'Третья картинка' },
+  { src: berries3, alt: 'Четвертая картинка' },
 ];
 
 export default function CustomRatio() {
   return (
-    <div style={{ maxWidth: '200px' }}>
+    <div className={styles.card}>
       <ProductInfo>
         <Parts.Image
-          src={images}
           href='https://www.sima-land.ru'
+          images={images}
+          sliderProps={{
+            // прокидываем класс навигации чтобы стилями скрывать ее когда мышка не наведена на карточку
+            navProps: { className: styles.nav },
+          }}
           style={{
             '--product-info-media-ratio': '4 / 3',
             '--product-image-object-fit': 'cover',

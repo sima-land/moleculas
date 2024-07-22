@@ -41,7 +41,7 @@ export default function DeferredData() {
         {(ready ? items : []).map((item, index) => (
           <ProductInfo key={index}>
             <Parts.Image
-              src={item.imageSrc}
+              images={[{ src: item.imageSrc }]}
               href={item.url}
               onClick={e => {
                 e.preventDefault();

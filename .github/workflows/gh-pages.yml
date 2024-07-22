@@ -23,6 +23,11 @@ jobs:
           npm ci
         working-directory: docs
 
+      - name: Lint docs
+        run: |
+          npm run check
+        working-directory: docs
+
       - name: Build docs
         run: |
           NODE_ENV=production npm run build

@@ -3,7 +3,11 @@ import { Badge } from '@sima-land/moleculas/common/components/badge';
 import FavoriteSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
 import MagnifierPlusSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/MagnifierPlus';
 import ComparisonAddSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/ComparisonAdd';
-import strawberries from './images/strawberries.jpg';
+import berries0 from './images/strawberries.jpg';
+import berries1 from './images/berries1.jpg';
+import berries2 from './images/berries2.jpg';
+import berries3 from './images/berries3.jpg';
+import styles from './styles.m.css';
 
 export const meta = {
   category: 'common/ProductInfo',
@@ -13,11 +17,25 @@ export const meta = {
   },
 };
 
+const images = [
+  { src: berries0, alt: 'Первая картинка' },
+  { src: berries1, alt: 'Вторая картинка' },
+  { src: berries2, alt: 'Третья картинка' },
+  { src: berries3, alt: 'Четвертая картинка' },
+];
+
 export default function Adult() {
   return (
-    <div style={{ width: '200px' }}>
+    <div className={styles.card}>
       <ProductInfo restriction='adult'>
-        <Parts.Image src={strawberries} href='https://www.sima-land.ru'>
+        <Parts.Image
+          href='https://www.sima-land.ru'
+          images={images}
+          sliderProps={{
+            // прокидываем класс навигации чтобы стилями скрывать ее когда мышка не наведена на карточку
+            navProps: { className: styles.nav },
+          }}
+        >
           <Parts.ImageButton
             icon={FavoriteSVG}
             position={{ x: 'left', y: 'top' }}

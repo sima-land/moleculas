@@ -17,7 +17,7 @@ export default function NotEnoughWaited() {
   return (
     <div style={{ width: '200px' }}>
       <ProductInfo restriction='unavailable'>
-        <Parts.Image src={strawberries} href='https://www.sima-land.ru'>
+        <Parts.Image images={[{ src: strawberries }]} href='https://www.sima-land.ru'>
           <Parts.ImageButton
             icon={FavoriteSVG}
             position={{ x: 'left', y: 'top' }}

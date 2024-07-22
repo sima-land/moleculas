@@ -49,7 +49,7 @@ export default function Primary() {
       <ProductSlider>
         {items.map((item, index) => (
           <ProductInfo key={index}>
-            <Parts.Image src={item.imageSrc} href={item.url}>
+            <Parts.Image images={[{ src: item.imageSrc }]} href={item.url}>
               <Parts.ImageButton
                 icon={wished[index] ? FavSVG : NotFavSVG}
                 fill={wished[index] ? COLORS.get('additional-red') : undefined}
