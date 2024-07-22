@@ -10,7 +10,7 @@ describe('ProductInfo', () => {
   it('should render all parts', () => {
     const { container, queryAllByTestId } = render(
       <ProductInfo>
-        <Parts.Image src='/public/test.png' href='https://sima-land.ru/product'>
+        <Parts.Image images={[{ src: '/public/test.png' }]} href='https://sima-land.ru/product'>
           <Parts.ImageButton
             icon={FavoriteSVG}
             position={{ x: 'right', y: 'top' }}
@@ -80,7 +80,7 @@ describe('ProductInfo', () => {
   it('should hide parts for unavailable product', () => {
     const { queryAllByTestId } = render(
       <ProductInfo restriction='unavailable'>
-        <Parts.Image src='/public/test.png' href='https://sima-land.ru/product'>
+        <Parts.Image images={[{ src: '/public/test.png' }]} href='https://sima-land.ru/product'>
           <Parts.ImageButton
             icon={FavoriteSVG}
             position={{ x: 'right', y: 'top' }}
@@ -141,7 +141,11 @@ describe('ProductInfo', () => {
     const { queryAllByTestId } = render(
       <ProductInfo restriction='adult'>
         <Parts.Image
-          src={['/public/test1.png', '/public/test2.png']}
+          images={[
+            //
+            { src: '/public/test1.png' },
+            { src: '/public/test2.png' },
+          ]}
           href='https://sima-land.ru/product'
         >
           <Parts.ImageButton
@@ -204,7 +208,10 @@ describe('ProductInfo', () => {
     const { container } = render(
       <ProductInfo strict={false}>
         <Parts.Title href='https://my-site.com'>My product!</Parts.Title>
-        <Parts.Image src='https://my-site.com/images/1' href='https://my-site.com' />
+        <Parts.Image
+          images={[{ src: 'https://my-site.com/images/1' }]}
+          href='https://my-site.com'
+        />
         <div>My custom child element!</div>
       </ProductInfo>,
     );
@@ -217,7 +224,7 @@ describe('ProductInfo', () => {
 
     const { getByTestId } = render(
       <ProductInfo restriction='unavailable'>
-        <Parts.Image src='/public/test.jpg' href='https://www.sima-land.ru'>
+        <Parts.Image images={[{ src: '/public/test.jpg' }]} href='https://www.sima-land.ru'>
           <Parts.ImageButton
             icon={FavoriteSVG}
             position={{ x: 'right', y: 'top' }}
@@ -270,7 +277,7 @@ describe('ProductInfo', () => {
   it('should render link to waiting list', () => {
     const { getByTestId } = render(
       <ProductInfo restriction='unavailable'>
-        <Parts.Image src='/public/test.jpg' href='https://www.sima-land.ru'>
+        <Parts.Image images={[{ src: '/public/test.jpg' }]} href='https://www.sima-land.ru'>
           <Parts.ImageButton
             icon={FavoriteSVG}
             position={{ x: 'right', y: 'top' }}
@@ -325,7 +332,7 @@ describe('ProductInfo', () => {
 
     const { getByTestId } = render(
       <ProductInfo restriction='adult'>
-        <Parts.Image src='/images/product.png' href='https://www.sima-land.ru'>
+        <Parts.Image images={[{ src: '/images/product.png' }]} href='https://www.sima-land.ru'>
           <Parts.ImageButton
             icon={FavoriteSVG}
             position={{ x: 'right', y: 'top' }}
@@ -378,7 +385,15 @@ describe('ProductInfo', () => {
   it('should render hover slider when src is an array', () => {
     const { queryAllByTestId } = render(
       <ProductInfo>
-        <Parts.Image src={['/foo.png', '/bar.png', '/baz.png']} href='https://www.sima-land.ru'>
+        <Parts.Image
+          images={[
+            //
+            { src: '/foo.png' },
+            { src: '/bar.png' },
+            { src: '/baz.png' },
+          ]}
+          href='https://www.sima-land.ru'
+        >
           <Parts.ImageButton
             icon={FavoriteSVG}
             position={{ x: 'right', y: 'top' }}
@@ -429,7 +444,7 @@ describe('ProductInfo', () => {
   it('should render cart control loading', () => {
     const { container, queryAllByTestId } = render(
       <ProductInfo>
-        <Parts.Image src='/foobar.png' href='https://www.sima-land.ru'>
+        <Parts.Image images={[{ src: '/foobar.png' }]} href='https://www.sima-land.ru'>
           <Parts.ImageButton
             icon={FavoriteSVG}
             position={{ x: 'right', y: 'top' }}
@@ -478,5 +493,16 @@ describe('ProductInfo', () => {
     expect(queryAllByTestId('stepper')).toHaveLength(0);
     expect(container.textContent).not.toContain('По 1 шт');
     expect(container.textContent).not.toContain('Комплектация + 50 ₽ при покупке до 20 шт');
+  });
+
+  it('Parts.Image should accept undefined for "images"', () => {
+    const { queryAllByTestId } = render(
+      <ProductInfo>
+        <Parts.Image images={undefined} href='https://www.sima-land.ru' />
+      </ProductInfo>,
+    );
+
+    expect(queryAllByTestId('product-image-link')).toHaveLength(1);
+    expect(queryAllByTestId('product-image')).toHaveLength(0);
   });
 });
