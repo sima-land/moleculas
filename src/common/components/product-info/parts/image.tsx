@@ -1,6 +1,6 @@
 import { ProductInfoImageProps } from '../types';
 import { useContext } from 'react';
-import { ProductImage } from '../../product-image';
+import { ProductImage, ProductImageProps } from '../../product-image';
 import { HoverSlider, HoverSliderItem } from '../../hover-slider';
 import { ProductInfoContext } from '../utils';
 import { ProductInfoMedia } from './media';
@@ -13,7 +13,7 @@ import styles from './image.m.scss';
  * @return Элемент.
  */
 export function ProductInfoImage({
-  src,
+  images = [],
   href,
   children,
   anchorProps,
@@ -30,8 +30,6 @@ export function ProductInfoImage({
     anchorProps?.className,
   );
 
-  const list = Array.isArray(src) ? src : [src];
-
   return (
     <ProductInfoMedia {...restProps}>
       <a
@@ -40,25 +38,30 @@ export function ProductInfoImage({
         href={adult ? undefined : href}
         className={rootClassName}
       >
-        {list.length > 1 && !adult ? (
+        {images.length > 1 && !adult ? (
           <HoverSlider
             withNav={!adult}
             {...sliderProps}
             className={classNames(styles.slider, sliderProps?.className)}
           >
-            {list.map((item, index) => (
-              <HoverSliderItem key={index}>
-                <ProductImage src={item} className={styles.image} />
-              </HoverSliderItem>
+            {images.map((imageProps, index) => (
+              <HoverSliderItem key={index}>{renderImage(imageProps)}</HoverSliderItem>
             ))}
           </HoverSlider>
         ) : (
-          <ProductImage src={list[0]} className={styles.image} />
+          images.slice(0, 1).map(renderImage)
         )}
       </a>
 
       {/* ВАЖНО: выводим children за пределами ссылки чтобы клики по кнопкам не вызывали переход по ссылке */}
       {!adult && <>{children}</>}
     </ProductInfoMedia>
+  );
+}
+
+/** @inheritdoc */
+function renderImage(props: ProductImageProps, key?: string | number | null | undefined) {
+  return (
+    <ProductImage key={key} {...props} className={classNames(styles.image, props.className)} />
   );
 }
