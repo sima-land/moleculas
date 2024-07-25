@@ -49,6 +49,9 @@
 
 .submit {
   @include utils.reset-button;
+}
+
+.submit {
   width: 32px;
   height: 32px;
   display: flex;

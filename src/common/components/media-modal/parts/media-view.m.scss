@@ -7,10 +7,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  --all-round-view-size: min(var(--media-view-width, 320px), var(--media-view-height, 240px));
   &.loading {
     background: colors.$basic-gray4;
   }
-  --all-round-view-size: min(var(--media-view-width, 320px), var(--media-view-height, 240px));
   video,
   .image {
     position: absolute;
