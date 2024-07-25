@@ -19,6 +19,9 @@
 
 .thumbnails {
   @include utils.semi-stylized-scrollbars;
+}
+
+.thumbnails {
   width: 104px;
   height: 100%;
   overflow-x: hidden;
