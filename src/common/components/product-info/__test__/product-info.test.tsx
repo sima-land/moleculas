@@ -5,6 +5,7 @@ import FavoriteSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Favorite';
 import MagnifierPlusSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/MagnifierPlus';
 import { Badge } from '../../badge';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
+import { createRef } from 'react';
 
 describe('ProductInfo', () => {
   it('should render all parts', () => {
@@ -504,5 +505,21 @@ describe('ProductInfo', () => {
 
     expect(queryAllByTestId('product-image-link')).toHaveLength(1);
     expect(queryAllByTestId('product-image')).toHaveLength(0);
+  });
+
+  it('Parts.Image should handle "anchorRef" prop', () => {
+    const anchorRef = createRef<HTMLAnchorElement>();
+
+    render(
+      <ProductInfo>
+        <Parts.Image
+          images={[{ src: 'https://hello.world/img' }]}
+          href='https://www.sima-land.ru'
+          anchorRef={anchorRef}
+        />
+      </ProductInfo>,
+    );
+
+    expect(anchorRef.current instanceof HTMLAnchorElement).toBe(true);
   });
 });

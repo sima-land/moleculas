@@ -44,9 +44,13 @@ export interface ProductInfoImageProps extends ProductInfoMediaProps {
   /** Картинки. */
   images?: ProductImageProps[];
 
+  /** Реф элемента-ссылки. */
+  anchorRef?: Ref<HTMLAnchorElement>;
+
   /** Прочие атрибуты элемента-ссылки. */
   anchorProps?: AnchorHTMLAttributes<HTMLAnchorElement>;
 
+  /** Свойства слайдера. */
   sliderProps?: HoverSliderProps;
 }
 

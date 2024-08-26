@@ -18,6 +18,7 @@ export function ProductInfoImage({
   children,
   anchorProps,
   sliderProps,
+  anchorRef,
   ...restProps
 }: ProductInfoImageProps) {
   const { restriction } = useContext(ProductInfoContext);
@@ -34,6 +35,7 @@ export function ProductInfoImage({
     <ProductInfoMedia {...restProps}>
       <a
         {...anchorProps}
+        ref={anchorRef}
         data-testid='product-image-link'
         href={adult ? undefined : href}
         className={rootClassName}

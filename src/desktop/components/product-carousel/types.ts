@@ -1,4 +1,5 @@
 import type { CSSProperties, ReactNode, RefObject } from 'react';
+import type { CarouselProps } from '@sima-land/ui-nucleons/carousel';
 
 export interface ItemSize {
   xs?: 2 | 3 | 4;
@@ -29,6 +30,12 @@ export interface ProductCarouselProps {
 
   /** Активирует "бесконечную" прокрутку карусели. */
   infinite?: boolean;
+
+  /** Свойства стрелок. */
+  controlProps?: CarouselProps['controlProps'];
+
+  /** Отношение высоты картинки товара к ее ширине. Нужно для позиционирования стрелок. */
+  itemImageRatio?: number;
 }
 
 export interface HoverCardProps {

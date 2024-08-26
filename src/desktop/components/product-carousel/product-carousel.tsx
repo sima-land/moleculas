@@ -35,6 +35,8 @@ export function ProductCarousel({
   onInViewport,
   onNeedRequest,
   children,
+  controlProps,
+  itemImageRatio = 1,
 }: ProductCarouselProps) {
   const layer = useLayer();
   const needBigArrows = useMedia('(min-width: 1600px)');
@@ -82,10 +84,12 @@ export function ProductCarousel({
                   size: needBigArrows ? 'l' : 's',
                   style: {
                     zIndex: layer + 2, // чтобы кнопки были над HoverCard
-                    top: `${itemWidth / 2}px`,
+                    top: `${(itemWidth * itemImageRatio) / 2}px`,
+                    ...controlProps?.style,
                   },
+                  ...controlProps,
                 }
-              : undefined
+              : controlProps
           }
           renderItem={(item: ReactNode, realIndex) => (
             <CarouselItem
