@@ -10,10 +10,17 @@ export const meta = {
 
 export default function Primary() {
   return (
-    <Badge
-      href='https://sima-land.ru'
-      color='#002b41'
-      fields={[{ type: 'text', value: 'Товар партнёра' }]}
-    />
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 8, alignItems: 'flex-start' }}>
+      <Badge
+        color='#002b41'
+        href='https://sima-land.ru'
+        fields={[
+          {
+            type: 'text',
+            value: 'Товар партнёра',
+          },
+        ]}
+      />
+    </div>
   );
 }

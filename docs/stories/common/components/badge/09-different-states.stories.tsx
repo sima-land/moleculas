@@ -1,7 +1,7 @@
-import { Sandbox } from '#docs-utils';
 import { Badge, BadgeProps } from '@sima-land/moleculas/common/components/badge';
 import { COLORS } from '@sima-land/ui-nucleons/colors';
 import { useState } from 'react';
+import { Sandbox } from '#docs-utils';
 
 export const meta = {
   category: 'common/Badge',
@@ -21,11 +21,11 @@ export default function DifferentStates() {
   let fields: BadgeProps['fields'];
 
   switch (content) {
-    case 'icon': {
+    case 'text': {
       fields = [
         {
-          type: 'svg-url',
-          value: 'https://static2.static1-sima-land.com/image/mobile_app/common/notice_icon.svg',
+          type: 'text',
+          value: 'Товар партнёра',
         },
       ];
       break;
@@ -39,12 +39,37 @@ export default function DifferentStates() {
       ];
       break;
     }
-    case 'text':
-    default: {
+    case 'icon': {
+      fields = [
+        {
+          type: 'svg-url',
+          value: 'public/images/placeholder_black.svg',
+        },
+      ];
+      break;
+    }
+    case 'icon+text': {
+      fields = [
+        {
+          type: 'svg-url',
+          value: 'public/images/placeholder_black.svg',
+        },
+        {
+          type: 'text',
+          value: 'Товар партнёра',
+        },
+      ];
+      break;
+    }
+    case 'text+icon': {
       fields = [
         {
           type: 'text',
           value: 'Товар партнёра',
+        },
+        {
+          type: 'svg-url',
+          value: 'public/images/placeholder_black.svg',
         },
       ];
       break;
@@ -90,6 +115,14 @@ export default function DifferentStates() {
             {
               displayName: 'Иконка',
               value: 'icon',
+            },
+            {
+              displayName: 'Иконка + текст',
+              value: 'icon+text',
+            },
+            {
+              displayName: 'Текст + иконка',
+              value: 'text+icon',
             },
           ],
           bind: [content, setContent],

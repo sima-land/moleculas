@@ -1,5 +1,5 @@
 $badge-size: 20px;
-$icon-size: 14px;
+$icon-size: 16px;
 
 .root {
   display: inline-flex;
@@ -15,15 +15,23 @@ $icon-size: 14px;
 }
 
 .padding-x-default {
-  // ВАЖНО: учитываем border
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
+  &.coloring-outline {
+    // ВАЖНО: учитываем border
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
 
 .padding-x-pill {
-  // ВАЖНО: учитываем border
-  padding-left: 7px;
+  padding-left: 8px;
   padding-right: 8px;
+  &.coloring-outline {
+    // ВАЖНО: учитываем border
+    padding-left: 7px;
+    padding-right: 7px;
+  }
 }
 
 .shape-round {
@@ -74,8 +82,13 @@ $icon-size: 14px;
 }
 
 .icon {
-  display: inline-block;
+  display: block;
   width: $icon-size;
   height: $icon-size;
   line-height: $icon-size;
+}
+
+.icon + .content,
+.content + .icon {
+  margin-left: 4px;
 }

@@ -192,4 +192,91 @@ describe('Badge', () => {
 
     expect(getByRole('img').hasAttribute('alt')).toBe(true);
   });
+
+  it('should render icon and text', () => {
+    const { getByTestId } = render(
+      <Badge
+        color='#ff7200'
+        href='https://sima-land.ru'
+        fields={[
+          {
+            type: 'text',
+            value: 'Hello, world!',
+          },
+          {
+            type: 'svg-url',
+            value: 'public/icon_notice.svg',
+          },
+        ]}
+      />,
+    );
+
+    expect(getByTestId('badge').querySelectorAll('img')).toHaveLength(1);
+    expect(getByTestId('badge').textContent).toBe('Hello, world!');
+  });
+
+  it('should merge text and text to one span', () => {
+    const { getByTestId } = render(
+      <Badge
+        color='#ff7200'
+        href='https://sima-land.ru'
+        fields={[
+          {
+            type: 'text',
+            value: 'Hello',
+          },
+          {
+            type: 'text',
+            value: 'World',
+          },
+          {
+            type: 'svg-url',
+            value: 'public/icon_notice.svg',
+          },
+        ]}
+      />,
+    );
+
+    expect(getByTestId('badge').querySelectorAll('img')).toHaveLength(1);
+    expect(getByTestId('badge').querySelectorAll('span')).toHaveLength(1);
+    expect(getByTestId('badge').textContent).toBe('Hello World');
+  });
+
+  it('should merge text and timer to one span', () => {
+    const { getByTestId } = render(
+      <Badge
+        color='#ff7200'
+        href='https://sima-land.ru'
+        fields={[
+          {
+            type: 'text',
+            value: 'Hello',
+          },
+          {
+            type: 'timer',
+            value: addDays(new Date(), 7).toISOString(),
+          },
+          {
+            type: 'svg-url',
+            value: 'public/icon_notice.svg',
+          },
+        ]}
+      />,
+    );
+
+    expect(getByTestId('badge').querySelectorAll('img')).toHaveLength(1);
+    expect(getByTestId('badge').querySelectorAll('span')).toHaveLength(1);
+    expect(getByTestId('badge').textContent).toBe('Hello 07:00:00');
+  });
+
+  it('should handle children', () => {
+    const { getByTestId } = render(
+      <Badge color='#ff7200' href='https://sima-land.ru'>
+        <b>Some text here</b>
+      </Badge>,
+    );
+
+    expect(getByTestId('badge').querySelectorAll('b')).toHaveLength(1);
+    expect(getByTestId('badge').textContent).toBe('Some text here');
+  });
 });
