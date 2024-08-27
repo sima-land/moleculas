@@ -20,7 +20,7 @@ export default function TimerTextView() {
           { type: 'text', value: ' — Специальные цены на музыкальные инструменты' },
         ]}
       />
-      <div style={{ height: 8 }} />
+      <div style={{ height: 4 }} />
       <Badge
         color='#b52ea8'
         href='https://sima-land.ru'

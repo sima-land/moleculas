@@ -19,7 +19,7 @@ export interface BadgeProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>
   coloring?: 'fill' | 'outline' | 'unset';
 
   /** Содержимое шильдика. */
-  fields: Array<BadgeField>;
+  fields?: Array<BadgeField>;
 
   /** Форма скруглений. */
   shape?: 'round' | 'pill' | 'unset';
