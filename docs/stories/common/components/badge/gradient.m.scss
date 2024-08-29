@@ -1,0 +1,8 @@
+@use 'pkg:@sima-land/ui-nucleons/colors.scss';
+@use 'pkg:@sima-land/ui-nucleons/gradients.scss';
+
+// предоставляем переменные цветов и градиентов (для использования градиентов в Badge это необходимо)
+.container {
+  @include colors.properties;
+  @include gradients.properties;
+}
