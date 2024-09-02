@@ -25,6 +25,9 @@ export interface ProductCarouselProps {
   /** Сработает при попадании карусели в область достаточно близкую к viewport'у. */
   onNeedRequest?: () => void;
 
+  /** Опции области, которая вызовет onNeedRequest. */
+  needRequestOptions?: IntersectionObserverInit;
+
   /** Предоставит свойства для элемента карусели. */
   itemProps?: { style?: CSSProperties; className?: string };
 

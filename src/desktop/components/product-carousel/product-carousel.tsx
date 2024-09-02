@@ -22,6 +22,10 @@ const getSizeClasses = (size: ProductCarouselProps['itemSize']) =>
       ]
     : [];
 
+const defaultNeedRequestOptions: IntersectionObserverInit = {
+  rootMargin: '200px 0px 200px 0px',
+};
+
 /**
  * Карусель рекомендованных товаров.
  * @param props Свойства.
@@ -37,6 +41,7 @@ export function ProductCarousel({
   children,
   controlProps,
   itemImageRatio = 1,
+  needRequestOptions = defaultNeedRequestOptions,
 }: ProductCarouselProps) {
   const layer = useLayer();
   const needBigArrows = useMedia('(min-width: 1600px)');
@@ -54,7 +59,15 @@ export function ProductCarousel({
   const itemWidth = useClientWidth(firstItemRef, [items.length]);
 
   // инициируем загрузку данных, когда компонент почти попал в зону видимости
-  const options = useMemo(() => ({ rootMargin: '200px 0px 200px 0px' }), []);
+  const { root, rootMargin, threshold } = needRequestOptions;
+  const options = useMemo<IntersectionObserverInit>(
+    () => ({
+      root,
+      rootMargin,
+      threshold,
+    }),
+    [root, rootMargin, threshold],
+  );
   useIntersection(
     rootRef,
     entry => {
