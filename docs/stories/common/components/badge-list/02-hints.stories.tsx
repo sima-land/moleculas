@@ -1,5 +1,5 @@
 import { BadgeList } from '@sima-land/moleculas/common/components/badge-list';
-import { Badge, BadgeProps } from '@sima-land/moleculas/common/components/badge';
+import { Badge, BadgeAsAnchorProps } from '@sima-land/moleculas/common/components/badge';
 import { useState } from 'react';
 import { addMonths } from 'date-fns';
 import { Hint, useHintFloating, useHintFloatingStyle } from '@sima-land/ui-nucleons/hint';
@@ -12,7 +12,7 @@ export const meta = {
   },
 };
 
-const items: BadgeProps[] = [
+const items: BadgeAsAnchorProps[] = [
   {
     href: 'https://sima-land.ru',
     color: '#002b41',
