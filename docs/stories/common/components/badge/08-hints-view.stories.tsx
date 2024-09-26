@@ -18,7 +18,7 @@ export default function HintsView() {
   return (
     <>
       <Badge
-        ref={refs.setReference}
+        rootRef={refs.setReference}
         color='#607d8b'
         href='https://sima-land.ru'
         fields={[{ type: 'text', value: 'Уценённый товар' }]}

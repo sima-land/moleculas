@@ -16,7 +16,7 @@ export default function DifferentStates() {
   const [color, setColor] = useState<string>(COLORS.get('additional-cyan') ?? '#000');
   const [coloring, setColoring] = useState<BadgeProps['coloring']>('outline');
   const [content, setContent] = useState('text');
-  const [anchor, setAnchor] = useState(true);
+  const [tag, setTag] = useState('a');
 
   let fields: BadgeProps['fields'];
 
@@ -129,19 +129,53 @@ export default function DifferentStates() {
         },
         {
           label: 'Ссылка',
-          type: 'toggle',
-          bind: [anchor, setAnchor],
+          type: 'select',
+          options: [
+            {
+              displayName: 'Anchor',
+              value: 'a',
+            },
+            {
+              displayName: 'Button',
+              value: 'button',
+            },
+            {
+              displayName: 'Span',
+              value: 'span',
+            },
+            {
+              displayName: 'Div',
+              value: 'div',
+            },
+          ],
+          bind: [tag, setTag],
         },
       ]}
     >
       <div style={{ maxWidth: '240px' }}>
-        <Badge
-          shape={shape}
-          color={color}
-          coloring={coloring}
-          href={anchor ? 'https://sima-land.ru' : undefined}
-          fields={fields}
-        />
+        {tag === 'a' && (
+          <Badge
+            as='anchor'
+            href='https://sima-land.ru'
+            target='_blank'
+            shape={shape}
+            color={color}
+            coloring={coloring}
+            fields={fields}
+          />
+        )}
+
+        {tag === 'button' && (
+          <Badge as='button' shape={shape} color={color} coloring={coloring} fields={fields} />
+        )}
+
+        {tag === 'span' && (
+          <Badge as='span' shape={shape} color={color} coloring={coloring} fields={fields} />
+        )}
+
+        {tag === 'div' && (
+          <Badge as='div' shape={shape} color={color} coloring={coloring} fields={fields} />
+        )}
       </div>
     </Sandbox>
   );

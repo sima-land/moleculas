@@ -73,7 +73,7 @@ exports[`Badge should renders correctly 4`] = `
 exports[`Badge should renders correctly 5`] = `
 <div>
   <a
-    class="root padding-x-default coloring-outline"
+    class="root with-hover-effect padding-x-default coloring-outline"
     data-testid="badge"
     style="--badge-color: #607d8b;"
   >

@@ -160,12 +160,12 @@ describe('Badge', () => {
     expect(getByRole('link').getAttribute('rel')).toBe('nofollow');
   });
 
-  it('should handle ref', () => {
+  it('should handle rootRef', () => {
     const ref = createRef<HTMLAnchorElement>();
 
     const { getByTestId } = render(
       <Badge
-        ref={ref}
+        rootRef={ref}
         href='https://www.ya.ru'
         rel='nofollow'
         color='#f00'
@@ -277,6 +277,53 @@ describe('Badge', () => {
     );
 
     expect(getByTestId('badge').querySelectorAll('b')).toHaveLength(1);
+    expect(getByTestId('badge').textContent).toBe('Some text here');
+  });
+
+  it('should handle "as" prop', () => {
+    const { rerender, getByTestId } = render(
+      <Badge as={undefined} href='https://sima-land.ru'>
+        <b>Some text here</b>
+      </Badge>,
+    );
+
+    expect(getByTestId('badge').tagName).toBe('A');
+    expect(getByTestId('badge').textContent).toBe('Some text here');
+
+    rerender(
+      <Badge as='anchor' href='https://sima-land.ru'>
+        <b>Some text here</b>
+      </Badge>,
+    );
+
+    expect(getByTestId('badge').tagName).toBe('A');
+    expect(getByTestId('badge').textContent).toBe('Some text here');
+
+    rerender(
+      <Badge as='span'>
+        <b>Some text here</b>
+      </Badge>,
+    );
+
+    expect(getByTestId('badge').tagName).toBe('SPAN');
+    expect(getByTestId('badge').textContent).toBe('Some text here');
+
+    rerender(
+      <Badge as='div'>
+        <b>Some text here</b>
+      </Badge>,
+    );
+
+    expect(getByTestId('badge').tagName).toBe('DIV');
+    expect(getByTestId('badge').textContent).toBe('Some text here');
+
+    rerender(
+      <Badge as='button' type='submit'>
+        <b>Some text here</b>
+      </Badge>,
+    );
+
+    expect(getByTestId('badge').tagName).toBe('BUTTON');
     expect(getByTestId('badge').textContent).toBe('Some text here');
   });
 });

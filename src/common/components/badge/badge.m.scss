@@ -1,5 +1,11 @@
+@use 'pkg:@sima-land/ui-nucleons/utils';
+
 $badge-size: 20px;
 $icon-size: 16px;
+
+.root {
+  @include utils.reset-button;
+}
 
 .root {
   display: inline-flex;

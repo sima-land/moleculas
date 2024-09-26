@@ -1,4 +1,10 @@
-import type { AnchorHTMLAttributes, CSSProperties } from 'react';
+import type {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  CSSProperties,
+  HTMLAttributes,
+  Ref,
+} from 'react';
 
 export interface BadgeField {
   type: 'text' | 'timer' | 'svg-url';
@@ -11,7 +17,7 @@ export interface BadgeStyle extends CSSProperties {
   '--badge-border-color'?: string;
 }
 
-export interface BadgeProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'color'> {
+export interface BadgeSpecificProps {
   /** Основной цвет, используется как цвет обводки, иконок и текста. */
   color?: string;
 
@@ -32,4 +38,36 @@ export interface BadgeProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>
 
   /** Идентификатор для систем автоматизированного тестирования. */
   'data-testid'?: string;
+
+  rootRef?: Ref<HTMLElement>;
 }
+
+export interface BadgeAsAnchorProps
+  extends BadgeSpecificProps,
+    Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'color' | 'style'> {
+  as?: 'anchor';
+}
+
+export interface BadgeAsButtonProps
+  extends BadgeSpecificProps,
+    Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color' | 'style'> {
+  as: 'button';
+}
+
+export interface BadgeAsDivProps
+  extends BadgeSpecificProps,
+    Omit<HTMLAttributes<HTMLDivElement>, 'color' | 'style'> {
+  as: 'div';
+}
+
+export interface BadgeAsSpanProps
+  extends BadgeSpecificProps,
+    Omit<HTMLAttributes<HTMLSpanElement>, 'color' | 'style'> {
+  as: 'span';
+}
+
+export type BadgeProps =
+  | BadgeAsAnchorProps
+  | BadgeAsButtonProps
+  | BadgeAsDivProps
+  | BadgeAsSpanProps;

@@ -480,7 +480,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 class="item"
               >
                 <a
-                  class="root padding-x-default coloring-outline"
+                  class="root with-hover-effect padding-x-default coloring-outline"
                   data-testid="badge"
                   style="--badge-color: #b52ea8;"
                 >
@@ -495,7 +495,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 class="item"
               >
                 <a
-                  class="root padding-x-default coloring-outline"
+                  class="root with-hover-effect padding-x-default coloring-outline"
                   data-testid="badge"
                   style="--badge-color: #ff7200;"
                 >
@@ -510,7 +510,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 class="item"
               >
                 <a
-                  class="root padding-x-default coloring-outline"
+                  class="root with-hover-effect padding-x-default coloring-outline"
                   data-testid="badge"
                   style="--badge-color: #2962ff;"
                 >
@@ -525,7 +525,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 class="item"
               >
                 <a
-                  class="root padding-x-default coloring-outline"
+                  class="root with-hover-effect padding-x-default coloring-outline"
                   data-testid="badge"
                   style="--badge-color: #00b8d4;"
                 >
@@ -1092,7 +1092,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 class="item"
               >
                 <a
-                  class="root padding-x-default coloring-outline"
+                  class="root with-hover-effect padding-x-default coloring-outline"
                   data-testid="badge"
                   style="--badge-color: #2962ff;"
                 >
@@ -1107,7 +1107,7 @@ exports[`ProductSlider should renders correctly 1`] = `
                 class="item"
               >
                 <a
-                  class="root padding-x-default coloring-outline"
+                  class="root with-hover-effect padding-x-default coloring-outline"
                   data-testid="badge"
                   style="--badge-color: #00b8d4;"
                 >
@@ -2415,7 +2415,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         class="item"
       >
         <a
-          class="root padding-x-default coloring-outline"
+          class="root with-hover-effect padding-x-default coloring-outline"
           data-testid="badge"
           style="--badge-color: #b52ea8;"
         >
@@ -2430,7 +2430,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         class="item"
       >
         <a
-          class="root padding-x-default coloring-outline"
+          class="root with-hover-effect padding-x-default coloring-outline"
           data-testid="badge"
           style="--badge-color: #ff7200;"
         >
@@ -2445,7 +2445,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         class="item"
       >
         <a
-          class="root padding-x-default coloring-outline"
+          class="root with-hover-effect padding-x-default coloring-outline"
           data-testid="badge"
           style="--badge-color: #2962ff;"
         >
@@ -2460,7 +2460,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         class="item"
       >
         <a
-          class="root padding-x-default coloring-outline"
+          class="root with-hover-effect padding-x-default coloring-outline"
           data-testid="badge"
           style="--badge-color: #00b8d4;"
         >
@@ -3027,7 +3027,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         class="item"
       >
         <a
-          class="root padding-x-default coloring-outline"
+          class="root with-hover-effect padding-x-default coloring-outline"
           data-testid="badge"
           style="--badge-color: #2962ff;"
         >
@@ -3042,7 +3042,7 @@ exports[`ProductSlider should renders correctly 2`] = `
         class="item"
       >
         <a
-          class="root padding-x-default coloring-outline"
+          class="root with-hover-effect padding-x-default coloring-outline"
           data-testid="badge"
           style="--badge-color: #00b8d4;"
         >
