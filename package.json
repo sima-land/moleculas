@@ -23,7 +23,7 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "prettier": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,css,scss}\" --log-level error",
-    "prettier:check": "prettier --check \"./src/**/*.{js,jsx,ts,tsx,css,scss}\" --log-level error"
+    "prettier:check": "prettier \"./src/**/*.{js,jsx,ts,tsx,css,scss}\" --check --log-level error"
   },
   "dependencies": {
     "classnames": "^2.3.2",
