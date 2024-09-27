@@ -10,7 +10,7 @@ import styles from './product-carousel.m.scss';
 
 const cx = classnames.bind(styles);
 
-// eslint-disable-next-line require-jsdoc
+// eslint-disable-next-line jsdoc/require-jsdoc
 const getSizeClasses = (size: ProductCarouselProps['itemSize']) =>
   size && size !== 'unset'
     ? [

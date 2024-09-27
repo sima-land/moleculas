@@ -45,7 +45,7 @@ export function ProductBrief({
 }: ProductBriefProps) {
   const desktop = useBreakpoint('xs+');
   const { failed, handleError } = useImageStub(imageSrc);
-  const size = sizeProp ?? desktop ? 'l' : 's';
+  const size = (sizeProp ?? desktop) ? 'l' : 's';
   const priceDefined = typeof price === 'number' || typeof price === 'string';
 
   if (loading) {

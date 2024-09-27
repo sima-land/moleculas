@@ -103,7 +103,7 @@ export const SearchBar = ({
     [needHideEndButtons],
   );
 
-  // eslint-disable-next-line require-jsdoc
+  // eslint-disable-next-line jsdoc/require-jsdoc
   const preventFieldBlur: MouseEventHandler = e => {
     if (
       inputRef.current &&

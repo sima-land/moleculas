@@ -53,7 +53,7 @@ export const useSquareFit = (
   const [size, setSize] = useState<number | null>(null);
 
   useEffect(() => {
-    // eslint-disable-next-line require-jsdoc
+    // eslint-disable-next-line jsdoc/require-jsdoc
     const calc = () => {
       if (areaRef.current) {
         const correction = 2 * (104 + 16 + 56 + 24); // ширина превью + отступ + ширина кнопки + отступ

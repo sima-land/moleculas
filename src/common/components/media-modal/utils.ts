@@ -108,7 +108,7 @@ export function useVisualViewport(handle: (viewport: VisualViewport) => void) {
       return;
     }
 
-    // eslint-disable-next-line require-jsdoc
+    // eslint-disable-next-line jsdoc/require-jsdoc
     const update = () => ref.current(viewport);
 
     window.addEventListener('resize', update);

@@ -87,7 +87,10 @@ export interface ProductInfoWaitListAddedLinkProps extends LinkProps {
   rootProps?: HTMLAttributes<HTMLSpanElement>;
 }
 
-export interface ProductInfoFooterProps extends HTMLAttributes<HTMLDivElement> {}
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+export interface ProductInfoFooterProps extends HTMLAttributes<HTMLDivElement> {
+  //
+}
 
 export interface ProductInfoCartControlProps {
   children?: ReactNode;

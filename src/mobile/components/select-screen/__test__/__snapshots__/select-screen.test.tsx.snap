@@ -73,7 +73,7 @@ exports[`select screen parts should works properly 1`] = `
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M21.678 5.265a1 1 0 0 1 .057 1.413l-12 13a1 1 0 0 1-1.36.103l-5-4a1 1 0 0 1 1.25-1.562l4.272 3.418L20.265 5.322a1 1 0 0 1 1.413-.057Z"
+                      d="M21.678 5.265a1 1 0 0 1 .057 1.413l-12 13a1 1 0 0 1-1.36.103l-5-4a1 1 0 0 1 1.25-1.562l4.272 3.418L20.265 5.322a1 1 0 0 1 1.413-.057"
                       fill-rule="evenodd"
                     />
                   </svg>
@@ -91,25 +91,25 @@ exports[`select screen parts should works properly 1`] = `
         </div>
         <div
           class="os-scrollbar os-scrollbar-horizontal theme os-scrollbar-auto-hide os-scrollbar-handle-interactive os-scrollbar-cornerless os-scrollbar-unusable"
+          style="--os-scroll-percent: 0; --os-viewport-percent: 0; --os-scroll-direction: 0;"
         >
           <div
             class="os-scrollbar-track"
           >
             <div
               class="os-scrollbar-handle"
-              style="width: 0.000%; transform: translateX(0.000%);"
             />
           </div>
         </div>
         <div
           class="os-scrollbar os-scrollbar-vertical theme os-scrollbar-auto-hide os-scrollbar-handle-interactive os-scrollbar-cornerless os-scrollbar-unusable"
+          style="--os-scroll-percent: 0; --os-viewport-percent: 0; --os-scroll-direction: 0;"
         >
           <div
             class="os-scrollbar-track"
           >
             <div
               class="os-scrollbar-handle"
-              style="height: 0.000%; transform: translateY(0.000%);"
             />
           </div>
         </div>

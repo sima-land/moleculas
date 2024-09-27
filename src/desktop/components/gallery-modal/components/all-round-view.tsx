@@ -43,7 +43,7 @@ export const AllRoundView = ({
 
   const autoplay = state === 'autoplay';
 
-  // eslint-disable-next-line require-jsdoc
+  // eslint-disable-next-line jsdoc/require-jsdoc
   const ChangeState = (bindState: ViewState) => () => setState(bindState);
 
   const [index, setIndex] = useState<number>(0);
@@ -68,7 +68,7 @@ export const AllRoundView = ({
   // перетаскивание
   useEffect(() => {
     // переданное число всегда замениться на такое, которое будет в промежутке от 0 до количества фото
-    // eslint-disable-next-line require-jsdoc
+    // eslint-disable-next-line jsdoc/require-jsdoc
     const wrap = (value: number) => (photos.length + value) % photos.length;
 
     const image = imageRef.current;
