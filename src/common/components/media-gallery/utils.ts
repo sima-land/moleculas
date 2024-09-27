@@ -47,7 +47,7 @@ export function createSwipe({
   let captureId: any = null;
   let startX = 0;
 
-  // eslint-disable-next-line require-jsdoc
+  // eslint-disable-next-line jsdoc/require-jsdoc
   const getProps: () => HTMLAttributes<HTMLElement> = () => ({
     onPointerDown: event => {
       if (captureId !== null) {
@@ -67,14 +67,14 @@ export function createSwipe({
     },
   });
 
-  // eslint-disable-next-line require-jsdoc
+  // eslint-disable-next-line jsdoc/require-jsdoc
   const init = () => {
-    // eslint-disable-next-line require-jsdoc
+    // eslint-disable-next-line jsdoc/require-jsdoc
     const onPointerDown = () => {
       pointerCount++;
     };
 
-    // eslint-disable-next-line require-jsdoc
+    // eslint-disable-next-line jsdoc/require-jsdoc
     const onPointerMove = (event: PointerEvent) => {
       if (captureId !== event.pointerId) {
         return;
@@ -90,7 +90,7 @@ export function createSwipe({
       });
     };
 
-    // eslint-disable-next-line require-jsdoc
+    // eslint-disable-next-line jsdoc/require-jsdoc
     const onPointerUp = (event: PointerEvent) => {
       pointerCount--;
 
@@ -110,7 +110,7 @@ export function createSwipe({
       });
     };
 
-    // eslint-disable-next-line require-jsdoc
+    // eslint-disable-next-line jsdoc/require-jsdoc
     const onPointerCancel = () => {
       pointerCount--;
     };

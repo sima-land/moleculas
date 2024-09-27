@@ -46,7 +46,7 @@ export function Modifier({
       return;
     }
 
-    // eslint-disable-next-line require-jsdoc
+    // eslint-disable-next-line jsdoc/require-jsdoc
     const defineHint = () => setHint(isTruncated(textElement) ? content.text : '');
 
     defineHint();

@@ -2,7 +2,10 @@ import { HTMLAttributes } from 'react';
 import styles from './placeholder.m.scss';
 import cn from 'classnames';
 
-export interface PromotionCardPlaceholderProps extends HTMLAttributes<HTMLDivElement> {}
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+export interface PromotionCardPlaceholderProps extends HTMLAttributes<HTMLDivElement> {
+  //
+}
 
 /**
  * Компонент отображения состояния загрузки карточки акции.

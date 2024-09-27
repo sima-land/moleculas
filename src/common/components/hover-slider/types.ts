@@ -26,6 +26,7 @@ export interface HoverSliderProps extends HTMLAttributes<HTMLDivElement>, WithTe
   rootRef?: Ref<HTMLDivElement>;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface HoverSliderItemProps extends HTMLAttributes<HTMLDivElement> {
   //
 }

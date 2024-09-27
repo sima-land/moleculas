@@ -177,7 +177,7 @@ describe('Badge', () => {
   });
 
   it('should render icon img with alt attribute', () => {
-    const { getByRole } = render(
+    const { container } = render(
       <Badge
         color='#ff7200'
         href='https://sima-land.ru'
@@ -190,7 +190,7 @@ describe('Badge', () => {
       />,
     );
 
-    expect(getByRole('img').hasAttribute('alt')).toBe(true);
+    expect(container.querySelector('img')?.hasAttribute('alt')).toBe(true);
   });
 
   it('should render icon and text', () => {
