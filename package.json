@@ -22,8 +22,8 @@
     "lint:styles": "stylelint 'src/**/*.scss'",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "prettier": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,css,scss}\" --loglevel error",
-    "prettier:check": "prettier --check \"./src/**/*.{js,jsx,ts,tsx,css,scss}\" --loglevel error"
+    "prettier": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,css,scss}\" --log-level error",
+    "prettier:check": "prettier --check \"./src/**/*.{js,jsx,ts,tsx,css,scss}\" --log-level error"
   },
   "dependencies": {
     "classnames": "^2.3.2",
