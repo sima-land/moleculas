@@ -1,5 +1,5 @@
 @use 'pkg:@sima-land/ui-nucleons/colors.scss';
-@use './variables';
+@use './_variables';
 
 .part {
   background: colors.$basic-gray4;

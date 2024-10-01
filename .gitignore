@@ -11,6 +11,7 @@
 
 # library build
 build
+temp
 
 # misc
 .DS_Store

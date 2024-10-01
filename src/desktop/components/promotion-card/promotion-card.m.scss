@@ -1,7 +1,7 @@
 @use 'pkg:@sima-land/ui-nucleons/colors.scss';
-@use 'pkg:@sima-land/ui-nucleons/breakpoints';
-@use 'pkg:@sima-land/ui-nucleons/shadows';
-@use './variables';
+@use 'pkg:@sima-land/ui-nucleons/breakpoints.scss';
+@use 'pkg:@sima-land/ui-nucleons/shadows.scss';
+@use './_variables';
 
 .root {
   background: #fff;
