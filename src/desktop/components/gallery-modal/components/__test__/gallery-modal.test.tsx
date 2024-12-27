@@ -117,4 +117,16 @@ describe('GalleryModal', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it('Должен отключать скролл когда withScrollDisable = true', () => {
+    render(<GalleryModal media={data.media} withScrollDisable />);
+
+    expect(document.body.style.overflow).toBe('hidden');
+  });
+
+  it('Не должен отключать скролл когда withScrollDisable = false', () => {
+    render(<GalleryModal media={data.media} withScrollDisable={false} />);
+
+    expect(document.body.style.overflow).not.toBe('hidden');
+  });
 });

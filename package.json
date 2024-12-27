@@ -27,7 +27,6 @@
     "prettier:check": "prettier \"./src/**/*.{js,jsx,ts,tsx,css,scss}\" --check"
   },
   "dependencies": {
-    "@sima-land/moleculas": "^16.0.0-alpha.35",
     "classnames": "^2.3.2",
     "date-fns": "^4.1.0",
     "react-transition-group": "^4.4.5"
