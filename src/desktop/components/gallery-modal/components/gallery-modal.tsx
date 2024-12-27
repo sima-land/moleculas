@@ -35,6 +35,9 @@ export interface GalleryModalProps {
 
   /** Будет вызвана при событиях проигрывания видео. */
   onVideoEvent?: (event: SyntheticEvent<HTMLVideoElement>) => void;
+
+  /** Нужно ли выключать прокрутку body. */
+  withScrollDisable?: boolean;
 }
 
 interface InnerStyles extends CSSProperties {
@@ -53,6 +56,7 @@ export const GalleryModal = ({
   media,
   defaultMediaIndex = 0,
   review,
+  withScrollDisable = false,
   onClose,
   onGoToReview,
   onMediaChange,
@@ -86,7 +90,7 @@ export const GalleryModal = ({
   return (
     <Modal size='fullscreen' onClose={onClose}>
       <TopBar buttons={navigationButtons({ onClose })} />
-      <ModalBody style={{ position: 'relative' }}>
+      <ModalBody withScrollDisable={withScrollDisable} style={{ position: 'relative' }}>
         <DesktopLayout className={cx('root')} ref={rootRef} style={style}>
           <div className={cx('main')}>
             <div className={cx('thumbnails')} ref={thumbnailsRef}>
