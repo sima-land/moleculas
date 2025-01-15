@@ -84,4 +84,19 @@ describe('InteractiveImage', () => {
       );
     }).toThrow();
   });
+
+  it('should render points in the wrapper', () => {
+    const { queryAllByTestId } = render(
+      <InteractiveImage>
+        <Parts.Image src='https://www.images.com/123' />
+        <div data-testid='wrapper'>
+          <Parts.Point role='button' x={1} y={2} />
+        </div>
+      </InteractiveImage>,
+    );
+
+    expect(queryAllByTestId('interactive-image:image')).toHaveLength(1);
+    expect(queryAllByTestId('wrapper')).toHaveLength(1);
+    expect(queryAllByTestId('interactive-image:point')).toHaveLength(1);
+  });
 });
