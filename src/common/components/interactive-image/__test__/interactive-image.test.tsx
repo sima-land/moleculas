@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import { InteractiveImage, Parts } from '../interactive-image';
 
 describe('InteractiveImage', () => {
-  it('should handle props', () => {
+  it('Должен корректно обработать свойства и нарисовать компонент', () => {
     const { asFragment, queryAllByTestId } = render(
       <InteractiveImage>
         <Parts.Image src='https://www.images.com/123' />
@@ -20,7 +20,7 @@ describe('InteractiveImage', () => {
     expect(queryAllByTestId('interactive-image:point')).toHaveLength(4);
   });
 
-  it('should take ref', () => {
+  it('Должен взять ссылку', () => {
     const ref = createRef<HTMLDivElement>();
 
     const { getByTestId } = render(
@@ -36,7 +36,7 @@ describe('InteractiveImage', () => {
     expect(ref.current).toBe(getByTestId('test-root'));
   });
 
-  it('should handle "dotSize" prop', () => {
+  it('Должен корректно обработать свойство "dotSize"', () => {
     const { getByTestId } = render(
       <InteractiveImage dotSize='unset' data-testid='interactive-image'>
         <Parts.Image src='https://www.images.com/123' />
@@ -50,7 +50,7 @@ describe('InteractiveImage', () => {
     expect(getByTestId('interactive-image').classList.contains('dot-size-unset')).toBe(true);
   });
 
-  it('should handle Parts.ImageAnchor as a child', () => {
+  it('Должен корректно нарисовать Parts.ImageAnchor', () => {
     const { queryAllByTestId, getByTestId } = render(
       <InteractiveImage>
         <Parts.ImageAnchor href='https://www.site.com' className='my-class'>
@@ -72,7 +72,7 @@ describe('InteractiveImage', () => {
     expect(imageAnchor.classList.contains('my-class')).toBe(true);
   });
 
-  it('should throw error when both ImageAnchor and Image are in children', () => {
+  it('Должна выдавать ошибку, когда и ImageAnchor, и Image находятся в дочерних элементах', () => {
     expect(() => {
       render(
         <InteractiveImage>
@@ -83,5 +83,20 @@ describe('InteractiveImage', () => {
         </InteractiveImage>,
       );
     }).toThrow();
+  });
+
+  it('Должен корректно нарисовать точки в обертке', () => {
+    const { queryAllByTestId } = render(
+      <InteractiveImage>
+        <Parts.Image src='https://www.images.com/123' />
+        <div data-testid='wrapper'>
+          <Parts.Point role='button' x={1} y={2} />
+        </div>
+      </InteractiveImage>,
+    );
+
+    expect(queryAllByTestId('interactive-image:image')).toHaveLength(1);
+    expect(queryAllByTestId('wrapper')).toHaveLength(1);
+    expect(queryAllByTestId('interactive-image:point')).toHaveLength(1);
   });
 });

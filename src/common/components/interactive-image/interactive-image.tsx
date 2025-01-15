@@ -23,11 +23,7 @@ export const InteractiveImage = forwardRef<HTMLDivElement, InteractiveImageProps
 
     return (
       <div ref={ref} className={rootClassName} {...rest} data-testid={testId}>
-        {Children.toArray(children).filter(
-          child =>
-            isValidElement(child) &&
-            (child.type === ImageAnchor || child.type === Image || child.type === Point),
-        )}
+        {children}
       </div>
     );
   },
