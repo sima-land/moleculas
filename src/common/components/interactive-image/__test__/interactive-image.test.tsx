@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import { InteractiveImage, Parts } from '../interactive-image';
 
 describe('InteractiveImage', () => {
-  it('Должен корректно обработать свойства и нарисовать компонент', () => {
+  it('should handle props', () => {
     const { asFragment, queryAllByTestId } = render(
       <InteractiveImage>
         <Parts.Image src='https://www.images.com/123' />
@@ -20,7 +20,7 @@ describe('InteractiveImage', () => {
     expect(queryAllByTestId('interactive-image:point')).toHaveLength(4);
   });
 
-  it('Должен взять ссылку', () => {
+  it('should take ref', () => {
     const ref = createRef<HTMLDivElement>();
 
     const { getByTestId } = render(
@@ -36,7 +36,7 @@ describe('InteractiveImage', () => {
     expect(ref.current).toBe(getByTestId('test-root'));
   });
 
-  it('Должен корректно обработать свойство "dotSize"', () => {
+  it('should handle "dotSize" prop', () => {
     const { getByTestId } = render(
       <InteractiveImage dotSize='unset' data-testid='interactive-image'>
         <Parts.Image src='https://www.images.com/123' />
@@ -50,7 +50,7 @@ describe('InteractiveImage', () => {
     expect(getByTestId('interactive-image').classList.contains('dot-size-unset')).toBe(true);
   });
 
-  it('Должен корректно нарисовать Parts.ImageAnchor', () => {
+  it('should handle Parts.ImageAnchor as a child', () => {
     const { queryAllByTestId, getByTestId } = render(
       <InteractiveImage>
         <Parts.ImageAnchor href='https://www.site.com' className='my-class'>
@@ -72,7 +72,7 @@ describe('InteractiveImage', () => {
     expect(imageAnchor.classList.contains('my-class')).toBe(true);
   });
 
-  it('Должна выдавать ошибку, когда и ImageAnchor, и Image находятся в дочерних элементах', () => {
+  it('should throw error when both ImageAnchor and Image are in children', () => {
     expect(() => {
       render(
         <InteractiveImage>
@@ -85,7 +85,7 @@ describe('InteractiveImage', () => {
     }).toThrow();
   });
 
-  it('Должен корректно нарисовать точки в обертке', () => {
+  it('should render points in the wrapper', () => {
     const { queryAllByTestId } = render(
       <InteractiveImage>
         <Parts.Image src='https://www.images.com/123' />

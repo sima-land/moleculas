@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InteractiveImage Должен корректно обработать свойства и нарисовать компонент 1`] = `
+exports[`InteractiveImage should handle props 1`] = `
 <DocumentFragment>
   <div
     class="root"
