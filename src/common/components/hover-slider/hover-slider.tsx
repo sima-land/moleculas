@@ -1,6 +1,14 @@
-import { useContext, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react';
+import {
+  useCallback,
+  useContext,
+  useEffect,
+  useImperativeHandle,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import { HoverSliderProps, HoverSliderItemProps } from './types';
-import { HoverSliderContext, useSlideCount } from './utils';
+import { debounce, HoverSliderContext, useSlideCount } from './utils';
 import { HoverSliderNav } from './hover-slider-nav';
 import { useIsomorphicLayoutEffect } from '@sima-land/ui-nucleons/hooks';
 import { on } from '@sima-land/ui-nucleons/helpers';
@@ -23,10 +31,18 @@ export function HoverSlider({
   'data-testid': testId = 'hover-slider',
   ...restProps
 }: HoverSliderProps) {
+  const [isScrolling, setIsScrolling] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const { count, contextValue } = useSlideCount();
+
+  const scrollingEnd = useCallback(
+    debounce(() => {
+      setIsScrolling(false);
+    }, 100),
+    [],
+  );
 
   useImperativeHandle<HTMLDivElement | null, HTMLDivElement | null>(
     rootRefProp,
@@ -44,6 +60,7 @@ export function HoverSlider({
 
     /** @inheritdoc */
     const onMouseMove = (event: MouseEvent) => {
+      if (isScrolling) return;
       const rootRect = root.getBoundingClientRect();
       const rootClientX = event.clientX - rootRect.left;
       const imageIndex = Math.floor(rootClientX / (rootRect.width / count));
@@ -54,6 +71,7 @@ export function HoverSlider({
 
     /** @inheritdoc */
     const onMouseLeave = () => {
+      setIsScrolling(false);
       list.scrollLeft = 0;
       setActiveIndex(0);
     };
@@ -67,7 +85,7 @@ export function HoverSlider({
     return () => {
       off.forEach(fn => fn());
     };
-  }, [count]);
+  }, [count, isScrolling]);
 
   useEffect(() => {
     const list = listRef.current;
@@ -78,7 +96,9 @@ export function HoverSlider({
 
     /** @inheritdoc */
     const onScroll = () => {
+      setIsScrolling(true);
       setActiveIndex(Math.round(list.scrollLeft / list.getBoundingClientRect().width));
+      scrollingEnd();
     };
 
     const off = [
@@ -89,7 +109,7 @@ export function HoverSlider({
     return () => {
       off.forEach(fn => fn());
     };
-  }, [count]);
+  }, [count, isScrolling]);
 
   return (
     <HoverSliderContext.Provider value={contextValue}>
