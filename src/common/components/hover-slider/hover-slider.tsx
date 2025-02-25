@@ -71,7 +71,6 @@ export function HoverSlider({
 
     /** @inheritdoc */
     const onMouseLeave = () => {
-      setIsScrolling(false);
       list.scrollLeft = 0;
       setActiveIndex(0);
     };
