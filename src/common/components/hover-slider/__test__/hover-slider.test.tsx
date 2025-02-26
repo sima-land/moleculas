@@ -168,7 +168,41 @@ describe('HoverSlider', () => {
 
     expect(rootRef.current === getByTestId('hover-slider')).toBe(true);
   });
+  it('should ignore handler on mousemove of root element if is scrolling', () => {
+    jest.useFakeTimers();
+    const { container, getByTestId } = render(
+      <HoverSlider>
+        <HoverSliderItem>
+          <img src='/public/foo.jpg' alt='' />
+        </HoverSliderItem>
+        <HoverSliderItem>
+          <img src='/public/bar.jpg' alt='' />
+        </HoverSliderItem>
+        <HoverSliderItem>
+          <img src='/public/baz.jpg' alt='' />
+        </HoverSliderItem>
+      </HoverSlider>,
+    );
 
+    const root = getByTestId('hover-slider');
+    const list = container.querySelector('.list')!;
+
+    // mock client rect
+    const rect = new DOMRectReadOnlyMock(0, 0, 100, 100);
+    jest.spyOn(root, 'getBoundingClientRect').mockReturnValue(rect);
+    jest.spyOn(list, 'getBoundingClientRect').mockReturnValue(rect);
+
+    // mock scrollWidth
+    jest.spyOn(list, 'scrollWidth', 'get').mockReturnValue(300);
+
+    expect(root.getBoundingClientRect().width).toEqual(100);
+    expect(root.getBoundingClientRect().height).toEqual(100);
+    expect(list.scrollWidth).toBe(300);
+    expect(list.scrollLeft).toBe(0);
+    fireEvent.scroll(list, { target: { scrollLeft: 100 } });
+    fireEvent.mouseMove(root, { clientX: 20 });
+    expect(list.scrollLeft).toBe(100);
+  });
   it('should change scrollLeft on mousemove/onmouseleave of root element', () => {
     const { container, getByTestId } = render(
       <HoverSlider>
@@ -214,6 +248,7 @@ describe('HoverSlider', () => {
   });
 
   it('should sync nav on scroll of list element', () => {
+    jest.useFakeTimers();
     const { container, getByTestId } = render(
       <HoverSlider>
         <HoverSliderItem>
@@ -254,5 +289,6 @@ describe('HoverSlider', () => {
     expect(navItems[0].classList.contains('nav-item-active')).toBe(false);
     expect(navItems[1].classList.contains('nav-item-active')).toBe(true);
     expect(navItems[2].classList.contains('nav-item-active')).toBe(false);
+    jest.runAllTimers();
   });
 });

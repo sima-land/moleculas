@@ -1,5 +1,5 @@
 import { ReactNode, useContext, useEffect } from 'react';
-import { HoverSliderContext, useSlideCount } from '../utils';
+import { debounce, HoverSliderContext, useSlideCount } from '../utils';
 import { render } from '@testing-library/react';
 
 function TestSlider({ children }: { children?: ReactNode }) {
@@ -71,5 +71,20 @@ describe('useSlideCount', () => {
     const { unmount } = render(<TestSlide slideId='1' />);
 
     expect(unmount).not.toThrow();
+  });
+});
+
+describe('debounce', () => {
+  jest.useFakeTimers();
+  it('should call fn after 100ms and only once', () => {
+    const fakeCall = jest.fn();
+    expect(fakeCall).toHaveBeenCalledTimes(0);
+    const fn = debounce(fakeCall, 100);
+    fn();
+    fn();
+    fn();
+    fn();
+    jest.runAllTimers();
+    expect(fakeCall).toHaveBeenCalledTimes(1);
   });
 });

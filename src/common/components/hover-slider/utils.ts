@@ -24,3 +24,16 @@ export function useSlideCount() {
 
   return { count: slideIds.length, contextValue };
 }
+
+/**
+ * @param fn Функция вызова.
+ * @param ms Задержка в миллисекундах.
+ * @return Функция вызова.
+ */
+export const debounce = <T>(fn: (...args: T[]) => void, ms: number) => {
+  let timeoutId: ReturnType<typeof setTimeout>;
+  return function (this: any, ...args: any[]) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn.apply(this, args), ms);
+  };
+};
