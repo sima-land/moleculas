@@ -2,7 +2,6 @@ import { HTMLAttributes, useEffect, useState } from 'react';
 import { PromotionType } from './types';
 import { BannerTitle } from './banner-title';
 import { Estimate } from './estimate';
-import WatchSVG from '@sima-land/ui-quarks/icons/16x16/Stroked/Watch';
 import classNames from 'classnames';
 import styles from './promotion-card.m.scss';
 import { PromotionCardPlaceholder } from './placeholder';
@@ -17,8 +16,8 @@ export interface PromotionCardProps extends HTMLAttributes<HTMLDivElement> {
   /** Подзаголовок. */
   subtitle?: string;
 
-  /** Дополнительный текст, выводится в правом нижнем углу.  */
-  postfix?: string;
+  /** Название акции.  */
+  promotionName?: string;
 
   /** Путь к изображению для баннера. */
   imageSrc: string;
@@ -27,7 +26,7 @@ export interface PromotionCardProps extends HTMLAttributes<HTMLDivElement> {
   dueDate: Date;
 
   /** Тип акции. */
-  promotionType?: PromotionType;
+  promotionType?: string;
 
   /** Скидка за объем, указывается при соответствующем типе акции. */
   volumeDiscount?: number;
@@ -36,12 +35,20 @@ export interface PromotionCardProps extends HTMLAttributes<HTMLDivElement> {
   'data-testid'?: string;
 }
 
-const PromotionName: Record<PromotionType, string> = {
+const PROMOTION_NAME: Readonly<Record<PromotionType, string>> = {
   gift: 'Подарок',
   special: 'Спецпредложение',
   '3-by-2': '3 по цене 2',
   'volume-discount': 'Скидка за объём',
-} as const;
+};
+
+/**
+ * Проверяет тип акции.
+ * @param type Тип.
+ * @return Признак.
+ */
+const isKnownPromotionType = (type?: string): type is PromotionType =>
+  Boolean(type && Object.keys(PROMOTION_NAME).includes(type));
 
 /**
  * Карточка акции.
@@ -56,7 +63,7 @@ export const PromotionCard = ({
   subtitle,
   dueDate,
   volumeDiscount,
-  postfix = promotionType ? PromotionName[promotionType] : undefined,
+  promotionName = isKnownPromotionType(promotionType) ? PROMOTION_NAME[promotionType] : undefined,
 
   // div props
   className,
@@ -76,7 +83,7 @@ export const PromotionCard = ({
         <div className={styles.banner}>
           <img src={imageSrc} alt={title} className={styles.image} />
 
-          {promotionType && (mounted || promotionType !== 'special') && (
+          {isKnownPromotionType(promotionType) && (mounted || promotionType !== 'special') && (
             <div className={styles['banner-content']}>
               <BannerTitle
                 promotionType={promotionType}
@@ -95,17 +102,16 @@ export const PromotionCard = ({
           </div>
 
           <div className={styles.footer}>
-            {mounted && (
-              <time className={styles.timer} data-testid='promotion-card:due-date'>
-                <WatchSVG className={styles['timer-svg']} />
-                <Estimate dueDate={dueDate} />
-              </time>
+            {promotionName && (
+              <div data-testid='promotion-card:name' className={styles.name}>
+                {promotionName}
+              </div>
             )}
 
-            {postfix && (
-              <div data-testid='promotion-card:postfix' className={styles.postfix}>
-                {postfix}
-              </div>
+            {mounted && (
+              <time data-testid='promotion-card:due-date'>
+                <Estimate dueDate={dueDate} />
+              </time>
             )}
           </div>
         </div>

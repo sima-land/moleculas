@@ -49,7 +49,8 @@ const demoItems: PromotionCardProps[] = [
     title: 'Особые условия заказа: вот прям натурально особые, по другому не скажет',
     subtitle: 'При покупке чего-либо там какие-то условия',
     dueDate: addDays(new Date(), 21),
-    postfix: 'Особая акция',
+    promotionName: 'Очень очень длинная особая акция',
+    promotionType: 'ultra',
   },
 ];
 

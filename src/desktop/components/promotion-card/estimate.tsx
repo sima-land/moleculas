@@ -42,9 +42,9 @@ export const Estimate = ({ dueDate }: EstimateProps) => {
       .map(fn => toTimePart(fn(dueDate)))
       .join('.');
 
-    content = `До ${text}`;
+    content = `до ${text}`;
   } else {
-    content = `До ${getDate(dueDate)} ${MONTH_SHORT_NAME[getMonth(dueDate)]}`;
+    content = `до ${getDate(dueDate)} ${MONTH_SHORT_NAME[getMonth(dueDate)]}`;
   }
 
   return <>{content}</>;
