@@ -83,15 +83,17 @@ export const PromotionCard = ({
         <div className={styles.banner}>
           <img src={imageSrc} alt={title} className={styles.image} />
 
-          {isKnownPromotionType(promotionType) && (mounted || promotionType !== 'special') && (
-            <div className={styles['banner-content']}>
-              <BannerTitle
-                promotionType={promotionType}
-                volumeDiscount={volumeDiscount}
-                dueDate={dueDate}
-              />
-            </div>
-          )}
+          {isKnownPromotionType(promotionType) &&
+            promotionType !== 'gift' &&
+            (mounted || promotionType !== 'special') && (
+              <div className={styles['banner-content']}>
+                <BannerTitle
+                  promotionType={promotionType}
+                  volumeDiscount={volumeDiscount}
+                  dueDate={dueDate}
+                />
+              </div>
+            )}
         </div>
 
         <div className={styles.info}>
