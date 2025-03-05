@@ -17,7 +17,7 @@ export interface PromotionCardProps extends HTMLAttributes<HTMLDivElement> {
   subtitle?: string;
 
   /** Название акции.  */
-  promotionName?: string;
+  name?: string;
 
   /** Путь к изображению для баннера. */
   imageSrc: string;
@@ -26,7 +26,7 @@ export interface PromotionCardProps extends HTMLAttributes<HTMLDivElement> {
   dueDate: Date;
 
   /** Тип акции. */
-  promotionType?: string;
+  type?: string;
 
   /** Скидка за объем, указывается при соответствующем типе акции. */
   volumeDiscount?: number;
@@ -35,7 +35,7 @@ export interface PromotionCardProps extends HTMLAttributes<HTMLDivElement> {
   'data-testid'?: string;
 }
 
-const PROMOTION_NAME: Readonly<Record<PromotionType, string>> = {
+const KNOWN_NAME: Readonly<Record<PromotionType, string>> = {
   gift: 'Подарок',
   special: 'Спецпредложение',
   '3-by-2': '3 по цене 2',
@@ -47,8 +47,8 @@ const PROMOTION_NAME: Readonly<Record<PromotionType, string>> = {
  * @param type Тип.
  * @return Признак.
  */
-const isKnownPromotionType = (type?: string): type is PromotionType =>
-  Boolean(type && Object.keys(PROMOTION_NAME).includes(type));
+const isKnownType = (type?: string): type is PromotionType =>
+  Boolean(type && Object.keys(KNOWN_NAME).includes(type));
 
 /**
  * Карточка акции.
@@ -56,14 +56,14 @@ const isKnownPromotionType = (type?: string): type is PromotionType =>
  * @return Элемент.
  */
 export const PromotionCard = ({
-  promotionType,
+  type,
   href,
   imageSrc,
   title,
   subtitle,
   dueDate,
   volumeDiscount,
-  promotionName = isKnownPromotionType(promotionType) ? PROMOTION_NAME[promotionType] : undefined,
+  name = isKnownType(type) ? KNOWN_NAME[type] : undefined,
 
   // div props
   className,
@@ -83,17 +83,11 @@ export const PromotionCard = ({
         <div className={styles.banner}>
           <img src={imageSrc} alt={title} className={styles.image} />
 
-          {isKnownPromotionType(promotionType) &&
-            promotionType !== 'gift' &&
-            (mounted || promotionType !== 'special') && (
-              <div className={styles['banner-content']}>
-                <BannerTitle
-                  promotionType={promotionType}
-                  volumeDiscount={volumeDiscount}
-                  dueDate={dueDate}
-                />
-              </div>
-            )}
+          {isKnownType(type) && type !== 'gift' && (mounted || type !== 'special') && (
+            <div className={styles['banner-content']}>
+              <BannerTitle promotionType={type} volumeDiscount={volumeDiscount} dueDate={dueDate} />
+            </div>
+          )}
         </div>
 
         <div className={styles.info}>
@@ -104,9 +98,9 @@ export const PromotionCard = ({
           </div>
 
           <div className={styles.footer}>
-            {promotionName && (
+            {name && (
               <div data-testid='promotion-card:name' className={styles.name}>
-                {promotionName}
+                {name}
               </div>
             )}
 

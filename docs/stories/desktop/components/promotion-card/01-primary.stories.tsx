@@ -24,7 +24,7 @@ const demoItems: PromotionCardProps[] = [
     subtitle:
       'При покупке 2-х уточек из акции 3-я в подарок. При покупке 2-х уточек из акции 3-я в подарок',
     dueDate: addHours(new Date(), 3),
-    promotionType: '3-by-2',
+    type: '3-by-2',
   },
   {
     href: 'https://www.sima-land.ru',
@@ -32,7 +32,7 @@ const demoItems: PromotionCardProps[] = [
     title: '-20% на плюшевых кроликов',
     subtitle: 'При покупке товаров из акции от 5 000 ₽ ',
     dueDate: addYears(new Date(), 5),
-    promotionType: 'volume-discount',
+    type: 'volume-discount',
     volumeDiscount: 23,
   },
   {
@@ -41,7 +41,7 @@ const demoItems: PromotionCardProps[] = [
     title: 'Специальные цены на термосы',
     subtitle: 'При покупке от 5 000 ₽',
     dueDate: addDays(new Date(), 7),
-    promotionType: 'special',
+    type: 'special',
   },
   {
     href: 'https://www.sima-land.ru',
@@ -49,8 +49,8 @@ const demoItems: PromotionCardProps[] = [
     title: 'Особые условия заказа: вот прям натурально особые, по другому не скажет',
     subtitle: 'При покупке чего-либо там какие-то условия',
     dueDate: addDays(new Date(), 21),
-    promotionName: 'Очень очень длинная особая акция',
-    promotionType: 'ultra',
+    name: 'Очень очень длинная особая акция',
+    type: 'ultra',
   },
 ];
 

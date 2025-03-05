@@ -28,7 +28,7 @@ describe('PromotionCard', () => {
         subtitle='Foo, bar, baz...'
         imageSrc='https://www.images.com/123'
         dueDate={new Date()}
-        promotionType='volume-discount'
+        type='volume-discount'
         volumeDiscount={23}
       />,
     );
