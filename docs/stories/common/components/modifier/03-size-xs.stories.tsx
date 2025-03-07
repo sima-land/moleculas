@@ -3,7 +3,7 @@ import headphones from './images/headphones.jpg';
 
 export const meta = {
   category: 'common/Modifier',
-  title: 'Размер S',
+  title: 'Размер XS',
   parameters: {
     layout: 'padded',
   },
@@ -42,63 +42,63 @@ export default function SizeS() {
       <h4>Default</h4>
       <Container>
         {items.map((item, index) => (
-          <Modifier key={index} size='s' count={23} markdown content={item} />
+          <Modifier key={index} size='xs' count={23} markdown content={item} />
         ))}
       </Container>
 
       <h4>Crossed out</h4>
       <Container>
         {items.map((item, index) => (
-          <Modifier key={index} size='s' count={23} markdown content={item} crossedOut />
+          <Modifier key={index} size='xs' count={23} markdown content={item} crossedOut />
         ))}
       </Container>
 
       <h4>Active</h4>
       <Container>
         {items.map((item, index) => (
-          <Modifier key={index} size='s' count={23} markdown content={item} active />
+          <Modifier key={index} size='xs' count={23} markdown content={item} active />
         ))}
       </Container>
 
       <h4>Active + crossed out</h4>
       <Container>
         {items.map((item, index) => (
-          <Modifier key={index} size='s' count={23} markdown content={item} active crossedOut />
+          <Modifier key={index} size='xs' count={23} markdown content={item} active crossedOut />
         ))}
       </Container>
 
       <h4>Disabled</h4>
       <Container>
         {items.map((item, index) => (
-          <Modifier key={index} size='s' count={23} markdown content={item} disabled />
+          <Modifier key={index} size='xs' count={23} markdown content={item} disabled />
         ))}
       </Container>
 
       <h4>Disabled + crossed out</h4>
       <Container>
         {items.map((item, index) => (
-          <Modifier key={index} size='s' count={23} markdown content={item} disabled crossedOut />
+          <Modifier key={index} size='xs' count={23} markdown content={item} disabled crossedOut />
         ))}
       </Container>
 
       <h4>Non-existent</h4>
       <Container>
         {items.map((item, index) => (
-          <Modifier key={index} size='s' content={item} nonExistent />
+          <Modifier key={index} size='xs' content={item} nonExistent />
         ))}
       </Container>
 
       <h4>Non-existent + markdown</h4>
       <Container>
         {items.map((item, index) => (
-          <Modifier key={index} size='s' content={item} nonExistent markdown />
+          <Modifier key={index} size='xs' content={item} nonExistent markdown />
         ))}
       </Container>
 
       <h4>Non-existent + crossed out</h4>
       <Container>
         {items.map((item, index) => (
-          <Modifier key={index} size='s' content={item} nonExistent crossedOut />
+          <Modifier key={index} size='xs' content={item} nonExistent crossedOut />
         ))}
       </Container>
     </div>

@@ -92,18 +92,35 @@ describe('Modifier', () => {
     expect(container.textContent).toContain('У');
   });
 
-  it('should render cross icon when color modifier disabled', () => {
-    const { container } = render(<Modifier content={{ type: 'color', color: '#000' }} disabled />);
+  it('should not render markdown badge when modifier non-existent', () => {
+    const { container } = render(
+      <Modifier content={{ type: 'text', text: 'Hi' }} markdown nonExistent />,
+    );
 
-    expect(container.querySelectorAll('svg.cross')).toHaveLength(1);
+    expect(container.textContent).not.toContain('У');
   });
 
-  it('should not render strike line when icon when modifier disabled and crossed out', () => {
+  it('should not render markdown badge when modifier disabled', () => {
+    const { container } = render(
+      <Modifier content={{ type: 'text', text: 'Hi' }} markdown disabled />,
+    );
+
+    expect(container.textContent).not.toContain('У');
+  });
+
+  it('should not render strike line icon when modifier disabled and crossed out', () => {
     const { container } = render(
       <Modifier content={{ type: 'color', color: '#000' }} disabled crossedOut />,
     );
 
-    expect(container.querySelectorAll('svg.cross')).toHaveLength(1);
+    expect(container.querySelectorAll('svg.diagonal')).toHaveLength(0);
+  });
+
+  it('should not render strike line icon when modifier non-existent and crossedOut', () => {
+    const { container } = render(
+      <Modifier content={{ type: 'color', color: '#000' }} nonExistent crossedOut />,
+    );
+
     expect(container.querySelectorAll('svg.diagonal')).toHaveLength(0);
   });
 });

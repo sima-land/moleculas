@@ -16,6 +16,7 @@
   --modifier-border-color: #{colors.$basic-gray12};
   --modifier-corner-bg: #{colors.$basic-gray12};
   --modifier-corner-color: #{colors.$basic-gray87};
+  --content-offset: 3px;
   &.active {
     --modifier-border-color: #{colors.$basic-blue};
     --modifier-corner-color: #fff;
@@ -24,29 +25,48 @@
   &:hover:not(.disabled) {
     cursor: pointer;
   }
-  &:hover:not(.disabled):not(.active) {
+  &:hover:not(.disabled):not(.active):not(.non-existent) {
     --modifier-border-width: 2px;
   }
   &.disabled {
     --modifier-media-opacity: 0.24;
     --modifier-overlay-color: rgba(0, 0, 0, 0.04);
-    --modifier-border-width: 0;
+    --modifier-border-width: 1px;
     --modifier-text-color: #{colors.$basic-gray38};
     --modifier-corner-bg: transparent;
     --modifier-corner-color: #{colors.$basic-gray38};
+    .text {
+      background-color: colors.$basic-gray8;
+    }
   }
-  &::after {
+  &.non-existent {
+    --modifier-border-width: 1px;
+    --border-image-source: url(./default-border.svg);
+    --border-image-slice: 6;
+    --border-image-width: 6;
+    &:hover {
+      // ВАЖНО! Невидимость, чтобы не мелькала сплошлая граница во время загрузки изображения.
+      --modifier-border-color: rgba(255, 255, 255, 0);
+      --border-image-source: url(./hover-border.svg);
+    }
+    &::before {
+      border-image-source: var(--border-image-source);
+      border-image-slice: var(--border-image-slice);
+      border-image-repeat: round;
+      border-image-width: var(--border-image-width);
+    }
+  }
+  &::before {
     content: '';
     display: block;
     pointer-events: none;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: calc(100% - var(--modifier-border-width) * 2);
+    height: calc(100% - var(--modifier-border-width) * 2);
     border-radius: inherit;
-    box-shadow: inset 0 0 0 var(--modifier-border-width) var(--modifier-border-color);
-    background: var(--modifier-overlay-color);
+    border: var(--modifier-border-width) solid var(--modifier-border-color);
   }
   &.more {
     width: var(--modifier-size);
@@ -60,14 +80,28 @@
   }
 }
 
+.size-xs {
+  --modifier-size: 32px;
+  --modifier-padding: 6px 8px;
+  --corner-size: 16px;
+  --corner-font-size: 8px;
+  --corner-line-height: 10px;
+}
+
 .size-s {
   --modifier-size: 40px;
   --modifier-padding: 10px;
+  --corner-size: 20px;
+  --corner-font-size: 11px;
+  --corner-line-height: 13px;
 }
 
 .size-m {
   --modifier-size: 48px;
-  --modifier-padding: 14px 15px;
+  --modifier-padding: 14px 16px;
+  --corner-size: 24px;
+  --corner-font-size: 12px;
+  --corner-line-height: 14px;
 }
 
 .diagonal {
@@ -81,6 +115,16 @@
 }
 
 .color,
+.image-wrapper {
+  border-radius: inherit;
+  display: block;
+  position: absolute;
+  top: var(--content-offset);
+  left: var(--content-offset);
+  width: calc(100% - var(--content-offset) * 2);
+  height: calc(100% - var(--content-offset) * 2);
+}
+
 .image {
   border-radius: inherit;
   display: block;
@@ -89,31 +133,22 @@
   left: 0;
   width: 100%;
   height: 100%;
+  background-position: center;
+  background-size: cover;
   opacity: var(--modifier-media-opacity);
 }
 
-.image {
-  background-position: center;
-  background-size: cover;
-}
-
 .image-wrapper {
-  border-radius: inherit;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: colors.$basic-gray4;
   &.fail {
     --modifier-media-opacity: 0;
+    background-color: colors.$basic-gray4;
   }
   > svg {
-    width: calc(48%);
-    height: calc(48%);
+    width: calc(50%);
+    height: calc(50%);
     fill: colors.$basic-gray24;
   }
 }
@@ -122,12 +157,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  .cross {
-    fill: colors.$basic-gray24;
-  }
 }
 
 .text {
+  border-radius: inherit;
   padding: var(--modifier-padding);
   display: block;
   max-width: 100%;
@@ -162,11 +195,11 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 24px;
-  height: 24px;
+  width: var(--corner-size);
+  height: var(--corner-size);
   border-bottom-right-radius: inherit;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: var(--corner-font-size);
+  line-height: var(--corner-line-height);
   padding-right: 2px;
   display: flex;
   justify-content: flex-end;
