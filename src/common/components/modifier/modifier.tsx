@@ -3,7 +3,6 @@ import { Hint, useHintFloating, useHintOnHover } from '@sima-land/ui-nucleons/hi
 import { useImageStub } from '../../hooks';
 import { ModifierProps, MoreButtonProps, TextContent } from './types';
 import ImageBrokenSVG from '@sima-land/ui-quarks/icons/40x40/Stroked/ImageBroken';
-import CrossSVG from '@sima-land/ui-quarks/icons/24x24/Stroked/Cross';
 import classNames from 'classnames/bind';
 import styles from './modifier.m.scss';
 
@@ -19,6 +18,7 @@ export function Modifier({
   active,
   crossedOut,
   disabled,
+  nonExistent,
   content,
   count,
   className,
@@ -58,20 +58,24 @@ export function Modifier({
     return () => observer.disconnect();
   }, [(content as TextContent).text]);
 
-  // ВАЖНО: по дизайн-гайдам disabled не может быть перечеркнут
-  const canStrike = !disabled;
+  // ВАЖНО: по дизайн-гайдам disabled и nonExistent не может быть перечеркнут и не может иметь значок уценки.
+  const canStrikeOrMarkdown = !disabled && !nonExistent;
 
   return (
     <>
       <a
         {...props}
-        className={cx('root', `size-${size}`, { active, disabled }, className)}
+        className={cx(
+          'root',
+          `size-${size}`,
+          { active, disabled },
+          nonExistent && 'non-existent',
+          className,
+        )}
         data-testid={testId}
       >
         {content.type === 'color' && (
-          <span className={cx('color')} role='banner' style={{ background: content.color }}>
-            {disabled && <CrossSVG className={cx('cross')} />}
-          </span>
+          <span className={cx('color')} role='banner' style={{ background: content.color }}></span>
         )}
 
         {content.type === 'image' && <Image src={content.src} />}
@@ -86,7 +90,7 @@ export function Modifier({
           <span className={cx('counter')}>{count > 99 ? '99+' : count}</span>
         )}
 
-        {canStrike && crossedOut && (
+        {canStrikeOrMarkdown && crossedOut && (
           <svg width='100%' height='100%' className={cx('diagonal')}>
             <line
               x1='0'
@@ -99,7 +103,7 @@ export function Modifier({
           </svg>
         )}
 
-        {markdown && <span className={styles.corner}>У</span>}
+        {canStrikeOrMarkdown && markdown && <span className={styles.corner}>У</span>}
       </a>
 
       {/* @todo добавить возможность отключать */}

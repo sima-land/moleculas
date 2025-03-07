@@ -27,11 +27,14 @@ export interface ModifierProps extends Omit<AnchorHTMLAttributes<HTMLAnchorEleme
   /** Вывести зачеркнутым. */
   crossedOut?: boolean;
 
+  /** Вывести несуществующим. */
+  nonExistent?: boolean;
+
   /** Содержимое. */
   content: ModifierContent;
 
   /** Высота по дизайн-гайдам. */
-  size?: 's' | 'm';
+  size?: 'xs' | 's' | 'm';
 
   /** Кол-во. */
   count?: number;
