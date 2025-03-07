@@ -16,19 +16,19 @@ describe('Estimate', () => {
     // целевая дата в текущем году
     const { container } = render(<Estimate dueDate={addDays(new Date(), 7)} />);
 
-    expect(container.textContent).toContain('До 8 янв');
+    expect(container.textContent).toContain('до 8 янв');
   });
 
   it('should renders correctly large time period', () => {
     // целевая дата в следующем году или позже
     const { container } = render(<Estimate dueDate={addYears(new Date(), 5)} />);
 
-    expect(container.textContent).toContain('До 01.01.2026');
+    expect(container.textContent).toContain('до 01.01.2026');
   });
 
   it('should renders month number correctly for large dates', () => {
     const { container } = render(<Estimate dueDate={addYears(new Date(), 2)} />);
 
-    expect(container.textContent).toContain('До 01.01.2023');
+    expect(container.textContent).toContain('до 01.01.2023');
   });
 });

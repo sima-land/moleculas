@@ -1,5 +1,5 @@
 import path from 'node:path';
-import rspack from '@rspack/core';
+import rspack, { type Configuration } from '@rspack/core';
 import {
   type EmitStoriesEntrypointConfig,
   emitStoriesEntrypoint,
@@ -172,5 +172,5 @@ export default async function (env: any) {
       liveReload: true,
       hot: false,
     },
-  } satisfies rspack.Configuration;
+  } satisfies Configuration;
 }

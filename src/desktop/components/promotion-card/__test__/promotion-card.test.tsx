@@ -28,13 +28,13 @@ describe('PromotionCard', () => {
         subtitle='Foo, bar, baz...'
         imageSrc='https://www.images.com/123'
         dueDate={new Date()}
-        promotionType='volume-discount'
+        type='volume-discount'
         volumeDiscount={23}
       />,
     );
 
     expect(container).toMatchSnapshot();
-    expect(queryAllByTestId('promotion-card:postfix')).toHaveLength(1);
+    expect(queryAllByTestId('promotion-card:name')).toHaveLength(1);
     expect(queryAllByTestId('promotion-card:banner-discount')).toHaveLength(1);
   });
 
