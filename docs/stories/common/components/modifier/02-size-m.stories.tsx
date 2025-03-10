@@ -19,6 +19,10 @@ const items: ModifierContent[] = [
     src: headphones,
   },
   {
+    type: 'image',
+    src: './broken.png',
+  },
+  {
     type: 'text',
     text: 'Пример текста',
   },
@@ -74,6 +78,27 @@ export default function SizeM() {
       <Container>
         {items.map((item, index) => (
           <Modifier key={index} count={23} markdown content={item} disabled crossedOut />
+        ))}
+      </Container>
+
+      <h4>Non-existent + markdown</h4>
+      <Container>
+        {items.map((item, index) => (
+          <Modifier key={index} size='m' content={item} nonExistent />
+        ))}
+      </Container>
+
+      <h4>Non-existent + markdown</h4>
+      <Container>
+        {items.map((item, index) => (
+          <Modifier key={index} size='m' content={item} nonExistent markdown />
+        ))}
+      </Container>
+
+      <h4>Non-existent + crossed out</h4>
+      <Container>
+        {items.map((item, index) => (
+          <Modifier key={index} size='m' content={item} nonExistent crossedOut />
         ))}
       </Container>
     </div>
