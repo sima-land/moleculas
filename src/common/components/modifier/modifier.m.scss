@@ -26,7 +26,9 @@
     cursor: pointer;
   }
   &:hover:not(.disabled):not(.active):not(.non-existent) {
-    --modifier-border-width: 2px;
+    --modifier-border-width: 1px;
+    --modifier-border-color: #{colors.$basic-gray24};
+    --modifier-corner-bg: #{colors.$basic-gray24};
   }
   &.disabled {
     --modifier-media-opacity: 0.24;
@@ -40,7 +42,6 @@
     }
   }
   &.non-existent {
-    --modifier-border-width: 1px;
     --border-image-source: url(./default-border.svg);
     --border-image-slice: 6;
     --border-image-width: 6;
