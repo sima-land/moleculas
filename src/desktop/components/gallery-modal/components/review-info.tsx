@@ -91,16 +91,18 @@ export const ReviewInfo = ({
                 ref={contentRef}
                 className={cx('content')}
                 data-testid='review-info:collapsed-content'
-              >
-                {content}
-              </div>
+                dangerouslySetInnerHTML={{ __html: content }}
+              />
             </Layout>
           )}
 
           {content && opened && (
             <CustomScrollbar className={cx('content', 'opened')}>
               <Layout>
-                <div data-testid='review-info:expanded-content'>{content}</div>
+                <div
+                  data-testid='review-info:expanded-content'
+                  dangerouslySetInnerHTML={{ __html: content }}
+                />
                 <Link pseudo onClick={() => setOpened(false)} data-testid='review-info:collapse'>
                   Скрыть отзыв
                 </Link>
@@ -138,13 +140,13 @@ function LoadingView() {
   return (
     <div className={cx('loading')}>
       <div className={cx('head')}>
-        <div className={cx('text', 'name')}></div>
+        <div className={cx('text', 'name')} />
         <Link pseudo disabled className={cx('button')}>
           Перейти к отзыву
         </Link>
       </div>
-      <div className={cx('text')}></div>
-      <div className={cx('text')}></div>
+      <div className={cx('text')} />
+      <div className={cx('text')} />
     </div>
   );
 }
