@@ -14,26 +14,25 @@
   --modifier-text-color: #{colors.$basic-gray87};
   --modifier-border-width: 1px;
   --modifier-border-color: #{colors.$basic-gray12};
+  --modifier-border-style: solid;
   --modifier-corner-bg: #{colors.$basic-gray12};
   --modifier-corner-color: #{colors.$basic-gray87};
   --content-offset: 3px;
   &.active {
     --modifier-border-color: #{colors.$basic-blue};
-    --modifier-corner-color: #fff;
+    --modifier-corner-color: #{colors.$basic-white};
     --modifier-corner-bg: #{colors.$basic-blue};
   }
   &:hover:not(.disabled) {
     cursor: pointer;
   }
-  &:hover:not(.disabled):not(.active):not(.non-existent) {
-    --modifier-border-width: 1px;
+  &:hover:not(.disabled):not(.active) {
     --modifier-border-color: #{colors.$basic-gray24};
     --modifier-corner-bg: #{colors.$basic-gray24};
   }
   &.disabled {
     --modifier-media-opacity: 0.24;
     --modifier-overlay-color: rgba(0, 0, 0, 0.04);
-    --modifier-border-width: 1px;
     --modifier-text-color: #{colors.$basic-gray38};
     --modifier-corner-bg: transparent;
     --modifier-corner-color: #{colors.$basic-gray38};
@@ -42,20 +41,7 @@
     }
   }
   &.non-existent {
-    --border-image-source: url(./default-border.svg);
-    --border-image-slice: 6;
-    --border-image-width: 6;
-    &:hover {
-      // ВАЖНО! Невидимость, чтобы не мелькала сплошлая граница во время загрузки изображения.
-      --modifier-border-color: rgba(255, 255, 255, 0);
-      --border-image-source: url(./hover-border.svg);
-    }
-    &::before {
-      border-image-source: var(--border-image-source);
-      border-image-slice: var(--border-image-slice);
-      border-image-repeat: round;
-      border-image-width: var(--border-image-width);
-    }
+    --modifier-border-style: dashed;
   }
   &::before {
     content: '';
@@ -67,7 +53,7 @@
     width: calc(100% - var(--modifier-border-width) * 2);
     height: calc(100% - var(--modifier-border-width) * 2);
     border-radius: inherit;
-    border: var(--modifier-border-width) solid var(--modifier-border-color);
+    border: var(--modifier-border-width) var(--modifier-border-style) var(--modifier-border-color);
   }
   &.more {
     width: var(--modifier-size);
@@ -183,7 +169,7 @@
   overflow: hidden;
   padding: 0 4px;
   background: colors.$additional-teal;
-  color: #fff;
+  color: colors.$basic-white;
   position: absolute;
   right: -2px;
   top: -2px;
