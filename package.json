@@ -58,7 +58,7 @@
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
-    "@sima-land/ui-nucleons": "^45.0.0-alpha.25",
+    "@sima-land/ui-nucleons": "^45.0.0-alpha.38",
     "@sima-land/ui-quarks": "^5.1.1",
     "react": "^17.0 || ^18.0"
   },

@@ -3,6 +3,15 @@ import { SelectScreenLayout, SelectScreenOption } from '..';
 import { Modal, ModalBody } from '@sima-land/ui-nucleons/modal';
 
 describe('select screen parts', () => {
+  const defaultGetComputedStyle = window.getComputedStyle;
+
+  beforeEach(() => {
+    window.getComputedStyle = jest.fn();
+  });
+
+  afterEach(() => {
+    window.getComputedStyle = defaultGetComputedStyle;
+  });
   it('should works properly', () => {
     const items = ['Foo', 'Bar', 'Baz'];
     const spy = jest.fn();

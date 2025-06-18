@@ -1,10 +1,10 @@
 import { act, fireEvent, render } from '@testing-library/react';
 import { ProductCarousel } from '../product-carousel';
 import { items } from './test-items';
-import { MatchMediaContext } from '@sima-land/ui-nucleons/context';
+import { IntersectionObserverContext, MatchMediaContext } from '@sima-land/ui-nucleons/context';
 import { Parts, ProductInfo } from '../../../../common/components/product-info';
 import { LayerProvider } from '@sima-land/ui-nucleons/helpers';
-import { IntersectionMock } from '@sima-land/ui-nucleons/hooks/use-intersection/test-utils';
+import { IntersectionObserverMock } from '@sima-land/ui-nucleons/test-utils';
 
 function setBoundingClientRect(
   element: Element,
@@ -317,43 +317,40 @@ describe('ProductCarousel', () => {
 });
 
 describe('intersections', () => {
-  const intersectionMock = new IntersectionMock();
-
-  beforeAll(() => {
-    intersectionMock.apply();
-  });
-
-  afterAll(() => {
-    intersectionMock.restore();
-  });
+  const intersectionMock = IntersectionObserverMock.createRegistry();
 
   it('should call "onNeedRequest" prop', () => {
     const spy = jest.fn();
 
     const { getByTestId } = render(
-      <ProductCarousel onNeedRequest={spy}>
-        {items.map((item, index) => (
-          <ProductInfo key={index}>
-            <Parts.Image images={[{ src: item.imageSrc }]} href={item.url} />
+      <IntersectionObserverContext.Provider
+        value={{ createIntersectionObserver: intersectionMock.getObserver }}
+      >
+        <ProductCarousel onNeedRequest={spy}>
+          {items.map((item, index) => (
+            <ProductInfo key={index}>
+              <Parts.Image images={[{ src: item.imageSrc }]} href={item.url} />
 
-            <Parts.Prices
-              price={item.price}
-              oldPrice={item.oldPrice}
-              currencyGrapheme={item.currencyGrapheme}
-            />
+              <Parts.Prices
+                price={item.price}
+                oldPrice={item.oldPrice}
+                currencyGrapheme={item.currencyGrapheme}
+              />
 
-            <Parts.Title href={item.url}>{item.name}</Parts.Title>
-          </ProductInfo>
-        ))}
-      </ProductCarousel>,
+              <Parts.Title href={item.url}>{item.name}</Parts.Title>
+            </ProductInfo>
+          ))}
+        </ProductCarousel>
+      </IntersectionObserverContext.Provider>,
     );
 
     expect(spy).toHaveBeenCalledTimes(0);
-
-    intersectionMock.changeElementState({
-      target: getByTestId('product-carousel:root'),
-      isIntersecting: true,
-      intersectionRatio: 0,
+    act(() => {
+      intersectionMock.simulateEntryChange({
+        target: getByTestId('product-carousel:root'),
+        isIntersecting: true,
+        intersectionRatio: 0,
+      });
     });
 
     expect(spy).toHaveBeenCalledTimes(1);
@@ -363,26 +360,30 @@ describe('intersections', () => {
     const spy = jest.fn();
 
     const { getByTestId } = render(
-      <ProductCarousel onInViewport={spy}>
-        {items.map((item, index) => (
-          <ProductInfo key={index}>
-            <Parts.Image images={[{ src: item.imageSrc }]} href={item.url} />
+      <IntersectionObserverContext.Provider
+        value={{ createIntersectionObserver: intersectionMock.getObserver }}
+      >
+        <ProductCarousel onInViewport={spy}>
+          {items.map((item, index) => (
+            <ProductInfo key={index}>
+              <Parts.Image images={[{ src: item.imageSrc }]} href={item.url} />
 
-            <Parts.Prices
-              price={item.price}
-              oldPrice={item.oldPrice}
-              currencyGrapheme={item.currencyGrapheme}
-            />
+              <Parts.Prices
+                price={item.price}
+                oldPrice={item.oldPrice}
+                currencyGrapheme={item.currencyGrapheme}
+              />
 
-            <Parts.Title href={item.url}>{item.name}</Parts.Title>
-          </ProductInfo>
-        ))}
-      </ProductCarousel>,
+              <Parts.Title href={item.url}>{item.name}</Parts.Title>
+            </ProductInfo>
+          ))}
+        </ProductCarousel>
+      </IntersectionObserverContext.Provider>,
     );
 
     expect(spy).toHaveBeenCalledTimes(0);
 
-    intersectionMock.changeElementState({
+    intersectionMock.simulateEntryChange({
       target: getByTestId('product-carousel:root'),
       isIntersecting: true,
       intersectionRatio: 0,

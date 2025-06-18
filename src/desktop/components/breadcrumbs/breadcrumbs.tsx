@@ -128,6 +128,7 @@ const Breadcrumb = ({
             in={withPopup}
             timeout={200}
             unmountOnExit
+            nodeRef={popupRef}
             classNames={{
               enter: cx('fade-enter'),
               enterActive: cx('fade-enter-active'),
