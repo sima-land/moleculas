@@ -1,5 +1,5 @@
 import { Breadcrumbs } from '../breadcrumbs';
-import { render, fireEvent, act } from '@testing-library/react';
+import { act, fireEvent, render } from '@testing-library/react';
 import items from './test-items';
 
 describe('Breadcrumbs', () => {
@@ -9,51 +9,47 @@ describe('Breadcrumbs', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should open/close siblings popup', () =>
-    new Promise<void>(done => {
-      const spy = jest.fn();
+  it('should open/close siblings popup', () => {
+    const spy = jest.fn();
 
-      const { getByTestId, queryAllByTestId } = render(
-        <Breadcrumbs items={items} onSiblingsPopupOpen={spy} />,
-      );
+    const { getByTestId, queryAllByTestId } = render(
+      <Breadcrumbs items={items} onSiblingsPopupOpen={spy} />,
+    );
 
+    expect(queryAllByTestId('plate')).toHaveLength(0);
+
+    fireEvent.click(queryAllByTestId('breadcrumb:siblings-opener')[0]);
+
+    expect(queryAllByTestId('plate')).toHaveLength(1);
+    expect(queryAllByTestId('breadcrumb-sibling')).toHaveLength(7);
+    expect(queryAllByTestId('breadcrumb:siblings-closer')).toHaveLength(1);
+
+    fireEvent.click(getByTestId('breadcrumb:siblings-closer'));
+
+    setTimeout(() => {
       expect(queryAllByTestId('plate')).toHaveLength(0);
+    });
+  });
 
-      fireEvent.click(queryAllByTestId('breadcrumb:siblings-opener')[0]);
+  it('should close on popup outside mousedown', () => {
+    const spy = jest.fn();
 
-      expect(queryAllByTestId('plate')).toHaveLength(1);
-      expect(queryAllByTestId('breadcrumb-sibling')).toHaveLength(7);
-      expect(queryAllByTestId('breadcrumb:siblings-closer')).toHaveLength(1);
+    const { queryAllByTestId } = render(<Breadcrumbs items={items} onSiblingsPopupOpen={spy} />);
 
-      fireEvent.click(getByTestId('breadcrumb:siblings-closer'));
+    expect(queryAllByTestId('plate')).toHaveLength(0);
 
-      setTimeout(() => {
-        expect(queryAllByTestId('plate')).toHaveLength(0);
-        done();
-      }, 500);
-    }));
+    fireEvent.click(queryAllByTestId('breadcrumb:siblings-opener')[0]);
 
-  it('should close on popup outside mousedown', () =>
-    new Promise<void>(resolve => {
-      const spy = jest.fn();
+    expect(queryAllByTestId('plate')).toHaveLength(1);
 
-      const { queryAllByTestId } = render(<Breadcrumbs items={items} onSiblingsPopupOpen={spy} />);
+    act(() => {
+      window.dispatchEvent(new MouseEvent('mousedown'));
+    });
 
+    setTimeout(() => {
       expect(queryAllByTestId('plate')).toHaveLength(0);
-
-      fireEvent.click(queryAllByTestId('breadcrumb:siblings-opener')[0]);
-
-      expect(queryAllByTestId('plate')).toHaveLength(1);
-
-      act(() => {
-        window.dispatchEvent(new MouseEvent('mousedown'));
-      });
-
-      setTimeout(() => {
-        expect(queryAllByTestId('plate')).toHaveLength(0);
-        resolve();
-      }, 500);
-    }));
+    }, 500);
+  });
 
   it('should open siblings popup with fetching state', () => {
     const spy = jest.fn();

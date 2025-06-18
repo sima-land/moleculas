@@ -2,6 +2,15 @@ import { ReviewInfo } from '../review-info';
 import { fireEvent, render } from '@testing-library/react';
 
 describe('ReviewInfo', () => {
+  const defaultGetComputedStyle = window.getComputedStyle;
+
+  beforeEach(() => {
+    window.getComputedStyle = jest.fn();
+  });
+  afterEach(() => {
+    window.getComputedStyle = defaultGetComputedStyle;
+  });
+
   it('should render loading view', () => {
     const { container } = render(<ReviewInfo rating={3.2} author='John Doe' loading />);
 

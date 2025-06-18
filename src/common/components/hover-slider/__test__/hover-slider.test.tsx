@@ -1,6 +1,6 @@
 import { fireEvent, render } from '@testing-library/react';
 import { HoverSlider, HoverSliderItem } from '../hover-slider';
-import { createRef } from 'react';
+import { act, createRef } from 'react';
 import { DOMRectReadOnlyMock } from '@sima-land/ui-nucleons/test-utils';
 
 describe('HoverSlider', () => {
@@ -283,12 +283,17 @@ describe('HoverSlider', () => {
     expect(navItems[1].classList.contains('nav-item-active')).toBe(false);
     expect(navItems[2].classList.contains('nav-item-active')).toBe(false);
 
-    fireEvent.scroll(list, { target: { scrollLeft: 100 } });
+    act(() => {
+      fireEvent.scroll(list, { target: { scrollLeft: 100 } });
+    });
     expect(list.scrollLeft).toBe(100);
 
     expect(navItems[0].classList.contains('nav-item-active')).toBe(false);
     expect(navItems[1].classList.contains('nav-item-active')).toBe(true);
     expect(navItems[2].classList.contains('nav-item-active')).toBe(false);
-    jest.runAllTimers();
+
+    act(() => {
+      jest.runAllTimers();
+    });
   });
 });

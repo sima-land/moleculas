@@ -3,6 +3,15 @@ import { GalleryModal } from '../gallery-modal';
 import { data } from '../../__mocks__';
 
 describe('GalleryModal', () => {
+  const defaultGetComputedStyle = window.getComputedStyle;
+
+  beforeEach(() => {
+    window.getComputedStyle = jest.fn();
+  });
+  afterEach(() => {
+    window.getComputedStyle = defaultGetComputedStyle;
+  });
+
   it('should renders', () => {
     const { container } = render(<GalleryModal media={data.media} />);
 

@@ -6,7 +6,8 @@ import QuickView2SVG from '@sima-land/ui-quarks/icons/24x24/Stroked/MagnifierPlu
 import { items } from './test-items';
 import { Stepper } from '@sima-land/ui-nucleons/stepper';
 import { Badge } from '../../../../common/components/badge';
-import { IntersectionMock } from '@sima-land/ui-nucleons/hooks/use-intersection/test-utils';
+import { IntersectionObserverMock } from '@sima-land/ui-nucleons/test-utils';
+import { IntersectionObserverContext } from '@sima-land/ui-nucleons/context';
 
 describe('ProductSlider', () => {
   it('should renders correctly', () => {
@@ -85,40 +86,36 @@ describe('ProductSlider', () => {
 });
 
 describe('intersections', () => {
-  const intersectionMock = new IntersectionMock();
-
-  beforeAll(() => {
-    intersectionMock.apply();
-  });
-
-  afterAll(() => {
-    intersectionMock.restore();
-  });
+  const intersectionMock = IntersectionObserverMock.createRegistry();
 
   it('should call "onNeedRequest" prop', () => {
     const spy = jest.fn();
 
     const { getByTestId } = render(
-      <ProductSlider onNeedRequest={spy}>
-        {items.map((item, index) => (
-          <ProductInfo key={index}>
-            <Parts.Image images={[{ src: item.imageSrc }]} href={item.url} />
+      <IntersectionObserverContext.Provider
+        value={{ createIntersectionObserver: intersectionMock.getObserver }}
+      >
+        <ProductSlider onNeedRequest={spy}>
+          {items.map((item, index) => (
+            <ProductInfo key={index}>
+              <Parts.Image images={[{ src: item.imageSrc }]} href={item.url} />
 
-            <Parts.Prices
-              price={item.price}
-              oldPrice={item.oldPrice}
-              currencyGrapheme={item.currencyGrapheme}
-            />
+              <Parts.Prices
+                price={item.price}
+                oldPrice={item.oldPrice}
+                currencyGrapheme={item.currencyGrapheme}
+              />
 
-            <Parts.Title href={item.url}>{item.name}</Parts.Title>
-          </ProductInfo>
-        ))}
-      </ProductSlider>,
+              <Parts.Title href={item.url}>{item.name}</Parts.Title>
+            </ProductInfo>
+          ))}
+        </ProductSlider>
+      </IntersectionObserverContext.Provider>,
     );
 
     expect(spy).toHaveBeenCalledTimes(0);
 
-    intersectionMock.changeElementState({
+    intersectionMock.simulateEntryChange({
       target: getByTestId('product-slider:root'),
       isIntersecting: true,
       intersectionRatio: 0,
@@ -131,26 +128,30 @@ describe('intersections', () => {
     const spy = jest.fn();
 
     const { getByTestId } = render(
-      <ProductSlider onInViewport={spy}>
-        {items.map((item, index) => (
-          <ProductInfo key={index}>
-            <Parts.Image images={[{ src: item.imageSrc }]} href={item.url} />
+      <IntersectionObserverContext.Provider
+        value={{ createIntersectionObserver: intersectionMock.getObserver }}
+      >
+        <ProductSlider onInViewport={spy}>
+          {items.map((item, index) => (
+            <ProductInfo key={index}>
+              <Parts.Image images={[{ src: item.imageSrc }]} href={item.url} />
 
-            <Parts.Prices
-              price={item.price}
-              oldPrice={item.oldPrice}
-              currencyGrapheme={item.currencyGrapheme}
-            />
+              <Parts.Prices
+                price={item.price}
+                oldPrice={item.oldPrice}
+                currencyGrapheme={item.currencyGrapheme}
+              />
 
-            <Parts.Title href={item.url}>{item.name}</Parts.Title>
-          </ProductInfo>
-        ))}
-      </ProductSlider>,
+              <Parts.Title href={item.url}>{item.name}</Parts.Title>
+            </ProductInfo>
+          ))}
+        </ProductSlider>
+      </IntersectionObserverContext.Provider>,
     );
 
     expect(spy).toHaveBeenCalledTimes(0);
 
-    intersectionMock.changeElementState({
+    intersectionMock.simulateEntryChange({
       target: getByTestId('product-slider:root'),
       isIntersecting: true,
       intersectionRatio: 0,

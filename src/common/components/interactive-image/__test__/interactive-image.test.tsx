@@ -73,6 +73,8 @@ describe('InteractiveImage', () => {
   });
 
   it('should throw error when both ImageAnchor and Image are in children', () => {
+    const spy = jest.spyOn(console, 'error').mockImplementation(() => {});
+
     expect(() => {
       render(
         <InteractiveImage>
@@ -83,6 +85,8 @@ describe('InteractiveImage', () => {
         </InteractiveImage>,
       );
     }).toThrow();
+
+    spy.mockRestore();
   });
 
   it('should render points in the wrapper', () => {
