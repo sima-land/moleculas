@@ -1,5 +1,4 @@
-import { fireEvent, render } from '@testing-library/react';
-import { act } from 'react';
+import { act, fireEvent, render } from '@testing-library/react';
 import { ProductCarousel } from '../product-carousel';
 import { items } from './test-items';
 import { IntersectionObserverContext, MatchMediaContext } from '@sima-land/ui-nucleons/context';

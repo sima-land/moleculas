@@ -1,6 +1,6 @@
-import { fireEvent, render } from '@testing-library/react';
+import { act, fireEvent, render } from '@testing-library/react';
 import { HoverSlider, HoverSliderItem } from '../hover-slider';
-import { act, createRef } from 'react';
+import { createRef } from 'react';
 import { DOMRectReadOnlyMock } from '@sima-land/ui-nucleons/test-utils';
 
 describe('HoverSlider', () => {
