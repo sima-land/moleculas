@@ -90,6 +90,119 @@ exports[`PromotionCard should have placeholder component property 1`] = `
 </div>
 `;
 
+exports[`PromotionCard should render with "type=special" 1`] = `
+<div
+  class="banner"
+>
+  <img
+    alt="Hello, world!"
+    class="image"
+    src="https://www.images.com/123"
+  />
+  <div
+    class="banner-content with-timer"
+  >
+    <div
+      class="timer"
+      data-testid="promotion-card:banner-timer"
+    >
+      <svg
+        fill="#3a3a3b"
+        viewBox="0 0 40 40"
+      >
+        <text
+          class="value"
+          text-anchor="middle"
+          x="20"
+          y="70%"
+        >
+          00
+        </text>
+        <text
+          class="label"
+          dy="100%"
+          text-anchor="middle"
+          x="20"
+          y="10%"
+        >
+          дней
+        </text>
+      </svg>
+      <svg
+        fill="#3a3a3b"
+        viewBox="0 0 26 40"
+      >
+        <text
+          class="divider"
+          text-anchor="middle"
+          x="13"
+          y="70%"
+        >
+          :
+        </text>
+      </svg>
+      <svg
+        fill="#3a3a3b"
+        viewBox="0 0 40 40"
+      >
+        <text
+          class="value"
+          text-anchor="middle"
+          x="20"
+          y="70%"
+        >
+          00
+        </text>
+        <text
+          class="label"
+          dy="100%"
+          text-anchor="middle"
+          x="20"
+          y="10%"
+        >
+          часов
+        </text>
+      </svg>
+      <svg
+        fill="#3a3a3b"
+        viewBox="0 0 26 40"
+      >
+        <text
+          class="divider"
+          text-anchor="middle"
+          x="13"
+          y="70%"
+        >
+          :
+        </text>
+      </svg>
+      <svg
+        fill="#3a3a3b"
+        viewBox="0 0 40 40"
+      >
+        <text
+          class="value"
+          text-anchor="middle"
+          x="20"
+          y="70%"
+        >
+          00
+        </text>
+        <text
+          class="label"
+          dy="100%"
+          text-anchor="middle"
+          x="20"
+          y="10%"
+        >
+          минут
+        </text>
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`PromotionCard should renders correctly 1`] = `
 <div>
   <div

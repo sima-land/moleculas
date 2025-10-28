@@ -65,6 +65,11 @@
   line-height: 60px;
   color: colors.$basic-gray76;
   padding: 8px 16px;
+  &.with-timer {
+    width: 50%;
+    height: 25%;
+    padding: 8px 16px 8px 0;
+  }
 }
 
 .info {

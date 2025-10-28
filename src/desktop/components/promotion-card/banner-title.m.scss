@@ -13,18 +13,14 @@
 .timer {
   display: flex;
   font-weight: bold;
-  .part {
-    font-size: 32px;
-    line-height: 40px;
-    text-align: center;
-    .label {
-      font-size: 12px;
-      line-height: 16px;
-    }
+  width: 100%;
+  .value {
+    font-size: 74%;
+  }
+  .label {
+    font-size: 30%;
   }
   .divider {
-    margin: 0 8px;
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 74%;
   }
 }

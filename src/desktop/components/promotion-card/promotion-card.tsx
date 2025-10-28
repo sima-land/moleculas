@@ -91,7 +91,12 @@ export const PromotionCard = ({
           )}
 
           {!failed && isKnownType(type) && type !== 'gift' && (mounted || type !== 'special') && (
-            <div className={styles['banner-content']}>
+            <div
+              className={classNames(
+                styles['banner-content'],
+                type === 'special' ? styles['with-timer'] : '',
+              )}
+            >
               <BannerTitle promotionType={type} volumeDiscount={volumeDiscount} dueDate={dueDate} />
             </div>
           )}

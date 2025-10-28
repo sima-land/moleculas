@@ -58,6 +58,20 @@ describe('PromotionCard', () => {
     expect(queryAllByTestId('promotion-card:banner-discount')).toHaveLength(1);
   });
 
+  it('should render with "type=special"', () => {
+    const { getByAltText } = render(
+      <PromotionCard
+        title='Hello, world!'
+        subtitle='Foo, bar, baz...'
+        imageSrc='https://www.images.com/123'
+        dueDate={new Date()}
+        type='special'
+      />,
+    );
+
+    expect(getByAltText('Hello, world!').parentElement).toMatchSnapshot();
+  });
+
   it('should have placeholder component property', () => {
     const { container, queryAllByTestId } = render(<PromotionCard.Placeholder />);
 
