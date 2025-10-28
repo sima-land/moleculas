@@ -1,3 +1,4 @@
+import { COLORS } from '@sima-land/ui-nucleons/colors';
 import { ReactNode } from 'react';
 import { PromotionType } from './types';
 import { Timer } from '@sima-land/ui-nucleons/timer';
@@ -69,14 +70,24 @@ export const CustomTimer = ({ dueDate }: { dueDate: Date }) => (
  * @return Элемент.
  */
 const TimerPart = ({ label, value }: { label: string; value: number }) => (
-  <div className={styles.part}>
-    <div>{`${value}`.padStart(2, '0')}</div>
-    <div className={styles.label}>{label}</div>
-  </div>
+  <svg viewBox='0 0 40 40' fill={COLORS.get('basic-gray76')}>
+    <text x='20' y='70%' className={styles.value} textAnchor='middle'>
+      {`${value}`.padStart(2, '0')}
+    </text>
+    <text x='20' y='10%' dy='100%' className={styles.label} textAnchor='middle'>
+      {label}
+    </text>
+  </svg>
 );
 
 /**
  * Разделитель частей таймера.
  * @return Элемент.
  */
-const TimerDivider = () => <div className={styles.divider}>:</div>;
+const TimerDivider = () => (
+  <svg viewBox='0 0 26 40' fill={COLORS.get('basic-gray76')}>
+    <text x='13' y='70%' className={styles.divider} textAnchor='middle'>
+      :
+    </text>
+  </svg>
+);

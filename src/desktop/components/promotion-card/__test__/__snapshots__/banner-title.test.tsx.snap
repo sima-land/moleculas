@@ -14,52 +14,98 @@ exports[`BannerTitle should renders correctly 3`] = `
     class="timer"
     data-testid="promotion-card:banner-timer"
   >
-    <div
-      class="part"
+    <svg
+      fill="#3a3a3b"
+      viewBox="0 0 40 40"
     >
-      <div>
+      <text
+        class="value"
+        text-anchor="middle"
+        x="20"
+        y="70%"
+      >
         09
-      </div>
-      <div
+      </text>
+      <text
         class="label"
+        dy="100%"
+        text-anchor="middle"
+        x="20"
+        y="10%"
       >
         дней
-      </div>
-    </div>
-    <div
-      class="divider"
+      </text>
+    </svg>
+    <svg
+      fill="#3a3a3b"
+      viewBox="0 0 26 40"
     >
-      :
-    </div>
-    <div
-      class="part"
+      <text
+        class="divider"
+        text-anchor="middle"
+        x="13"
+        y="70%"
+      >
+        :
+      </text>
+    </svg>
+    <svg
+      fill="#3a3a3b"
+      viewBox="0 0 40 40"
     >
-      <div>
+      <text
+        class="value"
+        text-anchor="middle"
+        x="20"
+        y="70%"
+      >
         00
-      </div>
-      <div
+      </text>
+      <text
         class="label"
+        dy="100%"
+        text-anchor="middle"
+        x="20"
+        y="10%"
       >
         часов
-      </div>
-    </div>
-    <div
-      class="divider"
+      </text>
+    </svg>
+    <svg
+      fill="#3a3a3b"
+      viewBox="0 0 26 40"
     >
-      :
-    </div>
-    <div
-      class="part"
+      <text
+        class="divider"
+        text-anchor="middle"
+        x="13"
+        y="70%"
+      >
+        :
+      </text>
+    </svg>
+    <svg
+      fill="#3a3a3b"
+      viewBox="0 0 40 40"
     >
-      <div>
+      <text
+        class="value"
+        text-anchor="middle"
+        x="20"
+        y="70%"
+      >
         00
-      </div>
-      <div
+      </text>
+      <text
         class="label"
+        dy="100%"
+        text-anchor="middle"
+        x="20"
+        y="10%"
       >
         минут
-      </div>
-    </div>
+      </text>
+    </svg>
   </div>
 </div>
 `;
