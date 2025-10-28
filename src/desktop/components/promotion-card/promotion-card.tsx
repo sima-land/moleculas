@@ -5,6 +5,8 @@ import { Estimate } from './estimate';
 import classNames from 'classnames';
 import styles from './promotion-card.m.scss';
 import { PromotionCardPlaceholder } from './placeholder';
+import { useImageStub } from '../../../common/hooks';
+import { ImgStub } from '../../../common/components/img-stub';
 
 export interface PromotionCardProps extends HTMLAttributes<HTMLDivElement> {
   /** Ссылка, переход по которой будет произведён при нажатии на карточку. */
@@ -73,6 +75,8 @@ export const PromotionCard = ({
   // время нужно выводить только на клиенте - вводим состояние
   const [mounted, setMounted] = useState<boolean>(false);
 
+  const { failed, handleError } = useImageStub(imageSrc);
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -81,9 +85,12 @@ export const PromotionCard = ({
     <div className={classNames(className, styles.root)} {...restProps} data-testid={testId}>
       <a href={href} className={styles.link}>
         <div className={styles.banner}>
-          <img src={imageSrc} alt={title} className={styles.image} />
+          {failed && <ImgStub className={styles.stub} />}
+          {!failed && (
+            <img src={imageSrc} alt={title} className={styles.image} onError={handleError} />
+          )}
 
-          {isKnownType(type) && type !== 'gift' && (mounted || type !== 'special') && (
+          {!failed && isKnownType(type) && type !== 'gift' && (mounted || type !== 'special') && (
             <div className={styles['banner-content']}>
               <BannerTitle promotionType={type} volumeDiscount={volumeDiscount} dueDate={dueDate} />
             </div>

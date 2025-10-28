@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { act, fireEvent, render } from '@testing-library/react';
 import { PromotionCard } from '..';
 
 describe('PromotionCard', () => {
@@ -19,6 +19,26 @@ describe('PromotionCard', () => {
 
     expect(container).toMatchSnapshot();
     expect(queryAllByTestId('promotion-card')).toHaveLength(1);
+  });
+
+  it('should render image stub if image failed to load', () => {
+    const { queryAllByText, getAllByText, getByAltText } = render(
+      <PromotionCard
+        title='Hello, world!'
+        subtitle='Foo, bar, baz...'
+        imageSrc='https://www.images.com/123'
+        type='3-by-2'
+        dueDate={new Date()}
+      />,
+    );
+    expect(queryAllByText(/не загрузилось/)).toHaveLength(0);
+    expect(getAllByText('1+1=3')).toHaveLength(1);
+
+    act(() => {
+      fireEvent.error(getByAltText('Hello, world!'));
+    });
+    expect(queryAllByText(/не загрузилось/)).toHaveLength(1);
+    expect(queryAllByText(/1+1=3/)).toHaveLength(0);
   });
 
   it('should handle "promotionType" prop', () => {
