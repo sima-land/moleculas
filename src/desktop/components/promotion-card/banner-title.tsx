@@ -70,11 +70,11 @@ export const CustomTimer = ({ dueDate }: { dueDate: Date }) => (
  * @return Элемент.
  */
 const TimerPart = ({ label, value }: { label: string; value: number }) => (
-  <svg viewBox='0 0 40 40' fill={COLORS.get('basic-gray76')}>
-    <text x='20' y='70%' className={styles.value} textAnchor='middle'>
+  <svg viewBox='0 0 40 40' fill={COLORS.get('basic-gray76')} className={styles.part}>
+    <text x='20' y='65%' className={styles.value} textAnchor='middle'>
       {`${value}`.padStart(2, '0')}
     </text>
-    <text x='20' y='10%' dy='100%' className={styles.label} textAnchor='middle'>
+    <text x='20' y='0' dy='95%' className={styles.label} textAnchor='middle'>
       {label}
     </text>
   </svg>
@@ -85,8 +85,8 @@ const TimerPart = ({ label, value }: { label: string; value: number }) => (
  * @return Элемент.
  */
 const TimerDivider = () => (
-  <svg viewBox='0 0 26 40' fill={COLORS.get('basic-gray76')}>
-    <text x='13' y='70%' className={styles.divider} textAnchor='middle'>
+  <svg viewBox='0 0 12 40' fill={COLORS.get('basic-gray76')} className={styles['divider-wrap']}>
+    <text x='6' y='78%' className={styles.divider} textAnchor='middle'>
       :
     </text>
   </svg>
