@@ -35,6 +35,13 @@
 
   // для исправления бага Safari border-radius
   -webkit-mask-image: -webkit-radial-gradient(#fff, #000);
+  .stub {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .image {
@@ -45,14 +52,6 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.2s ease-out;
-}
-
-.stub {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .banner-content {

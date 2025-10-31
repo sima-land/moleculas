@@ -14,13 +14,19 @@
   display: flex;
   font-weight: bold;
   width: 100%;
-  .value {
-    font-size: 74%;
+  .part {
+    width: 30%;
+    .value {
+      font-size: 62%;
+    }
+    .label {
+      font-size: 25%;
+    }
   }
-  .label {
-    font-size: 30%;
-  }
-  .divider {
-    font-size: 74%;
+  .divider-wrap {
+    width: 5%;
+    .divider {
+      font-size: 100%;
+    }
   }
 }

@@ -107,6 +107,7 @@ exports[`PromotionCard should render with "type=special" 1`] = `
       data-testid="promotion-card:banner-timer"
     >
       <svg
+        class="part"
         fill="#3a3a3b"
         viewBox="0 0 40 40"
       >
@@ -114,34 +115,36 @@ exports[`PromotionCard should render with "type=special" 1`] = `
           class="value"
           text-anchor="middle"
           x="20"
-          y="70%"
+          y="65%"
         >
           00
         </text>
         <text
           class="label"
-          dy="100%"
+          dy="95%"
           text-anchor="middle"
           x="20"
-          y="10%"
+          y="0"
         >
           дней
         </text>
       </svg>
       <svg
+        class="divider-wrap"
         fill="#3a3a3b"
-        viewBox="0 0 26 40"
+        viewBox="0 0 12 40"
       >
         <text
           class="divider"
           text-anchor="middle"
-          x="13"
-          y="70%"
+          x="6"
+          y="78%"
         >
           :
         </text>
       </svg>
       <svg
+        class="part"
         fill="#3a3a3b"
         viewBox="0 0 40 40"
       >
@@ -149,34 +152,36 @@ exports[`PromotionCard should render with "type=special" 1`] = `
           class="value"
           text-anchor="middle"
           x="20"
-          y="70%"
+          y="65%"
         >
           00
         </text>
         <text
           class="label"
-          dy="100%"
+          dy="95%"
           text-anchor="middle"
           x="20"
-          y="10%"
+          y="0"
         >
           часов
         </text>
       </svg>
       <svg
+        class="divider-wrap"
         fill="#3a3a3b"
-        viewBox="0 0 26 40"
+        viewBox="0 0 12 40"
       >
         <text
           class="divider"
           text-anchor="middle"
-          x="13"
-          y="70%"
+          x="6"
+          y="78%"
         >
           :
         </text>
       </svg>
       <svg
+        class="part"
         fill="#3a3a3b"
         viewBox="0 0 40 40"
       >
@@ -184,16 +189,16 @@ exports[`PromotionCard should render with "type=special" 1`] = `
           class="value"
           text-anchor="middle"
           x="20"
-          y="70%"
+          y="65%"
         >
           00
         </text>
         <text
           class="label"
-          dy="100%"
+          dy="95%"
           text-anchor="middle"
           x="20"
-          y="10%"
+          y="0"
         >
           минут
         </text>
